@@ -5,6 +5,8 @@ __pycache__/
 
 # Output files
 text/lpsc15/*.txt
+text/lpsc15/*.aslog
+text/lpsc15/*.cases
 
 # C extensions
 *.so
