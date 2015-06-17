@@ -1,6 +1,10 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*~
+
+# Output files
+text/lpsc15/*.txt
 
 # C extensions
 *.so
