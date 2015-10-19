@@ -5,6 +5,7 @@
 \usepackage{helvet}
 \usepackage{courier}
 \usepackage{graphicx}
+\usepackage{url}
 \setlength\titlebox{3in}
 \frenchspacing
 \copyrighttext{Copyright 2015, California Institute of Technology}
@@ -126,26 +127,59 @@ interest.  Cross-document information extraction could also reveal new
 connections or similarities between targets. {\bf [Cite Radev 00? Or
 is this overkill?]}
 
-
 \section{Constructing a Mars Target Encyclopedia}
 
-\subsection{Corpus Description}
+\subsection{Data Set Description}
 
 For our initial study, we constructed a corpus that consists of all
-papers presented at the 2015 Lunar and Planetary Science Conference.
-These papers consist of two-page extended abstracts that follow a
+papers presented at the 2015 Lunar and Planetary Science
+Conference (LPSC)\footnote{Downloaded
+from \url{http://www.hou.usra.edu/meetings/lpsc2015/}}. 
+Each of the 1,991 papers is a maximum two-page extended abstract with a
 common structure: title, authors with affiliations, a two-column main
 body that may contain figures and/or tables, and references.  The
 language is academic and makes heavy use of complex noun phrases and
 parenthentical expressions.  The passive voice is often used.
 % Todo: include examples
 
+The LPSC papers are provided in PDF format.  We used the Apache Tika
+parser~\cite{mattmann:tika11} to read the PDF files and convert them to
+plain text.  Four documents could not be parsed by Tika, yielding
+1,987 documents.  The number of extracted words per document ranged
+from 142 to 2433.
+
 % target list
+We also obtained a seed list of Mars surface target names identifed by
+the ChemCam science team.  ChemCam is an instrument on the Mars
+Science Laboratory (MSL) rover.  It fires a laser at rock or soil targets
+and then uses a spectrometer to record the emitted energy at 6,144
+wavelengths~\cite{maurice:chemcam12}.  The current list of all ChemCam
+observations can be obtained
+online\footnote{\url{http://pds-geosciences.wustl.edu/msl/msl-m-chemcam-libs-4_5-rdr-v1/mslccm_1xxx/document/msl_ccam_obs.csv}}.
+The version we used contained 16,267 observations that spanned 656
+distinct targets.
 
 \subsection{Approach}
-- Sundance/Autoslog, Solr (?) database, JSON/webpage generation
 
-- Use figure(s) from proposal to illustrate system operation
+We used the Sundance parser~\cite{riloff:sundance04} to construct a
+shallow parse of the text.  Sundance provides tokenization, sentence
+segmentation, morphological analysis, part-of-speech disambiguation,
+and syntactic chunking.  Because it generates basic syntactic
+structures, rather than a full parse tree, Sundance can handle
+sentence fragments and ungrammatical constructs.  Sundance has
+previously been successfully applied to scientific publications from
+the biomedical domain~\cite{ramakrishnan:bio10,pokkunuri:bio11}.  It
+is also customizable for specialized domains, which allowed us to
+easily tailor it for the planetary science focus of the corpus for
+this project.
+
+Our domain-specific customizations included (1) the specification of
+two words that, despite ending in a period, do not indicate the end of
+a sentence (``Mt.'' and ``wt.'') and (2) domain-specific vocabulary
+including element names (e.g., ``chlorine'', ``Cl''), mineral names
+(e.g., ``akaganeite'', ``feldspar'', ``MnO''), target names (from the
+list described above), and unusual terms (e.g., ``sol'' (Martian day),
+``MSL''). 
 
 \begin{figure}
 \centerline{\includegraphics[width=3.5in]{fig/autoslog-process.jpg}}
@@ -156,21 +190,33 @@ looks a bit fuzzy - can we get a higher quality one, maybe PNG or PDF?]}}
 \label{fig:ie}
 \end{figure}
 
-- domain-specific things we did
-
-- lightly supervised? human review of extracted info - any annotations needed?
+As shown in Figure~\ref{fig:ie}, we provide the input corpus
+(publications) along with the domain-specific information to 
+the AutoSlog pattern generation 
+tool~\cite{riloff:autoslog93,riloff:autoslog96}.  AutoSlog  
+creates extraction patterns based on the ChemCam Mars surface target
+list and the way those target names appear in the parsed structure of
+the LPSC documents.  These patterns are used to collect the
+information that will be stored in the MTE.
 
 \subsection{Initial Results}
 
 In this section, we report on initial results for extracting
 information for a Mars surface target named Windjana.  Windjana is a
 sandstone that was named after the Windjana Gorge in Western
-Australia~\cite{}. 
+Australia~\cite{anderson:pads15}. 
 % Cite paper 2417; this paper also has an nice image we could use
 
 % todo: show parse output?
-{\bf [Here we could show parse output and walk through one or more of
+{\bf [Here we could show parse output (if that level of detail is
+desired) and walk through one or more of 
 these examples.  Which one(s) should we use?]}
+
+{\bf [Note: I haven't yet added the element/chemical names as
+extraction targets, but I could do that quickly.  Although we don't
+yet have a way to automatically merge the case frames, we could show
+how that would be done here.  For now I have the other info that
+should be extracted in parentheses.]} 
 
 {\em ``Windjana is remarkable in containing an abundance of potassium
 feldspar (and thus K in its bulk chemistry) combined with a low
@@ -199,8 +245,13 @@ Autoslog extracts:
 phyllosilicates [9].''}
 % cite paper 2971
 Autoslog extracts:
-{\tt <subj>\_CONTAINS\_MAGNETITE}
+{\tt <subj>\_CONTAINS\_MAGNETITE} 
 % need to know high/low!
+{\bf [Note: this example is interesting because the fact that it
+contains ``high'' magnetite is important (vs. ``low'' magnetite),
+i.e., the adjective matters.  What should we do about that?  Is this a
+future work topic?  Cardinality?  Could go with the epistemic bit
+mentioned later?]}
 
 \section{Challenges}
 
@@ -208,44 +259,75 @@ In addition to the typical challenges of conducting information
 extraction in a new domain (e.g.,~domain-specific vocabulary), there
 are several challenges of special interest involved in this project.
 
-- need to combine case frames due to complex sentence structure
+First, there is a need to combine case frames due to complex sentence
+structure.  {\bf [hopefully we can address this, at least in example
+form, above.  Or, we could keep the above examples simple and discuss
+it here.]}
 
-``strong enrichment in Zn on Windjana drill fines''
+{\bf [Can we imagine how to handle cases like this:]} 
 
+{\em``strong enrichment in Zn on Windjana drill fines''}
 
+There is a need for frequent updating of the body of extracted
+information, because (1) the list of Mars surface target names is
+continually growing and (2) the volume of relevant publications also
+grows.  
 
-- New papers continually published; need automatic updating
+We must determine how to reconcile potential conflicting information
+extracted from different authors and publications.  An interpretation
+could be overturned or negated by later findings or a more careful
+examination of the available data.  In all scientific endeavors,
+knowledge evolves and some of it becomes outdated.  The same challenge
+appears when performing information extraction for news articles {\bf
+[include cites here / discuss how others address this issue]}.
+%
+A simple strategy would be to let the most recently reported
+information, as determined by publication date, supersede older
+information.  However, in some cases it is non-trivial to determine
+whether two facts are consistent or contradictory.  For example,
+consider two hypothetical sentences: ``Target Elinor is
+feldspar-rich'' and ``Target Elinor has low Si.''  By definition, a
+feldspar contains a lot of silicon, but it requires domain knowledge
+to detect that these statements are in conflict.
 
-- Reconcile potential conflicting information extracted from different
-  authors and publications; knowledge evolves and some becomes
-  outdated
-
-- handle epistemic modifiers~\cite{sokolova:epistemic}. {\bf [Could
-  also build on Ellen's previous work on subjective expressions?
-  (EMNLP 2003)]} 
-
-Examples:
-
-``the Windjana drill tailings likely contain a spectrally opaque
-material (e.g., magnetite, ilmenite)'' 
-
-``the potential presence of illite in Windjana''
+When interpreting observations, scientific conclusions range from
+solid facts to speculation about causes.  In some cases, evidence even
+for basic properties (e.g., ``contains Mn'') may fall into a gray
+area.  Scientific language may therefore employ epistemic modifiers
+such as ``likely'' or ``probably'' or ``possibly.''  Examples from the
+LPSC 2015 corpus related to the Windjana target include {\em ``the Windjana
+drill tailings likely contain a spectrally opaque material (e.g.,
+magnetite, ilmenite)''}~\cite{johnson:ferric15} and {\em ``the potential
+presence of illite in Windjana''}~\cite{rampe:cement15}.  Distinguishing
+this information from more confidently stated conclusions is vital to
+preserving the nuance reported in the documents, as previously studied
+in the context of medical discussion forums~\cite{sokolova:epistemic13}.
+%
+{\bf [Could also build on Ellen's previous work on subjective
+  expressions?  (EMNLP 2003)]}
 
 \section{Conclusions and Next Steps}
 
-There is a need for an MTE
+{\bf [To be fleshed out.]}
+
+There is a need for an MTE.
 
 We can use IE tools, plus human review/vetting, to create a reliable
-resource for planetary science 
+resource for planetary science.
 
-  Benefits ongoing science
-investigations and analysis of previously collected data within full
-context.
+This effort benefits ongoing science investigations and the analysis of
+previously collected data within full context.
 
 We have not yet addressed the issue of coreference.
 
-Expand to include more text sources and ultimately targets from other
-instruments/missions 
+What is the role of supervision? Some human review of extracted info -
+are any annotations needed? 
+
+Describe larger planned system (store extracted information in a
+Solr database, use JSON to generate MTE webpages)?
+
+We will expand to include more text sources and ultimately targets
+from other instruments/missions.
 
 \bibliography{mte}
 \bibliographystyle{aaai}
