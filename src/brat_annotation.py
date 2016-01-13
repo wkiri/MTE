@@ -52,11 +52,22 @@ class BratAnnotation:
                 table='components',
                 columns=['component_id','component_name'],
                 values=[self.doc_id+'_'+self.annotation_id,self.name])
+        elif self.label == 'Contains':
+            dbutils.insert_into_table(
+                cursor=cursor,
+                table='contains',
+                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
+                values=[self.doc_id+'_'+self.arg1,
+                        self.doc_id+'_'+self.arg2,
+                        self.doc_id,
+                        'unknown',
+                        'neutral',
+                        self.username])
         elif self.label == 'Contains_low':
             dbutils.insert_into_table(
                 cursor=cursor,
                 table='contains',
-                columns=['target_id','component_id','doc_id','valence','confidence','annotator'],
+                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
                 values=[self.doc_id+'_'+self.arg1,
                         self.doc_id+'_'+self.arg2,
                         self.doc_id,
@@ -67,25 +78,35 @@ class BratAnnotation:
             dbutils.insert_into_table(
                 cursor=cursor,
                 table='contains',
-                columns=['target_id','component_id','doc_id','valence','confidence','annotator'],
+                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
                 values=[self.doc_id+'_'+self.arg1,
                         self.doc_id+'_'+self.arg2,
                         self.doc_id,
                         'high',
                         'neutral',
                         self.username])
-        elif self.label == 'Contains':
+        elif self.label == 'May_contain':
             dbutils.insert_into_table(
                 cursor=cursor,
                 table='contains',
-                columns=['target_id','component_id','doc_id','valence','confidence','annotator'],
+                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
                 values=[self.doc_id+'_'+self.arg1,
                         self.doc_id+'_'+self.arg2,
                         self.doc_id,
                         'unknown',
+                        'low',
+                        self.username])
+        elif self.label == 'Lacks':
+            dbutils.insert_into_table(
+                cursor=cursor,
+                table='contains',
+                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
+                values=[self.doc_id+'_'+self.arg1,
+                        self.doc_id+'_'+self.arg2,
+                        self.doc_id,
+                        'none',
                         'neutral',
                         self.username])
-        elif self.label == 'Confidence':
-            print 'Note: Confidence is not yet implemented.'
-            #raise RuntimeError('Confidence is not yet implemented.')
+        else:
+            raise RuntimeError('Unknown label %s' % self.label)
 
