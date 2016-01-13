@@ -12,7 +12,10 @@ import tika
 
 from tika import parser
 
-textdir = '../text/lpsc15'
+# Version in git
+#textdir = '../text/lpsc15'
+# Local files
+textdir = '../../text/lpsc15'
 
 dirlist = [fn for fn in os.listdir(textdir) if
            fn.endswith('.pdf')]
@@ -29,5 +32,7 @@ for fn in dirlist:
         cleaned = re.sub(r'[^\x00-\x7F]+',' ', parsed['content'])
         # Replace multiple newlines with a single one
         cleaned = re.sub(r'[\n]+','\n', cleaned)
+        # Remove hyphenation
+        cleaned = cleaned.replace('-\n','')
         outf.write(cleaned)
         outf.close()
