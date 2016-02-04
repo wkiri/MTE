@@ -2,11 +2,22 @@
 __pycache__/
 *.py[cod]
 *~
+.DS_Store
+__MACOSX
+
+# Custom
+papers/15-ket/AuthorKit
+papers/15-ket/AuthorKit16
+papers/15-ket/copyright-signed-p3.pdf
+papers/15-ket/copyright-unsigned.pdf
 
 # Output files
 text/lpsc15/*.txt
 text/lpsc15/*.aslog
 text/lpsc15/*.cases
+*aux
+*bbl
+*blg
 
 # C extensions
 *.so
