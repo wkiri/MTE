@@ -15,7 +15,7 @@ from tika import parser
 # Version in git
 #textdir = '../text/lpsc15'
 # Local files
-textdir = '../../text/lpsc15'
+textdir = '../../text/lpsc15-pdfs'
 
 dirlist = [fn for fn in os.listdir(textdir) if
            fn.endswith('.pdf')]
@@ -30,8 +30,12 @@ for fn in dirlist:
     with open(textdir + '/' + fn[0:-4] + '.txt', 'w') as outf:
         # Remove non-ASCII characters
         cleaned = re.sub(r'[^\x00-\x7F]+',' ', parsed['content'])
+        # Replace multiple spaces with a single one
+        #cleaned = re.sub(r'[ ]+',' ', cleaned)
         # Replace multiple newlines with a single one
         cleaned = re.sub(r'[\n]+','\n', cleaned)
+        cleaned = re.sub(r' \n',' ', cleaned)
+        cleaned = re.sub(r'  ','\n', cleaned)
         # Remove hyphenation
         cleaned = cleaned.replace('-\n','')
         outf.write(cleaned)
