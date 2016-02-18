@@ -1,0 +1,9 @@
+T1	Target 5421 5467	Stuart and Pinnacle Island rocks in Cook Haven
+T2	Contains 5475 5479	have
+E1	Contains:T2 Target:T1 Component:T3
+T3	Mineral 5480 5523	sulfate deposits thinly coated by Mn oxides
+T4	Target 5813 5823	Cook Haven
+T8	Component 5800 5808	S and Cl
+T5	Contains 5785 5799	enrichement in
+E2	Contains:T5 Component:T8 Target:T4
+A1	Amount E2 Enriched

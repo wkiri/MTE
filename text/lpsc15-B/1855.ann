@@ -1,0 +1,52 @@
+T1	Target 1021 1028	Pahrump
+T2	Component 1107 1120	Mg, Ca and Cl
+T3	Component 1140 1155	Al, Si, P and K
+T4	Component 1169 1178	Zn and Ge
+T5	Contains 1081 1106	significantly depleted in
+E1	Contains:T5 Target:T1 Component:T2
+A1	Amount E1 Depleted
+T6	Contains 1128 1139	elevated in
+E2	Contains:T6 Target:T1 Component:T3
+A2	Amount E2 Enriched
+T7	Contains 1161 1168	high in
+E3	Contains:T7 Target:T1 Component:T4
+A3	Amount E3 Enriched
+T8	Contains 1559 1578	clearly enriched in
+E4	Contains:T8 Target:T10 Component:T9
+T9	Component 1579 1591	Mg, S and Ni
+T10	Target 1450 1520	Three diagenetic features, ~2cm wide (Moenkopi, Mammoth and Morrison),
+A4	Amount E4 Enriched
+T11	Element 1706 1708	Cl
+T12	Contains 1709 1735	shows a similar enrichment
+E5	Contains:T12 Component:T11 Target:T10
+A5	Amount E5 Enriched
+T13	Target 3345 3352	Pahrump
+T14	Contains 3353 3381	is significantly enriched in
+E6	Contains:T14 Target:T13 Component:T15
+A6	Amount E6 Enriched
+T15	Component 3382 3391	Zn and Ge
+T16	Component 3627 3644	Selenium and lead
+T17	Contains 3645 3719	are both consistently above their approximate limit of detection of ~20ppm
+E7	Contains:T17 Component:T16 Target:T18
+A7	Amount E7 Enriched
+T18	Target 3618 3625	Pahrump
+T19	Target 4014 4022	SantaAna
+T20	Target 4357 4365	SantaAna
+T21	Contains 4366 4380	has even lower
+E8	Contains:T21 Target:T20 Component:T23
+A8	Amount E8 Depleted
+T22	Element 4416 4426	phosphorus
+T23	Component 4381 4393	Mg, Ca and S
+T24	Contains 4399 4415	clearly elevated
+E9	Contains:T24 Target:T20 Component:T22
+A9	Amount E9 Enriched
+T25	Target 4465 4476	BonanzaKing
+T26	Contains 4559 4569	share high
+E10	Contains:T26 Component:T27 Target:T25
+A10	Amount E10 Enriched
+T27	Element 4570 4571	P
+T28	Component 4747 4758	Fe/Mn ratio
+T29	Contains 4730 4746	have a very high
+E11	Contains:T29 Target:T30 Component:T28
+T30	Target 4717 4729	Both samples
+A11	Amount E11 Enriched
