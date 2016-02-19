@@ -16,6 +16,7 @@ textdir = '../text/lpsc15-C'
 # Reference files
 elementfile = '../ref/elements.txt'
 chemcamfile = '../ref/chemcam-targets.txt'
+MERfile     = '../ref/MER-targets-pruned.txt'
 
 mypunc = re.sub('_', '', string.punctuation)
 
@@ -95,9 +96,21 @@ with open(chemcamfile, 'r') as inf:
     chemcam_targets += chemcam_targets_a
     chemcam_targets += chemcam_targets_b
 
-print [c for c in chemcam_targets if 'Square' in c]
- 
+# Read in the MER targets file
+with open(MERfile, 'r') as inf:
+    lines = inf.readlines()
+    mer_targets = [l.strip() for l in lines]
+    # Add a version with _ converted to space
+    mer_targets_a = [re.sub('_', ' ', cc) for cc in mer_targets \
+                         if '_' in cc]
+    # Add a version with space converted to _
+    mer_targets_b = [re.sub(' ', '_', cc) for cc in mer_targets \
+                             if ' ' in cc]
+    mer_targets += mer_targets_a
+    mer_targets += mer_targets_b
+
 print 'Read in %d ChemCam target names.' % len(chemcam_targets)
+print 'Read in %d MER target names.' % len(mer_targets)
 
 # Iterate through documents; output to .ann file
 for fn in dirlist:
@@ -114,6 +127,7 @@ for fn in dirlist:
     with open(annfile, 'w') as outf:
         start_t = pre_annotate(lines, elements,        'Element', outf, start_t)
         start_t = pre_annotate(lines, chemcam_targets, 'Target',  outf, start_t)
+        start_t = pre_annotate(lines, mer_targets,     'Target',  outf, start_t)
 
 #    sys.exit(0)
     
