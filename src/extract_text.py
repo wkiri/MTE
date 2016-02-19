@@ -12,10 +12,8 @@ import tika
 
 from tika import parser
 
-# Version in git
-#textdir = '../text/lpsc15'
 # Local files
-textdir = '../../text/lpsc15-pdfs'
+textdir = '../pdfs/lpsc15-pdfs'
 
 dirlist = [fn for fn in os.listdir(textdir) if
            fn.endswith('.pdf')]

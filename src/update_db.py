@@ -20,7 +20,7 @@ except ImportError, e:
     sys.exit()
 
 # Local files
-textdir = '../../text/lpsc15'
+textdir = '../text/lpsc15-A'
 
 dirlist = [fn for fn in os.listdir(textdir) if
            fn.endswith('.ann')]
