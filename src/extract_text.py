@@ -13,7 +13,7 @@ import tika
 from tika import parser
 
 # Local files
-textdir = '../pdfs/lpsc15-pdfs'
+textdir = '../text/lpsc15-pdfs'
 
 dirlist = [fn for fn in os.listdir(textdir) if
            fn.endswith('.pdf')]
@@ -30,11 +30,14 @@ for fn in dirlist:
         cleaned = re.sub(r'[^\x00-\x7F]+',' ', parsed['content'])
         # Replace multiple spaces with a single one
         #cleaned = re.sub(r'[ ]+',' ', cleaned)
-        # Replace multiple newlines with a single one
-        cleaned = re.sub(r'[\n]+','\n', cleaned)
-        cleaned = re.sub(r' \n',' ', cleaned)
-        cleaned = re.sub(r'  ','\n', cleaned)
         # Remove hyphenation
         cleaned = cleaned.replace('-\n','')
+        # Remove single newlines
+        cleaned = re.sub(r'(?<!\n)\n(?!\n)','',cleaned)
+                         #r'\n[^\n]','', cleaned)
+        # Replace multiple newlines with a single one
+        cleaned = re.sub(r'[\n]+','\n', cleaned)
+        cleaned = re.sub(r'[ ]+',' ', cleaned)
         outf.write(cleaned)
         outf.close()
+
