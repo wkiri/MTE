@@ -1,0 +1,9 @@
+T1	Target 2138 2153	Pinnacle Island
+T2	Target 2158 2171	Stuart Island
+T3	Element 2012 2013	S
+T4	Element 2016 2018	Mg
+T5	Element 2024 2026	Mn
+T6	Contains 2027 2031	rich
+E1	Contains:T6 Component:T5 Component2:T4 Component3:T3 Target:T1 Target2:T2
+A1	Amount E1 Enriched
+T7	Element 3809 3811	Ni

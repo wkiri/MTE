@@ -3,7 +3,9 @@ T2	Contains 5475 5479	have
 E1	Contains:T2 Target:T1 Component:T3
 T3	Mineral 5480 5523	sulfate deposits thinly coated by Mn oxides
 T4	Target 5813 5823	Cook Haven
-T8	Component 5800 5808	S and Cl
-T5	Contains 5785 5799	enrichement in
-E2	Contains:T5 Component:T8 Target:T4
+T5	Contains 5785 5796	enrichement
+E2	Contains:T5 Target:T4 Component:T6 Component2:T7
 A1	Amount E2 Enriched
+T6	Element 5800 5801	S
+T7	Element 5806 5808	Cl
+T8	Target 2903 2913	Cook Haven

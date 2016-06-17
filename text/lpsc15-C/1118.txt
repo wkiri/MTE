@@ -1,28 +1,104 @@
 
 1118.PDF
-RECENT RESULTS FROM THE OPPORTUNITY ROVER S EXPLORATION OF ENDEAVOUR CRATER, MARS.
-R. E. Arvidson1, S. W. Squyres2, R. Gellert3, and the Athena Science Team, 1Earth and Planetary Sciences, Washington University in Saint Louis, Saint Louis, MO, 63130, arvidson@wunder.wustl.edu, 2Cornell University, Ithaca, NY, 3University of Guelph, Ontario, Canada
- Introduction: The Mars Exploration Rover Opportunity is beginning its 12th year of exploration and as of sol 3875 (12/19/2014) had traversed ~41.5 km across the plains of Meridiani and the rim of the ~22 km wide Noachian Endeavour Crater. In this abstract recent results from Opportunity s exploration of Endeavour s rim are covered, focusing on the growing evidence for aqueous alteration of rocks on Murray Ridge and Cape Tribulation (Fig. 1).
- From Cook Haven to Marathon Valley: Opportunity spent its 5th winter season on north facing slopes in Cook Haven, where the Pinnacle and Stuart Island rocks serendipitously excavated by the rover wheels showed evidence for aqueous precipitation of sulfates, followed by interaction with a strong oxidant (e.g., O2) to form a thin Mn-rich coating on the sulfates [1]. Opportunity left Cook Haven and headed south, with the objective of traversing to Marathon Valley, where multiple CRISM observations show that extensive smectitebearing strata are exposed [2-4]. Arrival at the Valley will be well before the next winter season (winter solstice occurs on 1/3/2016), with enough time to explore the stratigraphy, structure, and composition of the deposits before settling in for another winter measurement campaign. During traverses to the Valley the rover conducted extensive remote sensing, APXS, and Microscopic Imager observations of Shoemaker formation breccias (Fig. 2), fine-grained, massive rocks on Wdowiak Ridge (named in honor of Thomas Wdowiak, Athena science team member who died in 2013) (Fig. 3), and both Burns formation and bench (Grasberg) materials in a shallow reentrant in the crater rim (Fig. 1).
-This included stopping over and examining bedrock on a fracture ( Crack ) that extends radially from the rim (Fig. 3).
-Evidence for Aqueous Alteration: Several Ca-sulfate veins were found during traverses, including within fractures in the Shoemaker, Grasberg, and Burns formations. These discoveries are consistent with multiple episodes of emplacement of relatively insoluble Ca-sulfates by aqueous fluids. Perhaps the most widespread indication of alteration is the enhancement of Mn relative to Fe in the rim rocks as compared to the Burns and Grasberg formation materials, with extreme enhancements associated with Pinnacle and Stuart Island rocks (Fig. 4) [1,5-6]. One interpretation is that the once more extensive Grasberg materials were preferentially leached of Mn, which was redeposited in the rim rocks [6]. Compositional trends for APXS measurements also show that Cook Haven and the
-Crack
-bedrock measurements are enriched in Cl and S, even after brushing (Fig. 5). These outcrops are either on a projection of a fracture extending radially away from the rim (Cook Haven) or contained within a fracture proper ( Crack ), consistent with preferential alteration by fracture-enhanced groundwater flow. Finally, the fine-grained, massive boulders excavated by Ulysses crater on Wdowiak ridge exhibit morphologic evidence for aqueous alteration in the form of thin plates on and within fracture planes (Fig. 6). APXS observations do not show compositional differences between the plates and rocks. Further, the compositions of rocks on Wdowiak Ridge indicate less alteration than other rim rocks (Fig. 5), and CRISM-based spectra (along-track oversampled FRT00019E9C) for scree shed downhill from Wdowiak Ridge show well-defined absorption features for olivine and pyroxene that are inconsistent with extensive alteration (Fig. 7). We interpret the plates to be authigenic fracture-filling deposits or due to parting along closelyspaced joints.
-References: [1] Arvidson, R. et al. (2015) Nature Geosci., submitted. [2] Wray, J. et al. (2009) GRL, 36, L21201. [3] Noe Dobrea, E. et al. (2012) GRL, 39, L23201. [4] Fox, V. et al. (2014) AGU, P41A-3882. [5] Gellert, R. et al. (2014) AGU, P34A-05. [6]. Middlefelht, D. et al. (2014) AGU, P41A-3881.
- Fig. 1. HiRISE view of the Murray Ridge and Cape Tribulation Endeavour Crater rim segments overlain 1118.pdf46th Lunar and Planetary Science Conference (2015)
-with Opportunity s traverses. Key features are labeled and CRISM false color image inset is shown. Rosebud is a bench (i.e., Grasberg) target for MI and APXS observations. HiRISE basemap generated from multiple scenes and CRISM FRT00019E9C data shown as RGB using 2.4103, 1.717, and 1.1453
-m image bands. CRISM spectra shown in Fig. 7 for areas labeled A-C. The broad conical feature extending westward from Wdowiak Ridge to Marathon Valley exhibits a pediment-like morphology and topography.
-Fig. 2. Pancam afternoon view showing the major rim segments examined by Opportunity on the way to Wdowiak Ridge. Cape York can be seen in the far distance.
-Fig. 3. Opportunity conducted a series of measurements while sitting astride a fracture ( Crack ) that extends radially outward from Cape Tribulation.
- Fig. 4. Scatter plot shows that Endeavour s rim rocks are enriched in Mn relative to Fe when compared to Grasberg bench materials (e.g., Rosebud target). SI and PI correspond to Stuart and Pinnacle Island rocks in Cook Haven, which have sulfate deposits thinly coated by Mn oxides. The
-North Pole
-dust measurement was acquired on a thick dust deposit on Cape York.
- Fig. 5. Correspondence analysis applied to APXS measurements, with the exception of Pinnacle and Stuart Island rocks and Ca-sulfate veins, encountered by Opportunity. Note the enrichement in S and Cl for Cook Haven and the
-Crack
-bedrock measurements, and the displacement of soils and most Wdowiak Ridge rocks away from most rim rock measurements. This displacement is consistent with slightly less alteration relative to most rim rocks.
- Fig. 6. Pancam image covering rocks about 15 cm high near Ulysses crater that show evidence for plates exfoliating along fracture planes.
- Fig. 7. CRISM spectra for 100 pixel means for areas shown in Fig. 1 show that the material extending from Wdowiak Ridge (A) has relatively deep olivine (~1.05 and 1.35
-m) and pyroxene (~2
-m) absorption features relative to the more open area to the south (B) and the Burns formation (C). The latter spectrum, with the ~0.95
-m feature, and increasing reflectance with increasing wavelength, is consistent with a dominance of ferric-rich dust, and the middle spectrum is interpreted to be a mix of the other two spectra. The long wavelength down-turn is interpreted to be due to a minor amount of H2O.
+RECENT RESULTS FROM THE OPPORTUNITY ROVER S EXPLORATION OF ENDEAVOUR CRATER, MARS. R. E. Arvidson1, S. W. Squyres2, R. Gellert3, and the Athena Science Team, 1Earth and Planetary Sciences, Washington University in Saint Louis, Saint Louis, MO, 63130, arvidson@wunder.wustl.edu, 2Cornell University, Ithaca, NY, 3University of Guelph, Ontario, Canada 
+Introduction: The Mars Exploration Rover Opportunity is beginning its 12th year of exploration and as of 
+sol 3875 (12/19/2014) had traversed ~41.5 km across 
+the plains of Meridiani and the rim of the ~22 km wide 
+Noachian Endeavour Crater. In this abstract recent results from Opportunity s exploration of Endeavour s 
+rim are covered, focusing on the growing evidence for 
+aqueous alteration of rocks on Murray Ridge and Cape 
+Tribulation (Fig. 1). 
+From Cook Haven to Marathon Valley: Opportunity spent its 5th winter season on north facing slopes 
+in Cook Haven, where the Pinnacle and Stuart Island 
+rocks serendipitously excavated by the rover wheels 
+showed evidence for aqueous precipitation of sulfates, 
+followed by interaction with a strong oxidant (e.g., O2) 
+to form a thin Mn-rich coating on the sulfates [1]. Opportunity left Cook Haven and headed south, with the 
+objective of traversing to Marathon Valley, where multiple CRISM observations show that extensive smectitebearing strata are exposed [2-4]. Arrival at the Valley 
+will be well before the next winter season (winter solstice occurs on 1/3/2016), with enough time to explore 
+the stratigraphy, structure, and composition of the deposits before settling in for another winter measurement 
+campaign. During traverses to the Valley the rover conducted extensive remote sensing, APXS, and Microscopic Imager observations of Shoemaker formation 
+breccias (Fig. 2), fine-grained, massive rocks on 
+Wdowiak Ridge (named in honor of Thomas Wdowiak, 
+Athena science team member who died in 2013) (Fig. 
+3), and both Burns formation and bench (Grasberg) materials in a shallow reentrant in the crater rim (Fig. 1). 
+This included stopping over and examining bedrock on 
+a fracture ( Crack ) that extends radially from the rim 
+(Fig. 3). 
+Evidence for Aqueous Alteration: Several Ca-sulfate veins were found during traverses, including within 
+fractures in the Shoemaker, Grasberg, and Burns formations. These discoveries are consistent with multiple 
+episodes of emplacement of relatively insoluble Ca-sulfates by aqueous fluids. Perhaps the most widespread 
+indication of alteration is the enhancement of Mn relative to Fe in the rim rocks as compared to the Burns and 
+Grasberg formation materials, with extreme enhancements associated with Pinnacle and Stuart Island rocks 
+(Fig. 4) [1,5-6]. One interpretation is that the once more 
+extensive Grasberg materials were preferentially 
+leached of Mn, which was redeposited in the rim rocks 
+[6]. Compositional trends for APXS measurements also 
+show that Cook Haven and the Crack bedrock measurements are enriched in Cl and S, even after brushing 
+(Fig. 5). These outcrops are either on a projection of a 
+fracture extending radially away from the rim (Cook 
+Haven) or contained within a fracture proper ( Crack ), 
+consistent with preferential alteration by fracture-enhanced groundwater flow. Finally, the fine-grained, 
+massive boulders excavated by Ulysses crater on 
+Wdowiak ridge exhibit morphologic evidence for aqueous alteration in the form of thin plates on and within 
+fracture planes (Fig. 6). APXS observations do not show 
+compositional differences between the plates and rocks. 
+Further, the compositions of rocks on Wdowiak Ridge 
+indicate less alteration than other rim rocks (Fig. 5), and 
+CRISM-based spectra (along-track oversampled 
+FRT00019E9C) for scree shed downhill from Wdowiak 
+Ridge show well-defined absorption features for olivine 
+and pyroxene that are inconsistent with extensive alteration (Fig. 7). We interpret the plates to be authigenic 
+fracture-filling deposits or due to parting along closelyspaced joints. 
+References: [1] Arvidson, R. et al. (2015) Nature 
+Geosci., submitted. [2] Wray, J. et al. (2009) GRL, 36, 
+L21201. [3] Noe Dobrea, E. et al. (2012) GRL, 39, 
+L23201. [4] Fox, V. et al. (2014) AGU, P41A-3882. [5] 
+Gellert, R. et al. (2014) AGU, P34A-05. [6]. Middlefelht, D. et al. (2014) AGU, P41A-3881. 
+ Fig. 1. HiRISE view of the Murray Ridge and Cape 
+Tribulation Endeavour Crater rim segments overlain 
+1118.pdf46th Lunar and Planetary Science Conference (2015)
+with Opportunity s traverses. Key features are labeled 
+and CRISM false color image inset is shown. Rosebud 
+is a bench (i.e., Grasberg) target for MI and APXS observations. HiRISE basemap generated from multiple 
+scenes and CRISM FRT00019E9C data shown as RGB 
+using 2.4103, 1.717, and 1.1453 m image bands. 
+CRISM spectra shown in Fig. 7 for areas labeled A-C. 
+The broad conical feature extending westward from 
+Wdowiak Ridge to Marathon Valley exhibits a pediment-like morphology and topography. 
+ Fig. 2. Pancam afternoon view showing the major rim 
+segments examined by Opportunity on the way to 
+Wdowiak Ridge. Cape York can be seen in the far distance. 
+ Fig. 3. Opportunity conducted a series of measurements 
+while sitting astride a fracture ( Crack ) that extends radially outward from Cape Tribulation. 
+ Fig. 4. Scatter plot shows that Endeavour s rim rocks 
+are enriched in Mn relative to Fe when compared to 
+Grasberg bench materials (e.g., Rosebud target). SI and 
+PI correspond to Stuart and Pinnacle Island rocks in 
+Cook Haven, which have sulfate deposits thinly coated 
+by Mn oxides. The North Pole dust measurement was 
+acquired on a thick dust deposit on Cape York. 
+ Fig. 5. Correspondence analysis applied to APXS 
+measurements, with the exception of Pinnacle and 
+Stuart Island rocks and Ca-sulfate veins, encountered by 
+Opportunity. Note the enrichement in S and Cl for Cook 
+Haven and the Crack bedrock measurements, and the 
+displacement of soils and most Wdowiak Ridge rocks 
+away from most rim rock measurements. This 
+displacement is consistent with slightly less alteration 
+relative to most rim rocks. 
+ Fig. 6. Pancam image covering rocks about 15 cm high 
+near Ulysses crater that show evidence for plates 
+exfoliating along fracture planes. 
+ Fig. 7. CRISM spectra for 100 pixel means for areas 
+shown in Fig. 1 show that the material extending from 
+Wdowiak Ridge (A) has relatively deep olivine (~1.05 
+and 1.35 m) and pyroxene (~2 m) absorption features 
+relative to the more open area to the south (B) and the 
+Burns formation (C). The latter spectrum, with the 
+~0.95 m feature, and increasing reflectance with increasing wavelength, is consistent with a dominance of 
+ferric-rich dust, and the middle spectrum is interpreted 
+to be a mix of the other two spectra. The long wavelength down-turn is interpreted to be due to a minor 
+amount of H2O. 
+ 
 1118.pdf46th Lunar and Planetary Science Conference (2015)

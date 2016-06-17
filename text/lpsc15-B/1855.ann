@@ -25,28 +25,38 @@ T14	Contains 3353 3381	is significantly enriched in
 E6	Contains:T14 Target:T13 Component:T15
 A6	Amount E6 Enriched
 T15	Component 3382 3391	Zn and Ge
-T16	Component 3627 3644	Selenium and lead
-T17	Contains 3645 3719	are both consistently above their approximate limit of detection of ~20ppm
-E7	Contains:T17 Component:T16 Target:T18
-A7	Amount E7 Enriched
 T18	Target 3618 3625	Pahrump
 T19	Target 4014 4022	SantaAna
 T20	Target 4357 4365	SantaAna
-T21	Contains 4366 4380	has even lower
-E8	Contains:T21 Target:T20 Component:T23
-A8	Amount E8 Depleted
 T22	Element 4416 4426	phosphorus
-T23	Component 4381 4393	Mg, Ca and S
-T24	Contains 4399 4415	clearly elevated
-E9	Contains:T24 Target:T20 Component:T22
-A9	Amount E9 Enriched
 T25	Target 4465 4476	BonanzaKing
-T26	Contains 4559 4569	share high
-E10	Contains:T26 Component:T27 Target:T25
-A10	Amount E10 Enriched
 T27	Element 4570 4571	P
 T28	Component 4747 4758	Fe/Mn ratio
-T29	Contains 4730 4746	have a very high
-E11	Contains:T29 Target:T30 Component:T28
 T30	Target 4717 4729	Both samples
+T29	Contains 4730 4734	have
+E11	Contains:T29 Target:T30 Component:T28
 A11	Amount E11 Enriched
+T26	Contains 4559 4564	share
+E10	Contains:T26 Component:T27 Target:T31
+A10	Amount E10 Enriched
+T31	Target 4554 4558	they
+T32	Component 4795 4809	Fe3+/FeT ratio
+T33	Component 4814 4832	Feoxides as cement
+T34	Contains 4772 4777	point
+E12	Contains:T34 Target:T30 Component:T32 Component2:T33
+A12	Confidence E12 Low
+A13	Amount E12 Enriched
+T21	Contains 4366 4369	has
+E8	Contains:T21 Target:T20 Component:T23 Component2:T35 Component3:T36
+T23	Element 4381 4383	Mg
+T35	Element 4385 4387	Ca
+T36	Element 4392 4393	S
+A8	Amount E8 Depleted
+T24	Contains 4407 4415	elevated
+E9	Contains:T24 Target:T20 Component:T22
+A9	Amount E9 Enriched
+T16	Element 3627 3635	Selenium
+T17	Element 3640 3644	lead
+T37	Contains 3667 3672	above
+E7	Contains:T37 Target:T18 Component:T17 Component2:T16
+A7	Amount E7 Enriched

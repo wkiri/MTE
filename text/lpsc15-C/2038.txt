@@ -1,74 +1,140 @@
 
 2038.PDF
-POTENTIAL CEMENT PHASES IN SEDIMENTARY ROCKS DRILLED BY CURIOSITY AT GALE CRATER, MARS.
-E. B. Rampe
-1
-, R. V. Morris
-2
-, D. L. Bish
-3
-, S. J. Chipera
-4
-, D. W. Ming
-2
-, D. F. Blake
-5
-, D. T. Vaniman
-6
-, T. F. Bristow
-5
-, P. Cavanagh
-3
-, J. D. Farmer
-7
-, S. M. Morrison
-8
-, K. Siebach
-9
-, A. H. Treiman
-10
-, C. N. Achilles
-3
-, D. Blaney
-11
-, J. A. Crisp
-11
-, D. J. Des Marais
-5
-, R. T. Downs
-8
-, K. Fendrich
-8
-, J. Martin-Torres
-12
-, J. M. Morookian
-11
-, M.-P. Zorzano
-13
-, P. Sarrazin
-14
-, N. Spanovich
-11
-, A. S. Yen
-11
-, and the MSL Science Team. 1
-Aerodyne Industries
- Jacobs JETS Contract, NASA-JSC, Houston, TX 77058, elizabeth.b.rampe@nasa.gov, 2NASA-JSC, 3Indiana Univ., 4
-CHK Energy, 5
-NASA-Ames, 6
-PSI, 7
-Arizona State Univ., 8
-Univ. Arizona, 9
-Caltech, 10
-LPI, 11
-JPL-Caltech, 12
-CSIC-UGR, 13
-INTA-CSIC, 14
-SETI.
- Introduction:
-The Mars Science Laboratory rover Curiosity has encountered a variety of sedimentary rocks in Gale crater with different grain sizes, diagenetic features, sedimentary structures, and varying degrees of resistance to erosion. Curiosity has drilled three rocks to date and has analyzed the mineralogy, chemical composition, and textures of the samples with the science payload. The drilled rocks are the Sheepbed mudstone at Yellowknife Bay on the plains of Gale crater (John Klein and Cumberland targets), the Dillinger sandstone at the Kimberley on the plains of Gale crater (Windjana target), and a sedimentary unit in the Pahrump Hills in the lowermost rocks at the base of Mt. Sharp (Confidence Hills target). CheMin is the Xray diffractometer on Curiosity, and its data are used to identify and determine the abundance of mineral phases. Secondary phases can tell us about aqueous alteration processes and, thus, can help to elucidate past aqueous environments. Here, we present the secondary mineralogy of the rocks drilled to date as seen by CheMin and discuss past aqueous environments in Gale crater, the potential cementing agents in each rock, and how amorphous materials may play a role in cementing the sediments. Methods: The CheMin instrument collects Co-K
-X-ray diffraction patterns in a Debye-Scherrer transmission geometry, and the resulting 2D patterns are converted to 1D patterns by circumferential integration (Fig. 1). Rietveld refinement techniques produce unit cell parameters for individual minerals [1], and FULLPAT models determine abundances that include poorly crystalline and amorphous phases [2]. The composition of the amorphous component is calculated by subtracting the composition of all crystalline phases as determined through models of CheMin data from the bulk APXS composition of the drill fines [3,4]. Sheepbed Mudstone: Models of CheMin data from John Klein and Cumberland show that the major phases in the Sheepbed mudstone include plagioclase, pyroxene, trioctahedral smectite (Fe-saponite), and amorphous phases (Fig. 2a,b) [5]. Minor phases include magnetite, anhydrite, bassanite, akaganeite, sanidine, and pyrrhotite. Smectite, Ca-sulfates, and akaganeite are secondary minerals that may be cementing the Sheepbed mudstone. Furthermore, the mineral assemblage suggests that the saponite and magnetite are authigenic and formed in-situ from the alteration of olivine and amorphous material [5-7]. Calculations of the amorphous component show that the amorphous materials are enriched in FeOT, CaO, Na2O, SO3, and P2O5 and depleted in SiO2, Al2O3, and MgO relative to a basaltic glass composition [5]. These calculations are being updated based on new refinements of unit cell parameters (see Morris et al., this meeting), but the values suggest the amorphous material is secondary and may be composed of nanophase Fe-oxides (npOx), amorphous sulfates and phosphates and/or sulfate and phosphate chemisorbed to surfaces of nanophase materials [8], and minor amounts of amorphous silicates Dillinger Sandstone: The unit cell parameters for the minerals in the Windjana target are being refined at the time of this writing. Models of XRD data show that the major phases in the Dillinger sandstone include pyroxene, K-feldspar, magnetite, phyllosilicate (illite and/or smectite), and amorphous phases (Fig. 2c). The minor phases include plagioclase, akaganeite, anhydrite, pyrrhotite, ilmenite, and hematite (see Treiman et al., this meeting, for a complete discussion). Phyllosilicate, anhydrite, akaganeite, and magnetite are potential secondary minerals that may help cement the Dillinger sandstone. The origin of these phases (i.e., authigenic or detrital) is unknown. Preliminary calculations of the amorphous component in Windjana show that it is enriched in FeOT, MgO, and SO3, and depleted in SiO2, Al2O3, CaO, and Na2O relative to a basaltic glass composition. This composition suggests that the amorphous component is made up of secondary phases, possibly including npOx, amorphous sulfates, and minor amounts of amorphous silicates. Pahrump Hills: Unit cell parameters for the minerals in the Confidence Hills target are also being refined at the time of this writing. Models show that the major phases are plagioclase, pyroxene, hematite, phyllosilicate (smectite and/or illite), and amorphous materials (Fig. 2d). Minor phases include magnetite, forster2038.pdf46th Lunar and Planetary Science Conference (2015)
-ite, K-feldspar, and jarosite (see Cavanagh et al., this meeting, for a complete discussion). Phyllosilicate, hematite, and jarosite are potential secondary minerals that may help cement these sediments. The origin of these phases is currently unknown. Preliminary calculations of the composition of the amorphous component show that it is enriched in SiO2 and SO3, suggesting that it is secondary, may have formed in a leaching environment, and may help cement these sediments. Discussion: There are a variety of secondary phases that may cement the rocks at Gale crater, and if these phases are authigenic, they imply that the sediments experienced different aqueous conditions and multiple fluid episodes. The presence of Ca-sulfates and saponite in John Klein and Cumberland suggests an aqueous environment with low ionic strength and near neutral pH [5]; however, the presence of akaganeite suggests acidic fluids also affected the sediments. The abundance of K-spar and the potential presence of illite in Windjana must be considered when interpreting the formation of the Dillinger sandstone because these phases can form in diagenetic K-rich environments on Earth [e.g., 9]. The presence of Fe-sulfates in Confidence Hills rather than Ca-sulfates indicates an episode of acidic aqueous fluids in the sediments at the base of Mt. Sharp, and the hematite and jarosite could have formed in-situ from oxidized Fe-rich fluids. Calculations of the amorphous component in each rock suggest amorphous phases are secondary and the composition varies between samples. References: [1] Rietveld H. M. (1969) J. Appl. Cryst., 2. [2] Chipera S. and Bish, D. (2002) J. Appl. Cryst., 35. [3]
-Morris R. V. et al. (2013) LPS XLV, #1319. [4] Morris R. V. et al., this meeting. [5] Vaniman D. et al. (2014) Science, 343. [6] Bristow T. et al. (in press) Am. Mineral. [7] Bridges J. et al. (2014) Met. Soc., #5344. [8] Rampe E. et al. (2013) AGU Fall Meeting. [9] Waugh B. (1978) J. Geol. Soc., 135.
-Figure 1. CheMin 1D XRD patterns.
-Figure 2. Modeled mineralogy of A) John Klein, B) Cumberland, C) Windjana, and D) Confidence Hills samples. Phases with asterisks are at the detection limit of CheMin. 2038.pdf46th Lunar and Planetary Science Conference (2015)
+POTENTIAL CEMENT PHASES IN SEDIMENTARY ROCKS DRILLED BY CURIOSITY AT GALE 
+CRATER, MARS. E. B. Rampe1, R. V. Morris
+2, D. L. Bish
+3, S. J. Chipera
+4, D. W. Ming
+2, D. F. Blake
+5, D. T. 
+Vaniman6, T. F. Bristow
+5, P. Cavanagh
+3, J. D. Farmer
+7, S. M. Morrison
+8, K. Siebach
+9, A. H. Treiman
+10, C. N. Achilles3, D. Blaney
+11, J. A. Crisp
+11, D. J. Des Marais
+5, R. T. Downs
+8, K. Fendrich
+8, J. Martin-Torres
+12, J. M. Morookian11
+, M.-P. Zorzano13
+, P. Sarrazin14
+, N. Spanovich11
+, A. S. Yen11
+, and the MSL Science Team. 1Aerodyne Industries 
+ Jacobs JETS Contract, NASA-JSC, Houston, TX 77058, elizabeth.b.rampe@nasa.gov, 2NASA-JSC, 3Indiana 
+Univ., 4CHK Energy, 
+5NASA-Ames, 
+6PSI, 
+7Arizona State Univ., 
+8Univ. Arizona, 
+9Caltech, 
+10LPI, 
+11JPL-Caltech, 
+12CSIC-UGR, 
+13INTA-CSIC, 
+14SETI. 
+ 
+ 
+Introduction: The Mars Science Laboratory rover 
+Curiosity has encountered a variety of sedimentary 
+rocks in Gale crater with different grain sizes, diagenetic features, sedimentary structures, and varying degrees 
+of resistance to erosion. Curiosity has drilled three 
+rocks to date and has analyzed the mineralogy, chemical composition, and textures of the samples with the 
+science payload. The drilled rocks are the Sheepbed 
+mudstone at Yellowknife Bay on the plains of Gale 
+crater (John Klein and Cumberland targets), the Dillinger sandstone at the Kimberley on the plains of Gale 
+crater (Windjana target), and a sedimentary unit in the 
+Pahrump Hills in the lowermost rocks at the base of 
+Mt. Sharp (Confidence Hills target). CheMin is the Xray diffractometer on Curiosity, and its data are used to 
+identify and determine the abundance of mineral phases. Secondary phases can tell us about aqueous alteration processes and, thus, can help to elucidate past 
+aqueous environments. Here, we present the secondary 
+mineralogy of the rocks drilled to date as seen by 
+CheMin and discuss past aqueous environments in 
+Gale crater, the potential cementing agents in each 
+rock, and how amorphous materials may play a role in 
+cementing the sediments. 
+Methods: The CheMin instrument collects Co-K 
+X-ray diffraction patterns in a Debye-Scherrer transmission geometry, and the resulting 2D patterns are 
+converted to 1D patterns by circumferential integration 
+(Fig. 1). Rietveld refinement techniques produce unit 
+cell parameters for individual minerals [1], and 
+FULLPAT models determine abundances that include 
+poorly crystalline and amorphous phases [2]. The composition of the amorphous component is calculated by 
+subtracting the composition of all crystalline phases as 
+determined through models of CheMin data from the 
+bulk APXS composition of the drill fines [3,4]. 
+Sheepbed Mudstone: Models of CheMin data 
+from John Klein and Cumberland show that the major 
+phases in the Sheepbed mudstone include plagioclase, 
+pyroxene, trioctahedral smectite (Fe-saponite), and 
+amorphous phases (Fig. 2a,b) [5]. Minor phases include magnetite, anhydrite, bassanite, akaganeite, sanidine, and pyrrhotite. 
+Smectite, Ca-sulfates, and akaganeite are secondary 
+minerals that may be cementing the Sheepbed mudstone. Furthermore, the mineral assemblage suggests 
+that the saponite and magnetite are authigenic and 
+formed in-situ from the alteration of olivine and amorphous material [5-7]. Calculations of the amorphous 
+component show that the amorphous materials are enriched in FeOT, CaO, Na2O, SO3, and P2O5 and depleted in SiO2, Al2O3, and MgO relative to a basaltic glass 
+composition [5]. These calculations are being updated 
+based on new refinements of unit cell parameters (see 
+Morris et al., this meeting), but the values suggest the 
+amorphous material is secondary and may be composed of nanophase Fe-oxides (npOx), amorphous sulfates and phosphates and/or sulfate and phosphate 
+chemisorbed to surfaces of nanophase materials [8], 
+and minor amounts of amorphous silicates 
+Dillinger Sandstone: The unit cell parameters for 
+the minerals in the Windjana target are being refined at 
+the time of this writing. Models of XRD data show that 
+the major phases in the Dillinger sandstone include 
+pyroxene, K-feldspar, magnetite, phyllosilicate (illite 
+and/or smectite), and amorphous phases (Fig. 2c). The 
+minor phases include plagioclase, akaganeite, anhydrite, pyrrhotite, ilmenite, and hematite (see Treiman et 
+al., this meeting, for a complete discussion). 
+Phyllosilicate, anhydrite, akaganeite, and magnetite 
+are potential secondary minerals that may help cement 
+the Dillinger sandstone. The origin of these phases 
+(i.e., authigenic or detrital) is unknown. Preliminary 
+calculations of the amorphous component in Windjana 
+show that it is enriched in FeOT, MgO, and SO3, and 
+depleted in SiO2, Al2O3, CaO, and Na2O relative to a 
+basaltic glass composition. This composition suggests 
+that the amorphous component is made up of secondary phases, possibly including npOx, amorphous sulfates, and minor amounts of amorphous silicates. 
+Pahrump Hills: Unit cell parameters for the minerals in the Confidence Hills target are also being refined at the time of this writing. Models show that the 
+major phases are plagioclase, pyroxene, hematite, phyllosilicate (smectite and/or illite), and amorphous materials (Fig. 2d). Minor phases include magnetite, forster2038.pdf46th Lunar and Planetary Science Conference (2015)
+ite, K-feldspar, and jarosite (see Cavanagh et al., this 
+meeting, for a complete discussion). 
+Phyllosilicate, hematite, and jarosite are potential 
+secondary minerals that may help cement these sediments. The origin of these phases is currently unknown. Preliminary calculations of the composition of 
+the amorphous component show that it is enriched in 
+SiO2 and SO3, suggesting that it is secondary, may have 
+formed in a leaching environment, and may help cement these sediments. 
+Discussion: There are a variety of secondary phases that may cement the rocks at Gale crater, and if 
+these phases are authigenic, they imply that the sediments experienced different aqueous conditions and 
+multiple fluid episodes. The presence of Ca-sulfates 
+and saponite in John Klein and Cumberland suggests 
+an aqueous environment with low ionic strength and 
+near neutral pH [5]; however, the presence of akaganeite suggests acidic fluids also affected the sediments. 
+The abundance of K-spar and the potential presence of 
+illite in Windjana must be considered when interpreting 
+the formation of the Dillinger sandstone because these 
+phases can form in diagenetic K-rich environments on 
+Earth [e.g., 9]. The presence of Fe-sulfates in Confidence Hills rather than Ca-sulfates indicates an episode 
+of acidic aqueous fluids in the sediments at the base of 
+Mt. Sharp, and the hematite and jarosite could have 
+formed in-situ from oxidized Fe-rich fluids. Calculations of the amorphous component in each rock suggest 
+amorphous phases are secondary and the composition 
+varies between samples. 
+References: [1] Rietveld H. M. (1969) J. Appl. 
+Cryst., 2. [2] Chipera S. and Bish, D. (2002) J. Appl. 
+Cryst., 35. [3] Morris R. V. et al. (2013) LPS XLV, 
+#1319. [4] Morris R. V. et al., this meeting. [5] Vaniman D. et al. (2014) Science, 343. [6] Bristow T. et al. 
+(in press) Am. Mineral. [7] Bridges J. et al. (2014) Met. 
+Soc., #5344. [8] Rampe E. et al. (2013) AGU Fall 
+Meeting. [9] Waugh B. (1978) J. Geol. Soc., 135. 
+ Figure 1. CheMin 1D XRD patterns. 
+ Figure 2. Modeled mineralogy of A) John Klein, B) 
+Cumberland, C) Windjana, and D) Confidence Hills 
+samples. Phases with asterisks are at the detection limit 
+of CheMin. 
+2038.pdf46th Lunar and Planetary Science Conference (2015)
