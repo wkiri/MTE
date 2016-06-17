@@ -18,7 +18,9 @@ elementfile = '../ref/elements.txt'
 chemcamfile = '../ref/chemcam-targets.txt'
 MERfile     = '../ref/MER-targets-pruned.txt'
 
-mypunc = re.sub('_+', '', string.punctuation)
+mypunc = string.punctuation
+for p in ['_', '\+', '-']:
+    mypunc = re.sub(p, '', mypunc)
 
 # Files to analyze
 dirlist = [fn for fn in os.listdir(textdir) if
@@ -49,6 +51,57 @@ def pre_annotate(lines, items, name, outf, start_t):
                 # but not cases where there is internal punctuation
                 span_start_strip = span_start + w.index(w_strip)
                 #print str(w.index(w_strip))
+                span_end    = span_start_strip + len(w_strip) 
+                # Format: Tx\tTarget <span_start> <span_end>\t<word>
+                outf.write('T' + str(target_ind) + '\t' +
+                           name + ' ' + str(span_start_strip) + 
+                           ' ' + str(span_end) + '\t' +
+                           w_strip + '\n')
+                # Set up for the next target
+                target_ind += 1
+            else:
+                span_end    = span_start + len(w_strip) 
+                    
+            #print '<%s>, span %d to %d' % (w, span_start, span_end)
+            # Either way, update span_start
+            span_end   = span_start + len(w)
+            span_start = span_end + 1 # Assumes followed by space 
+            # (or newline, for final word in line)
+        span_start -= 1 # Uncount the newline (double-count)
+
+    # return the latest target_ind for ongoing use
+    return target_ind
+
+
+# Process lines from input file, annotate anything matching 'suffix'
+# and write out the annotations to outf with type 'name'.
+# Number targets starting from start_t.
+def pre_annotate_suffix(lines, suffix, name, outf, start_t):
+    # Initialize counters
+    target_ind = start_t
+    span_start = 0
+    span_end = 0
+
+    # Iterate through words and look for a match in the elements list
+    for l in lines:
+        # Specifying ' ' explicitly means that all single spaces
+        # will cause a split.  This way we can update span_start
+        # correctly even if there are multiple spaces present.
+        words = l.split(' ')
+        for w in words:
+            # Remove any trailing \n etc.
+            w_strip = w.strip()
+            # Remove any punctuation, except '_', '+', and '-' (ions)
+            w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
+            if w_strip.endswith(suffix):
+                # This handles leading and trailing punctuation,
+                # but not cases where there is internal punctuation
+                try:
+                    span_start_strip = span_start + w.index(w_strip)
+                except:
+                    # Skip this one
+                    print 'Could not handle %s.' % w
+                    continue
                 span_end    = span_start_strip + len(w_strip) 
                 # Format: Tx\tTarget <span_start> <span_end>\t<word>
                 outf.write('T' + str(target_ind) + '\t' +
@@ -131,7 +184,8 @@ for fn in dirlist:
         start_t = pre_annotate(lines, elements,        'Element', outf, start_t)
         start_t = pre_annotate(lines, chemcam_targets, 'Target',  outf, start_t)
 #        start_t = pre_annotate(lines, mer_targets,     'Target',  outf, start_t)
+        start_t = pre_annotate_suffix(lines, 'ite', 'Mineral', outf, start_t)
 
-#    sys.exit(0)
+
     
 
