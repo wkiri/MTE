@@ -1,0 +1,204 @@
+
+2339.PDF
+THE CHEMOSTRATIGRAPHY OF LOWER MT. SHARP: USING ROVER-SCALE OBSERVATIONS 
+TO TEST ORBITAL-SCALE HYPOTHESES.  R. E. Milliken1, J. A. Hurowitz2, J. Grotzinger3, R. Wiens4, D. 
+Blaney5, J. Martin-Torres6, M. Zorzano7 and the MSL Science Team. 1Dept. Earth, Evn., Planetary Sciences, Brown 
+University, Providence, RI 02912; Ralph_Milliken@brown.edu, 2Stony Brook University, Stony Brook, NY, 
+3Caltech, Pasadena, CA, 4Los Alamos Natl. Lab, Los Alamos, NM 5JPL/Caltech, Pasadena, CA, 6CSIC-UGR, Gra-
+nada, Spain, 7Lulea Univ. of Tech., Kiruna, Sweden. 
+ 
+Background:  In September, Curiosity crossed a 
+geologic boundary that put its wheels on strata that or-
+bital-based mapping demonstrate are part of lower Mt. 
+Sharp [1]. These rocks exhibit variable dust/soil cover, 
+but it is clear from both rover and orbital imagery that 
+there is a greater exposure of bedrock in this region 
+than on the hummocky plains that dominated Curiosi-
+ty s traverse path to the north. This is consistent with 
+orbitally-acquired CRISM reflectance spectra that show 
+these units to represent the stratigraphically lowest de-
+tections of hematite and hydrated minerals in Mt. Sharp 
+[2]. Curiosity now begins a journey in which orbital 
+mineral detections and associated hypotheses can be 
+assessed at the rover scale. 
+This portion of lower Mt. Sharp (Pahrump Hills) 
+consists of sedimentary lithologies that include 
+mudrocks and sandstones. The apparent susceptibility 
+of these units to eolian erosion is variable, with the 
+stratigraphically lower beds being consistent with finer-
+grained lithologies that erode to form shallow slopes 
+and overlying units containing coarser-grained beds 
+that form steeper slopes. At the ~18 m/pixel scale of 
+CRISM data it is likely that the finer-grained, low-slope 
+forming beds dominate the orbital spectral signatures 
+due to greater areal exposure, and it is these units that 
+have thus far dominated Curiosity s exploration of the 
+Pahrump Hills (Fig. 1). 
+CRISM signatures of strata equivalent to Pahrump 
+Hills indicate the presence of hematite and one or more 
+hydrated phases [2]. The former was confirmed (~8 
+wt.%) in situ by CheMin XRD analysis of the Confi-
+dence Hills drill target in the lower exposures of 
+Pahrump [3]. Orbital signatures of the hydrous compo-
+nent(s) are ambiguous enough that possible phases may 
+include hydrated salts (e.g., jarosite, gypsum), clay 
+minerals, and/or hydrated silica. Alternatively, the ob-
+served metal-OH and H2O absorptions may be associat-
+ed with XRD-amorphous components. 
+Curiosity s initial traverse of the Pahrump Hills 
+(Pass 1) focused on remote sensing (e.g., Mastcam im-
+agery and ChemCam LIBS/RMI data). The subsequent 
+Pass 2 traverse re-examined these strata with a focus on 
+contact science (APXS chemistry and MAHLI imag-
+ing). Curiosity s systematic documentation of chemical 
+and textural trends as a function of stratigraphic posi-
+tion can be combined with orbital CRISM data to sig-
+nificantly enhance our understanding of how to inter-
+pret orbital-scale observations in their proper context.  
+Specifically, detailed chemostratigraphic analysis 
+using Curiosity s payload, coupled with textural infor-
+mation from imaging, can help us determine which 
+chemical/mineralogical signatures reflect variations in 
+primary sediment composition versus diagenetic pro-
+cesses. Such observations can be placed in stratigraphic 
+context and understood in terms of process, which will 
+in turn help us understand how best to interpret orbital 
+data in Gale beyond the traverse path of Curiosity. 
+Methods:  In increasing stratigraphic position, pri-
+mary outcrops of the Pahrump Hills include Shoemak-
+er, Confidence Hills, Pink Cliffs, Book Cliffs, Alexan-
+der Hills, Chinle, and Whale Rock [4]. During Pass 1, 
+ChemCam examined a variety of bedrock and diagenet-
+ic targets within these outcrops, many of which were 
+acquired as 10 or 5 point vertical rasters that ran per-
+pendicular to bedding and/or laminations. Data for in-
+dividual points were arranged in increasing stratigraph-
+ic order. Points within an observation are evenly 
+spaced, but the vertical and/or horizontal distance be-
+tween different observations is variable.  
+Corresponding RMI images showed that some 
+points within individual observations were associated 
+with diagenetic features (e.g., veins, nodules); these 
+points were removed from our analysis such that the 
+results reported here are considered to be the best repre-
+sentation of bulk bedrock chemistry (including possible 
+cementing agents) as observed by ChemCam. Oxide 
+averages for each point were calculated by the Chem-
+Cam team using the PLS1 routine [5] for Si, Al, Fe, 
+Mg, Ca, Na, K and Ti. These oxide values were nor-
+malized to sum to 100%. The resulting stratigraphically 
+ordered ChemCam point measurments were examined 
+individually and also passed through a 3-point moving 
+average to reduce point-to-point variability and to high-
+light dominant chemostratigraphic trends (e.g., Fig. 2). 
+Individual elemental abundances and elemental ratios 
+(e.g., to Si) were examined for comparison against 
+APXS data acquired in similar stratigraphic units. 
+ 
+ 
+Figure 1. Pahrump Hills as seen by Mastcam, with labels 
+for major outcrops explored during Pass 1 & 2. Red points 
+indicate Pass 1 locations. Courtesy NASA/JPL/MSSS. 
+ 
+2339.pdf46th Lunar and Planetary Science Conference (2015)
+In this study we focus on APXS bedrock targets that 
+were brushed prior to analysis and diagenetic targets 
+(e.g., nodules) that were either brushed or unbrushed. 
+APXS oxide abundances were provided by the APXS 
+team and the same oxides reported by ChemCam were 
+normalized to sum to 100%. APXS was also used to 
+assess variations in S, Cl, and Br abundance. 
+Results:  Our chemostratigraphic analysis of 
+ChemCam and APXS data indicate that major elements 
+(Si, Mg, Fe, Ca, Na, K) vary to different degrees 
+throughout the Pahrump section, with at least three 
+chemically distinct rock types [6]. Notably, there is an 
+apparent increase in Al, decrease in Si, and decrease in 
+Fe in strata between Confidence Hills and Whale Rock 
+that is observed by both instruments (e.g., Al/Si trend in 
+Fig 2). The uppermost outcrop (Whale Rock) exhibits 
+increased Ca, Na, Mg, Fe and decreased Si, Al, and K 
+compared to underlying outcrops, consistent with an 
+increased salt (sulfate or chloride?) abundance as sug-
+gested by numerous light-toned veins and masses ob-
+served in Mastcam and RMI images of these sand-
+stones. As a whole, these data indicate that the Confi-
+dence Hills drill sample is enriched in Fe and depleted 
+in Si compared to most of the strata in this location. 
+One possibility is that this is a reflection of the drill 
+location containing a higher proportion of Fe-oxides. 
+APXS data show that diagenetic features are in-
+creased in Mg, Ca, S, and Cl relative to bedrock, sug-
+gesting they contain a higher proportion of salts. Trends 
+in these elements within bedrock targets are more vari-
+able. Book Cliffs bedrock targets exhibit a pronounced 
+increase in Cl and Br (Fig. 2) and yield high CIA val-
+ues, but there is no corresponding increase in S. Indeed, 
+bedrock targets exhibit poor correlations between Mg 
+or Ca and S, whereas Mg and Cl are positively correlat-
+ed. In general, abundance of redox sensitive elements 
+such as Fe and Mn exhibit minimal variation between 
+Confidence Hills and WhaleRock.  
+Conclusions:  Major chemical trends observed by 
+ChemCam are typically also observed in APXS data for 
+stratigraphically equivalent targets (we note that 
+ChemCam and APXS data are often not acquired on 
+identical locations), though the former exhibit greater 
+variability within the measured section. Strata with in-
+creased Al/Si  may indicate increasing proportions of 
+non-silicate components (i.e., salts), which would also 
+be consistent with the observation that certain outcrops 
+exhibit increases in Cl, Br, and S.  
+The chemostratigraphy of Pahrump indicates pro-
+portions of siliciclastic and cements/early diagenetic 
+components likely vary, where the latter may result 
+from near-surface evaporative processes or deeper 
+basinal brines. Such processes are suggested by the 
+presence of and relationship between light and dark-
+toned  clasts  seen in MAHLI images of some targets 
+(Fig. 3). These features are not observed in all outcrops 
+and may be crystal growths associated with the in-
+creased Br and Cl values seen by APXS.  
+Absolute wt.% Fe is not highly variable, but orbital 
+detections of hematite and the presence of significant 
+amounts of Fe-oxides in the drill target suggest under-
+standing the mineralogical host(s) of Fe will be im-
+portant in assessing the habitability of this portion of 
+lower Mt. Sharp. Hydrated salts may be responsible for 
+the orbital CRISM signatures, and if confirmed by ad-
+ditional in situ measurements this could imply that 
+volumentrically minor diagenetic components may 
+dominate spectral signatures in lower Mt. Sharp. 
+ 
+References: [1] http://mars.jpl.nasa.gov/msl/news/-
+whatsnew/ press release 11-Sep-2014; [2] Milliken, 
+R.E. et al. (2010), GRL, 37, L04201; [3] http://mars.jpl. 
+nasa.gov/msl/news/whatsnew/ press release 4-Nov-
+2014; [4] Stack, K. et al. (2015) this conference; [5] 
+Wiens et al. (2013) Spectrochim. Acta B, 82, 1-27; [6] 
+Forni, O. et al. (2015) this conference.  
+ 
+Figure 2. ChemCam and APXS chemostratigraphy of the 
+Pahrump Hills. Al/Si is elevated in all middle units com-
+pared to the Confidence Hills bedrock and drill sample. 
+APXS Br and Cl data are also elevated in some of these 
+strata, indicating salts may be important diagenetic phases, 
+possibly contributing to orbital spectral signatures in lower 
+Mt. Sharp. Vertical lines indicate drill sample values. 
+ 
+ 
+Figure 3.  MAHLI 
+image of Topanga 
+target in Book 
+Cliffs outcrop. 
+Dark and light 
+ clasts  are indica-
+taed by black and 
+white arrows, re-
+spectively. These 
+rocks also exhibit 
+increased levels of 
+Br and, to a lesser 
+extent, Ca. 
+ 
+2339.pdf46th Lunar and Planetary Science Conference (2015)

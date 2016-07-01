@@ -5,4 +5,5 @@ different annotation schemes.
   contains-low) 
 - lpsc15-B: contains as an event, with confidence and amount
   (high/low) attributes
-- lpsc15-C: auto-annotation of targets and elements
+- lpsc15-C: auto-annotation of targets and elements (ChemCam docs only)
+- lpsc15-C-raymond: Raymond's annotations of docs from lpsc15-C

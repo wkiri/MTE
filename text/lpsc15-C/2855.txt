@@ -1,0 +1,172 @@
+
+2855.PDF
+MARS HAND LENS IMAGER (MAHLI) OBSERVATIONS AT THE PAHRUMP HILLS FIELD SITE, 
+GALE CRATER.  M. J. McBride1 M. E. Minitti2 K. M. Stack3 R. A. Yingst2 K. S. Edgett1 W. Goetz4 K. E. Her-
+kenhoff4 E. Heydari5 L. C. Kah6 S. K. Rowland7 J. Schieber8 D. Harker1 M. R. Kennedy1 G. M. Krezoski1 L. Lipka-
+min1 B. Nixon1 J. Van Beek1 1Malin Space Science Systems, San Diego, CA, 2Planetary Science Institute Tucson, 
+AZ 3Jet Propulsion Laboratory Pasadena, CA Max Planck Institute for Solar System Research G ttingen, Germany 
+5United States Geological Survey, Flagstaff, AZ 6Jackson State University, Jackson, MS 7University of Tennessee 
+Knoxville, TN 8University of Hawai i at M noa, Honolulu, HI 9Indiana University, Bloomington, IN. 
+ 
+Introduction:  The Mars Science Laboratory (MSL) 
+mission entered a new phase with arrival at the base of 
+Mt. Sharp in September 2014, after traveling over 
+9 km from the Bradbury Landing site. Curiosity s first 
+science campaign in the Murray Formation began at 
+the Pahrump Hills field site. MSL deployed its full 
+payload on the Confidence Hills drill site (Sols 753-
+780). Then, the MSL team approached the site as a 
+geologist would, first taking a driving the rover in a 
+loop to survey the area with the remote sensing instru-
+ments, Mastcam and ChemCam (Sols 780   799). Af-
+ter this first loop, the team chose outcrops to visit dur-
+ing a second loop (ongoing since sol 805 [as of the 
+time of writing]) to conduct contact science utilizing 
+the Dust Removal Tool (DRT), MAHLI and APXS [1, 
+2]. The team chose to stop at sites named Shoemaker, 
+Pink Cliffs, Book Cliffs, Alexander Hills, Chinle, and 
+Whale Rock (Sols 805  840+) (Figure 1) [3].  
+ 
+ 
+Figure 1: Ouline of Pahrump Hills traverses overlayed 
+on a Mastcam mosaic. The red dots represent points 
+where contact science was performed during loop 2 
+and the blue dot represents the location of a drill cam-
+paign. White dots are representative of imaging loca-
+tions only visited during loop 1. [3] 
+ 
+MAHLI: The Mars Hand Lens Imager (MAHLI) is a 
+macro lens color camera located on the turret of the 
+robotic arm. MAHLI is able to focus on targets at 
+working distances of 2.1 cm to infinity with a maxi-
+mum resolution of ~14  m/pixel [4]. Mounted on the 
+turret at the end of Curiosity s robotic arm, MAHLI 
+can be positioned to approach targets from numerous 
+angles. Loop 2 at Pahrump Hills site allowed a differ-
+ent approach to using the MAHLI camera than previ-
+ously in the mission. The targets were chosen based on 
+the remote sensing data from loop 1. To reduce the 
+possibility of shadowing in the MAHLI images, the 
+direction of outcrop approach and the time of day for 
+science observations were taken into consideration. 
+Confidence Hills Drill Site (Sols 753-780):  The first 
+stop was near the base of Pahrump Hills. Curiosity 
+made its first drill into Mt. Sharp rock in a target 
+named Confidence Hills. Imaging with MAHLI con-
+strained the rock to siltstone or mudstone based on 
+grain size. Resistant diagenetic features surrounded the 
+drill site. MAHLI imaged the site before and after the 
+drilling activity (targets Maturango, Confidence Hills, 
+Paradox) as well as the diagenetic features Mammoth, 
+Moenkopi, and Morrison[5]. 
+ 
+Shoemaker (Sols 805-806): After completing the 
+walkabout of Pahrump Hills, the decision was made to 
+return to the base of Pahrump Hills to study the fine 
+laminations of the Shoemaker outcrop.  MAHLI im-
+aged two lamination targets; Pelona has fine and even-
+ly spaced laminations, while Ricardo s laminations are 
+coarser (Figure 2). MAHLI images were taken from 
+both a position normal to the surface and an oblique 
+viewing angle looking into the bedding plane during 
+twilight for optimal lighting. 
+ 
+ 
+Figure 2: Oblique imaging of target Ricardo at the 
+Shoemaker Outcrop. The target brushed by the DRT 
+revealed both fine and coarse laminations. 
+ 
+Pink Cliffs (Sols 807-810): The MSL team chose to 
+visit Pink Cliffs during loop 2 because the outcrop 
+seemed to be more resistant than the nearby laminated 
+facies and the large number of interesting diagenetic 
+textures. Due to the orientation of the desired targets 
+and the way the rover had to approach the outcrop rela-
+tive to sun position, the team decided to do all of the 
+MAHLI imaging at night using the white LEDs. This 
+allowed images to be acquired without being in shad-
+ow and the lighting could be manipulated using differ-
+ent groups of LEDs. The night imaging is excellent at 
+showing differences in albedo within the rock. Rock 
+target Mojave (Figure 3) shows light toned lozenge 
+ 
+2855.pdf46th Lunar and Planetary Science Conference (2015)
+ 
+Figure 3: Rock target Mojave was imaged at the Pink 
+Cliffs outcrop. The mosaic acquired at night from a 2 
+cm standoff, reveals light colored crystal laths in a 
+very fine grained rock. 
+ 
+shaped crystal laths [6]. Other diagenetic features first 
+thought to be hollowed nodules, were identified with 
+MAHLI as diagenetic clusters as in target Potatoe(sic) 
+(Figure 4). Other targets imaged at Pink Cliffs were 
+Rosamead and Pilot Knob Valley.    
+ 
+ 
+Figure 4: Focus merge product from 5 cm standoff of 
+rock target Potatoe. The diagenetic clusters are about 1 
+cm in diameter. 
+ 
+Book Cliffs (Sols 812-816): Book Cliffs was chosen 
+for contact science because Mastcam images revealed 
+a large amount of horizontal planar lamination and 
+possible cross lamination. There was also geochemical 
+data acquired with ChemCam during loop 1 to corre-
+late with APXS observations [2, 7]. Images at Book 
+Cliffs were taken during the day, twilight, and night to 
+capture targets in the best lighting conditions possible. 
+MAHLI images of targets Jail Canyon, Old Dad 
+Mountain, Goblin Valley, and Anaverde revealed 
+rocks with large amount of vugs possibly from the 
+erosive removal of dark particles. Imaging at Book 
+Cliffs of targets Punchbowl, Afton Canyon, and 
+Topanga showed more light toned crystals occasional-
+ly with dark toned inclusions. 
+ 
+Alexander Hills (Sols 817-826): Alexander Hills was 
+chosen as a stop on loop 2 because of the chemical 
+anomalies identified by ChemCam on loop 1 [7].  The 
+grain size could not be resolved in targets Puente and 
+Mescal. The rocks were soft enough that the DRT was 
+able to scratch the surface. At Alexander Hills, 
+MAHLI also imaged ChemCam target Cajon.   
+ 
+Chinle (Sols 827-834): Chinle was a standout target 
+from loop 1 because it exhibited parallel and cross- 
+lamination [3]. MAHLI imaged targets Pickhandle, 
+Goldstone, Coachella, and Tropico to study different 
+types of laminations from above the outcrop.  A large 
+portion of the outcrop was also imaged at an angle 
+looking into the bedding plane (Figure 5). 
+ 
+ 
+Figure 5: A portion of the oblique mosaic of the Chinle 
+outcrop. There are both parallel and cross laminations 
+visible in the outcrop. 
+ 
+Whale Rock (Sols 837-842+): Due to the constraints 
+on rover positioning, contact science at Whale Rock 
+are being completed on a rock fragment that appears to 
+have fallen off the main outcrop. Observations at 
+Whale Rock reveals a cross-stratified sandstone. 
+MAHLI imaging of the target San Andreas shows a 
+large number of light toned grains.  
+  
+Conclusions: The Pahrump Hills site in the Murray 
+formation allowed for an in-depth analysis with the 
+MAHLI camera onboard Curiosity. MAHLI s high-
+resolution images allowed for grain size analysis, up 
+close imaging of laminations and diagenetic features, 
+and placement of the contact science outcrops within 
+the stratigraphy column of Pahrump Hills [3]. Future 
+analysis of MAHLI data will aid in understanding the 
+Pahrump Hills depositional environment. 
+ 
+References: [1] Thompson et al., LPSC 2015  [2] Gel-
+lert et al., LPSC 2015 [3] Stack et al., LPSC 2015  [4] 
+Edgett, K.S., et al. (2012), Space Sci. Rev., 
+doi:10.1007/s11214-012-9910-4. [5] Kah et al., LPSC 
+2015 [6] Schieber et al., LPSC 2015 [7] Milliken et al., 
+LPSC 2015. 
+2855.pdf46th Lunar and Planetary Science Conference (2015)

@@ -1,0 +1,231 @@
+
+2234.PDF
+CONSTRAINING THE TEXTURE AND COMPOSITION OF PORE-FILLING CEMENTS AT GALE 
+CRATER, MARS.   K. L. Siebach
+1
+, J. P. Grotzinger
+1
+, S. M. McLennan
+2
+, J. A. Hurowitz
+2
+, D. W. Ming
+3
+, D. T. 
+Vaniman
+4
+, E. B. Rampe
+5
+, D. L. Blaney
+6
+, L. C. Kah
+7
+, and the MSL Science Team. 
+1
+Division of Geological and Plane-
+tary Sciences, California Institute of Technology, Pasadena, CA, (ksiebach@caltech.edu), 
+2
+Department of Geosci-
+ences, Stony Brook University, Stony Brook, NY, 
+3
+NASA JSC, Houston, TX, 
+4
+Planetary Science Institute, Tucson, 
+AZ, 
+5
+Aerodyne Industries, Jacobs JETS Contract, NASA JSC, Houston, TX, 
+6
+NASA JPL, California Institute of 
+Technology, Pasadena, CA, 
+7
+University of Tennessee, Department of Earth and Planetary Sciences, Knoxville, TN 
+ 
+Introduction: The Mars Science Laboratory 
+(MSL) rover Curiosity has encountered a wide variety 
+of sedimentary rocks deposited in fluvio-lacuestrine 
+sequences at the base of Gale Crater [1]. The presence 
+of sedimentary rocks requires that initial sediments 
+underwent diagenesis and were lithified. Lithification 
+involves sediment compaction, cementation, and re-
+crystallization (or authigenic) processes. Analysis of 
+the texture and composition of the cement can reveal 
+the environmental conditions when the cements were 
+deposited, enabling better understanding of early envi-
+ronments present within Gale Crater. 
+The first step in lithification is sediment compac-
+tion. The Gale crater sediments do not show evidence 
+for extensive compaction prior to cementation; the 
+Sheepbed mudstone in Yellowknife Bay (YKB) has 
+preserved void spaces ( hollow nodules ), indicating 
+that sediments were cemented around the hollow prior 
+to compaction [2], and conglomerates show imbrica-
+tion [3], indicating minimal grain reorganization prior 
+to lithification. Furthermore, assuming the maximum 
+burial depth of these sediments is equivalent to the 
+depth of Gale Crater, the sediments were never under 
+more than 1 kb of pressure, and assuming a 15  C/km 
+thermal gradient in the late Noachian, the maximum 
+temperature of diagenesis would have been ~75  C [4]. 
+This is comparable to shallow burial diagenetic condi-
+tions on Earth. 
+ The cementation and recrystallization components 
+of lithification are closely intertwined. Cementation 
+describes the precipitation of minerals between grains 
+from pore fluids, and recrystallization (or authigenesis) 
+is when the original sedimentary mineral grains are 
+altered into secondary minerals. The presence of authi-
+genic smectites and magnetite in the YKB formation 
+suggests that some recrystallization has taken place [5]. 
+The relatively high percentage of XRD-amorphous 
+material (25-40%) detected by CheMin [6, 7] suggests 
+that this recrystallization may be limited in scope, and 
+therefore may not contribute significantly to the ce-
+menting material. However, relatively persistent amor-
+phous components could exist in the Martian environ-
+ment (e.g. amorphous MgSO4), so recrystallization, 
+including loss of crystallinity, cannot yet be excluded 
+as a method of cementation. In order to describe the 
+rock cementation, both the rock textures and their 
+composition must be considered. Here, we attempt to 
+summarize the current understanding of the textural 
+and compositional aspects of the cement across the 
+rocks analyzed by Curiosity to this point. 
+Textural Observations:  
+Macro-scale. Textural observations of the rocks 
+Curiosity has surveyed begin at the macro scale. Cur-
+rent holistic sedimentary models describe the formation 
+of the traversed units using an aggradational delta 
+model, which implies at least two sediment sources [8, 
+9]. Mastcam observations at a smaller scale show scarp 
+erosion, indicating that different rock units have differ-
+ential resistance to erosion, which could be related to 
+different units having different grain sizes, shapes, 
+compositions and likely differential cementation. Ob-
+servations at the unit scale show dispersed cement, 
+rather than concentrated cement-rich layers as might be 
+expected in  cretes , and a lack of distinct pedogenic 
+textures. Mastcam-based evidence therefore suggests 
+relatively homogeneous pore-filling cement distribu-
+tion within units, differential cementation between 
+units, and at least two sediment source regions. Chemi-
+cally, this implies that variability between units could 
+represent differential cementation, but this signal could 
+be obscured by mixtures of distinct sediment sources.  
+ 
+ 
+Figure 1. MAHLI image of Gillespie Lake, sol 132. Red 
+outlines grains, yellow outlines apparent voids. Note that 
+some apparent voids are larger than typical grains, indicating 
+secondary porosity. In this image, the average circled grain is 
+460  m, the apparent voids cover 2.4% of the image area, 
+and 12% of the voids are larger than the average grain area. 
+2234.pdf46th Lunar and Planetary Science Conference (2015)
+MAHLI-scale. Finer scale observations of outcrops 
+are based on rocks imaged by the Mars Hand Lens 
+Imager (MAHLI) instrument, which typically images 
+rocks at a scale of ~30  m/pixel (and periodically at 
+higher resolutions, up to ~12.5  m/pixel), allowing 
+distinction of grains as small as fine sand [10]. Even at 
+this resolution, cements are not individually distin-
+guished, and some grains are too fine to be seen. How-
+ever, a first-order calculation of porosity has been 
+completed for a few of the sandstones along the trav-
+erse based on visible apparent void spaces between 
+grains. This calculation is an approximation because 
+the images are of surfaces exposed to abrasion, so ex-
+cess voids could be counted because of surface erosion, 
+and because the resolution limit means that small or 
+intergranular pore spaces may not be included. Howev-
+er, the initial results indicate that apparent porosities of 
+sandstones are very low (measured at <5%) [11]. Fur-
+thermore, comparison of average apparent surface void 
+area compared to the average of the largest visible 
+grains in the rock showed that, in measured samples, 
+up to 50% of the apparent void spaces are larger by 
+area than the largest grains in the rock. If these voids 
+are reflective of voids within the rock (rather than just 
+at the surface), these indicate that secondary pore fluids 
+with distinct chemistries interacted with the rock after 
+initial lithification because initial fluids would act to 
+cement the rock and later, distinct, fluids would be 
+required to dissolve the sediment or cement [11]. Both 
+of these observations are consistent with ChemCam 
+observations in the YKB and Kimberley outcrops of 
+fracture fills with distinctive chemical signatures (e.g. 
+CaSO4 [12], MnO [13]) that do not permeate into the 
+rock surrounding the fracture, indicating that the rocks 
+had low permeability prior to late-stage, chemically 
+distinct, fracture fills. 
+Chemical Observations: The Curiosity rover can 
+measure elemental chemistry of rocks using the Chem-
+Cam (spot size ~400  m) and APXS (spot size ~1.6 
+cm) instruments, and mineralogy of collected samples 
+with the CheMin instrument. Within a set of sedimen-
+tary rocks with approximately the same sediment 
+source region, chemical variation between samples 
+could be related to the presence or absence of a ce-
+menting component, potentially relating to the original 
+porosity or permeability of the sediments. This is com-
+plicated by the presence of sediments from at least two 
+source regions, but allows a general impression of 
+which elements may have been mobilized and concen-
+trated or depleted by cementing pore fluids. Further-
+more, secondary mineral components observed in 
+CheMin samples could show compositions consistent 
+with apparently mobile elements, and apparently mo-
+bile elements may show preferential enrichment or 
+depletion based on rock grain size.  
+So far, observations of elemental variability and 
+secondary mineral compositions are consistent with 
+iron and magnesium mobility and an Fe-based cement. 
+ChemCam observations of the Rocknest suite of rocks 
+showed that among fine-grained rocks with high tex-
+tural variability, FeO concentration was high (15-26%), 
+variable, and not correlated with other elements [14]. 
+APXS observations between YKB and the Darwin out-
+crop (first ~third of the traverse) plotted on a mafic 
+ternary diagram (Al2O3, FeOtotal+MgO, 
+CaO+NaO+K2O) show variability primarily along the 
+FeOT+MgO axis. That variability is preserved (alt-
+hough complicated by other trends) when rocks from 
+YKB and Pahrump are included [see McLennan et al. 
+abstract, this meeting]. Current work aims to compare 
+these trends with rock textures defined by analysis of 
+associated MAHLI images. Secondary minerals ob-
+served by CheMin are also consistent with FeOT+MgO 
+mobility; these include magnetite, hematite, akaganeite, 
+smectite, Fe-sulfides, and iron-containing amorphous 
+components [6, 7]. 
+Summary: The Curiosity rover observations from 
+the past two years reveal a complex history of diagene-
+sis within Gale Crater. Modeling restricts burial dia-
+genesis to <75  C and <1 kb. Sedimentology implicates 
+multiple source regions and a lack of pedogenesis. 
+Textures and ChemCam observations indicate that the 
+rocks are moderately to well cemented, with low poros-
+ity and low permeability, and also show that later pore 
+fluids with more exotic compositions likely created 
+secondary porosity in some rocks and filled fractures 
+with distinct minerals. Compositional observations are 
+consistent with FeOT+MgO mobility, which could form 
+FeO cements, and is consistent with a variety of sec-
+ondary Fe-bearing minerals observed by CheMin. 
+References:  
+[1] Grotzinger, J. P. et al. (2014) Science, 343, 
+1242777. [2] Stack, K.M. et al. (2014) JGR, 119, 
+1637-1664. [3] Williams, R.M. et al. (2013) Science, 
+340, 6136, 1068-1072. [4] Hahn, B.C. et al. (2011) 
+LPS XLII, Abstract #2340. [5] McLennan, S.M. et al. 
+(2014) Science, 343, 6169. [6] Vaniman, D. et al. 
+(2014) Science, 343, 6169. [7] Morris, R. et al. (2014) 
+LPS XLV, Abstract #1319. [8] Grotzinger, J. P. et al. 
+(2014) AGU, P42C-01. [9] Gupta, S. et al. (2014) 
+AGU, P42C-02. [10] Edgett, K.S. et al. (2012) Space 
+Science Reviews, 170, 259-317. [11] Siebach, K. and 
+Grotzinger, J. (2014) 8
+th
+ Mars Conf, Abstract #1466. 
+[12] Nachon, M. et al. (2014) JGR, 119, 1991-2016. 
+[13] Lanza, N.L. et al. (submitted) Nature. [14] 
+Blaney, D.L. et al. (2014) JGR, 119, 2109-2131. 
+2234.pdf46th Lunar and Planetary Science Conference (2015)

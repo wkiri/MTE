@@ -1,0 +1,109 @@
+
+2919.PDF
+EVIDENCE FOR OUTCROP-SCALE DEFORMATION BAND FAULTS ON MARS FROM CURIOSITY 
+ROVER IMAGERY. J.S. Caine1, R.B. Anderson2, K. Herkenhoff2, G.M. Perrett3. 1U.S. Geological Survey (Den-
+ver, CO, jscaine@usgs.gov), 2U.S. Geological Survey (Flagstaff, AZ), 3University of Guelph (Ontario, Canada). 
+ 
+Introduction. A variety of discontinuities on the 
+surface of Mars have long been recognized as 
+faults1,2,3,4. Orbital imagery has provided evidence of 
+fault-related offsets, discrete linear morphologies, and 
+discolorations along such discontinuities at scales of 
+10s to 1000s of m. Data from the Curiosity rover show 
+the first outcrop-scale morphological, textural, and 
+chemical evidence for faulting on Mars and indicate 
+that it is similar to that on Earth. 
+Observations. Figures A-F are images of an out-
+crop in Aeolis Palus acquired by Curiosity on Sol 399, 
+~1.4 km SW of Bradbury Landing. The images show 
+networks of resistant, raised ridges (RRs) formed in 
+subhorizontally layered conglomeratic sands and silts.  
+There are two sets of RRs distinguished by their 
+subparallel, planar forms (A,B,C). A major set has 
+lengths of a few m and thicknesses of a few cm to ~4 
+cm. These steeply cut the subhorizontal sediments with 
+~60 -80  dips to the east and strikes parallel to the view 
+direction of ~N5 W consistent with shadow asymmetry. 
+One of the major RRs shows an apparent, down to the 
+east offset of a subhorizontal, plate-like bed (B,C). A 
+subsidiary set of RRs has lengths of several cm to dm, 
+is <1 cm in thickness, and tends to form synthetically to 
+and between the major parallel sets. Subsidiary RRs dip 
+~30 -40  to the east and strike subparallel and slightly 
+oblique to the major RRs and appear to splay from, 
+rather than cut or be cut by, the major RRs (B,D). 
+Mars Hand Lens Imager (MAHLI) mosaics show 
+that the RRs are composed of subangular to subround-
+ed, cm- to sub-mm sized granular materials (D,E,F). 
+The grains occur in poorly sorted, layered trains parallel 
+to the strike of the major and splayed, subsidiary RRs. 
+Individual grains appear compacted with complex but 
+tight, interstitial pore spaces (F). Some grains appear to 
+be cleaved at the RR surfaces. RR surfaces are smooth 
+to globular with weakly formed, subparallel grooves 
+that pitch at low angles in the plane of the surfaces. The 
+surfaces also appear to be cut by open joints. 
+ChemCam major oxide measurements are plotted to 
+compare host materials (HM) with RRs only (G). The 
+variability in the oxide concentrations indicates hetero-
+geneity at the scale of the laser-spot measurements 
+(~300-500  m) but for every major oxide, the HM and 
+RR ranges are within the 75th to 25th percentiles of one 
+another and most of the median values are similar. Al-
+pha Particle X-ray Spectrometer (APXS) measure-
+ments5 on and off the RRs similarly show no significant 
+difference in composition, including values for SO3. 
+Interpretations. The network of RRs found on Sol 
+399 appear very similar to deformation band (DB) net-
+works found on Earth. DBs are mm thick, curvitabular 
+zones of shear, compaction, and(or) dilation accommo-
+dating small displacements on the order of a few mm to 
+a few cm6,7. DBs can form as single structures or as 
+complex clusters with distinctive internal geometry that 
+can attain meter-scale thicknesses, and they are particu-
+larly common in high porosity sandstones or poorly 
+lithified sandy sediments8. DBs are sometimes cement-
+ed and other times free of cement. They are commonly 
+resistant to erosion, forming ridges standing above their 
+HMs. Veins, or generally unsheared mineral-filled frac-
+tures, are commonly associated with faults on Earth, but 
+also form independently. 
+Sol 399 RR geometry is distinctive with thick sub-
+parallel bands and thinner subsidiary bands forming 
+between them. These ladder-like structures are kinemat-
+ically compatible with subhorizontal W-E extension 
+and a possible component of oblique sinistral slip con-
+sistent with the left-stepping strands of the major RRs. 
+It is unclear if the grooves on the RR surfaces (E) are 
+related to wind scour or fault slip.  
+The composition and granular textures within the 
+RRs also are consistent with deformation bands rather 
+than veins. ChemCam and APXS data show the compo-
+sition of the RRs is not significantly different than the 
+HMs and the RRs are not homogeneous. Terrestrial 
+veins and those observed elsewhere in Gale crater9 tend 
+to be compositionally  exotic  compared with their 
+HMs and tend to be relatively homogeneous. Gale 
+crater veins are chracterisitcally Ca-sulfate rich9 where-
+as the RRs show no evidence for elevated SO3. These 
+data from Sol 399 are consistent with the RRs being 
+deformation bands that entrained surrounding materials 
+with small displacements and little to no cementation. 
+Deformation bands that form in gravel-rich sedi-
+ments on Earth are rarely reported. Although cataclasis 
+cannot be confirmed, intact gravel and sand are pre-
+served in the Sol 399 DBs. Deformation timing and 
+state of lithification are unknown, but burial could have 
+been up to ~5 km10. The role of tectonic driving forces 
+is also uncertain, but subsidence and compaction are 
+possible mechanisms for the formation of the RR DBs. 
+The low gravity of Mars may also have caused less 
+resistance to compaction and(or) cataclasis aiding in the 
+formation of these coarse-grained DBs, but the current 
+data cannot address this. The observations and interpre-
+tations here provide criteria for future data acquisition 
+of fault-related structures important for documenting 
+tectonic, kinematic, and fluid-flow processes on Mars. 
+2919.pdf46th Lunar and Planetary Science Conference (2015)
+ 
+2919.pdf46th Lunar and Planetary Science Conference (2015)
