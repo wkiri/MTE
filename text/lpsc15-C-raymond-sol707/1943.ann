@@ -1,0 +1,102 @@
+T13	Element 4853 4855	Ca
+T14	Element 4857 4859	Al
+T15	Element 4988 4990	Si
+T16	Element 5084 5085	K
+T17	Element 5087 5089	Si
+T18	Element 5091 5093	Na
+T19	Element 5098 5100	Ba
+T20	Element 5128 5130	Ba
+T21	Element 5252 5254	Ti
+T22	Element 5256 5258	Fe
+T23	Element 5260 5262	Mg
+T24	Element 5363 5364	K
+T25	Element 5366 5368	Na
+T26	Target 1766 1774	Blanchet
+T27	Target 1776 1781	Stark
+T28	Target 4555 4563	Harrison
+T29	Target 4625 4632	Clinton
+T30	Target 4659 4667	Blanchet
+T31	Target 5713 5720	Clinton
+T32	Target 5986 5993	Becraft
+T33	Target 6213 6221	Harrison
+T34	Target 10191 10199	Blanchet
+T35	Target 10200 10207	Clinton
+T36	Target 10221 10226	Stark
+T37	Target 10227 10234	Sparkle
+T38	Target 10237 10242	Stock
+T39	Target 10244 10254	Chakonipau
+T40	Target 10267 10272	Falla
+T41	Target 10293 10300	Horlick
+T42	Target 10301 10308	Becraft
+T43	Target 10352 10356	Ross
+T44	Target 10359 10364	Bindi
+T45	Target 10365 10374	Wilkinson
+T46	Target 10376 10382	Angelo
+T47	Target 10383 10391	Dougalls
+T48	Target 10393 10398	Albee
+T49	Target 10399 10403	Nita
+T50	Mineral 2911 2921	macusanite
+T53	Mineral 5775 5792	oligoclase-albite
+T54	Mineral 6051 6061	macusanite
+T55	Mineral 6659 6669	macusanite
+T56	Mineral 7797 7805	basanite
+T57	Mineral 8166 8171	suite
+T59	Mineral 8980 8991	anorthosite
+T61	Mineral 10119 10127	andesite
+T62	Mineral 10151 10171	Diorite-Granodiorite
+T1	Mineral 1471 1479	feldspar
+T2	Locality 1637 1649	Peace Vallis
+T3	Target 1787 1796	Thor Lake
+T4	Feature 1721 1733;1734 1738	light-toned  rock
+R1	Shows Arg1:T26 Arg2:T4	
+R2	Shows Arg1:T27 Arg2:T4	
+R3	Shows Arg1:T3 Arg2:T4	
+T5	Locality 1858 1874	Yellow Knife Bay
+T6	Mineral 1902 1910	feldspar
+T7	Unit 1966 1977	Rugged unit
+T8	Element 2602 2604	Al
+T9	Element 2605 2607	Si
+T10	Element 2610 2612	Fe
+T11	Element 2613 2615	Mg
+T12	Element 2617 2619	Si
+T63	Material 2625 2630	oxide
+T64	Feature 3101 3112	phenocrysts
+T51	Mineral 4535 4542;4543 4548	porphy- ritic
+T65	Feature 4549 4554	clast
+T66	Material 4569 4592	polylithic conglomerate
+R4	Shows Arg1:T28 Arg2:T65	
+T67	Contains 4564 4566	in
+E1	Contains:T67 Targ:T28 Cont:T51 Cont2:T66
+A1	Confidence E1 High
+T68	Feature 4608 4614	coarse
+R5	Shows Arg1:T29 Arg2:T68	
+T69	Feature 4615 4624	intrusive
+R6	Shows Arg1:T29 Arg2:T69	
+T70	Feature 4645 4656	vesiculated
+R7	Shows Arg1:T30 Arg2:T70	
+T71	Element 4864 4866	Si
+T72	Element 4880 4882	Ba
+T73	Mineral 4950 4961	plagioclase
+T74	Element 5018 5020	Al
+T75	Element 5172 5173	K
+T76	Mineral 5174 5182	feldspar
+T52	Element 5343 5345	Ca
+T77	Mineral 5489 5495	quartz
+T78	Mineral 5497 5508	plagioclase
+T79	Mineral 5525 5534	nepheline
+T80	Mineral 5588 5595	olivine
+T81	Material 5925 5931	silica
+T82	Feature 5947 5958	Vesiculated
+T83	Feature 5960 5971	light-toned
+R8	Shows Arg1:T32 Arg2:T83	
+R9	Shows Arg1:T32 Arg2:T82	
+T84	Mineral 6159 6167	feldspar
+T85	Material 6181 6192	Porphyritic
+T86	Contains 6205 6212	such as
+E2	Contains:T86 Cont:T85 Targ:T33
+T58	Target 10179 10190	Peacok Hill
+T60	Target 10209 10219	Robin Hood
+T87	Target 10256 10262	Noriss
+T88	Target 10273 10280	Sledger
+T89	Target 10281 10291	Bird River
+T90	Target 10328 10337	Harrisson

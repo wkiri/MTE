@@ -1,0 +1,48 @@
+T1	Element 266 268	Ca
+T2	Element 272 274	Na
+T5	Element 2938 2940	Na
+T6	Element 2945 2947	Ca
+T7	Element 3068 3070	Na
+T8	Element 3075 3077	Ca
+T9	Element 3654 3656	Fe
+T10	Element 4073 4075	Fe
+T11	Element 5176 5178	In
+T12	Element 5630 5634	iron
+T18	Target 5945 5951	Miette
+T19	Target 5963 5973	Shackleton
+T20	Target 5986 5994	Harrison
+T21	Target 6006 6012	Lamboo
+T22	Target 6468 6477	Natkusiak
+T23	Target 6489 6501	Richardson_2
+T24	Target 6541 6552	Husky_Creek
+T25	Target 6584 6589	Cosmo
+T26	Target 6606 6610	Mell
+T27	Mineral 2987 2996	anorthite
+T28	Mineral 3228 3237	anorthite
+T30	Mineral 4569 4578	pigeonite
+T31	Mineral 6718 6734	pigeonite-augite
+T33	Mineral 212 220	feldspar
+T34	Mineral 304 312	feldspar
+T35	Target 496 504	Badwater
+T3	Target 2756 2764	Badwater
+T4	Mineral 2710 2721	plagioclase
+T36	Element 2698 2700	Ca
+T37	Contains 2722 2733	composition
+E1	Contains:T37 Cont:T36 Cont2:T4 Targ:T3
+A1	Confidence E1 High
+T38	Element 2705 2707	Na
+T39	Mineral 2959 2967	feldspar
+T40	Contains 2916 2928	in this rock
+E2	Contains:T40 Targ:T3 Cont:T39 Cont2:T6 Cont3:T5
+T41	Contains 3213 3227	is nearly pure
+E3	Contains:T41 Cont:T28 Targ:T3
+A2	Confidence E3 High
+A3	Amount E3 Contains_High
+T29	Target 5922 5926;5927 5934	Tal- theilei
+T42	Mineral 5859 5867	feldspar
+T43	Contains 5914 5921	include
+E4	Contains:T43 Cont:T42 Targ:T29 Targ2:T18 Targ3:T19 Targ4:T20 Targ5:T21 Targ6:T44
+T44	Target 6024 6030;6031 6037	Bonan- zaKing
+T45	Mineral 6655 6663	pyroxene
+T46	Contains 6621 6629	all have
+E5	Contains:T46 Cont:T45 Cont2:T31 Targ:T26 Targ2:T25 Targ3:T24 Targ4:T23 Targ5:T22

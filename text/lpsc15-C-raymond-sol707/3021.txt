@@ -1,0 +1,106 @@
+
+3021.PDF
+MULTISPECTRAL ANALYSIS OF MARS ANALOG ALTERED VOLCANIC MATERIALS FROM 
+FAROE ISLANDS. IMPLICATIONS FOR MISSIONS AS EXOMARS AND MARS 2020.  A. Sansano1, R.J. 
+Navarro1, J.A. Manrique1, J. Medina1, F. Rull1, and AMASE 14 Team, 1Unidad Asociada UVA-CSIC a traves del 
+Centro de Astrobiologia (SPAIN) (sansanoca@cab.inta-csic.es)  
+ 
+Introduction:   
+Faroe Islands comprised by > 6 km thick sequence 
+of flood basalts linked to breakup of the North Atlan-
+tic. The sequence is more or less: 
+     60 Ma pre-breakup basalts with tuff/weathering 
+horzions (Beinisv r  Fm) 
+   Ca 60   56 Ma hiatus with extensive chemical 
+weathering and deposition of lacustrine and fluvial 
+sediments (Prestfjall + Hvannhagi Fm) 
+     56 Ma syn-breakup basalts with tuff/weathering 
+horizons (Malinstindur + Enni Fm) 
+Prestfjall and Hvannhagi Fm sediments have a very 
+significant interest because they are Fluvial and lacus-
+trine processing of basaltic weathering products in a 
+warm & wet climate And Similar bulk compositions to 
+sediments at Yellowknife Bay (Gale Crater)[1]. 
+ 
+ 
+This campaign has been conducted with the support 
+of AMASE, which has lasted over 10 years conducting 
+research on Arctic campaigns analogous particularly in 
+the archipelago of Svalbard, this being the first expedi-
+tion that takes place outside the enclave. 
+ 
+The analysis techniques have been used are Raman 
+spectroscopy, either contact or distance, LIBS, FTIR-
+ATR, XRD and XRF. The instruments used in some 
+cases are commercial as in the case of FTIR-ATR, in 
+other cases they are prototypes for field already used in 
+planetary mission or in process of being like the XRD 
+(Terra-ChemMin) and Raman (RLS-Exomars), and 
+finally we have also used prototypes with the objective 
+of be used in future missions such as remote Raman or 
+LIBS (ChemCam and SuperCam). The use of these 
+techniques is based on multiple instruments future mis-
+sions to Mars using these fundamentals for geochemi-
+cal analysis of the materials to be found, in order to 
+determine not only its current composition, but the 
+possible formation mechanisms thereof. 
+In addition to the Raman analysis in situ on field 
+for the other  analysis, we selected a series of samples 
+from various locations on the island of Suduroy. 
+Results: 
+In situ analysis of different materials were per-
+formed by Raman spectroscopy using a prototype field 
+equivalent to the one used in the ExoMars mission but 
+adapted for contact measurements. Environmental 
+conditions were not the most appropriate for such 
+measures, yet they were able to get some spectra vol-
+canic materials such as zeolites.  
+ 
+Already in laboratory conditions, but variety of ma-
+terials such as carbonates, oxides of iron, coal, etc. 
+were found 
+3021.pdf46th Lunar and Planetary Science Conference (2015)
+ 
+ 
+ 
+ 
+By XRD was able to make a more extensive de-
+scription of the materials that make up these complex 
+also found wide variety of clays, carbonates with vary-
+ing degrees of alteration. 
+ 
+By LIBS, we deepened in the elemental analysis of 
+samples, showing the predominance of iron in most of 
+these materials and other items of interest such as 
+manganese, calcium, etc. 
+ 
+Finally, there has been some evidence of remote 
+analysis by Raman these samples for improving the 
+technique and adjusting the analysis of these analogs to 
+apply these experiences to future missions. 
+ 
+Conclusions: 
+Suduroy complex has been shown as an excellent 
+place to start practicing situ analysis of planetary ana-
+logs using multiple techniques thanks to its unique 
+geology and its relatively easy access. 
+The combined use of spectroscopic techniques 
+combined with each other, allow us to obtain an over-
+view of geochemistry which took place at a given loca-
+tion, giving valuable information on potential process-
+es that have taken place. 
+If this can be done also in combination on a com-
+mon sample (as Exomars) or by a single instrument (as 
+SuperCam of Mars2020) allows by one shot have max-
+imum information in a concise and accurate manner. 
+ 
+References:  
+[1] Grotzinger J. P. et al. (2014) Science, 343. 
+ 
+Acknowledgements 
+The team wish to thank AMASE and ESA organi- 
+zations for the invitation and support to participate in 
+the 2014 expedition. Also to Spanish MINECO Project 
+AYA2012-39884-C02-02. 
+ 
+3021.pdf46th Lunar and Planetary Science Conference (2015)

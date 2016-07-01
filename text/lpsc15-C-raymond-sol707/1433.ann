@@ -1,0 +1,93 @@
+T6	Element 1127 1131	iron
+T7	Element 1656 1658	At
+T8	Element 1805 1807	At
+T9	Element 2089 2091	At
+T14	Element 5402 5403	S
+T15	Element 5640 5641	P
+T16	Target 1714 1722	Windjana
+T17	Target 2615 2623	Windjana
+T18	Target 3132 3140	Windjana
+T19	Mineral 3208 3217	magnetite
+T20	Mineral 3219 3227	ilmenite
+T21	Mineral 3796 3810	ferricopiapite
+T22	Mineral 3815 3823	jarosite
+T23	Mineral 4402 4410	hematite
+T24	Mineral 4859 4867	jarosite
+T25	Mineral 4872 4881	copiapite
+T1	Target 1812 1824	Bonanza_King
+T2	Locality 1865 1877	Happy Valley
+T3	Target 2066 2073	Perdido
+T4	Target 2125 2141	Confidence_Hills
+T5	Target 2180 2185	Panum
+T26	Target 2202 2217	Stovepipe_Wells
+T27	Target 2410 2419	Maturango
+T28	Feature 2704 2736	lowest peak relative reflectance
+R1	Shows Arg1:T17 Arg2:T28	
+T29	Feature 2763 2788	largest 535 nm band depth
+R2	Shows Arg1:T17 Arg2:T29	
+T30	Feature 2793 2813;2814 2847	relatively high red- blue (670/440nm) ratio and slopes
+R3	Shows Arg1:T17 Arg2:T30	
+T31	Material 2868 2904	greater ferric crystalline component
+T32	Contains 2849 2864	consistent with
+E1	Contains:T32 Targ:T17 Cont:T31
+A1	Amount E1 Contains_High
+T33	Feature 2914 2920;2921 2946	least  negative 750-840 nm slope
+T34	Mineral 2988 3017	Fe2+-bearing olivine/pyroxene
+T35	Material 3029 3048	amorphous component
+T36	Contains 2948 2976;2977 2984	suggestive of either lesser  amounts
+E2	Contains:T36 Targ:T17 Cont:T34
+A2	Confidence E2 Low
+A3	Amount E2 Contains_Low
+T37	Contains 3018 3027	and/or an
+E3	Contains:T37 Cont:T35 Targ:T17
+A4	Confidence E3 Low
+T38	Feature 3062 3079;3080 3088	smallest 600/840  nm ratio
+R4	Shows Arg1:T17 Arg2:T38	
+T39	Contains 3156 3170	likely contain
+E4	Contains:T39 Targ:T18 Cont:T19 Cont2:T20
+A5	Confidence E4 Low
+T40	Target 3235 3247	Bonanza_King
+T41	Feature 3323 3341	spectrally neutral
+R5	Shows Arg1:T40 Arg2:T41	
+T42	Feature 3348 3375	relatively high reflectance
+R6	Shows Arg1:T40 Arg2:T42	
+T43	Feature 3381 3397;3398 3413	lowest red/blue  ratio and slope
+R7	Shows Arg1:T40 Arg2:T43	
+T44	Feature 3419 3447	weakest band depth at 600 nm
+R8	Shows Arg1:T40 Arg2:T44	
+T45	Feature 3496 3501;3502 3513	band  near 433 nm
+R9	Shows Arg1:T40 Arg2:T45	
+T46	Feature 3673 3697	largest 750-840 nm slope
+R10	Shows Arg1:T40 Arg2:T46	
+T47	Feature 3703 3711;3712 3720	600/840  nm ratio
+R11	Shows Arg1:T40 Arg2:T47	
+T48	Contains 3780 3795	consistent with
+E5	Contains:T48 Targ:T40 Cont:T21 Cont2:T22 Cont3:T49
+A6	Confidence E5 Low
+T49	Material 3978 3998	nanophase components
+T50	Target 4024 4039	Stovepipe_Wells
+T51	Target 4041 4057	Confidence_Hills
+T52	Target 4063 4072	Maturango
+T53	Locality 4085 4098	Pahrump Hills
+R12	IsSituatedIn Arg1:T50 Arg2:T53	
+R13	IsSituatedIn Arg1:T51 Arg2:T53	
+R14	IsSituatedIn Arg1:T52 Arg2:T53	
+T54	Feature 4158 4177;4178 4212	comparatively deep  absorptions at ~560 nm and ~660 nm
+R15	Shows Arg1:T50 Arg2:T54	
+R16	Shows Arg1:T51 Arg2:T54	
+R17	Shows Arg1:T52 Arg2:T54	
+T55	Feature 4218 4231;4232 4266	a flattening  or dropoff in reflectance > 750 nm
+R18	Shows Arg1:T50 Arg2:T55	
+R19	Shows Arg1:T51 Arg2:T55	
+R20	Shows Arg1:T52 Arg2:T55	
+T56	Contains 4308 4336	consistent with the presence
+E6	Contains:T56 Targ:T50 Targ2:T51 Targ3:T52 Cont:T23 Targ4:T51 Targ5:T52
+A7	Confidence E6 Neutral
+T57	Contains 4412 4424	perhaps with
+E7	Contains:T57 Cont:T58 Targ:T50
+A8	Confidence E7 Low
+T58	Material 4443 4496;4497 4510	poorly-crystalline and/or nanophase ferric oxides or  oxyhydroxides
+T59	Target 4751 4763	Bonanza_King
+T60	Target 4768 4775	Perdido
+T10	Locality 4968 4981	Pahrump Hills
+T11	Mineral 4999 5007	hematite

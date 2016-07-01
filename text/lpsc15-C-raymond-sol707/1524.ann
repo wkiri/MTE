@@ -1,0 +1,39 @@
+T18	Element 2369 2378	magnesium
+T19	Element 2420 2424	iron
+T20	Element 2443 2445	Si
+T22	Element 2489 2495	sulfur
+T23	Element 2519 2525	nickel
+T24	Element 2624 2625	H
+T25	Element 2685 2691	Sulfur
+T26	Element 3145 3152	silicon
+T27	Element 3154 3163	magnesium
+T28	Element 3165 3173	titanium
+T29	Element 3285 3289	iron
+T30	Element 3323 3325	At
+T31	Element 3542 3548	sulfur
+T32	Element 3570 3577	calcium
+T33	Element 5271 5277	sulfur
+T34	Element 5288 5295	calcium
+T35	Element 5388 5395	calcium
+T37	Element 5710 5712	Mg
+T38	Element 5740 5741	S
+T40	Element 5919 5921	Mg
+T43	Mineral 3742 3747	quite
+T44	Mineral 4364 4369	quite
+T1	Site 1263 1272;1273 1280	Bradbury  Landing
+T2	Locality 1323 1336	Pahrump Hills
+T3	Locality 1519 1532	Pahrump Hills
+T4	Locality 1608 1615	Pahrump
+T5	Feature 1544 1554	concretion
+T6	Feature 1568 1585	light-toned veins
+T7	Feature 1591 1602	Concretions
+T8	Element 3176 3179;3180 3186	hy- drogen
+T9	Feature 3303 3320	Light-toned veins
+T10	Locality 3960 3973	Pahrump Hills
+T11	Locality 4973 4988	Yellowknife Bay
+T12	Feature 5586 5593	nodules
+T13	Feature 5620 5633	raised-ridges
+T14	Locality 5646 5650;5651 5663	Yel- lowknife Bay
+T15	Locality 5825 5838	Pahrump Hills
+T16	Element 5882 5883	S
+T17	Element 5946 5948	Ni

@@ -1,0 +1,98 @@
+T13	Element 3404 3406	Si
+T14	Element 3408 3410	Al
+T15	Element 3658 3660	Ca
+T16	Element 3662 3664	Mg
+T17	Element 3666 3668	Al
+T18	Element 3670 3672	Ti
+T19	Element 3678 3679	K
+T20	Element 3891 3892	H
+T21	Element 4135 4136	H
+T22	Element 4284 4290	sodium
+T23	Element 4379 4381	Na
+T24	Element 4476 4484	chlorine
+T25	Element 4508 4510	Cl
+T26	Element 4891 4893	Ca
+T27	Element 4942 4944	Ca
+T30	Target 1367 1380	Winnipesaukee
+T31	Target 1861 1871	Kahochella
+T32	Target 2160 2173	Winnipesaukee
+T33	Target 2297 2310	Winnipesaukee
+T34	Target 4548 4561	Winnipesaukee
+T35	Target 4811 4824	Winnipesaukee
+T36	Target 7455 7468	Winnipesaukee
+T1	Locality 896 905	Kimberley
+T2	Locality 847 854;855 864	Yellow- knife Bay
+T4	Locality 1194 1198;1199 1211	Yel- lowknife Bay
+T5	Site 1271 1289	Point Lake outcrop
+T6	Feature 1325 1345;1346 1365	spherical and appar- ently hollow object
+R1	Shows Arg1:T30 Arg2:T6	
+T7	Member 1772 1787;1788 1794	Gillespie Lake  member
+T3	Member 1169 1190	Gillespie Lake member
+T8	Target 1810 1818	Tochatwi
+R2	BelongsTo Arg1:T8 Arg2:T7	
+T9	Feature 2314 2320	hollow
+R3	Shows Arg1:T33 Arg2:T9	
+T10	Feature 2322 2331	spherical
+R4	Shows Arg1:T33 Arg2:T10	
+T11	Feature 2346 2383	darker than the surrounding sediments
+R5	Shows Arg1:T33 Arg2:T11	
+T12	Feature 2443 2446;2447 2471	ap- proximately 38 mm across
+R6	Shows Arg1:T33 Arg2:T12	
+T37	Feature 2477 2492;2493 2501	walls are ~2-3  mm thick
+R7	Shows Arg1:T33 Arg2:T37	
+T38	Feature 2507 2533	outer surface is irregular
+R8	Shows Arg1:T33 Arg2:T38	
+T39	Feature 2542 2575	flecked with lighter-toned grains
+R9	Shows Arg1:T33 Arg2:T39	
+T40	Feature 2581 2594;2595 2606	host rock is  light-toned
+R10	Shows Arg1:T33 Arg2:T40	
+T41	Feature 2635 2642;2643 2679	darker  clasts, some of which appear angular
+R11	Shows Arg1:T33 Arg2:T41	
+T42	Feature 2685 2692;2693 2713	darker- toned pebbles nearby
+R12	Shows Arg1:T33 Arg2:T42	
+T43	Contains 3373 3387;3388 3403	that the host  rock is high in
+E1	Contains:T43 Targ:T33 Cont:T13 Cont2:T14 Cont3:T44
+A1	Amount E1 Contains_High
+A2	Confidence E1 High
+T44	Material 3416 3423	alkalis
+T45	Feature 3446 3456	light tone
+R13	Shows Arg1:T33 Arg2:T45	
+T46	Material 3575 3579	FeOT
+T47	Contains 3563 3574	are high in
+E2	Contains:T47 Cont:T46 Targ:T33 Cont2:T20
+A3	Amount E2 Contains_High
+T48	Material 3611 3615	SiO2
+T49	Contains 3597 3610	have moderate
+E3	Contains:T49 Cont:T48 Targ:T33
+A4	Amount E3 Contains
+T50	Contains 3642 3654	compositions
+E4	Contains:T50 Cont:T15 Cont2:T16 Cont3:T17 Cont4:T18 Cont5:T19 Cont6:T51 Cont7:T52 Cont8:T53 Cont9:T54
+A5	Amount E4 Contains
+T51	Material 3715 3718	K2O
+T52	Material 3749 3752	CaO
+T53	Material 3864 3868	Na2O
+T54	Material 3926 3930	FeOT
+T55	Feature 4042 4051	hydration
+R14	Shows Arg1:T33 Arg2:T55	
+T56	Contains 4291 4294;4295 4303	en- richment
+E5	Contains:T56 Cont:T22 Targ:T33
+A6	Amount E5 Contains_High
+T57	Contains 4590 4594	rich
+E6	Contains:T57 Cont:T59 Cont2:T58 Targ:T34
+A7	Amount E6 Contains_High
+T58	Element 4576 4578	Ca
+T59	Element 4585 4589	iron
+T60	Feature 4845 4863	light-toned flecks
+R15	Shows Arg1:T35 Arg2:T60	
+T61	Contains 4875 4886	variability
+E7	Contains:T61 Targ:T35 Cont:T26
+A8	Amount E7 Contains
+T62	Process 5154 5177	gas-enriched lava flows
+T63	DoesNotContain 5036 5061	rules out any possibility
+E8	DoesNotContain:T63 Targ:T35
+A9	Confidence E8 High
+T64	Target 6024 6031	Tappers
+T65	Locality 6077 6082;6083 6095	Moon- light Valley
+R16	IsSituatedIn Arg1:T64 Arg2:T65	
+T66	Site 6119 6129;6130 6134	Dingo Gap  Dune
+T67	Target 6637 6644	Tappers

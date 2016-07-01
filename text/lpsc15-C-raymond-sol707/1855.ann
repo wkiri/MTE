@@ -1,0 +1,194 @@
+T1	Element 1109 1111	Mg
+T2	Element 1113 1115	Ca
+T3	Element 1120 1122	Cl
+T4	Element 1142 1144	Al
+T5	Element 1146 1148	Si
+T6	Element 1150 1151	P
+T7	Element 1156 1157	K
+T8	Element 1171 1173	Zn
+T9	Element 1178 1180	Ge
+T10	Element 1213 1215	At
+T11	Element 1569 1571	Mg
+T12	Element 1573 1574	S
+T13	Element 1579 1581	Ni
+T14	Element 1696 1698	Cl
+T15	Element 1727 1729	Mg
+T16	Element 1731 1733	Ni
+T17	Element 1738 1739	S
+T18	Element 2182 2184	Al
+T19	Element 2234 2236	Fe
+T20	Element 2380 2382	Na
+T21	Element 2383 2385	Mg
+T22	Element 2386 2388	Al
+T23	Element 2389 2391	Si
+T24	Element 2392 2393	P
+T25	Element 2394 2395	S
+T26	Element 2396 2398	Cl
+T27	Element 2399 2400	K
+T28	Element 2401 2403	Ca
+T29	Element 2404 2406	Ti
+T30	Element 2407 2409	Cr
+T31	Element 2410 2412	Mn
+T32	Element 2413 2415	Fe
+T33	Element 2416 2418	Ni
+T34	Element 2419 2421	Zn
+T35	Element 2422 2424	Br
+T37	Element 2903 2905	Al
+T38	Element 2910 2912	Si
+T39	Element 2923 2925	Fe
+T40	Element 2973 2975	Mg
+T41	Element 2980 2982	Ni
+T42	Element 2990 2991	S
+T43	Element 3333 3335	Zn
+T44	Element 3340 3342	Ge
+T45	Element 3402 3404	Br
+T46	Element 3578 3586	Selenium
+T47	Element 3591 3595	lead
+T48	Element 3672 3674	Se
+T49	Element 3811 3813	Pb
+T50	Element 3899 3901	Pb
+T51	Element 4028 4030	Se
+T52	Element 4332 4334	Mg
+T53	Element 4336 4338	Ca
+T54	Element 4343 4344	S
+T55	Element 4367 4377	phosphorus
+T56	Element 4521 4522	P
+T57	Element 4791 4793	Na
+T58	Element 4794 4796	Mg
+T59	Element 4797 4799	Al
+T60	Element 4800 4802	Si
+T61	Element 4803 4804	P
+T62	Element 4805 4806	S
+T63	Element 4807 4809	Cl
+T64	Element 4810 4811	K
+T65	Element 4812 4814	Ca
+T66	Element 4815 4817	Ti
+T67	Element 4818 4820	Cr
+T68	Element 4821 4823	Mn
+T69	Element 4824 4826	Fe
+T70	Element 4827 4829	Ni
+T71	Element 4830 4832	Zn
+T72	Element 4833 4835	Br
+T74	Element 5284 5286	Mg
+T75	Element 5288 5290	Ca
+T76	Element 5295 5297	Fe
+T77	Element 5314 5316	Al
+T78	Element 5318 5320	Si
+T79	Element 5326 5327	K
+T80	Element 5559 5561	Cl
+T81	Element 5565 5566	S
+T82	Element 5623 5624	S
+T83	Element 5629 5631	Cl
+T84	Element 5673 5675	Cl
+T85	Element 5812 5813	S
+T86	Element 5817 5819	Cl
+T87	Element 6207 6209	Al
+T88	Element 6214 6216	Si
+T89	Element 6232 6234	Mg
+T90	Element 6236 6238	Ca
+T91	Element 6243 6245	Fe
+T92	Element 7300 7302	Cl
+T93	Element 7312 7314	Cl
+T94	Element 7318 7319	S
+T95	Element 7365 7367	Cl
+T96	Target 2481 2491	Cumberland
+T97	Target 2496 2504	Windjana
+T98	Target 2631 2638	Portage
+T99	Target 7193 7200	Stephen
+T103	Mineral 6484 6492	hematite
+T100	Locality 1193 1200	Pahrump
+T104	Target 1244 1253	Shoemaker
+T105	Target 1478 1486	Moenkopi
+T106	Target 1488 1495	Mammoth
+T107	Target 1500 1508	Morrison
+T108	Material 1652 1657	MgSO4
+T109	Material 1668 1678	Ni-sulfate
+T110	Locality 812 819	Pahrump
+T111	Locality 871 878	Pahrump
+T112	Feature 1358 1381	homogeneous composition
+R1	Shows Arg1:T104 Arg2:T112	
+T113	Contains 1549 1565	clearly enriched
+E1	Contains:T113 Targ:T105 Targ2:T106 Targ3:T107 Cont:T11 Cont2:T12 Cont3:T13 Cont4:T14
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T114	Contains 1636 1651	consistent with
+E2	Contains:T114 Targ:T105 Targ2:T106 Targ3:T107 Cont:T108 Cont2:T109
+T101	Target 2119 2125	Mojave
+T36	Target 2467 2476	JohnKlein
+T115	Locality 2477 2480	YKB
+T116	Locality 2492 2495	YKB
+T117	Locality 2505 2514	Kimberley
+T118	Target 2515 2525	Conf.Hills
+T119	Locality 2526 2533	Pahrump
+T120	Target 2676 2685	WhaleRock
+T121	Target 2685 2691	Chinle
+T122	Target 2692 2706	AlexanderHills
+T123	Target 2706 2715	BookCliff
+T124	Target 2716 2725	PinkCliff
+T125	Target 2725 2734	Shoemaker
+T126	Material 2756 2761	Al2O3
+T127	Material 2762 2765	FeO
+T128	Material 2766 2770	SiO2
+T129	Locality 2959 2962	YKB
+T130	Material 3194 3199	MgSO4
+T131	Material 3202 3205	MgO
+T133	Material 3211 3214	MgO
+T134	Material 3206 3209	SO3
+T132	Locality 3296 3303	Pahrump
+T135	Element 3752 3753	S
+T136	Element 3754 3756	Se
+T137	Target 3702 3716	AlexanderHills
+T138	Target 3862 3871	PinkCliff
+T139	Target 3876 3885	BookCliff
+T140	Contains 3830 3858	clear enrichments to ~100ppm
+E3	Contains:T140 Cont:T49 Targ:T138 Targ2:T139
+A3	Confidence E3 High
+A4	Amount E3 Contains_High
+T141	Contains 3675 3684	is ~50ppm
+E4	Contains:T141 Cont:T48 Targ:T137
+A5	Confidence E4 High
+T142	Site 3941 3950	WhaleRock
+T143	Target 3965 3973	SantaAna
+T144	Contains 3907 3919	200ppm is at
+E5	Contains:T144 Targ:T143 Cont:T50
+A6	Confidence E5 High
+A7	Amount E5 Contains_High
+R2	IsSituatedIn Arg1:T143 Arg2:T142	
+T102	Target 4308 4316	SantaAna
+T145	Contains 4317 4331	has even lower
+E6	Contains:T145 Targ:T102 Cont:T52 Cont2:T53 Cont3:T54
+A8	Confidence E6 High
+A9	Amount E6 Contains_Low
+T146	Contains 4350 4366	clearly elevated
+E7	Contains:T146 Targ:T102 Cont:T55
+A10	Confidence E7 High
+A11	Amount E7 Contains_High
+T147	Target 4416 4427	BonanzaKing
+T148	Locality 4441 4453	HiddenValley
+T149	Locality 4476 4483	Pahrump
+T150	Contains 4516 4520	high
+E8	Contains:T150 Cont:T56 Targ:T147
+T151	Feature 4693 4709	high Fe/Mn ratio
+R3	Shows Arg1:T147 Arg2:T151	
+R4	Shows Arg1:T102 Arg2:T151	
+T73	Target 4861 4872	BonanzaKing
+T152	Target 4883 4892	Maturango
+T153	Target 4903 4911	SantaAna
+T154	Locality 4960 4967	Pahrump
+T155	Target 4975 4984	Santa Ana
+T156	Target 4990 5001	BonanzaKing
+T157	Locality 5072 5079	Pahrump
+T158	Element 5361 5363	Mg
+T159	Element 5369 5371	Ni
+T160	Element 5447 5449	Ca
+T161	Feature 5462 5467	veins
+T162	Feature 5471 5485	fracture fills
+T163	Locality 5594 5601	Pahrump
+T164	Locality 5952 5959	Pahrump
+T165	Material 6494 6499	clays
+T166	Material 6504 6512	sulfates
+T167	Target 7182 7192	PasoRobles
+T168	Locality 7175 7182	Pahrump
+T169	Locality 7276 7283	Pahrump
+T170	Locality 7336 7343	Pahrump
+T171	Target 2450 2451;2452 2456;2457 2459	P orta ge

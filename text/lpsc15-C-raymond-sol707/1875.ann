@@ -1,0 +1,34 @@
+T1	Element 503 509	nickel
+T2	Element 519 523	iron
+T3	Element 529 533	iron
+T4	Element 620 622	Fe
+T6	Element 693 699	nickel
+T7	Element 1011 1017	nickel
+T9	Element 1645 1647	Ni
+T10	Element 1881 1883	Ni
+T11	Element 2002 2004	Cr
+T12	Element 2055 2057	Ni
+T14	Element 3091 3097	nickel
+T15	Element 3239 3245	nickel
+T18	Element 4670 4676	Nickel
+T19	Element 4718 4720	Ni
+T20	Element 5956 5958	Ni
+T21	Element 6505 6511	nickel
+T24	Element 7373 7375	Ni
+T25	Element 7766 7772	nickel
+T26	Element 7960 7962	Ni
+T27	Element 8137 8139	Ni
+T28	Element 8319 8321	Ni
+T29	Element 8477 8479	Ni
+T30	Element 8505 8507	Ni
+T31	Element 8580 8582	Ni
+T32	Element 8696 8698	Ni
+T56	Target 5117 5126	Natkusiak
+T60	Mineral 4008 4022	micrometeorite
+T61	Material 4745 4754	Chondrite
+T66	Element 37 43	NICKEL
+T5	Material 4865 4871	basalt
+T8	Element 5097 5099	Ni
+T13	Contains 5092 5096	high
+E1	Contains:T13 Cont:T8 Targ:T56
+A1	Amount E1 Contains_High

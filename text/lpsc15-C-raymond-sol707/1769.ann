@@ -1,0 +1,90 @@
+T9	Element 1145 1147	Fe
+T11	Element 1996 1998	Fe
+T13	Element 2965 2967	Fe
+T14	Element 2969 2971	Al
+T15	Element 2977 2978	S
+T16	Element 3190 3192	Fe
+T18	Element 4425 4429	iron
+T23	Element 6403 6405	Fe
+T24	Element 6617 6619	Fe
+T25	Element 6758 6760	Fe
+T26	Element 6920 6921	C
+T28	Target 1314 1322	Sheepbed
+T29	Target 1682 1690	Sheepbed
+T30	Target 1807 1817	Cumberland
+T31	Target 3406 3413	Portage
+T32	Target 3712 3720	Sheepbed
+T33	Target 4663 4670	Portage
+T38	Mineral 1389 1397	smectite
+T39	Mineral 1476 1485	magnetite
+T40	Mineral 1724 1732	smectite
+T41	Mineral 1737 1746	magnetite
+T42	Mineral 1869 1873	site
+T43	Mineral 1903 1912	magnetite
+T44	Mineral 1923 1931	hematite
+T45	Mineral 2040 2048	hematite
+T48	Mineral 3583 3591	goethite
+T49	Mineral 3636 3642	pyrite
+T50	Mineral 3647 3654	apatite
+T52	Mineral 4204 4213	kaolinite
+T53	Mineral 4449 4458	magnetite
+T54	Mineral 4504 4512	hematite
+T55	Mineral 5030 5038	goethite
+T56	Mineral 5083 5091	hematite
+T57	Mineral 5231 5239	hematite
+T58	Mineral 5252 5261	magnetite
+T59	Mineral 5528 5536	hematite
+T61	Mineral 5860 5868	hematite
+T62	Mineral 6010 6018	hematite
+T63	Mineral 6294 6302	hematite
+T64	Mineral 6692 6700	hematite
+T65	Mineral 6705 6713	goethite
+T66	Mineral 6844 6852	hematite
+T67	Mineral 7058 7066	hematite
+T1	Locality 835 849	Hematite Ridge
+T2	Mineral 952 959	sulfate
+T3	Material 943 947	clay
+T4	Material 1136 1140	clay
+T5	Locality 1208 1222	Hematite Ridge
+T6	Material 1335 1343	mudstone
+T7	Contains 1330 1332	is
+E1	Contains:T7 Cont:T6 Targ:T28 Cont2:T38 Cont3:T36 Cont4:T37 Cont5:T39
+A1	Confidence E1 High
+T8	Feature 1347 1350;1351 1378	ba- saltic chemical composition
+R1	Shows Arg1:T28 Arg2:T8	
+T36	Mineral 1405 1421	igneous minerals
+T37	Material 1432 1456	X-ray amorphous material
+T10	Mineral 1629 1636	olivine
+T70	Target 1792 1802	John Klein
+T71	Contains 1758 1768	identified
+E2	Contains:T71 Cont:T41 Cont2:T40 Targ:T70 Targ2:T30
+A2	Confidence E2 High
+T72	Locality 1853 1862	Kimberley
+T73	Material 2026 2038	ferric oxide
+T46	Locality 2152 2166	Hematite Ridge
+T47	Locality 2293 2307	Hematite Ridge
+T12	Mineral 2888 2895	olivine
+T74	Material 3132 3144	ferric oxide
+T75	Material 3164 3180	ferric silicates
+T76	Mineral 3598 3608	serpentine
+T77	Material 3619 3623	clay
+T78	Locality 3744 3759	Yellowknife Bay
+T79	Mineral 3835 3843	pyroxene
+T80	Mineral 3848 3856	feldspar
+T81	Unit 3929 3938	Kimberley
+T82	Unit 3943 3954	Shaler unit
+T83	Mineral 4003 4012	carbonate
+T51	Locality 4029 4038;4039 4044	Hematite  Ridge
+T84	Mineral 4115 4124	carbonate
+T85	Mineral 4195 4201	quartz
+T86	Mineral 4230 4238	zeolites
+T87	Mineral 4244 4253	carbonate
+T88	Mineral 4402 4412	carbonates
+T17	Mineral 4809 4816	olivine
+T19	Material 5139 5151	ferric oxide
+T89	Material 5273 5286	ferric oxides
+T90	Locality 5428 5443	Yellowknife Bay
+T20	Locality 5733 5747	Hematite Ridge
+T21	Locality 7094 7108	Hematite Ridge
+T22	Locality 7385 7399	Hematite Ridge
+T27	Element 4482 4485;4486 4490	ox- ygen

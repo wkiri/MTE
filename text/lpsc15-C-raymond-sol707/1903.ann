@@ -1,0 +1,47 @@
+T4	Element 4854 4856	Mn
+T5	Element 4875 4877	Zn
+T9	Element 6091 6097	sulfur
+T10	Element 6102 6109	calcium
+T11	Element 6169 6176	calcium
+T12	Element 6260 6269	magnesium
+T13	Element 6298 6300	Ni
+T14	Element 6302 6304	Zn
+T19	Target 2634 2642	Sheepbed
+T20	Target 2839 2847	Sheepbed
+T21	Target 3095 3103	Sheepbed
+T22	Target 3527 3535	Sheepbed
+T23	Target 4759 4765	Tingey
+T24	Target 4822 4830	Windjana
+T28	Mineral 3048 3053	white
+T1	Site 652 668	Bradbury Landing
+T25	Locality 673 688	Yellowknife Bay
+T31	Feature 756 763	nodules
+T32	Feature 765 778	raised ridges
+T33	Feature 785 809	mineral-filled fractures
+T34	Feature 866 878;879 888	mineralized  fractures
+T35	Feature 893 898	veins
+T36	Locality 1325 1340	Yellowknife Bay
+T37	Site 1653 1669	Bradbury Landing
+T38	Region 1742 1755	Bradbury Rise
+T26	Feature 1837 1842	veins
+T39	Locality 1955 1970	Yellowknife Bay
+T40	Material 2036 2040	clay
+T27	Locality 2364 2371	Pahrump
+T41	Locality 2467 2482	Yellowknife Bay
+T42	Feature 2484 2496;2497 2502	Light-toned  veins
+T43	Locality 2550 2565	Yellowknife Bay
+T44	Feature 2574 2591	Mineralized veins
+T45	Target 3133 3142	Gillespie
+T46	Target 3147 3154	Glenelg
+T47	Locality 3554 3569	Yellowknife Bay
+R1	IsSituatedIn Arg1:T22 Arg2:T47	
+T2	Material 4718 4733	calcium sulfate
+T3	Contains 4734 4742	in veins
+E1	Contains:T3 Cont:T2 Targ:T23
+A1	Confidence E1 High
+T29	Contains 4879 4887	enriched
+E2	Contains:T29 Cont:T4 Cont2:T5 Targ:T24
+A2	Amount E2 Contains_High
+T6	Locality 6045 6052	Pahrump
+T7	Feature 6219 6237	darker-toned veins
+T8	Material 7210 7225	calcium sulfate

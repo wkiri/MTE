@@ -1,0 +1,59 @@
+T5	Element 1808 1810	Si
+T6	Element 1829 1831	Si
+T7	Element 1849 1851	Si
+T11	Element 2868 2870	Si
+T13	Element 3136 3138	Si
+T14	Element 3353 3355	Si
+T15	Element 3523 3525	Si
+T16	Element 3546 3548	Si
+T18	Element 3597 3599	Si
+T19	Element 3617 3619	Si
+T21	Element 3732 3734	Mg
+T22	Element 4033 4035	Mg
+T23	Element 4281 4283	Si
+T24	Element 4451 4453	Mg
+T25	Element 4687 4689	Mg
+T26	Element 4922 4924	Mg
+T27	Element 5019 5021	Si
+T28	Element 5063 5065	Mg
+T29	Element 5175 5177	Mg
+T30	Element 5583 5585	Si
+T31	Element 5602 5604	Si
+T35	Element 5664 5666	Si
+T36	Element 5761 5763	Mg
+T39	Element 5831 5833	Mg
+T40	Element 6044 6046	Si
+T41	Element 6058 6060	Mg
+T42	Element 6222 6224	Mg
+T43	Element 6498 6500	Mg
+T48	Target 2147 2155	Windjana
+T49	Target 5655 5663	Windjana
+T50	Target 5822 5830	Windjana
+T51	Target 5893 5901	Windjana
+T52	Target 6118 6126	Windjana
+T53	Target 6277 6285	Windjana
+T54	Target 6316 6324	Windjana
+T55	Target 6390 6398	Windjana
+T56	Target 6519 6527	Windjana
+T1	Material 2124 2127	MgO
+T2	Contains 2128 2141	concentration
+E1	Contains:T2 Cont:T1 Targ:T48
+T3	Target 2509 2518	Goldstone
+T4	Target 2647 2656	Goldstone
+T8	Target 2706 2715	Goldstone
+T9	Target 2886 2891;2892 2897	Gold- stone
+T10	Contains 2871 2885	line ratio for
+E2	Contains:T10 Cont:T11 Targ:T9
+T12	Target 3487 3496	Goldstone
+T17	Target 3576 3585	Goldstone
+T20	Target 3718 3727	Goldstone
+T47	Contains 3735 3739;3740 3757	448  nm line variation
+E3	Contains:T47 Cont:T21 Targ:T20
+T57	Target 3951 3960	Goldstone
+T58	Target 5345 5354	Goldstone
+T59	Material 5325 5328	MgO
+T60	Contains 5329 5340	composition
+E4	Contains:T60 Cont:T59 Targ:T58
+T32	Material 6533 6536	MgO
+T33	Contains 6539 6563	average concentration is
+E5	Contains:T33 Cont:T32 Targ:T56

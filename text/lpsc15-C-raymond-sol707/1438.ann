@@ -1,0 +1,115 @@
+T19	Element 4788 4789	K
+T20	Element 4809 4811	Na
+T22	Element 5198 5199	K
+T24	Element 5510 5511	K
+T25	Element 5525 5526	K
+T26	Element 5658 5660	Mt
+T27	Element 5764 5765	K
+T28	Element 5797 5805	Hydrogen
+T29	Element 5995 5996	F
+T30	Element 6003 6005	Li
+T31	Element 6008 6010	Mn
+T32	Element 6017 6019	Zn
+T33	Element 6029 6031	Ni
+T34	Element 6068 6070	Mn
+T35	Element 6260 6261	K
+T36	Element 6354 6355	K
+T37	Element 6492 6493	K
+T38	Element 7063 7064	F
+T39	Element 7067 7069	Mn
+T40	Element 7074 7076	Zn
+T41	Element 7219 7220	K
+T42	Target 2717 2721	Liga
+T43	Target 2805 2815	Square_Top
+T44	Target 2891 2900	Dillinger
+T45	Target 3133 3139	Beagle
+T46	Target 3171 3180	Dillinger
+T47	Target 3343 3353	Square_Top
+T48	Target 3358 3362	Liga
+T49	Target 4561 4570	Dillinger
+T50	Target 4639 4647	Sheepbed
+T51	Target 4823 4831	Sheepbed
+T52	Target 4864 4870	Darwin
+T53	Target 4949 4955	Darwin
+T54	Target 5086 5095	Dillinger
+T55	Target 5292 5301	Dillinger
+T56	Target 5438 5447	Dillinger
+T57	Target 5593 5597	Liga
+T58	Target 5602 5612	Square_Top
+T59	Target 5644 5653	Dillinger
+T60	Mineral 5406 5412	illite
+T1	Unit 1018 1029	Rugged unit
+T2	Unit 1086 1099	Striated unit
+T3	Locality 1318 1329	Cooperstown
+T4	Locality 1353 1362	Kimberley
+T5	Locality 1752 1763	Cooperstown
+T6	Locality 1768 1772;1773 1779	Kim- berley
+T7	Locality 1813 1824	Cooperstown
+T8	Unit 1953 1964	Rugged unit
+T9	Formation 2002 2027	Yellowknife Bay Formation
+T11	Formation 2097 2118	Cooperstown formation
+T12	Member 2178 2196	Pine_Plains member
+T61	Material 2216 2239	fine-grained sandstones
+T62	Member 2261 2278	Rensselaer member
+T63	StratRel 2248 2253;2254 2259	over- lying
+E2	StratRel:T63 Obj:T12 Subj:T62
+A3	Position E2 IsStratAbove
+A4	Confidence E2 High
+T64	Material 2309 2340	well-cemented pebbly sandstones
+T65	Feature 2352 2358;2359 2365	float  clasts
+T13	Locality 2368 2377	Kimberley
+T66	Formation 2506 2520;2521 2527	Kimberley for- mation
+T67	StratRel 2126 2141	subdivided into
+E3	StratRel:T67 Obj2:T62 Obj3:T12 Subj:T11
+A5	Position E3 Includes
+A6	Confidence E3 High
+T68	StratRel 2528 2536	includes
+E4	StratRel:T68 Subj:T66
+A7	Position E4 Includes
+A8	Confidence E4 High
+T70	Material 2636 2657	breccio-conglomerates
+T71	Locality 2698 2711	Violet Valley
+T72	Member 2741 2777	planar-bedded very coarse sandstones
+R1	BelongsTo Arg1:T42 Arg2:T66	
+T73	Feature 2791 2799	granules
+R2	Shows Arg1:T42 Arg2:T73	
+R3	BelongsTo Arg1:T42 Arg2:T72	
+T69	Target 2598 2611	Point_Coulomb
+T74	Material 2856 2884	faintly-laminated sandstones
+T75	Contains 2823 2834;2835 2841	correspond- ing to
+E5	Contains:T75 Targ:T43 Cont:T74
+A9	Confidence E5 High
+T76	Material 2919 2941;2942 2948	cross-stratified sand- stones
+T77	Contains 2908 2918	containing
+E6	Contains:T77 Targ:T44 Cont:T76
+A10	Confidence E6 High
+T78	Material 2996 3014	massive sandstones
+T14	Site 3022 3036	Mt. Remarkable
+T79	Unit 3107 3127	Hummocky Plains unit
+T15	Unit 3234 3245	Rugged unit
+T80	Site 3185 3199	Mt. Remarkable
+R4	Associated Arg1:T80 Arg2:T15	
+R5	BelongsTo Arg1:T46 Arg2:T15	
+T81	Unit 3396 3409	Striated unit
+R6	BelongsTo Arg1:T47 Arg2:T81	
+R7	BelongsTo Arg1:T48 Arg2:T81	
+T82	Locality 3476 3487	Cooperstown
+T83	Locality 3492 3501	Kimberley
+T84	Material 4931 4944	conglomerates
+T85	Contains 4945 4947	in
+E7	Contains:T85 Cont:T84 Targ:T53
+A11	Confidence E7 High
+T16	Site 5101 5115	Mt. Remarkable
+T17	Unit 5125 5136	Rugged unit
+R8	BelongsTo Arg1:T16 Arg2:T17	
+T18	Locality 5140 5149	Kimberley
+R9	IsSituatedIn Arg1:T16 Arg2:T18	
+T21	Site 5310 5314;5315 5325	Mt.  Remarkable
+T23	Contains 5181 5194	most enriched
+E8	Contains:T23 Targ:T54 Cont:T22
+A12	Amount E8 Contains_High
+T86	Mineral 5393 5401	feldspar
+T87	Contains 5420 5430	identified
+E9	Contains:T87 Targ:T56 Cont:T86 Cont2:T60 Cont3:T88
+A13	Confidence E9 High
+T88	Material 5413 5418	clays

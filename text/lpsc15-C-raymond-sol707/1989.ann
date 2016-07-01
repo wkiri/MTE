@@ -1,0 +1,142 @@
+T11	Element 1336 1344	chlorine
+T12	Element 1350 1358	fluorine
+T13	Element 1410 1418	fluorine
+T15	Element 3693 3694	K
+T16	Element 3915 3917	Fe
+T17	Element 3922 3924	Mg
+T18	Element 3926 3928	Ca
+T19	Element 3933 3935	Na
+T20	Element 3973 3975	Li
+T21	Element 3977 3979	Rb
+T22	Element 3981 3983	Zn
+T23	Element 3985 3987	Ni
+T25	Element 4222 4230	Fluorine
+T26	Element 4348 4349	F
+T27	Element 5482 5490	fluorine
+T28	Element 5538 5546	fluorine
+T29	Element 5687 5695	fluorine
+T30	Element 5726 5727	K
+T31	Element 5729 5731	Al
+T32	Element 5733 5735	Si
+T33	Element 5740 5742	Mg
+T34	Element 6045 6046	F
+T35	Element 6058 6060	Ca
+T36	Element 6252 6254	Li
+T37	Element 6321 6322	F
+T39	Element 6383 6391	fluorine
+T40	Element 6418 6425	lithium
+T41	Element 6440 6447	lithium
+T42	Element 6470 6478	fluorine
+T43	Element 6657 6664	Lithium
+T44	Element 6704 6711	lithium
+T45	Element 6842 6844	Li
+T46	Element 6967 6975	fluorine
+T47	Element 6978 6985	lithium
+T48	Element 7076 7084	fluorine
+T49	Element 7089 7096	lithium
+T50	Element 7353 7360	lithium
+T51	Element 7733 7740	lithium
+T52	Element 7795 7802	lithium
+T53	Element 7823 7831	fluorine
+T55	Element 7898 7906	fluorine
+T56	Element 7949 7957	fluorine
+T57	Element 8252 8253	C
+T59	Element 8707 8711	zinc
+T60	Element 8716 8725	manganese
+T71	Target 2110 2119	Dillinger
+T72	Target 2176 2184	Windjana
+T73	Target 2598 2607	Dillinger
+T74	Target 4043 4050	Yarrada
+T75	Target 4096 4103	Stephen
+T76	Target 4106 4110	Neil
+T77	Target 4116 4124	Mondooma
+T78	Target 5446 5455	Dillinger
+T79	Target 5908 5916	Windjana
+T80	Mineral 2164 2168	site
+T81	Mineral 4606 4614	fluorite
+T82	Mineral 6106 6114	fluorite
+T83	Mineral 6142 6150	Fluorite
+T84	Mineral 7253 7259	illite
+T86	Mineral 7861 7869	smectite
+T87	Mineral 8648 8656	fluorite
+T88	Element 10 18	FLUORINE
+T89	Element 23 30	LITHIUM
+T1	Element 1480 1481	F
+T2	Locality 1535 1544	Kimberley
+T3	Locality 1708 1717	Kimberley
+T4	Material 1794 1803	sandstone
+T5	Material 1805 1810;1811 1816	silt- stone
+T6	Material 1822 1834	conglomerate
+T7	Region 1850 1862	Aeolis Palus
+T8	Member 1977 1995	Square Top  member
+T9	Member 2011 2015;2016 2030	Dil- linger  member
+T10	Member 2051 2067;2068 2074	Mt. Remarkable   member
+T14	Material 2214 2224	sandstones
+T90	Contains 2206 2213	exposed
+E1	Contains:T90 Targ:T72 Cont:T14
+T91	Feature 2231 2262	centimeter-scale stratification
+R1	Shows Arg1:T72 Arg2:T91	
+T92	Feature 2279 2301	bedsets 10-20 cm thick
+R2	Shows Arg1:T72 Arg2:T92	
+T93	Feature 2315 2333;2334 2356	low angle, planar  to trough crossbedding
+R3	Shows Arg1:T72 Arg2:T93	
+T94	Process 2455 2483	complex paleoflow hydraulics
+R4	Shows Arg1:T72 Arg2:T94	
+T95	Feature 2631 2635	fins
+T96	Process 2778 2807	differential aeolian abrasion
+T97	Locality 3316 3325	Kimberley
+T98	Member 3454 3460;3461 3471	Sheep- bed member
+T99	Locality 3475 3490	Yellowknife Bay
+T100	Locality 3666 3675	Kimberley
+T101	Mineral 3741 3749	feldspar
+T102	Material 3824 3827	K2O
+T24	Contains 4036 4042	in the
+E2	Contains:T24 Cont:T103 Targ:T74
+A1	Confidence E2 High
+A2	Amount E2 Contains_High
+T103	Material 4032 4035	ZnO
+T104	Material 4163 4166	MnO
+T105	Contains 4144 4157;4158 4162	contain very  high
+E3	Contains:T105 Cont:T104 Targ:T77 Targ2:T76 Targ3:T75
+A3	Confidence E3 High
+A4	Amount E3 Contains_High
+T106	Locality 4246 4255	Kimberley
+T107	Material 4309 4312	CaF
+T108	Locality 4433 4442	Kimberley
+T109	Material 4500 4503	CaF
+T110	Material 5333 5336	CaF
+T111	Contains 5474 5481	contain
+E4	Contains:T111 Targ:T78 Cont:T27
+A5	Confidence E4 High
+A6	Amount E4 Contains_High
+T112	Material 5955 5959	clay
+T113	Material 5976 5986;5987 5996	amorphous  component
+T114	Contains 5878 5884;5885 5903	deter- mined by CheMin in
+E5	Contains:T114 Targ:T79 Cont:T112 Cont2:T113
+A7	Confidence E5 High
+T115	Material 6271 6274	MgO
+T38	Locality 6372 6381	Kimberley
+T116	Target 6561 6571	Frome_Rock
+T117	Contains 6547 6559	in the point
+E6	Contains:T117 Targ:T116 Cont:T42
+A8	Confidence E6 High
+A9	Amount E6 Contains_High
+T118	Locality 6680 6689	Kimberley
+T119	Element 7026 7032;7033 7037	magne- sium
+T120	Mineral 7116 7121	micas
+T121	Material 7173 7177	clay
+T122	Material 7276 7281	clays
+T123	Mineral 7294 7303	smectites
+T124	Material 7392 7396	clay
+T85	Mineral 7505 7509	mica
+T125	Material 7599 7603	clay
+T126	Mineral 7647 7652	micas
+T127	Mineral 7835 7844	smectites
+T54	Element 7912 7918;7919 7921	lithi- um
+T128	Material 8125 8130	clays
+T129	Mineral 8155 8160	micas
+T130	Process 8208 8224	feldspathization
+T131	Mineral 8264 8270	illite
+T132	Mineral 8271 8276	micas
+T133	Element 8281 8283	Mg
+T134	Mineral 8284 8293	smectites

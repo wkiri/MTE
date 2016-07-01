@@ -1,0 +1,89 @@
+T2	Element 1360 1361	B
+T3	Element 1380 1381	C
+T12	Element 6065 6074	magnesium
+T13	Element 6077 6079	Mg
+T14	Element 6106 6112	sulfur
+T15	Element 6114 6115	S
+T16	Element 6543 6545	Mg
+T17	Element 6551 6552	S
+T18	Element 6625 6631	nickel
+T19	Element 6633 6635	Ni
+T20	Element 6652 6656	zinc
+T21	Element 6658 6660	Zn
+T22	Element 6897 6899	Ni
+T23	Element 6915 6917	Zn
+T24	Element 7617 7619	Ni
+T25	Element 7626 7628	Zn
+T26	Element 8184 8186	Ni
+T27	Element 8192 8194	Zn
+T30	Target 6765 6773	Bathurst
+T33	Mineral 4412 4421	anhydrite
+T35	Feature 5386 5394	dendrite
+T36	Feature 6278 6286	dendrite
+T1	Locality 838 845	Pahrump
+T37	Locality 1049 1056	Pahrump
+T38	Feature 1206 1233	diagenetic crystal clusters
+T39	Feature 1238 1247	dendrites
+T40	Target 1325 1330;1331 1336	Shoe- maker
+T41	Target 1342 1358	Confidence Hills
+T42	Target 1367 1378	Pink Cliffs
+T43	Site 1428 1438	Whale Rock
+T44	Material 1577 1602;1603 1608	recessive-weathering mud- stone
+T45	Material 1668 1698	erosionally resistant mudstone
+T46	Material 1704 1710;1711 1727	cross- bedded sandstone
+T47	Feature 2026 2035;2036 2062	three di- mensional crystal clusters
+T48	Feature 2067 2076	dendrites
+T49	Target 2310 2319	Shoemaker
+T50	Target 2324 2335	Pink Cliffs
+T51	Target 2417 2421;2422 2435	Con- fidence Hills
+T52	Feature 2202 2218	Crystal clusters
+T53	Feature 2223 2241	dendritic features
+R1	Shows Arg1:T51 Arg2:T52	
+R2	Shows Arg1:T51 Arg2:T53	
+T54	Feature 2482 2507	groups of elongate lathes
+T55	Feature 2607 2627	tabular morphologies
+T56	Target 3286 3295	Shoemaker
+T57	Feature 3228 3255	Diagenetic crystal clusters
+R3	Shows Arg1:T56 Arg2:T57	
+T58	Material 3263 3281	laminated mudstone
+T59	Contains 3283 3285	at
+E1	Contains:T59 Targ:T56 Cont:T58
+A1	Confidence E1 High
+T60	Feature 3330 3342;3343 3364	deformation  during crystal growth
+R4	DoesNotShow Arg1:T56 Arg2:T60	
+T4	Material 4380 4386;4387 4400	evapo- rite minerals
+T5	Material 4426 4440;4441 4445	magnesium sul- fate
+T6	Target 5396 5403	Mammoth
+R5	Shows Arg1:T6 Arg2:T35	
+T7	Target 5488 5496	Meonkopi
+T8	Feature 5471 5486	crystal cluster
+R6	Shows Arg1:T7 Arg2:T8	
+T9	Feature 5670 5686	unusual hardness
+R7	DoesNotShow Arg1:T7 Arg2:T9	
+T10	Feature 5568 5589	erosionally reisitant
+R8	Shows Arg1:T7 Arg2:T10	
+T11	Target 6169 6185	Confidence Hills
+T31	Target 6226 6235	Maturango
+T32	Target 6288 6295	Mammoth
+R9	Shows Arg1:T32 Arg2:T36	
+T34	Target 6313 6321	Moenkopi
+T61	Feature 6304 6311	cluster
+R10	Shows Arg1:T34 Arg2:T61	
+T62	Target 6330 6339	Maturango
+T63	Target 6345 6353	Moenkopi
+T64	Target 6378 6385	Mammoth
+T65	Contains 6502 6539	enrichment of the diagenetic features
+E2	Contains:T65 Targ:T32 Targ2:T34 Cont:T16 Cont2:T17 Cont3:T18 Cont4:T20
+A2	Amount E2 Contains_High
+T66	Target 6677 6686	Maturango
+T67	Target 6775 6782	Winjana
+T68	Target 6784 6794	John Klein
+T69	Material 6823 6829	silica
+T70	Contains 6806 6819;6820 6822	a bit higher  in
+E3	Contains:T70 Targ:T66 Cont:T69
+A3	Amount E3 Contains_High
+T71	Contains 6877 6893	clear enrichment
+E4	Contains:T71 Targ:T66 Cont:T22 Cont2:T23
+A4	Confidence E4 High
+A5	Amount E4 Contains_High
+T72	Material 7610 7615	MgSO4

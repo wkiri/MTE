@@ -1,0 +1,11 @@
+T3	Element 1991 1999	Hydrogen
+T4	Element 6519 6527	hydrogen
+T17	Mineral 3733 3748	montmorillonite
+T18	Mineral 3750 3760	palagonite
+T1	Material 2172 2177	water
+T2	Target 2189 2197	Rocknest
+T19	Contains 2178 2185	content
+E1	Contains:T19 Targ:T2 Cont:T1
+T20	Feature 2362 2377	amorphous phase
+T21	Target 2382 2390	Rocknest
+R1	Shows Arg1:T21 Arg2:T20	

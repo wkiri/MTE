@@ -1,0 +1,240 @@
+
+2676.PDF
+IRON-MANGANESE REDOX REACTIONS IN ENDEAVOUR CRATER RIM APRON ROCKS. D. W. 
+Ming1, D. W. Mittlefehldt1, R. Gellert2, T. Peretyazhko3, B. C. Clark4, R. V. Morris1, A. S. Yen5, R. E. Arvidson6, 
+L. S. Crumpler7, W. H. Farrand4, J. A. Grant III8, B. L. Jolliff6, T. J. Parker5, C. Schr der9, and the Athena Science 
+Team, 1NASA Johnson Space Center, Houston, TX, USA, 77058, USA, douglas.w.ming@nasa.gov, 2University of 
+Guelph, Guelph, ON, Canada, 3Jacobs Technology, NASA Johnson Space Center, Houston, TX, USA, 4Space Science Institute, Boulder, CO, USA, 5NASA Jet Propulsion Laboratory, Pasadena, CA, USA, 6Washington University 
+in St Louis, St. Louis, MO, USA, 7New Mexico Museum Natural History & Science, Albuquerque, NM, USA, 8Smithsonian National Air & Space Museum, Center for Earth & Planetary Studies, Washington, DC, USA, 9University of Stirling, Stirling, Scotland, UK. 
+ 
+ 
+Introduction: The Mars Exploration Rover Opportunity has been exploring Noachian age rocks and 
+outcrops on the rim of the 22 km diameter Endeavour 
+crater since August 2011. The Cape York area is a 
+low-lying rim of Endeavour that contains 3 distinct 
+lithologies: 1) the stratigraphically lowest Matijevic fm 
+of pre-impact lithology, 2) Shoemaker fm of impact 
+breccias, and 3) the stratigaphically highest rim 
+lighology Grasberg fm of post-impact sediments that 
+drape the lower slopes of the rim [1-2]. The sulfaterich sediment of the Burns fm lies unconformably over 
+the Grasberg fm. Ca-sulfate veins were discovered in 
+Grasberg fm sediments; the sulfates precipitated from 
+aqueous fluids flowing upward through these materials 
+[3]. Opportunity investigated the chemistry and morphology of outcrops in the Matijevic fm that have 
+Fe3+-rich smectite detected by orbital signatures returned by CRISM on MRO [1]. Matijevic fm also 
+contains boxwork fractures with chemistry consistent with an Al-rich smectite and veins that appear 
+to be rich in Ca-sulfate [1]. More recently on Cape 
+Tribulation, Opportunity has characterized two S-, 
+Mg- and Mn-rich rich rocks overturned and fractured 
+by the rover s wheels on Cook Haven [4]. Those 
+rocks have been dubbed Pinnacle Island and Stuart 
+Island and will be referred to as the Island rocks. 
+The objectives of this study are to characterize the 
+Fe and Mn contents in the Cape York materials, including the two Island rocks, and to provide a model 
+for Mn mobilization and precipitation. Detailed geochemistry of Endeavour rim rocks is presented in a 
+companion paper [5]. Geochemical trends and elemental associations were obtained from data returned 
+by the Alpha Particle X-ray Spectrometer (APXS) on 
+Opportunity. 
+Fe/Mn, Ni, and S: Elemental Fe/Mn of high Sbearing materials on Endeavour rim deviate substantial 
+from the expected ratio of 45-55 for unaltered martian 
+basalts (Fig. 1). Mn in Grasberg fm sediments is 
+leached as indicated by low Mn contents resulting in 
+high Fe/Mn; whereas, Mn is precipitated in S-rich materials in the Matijevic fm veins and Island rocks as 
+indicated by low Fe/Mn (Figs. 1-2) and high Mn content (Fig. 3). Grasberg fm materials have the lowest 
+Mn measured by Opportunity at Meridiani Planum, 
+with the exception of the Ca-sulfate veins (Homestake 
+and Ootsark) in Grasberg fm and purported phyllosilicate-rich boxworks in Matijevic fm (Figs. 1,3). Grasberg fm Ca-sulfate veins and boxwork fractures however have Fe/Mn expected for basaltic materials suggesting redox conditions have not fractionated Mn 
+from Fe. A strong correlation exists between S and 
+Fe/Mn suggesting Mn precipitation/oxidation with S in 
+the Matijevic fm veins and Island rocks (Fig. 2). This 
+correlation suggests that the same fluid or fluids from 
+the same source region precipitated in Matijevic fm 
+veins and Island rocks. Ni has a correlation with 
+Fe/Mn in these rocks suggesting Ni was transported by 
+the S-rich fluids (Fig. 1b). 
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0 20 40 60 80 100 120 140
+S (
+wt.
+ %)
+Fe/Mn (wt. %)
+Matijevic fm Veins (Ortiz)
+Homestake
+Ootsark
+Grasberg
+Matijevic fm Matrix
+Pinnicle Island
+Stuart Island
+Average Mars Crustal
+Adirondack
+Ortiz
+MnEnrichment
+MnDepletionUpper/Lower
+Grasberg fm
+Homestake
+Ootsark
+Matijevic fmVeins
+PinnacleIsland
+StuartIsland
+Typical MarsCrustal Fe/Mn
+LowerGrasberg fm
+Ca-S Rich Veins
+(a)
+ 
+0
+200
+400
+600
+800
+1000
+1200
+0 50 100 150
+Ni (m
+g/k
+g)
+Fe/Mn (wt. %)
+Matijevic fm Veins (Ortiz)
+Grasberg fm
+Pinnicle Island
+Stuart Island
+Adirondack
+Average_Mars_Crustal
+Martian Meteorites
+Ortiz
+MnEnrichment
+MnDepletion
+Grasberg fm
+PinnacleIsland
+StuartIsland
+Typical MarsCrustal Fe/Mn
+(b)
+ Figure 1. Elemental S (a) and Ni (b) vs Fe/Mn in Endeavour crater rim rocks with high S. 
+2676.pdf46th Lunar and Planetary Science Conference (2015)
+R = 0.9053
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+0 20 40 60 80 100 120 140
+S (
+wt.
+ %)
+Fe/Mn (wt. %)
+Average Mars Crustal
+Sulfur-rich Veins/Rocks
+Ortiz
+MnEnrichment
+MnDepletion
+Matijevic fmVeins
+PinnacleIsland
+StuartIsland
+Typical MarsCrustal Fe/Mn
+ Figure 2. Trend line for elemental S vs Fe/Mn in Endeavour crater rim rocks with high S. 
+10.0
+11.0
+12.0
+13.0
+14.0
+15.0
+16.0
+17.0
+0 1 10
+Fe (
+wt.
+ %)
+Mn (wt. %)
+Matijevic fm veins (Ortiz)
+Grasberg
+Matijevic fm matrix
+Pinnicle Island
+Stuart Island
+Average Mars Crustal
+Adirondack
+MnEnrichment
+MnDepletion
+Grasberg fm
+Ortiz Veins(Matijevic fm)
+PinnacleIsland
+StuartIsland
+TypicalMars
+Basalt
+Matijevic fmMatrix
+ Figure 3. Elemental Fe vs Mn for Endeavour rim 
+apron rocks and veins. 
+ 
+Model for Mn Mobilization: High Fe/Mn in 
+Grasberg fm sediments suggests leaching of Mn in 
+these materials. Fractionation of Mn from Fe is indication of redox and/or pH reactions in Grasberg fm. 
+Alkaline and alkaline earth cations do not vary substantially for Grasberg, Matijevic, and Shoemaker fm 
+rocks [5] suggesting that redox reactions, not pH, mobilized Mn. Higher Fe in Grasberg fm materials compared with Matijevic fm matrix materials suggests Fe 
+precipitation in Grasberg fm (Fig. 3). It is likely that 
+highly oxidized solutions from the overlying Burns fm 
+interacted with Grasberg fm sediments leading to the 
+oxidation of Fe and Mn. We hypothesize that oxidized 
+Mn was mobilized (Mn reduced) in Grasberg sediments by late stage fluxes of Fe2+-rich fluids [6]: 
+MnO2 + 2Fe2+ + 4H2O Mn2+ + 2Fe(OH)3 + 2H+ This reaction also produces excess acidity. Others have 
+suggested that the Burns fm acid-sulfate deposits were 
+formed by subsurface waters of near-neutral pH and 
+rich in Fe2+ that were rapidly oxidized to Fe3+ producing excess acidity [7]. The Grasberg formation materials have likely been extensively altered to high 
+Fe3+/FeT, but unfortunately, the source of the M ssbauer spectrometer on Opportunity was too weak to 
+acquire Fe oxidation states at this stage of the mission. 
+ 
+Model for Mn Precipitation in Endeavour Rim 
+Materials. Mn2+, Ni2+, and possibly other ions were 
+transported with S-rich fluids through the Endeavour 
+crater rim materials (Fig. 4). Regional groundwater 
+upwelling, possibly with recharge from the southern 
+highlands, is one model for the movement of water up 
+through Meridiani Planum and the Endeavour crater 
+rim deposits [8]. Endeavour crater s rim may have 
+been degraded up to 200 meters [9]; hence, there may 
+have been hydraulic head to move fluids during the 
+alteration of the Burns fm into the Endeavour rim materials. It is unclear how the fluids became enriched in 
+S, however, the same process responsible for the formation of the Burns fm may be the S source [7]. Mn, 
+S, Ni, and other ions (e.g., Ca2+) precipitated in Matijevic fm veins and Island rocks fractures, although, the 
+Island rocks were float so their origin is uncertain. Mn 
+may have precipitated as a sulfate, and over time Mn 
+oxidized to form Mn-oxides [1]. Potential reactions for 
+Mn precipitation are shown in Fig. 4. 
+Implications for Fe/Mn Redox Reactions. Fe/Mn 
+is a sensitive indicator for redox reactions. Redox reactions have played an important role in the mobilization 
+and transportation of redox sensitive elements in the 
+Endeavour rim deposits. Redox pairs are essential for 
+metabolic systems and thus Endeavour rim may have 
+provided suitable habitats for life. 
+Mn2+, SO4
+Mn2+, SO4Fe2+
+SO4
+Hypothesis for Matijevic fm veinsand Grasberg Alteration
+MnO2 + 2Fe2+ + 4H2O Mn
+2+ + 2Fe(OH)3+ + 2H+
+ Mn2+ + H2O2 MnO2 + 2H+ (Difficult to oxidize?)
+ Mn2+ + HOCl + H20 MnO2 + Cl- + 3H+
+ Mn2+ + SO42-+ H2O MnSO4 
+. H2O Figure 4. Model for mobilization, movement, and 
+precipitation of Mn in Endeavour crater rim materials. 
+ 
+References: [1] Arvidson R.E. et al. (2014) Science, 343, DOI: 10.1126/science.1248097. [2] Crumpler L.S. et al. (2015) JGR-Planets, in revision. [3] 
+Squyres S.W. et al. (2012) Science, 336, 570-576. [4] 
+Arvidson R.E. et al., (2015), this volume; [5] Mittlefehldt D.W. et al. (2015) this volume. [6] Postma D. 
+and Appelo C.A.J. (2000) GCA, 64, 1237-1247. [7] 
+Hurowitz J.A. et al. (2010) Nature Geo, 3, 323-326; 
+[8] Andrews-Hanna J. et al. (2010) JGR-Planets, 115, 
+DOI: 10.1029/2009JE003485; [9] Grant J.A. et al. 
+(2015), this volume. 
+2676.pdf46th Lunar and Planetary Science Conference (2015)

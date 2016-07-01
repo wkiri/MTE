@@ -1,0 +1,147 @@
+
+2284.PDF
+REGIONAL CONTEXT OF SOIL AND ROCK CHEMISTRY AT GALE AND GUSEV CRATERS, MARS. 
+H.E. Newsom1, S. Gordon1, R. Jackson1, R.C. Wiens2, N. Lanza2, A. Cousin2, S. Clegg2, V. Sautter3, J. Bridges4, N. Man-
+gold5, O. Gasnault6, S. Maurice6, C. D Uston6, G. Berger6, O. Forni6, J. Lasue6, P.-Y. Meslin7, B. Clark8, R. Anderson9, R. 
+Gellert10, M. Schmidt11, J. Berger11, S. McLennan12, W. Boynton13, M. Fisk14; F. Martin-Torres15, M.-P. Zorzano16, S. 
+Karunatillake17 1Inst. of Meteoritics, Univ. of New Mexico, Albuquerque, NM 87131, USA (Newsom@unm.edu); 2Los 
+Alamos National Lab., NM, USA; 3MNHN, CNRS Fr; 4Univ. of Leicester, GB;  5Lab. de Planetologie et Geodynamique de 
+Nantes, FR; 6IRAP/CNRS, FR; 7Univ. Paul Sabatier, Toulouse, FR; 8Planetary Science Inst., Tucson, AZ, USA; 9USGS, 
+Flagstaff, AZ, USA; 10Univ. of Guelph, Canada;  11Brock Univ., Canada, 12Stony Brook Univ., NY, USA; 13Univ. of Arizona, 
+AZ, USA, 14Univ. of Oregon, USA. 15Instituto Andaluz de Ciencias de la Tierra (CSIC-UGR), Granada, Spain,16Centro de 
+Astrobiolog a (INTA-CSIC), Madrid, Spain, 17Louisiana State Univ., LA, USA 
+ 
+Introduction: Geochemical data for both rocks and 
+soils from Gale Crater, and Gusev Crater, are compared 
+here with data from the Gamma Ray Spectrometer 
+(GRS) experiment on the Mars Odyssey Spacecraft [1, 
+2]. Both Gale and Gusev craters are located near the di-
+chotomy boundary between the Noachian Highlands 
+and the younger volcanics and transitional units to the 
+north (Fig. 1). Element ratios in these samples may pro-
+vide a link between the regional provinces analyzed by 
+GRS and the materials at the two landing sites. The lith-
+ophile data may lead to a better understanding of the 
+origin and evolution of the martian crust in this region 
+of Mars, while the volatile element components SO3, Cl, 
+and water provide information on volcanic aerosols, 
+weathering processes and potentially recent climate [3]. 
+Fig. 1   Portion of the Mars Global Geologic map with 
+arrows showing Gale (West) and Gusev (East) craters on the 
+dichotomy boundary.  See Fig. 2 for scale and reference. 
+ 
+Geochemical components and normalization: 
+Comparing the chemistry of Gale and Gusev samples 
+with other martian data must take into account the dif-
+ferent geochemical components in the samples. The 
+most important distinction is between the lithophile el-
+ements including Al, Si, Fe, Mn, Ca, Na, Mg, etc. that 
+represents the rock component, and  the volatile ele-
+ments including H, C, Cl, S, that represent later external 
+input to the soils and rocks. Normalization to SiO2, pro-
+vides a way to correct the lithophile elements for varia-
+ble amounts of the mobile element component, mainly 
+sulfur, chlorine and water. 
+ 
+ 
+Fig. 2   Areas with distinctive GRS signatures based on 5 
+x 5 degree binned data.  
+Fig. 3   CaO/SiO2 vs. FeO/SiO2 data for areas near Gale 
+and Gusev Craters (Fig. 2) with distinctive GRS signatures. 
+ 
+Regional trends from GRS: The GRS composi-
+tions reflect the integrated abundances to a depth of ~ 
+0.5 m, but the instrument is not collimated, and ~ 50% 
+of the received gamma rays come from an area ten de-
+grees in diameter on the surface below the instrument 
+[4]. Thus most of the signal from each 5 degree binned 
+data used in this study comes from outside the nominal 
+area represented by the data. Because Gale and Gusev 
+craters are only ~ 3 degrees in diameter, there is no way 
+to get their unique GRS signatures. Therefore, because 
+the two landing sites are on the dichotomy boundary, 
+Example of GRS 
+10 degree  pixel  
+2284.pdf46th Lunar and Planetary Science Conference (2015)
+and due to the low resolution of the GRS data, the area 
+seen in the geological map has been divided into regions 
+on 5 degree boundaries (Fig. 2) that have distinctive 
+GRS chemical signatures [1]. An example of the differ-
+ences in the chemistry of these regions is seen in the ar-
+eas outlined on the CaO/SiO2 versus FeO/SiO2 data 
+(Fig. 3). Note that the highlands crust south of Gale has 
+lower FeO/SiO2 and CaO/SiO2 than the nearby Elysium 
+volcanic complex and the areas of the Medusa Fossae to 
+the north of Gale.  
+Fig. 4   Data from MER Spirit and MSL Curiosity for 
+CaO/SiO2 vs. FeO/SiO2 compared with regional GRS data. 
+Fig. 5   ChemCam data density map for CaO/SiO2 vs. 
+K2O/SiO2 (normalized to APXS, J. Bridges pers. comm.) com-
+pared with the GRS data for the region. The circle at high 
+K2O/SiO2 ratios reflects the feldspar-rich end of the basaltic 
+trend. Symbol legend in Fig. 3. 
+ 
+Comparisons between GRS data, Gale (Curios-
+ity) and Gusev (Spirit): CaO/SiO2 versus FeO/SiO2 
+data from the rovers is compared with the GRS data in 
+Fig. 4. In contrast to data from the rocks, the soils at the 
+two sites are relatively homogeneous. The Gale soil rep-
+resented by the Portage analysis is somewhat higher in 
+FeO/SiO2 and CaO/SiO2 (and chlorine) than the soil 
+analyses in the Columbia Hills [5]. Therefore, Gale soil 
+could reflect a contribution from nearby Medusa Fossae 
+deposits enriched in these elements. For the rocks, the 
+lithophile elements including Ca and Fe are more scat-
+tered, but CaO abundances are lower than the Elysium 
+and younger volcanics to the north, probably eliminat-
+ing any relationship with those areas. 
+The rocks analyzed by Curiosity show a huge range 
+in K2O/SiO2 (Fig. 5) that is not reflected in the regional 
+GRS data, suggesting a local phenomenon. For the data 
+from Curiosity, Fisk et al. [6] suggest that addition of a 
+K-Fe-Mg-rich secondary phase (possibly phyllosilicate) 
+is possible, and/or addition of separate K-rich and Fe-
+Mg-rich phases. Schmidt et al. [7] call upon mantle met-
+asomatism and different amounts of partial melting to 
+generate these differences. 
+Volatile elements: The regional water equivalent H 
+content of the areas shown in Fig. 1 from the GRS ex-
+periment ranges from ~ 3 to 7 wt%. The water content 
+of materials at Gale ranges from 2 wt% to 9 wt% from 
+MSL ChemCam, SAM and Chemin analyses on Curi-
+osity [8], and is mostly part of the amorphous compo-
+nent of the soils and rocks. At Gusev, SO3 and Cl in the 
+soils comprise ~ 8 wt% of the total [3], and water in the 
+Columbia Hills ranged up to 17 wt % [3, 9], consistent 
+with a high local GRS water signature, especially for the 
+area of the Medusa Fossae area near Gusev. The lack of 
+enrichment of the highly fluid mobile element lithium 
+determined by ChemCam [5] in most samples from 
+Gale argues against a hydrothermal component, but 
+does not rule out a volcanic aerosol component of the 
+soil. However, the detection of enriched manganese 
+vein deposits and other diagenetic features in Gale [10], 
+and enriched silicon deposits at Home Plate in Gusev 
+[11] indicate that transport of fluid mobile elements by 
+aqueous or hydrothermal processes is common on Mars. 
+Conclusions: The geochemical data from the GRS 
+experiment on Mars Odyssey provides a regional con-
+text for the geochemical data from the Curiosity rover 
+in Gale crater and the data from Spirit in Gusev. These 
+comparisons are providing new insights into the diver-
+sity of petrologic and aqueous processes on Mars. The 
+diversity of compositions at the landing sites may reflect 
+the different regional compositions seen in the GRS 
+data. Acknowledgements: Funding for ChemCam Co-investi-
+gator Newsom provided by NASA/JPL.  
+References: [1] Gasnault O. et al. (2007) Icarus 207, 226. 
+[2] Newsom H. (2007) J. Geophys. Res. 112. [3] Clark B. 
+(2005) EPSL 240, 73. [4] Boynton, W. V., et al. (2007) J. Ge-
+ophys. Res., 112, E12S99, [5] Boynton, W. V., et al. (2008) 
+Chapt. 5, in Bell J. ed. The Martian Surface. [6] Fisk M. et al., 
+(2015) this meeting. [7] Schmidt M. et al., (2015) this meeting 
+[8] Leshin, L.A. (2013) Science, 341 (6153):1238937. [9] 
+Ming, D. et al., (2008) in Bell ed. [10] Lanza, N.L. et al. (2014) 
+Geophys. Res. Lett., 41 (16): 5755-5763. [11] Squyres, S. W., 
+et al. (2008) Science 320.5879: 1063-1067. 
+2284.pdf46th Lunar and Planetary Science Conference (2015)
