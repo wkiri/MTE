@@ -13,17 +13,19 @@ import tika
 from tika import parser
 
 # Local files
-textdir = '../text/lpsc15-pdfs'
+pdfdir  = '../text/lpsc15-pdfs'
+textdir = '../text/lpsc15-all'
 
-dirlist = [fn for fn in os.listdir(textdir) if
+dirlist = [fn for fn in os.listdir(pdfdir) if
            fn.endswith('.pdf')]
 
 print 'Extracting text, using Tika, from %d files in %s.' % \
-    (len(dirlist), textdir)
+    (len(dirlist), pdfdir)
+print '  Writing output text files to %s.' % textdir
 
 for fn in dirlist:
     print fn
-    parsed = parser.from_file(textdir + '/' + fn)
+    parsed = parser.from_file(pdfdir + '/' + fn)
 
     with open(textdir + '/' + fn[0:-4] + '.txt', 'w') as outf:
         # Remove non-ASCII characters
