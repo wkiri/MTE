@@ -14,4 +14,4 @@ cut -f6 -d',' ~/Research/IMBUE/data/chemcam/msl_ccam_obs.csv | grep -v
 Target | sort | uniq | wc -l
 
 Elements: 
-- elements.txt (upper and lower case for proper names + abbreviations)
+- elements.txt (upper case for proper names + abbreviations)
