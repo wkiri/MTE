@@ -12,3 +12,6 @@ http://pds-geosciences.wustl.edu/msl/msl-m-chemcam-libs-4_5-rdr-v1/mslccm_1xxx/d
 To generate this list:
 cut -f6 -d',' ~/Research/IMBUE/data/chemcam/msl_ccam_obs.csv | grep -v
 Target | sort | uniq | wc -l
+
+Elements: 
+- elements.txt (upper and lower case for proper names + abbreviations)
