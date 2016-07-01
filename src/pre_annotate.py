@@ -11,11 +11,11 @@ import string
 import re
 
 # Input files
-textdir = '../text/lpsc15-C'
+textdir = '../text/lpsc15-C-pre-annotate-sol1159'
 
 # Reference files
 elementfile = '../ref/elements.txt'
-chemcamfile = '../ref/chemcam-targets.txt'
+chemcamfile = '../ref/chemcam-targets-sol1159.txt'
 MERfile     = '../ref/MER-targets-pruned.txt'
 
 mypunc = string.punctuation
@@ -35,7 +35,7 @@ def pre_annotate(lines, items, name, outf, start_t):
     span_start = 0
     span_end = 0
 
-    # Iterate through words and look for a match in the elements list
+    # Iterate through words and look for a match in the item list
     for l in lines:
         # Specifying ' ' explicitly means that all single spaces
         # will cause a split.  This way we can update span_start
@@ -74,15 +74,16 @@ def pre_annotate(lines, items, name, outf, start_t):
 
 
 # Process lines from input file, annotate anything matching 'suffix'
+# that is at least min_len in length,
 # and write out the annotations to outf with type 'name'.
 # Number targets starting from start_t.
-def pre_annotate_suffix(lines, suffix, name, outf, start_t):
+def pre_annotate_suffix(lines, suffix, min_len, name, outf, start_t):
     # Initialize counters
     target_ind = start_t
     span_start = 0
     span_end = 0
 
-    # Iterate through words and look for a match in the elements list
+    # Iterate through words and look for a match 
     for l in lines:
         # Specifying ' ' explicitly means that all single spaces
         # will cause a split.  This way we can update span_start
@@ -93,7 +94,7 @@ def pre_annotate_suffix(lines, suffix, name, outf, start_t):
             w_strip = w.strip()
             # Remove any punctuation, except '_', '+', and '-' (ions)
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
-            if w_strip.endswith(suffix):
+            if w_strip.endswith(suffix) and len(w_strip) >= min_len:
                 # This handles leading and trailing punctuation,
                 # but not cases where there is internal punctuation
                 try:
@@ -134,7 +135,7 @@ with open(elementfile, 'r') as inf:
     lines = inf.readlines()
     elements = [l.strip() for l in lines]
     # Add lower-case versions of long element names
-    elements += [e.lower() for e in elements if len(e) > 2]
+    elements += [e.lower() for e in elements if len(e) > 3]
     
 # Read in the Chemcam targets file
 with open(chemcamfile, 'r') as inf:
@@ -184,7 +185,7 @@ for fn in dirlist:
         start_t = pre_annotate(lines, elements,        'Element', outf, start_t)
         start_t = pre_annotate(lines, chemcam_targets, 'Target',  outf, start_t)
 #        start_t = pre_annotate(lines, mer_targets,     'Target',  outf, start_t)
-        start_t = pre_annotate_suffix(lines, 'ite', 'Mineral', outf, start_t)
+        start_t = pre_annotate_suffix(lines, 'ite', 6, 'Mineral', outf, start_t)
 
 
     
