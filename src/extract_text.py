@@ -13,8 +13,10 @@ import tika
 from tika import parser
 
 # Local files
-pdfdir  = '../text/lpsc15-pdfs'
-textdir = '../text/lpsc15-all'
+#pdfdir  = '../text/lpsc15-pdfs'
+#textdir = '../text/lpsc15-all'
+pdfdir  = '../text/lpsc16-pdfs'
+textdir = '../text/lpsc16-all'
 
 dirlist = [fn for fn in os.listdir(pdfdir) if
            fn.endswith('.pdf')]
@@ -26,6 +28,10 @@ print '  Writing output text files to %s.' % textdir
 for fn in dirlist:
     print fn
     parsed = parser.from_file(pdfdir + '/' + fn)
+
+    if parsed['content'] == None:
+        print 'Tika found no content in %s.' % fn
+        continue
 
     with open(textdir + '/' + fn[0:-4] + '.txt', 'w') as outf:
         # Remove non-ASCII characters
