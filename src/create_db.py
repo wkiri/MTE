@@ -49,7 +49,8 @@ try:
         print "Creating the components table from scratch."
         create_table_cmd  = "CREATE TABLE components ("
         create_table_cmd += " component_id         varchar(100) PRIMARY KEY,"
-        create_table_cmd += " component_name       varchar(80)"  
+        create_table_cmd += " component_name       varchar(80),"  
+        create_table_cmd += " component_label      varchar(80)"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -60,9 +61,10 @@ try:
     if not table_exists:
         print "Creating the contains table from scratch."
         create_table_cmd  = "CREATE TABLE contains ("
+        create_table_cmd += " event_id          varchar(100) PRIMARY KEY,"
+        create_table_cmd += " doc_id            varchar(100),"  
         create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
         create_table_cmd += " component_id      varchar(100) REFERENCES components,"
-        create_table_cmd += " doc_id            varchar(100),"  
         create_table_cmd += " magnitude         varchar(10),"  
         create_table_cmd += " confidence        varchar(10),"  
         create_table_cmd += " annotator         varchar(100)"  

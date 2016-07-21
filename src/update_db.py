@@ -20,7 +20,9 @@ except ImportError, e:
     sys.exit()
 
 # Local files
-textdir = '../text/lpsc15-A'
+#textdir = '../text/lpsc15-A'
+textdir = '../text/lpsc15-C-raymond-sol1159'
+source  = 'lpsc15'
 
 dirlist = [fn for fn in os.listdir(textdir) if
            fn.endswith('.ann')]
@@ -39,7 +41,7 @@ for fn in dirlist:
     if os.stat(fullname).st_size == 0:
         continue
 
-    doc_id = fn[:-4]
+    doc_id = source + '-' + fn[:-4]
 
     # Skip this document if already processed
     cursor.execute("SELECT EXISTS(SELECT * FROM contains WHERE doc_id = '%s')" % doc_id)
@@ -48,9 +50,24 @@ for fn in dirlist:
         continue
 
     print fn
-    
+
+    # Two passes because 'contains' refers to targets and components that need to
+    # already have been stored.
+
+    # Pass 1: add all targets and components
     with open(fullname, 'r') as f:
         for line in f.readlines():
+            # Skip events and relations
+            if (line[0] == 'E' or line[0] == 'R'):
+                continue
+            b = BratAnnotation(line, doc_id, 'wkiri')
+            b.insert(cursor)
+
+    with open(fullname, 'r') as f:
+        for line in f.readlines():
+            # Keep events and relations
+            if (line[0] != 'E' and line[0] != 'R'):
+                continue
             b = BratAnnotation(line, doc_id, 'wkiri')
             b.insert(cursor)
             
