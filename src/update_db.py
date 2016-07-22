@@ -60,15 +60,17 @@ for fn in dirlist:
             # Skip events and relations
             if (line[0] == 'E' or line[0] == 'R'):
                 continue
-            b = BratAnnotation(line, doc_id, 'wkiri')
+            b = BratAnnotation(line, doc_id, 'raymond')
             b.insert(cursor)
+
+    connection.commit()
 
     with open(fullname, 'r') as f:
         for line in f.readlines():
             # Keep events and relations
             if (line[0] != 'E' and line[0] != 'R'):
                 continue
-            b = BratAnnotation(line, doc_id, 'wkiri')
+            b = BratAnnotation(line, doc_id, 'raymond')
             b.insert(cursor)
             
     connection.commit()
