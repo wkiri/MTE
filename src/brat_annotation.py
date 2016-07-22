@@ -29,8 +29,8 @@ class BratAnnotation:
             args = splitline[1].split() 
             self.label   = args[0].split(':')[0]
             args         = [a.split(':') for a in args[1:]]
-            self.targets = [v for (t,v) in args if t == 'Targ']
-            self.cont    = [v for (t,v) in args if t == 'Cont']
+            self.targets = [v for (t,v) in args if t.startswith('Targ')]
+            self.cont    = [v for (t,v) in args if t.startswith('Cont')]
         elif splitline[0][0] == 'R': # relation
             label, arg1, arg2 = splitline[1].split() # assumes 2 args
             self.label   = label
@@ -56,6 +56,7 @@ class BratAnnotation:
                 values=[self.doc_id+'_'+self.annotation_id, self.name])
         elif (self.label == 'Element' or 
               self.label == 'Mineral' or 
+              self.label == 'Material' or 
               self.label == 'Feature'):
             dbutils.insert_into_table(
                 cursor=cursor,

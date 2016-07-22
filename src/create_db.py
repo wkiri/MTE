@@ -61,7 +61,7 @@ try:
     if not table_exists:
         print "Creating the contains table from scratch."
         create_table_cmd  = "CREATE TABLE contains ("
-        create_table_cmd += " event_id          varchar(100) PRIMARY KEY,"
+        create_table_cmd += " event_id          varchar(100),"
         create_table_cmd += " doc_id            varchar(100),"  
         create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
         create_table_cmd += " component_id      varchar(100) REFERENCES components,"
