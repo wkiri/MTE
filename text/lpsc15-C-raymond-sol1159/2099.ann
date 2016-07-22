@@ -1,0 +1,191 @@
+T6	Element 1026 1028	Li
+T7	Element 1030 1032	Sr
+T8	Element 1034 1036	Ba
+T9	Element 1042 1044	Rb
+T10	Element 1522 1524	Mt
+T11	Element 2713 2715	Mg
+T12	Element 2787 2789	Mg
+T13	Element 2989 2991	In
+T14	Element 3143 3151	aluminum
+T15	Element 3156 3164	titanium
+T16	Element 3307 3309	Al
+T17	Element 3444 3446	Al
+T18	Element 3646 3648	Al
+T19	Element 3663 3665	Ti
+T20	Element 3801 3808	lithium
+T21	Element 3877 3879	Li
+T22	Element 3916 3918	Li
+T23	Element 3959 3961	Al
+T24	Element 4050 4052	Li
+T25	Element 4507 4509	Al
+T26	Element 4511 4513	Mg
+T27	Element 4518 4519	H
+T28	Element 4536 4538	Fe
+T29	Element 4640 4642	Li
+T30	Element 4647 4649	Cr
+T31	Element 4689 4691	Fe
+T32	Element 4794 4796	Mg
+T33	Element 4801 4803	Al
+T34	Element 4836 4837	H
+T35	Element 4883 4885	Li
+T36	Element 4995 4997	Li
+T37	Element 5131 5133	Ca
+T38	Element 5301 5303	Ti
+T39	Element 5498 5505	calcium
+T40	Element 5563 5565	Mg
+T41	Element 5567 5569	Ni
+T42	Element 5575 5576	S
+T44	Element 6244 6246	Mg
+T45	Element 6248 6250	Ti
+T46	Element 6252 6254	Al
+T47	Element 6304 6306	Fe
+T48	Element 6391 6393	Ca
+T49	Element 6911 6913	Li
+T50	Element 6980 6982	Al
+T51	Element 6984 6986	Mg
+T52	Element 6988 6989	H
+T53	Element 6991 6993	Cr
+T54	Element 6998 7000	Li
+T55	Element 7017 7019	Fe
+T56	Element 7467 7469	Mg
+T57	Element 7573 7574	S
+T58	Element 7659 7660	O
+T59	Element 7743 7744	K
+T60	Element 7781 7782	N
+T61	Element 7898 7899	C
+T62	Target 2616 2622	Darwin
+T63	Mineral 5336 5344	ilmenite
+T1	Target 1931 1947	Confidence Hills
+T2	Locality 1636 1643	Pahrump
+R1	IsSituatedIn Arg1:T1 Arg2:T2	
+T3	Feature 1977 1999	platy fractured layers
+R2	Shows Arg1:T1 Arg2:T3	
+T4	Target 2001 2006;2007 2013	Pink  Cliffs
+T5	Target 2020 2031	Book Cliffs
+T64	Feature 2046 2056;2057 2108;2109 2115	resistant  layers of various thickness separated by recessive  layers
+R3	Shows Arg1:T5 Arg2:T64	
+R4	Shows Arg1:T4 Arg2:T64	
+T65	Target 2117 2128	San Gabriel
+T66	Feature 2148 2171	finely laminated layers
+R5	Shows Arg1:T65 Arg2:T66	
+T67	Target 2173 2189	Carnivore Canyon
+T68	Target 2194 2204;2205 2209	Alexander  Hill
+T69	Feature 2232 2257;2258 2288	massive resistant layers  with poorly visible lamination
+R6	Shows Arg1:T67 Arg2:T69	
+R7	Shows Arg1:T68 Arg2:T69	
+T70	Target 2316 2322	Chinle
+T71	Target 2331 2341	Whale Rock
+R8	IsSituatedIn Arg1:T1 Arg2:T2	
+R9	IsSituatedIn Arg1:T4 Arg2:T2	
+R10	IsSituatedIn Arg1:T5 Arg2:T2	
+R11	IsSituatedIn Arg1:T65 Arg2:T2	
+R12	IsSituatedIn Arg1:T67 Arg2:T2	
+R13	IsSituatedIn Arg1:T68 Arg2:T2	
+R14	IsSituatedIn Arg1:T70 Arg2:T2	
+R15	IsSituatedIn Arg1:T71 Arg2:T2	
+T72	Material 2583 2595	conglomerate
+T73	Contains 2609 2611	at
+E1	Contains:T73 Targ:T62 Cont:T72
+T74	Target 3186 3197	San Gabriel
+T75	Target 3200 3216	Carnivore Canyon
+T76	Target 3217 3227;3228 3232	Alexander  Hill
+T77	Target 3237 3243	Chinle
+T78	Contains 3124 3139	common increase
+E2	Contains:T78 Cont:T14 Cont2:T15 Targ:T74 Targ2:T75 Targ3:T76 Targ4:T77 Targ5:T76 Targ6:T77
+A1	Amount E2 Contains_High
+T79	Target 3261 3276	Confidence Hill
+T80	Contains 3283 3306	is characterized by low
+E3	Contains:T80 Targ:T79 Cont:T16
+A2	Amount E3 Contains_Low
+T81	Target 3320 3331	Pink Cliffs
+T82	Target 3337 3348	Book Cliffs
+T83	Contains 3349 3365	are intermediate
+E4	Contains:T83 Cont:T16 Targ:T82 Targ2:T81
+A3	Amount E4 Contains
+T84	Target 3370 3380	Whale Rock
+T85	Contains 3422 3439;3440 3443	having generally  low
+E5	Contains:T85 Targ:T84 Cont:T17
+A4	Amount E5 Contains_Low
+T86	Material 3538 3545	alkalis
+T87	Contains 3619 3633	being very low
+E6	Contains:T87 Cont:T86 Targ:T88
+A5	Confidence E6 High
+A6	Amount E6 Contains_Low
+T88	Target 3608 3618	Whale Rock
+T89	Target 3969 3980	Book Cliffs
+T90	Target 3985 4001	Carnivore Canyon
+T91	Target 4002 4012;4013 4018	Alexander  Hills
+T92	Contains 4025 4049	are the most enriched in
+E7	Contains:T92 Targ:T89 Targ2:T90 Targ3:T91 Cont:T24
+A7	Confidence E7 High
+A8	Amount E7 Contains_High
+T93	Target 5100 5108	Vaqueros
+T94	Contains 5109 5125;5126 5130	is dominated by  high
+E8	Contains:T94 Targ:T93 Cont:T37
+A9	Confidence E8 High
+A10	Amount E8 Contains_High
+T95	Contains 5240 5250	is unclear
+E9	Contains:T95 Targ:T93 Cont:T96
+A11	Confidence E9 Low
+T96	Element 5225 5232	sulphur
+T97	Material 5183 5192	sulphates
+T98	Contains 5172 5182	suggesting
+E10	Contains:T98 Cont:T97 Targ:T93
+A12	Confidence E10 Low
+T99	Target 5270 5279	Orrocopia
+T100	Contains 5281 5290;5291 5300	contains  very high
+E11	Contains:T100 Targ:T99 Cont:T38
+A13	Confidence E11 High
+A14	Amount E11 Contains_High
+T101	Contains 5316 5335	suggesting enhanced
+E12	Contains:T101 Targ:T99 Cont:T63
+A15	Confidence E12 Low
+A16	Amount E12 Contains_High
+T43	Target 6112 6128	Confidence Hills
+T102	Locality 6178 6185	Pahrump
+R16	IsSituatedIn Arg1:T43 Arg2:T102	
+T103	Contains 6222 6225;6226 6243	it  looks depleted in
+E13	Contains:T103 Targ:T43 Cont:T44 Cont2:T45 Cont3:T46 Cont4:T104
+A17	Confidence E13 Neutral
+A18	Amount E13 Contains_Low
+T104	Material 6259 6266	alkalis
+T105	Contains 6271 6282;6283 6300	exhibits a  large variability
+E14	Contains:T105 Targ:T43 Cont:T47
+A19	Confidence E14 Neutral
+A20	Amount E14 Contains
+T106	Target 6330 6336;6337 6341	Whale  Rock
+R17	IsSituatedIn Arg1:T106 Arg2:T102	
+T107	Contains 6380 6385;6386 6390	with  high
+E15	Contains:T107 Targ:T106 Cont:T48 Cont2:T108 Cont3:T109
+A21	Confidence E15 High
+A22	Amount E15 Contains_High
+T108	Material 6398 6405	sulfate
+T109	Material 6453 6473	titano-ferros oxides
+T110	Target 6883 6888;6889 6895	Pink  Cliffs
+T111	Contains 6896 6910	is enriched in
+E16	Contains:T111 Targ:T110 Cont:T49
+A23	Confidence E16 High
+A24	Amount E16 Contains_High
+T112	Target 6917 6932	Alexander Hills
+T113	Feature 6937 6959	very faint laminations
+R18	Shows Arg1:T112 Arg2:T113	
+T114	Contains 6964 6967;6968 6979	is  enriched in
+E17	Contains:T114 Targ:T112 Cont:T50 Cont2:T51 Cont3:T52 Cont4:T53 Cont5:T54
+A25	Confidence E17 Neutral
+A26	Amount E17 Contains_High
+T115	Contains 7005 7016	depleted in
+E18	Contains:T115 Targ:T112 Cont:T55
+A27	Confidence E18 Neutral
+A28	Amount E18 Contains_Low
+T116	Target 7079 7090	Pink Cliffs
+T117	Target 7103 7119	Confidence Hills
+T118	Feature 7217 7222	veins
+R19	Shows Arg1:T116 Arg2:T118	
+R20	Shows Arg1:T117 Arg2:T118	
+T119	Material 7205 7216	Ca-sulphate
+T120	Contains 7163 7171	presence
+E19	Contains:T120 Targ:T116 Targ2:T117 Cont:T119 Cont2:T121
+T121	Element 7231 7233	Mg
+T122	Feature 7240 7261	dendritic concretions
+R21	Shows Arg1:T117 Arg2:T122	
+R22	Shows Arg1:T116 Arg2:T122	

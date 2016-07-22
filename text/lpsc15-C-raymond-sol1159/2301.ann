@@ -1,0 +1,92 @@
+T7	Element 2768 2770	Si
+T8	Element 2772 2774	Ti
+T9	Element 2776 2778	Al
+T10	Element 2780 2782	Fe
+T11	Element 2784 2786	Mg
+T12	Element 2788 2790	Ca
+T13	Element 2792 2794	Na
+T14	Element 2800 2801	K
+T16	Element 3246 3247	S
+T17	Element 3462 3463	S
+T18	Element 3593 3595	Cl
+T20	Element 4096 4098	Ca
+T21	Element 4148 4150	Ca
+T22	Element 4385 4387	Ca
+T23	Element 4960 4962	Ca
+T24	Element 4977 4979	Ca
+T26	Element 6075 6079	iron
+T28	Element 6590 6594	iron
+T30	Element 6729 6733	iron
+T31	Element 6847 6849	Ca
+T33	Element 7151 7153	Ca
+T34	Element 7288 7290	Ca
+T35	Element 7349 7351	Ca
+T36	Element 7513 7517	iron
+T38	Element 8022 8024	Ca
+T39	Element 8095 8097	Ca
+T41	Element 8214 8216	Ca
+T45	Element 8743 8747	iron
+T46	Target 1103 1113	Cumberland
+T47	Target 1885 1895	Cumberland
+T48	Target 2031 2039	Sheepbed
+T49	Target 2085 2093	Sheepbed
+T50	Target 3853 3863	Cumberland
+T51	Target 4226 4236	Cumberland
+T52	Target 4606 4616	Cumberland
+T53	Target 5743 5753	Cumberland
+T54	Target 6692 6702	Cumberland
+T55	Target 7303 7313	Cumberland
+T56	Target 8068 8078	Cumberland
+T57	Target 8258 8268	Cumberland
+T59	Target 8847 8857	Cumberland
+T60	Target 9039 9049	Cumberland
+T61	Mineral 2476 2489	Fe-forsterite
+T62	Mineral 2491 2497	augite
+T63	Mineral 2500 2509	pigeonite
+T64	Mineral 2526 2535	magnetite
+T65	Mineral 2537 2547	pyrrhotite
+T66	Mineral 2549 2559	akaganeite
+T67	Mineral 2578 2587	anhydrite
+T68	Mineral 2590 2599	bassanite
+T69	Mineral 2668 2676	smectite
+T1	Target 909 919	John Klein
+T2	Target 1564 1574	John Klein
+T3	Formation 2054 2079	Yellowknife Bay Formation
+T4	Mineral 2441 2452	plagioclase
+T5	Mineral 2465 2473	sanidine
+T70	Mineral 2511 2524	orthopyroxene
+T71	Mineral 2568 2576	sulfates
+T6	Target 3654 3664	John Klein
+T15	Target 4193 4203	John Klein
+T19	Contains 4388 4399	percentages
+E1	Contains:T19 Cont:T22 Targ:T51 Targ2:T15
+T72	Feature 4433 4438	veins
+R1	Shows Arg1:T51 Arg2:T72	
+R2	Shows Arg1:T15 Arg2:T72	
+T73	Target 4535 4545	John Klein
+T25	Target 5671 5681	John Klein
+T74	Target 5715 5725	John Klein
+T27	Target 6429 6434;6435 6440	John  Klein
+T75	Material 6579 6585	silica
+T76	Contains 6562 6572	indicating
+E2	Contains:T76 Targ:T27 Cont:T75 Cont2:T28
+T29	Contains 6712 6722	distinctly
+E3	Contains:T29 Targ:T54 Cont:T30
+T32	Target 7121 7131	John Klein
+T77	Contains 7132 7138;7139 7143	would  have
+E4	Contains:T77 Targ:T32 Cont:T33
+T78	Material 7404 7411	sulfate
+T79	Contains 7412 7420	features
+E5	Contains:T79 Cont:T78 Targ:T55
+T80	Contains 7324 7330	values
+E6	Contains:T80 Cont:T35 Targ:T55
+T37	Contains 8026 8037	composition
+E7	Contains:T37 Cont:T38 Targ:T81
+T81	Target 7980 7990	John Klein
+T82	Contains 8098 8109	composition
+E8	Contains:T82 Cont:T39 Targ:T56
+T40	Target 8230 8235;8236 8241	John  Klein
+T83	Feature 8167 8172	veins
+R3	Shows Arg1:T40 Arg2:T83	
+R4	Shows Arg1:T57 Arg2:T83	
+T42	Target 8796 8806	John Klein

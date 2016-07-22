@@ -1,0 +1,10 @@
+T12	Element 2702 2706	iron
+T21	Target 5606 5614	Harrison
+T1	Element 5735 5737	Si
+T2	Contains 5730 5734	high
+E1	Contains:T2 Cont:T1 Targ:T21
+A1	Amount E1 Contains_High
+T3	Feature 5738 5745	crystal
+R1	Shows Arg1:T21 Arg2:T3	
+T4	Feature 5799 5810	dark cement
+R2	Shows Arg1:T21 Arg2:T4	

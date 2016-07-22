@@ -1,0 +1,110 @@
+T7	Element 4597 4599	Si
+T8	Element 4601 4603	Al
+T9	Element 4605 4607	Fe
+T10	Element 4609 4611	Mg
+T11	Element 4613 4615	Ca
+T12	Element 4617 4619	Na
+T13	Element 4621 4622	K
+T14	Element 4627 4629	Ti
+T15	Element 4992 4994	Si
+T17	Element 5640 5641	S
+T18	Element 5643 5645	Cl
+T19	Element 5651 5653	Br
+T20	Element 5762 5764	Si
+T21	Element 5766 5768	Mg
+T22	Element 5770 5772	Fe
+T23	Element 5774 5776	Ca
+T24	Element 5778 5780	Na
+T25	Element 5782 5783	K
+T26	Element 5941 5943	Al
+T27	Element 5957 5959	Si
+T28	Element 5977 5979	Fe
+T29	Element 6151 6153	Ca
+T30	Element 6155 6157	Na
+T31	Element 6159 6161	Mg
+T32	Element 6163 6165	Fe
+T33	Element 6180 6182	Si
+T34	Element 6184 6186	Al
+T35	Element 6192 6193	K
+T37	Element 6490 6492	Fe
+T38	Element 6509 6511	Si
+T39	Element 6731 6733	Mg
+T40	Element 6735 6737	Ca
+T41	Element 6739 6740	S
+T42	Element 6746 6748	Cl
+T43	Element 6952 6954	Cl
+T44	Element 6959 6961	Br
+T45	Element 7040 7041	S
+T46	Element 7101 7103	Mg
+T47	Element 7107 7109	Ca
+T48	Element 7114 7115	S
+T49	Element 7125 7127	Mg
+T50	Element 7132 7134	Cl
+T52	Element 7220 7222	Fe
+T53	Element 7227 7229	Mn
+T54	Element 7794 7796	Cl
+T55	Element 7798 7800	Br
+T56	Element 7806 7807	S
+T57	Element 8281 8283	Br
+T58	Element 8288 8290	Cl
+T59	Element 8327 8329	Fe
+T60	Element 8513 8515	Fe
+T66	Element 9369 9371	Br
+T67	Element 9376 9378	Cl
+T69	Element 9788 9790	Br
+T70	Element 9816 9818	Ca
+T71	Mineral 1107 1115	hematite
+T72	Mineral 2037 2045	hematite
+T73	Mineral 2348 2356	jarosite
+T74	Mineral 8380 8388	hematite
+T1	Locality 1998 2011	Pahrump Hills
+T2	Mineral 2358 2364	gypsum
+T3	Locality 2549 2562	Pahrump Hills
+T4	Target 3614 3623	Shoemaker
+T5	Target 3625 3641	Confidence Hills
+T6	Target 3643 3654	Pink Cliffs
+T75	Target 3656 3667	Book Cliffs
+T76	Target 3669 3684	Alexander Hills
+T77	Target 3686 3692	Chinle
+T78	Target 3698 3708	Whale Rock
+T79	Locality 5096 5109	Pahrump Hills
+T16	Target 5998 6014	Confidence Hills
+T80	Target 6019 6029	Whale Rock
+T81	Target 6120 6130	Whale Rock
+T82	Contains 6132 6150	exhibits increased
+E1	Contains:T82 Targ:T81 Cont:T29 Cont2:T30 Cont3:T31 Cont4:T32
+A1	Amount E1 Contains_High
+T83	Contains 6170 6179	decreased
+E2	Contains:T83 Targ:T81 Cont:T33 Cont2:T34 Cont3:T35
+A2	Amount E2 Contains_Low
+T84	Material 6256 6260	salt
+T85	Contains 6246 6255	increased
+E3	Contains:T85 Targ:T81 Cont:T84
+A3	Confidence E3 Neutral
+A4	Amount E3 Contains_High
+T86	Feature 6319 6336	light-toned veins
+R1	Shows Arg1:T81 Arg2:T86	
+T36	Target 6445 6461	Confidence Hills
+T87	Contains 6475 6489	is enriched in
+E4	Contains:T87 Targ:T36 Cont:T37
+A5	Confidence E4 High
+A6	Amount E4 Contains_High
+T88	Contains 6497 6508	depleted in
+E5	Contains:T88 Cont:T38 Targ:T36
+A7	Confidence E5 High
+A8	Amount E5 Contains_Low
+T89	Target 6891 6902	Book Cliffs
+T90	Contains 6919 6951	exhibit a pronounced increase in
+E6	Contains:T90 Targ:T89 Cont:T43 Cont2:T44
+A9	Confidence E6 High
+A10	Amount E6 Contains_High
+T91	Feature 6981 6996	high CIA values
+R2	Shows Arg1:T89 Arg2:T91	
+T51	Locality 3592 3605	Pahrump Hills
+R3	IsSituatedIn Arg1:T4 Arg2:T51	
+R4	IsSituatedIn Arg1:T5 Arg2:T51	
+R5	IsSituatedIn Arg1:T6 Arg2:T51	
+R6	IsSituatedIn Arg1:T75 Arg2:T51	
+R7	IsSituatedIn Arg1:T76 Arg2:T51	
+R8	IsSituatedIn Arg1:T77 Arg2:T51	
+R9	IsSituatedIn Arg1:T78 Arg2:T51	

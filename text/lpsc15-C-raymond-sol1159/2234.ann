@@ -1,0 +1,14 @@
+T10	Element 7888 7892	iron
+T11	Element 7897 7906	magnesium
+T17	Target 1524 1532	Sheepbed
+T18	Target 8195 8201	Darwin
+T19	Mineral 2523 2532	magnetite
+T20	Mineral 8736 8745	magnetite
+T21	Mineral 8747 8755	hematite
+T22	Mineral 8757 8767	akaganeite
+T23	Mineral 8770 8778	smectite
+T1	Target 4492 4506	Gillespie Lake
+T2	Feature 4564 4569	voids
+R1	Shows Arg1:T1 Arg2:T2	
+T3	Feature 4646 4664	secondary porosity
+R2	Shows Arg1:T1 Arg2:T3	

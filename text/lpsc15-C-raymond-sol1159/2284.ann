@@ -1,0 +1,39 @@
+T17	Element 1789 1791	Cl
+T18	Element 2341 2343	Al
+T19	Element 2345 2347	Si
+T20	Element 2349 2351	Fe
+T21	Element 2353 2355	Mn
+T22	Element 2357 2359	Ca
+T23	Element 2361 2363	Na
+T24	Element 2365 2367	Mg
+T25	Element 2446 2447	H
+T26	Element 2449 2450	C
+T27	Element 2452 2454	Cl
+T28	Element 2456 2457	S
+T29	Element 2653 2659	sulfur
+T30	Element 2661 2669	chlorine
+T32	Element 4785 4793	chlorine
+T33	Element 5008 5010	Ca
+T34	Element 5015 5017	Fe
+T35	Element 5695 5696	H
+T36	Element 5980 5982	At
+T37	Element 5998 6000	Cl
+T38	Element 6280 6287	lithium
+T39	Element 6480 6489	manganese
+T40	Element 6561 6568	silicon
+T50	Target 4719 4726	Portage
+T1	Material 1784 1787	SO3
+T2	Material 1797 1802	water
+T3	Material 2536 2540	SiO2
+T4	Material 2674 2679	water
+T5	Material 4758 4761	FeO
+T6	Material 4762 4766	SiO2
+T7	Material 4771 4774	CaO
+T8	Material 4775 4779	SiO2
+T9	Contains 4736 4757	is somewhat higher in
+E1	Contains:T9 Targ:T50 Cont:T5 Cont2:T6 Cont3:T7 Cont4:T8 Cont5:T32
+A1	Amount E1 Contains_High
+T10	Region 4825 4839	Columbia Hills
+T11	Region 4907 4920	Medusa Fossae
+T12	Material 5042 5045	CaO
+T13	Site 6581 6591	Home Plate

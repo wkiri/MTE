@@ -1,0 +1,82 @@
+T10	Element 1999 2001	Si
+T11	Element 2003 2005	Ti
+T12	Element 2007 2009	Al
+T13	Element 2011 2013	Fe
+T14	Element 2015 2017	Mg
+T15	Element 2019 2021	Ca
+T16	Element 2023 2025	Na
+T17	Element 2027 2028	K
+T18	Element 2034 2035	H
+T19	Element 2341 2343	Mg
+T20	Element 2345 2347	Fe
+T21	Element 2349 2351	Ti
+T22	Element 2371 2373	Si
+T23	Element 2375 2377	Al
+T24	Element 2379 2381	Na
+T25	Element 2652 2653	H
+T26	Element 2951 2953	Fe
+T27	Element 2958 2960	Ti
+T28	Element 3133 3135	Fe
+T29	Element 3140 3142	Mg
+T30	Element 3161 3163	Fe
+T31	Element 3168 3169	H
+T32	Element 3277 3281	iron
+T33	Element 3694 3701	calcium
+T34	Element 4127 4129	Ca
+T35	Element 4207 4208	K
+T36	Element 4668 4677	Potassium
+T37	Element 4968 4969	K
+T38	Element 5198 5200	Si
+T39	Element 5218 5220	Al
+T40	Element 5239 5241	Na
+T41	Element 5264 5265	K
+T42	Element 5995 5997	Fe
+T43	Element 6002 6004	Ti
+T44	Element 6021 6022	K
+T45	Element 6027 6029	Na
+T48	Element 8550 8552	Si
+T49	Element 8557 8559	Ca
+T51	Target 2698 2707	Sandy_Dam
+T52	Target 2759 2767	Sheepbed
+T53	Target 2779 2795	CumberlandNew_RP
+T54	Target 3418 3426	Sheepbed
+T55	Target 3762 3769	Tukarak
+T56	Target 3876 3884	Sheepbed
+T57	Target 3976 3982	Darwin
+T58	Target 4464 4472	Harrison
+T59	Target 4477 4484	Sparkle
+T60	Target 4583 4589	Darwin
+T61	Target 4623 4630	Angmaat
+T62	Target 5082 5092	Chakonipau
+T63	Target 5802 5809	Kittery
+T64	Target 5811 5824	Quechee_Gorge
+T65	Target 5830 5844	Crystal_Spring
+T66	Mineral 3298 3307	magnetite
+T67	Mineral 3312 3320	hematite
+T1	Contains 2645 2651	higher
+E1	Contains:T1 Cont:T25 Targ:T51
+T2	Contains 3686 3693	highest
+E2	Contains:T2 Cont:T33 Targ:T55
+A1	Amount E2 Contains_High
+A2	Amount E1 Contains_High
+T3	Site 3937 3945	Bradbury
+T4	Site 4023 4032	Dingo Gap
+T5	Mineral 4142 4153	plagioclase
+T6	Mineral 4221 4232	K-feldspars
+T7	Element 4254 4256	Ca
+T8	Contains 4241 4253	intermediate
+E3	Contains:T8 Cont:T7 Targ:T58 Targ2:T59
+A3	Amount E3 Contains
+T9	Site 4572 4578	Shaler
+T50	Element 4501 4502	K
+T68	Contains 4503 4507	rich
+E4	Contains:T68 Cont:T50 Targ:T61
+A4	Amount E4 Contains_High
+T69	Feature 5096 5106	flat-lying
+R1	Shows Arg1:T62 Arg2:T69	
+T70	Feature 5108 5119	light-toned
+R2	Shows Arg1:T62 Arg2:T70	
+T71	Contains 5190 5197	rich in
+E5	Contains:T71 Targ:T62 Cont:T38 Cont2:T39 Cont3:T40 Cont4:T41
+A5	Amount E5 Contains_High
+T72	Locality 6295 6308	Pahrump Hills

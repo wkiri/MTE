@@ -1,0 +1,39 @@
+T4	Element 700 709	manganese
+T5	Element 829 831	Mn
+T6	Element 1057 1059	Mn
+T7	Element 1156 1158	Mn
+T8	Element 1389 1391	Mn
+T9	Element 1514 1516	Mn
+T11	Element 2824 2826	Mn
+T12	Element 2897 2899	Mn
+T13	Element 3107 3109	Fe
+T16	Element 5623 5625	Mn
+T18	Element 6547 6549	Mn
+T20	Element 7232 7234	Mn
+T22	Element 7876 7878	Mn
+T25	Target 7273 7281	Windjana
+T26	Target 7320 7327	Stephen
+T27	Target 7734 7737	Peg
+T28	Target 7739 7747	Redstone
+T29	Target 7749 7756	Caribou
+T30	Target 7761 7768	Stephen
+T31	Target 7806 7809	Peg
+T32	Target 7811 7819	Redstone
+T33	Target 7824 7831	Stephen
+T34	Target 8705 8713	Windjana
+T1	Element 950 959	manganese
+T2	Element 1435 1437	Mn
+T3	Element 1744 1746	Mn
+T10	Element 7310 7312	Mn
+T14	Contains 7305 7309	high
+E1	Contains:T14 Cont:T10 Targ:T26
+A1	Amount E1 Contains_High
+T15	Target 7616 7623	Caribou
+T17	Target 7629 7637	Redstone
+T19	Target 7644 7651	Stephen
+T21	Target 7657 7660	Peg
+T35	Target 7667 7675	Redstone
+T36	Target 7681 7688	Stephen
+T37	Contains 7833 7875	These targets were all found to be high in
+E2	Contains:T37 Cont:T22 Targ:T27 Targ2:T28 Targ3:T29 Targ4:T30
+A2	Amount E2 Contains_High
