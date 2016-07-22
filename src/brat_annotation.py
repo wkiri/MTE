@@ -19,32 +19,28 @@ class BratAnnotation:
         splitline = annotation_line.strip().split('\t')
         self.annotation_id = splitline[0]
 
-        print self.annotation_id
-
         if splitline[0][0] == 'T': # target
-            label, start, end = splitline[1].split()
-            self.label    = label
-            self.start    = int(start)
-            self.end      = int(end)
-            self.name     = splitline[2]
+            self.label   = splitline[1].split()[0]
+            args         = splitline[1].split()[1:]
+            self.start   = args[0]
+            self.end     = args[-1]
+            self.name    = splitline[2]
         elif splitline[0][0] == 'E': # event
             args = splitline[1].split() 
             self.label   = args[0].split(':')[0]
-            print self.label
             args         = [a.split(':') for a in args[1:]]
             self.targets = [v for (t,v) in args if t == 'Targ']
             self.cont    = [v for (t,v) in args if t == 'Cont']
-            print args
         elif splitline[0][0] == 'R': # relation
             label, arg1, arg2 = splitline[1].split() # assumes 2 args
-            self.label = label
-            self.arg1  = arg1.split(':')[1]
-            self.arg2  = arg2.split(':')[1]
+            self.label   = label
+            self.arg1    = arg1.split(':')[1]
+            self.arg2    = arg2.split(':')[1]
         elif splitline[0][0] == 'A': # attribute
             label, arg, value = splitline[1].split()
-            self.label = label
-            self.arg1  = arg
-            self.value = value
+            self.label   = label
+            self.arg1    = arg
+            self.value   = value
         else:
             print 'Unknown annotation type:', splitline[0]
 
@@ -145,7 +141,9 @@ class BratAnnotation:
               self.label == 'Confidence' or
               self.label == 'Site' or
               self.label == 'StratRel' or
-              self.label == 'Position'):
+              self.label == 'Position' or 
+              self.label == 'Amount' or
+              self.label == 'Region'):
             # Not yet handled
             pass
         else:
