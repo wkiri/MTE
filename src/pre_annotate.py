@@ -148,14 +148,12 @@ print 'Annotating elements in %d files from %s.' % \
 with open(elementfile, 'r') as inf:
     lines = inf.readlines()
     elements = [l.strip() for l in lines]
-    '''
     # Remove ones that are almost always FPs
     elements.remove('As')
     elements.remove('At')
     elements.remove('In')
     elements.remove('Mt')
     elements.remove('No')
-    '''
     # Add lower-case versions of long element names
     elements += [e.lower() for e in elements if len(e) > 3]
     
