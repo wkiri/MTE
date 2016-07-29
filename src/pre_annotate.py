@@ -43,6 +43,7 @@ def pre_annotate(lines, items, name, outf, start_t):
         # correctly even if there are multiple spaces present.
         words = l.split(' ')
         for w in words:
+            extra = 0 # Characters we stripped off but still need to count in spans
             end_of_sentence = False
             # Remove any trailing \n etc.
             w_strip = w.strip()
@@ -50,7 +51,11 @@ def pre_annotate(lines, items, name, outf, start_t):
             # to avoid spurious element abbreviation annotations
             if w_strip.endswith('.'):
                 end_of_sentence = True
-            # Remove any punctuation, except '_' and '+' (ions)
+            # If it ends with -, take it off
+            if w_strip.endswith('-'):
+                w_strip = w_strip[:-2]
+                extra   += 1
+            # Remove any punctuation, except '_' and '+' (ions) and '-'
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
             if w_strip in items:
                 # For elements, skip matches that end in a period
@@ -65,7 +70,7 @@ def pre_annotate(lines, items, name, outf, start_t):
                     # but not cases where there is internal punctuation
                     span_start_strip = span_start + w.index(w_strip)
                     #print str(w.index(w_strip))
-                    span_end    = span_start_strip + len(w_strip) 
+                    span_end    = span_start_strip + len(w_strip) + extra
                     # Format: Tx\tTarget <span_start> <span_end>\t<word>
                     outf.write('T' + str(target_ind) + '\t' +
                                name + ' ' + str(span_start_strip) + 
@@ -74,7 +79,7 @@ def pre_annotate(lines, items, name, outf, start_t):
                     # Set up for the next target
                     target_ind += 1
             else:
-                span_end    = span_start + len(w_strip) 
+                span_end    = span_start + len(w_strip) + extra
                     
             #print '<%s>, span %d to %d' % (w, span_start, span_end)
             # Either way, update span_start
@@ -106,7 +111,7 @@ def pre_annotate_suffix(lines, suffix, min_len, name, outf, start_t):
         for w in words:
             # Remove any trailing \n etc.
             w_strip = w.strip()
-            # Remove any punctuation, except '_', '+', and '-' (ions)
+            # Remove any punctuation, except '_', '+' (ions) and '-'
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
             if w_strip.endswith(suffix) and len(w_strip) >= min_len:
                 # This handles leading and trailing punctuation,
