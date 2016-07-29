@@ -11,7 +11,8 @@ import string
 import re
 
 # Input files
-textdir = '../text/lpsc15-C-pre-annotate-sol1159'
+#textdir = '../text/lpsc15-C-pre-annotate-sol1159'
+textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
 
 # Reference files
 elementfile = '../ref/elements.txt'
@@ -42,23 +43,36 @@ def pre_annotate(lines, items, name, outf, start_t):
         # correctly even if there are multiple spaces present.
         words = l.split(' ')
         for w in words:
+            end_of_sentence = False
             # Remove any trailing \n etc.
             w_strip = w.strip()
+            # Track whether this is a potential end of sentence
+            # to avoid spurious element abbreviation annotations
+            if w_strip.endswith('.'):
+                end_of_sentence = True
             # Remove any punctuation, except '_' and '+' (ions)
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
             if w_strip in items:
-                # This handles leading and trailing punctuation,
-                # but not cases where there is internal punctuation
-                span_start_strip = span_start + w.index(w_strip)
-                #print str(w.index(w_strip))
-                span_end    = span_start_strip + len(w_strip) 
-                # Format: Tx\tTarget <span_start> <span_end>\t<word>
-                outf.write('T' + str(target_ind) + '\t' +
-                           name + ' ' + str(span_start_strip) + 
-                           ' ' + str(span_end) + '\t' +
-                           w_strip + '\n')
-                # Set up for the next target
-                target_ind += 1
+                # For elements, skip matches that end in a period
+                # and are short (i.e., abbreviations) because these
+                # are more likely to be author initials.
+                if (name == 'Element' and 
+                    end_of_sentence and 
+                    len(w_strip) <= 3):
+                    span_end    = span_start + len(w_strip) 
+                else:
+                    # This handles leading and trailing punctuation,
+                    # but not cases where there is internal punctuation
+                    span_start_strip = span_start + w.index(w_strip)
+                    #print str(w.index(w_strip))
+                    span_end    = span_start_strip + len(w_strip) 
+                    # Format: Tx\tTarget <span_start> <span_end>\t<word>
+                    outf.write('T' + str(target_ind) + '\t' +
+                               name + ' ' + str(span_start_strip) + 
+                               ' ' + str(span_end) + '\t' +
+                               w_strip + '\n')
+                    # Set up for the next target
+                    target_ind += 1
             else:
                 span_end    = span_start + len(w_strip) 
                     
@@ -134,6 +148,14 @@ print 'Annotating elements in %d files from %s.' % \
 with open(elementfile, 'r') as inf:
     lines = inf.readlines()
     elements = [l.strip() for l in lines]
+    '''
+    # Remove ones that are almost always FPs
+    elements.remove('As')
+    elements.remove('At')
+    elements.remove('In')
+    elements.remove('Mt')
+    elements.remove('No')
+    '''
     # Add lower-case versions of long element names
     elements += [e.lower() for e in elements if len(e) > 3]
     
@@ -186,6 +208,7 @@ for fn in dirlist:
         start_t = pre_annotate(lines, chemcam_targets, 'Target',  outf, start_t)
 #        start_t = pre_annotate(lines, mer_targets,     'Target',  outf, start_t)
         start_t = pre_annotate_suffix(lines, 'ite', 6, 'Mineral', outf, start_t)
+#        sys.exit(0)
 
 
     
