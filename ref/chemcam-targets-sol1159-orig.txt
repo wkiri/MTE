@@ -42,7 +42,6 @@ Aztec_2
 Aztec_819
 Babrongan
 Badwater
-Bagnold_Dune
 Bagnold_Dune_4_southern_slipface
 Balboa (Dismal_Lakes)
 Balboa_2
@@ -115,7 +114,6 @@ Bluff
 Bluff_3
 BonanzaKing2_CCAM
 BonanzaKing3
-Bonanza_King
 Bonanza_King1
 Bonanza_King1_ccam
 Bonanza_King2
@@ -267,7 +265,6 @@ Cody
 Coldwater
 Comb_Ridge_ccam
 Cone_Hill
-Confidence_Hills
 Confidence_Hills_Dump_Pile
 Confidence_Hills_Full_Drill_Hole
 Connecting_Point
@@ -522,7 +519,6 @@ Hunter_Mountain
 Husky_Creek
 Huson
 Hyrum
-Ibex_Pass
 Ibex_Pass_785
 Idyllwild
 Ikpiarjuk
@@ -540,7 +536,6 @@ Jake
 Jake_1
 Jarrad
 Jefferson
-John_Klein
 John_Klein_CCAM_new
 John_Klein_RP2
 John_Klein_RP3
@@ -841,6 +836,15 @@ Quartet
 Quartet_new
 Quartz_Spring
 Quechee_Gorge
+RMI01
+RMI02
+RMI04
+RMI05
+RMI06
+RMI07
+RMI_1
+RMI_5x1_Dune_Mosaic_Z-Stack
+RMI_test_linearity
 Rackla
 Radcliff
 Radok
@@ -1054,7 +1058,6 @@ Una
 Union_Springs
 Upheaval_Dome
 Utopia
-Vaqueros
 Vaqueros_01
 Vaqueros_02
 Vaqueros_03
