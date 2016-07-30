@@ -17,6 +17,8 @@ textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
 # Reference files
 elementfile = '../ref/elements.txt'
 chemcamfile = '../ref/chemcam-targets-sol1159.txt'
+mineralfile = '../ref/minerals.txt'
+nonminfile  = '../ref/non-minerals.txt' # Things that end in -ite but aren't minerals
 MERfile     = '../ref/MER-targets-pruned.txt'
 
 mypunc = string.punctuation
@@ -42,7 +44,7 @@ def pre_annotate(lines, items, name, outf, start_t):
         # will cause a split.  This way we can update span_start
         # correctly even if there are multiple spaces present.
         words = l.split(' ')
-        for w in words:
+        for (i,w) in enumerate(words):
             extra = 0 # Characters we stripped off but still need to count in spans
             end_of_sentence = False
             # Remove any trailing \n etc.
@@ -57,29 +59,40 @@ def pre_annotate(lines, items, name, outf, start_t):
                 extra   += 1
             # Remove any punctuation, except '_' and '+' (ions) and '-'
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
-            if w_strip in items:
-                # For elements, skip matches that end in a period
-                # and are short (i.e., abbreviations) because these
-                # are more likely to be author initials.
-                if (name == 'Element' and 
-                    end_of_sentence and 
-                    len(w_strip) <= 3):
-                    span_end    = span_start + len(w_strip) 
-                else:
-                    # This handles leading and trailing punctuation,
-                    # but not cases where there is internal punctuation
-                    span_start_strip = span_start + w.index(w_strip)
-                    #print str(w.index(w_strip))
-                    span_end    = span_start_strip + len(w_strip) + extra
+            # Try the word and also the two-word and three-word phrases it's in
+            phrases = [(w, w_strip)]
+            if i < len(words)-1:
+                w_next_1 = re.sub('[%s]' % re.escape(mypunc), '', words[i+1])
+                phrases += [(' '.join([w, words[i+1]]), ' '.join([w_strip, w_next_1]))]
+            if i < len(words)-2:
+                w_next_2 = re.sub('[%s]' % re.escape(mypunc), '', words[i+2])
+                phrases += [(' '.join([w, words[i+1], words[i+2]]), 
+                             ' '.join([w_strip, w_next_1, w_next_2]))]
+
+            for (my_word, my_word_strip) in phrases:
+                if my_word_strip in items:
+                    # For elements, skip matches that end in a period
+                    # and are short (i.e., abbreviations) because these
+                    # are more likely to be author initials.
+                    if (name == 'Element' and 
+                        end_of_sentence and 
+                        len(my_word_strip) <= 3):
+                        span_end    = span_start + len(my_word_strip)
+                    else:
+                        # This handles leading and trailing punctuation,
+                        # but not cases where there is internal punctuation
+                        span_start_strip = span_start + my_word.index(my_word)
+                    #print str(w.index(my_word))
+                        span_end    = span_start_strip + len(my_word_strip) + extra
                     # Format: Tx\tTarget <span_start> <span_end>\t<word>
-                    outf.write('T' + str(target_ind) + '\t' +
-                               name + ' ' + str(span_start_strip) + 
-                               ' ' + str(span_end) + '\t' +
-                               w_strip + '\n')
+                        outf.write('T' + str(target_ind) + '\t' +
+                                   name + ' ' + str(span_start_strip) + 
+                                   ' ' + str(span_end) + '\t' +
+                                   my_word_strip + '\n')
                     # Set up for the next target
-                    target_ind += 1
-            else:
-                span_end    = span_start + len(w_strip) + extra
+                        target_ind += 1
+                else:
+                    span_end    = span_start + len(my_word_strip) + extra
                     
             #print '<%s>, span %d to %d' % (w, span_start, span_end)
             # Either way, update span_start
@@ -93,10 +106,11 @@ def pre_annotate(lines, items, name, outf, start_t):
 
 
 # Process lines from input file, annotate anything matching 'suffix'
-# that is at least min_len in length,
+# that is at least min_len in length 
+# and does not appear in nonmatches,
 # and write out the annotations to outf with type 'name'.
 # Number targets starting from start_t.
-def pre_annotate_suffix(lines, suffix, min_len, name, outf, start_t):
+def pre_annotate_suffix(lines, suffix, min_len, nonmatches, name, outf, start_t):
     # Initialize counters
     target_ind = start_t
     span_start = 0
@@ -113,7 +127,9 @@ def pre_annotate_suffix(lines, suffix, min_len, name, outf, start_t):
             w_strip = w.strip()
             # Remove any punctuation, except '_', '+' (ions) and '-'
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
-            if w_strip.endswith(suffix) and len(w_strip) >= min_len:
+            if (w_strip.endswith(suffix) and 
+                len(w_strip) >= min_len and
+                w_strip not in nonmatches):
                 # This handles leading and trailing punctuation,
                 # but not cases where there is internal punctuation
                 try:
@@ -161,20 +177,41 @@ with open(elementfile, 'r') as inf:
     elements.remove('No')
     # Add lower-case versions of long element names
     elements += [e.lower() for e in elements if len(e) > 3]
+
+# Read in the minerals file
+with open(mineralfile, 'r') as inf:
+    lines = inf.readlines()
+    minerals = [l.strip() for l in lines]
+    # Add lower-case versions
+    minerals += [m.lower() for m in minerals]
+
+# Read in the non-minerals file
+with open(nonminfile, 'r') as inf:
+    lines = inf.readlines()
+    nonminerals = [l.strip() for l in lines]
+    # Add lower-case versions
+    nonminerals += [m.lower() for m in nonminerals]
     
 # Read in the Chemcam targets file
 with open(chemcamfile, 'r') as inf:
     lines = inf.readlines()
     chemcam_targets = [l.strip() for l in lines]
-    # Add a version with _ converted to space
-    chemcam_targets_a = [re.sub('_', ' ', cc) for cc in chemcam_targets \
-                             if '_' in cc]
     # Add a version with space converted to _
-    chemcam_targets_b = [re.sub(' ', '_', cc) for cc in chemcam_targets \
-                             if ' ' in cc]
-    chemcam_targets += chemcam_targets_a
-    chemcam_targets += chemcam_targets_b
-
+    chemcam_targets += [re.sub(' ', '_', cc) for cc in chemcam_targets \
+                            if ' ' in cc]
+    # Add a version with trailing _CCAM or _ccam removed
+    chemcam_targets += [cc[:-5] for cc in chemcam_targets \
+                            if cc.endswith('_CCAM') or cc.endswith('_ccam')]
+    # Add a version with trailing _DRT or _drt removed
+    chemcam_targets += [cc[:-4] for cc in chemcam_targets \
+                             if cc.endswith('_DRT') or cc.endswith('_drt')]
+    # Add a version with trailing _1 or _2 removed
+    chemcam_targets += [cc[:-2] for cc in chemcam_targets \
+                             if cc.endswith('_1') or cc.endswith('_2')] 
+    # Add a version with _ converted to space
+    chemcam_targets += [re.sub('_', ' ', cc) for cc in chemcam_targets \
+                            if '_' in cc]
+    
 print 'Read in %d ChemCam target names.' % len(chemcam_targets)
 
 '''
@@ -210,7 +247,8 @@ for fn in dirlist:
         start_t = pre_annotate(lines, elements,        'Element', outf, start_t)
         start_t = pre_annotate(lines, chemcam_targets, 'Target',  outf, start_t)
 #        start_t = pre_annotate(lines, mer_targets,     'Target',  outf, start_t)
-        start_t = pre_annotate_suffix(lines, 'ite', 6, 'Mineral', outf, start_t)
+        start_t = pre_annotate_suffix(lines, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
+        start_t = pre_annotate(lines, minerals,        'Mineral', outf, start_t)
 #        sys.exit(0)
 
 
