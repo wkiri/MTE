@@ -8,7 +8,7 @@
 
 import sys, os
 
-# Import the Python module psycopg2 to enable direct connections to 
+# Import the Python module psycopg2 to enable direct connections to
 # the PostgreSQL database.
 HAVE_psycopg2 = False
 try:
@@ -21,7 +21,8 @@ except ImportError, e:
 
 # Connect to the DB
 try:
-    connection = psycopg2.connect("dbname=mte user=wkiri")
+    user = os.environ['USER']
+    connection = psycopg2.connect("dbname=mte user=%s" % user)
     cursor     = connection.cursor()
 
     print 'Checking for existence of MTE databases; '
@@ -37,7 +38,7 @@ try:
         print "Creating the targets table from scratch."
         create_table_cmd  = "CREATE TABLE targets ("
         create_table_cmd += " target_id         varchar(100) PRIMARY KEY,"
-        create_table_cmd += " target_name       varchar(80)"  
+        create_table_cmd += " target_name       varchar(80)"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -49,7 +50,7 @@ try:
         print "Creating the components table from scratch."
         create_table_cmd  = "CREATE TABLE components ("
         create_table_cmd += " component_id         varchar(100) PRIMARY KEY,"
-        create_table_cmd += " component_name       varchar(80),"  
+        create_table_cmd += " component_name       varchar(80),"
         create_table_cmd += " component_label      varchar(80)"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
@@ -62,15 +63,25 @@ try:
         print "Creating the contains table from scratch."
         create_table_cmd  = "CREATE TABLE contains ("
         create_table_cmd += " event_id          varchar(100),"
-        create_table_cmd += " doc_id            varchar(100),"  
+        create_table_cmd += " doc_id            varchar(100),"
         create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
         create_table_cmd += " component_id      varchar(100) REFERENCES components,"
-        create_table_cmd += " magnitude         varchar(10),"  
-        create_table_cmd += " confidence        varchar(10),"  
-        create_table_cmd += " annotator         varchar(100)"  
+        create_table_cmd += " magnitude         varchar(10),"
+        create_table_cmd += " confidence        varchar(10),"
+        create_table_cmd += " annotator         varchar(100)"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
+    # -------- contains -----------
+    DOCUMENTS_TABLE_STATEMENT = '''CREATE TABLE IF NOT EXISTS documents (
+        doc_id          VARCHAR(100) PRIMARY KEY,
+        title           VARCHAR(1024),
+        authors         VARCHAR(4096),
+        content         TEXT,
+        affiliation     TEXT,
+        doc_url         VARCHAR(1024)
+    );'''
+    cursor.execute(DOCUMENTS_TABLE_STATEMENT)
     connection.commit()
 
 except psycopg2.Warning, e:
@@ -80,6 +91,3 @@ except psycopg2.Error, e:
 finally:
     cursor.close()
     connection.close()
-
-
-
