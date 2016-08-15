@@ -12,7 +12,8 @@ import re
 
 # Input files
 #textdir = '../text/lpsc15-C-pre-annotate-sol1159'
-textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
+#textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
+textdir = '../text/lpsc16-C-pre-annotate'
 
 # Reference files
 elementfile = '../ref/elements.txt'
@@ -21,8 +22,10 @@ mineralfile = '../ref/minerals.txt'
 nonminfile  = '../ref/non-minerals.txt' # Things that end in -ite but aren't minerals
 MERfile     = '../ref/MER-targets-pruned.txt'
 
+# Remove any punctuation, except '_' and '+' (ions) and '-' 
+# and '.' (e.g., Mt. Sharp)
 mypunc = string.punctuation
-for p in ['_', '\+', '-']:
+for p in ['_', '\+', '-', '\.']:
     mypunc = re.sub(p, '', mypunc)
 
 # Files to analyze
@@ -49,15 +52,18 @@ def pre_annotate(lines, items, name, outf, start_t):
             end_of_sentence = False
             # Remove any trailing \n etc.
             w_strip = w.strip()
+            #print w,w_strip
             # Track whether this is a potential end of sentence
             # to avoid spurious element abbreviation annotations
             if w_strip.endswith('.'):
                 end_of_sentence = True
             # If it ends with -, take it off
             if w_strip.endswith('-'):
-                w_strip = w_strip[:-2]
+                w_strip = w_strip[:-1]
                 extra   += 1
+            #print w,w_strip
             # Remove any punctuation, except '_' and '+' (ions) and '-'
+            # and '.' (e.g., Mt. Sharp)
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
             # Try the word and also the two-word and three-word phrases it's in
             phrases = [(w, w_strip)]
@@ -71,6 +77,7 @@ def pre_annotate(lines, items, name, outf, start_t):
 
             for (my_word, my_word_strip) in phrases:
                 if my_word_strip in items:
+                    #print my_word, my_word_strip
                     # For elements, skip matches that end in a period
                     # and are short (i.e., abbreviations) because these
                     # are more likely to be author initials.
@@ -81,9 +88,15 @@ def pre_annotate(lines, items, name, outf, start_t):
                     else:
                         # This handles leading and trailing punctuation,
                         # but not cases where there is internal punctuation
-                        span_start_strip = span_start + my_word.index(my_word)
-                    #print str(w.index(my_word))
-                        span_end    = span_start_strip + len(my_word_strip) + extra
+                        span_start_strip = span_start + my_word.index(my_word_strip)
+                        span_end    = span_start_strip + len(my_word_strip)# + extra
+                        '''
+                        print '%s, %s, %s goes from %d (%d) to %d' % \
+                            (w, my_word, my_word_strip,
+                             span_start_strip,
+                             my_word.index(my_word_strip),
+                             span_end)
+                             '''
                     # Format: Tx\tTarget <span_start> <span_end>\t<word>
                         outf.write('T' + str(target_ind) + '\t' +
                                    name + ' ' + str(span_start_strip) + 
