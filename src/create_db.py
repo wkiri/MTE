@@ -55,24 +55,7 @@ try:
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
-    # -------- contains -----------
-    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
-                   "WHERE table_name='contains')")
-    table_exists = cursor.fetchone()[0]
-    if not table_exists:
-        print "Creating the contains table from scratch."
-        create_table_cmd  = "CREATE TABLE contains ("
-        create_table_cmd += " event_id          varchar(100),"
-        create_table_cmd += " doc_id            varchar(100),"
-        create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
-        create_table_cmd += " component_id      varchar(100) REFERENCES components,"
-        create_table_cmd += " magnitude         varchar(10),"
-        create_table_cmd += " confidence        varchar(10),"
-        create_table_cmd += " annotator         varchar(100)"
-        create_table_cmd += ");"
-        cursor.execute(create_table_cmd)
-
-    # -------- contains -----------
+    # -------- documents -----------
     DOCUMENTS_TABLE_STATEMENT = '''CREATE TABLE IF NOT EXISTS documents (
         doc_id          VARCHAR(100) PRIMARY KEY,
         title           VARCHAR(1024),
@@ -82,6 +65,24 @@ try:
         doc_url         VARCHAR(1024)
     );'''
     cursor.execute(DOCUMENTS_TABLE_STATEMENT)
+
+    # -------- contains -----------
+    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
+                   "WHERE table_name='contains')")
+    table_exists = cursor.fetchone()[0]
+    if not table_exists:
+        print "Creating the contains table from scratch."
+        create_table_cmd  = "CREATE TABLE contains ("
+        create_table_cmd += " event_id          varchar(100),"
+        create_table_cmd += " doc_id            varchar(100) REFERENCES documents"
+        create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
+        create_table_cmd += " component_id      varchar(100) REFERENCES components,"
+        create_table_cmd += " magnitude         varchar(10),"
+        create_table_cmd += " confidence        varchar(10),"
+        create_table_cmd += " annotator         varchar(100)"
+        create_table_cmd += ");"
+        cursor.execute(create_table_cmd)
+
     connection.commit()
 
 except psycopg2.Warning, e:
