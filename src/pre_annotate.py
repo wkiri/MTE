@@ -57,10 +57,6 @@ def pre_annotate(lines, items, name, outf, start_t):
             # to avoid spurious element abbreviation annotations
             if w_strip.endswith('.'):
                 end_of_sentence = True
-            # If it ends with -, take it off
-            if w_strip.endswith('-'):
-                w_strip = w_strip[:-1]
-                extra   += 1
             #print w,w_strip
             # Remove any punctuation, except '_' and '+' (ions) and '-'
             # and '.' (e.g., Mt. Sharp)
@@ -76,6 +72,11 @@ def pre_annotate(lines, items, name, outf, start_t):
                              ' '.join([w_strip, w_next_1, w_next_2]))]
 
             for (my_word, my_word_strip) in phrases:
+                # If it ends with - or ., take it off
+                if (my_word_strip.endswith('-') or 
+                    my_word_strip.endswith('.')):
+                    my_word_strip = my_word_strip[:-1]
+                    extra   += 1
                 if my_word_strip in items:
                     #print my_word, my_word_strip
                     # For elements, skip matches that end in a period
