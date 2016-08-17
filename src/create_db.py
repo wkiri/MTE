@@ -78,7 +78,8 @@ try:
         print "Creating the contains table from scratch."
         create_table_cmd  = "CREATE TABLE contains ("
         create_table_cmd += " event_id          varchar(100),"
-        create_table_cmd += " doc_id            varchar(100) REFERENCES documents,"
+        #create_table_cmd += " doc_id            varchar(100) REFERENCES documents,"
+        create_table_cmd += " doc_id            varchar(100),"
         create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
         create_table_cmd += " component_id      varchar(100) REFERENCES components,"
         create_table_cmd += " magnitude         varchar(10),"
@@ -87,6 +88,15 @@ try:
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
+    # Update permissions
+    cursor.execute('grant select, insert, update '
+                   'on contains, components, targets, documents '
+                   'to youlu, thammegr, wkiri;')
+    cursor.execute('grant select '
+                   'on contains, components, targets, documents '
+                   'to mtedbuser;')
+
+    # Commit changes
     connection.commit()
 
 except psycopg2.Warning, e:
