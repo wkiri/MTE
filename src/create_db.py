@@ -38,7 +38,9 @@ try:
         print "Creating the targets table from scratch."
         create_table_cmd  = "CREATE TABLE targets ("
         create_table_cmd += " target_id         varchar(100) PRIMARY KEY,"
-        create_table_cmd += " target_name       varchar(80)"
+        create_table_cmd += " target_name       varchar(80),"
+        create_table_cmd += " span_start        integer,"
+        create_table_cmd += " span_end          integer"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -51,7 +53,9 @@ try:
         create_table_cmd  = "CREATE TABLE components ("
         create_table_cmd += " component_id         varchar(100) PRIMARY KEY,"
         create_table_cmd += " component_name       varchar(80),"
-        create_table_cmd += " component_label      varchar(80)"
+        create_table_cmd += " component_label      varchar(80),"
+        create_table_cmd += " span_start           integer,"
+        create_table_cmd += " span_end             integer"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -74,7 +78,7 @@ try:
         print "Creating the contains table from scratch."
         create_table_cmd  = "CREATE TABLE contains ("
         create_table_cmd += " event_id          varchar(100),"
-        create_table_cmd += " doc_id            varchar(100) REFERENCES documents"
+        create_table_cmd += " doc_id            varchar(100) REFERENCES documents,"
         create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
         create_table_cmd += " component_id      varchar(100) REFERENCES components,"
         create_table_cmd += " magnitude         varchar(10),"

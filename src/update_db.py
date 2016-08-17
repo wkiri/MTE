@@ -21,6 +21,7 @@ except ImportError, e:
 
 # Local files
 #textdir = '../text/lpsc15-A'
+#textdir = '../text/lpsc15-C-raymond-sol707'
 textdir = '../text/lpsc15-C-raymond-sol1159'
 source  = 'lpsc15'
 
@@ -31,7 +32,8 @@ print 'Inserting brat annotations into the MTE from %d files in %s.' % \
     (len(dirlist), textdir)
 
 # Connect to the DB
-connection = psycopg2.connect("dbname=mte user=wkiri")
+user = os.environ['USER']
+connection = psycopg2.connect("dbname=mte user=%s" % user)
 cursor     = connection.cursor()
 
 for fn in dirlist:
@@ -65,6 +67,7 @@ for fn in dirlist:
 
     connection.commit()
 
+    # Pass 2: add all events and relations
     with open(fullname, 'r') as f:
         for line in f.readlines():
             # Keep events and relations

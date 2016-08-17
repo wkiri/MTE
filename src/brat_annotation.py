@@ -52,8 +52,11 @@ class BratAnnotation:
             dbutils.insert_into_table(
                 cursor=cursor,
                 table='targets',
-                columns=['target_id', 'target_name'],
-                values=[self.doc_id+'_'+self.annotation_id, self.name])
+                columns=['target_id', 'target_name', 'span_start', 'span_end'],
+                values=[self.doc_id+'_'+self.annotation_id, 
+                        self.name,
+                        self.start,
+                        self.end])
         elif (self.label == 'Element' or 
               self.label == 'Mineral' or 
               self.label == 'Material' or 
@@ -61,10 +64,13 @@ class BratAnnotation:
             dbutils.insert_into_table(
                 cursor=cursor,
                 table='components',
-                columns=['component_id', 'component_name', 'component_label'],
+                columns=['component_id', 'component_name', 'component_label',
+                         'span_start', 'span_end'],
                 values=[self.doc_id+'_'+self.annotation_id, 
                         self.name, 
-                        self.label])
+                        self.label,
+                        self.start,
+                        self.end])
         elif self.label == 'Contains':
             # If it's just 'Contains' with no arguments, then self.targets
             # doesn't exist and this annotation is just the anchor word;
@@ -89,62 +95,24 @@ class BratAnnotation:
                                     self.username])
             except: 
                 pass
-        elif self.label == 'Contains_low':
-            dbutils.insert_into_table(
-                cursor=cursor,
-                table='contains',
-                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
-                values=[self.doc_id+'_'+self.arg1,
-                        self.doc_id+'_'+self.arg2,
-                        self.doc_id,
-                        'low',
-                        'neutral',
-                        self.username])
-        elif self.label == 'Contains_high':
-            dbutils.insert_into_table(
-                cursor=cursor,
-                table='contains',
-                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
-                values=[self.doc_id+'_'+self.arg1,
-                        self.doc_id+'_'+self.arg2,
-                        self.doc_id,
-                        'high',
-                        'neutral',
-                        self.username])
-        elif self.label == 'May_contain':
-            dbutils.insert_into_table(
-                cursor=cursor,
-                table='contains',
-                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
-                values=[self.doc_id+'_'+self.arg1,
-                        self.doc_id+'_'+self.arg2,
-                        self.doc_id,
-                        'unknown',
-                        'low',
-                        self.username])
-        elif self.label == 'Lacks':
-            dbutils.insert_into_table(
-                cursor=cursor,
-                table='contains',
-                columns=['target_id','component_id','doc_id','magnitude','confidence','annotator'],
-                values=[self.doc_id+'_'+self.arg1,
-                        self.doc_id+'_'+self.arg2,
-                        self.doc_id,
-                        'none',
-                        'neutral',
-                        self.username])
-        elif (self.label == 'Locality' or
+        elif (self.label == 'Amount' or
+              self.label == 'Associated' or
+              self.label == 'BelongsTo' or
+              self.label == 'Confidence' or
+              self.label == 'DoesNotContain' or
+              self.label == 'DoesNotShow' or
               self.label == 'Formation' or 
               self.label == 'IsSituatedIn' or
-              self.label == 'Shows' or
+              self.label == 'Locality' or
               self.label == 'Material' or
-              self.label == 'DoesNotShow' or
-              self.label == 'Confidence' or
+              self.label == 'Member' or
+              self.label == 'Position' or 
+              self.label == 'Process' or
+              self.label == 'Region' or
+              self.label == 'Shows' or
               self.label == 'Site' or
               self.label == 'StratRel' or
-              self.label == 'Position' or 
-              self.label == 'Amount' or
-              self.label == 'Region'):
+              self.label == 'Unit'):
             # Not yet handled
             pass
         else:
