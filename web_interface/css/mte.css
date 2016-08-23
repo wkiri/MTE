@@ -1,0 +1,105 @@
+.mte-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.mte-logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 25px;
+    width: 350px;
+    height: 60px;
+    padding-top: 8px;
+    padding-left: 25px;
+    /*background-color: gainsboro;*/
+}
+
+.mte-search {
+    position: absolute;
+    top: 0px;
+    left: 350px;
+    width: 600px;
+    height: 60px;
+    padding-top: 10px;
+    /*background-color: gainsboro;*/
+}
+
+.mte-search-input {
+    /*position: absolute;*/
+    left: 0px;
+    /*top: 28px;*/
+    width: 500px;
+}
+
+.mte-statistics {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    margin-right: 25px;
+    height: 40px;
+    width: 40px;
+}
+
+.mte-results {
+    position:absolute;
+    top: 60px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /*width: 100%;*/
+    /*height: auto;*/
+    border-top: 1px solid gray;
+    background-color: white;
+}
+
+.mte-results-status {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 25px;
+    padding-top: 2px;
+    padding-left: 20px;
+    background-color: gainsboro;
+    color: gray;
+}
+
+.mte-results-display {
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    padding-top: 20px;
+}
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+.mte-related-images-div {
+    width: 612px;
+    height: 366px;
+    margin-top: -15px;
+}
+
+.mte-related-images-subdiv {
+    float: left;
+    width: 150px;
+    height: 180px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
