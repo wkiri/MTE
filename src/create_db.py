@@ -83,7 +83,8 @@ try:
         create_table_cmd += " component_id      varchar(100) REFERENCES components,"
         create_table_cmd += " magnitude         varchar(10),"
         create_table_cmd += " confidence        varchar(10),"
-        create_table_cmd += " annotator         varchar(100)"
+        create_table_cmd += " annotator         varchar(100),"
+        create_table_cmd += " excerpt           text"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
