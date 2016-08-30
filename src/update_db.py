@@ -21,8 +21,8 @@ except ImportError, e:
 
 # Local files
 #textdir = '../text/lpsc15-A'
-#textdir = '../text/lpsc15-C-raymond-sol707'
-textdir = '../text/lpsc15-C-raymond-sol1159'
+textdir = '../text/lpsc15-C-raymond-sol707'
+#textdir = '../text/lpsc15-C-raymond-sol1159'
 source  = 'lpsc15'
 
 dirlist = [fn for fn in os.listdir(textdir) if
@@ -56,7 +56,7 @@ for fn in dirlist:
     # Two passes because 'contains' refers to targets and components that need to
     # already have been stored.
 
-    # Pass 1: add all targets and components
+    # Pass 1: add all anchors, targets, and components
     with open(fullname, 'r') as f:
         for line in f.readlines():
             # Skip events and relations

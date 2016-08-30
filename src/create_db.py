@@ -30,17 +30,16 @@ try:
     print ' (No output means they already exist.)'
 
     # If tables don't exist, create them
+
     # -------- targets -----------
+    # This is a canonical table of target names
     cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
                    "WHERE table_name='targets')")
     table_exists = cursor.fetchone()[0]
     if not table_exists:
         print "Creating the targets table from scratch."
         create_table_cmd  = "CREATE TABLE targets ("
-        create_table_cmd += " target_id         varchar(100) PRIMARY KEY,"
-        create_table_cmd += " target_name       varchar(80),"
-        create_table_cmd += " span_start        integer,"
-        create_table_cmd += " span_end          integer"
+        create_table_cmd += " target_name       varchar(80) PRIMARY KEY"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -51,11 +50,8 @@ try:
     if not table_exists:
         print "Creating the components table from scratch."
         create_table_cmd  = "CREATE TABLE components ("
-        create_table_cmd += " component_id         varchar(100) PRIMARY KEY,"
-        create_table_cmd += " component_name       varchar(80),"
-        create_table_cmd += " component_label      varchar(80),"
-        create_table_cmd += " span_start           integer,"
-        create_table_cmd += " span_end             integer"
+        create_table_cmd += " component_name       varchar(80) PRIMARY KEY,"
+        create_table_cmd += " component_label      varchar(80)"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -70,6 +66,24 @@ try:
     );'''
     cursor.execute(DOCUMENTS_TABLE_STATEMENT)
 
+    # -------- anchors -----------
+    # One entry for each text annotation covering the text that anchors it
+    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
+                   "WHERE table_name='anchors')")
+    table_exists = cursor.fetchone()[0]
+    if not table_exists:
+        print "Creating the anchors table from scratch."
+        create_table_cmd  = "CREATE TABLE anchors ("
+        # anchor_id could match target_id, component_id, or event_id
+        create_table_cmd += " anchor_id         varchar(100) PRIMARY KEY,"
+        create_table_cmd += " label             varchar(20),"
+        create_table_cmd += " canonical         text,"
+        create_table_cmd += " text              text,"
+        create_table_cmd += " span_start        integer,"
+        create_table_cmd += " span_end          integer"
+        create_table_cmd += ");"
+        cursor.execute(create_table_cmd)
+
     # -------- contains -----------
     cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
                    "WHERE table_name='contains')")
@@ -79,11 +93,13 @@ try:
         create_table_cmd  = "CREATE TABLE contains ("
         create_table_cmd += " event_id          varchar(100),"
         create_table_cmd += " doc_id            varchar(100) REFERENCES documents,"
-        create_table_cmd += " target_id         varchar(100) REFERENCES targets,"
-        create_table_cmd += " component_id      varchar(100) REFERENCES components,"
+        create_table_cmd += " anchor_id         varchar(100) REFERENCES anchors,"
+        create_table_cmd += " target_name       varchar(80) REFERENCES targets,"
+        create_table_cmd += " component_name    varchar(80) REFERENCES components,"
         create_table_cmd += " magnitude         varchar(10),"
         create_table_cmd += " confidence        varchar(10),"
-        create_table_cmd += " annotator         varchar(100)"
+        create_table_cmd += " annotator         varchar(100),"
+        create_table_cmd += " excerpt           text"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
