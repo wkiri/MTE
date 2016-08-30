@@ -32,7 +32,7 @@ try:
     # If tables don't exist, create them
 
     # -------- targets -----------
-    # This is a canonical table of target names
+    # Table of canonical target names
     cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
                    "WHERE table_name='targets')")
     table_exists = cursor.fetchone()[0]
@@ -40,6 +40,25 @@ try:
         print "Creating the targets table from scratch."
         create_table_cmd  = "CREATE TABLE targets ("
         create_table_cmd += " target_name       varchar(80) PRIMARY KEY"
+        create_table_cmd += ");"
+        cursor.execute(create_table_cmd)
+
+    # -------- targets_an -----------
+    # Table of information from the Analyst's Notebook
+    # Could potentially be merged with the targets table,
+    # but since the targets table is currently inferred from the text,
+    # it is incomplete.  For now we'll keep them separate.
+    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
+                   "WHERE table_name='targets_an')")
+    table_exists = cursor.fetchone()[0]
+    if not table_exists:
+        print "Creating the Analyst's Notebook targets table from scratch."
+        create_table_cmd  = "CREATE TABLE targets_an ("
+        create_table_cmd += " target_name       varchar,"
+        # Interal AN target id ('anPlaceID')
+        create_table_cmd += " target_id         integer PRIMARY KEY,"
+        # Sol on which the target was defined
+        create_table_cmd += " target_first_sol  integer"
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
@@ -105,10 +124,12 @@ try:
 
     # Update permissions
     cursor.execute('grant select, insert, update '
-                   'on contains, components, targets, documents '
+                   'on contains, components, targets, documents, '
+                   'anchors, targets_an '
                    'to youlu, thammegr, wkiri;')
     cursor.execute('grant select '
-                   'on contains, components, targets, documents '
+                   'on contains, components, targets, documents, '
+                   'anchors, targets_an '
                    'to mtedbuser;')
 
     # Commit changes
