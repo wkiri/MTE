@@ -55,7 +55,7 @@ try:
         print "Creating the Analyst's Notebook targets table from scratch."
         create_table_cmd  = "CREATE TABLE targets_an ("
         create_table_cmd += " target_name       varchar,"
-        # Interal AN target id ('anPlaceID')
+        # Internal AN target id ('anPlaceID')
         create_table_cmd += " target_id         integer PRIMARY KEY,"
         # Sol on which the target was defined
         create_table_cmd += " target_first_sol  integer"

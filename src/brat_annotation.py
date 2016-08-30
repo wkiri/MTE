@@ -75,11 +75,19 @@ class BratAnnotation:
                                "WHERE %s ILIKE '%s';" % (colname, self.name))
                 name = cursor.fetchone()
                 if name == None:
-                    dbutils.insert_into_table(
-                        cursor=cursor,
-                        table=tabname,
-                        columns=[colname],
-                        values=[canonical])
+                    # Add the label for components
+                    if tabname == 'components':
+                        dbutils.insert_into_table(
+                            cursor=cursor,
+                            table=tabname,
+                            columns=[colname, 'component_label'],
+                            values=[canonical, self.label])
+                    else: # Just add the name
+                        dbutils.insert_into_table(
+                            cursor=cursor,
+                            table=tabname,
+                            columns=[colname],
+                            values=[canonical])
 
             # Add this anchor.  Text other than targets and components
             # will not have a canonical entry.  That's okay.
