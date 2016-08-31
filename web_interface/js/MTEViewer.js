@@ -9,40 +9,16 @@ define([
         this._autoCompletionList = [];
 
         customizeAutoCompletion();
-        initTargetList(this);
-        initComponentList(this);
+        initAutoCompletionList(this);
+        //initComponentList(this);
         enableAutoCompletion(this);
         enableSearchButton(this);
         enableStatisticsButton(this);
     }
 
-    //load target names
-    function initTargetList (mte) {
+    function initAutoCompletionList (mte) {
         $.ajax({
-            url: "http://mte.jpl.nasa.gov/cgi/getTargetsName.py",
-            type: "post",
-            dataType: "json",
-            success: function (returnedList) {
-                var targetNames = returnedList.target_name;
-
-                for (var i = 0; i < targetNames.length; i++) {
-                    if (isNameInList(targetNames[i][0], mte._autoCompletionList)) {
-                        continue;
-                    }
-
-                    mte._autoCompletionList.push({
-                        label: targetNames[i][0],
-                        category: "Target"
-                    });
-                }
-            }
-        });
-    }
-
-    //load component names
-    function initComponentList (mte) {
-        $.ajax({
-            url: "http://mte.jpl.nasa.gov/cgi/getComponentsNameAndLabel.py",
+            url: "http://mte.jpl.nasa.gov/cgi/getAutoCompletionList.py",
             type: "post",
             dataType: "json",
             success: function (returnedList) {
@@ -61,6 +37,29 @@ define([
             }
         });
     }
+
+    //load component names
+    //function initComponentList (mte) {
+    //    $.ajax({
+    //        url: "http://mte.jpl.nasa.gov/cgi/getComponentsNameAndLabel.py",
+    //        type: "post",
+    //        dataType: "json",
+    //        success: function (returnedList) {
+    //            var results = returnedList.results;
+    //
+    //            for (var i = 0; i < results.length; i++) {
+    //                if (isNameInList(results[i][0], mte._autoCompletionList)) {
+    //                    continue;
+    //                }
+    //
+    //                mte._autoCompletionList.push({
+    //                    label: results[i][0],
+    //                    category: results[i][1]
+    //                });
+    //            }
+    //        }
+    //    });
+    //}
 
     function isNameInList(targetName, list) {
         var flag = false;
@@ -120,6 +119,7 @@ define([
         });
 
         function searchHandler () {
+            console.log(location.href);
             var searchString = $("#mteSearchInput").val().toLowerCase();
             var resultsStatusPanel = document.getElementById("mteResultsStatus");
             var resultsDisplayPanel = document.getElementById("mteResultsDisplay");
@@ -153,41 +153,43 @@ define([
                     var formattedList = [];
                     for (var i = 0; i < returnedList.results.length; i++) {
                         var targetName = returnedList.results[i][0];
+                        var targetId = returnedList.results[i][1];
+                        var targetFirstSol = returnedList.results[i][2];
                         if (isNameInList(targetName, formattedList)) {
                             for (var j = 0; j < formattedList.length; j++) {
                                 if (formattedList[j].label === targetName) {
                                     formattedList[j].associates.push({
-                                        component: returnedList.results[i][1],
-                                        authors: returnedList.results[i][2],
-                                        publication: returnedList.results[i][3]
+                                        component: returnedList.results[i][3],
+                                        authors: returnedList.results[i][4],
+                                        publication: returnedList.results[i][5],
+                                        excerpt: returnedList.results[i][6]
                                     });
                                 }
                             }
                         } else {
                             formattedList.push({
                                 label: targetName,
+                                id: targetId,
+                                firstSol: targetFirstSol,
                                 associates: [{
-                                    component: returnedList.results[i][1],
-                                    authors: returnedList.results[i][2],
-                                    publication: returnedList.results[i][3]
+                                    component: returnedList.results[i][3],
+                                    authors: returnedList.results[i][4],
+                                    publication: returnedList.results[i][5],
+                                    excerpt: returnedList.results[i][6]
                                 }]
                             });
                         }
                     }
 
                     resultsStatusPanel.innerHTML = formattedList.length + " targets are found."
+                    displayResults(formattedList, mte);
 
-                    if (formattedList.length > 1) {
-                        displayResults(formattedList, "single", mte);
-                    } else {
-                        displayResults(formattedList, "multiple", mte);
-                    }
                 }
             });
         }
     }
 
-    function displayResults (formattedList, displayFlag, mte) {
+    function displayResults (formattedList, mte) {
         console.log(formattedList);
         var resultsDiv = document.getElementById("mteResultsDisplay");
 
@@ -197,88 +199,227 @@ define([
         }
 
         for (var i = 0; i < formattedList.length; i++) {
+            //unit result container
+            var resultBlock = document.createElement("div");
+            resultBlock.className = "mte-results-display-block"
+            resultsDiv.appendChild(resultBlock);
+
+            //thumbnail image
+            //TODO thumbnail image URLs are fake now!!!!
+            var thumbnailDiv = document.createElement("div");
+            var thumbnailImg = document.createElement("img");
+            thumbnailDiv.className = "mte-results-display-block-img";
+            thumbnailImg.src = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+            thumbnailDiv.appendChild(thumbnailImg);
+            resultBlock.appendChild(thumbnailDiv);
+            resultBlock.thumbnailUrl = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+
+            //text div
+            var textDiv = document.createElement("div");
+            textDiv.className = "mte-results-display-block-text";
+            resultBlock.appendChild(textDiv);
+
             //target name
-            var ul = document.createElement("ul");
-            var targetNameLi = document.createElement("li");
-            targetNameLi.appendChild(document.createTextNode("Target: " + formattedList[i].label));
-            ul.appendChild(targetNameLi);
-            resultsDiv.appendChild(ul);
+            var targetDiv = document.createElement("div");
+            targetDiv.className = "mte-results-display-block-text-target";
+            targetDiv.appendChild(document.createTextNode(formattedList[i].label));
+            textDiv.appendChild(targetDiv);
+            $(targetDiv).attr("data-toggle", "modal");
+            $(targetDiv).attr("data-target", "#singleTargetDiv");
+            resultBlock.targetName = formattedList[i].label;
+            resultBlock.firstSol = formattedList[i].firstSol;
 
             //properties
-            var propertiesLi = document.createElement("li");
-            var propertiesEntryUl = document.createElement("ul");
-            propertiesLi.appendChild(document.createTextNode("Properties:"));
-            propertiesLi.appendChild(propertiesEntryUl);
-            ul.appendChild(propertiesLi);
+            var propertyDiv = document.createElement("div");
+            propertyDiv.className = "mte-results-display-block-text-property";
+            propertyDiv.appendChild(document.createTextNode(formattedList[i].associates.length + " property"));
+            textDiv.appendChild(propertyDiv);
+            resultBlock.associates = formattedList[i].associates;
 
-            for (var j = 0; j < formattedList[i].associates.length; j++) {
-                var entryLi = document.createElement("li");
-                var componentName = formattedList[i].associates[j].component;
-                var authors = formattedList[i].associates[j].authors;
+            //publications
+            var nonDuplicatePublicationList = getNonDuplicatePublication(formattedList[i].associates);
+            var publicationDiv = document.createElement("div");
+            publicationDiv.className = "mte-results-display-block-text-publication";
+            publicationDiv.appendChild(document.createTextNode(nonDuplicatePublicationList.length + " publication"));
+            textDiv.appendChild(publicationDiv);
 
-                if (authors.length > 20) {
-                    authors = authors.substring(0, 20) + ' et al.';
+            //layout
+            var msnry = new Masonry(resultsDiv, {
+                itemSelector: ".mte-results-display-block",
+                columnWidth: 244,
+                gutter: 10
+            });
+
+            //attach target name click event
+            targetNameClickHandler(targetDiv, resultBlock);
+        }
+    }
+
+    function targetNameClickHandler (targetDiv, resultBlock) {
+        $(targetDiv).click(function () {
+            var targetName = resultBlock.targetName;
+            var thumbnailUrl = resultBlock.thumbnailUrl;
+            var targetAssociates = resultBlock.associates;
+            var divHeader = document.getElementById("singleTargetDivHeader");
+            var divDisplay = document.getElementById("singleTargetDivDisplay");
+
+            //remove pervious content
+            var thumbnail = document.getElementById("targetThumbnail")
+            if (thumbnail !== null && thumbnail !== undefined) {
+                divHeader.removeChild(thumbnail);
+            }
+
+            var h4 = document.getElementById("targetTitle");
+            if (h4 !== null && h4 !== undefined) {
+                divHeader.removeChild(h4);
+            }
+
+
+            while (divDisplay.hasChildNodes()) {
+                divDisplay.removeChild(divDisplay.lastChild);
+            }
+
+            //thumbnail
+            thumbnail = document.createElement("img");
+            thumbnail.id = "targetThumbnail";
+            thumbnail.src = thumbnailUrl;
+            divHeader.appendChild(thumbnail);
+
+            //target name
+            h4 = document.createElement("h4");
+            h4.id = "targetTitle";
+            h4.appendChild(document.createTextNode(targetName));
+            divHeader.appendChild(h4);
+
+            //root list
+            var rootUl = document.createElement("ul");
+            //rootUl.className = "mte-root-ul";
+            divDisplay.appendChild(rootUl);
+
+            //target first sol
+            var firstSolLi = document.createElement("li");
+            firstSolLi.className = "mte-title-li";
+            firstSolLi.appendChild(document.createTextNode("First observed on SOL: " + resultBlock.firstSol));
+            rootUl.appendChild(firstSolLi);
+
+            //properties
+            var propertyLi = document.createElement("li");
+            propertyLi.className = "mte-title-li";
+            var propertyContentUl = document.createElement("ul");
+            propertyLi.appendChild(document.createTextNode("Properties: "));
+            propertyLi.appendChild(propertyContentUl);
+            rootUl.appendChild(propertyLi);
+
+            for (var i = 0; i < resultBlock.associates.length; i++) {
+                var li = document.createElement('li');
+                li.className = "mte-content-li";
+                var componentStr = resultBlock.associates[i].component;
+                var excerpt = resultBlock.associates[i].excerpt;
+                var authorsStr = resultBlock.associates[i].authors;
+
+                //TODO temp solution for authors string being too long
+                if (authorsStr.length > 20) {
+                    authorsStr = authorsStr.substring(0, 20) + ' et al.';
                 }
 
-                var entryText = componentName + "  [" + authors +"]"
-                entryLi.appendChild(document.createTextNode(entryText));
-                propertiesEntryUl.appendChild(entryLi);
+                if (authorsStr.length === 0) {
+                    authorsStr = "unknown author";
+                }
+
+                var propertyStr = componentStr + " [" + authorsStr + "] " + excerpt;
+                li.appendChild(document.createTextNode(propertyStr));
+                propertyContentUl.appendChild(li);
             }
 
             //publications
-            var publicationsLi = document.createElement("li");
-            var publicationsEntryUl = document.createElement("ul");
-            publicationsLi.appendChild(document.createTextNode("Publications:"));
-            publicationsLi.appendChild(publicationsEntryUl);
-            ul.appendChild(publicationsLi);
+            var publicationLi = document.createElement("li");
+            publicationLi.className = "mte-title-li";
+            var publicationContentUl = document.createElement("ul");
+            publicationLi.appendChild(document.createTextNode("Publications:"));
+            publicationLi.appendChild(publicationContentUl);
+            rootUl.appendChild(publicationLi);
 
-            for (var j = 0; j < formattedList[i].associates.length; j++) {
-                var entryLi = document.createElement("li");
-                var publicationTitle = formattedList[i].associates[j].publication;
-                var authors = formattedList[i].associates[j].authors;
+            for (var i = 0; i < resultBlock.associates.length; i++) {
+                var li = document.createElement("li");
+                li.className = "mte-content-li";
+                var publicationTitleStr = resultBlock.associates[i].publication;
+                var authorsStr = resultBlock.associates[i].authors;
 
-                if (authors.length > 20) {
-                    authors = authors.substring(0, 20) + ' et al.';
+                //TODO temp solution for authors string being too long
+                if (authorsStr.length > 20) {
+                    authorsStr = authorsStr.substring(0, 20) + ' et al.';
                 }
 
-                var entryText = authors + ', "' + publicationTitle + '"';
-                var perviousEntryLi = publicationsEntryUl.lastChild;
-                if (perviousEntryLi !== null && perviousEntryLi.innerHTML === entryText){
+                if (authorsStr.length === 0) {
+                    authorsStr = "unknown author";
+                }
+
+                if (publicationTitleStr.length === 0) {
+                    publicationTitleStr = "unknow publication title";
+                }
+
+                var publicationStr = authorsStr + ', "' + publicationTitleStr + '"';
+                var perviousLi = publicationContentUl.lastChild;
+                if (perviousLi !== null && perviousLi.innerHTML === publicationStr) {
                     continue;
                 }
 
-                entryLi.appendChild(document.createTextNode(entryText));
-                publicationsEntryUl.appendChild(entryLi);
+                li.appendChild(document.createTextNode(publicationStr));
+                publicationContentUl.appendChild(li);
             }
+        });
+    }
 
-            //related images
-            var imagesLi = document.createElement("li");
-            var imagesEntryUl = document.createElement("ul");
-            imagesLi.appendChild(document.createTextNode("Related Images:"));
-            imagesLi.appendChild(imagesEntryUl);
-            ul.appendChild(imagesLi);
+    function getNonDuplicatePublication (associatesList) {
+        var nonDuplicatePublicationList = [];
 
-            //TODO fake images URL.
-            var imagesContainerLi = document.createElement("li");
-            var imagesContainerDiv = document.createElement("div");
-            imagesContainerDiv.className = "mte-related-images-div";
-            imagesContainerLi.appendChild(imagesContainerDiv);
-            imagesEntryUl.appendChild(imagesContainerLi);
+        for (var i = 0; i < associatesList.length; i++) {
+            var publicationTitle = associatesList[i].publication;
 
-            for (var j = 0; j < 8; j++) {
-                var imageSubDiv = document.createElement("div");
-                var img = document.createElement("img");
-                imageSubDiv.className = "mte-related-images-subdiv";
-                img.src = "https://an.rsl.wustl.edu/msl/mslbrowser/labelfeattarg.aspx?i=104664&size=150&show=False";
-                imageSubDiv.appendChild(img);
-                imagesContainerDiv.appendChild(imageSubDiv);
+            if (nonDuplicatePublicationList.indexOf(publicationTitle) <= -1) {
+                nonDuplicatePublicationList.push(publicationTitle);
             }
         }
 
+        return nonDuplicatePublicationList;
     }
 
     function enableStatisticsButton(mte) {
         $('#statisticsButton').click(function () {
+            statisticsHandler();
+        });
+
+        function statisticsHandler () {
+            $.ajax({
+                url: "http://mte.jpl.nasa.gov/cgi/getStatistics.py",
+                type: "post",
+                dataType: "json",
+                success: function (returnedDict) {
+                    console.log(returnedDict);
+
+                    var data = [];
+                    var document_count = returnedDict.document_count[0][0];
+                    var target_count = returnedDict.target_count[0][0];
+                    var element_count = returnedDict.element_count[0][0];
+                    var feature_count = returnedDict.feature_count[0][0];
+                    var material_count = returnedDict.material_count[0][0];
+                    var mineral_count = returnedDict.mineral_count[0][0];
+                    var event_count = returnedDict.event_count[0][0];
+
+                    data.push(document_count);
+                    data.push(target_count);
+                    data.push(element_count);
+                    data.push(feature_count);
+                    data.push(material_count);
+                    data.push(mineral_count);
+                    data.push(event_count);
+
+                    createColumnChart(data)
+                }
+            });
+        }
+
+        function createColumnChart (data) {
             $('#statisticsDisplay').highcharts({
                 chart: {
                     type: 'column'
@@ -287,7 +428,7 @@ define([
                     text: ''
                 },
                 xAxis: {
-                    categories: ['Target', 'Element', 'Feature', 'Material', 'Mineral', 'Document', 'Event'],
+                    categories: ['Document', 'Target', 'Element', 'Feature', 'Material', 'Mineral' , 'Event'],
                 },
                 yAxis: {
                     min: 0,
@@ -300,11 +441,10 @@ define([
                 },
                 series: [{
                     name: 'Number',
-                    data: [200, 250, 232, 125, 209, 60, 500]
-
+                    data: data
                 }]
             });
-        });
+        }
     }
 
     return MTEViewer;
