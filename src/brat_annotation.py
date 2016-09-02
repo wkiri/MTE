@@ -104,7 +104,6 @@ class BratAnnotation:
         # Events are 
         elif self.type == 'event':
             if self.label == 'Contains':
-                print self.anchor
                 # Loop over all targets
                 for t in self.targets:
                     # Loop over all constituents
