@@ -84,12 +84,26 @@ if __name__ == '__main__':
     parser.add_argument("-user", help="DB user name", default=os.environ['USER'])
     args = vars(parser.parse_args())
     docs = get_records(args['docs'])
+
+    # Construct the URL for LPSC docs
     idprefix = args['idprefix']
+    if 'lpsc' in idprefix:
+        print 'Constructing URLs for LPSC docs.'
+        def construct_doc_url(rec, prefix=idprefix):
+            print ('lpsc20%s/pdf/' % prefix[4:6]) + rec['doc_id'] + '.pdf'
+            rec['doc_url'] = 'http://www.hou.usra.edu/meetings/' + \
+                ('lpsc20%s/pdf/' % prefix[4:6]) + \
+                rec['doc_id'] + '.pdf'
+            return rec
+        docs = map(construct_doc_url, docs)
+
+    # Add the document id prefix
     print("Id Prefix %s" % idprefix)
     def update_doc_id(rec, prefix=idprefix):
         rec['doc_id'] = prefix + rec['doc_id']
         return rec
     docs = map(update_doc_id, docs)
+
     with PSQLDb(args['db'], args['user']) as db:
         count = db.insert_all(args['table'], docs)
         print("Inserted %d records to %s" % (count, args['table']))
