@@ -122,6 +122,9 @@ try:
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
+    # Commit changes
+    connection.commit()
+
     # Update permissions
     cursor.execute('grant select, insert, update '
                    'on contains, components, targets, documents, '
