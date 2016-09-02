@@ -7,6 +7,7 @@
 # August 30, 2016
 
 import sys, os
+from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 import csv
 import dbutils
 
@@ -23,30 +24,40 @@ except ImportError, e:
 # Analyst's Notebook database
 anfile = '../ref/2016-0816-MSL-AN-Target-table.csv'
 
-print "Inserting target information from the Analyst's Notebook."
-print "File: ", anfile
+def update_an(args):
 
-# Connect to the DB
-user = os.environ['USER']
-connection = psycopg2.connect("dbname=mte user=%s" % user)
-cursor     = connection.cursor()
+    print "Inserting target information from the Analyst's Notebook."
+    print "File: ", anfile
 
-# Read in the CSV and add fields we want
+    # Connect to the DB
+    connection = psycopg2.connect("dbname=%s user=%s" % (args['db'], args['user']))
+    cursor     = connection.cursor()
 
-with open(anfile, 'r') as csvfile:
-    csvfile.readline()  # Consume the header
-    anreader = csv.reader(csvfile)
-    for row in anreader:
-        dbutils.insert_into_table(cursor=cursor,
-                                  table='targets_an',
-                                  columns=['target_name',
-                                           'target_id',
-                                           'target_first_sol'],
-                                  values=[row[8],
-                                          int(row[0]),
-                                          int(row[16])])
+    # Read in the CSV and add fields we want
 
-connection.commit()
+    with open(anfile, 'r') as csvfile:
+        csvfile.readline()  # Consume the header
+        anreader = csv.reader(csvfile)
+        for row in anreader:
+            dbutils.insert_into_table(cursor=cursor,
+                                      table='targets_an',
+                                      columns=['target_name',
+                                               'target_id',
+                                               'target_first_sol'],
+                                      values=[row[8],
+                                              int(row[0]),
+                                              int(row[16])])
 
-cursor.close()
-connection.close()
+        connection.commit()
+
+    cursor.close()
+    connection.close()
+
+
+if __name__ == '__main__':
+    parser = ArgumentParser(description="Adds Analyst's Notebook table to PSQL DB",
+                            formatter_class=ArgumentDefaultsHelpFormatter)
+    parser.add_argument("-db", help="Database name for insertion", default='mte')
+    parser.add_argument("-user", help="Database user name", default=os.environ['USER'])
+    args = vars(parser.parse_args())
+    update_an(args)

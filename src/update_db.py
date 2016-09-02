@@ -7,6 +7,7 @@
 # January 12, 2016
 
 import sys, os
+from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from brat_annotation import BratAnnotation
 
 # Import the Python module psycopg2 to enable direct connections to 
@@ -19,64 +20,71 @@ except ImportError, e:
     print "we cannot access the MTE SQL database."
     sys.exit()
 
-# Local files
-#textdir = '../text/lpsc15-A'
-textdir = '../text/lpsc15-C-raymond-sol707'
-#textdir = '../text/lpsc15-C-raymond-sol1159'
-source  = 'lpsc15'
 
-dirlist = [fn for fn in os.listdir(textdir) if
-           fn.endswith('.ann')]
+def update_db(args):
 
-print 'Inserting brat annotations into the MTE from %d files in %s.' % \
-    (len(dirlist), textdir)
+    # Connect to the DB
+    connection = psycopg2.connect("dbname=%s user=%s" % (args['db'], args['user']))
+    cursor     = connection.cursor()
 
-# Connect to the DB
-user = os.environ['USER']
-connection = psycopg2.connect("dbname=mte user=%s" % user)
-cursor     = connection.cursor()
+    dirlist = [fn for fn in os.listdir(args['anns']) if
+               fn.endswith('.ann')]
 
-for fn in dirlist:
-    fullname = textdir+'/'+fn
+    print 'Inserting brat annotations into the MTE from %d files in %s.' % \
+        (len(dirlist), args['anns'])
 
-    # Skip empty files
-    if os.stat(fullname).st_size == 0:
-        continue
+    for fn in dirlist:
+        fullname = args['anns']+'/'+fn
 
-    doc_id = source + '-' + fn[:-4]
+        # Skip empty files
+        if os.stat(fullname).st_size == 0:
+            continue
 
-    # Skip this document if already processed
-    cursor.execute("SELECT EXISTS(SELECT * FROM contains WHERE doc_id = '%s')" % doc_id)
-    doc_processed = cursor.fetchone()[0]
-    if doc_processed:
-        continue
+        doc_id = args['idprefix'] + fn[:-4]
 
-    print fn
+        # Skip this document if already processed
+        cursor.execute("SELECT EXISTS(SELECT * FROM contains WHERE doc_id = '%s')" % doc_id)
+        doc_processed = cursor.fetchone()[0]
+        if doc_processed:
+            continue
 
-    # Two passes because 'contains' refers to targets and components that need to
-    # already have been stored.
+        print fn
 
-    # Pass 1: add all anchors, targets, and components
-    with open(fullname, 'r') as f:
-        for line in f.readlines():
-            # Skip events and relations
-            if (line[0] == 'E' or line[0] == 'R'):
-                continue
-            b = BratAnnotation(line, doc_id, 'raymond')
-            b.insert(cursor)
+        # Two passes because 'contains' refers to targets and components that need to
+        # already have been stored.
 
-    connection.commit()
+        # Pass 1: add all anchors, targets, and components
+        with open(fullname, 'r') as f:
+            for line in f.readlines():
+                # Skip events and relations
+                if (line[0] == 'E' or line[0] == 'R'):
+                    continue
+                b = BratAnnotation(line, doc_id, 'raymond')
+                b.insert(cursor)
 
-    # Pass 2: add all events and relations
-    with open(fullname, 'r') as f:
-        for line in f.readlines():
-            # Keep events and relations
-            if (line[0] != 'E' and line[0] != 'R'):
-                continue
-            b = BratAnnotation(line, doc_id, 'raymond')
-            b.insert(cursor)
+        connection.commit()
+
+        # Pass 2: add all events and relations
+        with open(fullname, 'r') as f:
+            for line in f.readlines():
+                # Keep events and relations
+                if (line[0] != 'E' and line[0] != 'R'):
+                    continue
+                b = BratAnnotation(line, doc_id, 'raymond')
+                b.insert(cursor)
             
-    connection.commit()
+        connection.commit()
 
-cursor.close()
-connection.close()
+    cursor.close()
+    connection.close()
+
+
+if __name__ == '__main__':
+    parser = ArgumentParser(description='Adds annotations to PSQL DB',
+                            formatter_class=ArgumentDefaultsHelpFormatter)
+    parser.add_argument("-anns", help="Path to .ann files", required=True)
+    parser.add_argument("-db", help="Database name for insertion", default='mte')
+    parser.add_argument("-idprefix", help="ID prefix. Example:lpsc15-", required=True)
+    parser.add_argument("-user", help="Database user name", default=os.environ['USER'])
+    args = vars(parser.parse_args())
+    update_db(args)
