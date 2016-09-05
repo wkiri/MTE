@@ -68,16 +68,22 @@ class BratAnnotation:
             # Targets and components:
             # Look up canonical entry, or add if needed.
             if self.label in lookups.keys():
-                # Canonical name in mixed case with underscores between words
                 # First remove any hyphenation (due to poor parsing)
                 s = string.replace(self.name, '- ', '')
-                s = string.replace(s, '_', ' ')
-                s = string.capwords(s)
-                s = s.replace(' ', '_')
+                if self.label == 'Target':
+                    # Canonical name in mixed case with underscores between words
+                    s = string.replace(s, '_', ' ')
+                    s = string.capwords(s)
+                    s = s.replace(' ', '_')
+                    canonical = s
+                elif self.label == 'Element' or self.label == 'Mineral':
+                    # Capitalize
+                    s = string.capwords(s)
                 canonical = s
+
                 (tabname, colname) = lookups[self.label]
                 cursor.execute("SELECT %s FROM %s " % (colname, tabname) +
-                               "WHERE %s ILIKE '%s';" % (colname, canonical))
+                               "WHERE %s='%s';" % (colname, canonical))
                 name = cursor.fetchone()
                 if name == None:
                     # Add the label for components
