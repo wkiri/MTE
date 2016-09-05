@@ -11,8 +11,9 @@ psql -d $DB -c 'drop table contains, components, targets, documents, anchors, ta
 ./create_db.py
 
 # Insert the documents
-./insert_docs.py -db $DB -docs ../text/lpsc15.jsonl -idprefix lpsc15- 2>/dev/null
-./insert_docs.py -db $DB -docs ../text/lpsc16.jsonl -idprefix lpsc16- 2>/dev/null
+./insert_docs.py -db $DB -docs ../text/lpsc15-sol707.jsonl  -txts ../text/lpsc15-C-raymond-sol707  -idprefix lpsc15- 2>/dev/null
+./insert_docs.py -db $DB -docs ../text/lpsc15-sol1159.jsonl -txts ../text/lpsc15-C-raymond-sol1159 -idprefix lpsc15- 2>/dev/null
+./insert_docs.py -db $DB -docs ../text/lpsc16.jsonl -txts ../text/lpsc16-C-pre-annotate -idprefix lpsc16- 2>/dev/null
 
 # Add the content from .ann files
 ./update_db.py -db $DB -anns ../text/lpsc15-C-raymond-sol707  -idprefix lpsc15- 2>/dev/null
