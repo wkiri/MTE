@@ -6,7 +6,7 @@
 # Kiri Wagstaff
 # January 12, 2016
 
-import sys, os
+import sys, os, re
 import dbutils
 
 # Map annotation labels to database table names and columns
@@ -121,15 +121,26 @@ class BratAnnotation:
 
                         # Compute the likely start and end of the sentence
                         content = content[0]
-                        cursor.execute("SELECT span_start, span_end " +
+                        cursor.execute("SELECT span_start, span_end, text " +
                                        "FROM anchors " +
                                        "WHERE anchor_id='%s';" \
                                            % (self.doc_id+'_'+self.anchor))
-                        (anchor_start,anchor_end) = cursor.fetchone()
-                        sent_start = max(content[:anchor_start].rfind('.'),0)+1
-                        sent_end   = anchor_end + \
-                            min(content[anchor_end:].find('.'),len(content))+1
+                        (anchor_start,anchor_end,text) = cursor.fetchone()
+                        # Start: first capital letter after last period.
+                        sent_start = max(content[:anchor_start].rfind('.'),0)
+                        m = re.search('[A-Z]',content[sent_start:])
+                        if m:
+                            sent_start = sent_start + m.start()
+                        # End: next period, or end of document.
+                        sent_end   = min(anchor_end + 
+                                         content[anchor_end:].find('.')+1,
+                                         len(content))
                         excerpt = content[sent_start:sent_end]
+                        #print self.doc_id, t, v, text
+                        #print content[anchor_start:anchor_end+1]
+                        #print sent_start, anchor_start, anchor_end, sent_end
+                        #print excerpt
+                        #raw_input()
 
                         # Get the canonical forms of the target and component
                         cursor.execute("SELECT canonical " +
