@@ -78,6 +78,7 @@ if __name__ == '__main__':
     parser = ArgumentParser(description='Inserts documents to PSQL table',
                             formatter_class=ArgumentDefaultsHelpFormatter)
     parser.add_argument("-docs", help="Path to jsonline file having parsed data", required=True)
+    parser.add_argument("-txts", help="Path to extracted .txt files", required=True)
     parser.add_argument("-idprefix", help="ID prefix. Example:lpsc15-", required=True)
     parser.add_argument("-table", help="table name for insertion", default='documents')
     parser.add_argument("-db", help="database name for insertion", default='mte')
@@ -87,22 +88,34 @@ if __name__ == '__main__':
 
     # Construct the URL for LPSC docs
     idprefix = args['idprefix']
+    print("Id Prefix %s" % idprefix)
+
     if 'lpsc' in idprefix:
         print 'Constructing URLs for LPSC docs.'
         def construct_doc_url(rec, prefix=idprefix):
-            print ('lpsc20%s/pdf/' % prefix[4:6]) + rec['doc_id'] + '.pdf'
             rec['doc_url'] = 'http://www.hou.usra.edu/meetings/' + \
                 ('lpsc20%s/pdf/' % prefix[4:6]) + \
                 rec['doc_id'] + '.pdf'
             return rec
         docs = map(construct_doc_url, docs)
 
+    # Add the text content.  GROBID extracted this too,
+    # but we need it to be consistent with our annotations
+    # and offsets.  So we'll use our .txt instead.
+    def update_doc_content(rec, txtdir=args['txts']):
+        txtfile = os.path.join(txtdir, rec['doc_id'] + '.txt')
+        txtf = open(txtfile, 'r')
+        rec['content'] = txtf.read()
+        txtf.close()
+        return rec
+    docs = map(update_doc_content, docs)
+
     # Add the document id prefix
-    print("Id Prefix %s" % idprefix)
     def update_doc_id(rec, prefix=idprefix):
         rec['doc_id'] = prefix + rec['doc_id']
         return rec
     docs = map(update_doc_id, docs)
+
 
     with PSQLDb(args['db'], args['user']) as db:
         count = db.insert_all(args['table'], docs)
