@@ -6,7 +6,7 @@
 # Kiri Wagstaff
 # January 12, 2016
 
-import sys, os, re
+import sys, os, re, string
 import dbutils
 
 # Map annotation labels to database table names and columns
@@ -68,11 +68,16 @@ class BratAnnotation:
             # Targets and components:
             # Look up canonical entry, or add if needed.
             if self.label in lookups.keys():
-                # Canonical name in all lower case
-                canonical = self.name.lower()
+                # Canonical name in mixed case with underscores between words
+                # First remove any hyphenation (due to poor parsing)
+                s = string.replace(self.name, '- ', '')
+                s = string.replace(s, '_', ' ')
+                s = string.capwords(s)
+                s = s.replace(' ', '_')
+                canonical = s
                 (tabname, colname) = lookups[self.label]
                 cursor.execute("SELECT %s FROM %s " % (colname, tabname) +
-                               "WHERE %s ILIKE '%s';" % (colname, self.name))
+                               "WHERE %s ILIKE '%s';" % (colname, canonical))
                 name = cursor.fetchone()
                 if name == None:
                     # Add the label for components
