@@ -12,6 +12,7 @@ import psycopg2
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 import os
 import json
+import string
 from dbutils import insert_into_table
 import sys
 reload(sys)
@@ -68,7 +69,9 @@ def get_records(f_name):
             yield {
                 'doc_id': ''.join(rec['file'].split('/')[-1].split(".")[:-1]),
                 'authors': rec['metadata'].get('grobid:header_Authors', ''),
-                'title': rec['metadata'].get('grobid:header_Title', ''),
+                # Capitalize first letter of each word in the title
+                'title': string.capwords(rec['metadata'].\
+                                             get('grobid:header_Title', '')),
                 'affiliation': rec['metadata'].get('grobid:header_FullAffiliations', ''),
                 'doc_url': '',
                 'content': rec['content'].strip(),
