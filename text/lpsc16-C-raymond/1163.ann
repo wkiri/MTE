@@ -1,0 +1,62 @@
+T1	Element 1832 1841	potassium
+T4	Element 5330 5331	K
+T5	Element 5882 5883	K
+T6	Element 5889 5898	potassium
+T7	Element 6017 6026	potassium
+T8	Element 6154 6155	K
+T12	Target 1621 1629	Rocknest
+T13	Target 1635 1649	Bathurst Inlet
+T14	Target 3924 3930	Darwin
+T15	Target 4790 4796	Beagle
+T16	Target 4955 4964	Dillinger
+T17	Target 5015 5023	Windjana
+T18	Target 5098 5107	Dillinger
+T19	Target 5546 5550	Liga
+T20	Target 5573 5583	Square Top
+T21	Target 7472 7481	Dillinger
+T22	Mineral 5292 5298	illite
+T23	Mineral 5303 5310	biotite
+T24	Mineral 4398 4407	feldspars
+T25	Mineral 4423 4435	anorthoclase
+T26	Mineral 4440 4448	sanidine
+T27	Mineral 4651 4660	feldspars
+T28	Mineral 4939 4947	sanidine
+T29	Mineral 5069 5077	sanidine
+T30	Mineral 5278 5283	micas
+T31	Mineral 7634 7646	anorthoclase
+T32	Mineral 7647 7655	feldspar
+T33	Mineral 7660 7668	sanidine
+T34	Element 1211 1220	potassium
+T35	Feature 1226 1233	clastic
+T36	Material 1234 1251	sedimentary rocks
+T11	Target 1613 1619	Shaler
+T37	Element 1480 1488	potassic
+T38	Contains 1606 1612	namely
+E1	Contains:T38 Targ:T11 Targ2:T12 Targ3:T13 Cont:T37
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T39	Material 1657 1660	K2O
+T40	Contains 1661 1670	abundance
+E2	Contains:T40 Cont:T39 Targ:T11 Targ2:T12 Targ3:T13
+A3	Confidence E2 High
+A4	Amount E2 Contains_High
+T41	Site 1887 1898	Cooperstown
+T42	Site 1921 1930	Kimberley
+T43	Locality 2096 2107	Cooperstown
+T44	Locality 2112 2121	Kimberley
+T45	Element 2159 2167	potassic
+T2	Locality 2395 2406	Cooperstown
+T46	Locality 2533 2544	Cooperstown
+T3	Locality 2647 2656	Kimberley
+T47	Locality 2727 2738	Cooperstown
+T48	Locality 3447 3458	Cooperstown
+T49	Locality 3463 3472	Kimberley
+T50	Contains 4948 4954	in the
+E3	Contains:T50 Cont:T28 Targ:T17
+A5	Confidence E3 High
+A6	Amount E3 Contains_High
+T51	Material 5664 5668	FeOT
+T52	Contains 5640 5663	have high abundances of
+E4	Contains:T52 Cont:T51 Targ:T20 Targ2:T19
+A7	Confidence E4 High
+A8	Amount E4 Contains_High

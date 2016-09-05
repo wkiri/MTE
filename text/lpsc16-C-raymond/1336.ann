@@ -1,0 +1,46 @@
+T1	Element 1688 1690	Al
+T2	Element 1692 1694	Si
+T3	Element 1696 1698	Fe
+T4	Element 1700 1702	Mg
+T5	Element 1704 1706	Na
+T6	Element 1712 1713	K
+T7	Element 3400 3402	Fe
+T8	Element 3437 3439	Mg
+T9	Element 3544 3553	potassium
+T10	Element 4204 4206	Al
+T11	Element 4604 4613	potassium
+T12	Element 5137 5145	aluminum
+T13	Element 5386 5388	Si
+T14	Element 7825 7826	K
+T15	Element 8140 8142	Fe
+T16	Element 8165 8167	Mg
+T17	Element 8207 8209	Mg
+T18	Element 8221 8223	Fe
+T19	Target 2898 2906	Rocknest
+T20	Target 2908 2916	Bathurst
+T21	Target 3023 3031	Sheepbed
+T22	Target 3167 3175	Sheepbed
+T23	Target 3265 3273	Sheepbed
+T24	Target 3289 3297	Rocknest
+T25	Target 3468 3476	Bathurst
+T26	Target 3876 3882	Darwin
+T27	Target 5663 5671	Buckskin
+T29	Target 8106 8114	Rocknest
+T30	Mineral 5559 5568	Tridymite
+T31	Mineral 2611 2620	feldspars
+T32	Mineral 2700 2709	feldspars
+T33	Mineral 2760 2768	feldspar
+T34	Mineral 2885 2891	quartz
+T35	Mineral 4223 4232	feldspars
+T36	Mineral 4707 4715	sanidine
+T37	Mineral 7773 7781	feldspar
+T38	Mineral 8239 8246	sulfate
+T39	Element 3124 3126	Ca
+T40	Feature 3124 3140	Ca-sulfate veins
+R1	Shows Arg1:T22 Arg2:T40	
+T41	Feature 3226 3243	diagenetic ridges
+R2	Shows Arg1:T23 Arg2:T41	
+T42	Locality 5279 5290	Marias Pass
+T43	Contains 5633 5645	was observed
+E1	Contains:T43 Cont:T30 Targ:T27
+A1	Confidence E1 High
