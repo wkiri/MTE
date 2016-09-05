@@ -72,7 +72,8 @@ def get_records(f_name):
                 # Capitalize first letter of each word in the title
                 'title': string.capwords(rec['metadata'].\
                                              get('grobid:header_Title', '')),
-                'affiliation': rec['metadata'].get('grobid:header_FullAffiliations', ''),
+                'affiliation': rec['metadata'].\
+                    get('grobid:header_FullAffiliations', ''),
                 'doc_url': '',
                 'content': rec['content'].strip(),
             }
@@ -118,6 +119,12 @@ if __name__ == '__main__':
         rec['doc_id'] = prefix + rec['doc_id']
         return rec
     docs = map(update_doc_id, docs)
+
+    # Check/fill in missing titles and authors
+    for rec in docs:
+        for field in ['title', 'authors']:
+            if rec[field] == '':
+                rec[field] = 'Unknown'
 
 
     with PSQLDb(args['db'], args['user']) as db:
