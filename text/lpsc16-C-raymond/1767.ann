@@ -1,0 +1,50 @@
+T1	Element 1528 1530	Si
+T2	Element 1532 1534	Ti
+T3	Element 1536 1538	Al
+T4	Element 1540 1542	Fe
+T5	Element 1544 1546	Mg
+T6	Element 1548 1550	Ca
+T7	Element 1552 1554	Na
+T8	Element 1560 1561	K
+T9	Element 1674 1675	S
+T10	Element 1889 1890	S
+T11	Element 2057 2063	sulfur
+T12	Element 2077 2083	sulfur
+T13	Element 2138 2140	Cl
+T14	Element 4206 4208	Ca
+T15	Element 4273 4275	Si
+T16	Element 4277 4279	Al
+T17	Element 4285 4286	K
+T18	Element 4298 4300	Mg
+T19	Element 5779 5783	iron
+T20	Element 5867 5869	Mg
+T25	Target 3995 4011	Confidence Hills
+T26	Target 4157 4171	Telegraph Peak
+T27	Target 4369 4385	Confidence Hills
+T28	Target 4566 4582	Confidence Hills
+T29	Target 4907 4921	Telegraph Peak
+T31	Mineral 3749 3755	augite
+T32	Mineral 3762 3770	hematite
+T33	Mineral 3809 3818	pigeonite
+T34	Mineral 3825 3834	magnetite
+T35	Mineral 3841 3851	forsterite
+T36	Mineral 3858 3870	cristobalite
+T37	Mineral 3877 3885	ilmenite
+T38	Mineral 3892 3900	jarosite
+T39	Mineral 4533 4541	jarosite
+T40	Mineral 5364 5372	jarosite
+T41	Mineral 5384 5392	hematite
+T42	Mineral 3733 3744	plagioclase
+T43	Mineral 3789 3802	orthopyroxene
+T44	Mineral 3907 3913	quartz
+T45	Mineral 3919 3933	phyllosilicate
+T46	Mineral 5748 5756	sulfates
+T47	Mineral 5784 5792	sulfates
+T48	Mineral 6009 6017	sulfates
+T24	Mineral 3777 3782	Kspar
+T49	Target 4016 4022	Mojave
+T50	Contains 4554 4565	detected at
+E1	Contains:T50 Targ:T28 Cont:T39
+A1	Amount E1 Contains_Low
+T51	Feature 4890 4894	vein
+R1	Shows Arg1:T29 Arg2:T51	
