@@ -64,6 +64,7 @@
     left: 10px;
     width: 64px;
     height: 64px;
+    cursor: pointer;
 }
 
 .mte-results-display-block-text {
@@ -80,6 +81,7 @@
     left: 0px;
     width: 150px;
     height: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -136,9 +138,12 @@ ul {
 .mte-title-li {
     padding-left: 5px;
     padding-bottom: 10px;
+    list-style-type: none;
 }
 
 .mte-content-li {
-    padding-left: 20px;
-    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+    list-style-type: square;
 }
