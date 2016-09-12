@@ -21,7 +21,7 @@ psql -d $DB -c 'drop table contains, components, targets, documents, anchors, ta
 ./update_db.py -db $DB -anns ../text/lpsc16-C-raymond -idprefix lpsc16- 2>/dev/null
 
 # Add the Analyst's Notebook table
-./insert_an.py -db $DB 2&>/dev/null
+./insert_an.py -db $DB 2>/dev/null
 
 # Check that it worked
 echo 'Documents:'
@@ -32,3 +32,5 @@ echo 'Components:'
 psql -d $DB -c 'SELECT COUNT(*) from components;'
 echo 'Contains:'
 psql -d $DB -c 'SELECT COUNT(*) from contains;'
+echo 'Targets_AN:'
+psql -d $DB -c 'SELECT COUNT(*) from targets_an;'
