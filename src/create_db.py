@@ -79,9 +79,11 @@ try:
         doc_id          VARCHAR(100) PRIMARY KEY,
         title           VARCHAR(1024),
         authors         VARCHAR(4096),
-        content         TEXT,
         affiliation     TEXT,
-        doc_url         VARCHAR(1024)
+        venue           TEXT,
+        year            INTEGER,
+        doc_url         VARCHAR(1024),
+        content         TEXT
     );'''
     cursor.execute(DOCUMENTS_TABLE_STATEMENT)
 

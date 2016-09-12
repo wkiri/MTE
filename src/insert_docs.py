@@ -68,12 +68,14 @@ def get_records(f_name):
         for rec in recs:
             yield {
                 'doc_id': ''.join(rec['file'].split('/')[-1].split(".")[:-1]),
-                'authors': rec['metadata'].get('grobid:header_Authors', ''),
                 # Capitalize first letter of each word in the title
                 'title': string.capwords(rec['metadata'].\
                                              get('grobid:header_Title', '')),
+                'authors': rec['metadata'].get('grobid:header_Authors', ''),
                 'affiliation': rec['metadata'].\
                     get('grobid:header_FullAffiliations', ''),
+                'venue': '',
+                'year': '',
                 'doc_url': '',
                 'content': rec['content'].strip(),
             }
@@ -90,11 +92,11 @@ if __name__ == '__main__':
     args = vars(parser.parse_args())
     docs = get_records(args['docs'])
 
-    # Construct the URL for LPSC docs
     idprefix = args['idprefix']
     print("Id Prefix %s" % idprefix)
 
     if 'lpsc' in idprefix:
+        # Construct the URL for LPSC docs
         print 'Constructing URLs for LPSC docs.'
         def construct_doc_url(rec, prefix=idprefix):
             rec['doc_url'] = 'http://www.hou.usra.edu/meetings/' + \
@@ -102,6 +104,14 @@ if __name__ == '__main__':
                 rec['doc_id'] + '.pdf'
             return rec
         docs = map(construct_doc_url, docs)
+
+        # Add venue and year
+        def update_doc_venue_year(rec, prefix=idprefix):
+            rec['venue'] = 'Lunar and Planetary Science Conference, ' + \
+                ('Abstract #%s' % rec['doc_id'])
+            rec['year'] = 2000 + int(prefix[4:6])
+            return rec
+        docs = map(update_doc_venue_year, docs)
 
     # Add the text content.  GROBID extracted this too,
     # but we need it to be consistent with our annotations
@@ -114,7 +124,7 @@ if __name__ == '__main__':
         return rec
     docs = map(update_doc_content, docs)
 
-    # Add the document id prefix
+    # Add the document id prefix (e.g., lpsc15)
     def update_doc_id(rec, prefix=idprefix):
         rec['doc_id'] = prefix + rec['doc_id']
         return rec
