@@ -1,0 +1,37 @@
+T1	Element 1312 1316	iron
+T2	Element 1471 1475	iron
+T3	Element 2139 2143	iron
+T4	Element 2288 2292	iron
+T5	Element 2434 2438	iron
+T6	Element 3566 3570	iron
+T7	Element 3712 3716	iron
+T8	Element 3884 3888	iron
+T9	Element 4048 4052	iron
+T10	Element 4405 4406	B
+T11	Element 4424 4428	iron
+T13	Element 5199 5203	iron
+T14	Element 5656 5660	iron
+T15	Element 5788 5792	iron
+T17	Element 7161 7165	iron
+T18	Element 7743 7747	Iron
+T20	Target 4470 4479	Littleton
+T21	Target 4687 4696	Littleton
+T22	Target 5804 5811	Lebanon
+T23	Target 5816 5825	Littleton
+T24	Target 6085 6094	Littleton
+T25	Target 7108 7117	Littleton
+T26	Mineral 2759 2767	troilite
+T27	Mineral 2955 2966	octahedrite
+T28	Mineral 3019 3027	troilite
+T29	Mineral 3961 3969	troilite
+T30	Mineral 4077 4085	Troilite
+T31	Mineral 5250 5258	kamacite
+T32	Mineral 5557 5565	troilite
+T19	Feature 4674 4683	scalloped
+R1	Shows Arg1:T21 Arg2:T19	
+T12	Target 5204 5218	Shelter Island
+T33	Target 4391 4398	Lebanon
+T16	Feature 5955 6003	elliptical to round cavities of varying diameter
+R2	Shows Arg1:T24 Arg2:T16	
+T34	Feature 7032 7058	two mappable texture types
+R3	Shows Arg1:T25 Arg2:T34	

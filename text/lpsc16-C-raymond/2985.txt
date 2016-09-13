@@ -1,0 +1,128 @@
+
+2985.PDF
+LIBS RAMAN RESEARCH FACILITY AT LOS ALAMOS NATIONAL LABORATORY. S.M. Clegg1, 
+R.C. Wiens1, D.M. Delapp1, R.E. McInroy1, and S. Maurice2, 1Los Alamos National Laboratory, Los Alamos, NM, 
+sclegg@lanl.gov, rwiens@lanl.gov, 2Institut de Recherches en Astrophysique et Plan tologie, Toulouse, France. 
+ 
+ 
+Introduction: Los Alamos National Laboratory 
+has a research facility dedicated to the development of 
+Laser-Induced Breakdown Spectroscopy (LIBS), Raman, and fluorescence spectroscopy instrumentation, 
+data analysis and fundamental scientific investigations. 
+The facility includes a functional replica of the ChemCam instrument on the Mars Science Laboratory 
+(MSL) rover, capable of LIBS analyses to 7 meters 
+distance.[1,2] The SuperCam instrument selected for 
+the Mars 2020 (M2020) rover includes an integrated 
+Raman, LIBS, Time-Resolved Fluorescence (TRF) and 
+Visible and Infrared (VISIR) Reflectance spectroscopy. A functional replica of the SuperCam instrument is 
+intended to be added to this laboratory. Finally, a R&D 
+LIBS, Raman and TRF test stand is available in the 
+laboratory that was used to define many of the ChemCam and SuperCam instrument requirements. 
+LIBS involves focusing a pulsed laser onto a tight 
+spot on a sample surface. The laser ablates material 
+from the surface, generating an expanding plasma containing electronically excited atoms, ions and small 
+molecules. The excited species emit light at wavelengths diagnostic of the species present in the sample 
+as they relax to lower electronic states. In Stand-off 
+LIBS, some of this emission is collected with a telescope and directed into a spectrometer suite. Raman 
+spectroscopy involves lower-power-density stimulation 
+resulting in weak emission of the surface molecules. 
+TRF involves analyses of the time spectrum of fluorescence emitted from a stimulated surface. 
+The ChemCam and SuperCam instruments use 
+three separate spectrometers to cover most of the 240 
+860 nm spectral range. They use a similar Nd:YAGlike laser (14 mJ/pulse on target) and 110 mm telescope for the LIBS, while SuperCam adds a frequencydoubled 532 nm beam for Raman spectroscopy and 
+TRF. The UV (245 - 340 nm) and Violet (380 - 470 
+nm) reflection spectrometers are nearly identical for 
+both instruments. SuperCam uses a transmission spectrometer to cover VNIR (535 860 nm) LIBS, Raman 
+(150 4400 cm-1), and TRF analyses [3]. Distance 
+capabilities are to 7 m for LIBS (both instruments), to 
+~12 m for Raman and TRF (SuperCam), and to infinity 
+for imaging (both instruments) and VISIR reflectance 
+spectroscopy (400 900 nm, 1.3 2.6 m for SuperCam). 
+ChemCam Test Stand: The ChemCam testbed includes both the LIBS elemental analysis capability as 
+well as the black and white remote micro-imager 
+(RMI). A similar ChemCam testbed is in use in Toulouse, France. LIBS is sensitive to the atmospheric 
+pressure above the samples. LIBS performance is optimized between 10 and 100 Torr and is ideal for Mars 
+surface investgations. In order to simulate the Mars 
+surface conditions, samples are placed in a vacuum 
+chamber and filled with 7 Torr CO2 or Mars gas (including several percent argon and nitrogen). The vacuum chamber is placed on a rail system that enables one 
+to move the chamber from 1.5 to 7 m from the ChemCam mast unit to simulate the full range of ChemCam 
+standoff capabilities. 
+The ChemCam science team has developed a data 
+analysis pipeline that enables direct comparisons with 
+the ChemCam instrument on Mars.[4] The data analysis methods include background subtraction, noise removal, continuum removal, spectral calibration and 
+resampling, and an instrument response function. Similar methodology is under development for the other test 
+stands. 
+R&D Test Stand: The R&D test stand includes a 
+Spectra Physics Nd:YAG laser that is capable of more 
+than 100 mJ per 8ns pulse at 1064 nm.[5,6] The laser is 
+directed through a frequency doubling unit to produce 
+more than 20 mJ/pulse at 532 nm. These two beams are 
+separated such that the 1064 and 532 nm beams simulate ChemCam and SuperCam performance. The 1064 
+nm beam is directed through a 10x beam expander to 
+focus the laser on sample up to 12 m away for remote 
+LIBS analysis. The 532 nm laser is expanded to ~1 cm 
+diameter and is collimated out to 12 m to simulate the 
+SuperCam Raman and TRF spectroscopy modes. 
+ Figure 1. Image of the ChemCam mast and body units. 
+For scale, the aperture of the telescope is 110 mm diameter. 
+2985.pdf47th Lunar and Planetary Science Conference (2016)
+Some of the Raman and LIBS emission is collected 
+with a 89 mm Questar telescope and directed into an 
+optical fiber. The fiber enables one to use a wide variety of spectrometers including a new advanced spectrometer suite based on the ChemCam and SuperCam 
+architectures. The prototype transmission spectrometer 
+capable of detecting both the Raman spectra excited at 
+532 nm and LIBS in the VNIR region (535 860 nm) 
+is a relatively accurate simulation of the SuperCam 
+transmission spectrometer. The test stand also includes 
+UV and Violet spectrometers similar to ChemCam 
+except the ChemCam CCD detectors have been replaced with miniature intensified CCDs. This advanced 
+spectrometer suite was designed to work under the 
+more challenging environments such as the Venus surface. 
+SuperCam Test Stand: We intend to add a replica 
+of the SuperCam instrument to this facility in the future. In the meantime, we can simulate the SuperCam 
+LIBS, Raman, TRF and part of the VISIR reflectance 
+spectroscopy with the ChemCam and R&D test stands. 
+This involves using the ChemCam UV and Violet spectrometers to record part of the LIBS spectrum. The 
+LIBS VNIR region, the Raman spectrum, and the TRF 
+spectrum is recorded with the prototype transmission 
+spectrometer. 
+Samples: The ChemCam test stand has been used 
+to recalibrate ChemCam over the last two years. This 
+effort involed the collection of more than 500 geologic 
+standards that provide a better representation of the 
+diverse geology observed by MSL in Gale Crater. The 
+standards supported not only the major-element calibration, but also specialized calibrations for trace elements. We are also developing a mineralogical library 
+to support future SuperCam investigations. Of course, 
+facility users are also invited to bring their own samples and use the facility prepare samples as necessary. 
+Sample Chambers: LIBS has been demonstrated 
+to perform accurate elemental analysis under the high 
+Venus surface pressures [6] and in the vacuum of the 
+Lunar surface and on asteroids.[7] Raman analysis has 
+been shown to be completely insensitive to the atmospheric conditions and is insignificantly sensitive to 
+Venus surface temperature (~740 K). 
+LANL has recently purchased a high pressure and 
+temperature chamber designed to simulate exteme environmental conditions like the surface of Venus. This 
+chamber is on a cart and can be integrated into the 
+R&D test stand discussed above for LIBS, Raman and 
+TRF investigation under Venus conditions. 
+Another vacuum chamber that is capable of 10-7 
+Torr pressures has been used to simulate the low pressures conditions on the Lunar and asteroid surfaces. 
+This chamber can also be integrated into the R&D test 
+stand for LIBS, Raman and TRF analysis. 
+Summary: The LANL LIBS Raman facility has 
+the hardware required to accurately simulate ChemCam 
+and SuperCam geochemical and mineralogical investigations under Mars conditions. The facility also includes the pressure and vacuum chambers required to 
+simulate the Venus, Lunar and asteroid surface conditions for LIBS, Raman, and TRF experiments. 
+References: [1] Maurice et al. (2012) Space Science Reviews, 170, 95-166. [2] Wiens et al. (2012) 
+Space Science Reviews, 170, 167-227. [3] Wiens et al. 
+(2015) this meeting. [4]Wiens et al., (2013) Spectrochimica Acta B, 82, 1-27. [5] Clegg et al. (2009) Spectrochimica Acta Part B, 64, 79-88. [6] Clegg et al. (2014) 
+Applied spectroscopy, 68, 925-36 [7] Lasue et al. (2012) 
+Journal of Geophysical Research: Planets, 117(E1). 
+Acknowledgements: We gratefully acknowledge 
+the NASA Mars Science Laboratory and Mars 2020 
+programs, Centre National d Etudes Spatiales (CNES), 
+and the DOE Los Alamos National Laboratory, Laboratory Directed Research and Development (LDRD) 
+programs for providing the funds to assemble the instrumentation within this facility. 
+ Figure 2. The propotype transmission spectrometer. The 
+spectrometer is 15 cm in length. 
+2985.pdf47th Lunar and Planetary Science Conference (2016)
