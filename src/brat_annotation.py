@@ -39,8 +39,8 @@ class BratAnnotation:
             self.label   = args[0].split(':')[0]
             self.anchor  = args[0].split(':')[1]
             args         = [a.split(':') for a in args[1:]]
-            self.targets = [v for (t,v) in args if t == 'Targ']
-            self.cont    = [v for (t,v) in args if t == 'Cont']
+            self.targets = [v for (t,v) in args if t.startswith('Targ')]
+            self.cont    = [v for (t,v) in args if t.startswith('Cont')]
         elif splitline[0][0] == 'R': # relation
             self.type    = 'relation'
             label, arg1, arg2 = splitline[1].split() # assumes 2 args
@@ -147,11 +147,6 @@ class BratAnnotation:
                                          content[anchor_end:].find('.')+1,
                                          len(content))
                         excerpt = content[sent_start:sent_end]
-                        #print self.doc_id, t, v, text
-                        #print content[anchor_start:anchor_end+1]
-                        #print sent_start, anchor_start, anchor_end, sent_end
-                        #print excerpt
-                        #raw_input()
 
                         # Get the canonical forms of the target and component
                         cursor.execute("SELECT canonical " +
@@ -164,6 +159,12 @@ class BratAnnotation:
                                        "WHERE anchor_id='%s';" \
                                            % (self.doc_id+'_'+v))
                         canonical_v = cursor.fetchone()[0]
+
+                        #print ','.join([self.doc_id, canonical_t, canonical_v, text])
+                        #print content[anchor_start:anchor_end+1]
+                        #print sent_start, anchor_start, anchor_end, sent_end
+                        #print excerpt
+                        #raw_input()
 
                         # Insert into table
                         dbutils.insert_into_table(
