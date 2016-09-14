@@ -252,7 +252,7 @@ define([
             var componentMatches = 0;
 
             for (var i = 0; i < mte._autoCompletionList.length; i++) {
-                if (mte._autoCompletionList[i].label.toLowerCase().indexOf(searchString) > -1) {
+                if (mte._autoCompletionList[i].label.toLowerCase() === searchString) {
                     if (mte._autoCompletionList[i].category === "Target") {
                         targetMatches++;
                         targetMatchesList.push(mte._autoCompletionList[i].label);
@@ -264,7 +264,7 @@ define([
 
             //no results found
             if (targetMatches === 0 && componentMatches === 0) {
-                resultsStatusPanel.innerHTML = "target not found.";
+                resultsStatusPanel.innerHTML = "Target not found.";
 
                 //remove everything in div
                 var resultsDiv = document.getElementById("mteResultsDisplay");
@@ -283,6 +283,7 @@ define([
                     searchStr: searchString
                 },
                 success: function (returnedList) {
+                    console.log(returnedList)
                     var formattedList = [];
                     for (var i = 0; i < returnedList.results.length; i++) {
                         var targetName = returnedList.results[i][0];
@@ -293,10 +294,13 @@ define([
                                 if (formattedList[j].label === targetName) {
                                     formattedList[j].associates.push({
                                         component: returnedList.results[i][3],
-                                        authors: returnedList.results[i][4],
-                                        publication: returnedList.results[i][5],
-                                        excerpt: returnedList.results[i][6],
-                                        docUrl: returnedList.results[i][7]
+                                        componentLabel: returnedList.results[i][4],
+                                        authors: returnedList.results[i][5],
+                                        publication: returnedList.results[i][6],
+                                        excerpt: returnedList.results[i][7],
+                                        year: returnedList.results[i][8],
+                                        venue: returnedList.results[i][9],
+                                        docUrl: returnedList.results[i][10]
                                     });
                                 }
                             }
@@ -307,17 +311,19 @@ define([
                                 firstSol: targetFirstSol,
                                 associates: [{
                                     component: returnedList.results[i][3],
-                                    authors: returnedList.results[i][4],
-                                    publication: returnedList.results[i][5],
-                                    excerpt: returnedList.results[i][6],
-                                    docUrl: returnedList.results[i][7]
+                                    componentLabel: returnedList.results[i][4],
+                                    authors: returnedList.results[i][5],
+                                    publication: returnedList.results[i][6],
+                                    excerpt: returnedList.results[i][7],
+                                    year: returnedList.results[i][8],
+                                    venue: returnedList.results[i][9],
+                                    docUrl: returnedList.results[i][10]
                                 }]
                             });
                         }
                     }
 
                     if (formattedList.length === 0 && targetMatchesList !== 0) {
-                        //TODO break into more detailed cases.
                         $.ajax({
                             url: "http://mte.jpl.nasa.gov/cgi/getResultsWOProperties.py",
                             type: "post",
@@ -336,20 +342,31 @@ define([
                                         firstSol: targetFirstSol,
                                         associates: [{
                                             component: "undefined",
+                                            componentLabel: "undefined",
                                             authors: "undefined",
                                             publication: "undefined",
                                             excerpt: "undefined",
+                                            year: "undefined",
+                                            venue: "undefined",
                                             docUrl: "undefined"
                                         }]
                                     });
                                 }
 
-                                resultsStatusPanel.innerHTML = formattedList.length + " targets found."
+                                if (formattedList.length === 1) {
+                                    resultsStatusPanel.innerHTML = "1 target found."
+                                } else {
+                                    resultsStatusPanel.innerHTML = formattedList.length + " targets found."
+                                }
                                 displayResults(formattedList, mte);
                             }
                         });
                     } else {
-                        resultsStatusPanel.innerHTML = formattedList.length + " targets found."
+                        if (formattedList.length === 1) {
+                            resultsStatusPanel.innerHTML = "1 target found."
+                        } else {
+                            resultsStatusPanel.innerHTML = formattedList.length + " targets found."
+                        }
                         displayResults(formattedList, mte);
                     }
                 }
@@ -373,16 +390,24 @@ define([
             resultsDiv.appendChild(resultBlock);
 
             //thumbnail image
-            //TODO thumbnail image URLs are fake now!!!!
             var thumbnailDiv = document.createElement("div");
             var thumbnailImg = document.createElement("img");
             thumbnailDiv.className = "mte-results-display-block-img";
             $(thumbnailDiv).attr("data-toggle", "modal");
             $(thumbnailDiv).attr("data-target", "#singleTargetDiv");
-            thumbnailImg.src = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+            if (formattedList[i].id !== undefined) {
+                thumbnailImg.src = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+            } else {
+                thumbnailImg.src = "images/empty_placeholder.png";
+            }
             thumbnailDiv.appendChild(thumbnailImg);
             resultBlock.appendChild(thumbnailDiv);
-            resultBlock.thumbnailUrl = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+            if (formattedList[i].id !== undefined) {
+                resultBlock.thumbnailUrl = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+            } else {
+                resultBlock.thumbnailUrl = "images/empty_placeholder.png";
+            }
+
 
             //text div
             var textDiv = document.createElement("div");
@@ -438,12 +463,12 @@ define([
             });
 
             //attach target name click event
-            targetNameClickHandler(targetDiv, resultBlock);
-            targetNameClickHandler(thumbnailDiv, resultBlock);
+            targetClickHandler(targetDiv, resultBlock);
+            targetClickHandler(thumbnailDiv, resultBlock);
         }
     }
 
-    function targetNameClickHandler (targetDiv, resultBlock) {
+    function targetClickHandler (targetDiv, resultBlock) {
         $(targetDiv).click(function () {
             var targetName = resultBlock.targetName;
             var thumbnailUrl = resultBlock.thumbnailUrl;
@@ -518,93 +543,61 @@ define([
             rootUl.appendChild(propertyLi);
 
             //case-insensitive sort by component_name (A-Z)
-            resultBlock.associates.sort(sortBy("component", true, function (str) {
-                return str.trim().toLowerCase();
-            }));
+            //resultBlock.associates.sort(sortBy("component", true, function (str) {
+            //    return str.trim().toLowerCase();
+            //}));
 
             for (var i = 0; i < resultBlock.associates.length; i++) {
                 var li = document.createElement('li');
                 li.className = "mte-content-li";
                 var componentStr = resultBlock.associates[i].component;
+                var componentLabelStr = " [" + resultBlock.associates[i].componentLabel + "]";
                 var excerptStr = '"' + resultBlock.associates[i].excerpt + '"';
                 var authorsStr = resultBlock.associates[i].authors;
+                var yearStr = resultBlock.associates[i].year;
+                var venueStr = ", " + resultBlock.associates[i].venue;
                 var publicationStr = ' "' + resultBlock.associates[i].publication + '"';
                 var docUrl = resultBlock.associates[i].docUrl;
 
-                //TODO temp solution for authors string being too long
-                if (authorsStr.length > 20) {
-                    authorsStr = authorsStr.substring(0, 20) + ' et al.';
+                if (componentStr === "undefined") {
+                    var componentTextNode = document.createElement("b");
+                    componentTextNode.innerHTML = "None";
+                    li.appendChild(componentTextNode);
+                } else {
+                    //TODO temp solution for authors string being too long
+                    if (authorsStr.length > 20) {
+                        authorsStr = authorsStr.substring(0, 20) + ' et al. ';
+                    }
+
+                    if (authorsStr.length === 0) {
+                        authorsStr = "Unknow";
+                    }
+
+                    var componentTextNode = document.createElement("b");
+                    componentTextNode.innerHTML = componentStr;
+                    var componentLabelTextNode = document.createTextNode(componentLabelStr)
+                    var excerptTextNode = document.createTextNode(excerptStr);
+                    var authorsTextNode = document.createTextNode(authorsStr);
+                    var yearTextNode = document.createTextNode("(" + yearStr + ")");
+                    var publicationLink = document.createElement("a");
+                    var publicationTextNode = document.createTextNode(publicationStr);
+                    publicationLink.href = docUrl;
+                    publicationLink.target = "_blank";
+                    publicationLink.appendChild(publicationTextNode);
+                    var venueTextNode = document.createTextNode(venueStr);
+
+                    li.appendChild(componentTextNode);
+                    li.appendChild(componentLabelTextNode);
+                    li.appendChild(document.createElement("br"));
+                    li.appendChild(excerptTextNode);
+                    li.appendChild(document.createElement("br"));
+                    li.appendChild(authorsTextNode);
+                    li.appendChild(yearTextNode);
+                    li.appendChild(publicationLink);
+                    li.appendChild(venueTextNode);
                 }
-
-                if (authorsStr.length === 0) {
-                    authorsStr = "Unknow";
-                }
-                authorsStr = "[" + authorsStr + "]";
-
-                var componentTextNode = document.createElement("b");
-                componentTextNode.innerHTML = componentStr;
-                var excerptTextNode = document.createTextNode(excerptStr);
-                var authorsTextNode = document.createTextNode(authorsStr);
-                var publicationLink = document.createElement("a");
-                var publicationTextNode = document.createTextNode(publicationStr);
-                publicationLink.href = docUrl;
-                publicationLink.target = "_blank";
-                publicationLink.appendChild(publicationTextNode);
-
-                li.appendChild(componentTextNode);
-                li.appendChild(document.createElement("br"));
-                li.appendChild(excerptTextNode);
-                li.appendChild(document.createElement("br"));
-                li.appendChild(authorsTextNode);
-                li.appendChild(publicationLink);
                 propertyContentUl.appendChild(li);
             }
-
-            //publications
-            //var publicationLi = document.createElement("li");
-            //publicationLi.className = "mte-title-li";
-            //var publicationContentUl = document.createElement("ul");
-            //publicationLi.appendChild(document.createTextNode("Publications:"));
-            //publicationLi.appendChild(publicationContentUl);
-            //rootUl.appendChild(publicationLi);
-            ////case-insensitive sort by author name (A-Z)
-            //resultBlock.associates.sort(sortBy("authors", true, function (str) {
-            //    return str.trim().toLowerCase();
-            //}));
-            //
-            //for (var i = 0; i < resultBlock.associates.length; i++) {
-            //    var li = document.createElement("li");
-            //    li.className = "mte-content-li";
-            //    var publicationTitleStr = resultBlock.associates[i].publication;
-            //    var authorsStr = resultBlock.associates[i].authors;
-            //
-            //    //TODO temp solution for authors string being too long
-            //    if (authorsStr.length > 20) {
-            //        authorsStr = authorsStr.substring(0, 20) + ' et al.';
-            //    }
-            //
-            //    if (authorsStr.length === 0) {
-            //        authorsStr = "unknown author";
-            //    }
-            //
-            //    if (publicationTitleStr.length === 0) {
-            //        publicationTitleStr = "unknow publication title";
-            //    }
-            //
-            //    var publicationStr = authorsStr + ', "' + publicationTitleStr + '"';
-            //    var perviousLi = publicationContentUl.lastChild;
-            //
-            //    if (perviousLi !== null && $(perviousLi.innerHTML).text() === publicationStr) {
-            //        continue;
-            //    }
-            //
-            //    var publicationLink = document.createElement("a");
-            //    publicationLink.appendChild(document.createTextNode(publicationStr));
-            //    publicationLink.href = resultBlock.associates[i].docUrl;
-            //    publicationLink.target = "_blank";
-            //    li.appendChild(publicationLink);
-            //    publicationContentUl.appendChild(li);
-            //}
         });
     }
 
