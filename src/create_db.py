@@ -79,6 +79,7 @@ try:
         doc_id          VARCHAR(100) PRIMARY KEY,
         title           VARCHAR(1024),
         authors         VARCHAR(4096),
+        primaryauthor   VARCHAR(1024),
         affiliation     TEXT,
         venue           TEXT,
         year            INTEGER,

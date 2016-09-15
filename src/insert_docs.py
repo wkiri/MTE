@@ -72,6 +72,7 @@ def get_records(f_name):
                 'title': string.capwords(rec['metadata'].\
                                              get('grobid:header_Title', '')),
                 'authors': rec['metadata'].get('grobid:header_Authors', ''),
+                'primaryauthor': '',
                 'affiliation': rec['metadata'].\
                     get('grobid:header_FullAffiliations', ''),
                 'venue': '',
@@ -123,6 +124,27 @@ if __name__ == '__main__':
         txtf.close()
         return rec
     docs = map(update_doc_content, docs)
+
+    # Add the primary author.
+    # Heuristic: first phrase in 'authors' consisting of words longer than 1 char
+    def update_primary_author(rec):
+        au = rec['authors']
+        auwords = au.split()
+        pa = ''
+        in_last_name = False
+        for auw in auwords:
+            if len(auw) > 1:
+                if in_last_name:
+                    pa += (' ' + auw)
+                else:
+                    pa = auw
+                    in_last_name = True
+            else:
+                if in_last_name:  # Done!
+                    break
+        rec['primaryauthor'] = pa
+        return rec
+    docs = map(update_primary_author, docs)
 
     # Add the document id prefix (e.g., lpsc15)
     def update_doc_id(rec, prefix=idprefix):
