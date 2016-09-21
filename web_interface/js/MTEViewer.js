@@ -59,19 +59,29 @@ define([
     function constructInterface () {
         var mteContainer = document.getElementsByClassName("mte-container")[0];
         var mteLogo = document.createElement("div");
+        var mteSubtitle = document.createElement("div");
         var mteSearch = document.createElement("div");
         var mteResults = document.createElement("div");
 
         mteLogo.className = "mte-logo";
+        mteSubtitle.className = "mte-subtitle";
         mteSearch.className = "mte-search";
         mteResults.className = "mte-results";
 
         mteContainer.appendChild(mteLogo);
+        mteContainer.appendChild(mteSubtitle);
         mteContainer.appendChild(mteSearch);
         mteContainer.appendChild(mteResults);
 
         //logo panel
         mteLogo.appendChild(document.createTextNode("Mars Target Encyclopedia"));
+
+        //subtitle panel
+        var subtitle = "Compositional information from publications about MSL ChemCam surface targets";
+        var holdings = "Publications currently indexed: abstracts from LPSC 2015 and 2016";
+        mteSubtitle.appendChild(document.createTextNode(subtitle));
+        mteSubtitle.appendChild(document.createElement("br"));
+        mteSubtitle.appendChild(document.createTextNode(holdings));
 
         //search panel
         var mteSearchComponent = document.createElement("div");
@@ -129,7 +139,7 @@ define([
                 var results = returnedList.target_name;
 
                 for (var i = 0; i < results.length; i++) {
-                    if (isNameInList(results[i][0], mte._autoCompletionList)) {
+                    if (isNameInList(results[i][0], mte._autoCompletionList, "label")) {
                         continue;
                     }
 
@@ -152,7 +162,7 @@ define([
                 var results = returnedList.results;
 
                 for (var i = 0; i < results.length; i++) {
-                    if (isNameInList(results[i][0], mte._autoCompletionList)) {
+                    if (isNameInList(results[i][0], mte._autoCompletionList, "label")) {
                         continue;
                     }
 
@@ -165,11 +175,11 @@ define([
         });
     }
 
-    function isNameInList(targetName, list) {
+    function isNameInList(targetName, list, identity) {
         var flag = false;
 
         for (var i = 0; i < list.length; i++) {
-            if (list[i].label === targetName) {
+            if (list[i][identity] === targetName) {
                 flag = true;
                 break;
             }
@@ -212,27 +222,6 @@ define([
             }
         });
     }
-
-    //function updateUrl (parameter, value) {
-    //    var currentUrl = location.href;
-    //    if (currentUrl.indexOf("?") <= -1) {
-    //        currentUrl = currentUrl + "?";
-    //    }
-    //
-    //    if (currentUrl.indexOf(parameter) > -1) {
-    //        var startIndex, endIndex;
-    //        var urlTokens = currentUrl.split("=");
-    //
-    //    } else {
-    //        if (currentUrl.substring(currentUrl.length - 1, currentUrl.length) === "?") {
-    //            currentUrl = currentUrl + parameter + "=" + value;
-    //        } else {
-    //            currentUrl = currentUrl + "&" + parameter + "=" + value;
-    //        }
-    //
-    //        window.history.pushState("", "", currentUrl);
-    //    }
-    //}
 
     function enableSearchButton (mte) {
         $("#searchButton").click(searchHandler);
@@ -283,19 +272,18 @@ define([
                     searchStr: searchString
                 },
                 success: function (returnedList) {
-                    console.log(returnedList)
                     var formattedList = [];
                     for (var i = 0; i < returnedList.results.length; i++) {
                         var targetName = returnedList.results[i][0];
                         var targetId = returnedList.results[i][1];
                         var targetFirstSol = returnedList.results[i][2];
-                        if (isNameInList(targetName, formattedList)) {
+                        if (isNameInList(targetName, formattedList, "label")) {
                             for (var j = 0; j < formattedList.length; j++) {
                                 if (formattedList[j].label === targetName) {
                                     formattedList[j].associates.push({
                                         component: returnedList.results[i][3],
                                         componentLabel: returnedList.results[i][4],
-                                        authors: returnedList.results[i][5],
+                                        primaryAuthor: returnedList.results[i][5],
                                         publication: returnedList.results[i][6],
                                         excerpt: returnedList.results[i][7],
                                         year: returnedList.results[i][8],
@@ -312,7 +300,7 @@ define([
                                 associates: [{
                                     component: returnedList.results[i][3],
                                     componentLabel: returnedList.results[i][4],
-                                    authors: returnedList.results[i][5],
+                                    primaryAuthor: returnedList.results[i][5],
                                     publication: returnedList.results[i][6],
                                     excerpt: returnedList.results[i][7],
                                     year: returnedList.results[i][8],
@@ -343,7 +331,7 @@ define([
                                         associates: [{
                                             component: "undefined",
                                             componentLabel: "undefined",
-                                            authors: "undefined",
+                                            primaryAuthor: "undefined",
                                             publication: "undefined",
                                             excerpt: "undefined",
                                             year: "undefined",
@@ -375,7 +363,6 @@ define([
     }
 
     function displayResults (formattedList, mte) {
-        console.log(formattedList);
         var resultsDiv = document.getElementById("mteResultsDisplay");
 
         //remove everything in div
@@ -395,15 +382,16 @@ define([
             thumbnailDiv.className = "mte-results-display-block-img";
             $(thumbnailDiv).attr("data-toggle", "modal");
             $(thumbnailDiv).attr("data-target", "#singleTargetDiv");
-            if (formattedList[i].id !== undefined) {
+            if (formattedList[i].id !== undefined && formattedList[i].id !== "None") {
                 thumbnailImg.src = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
             } else {
                 thumbnailImg.src = "images/empty_placeholder.png";
             }
             thumbnailDiv.appendChild(thumbnailImg);
             resultBlock.appendChild(thumbnailDiv);
-            if (formattedList[i].id !== undefined) {
+            if (formattedList[i].id !== undefined && formattedList[i].id !== "None") {
                 resultBlock.thumbnailUrl = "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=" + formattedList[i].id;
+                resultBlock.anLink = "https://an.rsl.wustl.edu/msl/mslBrowser/an3.aspx?it=G1&ii=" + formattedList[i].id;
             } else {
                 resultBlock.thumbnailUrl = "images/empty_placeholder.png";
             }
@@ -472,6 +460,7 @@ define([
         $(targetDiv).click(function () {
             var targetName = resultBlock.targetName;
             var thumbnailUrl = resultBlock.thumbnailUrl;
+            var anLink = resultBlock.anLink;
             var targetAssociates = resultBlock.associates;
             var divHeader = document.getElementById("singleTargetDivHeader");
             var divDisplay = document.getElementById("singleTargetDivDisplay");
@@ -487,9 +476,14 @@ define([
                 divHeader.removeChild(h4);
             }
 
-            var shareButton = document.getElementById("shareButton");
-            if (shareButton !== null && shareButton !== undefined) {
-                divHeader.removeChild(shareButton);
+            var shareDiv = document.getElementById("shareDiv");
+            if (shareDiv !== null && shareDiv !== undefined) {
+                divHeader.removeChild(shareDiv);
+            }
+
+            var anButton = document.getElementById("anButton");
+            if (anButton !== null && anButton !== undefined) {
+                divHeader.removeChild(anButton);
             }
 
             while (divDisplay.hasChildNodes()) {
@@ -509,19 +503,47 @@ define([
             divHeader.appendChild(h4);
 
             //share button
-            shareButton = document.createElement("input");
+            var url = location.href;
+            url = url + "?lookup=" + targetName;
+            shareDiv = document.createElement("div");
+            shareDiv.className = "input-group input-group-sm";
+            shareDiv.id = "shareDiv";
+            var shareInput = document.createElement("input");
+            shareInput.type = "text";
+            shareInput.className = "form-control";
+            shareInput.value =url;
+            shareInput.readOnly = "readonly";
+            var shareSpan = document.createElement("span");
+            shareSpan.className = "input-group-btn";
+            var shareButton = document.createElement("button");
             shareButton.type = "button";
             shareButton.className = "btn btn-info btn-sm";
-            shareButton.id = "shareButton";
-            shareButton.value = "Share Target " + targetName;
-            divHeader.appendChild(shareButton);
-
+            $(shareButton).text("Copy to clipboard");
+            shareDiv.appendChild(shareInput);
+            shareDiv.appendChild(shareSpan);
+            shareSpan.appendChild(shareButton);
+            divHeader.appendChild(shareDiv);
             $(shareButton).click(function () {
-                var url = location.href;
-                url = url + "?lookup=" + targetName;
-                var promptStr = "Copy to clipboard: Ctrl+C, Enter";
-                window.prompt(promptStr, url);
+                shareInput.select();
+                try {
+                    document.execCommand("copy");
+                } catch (err) {
+                    alert("Your browser doesn't support this functionality. Please copy the URL manually.");
+                }
             });
+
+            //anButton
+            if (anLink !== undefined && anLink.length > 0) {
+                anButton = document.createElement("input");
+                anButton.type = "button";
+                anButton.className = "btn btn-info btn-sm";
+                anButton.id = "anButton";
+                anButton.value = "Go to MSL Analyst's Notebook"
+                divHeader.appendChild(anButton);
+                $(anButton).click(function () {
+                    window.open(anLink);
+                });
+            }
 
             //root list
             var rootUl = document.createElement("ul");
@@ -542,61 +564,280 @@ define([
             propertyLi.appendChild(propertyContentUl);
             rootUl.appendChild(propertyLi);
 
-            //case-insensitive sort by component_name (A-Z)
-            //resultBlock.associates.sort(sortBy("component", true, function (str) {
-            //    return str.trim().toLowerCase();
-            //}));
+            var displayList = {
+                element: [],
+                mineral: [],
+                material: [],
+                feature: []
+            }
 
             for (var i = 0; i < resultBlock.associates.length; i++) {
-                var li = document.createElement('li');
-                li.className = "mte-content-li";
-                var componentStr = resultBlock.associates[i].component;
-                var componentLabelStr = " [" + resultBlock.associates[i].componentLabel + "]";
-                var excerptStr = '"' + resultBlock.associates[i].excerpt + '"';
-                var authorsStr = resultBlock.associates[i].authors;
-                var yearStr = resultBlock.associates[i].year;
-                var venueStr = ", " + resultBlock.associates[i].venue;
-                var publicationStr = ' "' + resultBlock.associates[i].publication + '"';
-                var docUrl = resultBlock.associates[i].docUrl;
-
-                if (componentStr === "undefined") {
-                    var componentTextNode = document.createElement("b");
-                    componentTextNode.innerHTML = "None";
-                    li.appendChild(componentTextNode);
+                var component = resultBlock.associates[i].component;
+                var componentLabel = resultBlock.associates[i].componentLabel.toLocaleLowerCase();
+                if (isNameInList(component, displayList[componentLabel], "component")) {
+                    for (var j = 0; j < displayList[componentLabel].length; j++) {
+                        if (displayList[componentLabel][j].component === component) {
+                            displayList[componentLabel][j].content.push({
+                                docUrl: resultBlock.associates[i].docUrl,
+                                excerpt: resultBlock.associates[i].excerpt,
+                                primaryAuthor: resultBlock.associates[i].primaryAuthor,
+                                publication: resultBlock.associates[i].publication,
+                                venue: resultBlock.associates[i].venue,
+                                year: resultBlock.associates[i].year
+                            });
+                        }
+                    }
                 } else {
-                    //TODO temp solution for authors string being too long
-                    if (authorsStr.length > 20) {
-                        authorsStr = authorsStr.substring(0, 20) + ' et al. ';
-                    }
-
-                    if (authorsStr.length === 0) {
-                        authorsStr = "Unknow";
-                    }
-
-                    var componentTextNode = document.createElement("b");
-                    componentTextNode.innerHTML = componentStr;
-                    var componentLabelTextNode = document.createTextNode(componentLabelStr)
-                    var excerptTextNode = document.createTextNode(excerptStr);
-                    var authorsTextNode = document.createTextNode(authorsStr);
-                    var yearTextNode = document.createTextNode("(" + yearStr + ")");
-                    var publicationLink = document.createElement("a");
-                    var publicationTextNode = document.createTextNode(publicationStr);
-                    publicationLink.href = docUrl;
-                    publicationLink.target = "_blank";
-                    publicationLink.appendChild(publicationTextNode);
-                    var venueTextNode = document.createTextNode(venueStr);
-
-                    li.appendChild(componentTextNode);
-                    li.appendChild(componentLabelTextNode);
-                    li.appendChild(document.createElement("br"));
-                    li.appendChild(excerptTextNode);
-                    li.appendChild(document.createElement("br"));
-                    li.appendChild(authorsTextNode);
-                    li.appendChild(yearTextNode);
-                    li.appendChild(publicationLink);
-                    li.appendChild(venueTextNode);
+                    displayList[componentLabel].push({
+                        component: component,
+                        content: [{
+                            docUrl: resultBlock.associates[i].docUrl,
+                            excerpt: resultBlock.associates[i].excerpt,
+                            primaryAuthor: resultBlock.associates[i].primaryAuthor,
+                            publication: resultBlock.associates[i].publication,
+                            venue: resultBlock.associates[i].venue,
+                            year: resultBlock.associates[i].year
+                        }]
+                    });
                 }
-                propertyContentUl.appendChild(li);
+            }
+
+            //case-insensitive sort (A-Z)
+            displayList.element.sort(sortBy("component", true, function (str) {
+                return str.trim().toLowerCase();
+            }));
+            displayList.mineral.sort(sortBy("component", true, function (str) {
+                return str.trim().toLowerCase();
+            }));
+            displayList.material.sort(sortBy("component", true, function (str) {
+                return str.trim().toLowerCase();
+            }));
+            displayList.feature.sort(sortBy("component", true, function (str) {
+                return str.trim().toLowerCase();
+            }));
+
+            if (displayList.element.length > 0) {
+                var elementLi = document.createElement("li");
+                var elementUl = document.createElement("ul");
+                elementLi.className = "mte-content-li-root";
+                elementLi.appendChild(document.createTextNode("Element: "));
+                elementLi.appendChild(elementUl);
+                elementLi.appendChild(document.createElement("hr"));
+                propertyContentUl.appendChild(elementLi);
+                for (var i = 0; i < displayList.element.length; i++) {
+                    var elementName = displayList.element[i].component;
+                    var elementContent = displayList.element[i].content;
+                    var elementNameLi = document.createElement("li");
+                    var elementNameB = document.createElement("b");
+                    elementNameB.innerHTML = elementName;
+                    var elementContentOl = document.createElement("ol");
+                    elementNameLi.className = "mte-content-li";
+                    elementNameLi.appendChild(elementNameB);
+                    elementNameLi.appendChild(elementContentOl);
+                    elementUl.appendChild(elementNameLi);
+
+                    for (var j = 0; j < elementContent.length; j++) {
+                        var li = document.createElement("li");
+                        li.className = "mte-content-li-property";
+                        elementContentOl.appendChild(li);
+
+                        var excerpt = '"' + elementContent[j].excerpt + '"';
+                        var author = elementContent[j].primaryAuthor + " et al. ";
+                        var year = "(" + elementContent[j].year + ")";
+                        var venue = ", " + elementContent[j].venue;
+                        var publication = ' "' + elementContent[j].publication + '"';
+                        var docUrl = elementContent[j].docUrl;
+
+                        if (author.length === 8) {
+                            author = "Unknown. ";
+                        }
+
+                        var excerptTextNode = document.createTextNode(excerpt);
+                        var authorTextNode = document.createTextNode(author);
+                        var yearTextNode = document.createTextNode(year);
+                        var publicationLink = document.createElement("a");
+                        var publicationTextNode = document.createTextNode(publication);
+                        publicationLink.href = docUrl;
+                        publicationLink.target = "_blank";
+                        publicationLink.appendChild(publicationTextNode);
+                        var venueTextNode = document.createTextNode(venue);
+
+                        li.appendChild(excerptTextNode);
+                        li.appendChild(document.createElement("br"));
+                        li.appendChild(authorTextNode);
+                        li.appendChild(yearTextNode);
+                        li.appendChild(publicationLink);
+                        li.appendChild(venueTextNode);
+                    }
+                }
+            }
+
+            if (displayList.mineral.length > 0) {
+                var mineralLi = document.createElement("li");
+                var mineralUl = document.createElement("ul");
+                mineralLi.className = "mte-content-li-root";
+                mineralLi.appendChild(document.createTextNode("Mineral: "));
+                mineralLi.appendChild(mineralUl);
+                mineralLi.appendChild(document.createElement("hr"));
+                propertyContentUl.appendChild(mineralLi);
+                for (var i = 0; i < displayList.mineral.length; i++) {
+                    var mineralName = displayList.mineral[i].component;
+                    var mineralContent = displayList.mineral[i].content;
+                    var mineralNameLi = document.createElement("li");
+                    var mineralNameB = document.createElement("b");
+                    mineralNameB.innerHTML = mineralName;
+                    var mineralContentOl = document.createElement("ol");
+                    mineralNameLi.className = "mte-content-li";
+                    mineralNameLi.appendChild(mineralNameB);
+                    mineralNameLi.appendChild(mineralContentOl);
+                    mineralUl.appendChild(mineralNameLi);
+
+                    for (var j = 0; j < mineralContent.length; j++) {
+                        var li = document.createElement("li");
+                        li.className = "mte-content-li-property";
+                        mineralContentOl.appendChild(li);
+
+                        var excerpt = '"' + mineralContent[j].excerpt + '"';
+                        var author = mineralContent[j].primaryAuthor + " et al. ";
+                        var year = "(" + mineralContent[j].year + ")";
+                        var venue = ", " + mineralContent[j].venue;
+                        var publication = ' "' + mineralContent[j].publication + '"';
+                        var docUrl = mineralContent[j].docUrl;
+
+                        if (author.length === 8) {
+                            author = "Unknown. ";
+                        }
+
+                        var excerptTextNode = document.createTextNode(excerpt);
+                        var authorTextNode = document.createTextNode(author);
+                        var yearTextNode = document.createTextNode(year);
+                        var publicationLink = document.createElement("a");
+                        var publicationTextNode = document.createTextNode(publication);
+                        publicationLink.href = docUrl;
+                        publicationLink.target = "_blank";
+                        publicationLink.appendChild(publicationTextNode);
+                        var venueTextNode = document.createTextNode(venue);
+
+                        li.appendChild(excerptTextNode);
+                        li.appendChild(document.createElement("br"));
+                        li.appendChild(authorTextNode);
+                        li.appendChild(yearTextNode);
+                        li.appendChild(publicationLink);
+                        li.appendChild(venueTextNode);
+                    }
+                }
+            }
+
+            if (displayList.material.length > 0) {
+                var materialLi = document.createElement("li");
+                var materialUl = document.createElement("ul");
+                materialLi.className = "mte-content-li-root";
+                materialLi.appendChild(document.createTextNode("Material: "));
+                materialLi.appendChild(materialUl);
+                materialLi.appendChild(document.createElement("hr"));
+                propertyContentUl.appendChild(materialLi);
+                for (var i = 0; i < displayList.material.length; i++) {
+                    var materialName = displayList.material[i].component;
+                    var materialContent = displayList.material[i].content;
+                    var materialNameLi = document.createElement("li");
+                    var materialNameB = document.createElement("b");
+                    materialNameB.innerHTML = materialName;
+                    var materialContentOl = document.createElement("ol");
+                    materialNameLi.className = "mte-content-li";
+                    materialNameLi.appendChild(materialNameB);
+                    materialNameLi.appendChild(materialContentOl);
+                    materialUl.appendChild(materialNameLi);
+
+                    for (var j = 0; j < materialContent.length; j++) {
+                        var li = document.createElement("li");
+                        li.className = "mte-content-li-property";
+                        materialContentOl.appendChild(li);
+
+                        var excerpt = '"' + materialContent[j].excerpt + '"';
+                        var author = materialContent[j].primaryAuthor + " et al. ";
+                        var year = "(" + materialContent[j].year + ")";
+                        var venue = ", " + materialContent[j].venue;
+                        var publication = ' "' + materialContent[j].publication + '"';
+                        var docUrl = materialContent[j].docUrl;
+
+                        if (author.length === 8) {
+                            author = "Unknown. ";
+                        }
+
+                        var excerptTextNode = document.createTextNode(excerpt);
+                        var authorTextNode = document.createTextNode(author);
+                        var yearTextNode = document.createTextNode(year);
+                        var publicationLink = document.createElement("a");
+                        var publicationTextNode = document.createTextNode(publication);
+                        publicationLink.href = docUrl;
+                        publicationLink.target = "_blank";
+                        publicationLink.appendChild(publicationTextNode);
+                        var venueTextNode = document.createTextNode(venue);
+
+                        li.appendChild(excerptTextNode);
+                        li.appendChild(document.createElement("br"));
+                        li.appendChild(authorTextNode);
+                        li.appendChild(yearTextNode);
+                        li.appendChild(publicationLink);
+                        li.appendChild(venueTextNode);
+                    }
+                }
+            }
+
+            if (displayList.feature.length > 0) {
+                var featureLi = document.createElement("li");
+                var featureUl = document.createElement("ul");
+                featureLi.className = "mte-content-li-root";
+                featureLi.appendChild(document.createTextNode("Feature: "));
+                featureLi.appendChild(featureUl);
+                featureLi.appendChild(document.createElement("hr"));
+                propertyContentUl.appendChild(featureLi);
+                for (var i = 0; i < displayList.feature.length; i++) {
+                    var featureName = displayList.feature[i].component;
+                    var featureContent = displayList.feature[i].content;
+                    var featureNameLi = document.createElement("li");
+                    var featureNameB = document.createElement("b");
+                    featureNameB.innerHTML = featureName;
+                    var featureContentOl = document.createElement("ol");
+                    featureNameLi.className = "mte-content-li";
+                    featureNameLi.appendChild(featureNameB);
+                    featureNameLi.appendChild(featureContentOl);
+                    featureUl.appendChild(featureNameLi);
+
+                    for (var j = 0; j < featureContent.length; j++) {
+                        var li = document.createElement("li");
+                        li.className = "mte-content-li-property";
+                        featureContentOl.appendChild(li);
+
+                        var excerpt = '"' + featureContent[j].excerpt + '"';
+                        var author = featureContent[j].primaryAuthor + " et al. ";
+                        var year = "(" + featureContent[j].year + ")";
+                        var venue = ", " + featureContent[j].venue;
+                        var publication = ' "' + featureContent[j].publication + '"';
+                        var docUrl = featureContent[j].docUrl;
+
+                        if (author.length === 8) {
+                            author = "Unknown. ";
+                        }
+
+                        var excerptTextNode = document.createTextNode(excerpt);
+                        var authorTextNode = document.createTextNode(author);
+                        var yearTextNode = document.createTextNode(year);
+                        var publicationLink = document.createElement("a");
+                        var publicationTextNode = document.createTextNode(publication);
+                        publicationLink.href = docUrl;
+                        publicationLink.target = "_blank";
+                        publicationLink.appendChild(publicationTextNode);
+                        var venueTextNode = document.createTextNode(venue);
+
+                        li.appendChild(excerptTextNode);
+                        li.appendChild(document.createElement("br"));
+                        li.appendChild(authorTextNode);
+                        li.appendChild(yearTextNode);
+                        li.appendChild(publicationLink);
+                        li.appendChild(venueTextNode);
+                    }
+                }
             }
         });
     }

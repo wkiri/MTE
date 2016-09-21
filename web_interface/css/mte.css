@@ -15,6 +15,13 @@
     text-align: center;
 }
 
+.mte-subtitle {
+    font-size: 14px;
+    width: 752px;
+    height: 60px;
+    text-align: center;
+}
+
 .mte-search {
     float: left;
     width: 752px;
@@ -141,9 +148,22 @@ ul {
     list-style-type: none;
 }
 
+.mte-content-li-root {
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    list-style-type: circle;
+}
+
 .mte-content-li {
     padding-left: 0px;
     padding-bottom: 10px;
     margin-left: 25px;
     list-style-type: square;
+}
+
+.mte-content-li-property {
+    padding-left: 0px;
+    padding-bottom: 5px;
+    margin-left: -15px;
 }
