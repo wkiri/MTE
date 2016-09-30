@@ -142,10 +142,12 @@ class BratAnnotation:
                         m = re.search('[A-Z]',content[sent_start:])
                         if m:
                             sent_start = sent_start + m.start()
-                        # End: next period, or end of document.
-                        sent_end   = min(anchor_end + 
-                                         content[anchor_end:].find('.')+1,
-                                         len(content))
+                        # End: next period followed by {space,newline}, or end of document.
+                        sent_end     = anchor_end + content[anchor_end:].find('. ')+1
+                        if sent_end <= anchor_end:
+                            sent_end = anchor_end + content[anchor_end:].find('.\n')+1
+                        if sent_end <= anchor_end: 
+                            sent_end = len(content)
                         excerpt = content[sent_start:sent_end]
 
                         # Get the canonical forms of the target and component
