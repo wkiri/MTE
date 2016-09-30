@@ -23,7 +23,8 @@ except ImportError, e:
 # https://github.com/ryanaustincarlson/moocdb/blob/master/annotate/BratAnnotation.py
 def insert_into_table(cursor, table, columns, values):
     def format_text(text):
-        return "'" + text.replace("'", "''").replace("%", "%%") + "'"
+#        return "'" + text.replace("'", "''").replace("%", "%%") + "'"
+        return "'" + text.replace("'", "''") + "'"
 
     columns_string = "(" + ', '.join([str(c) for c in columns]) + ")" \
         if columns is not None else ""
