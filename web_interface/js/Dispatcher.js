@@ -19,7 +19,7 @@ define([
 
     Dispatcher.prototype.getPartialURL = function () {
         var index = getURLSplitterIndex(this._url);
-        return url.substring(0, index);
+        return this._url.substring(0, index);
     }
 
     Dispatcher.prototype.getParameterTargetName = function () {

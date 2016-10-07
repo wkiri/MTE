@@ -14,7 +14,7 @@ define([
         this._mteSearch = document.createElement("div");
         this._mteResults = document.createElement("div");
         this._mteSearchComponent = document.createElement("div");
-        this._inputField = document.createElement("text");
+        this._inputField = document.createElement("input");
         this._buttonSpan = document.createElement("span");
         this._searchButton = createButton(CONSTANTS.SEARCHBUTTON_ID, CONSTANTS.SEARCHBUTTON_STYLE,
             CONSTANTS.SEARCHBUTTON_IMG);
@@ -539,6 +539,7 @@ define([
         var buttonImgElem = document.createElement("img");
         buttonImgElem.src = buttonImg;
         buttonImgElem.height = "15";
+        button.appendChild(buttonImgElem);
 
         if (dataTarget !== undefined && dataTarget.length > 0) {
             $(button).attr("data-toggle", "modal");

@@ -23,9 +23,10 @@ define([
         mteViewer._autoCompletionList = [];
         mteViewer._interface = new MTEInterface(mteViewer._containerId, mteViewer._thumbnailUrlRoot, mteViewer._mslANLinkRoot);
         mteViewer._autoCompletion = new AutoCompletion(mteViewer._cgiRoot);
-        mteViewer._listeners = new MTEListener(mteViewer._interface, mteViewer._autoCompletion, mteViewer._cgiRoot);
+        mteViewer._listeners = new MTEListener(mteViewer._interface, mteViewer._autoCompletion, mteViewer._cgiRoot,
+            mteViewer._thumbnailUrlRoot, mteViewer._mslANLinkRoot);
         mteViewer._interface.build();
-        mteViewer._autoCompletion.enable();
+        mteViewer._autoCompletion.enable(mteViewer._interface._inputField);
         mteViewer._listeners.initEventListeners();
 
         $(document).ready(function () {

@@ -8,16 +8,16 @@ define([
     "use strict";
 
     var AutoCompletion = function (cgiRoot){
-        this._list = {};
+        this._list = [];
 
         customize();
         loadTargets(this._list, cgiRoot);
         loadComponents(this._list, cgiRoot);
     }
 
-    AutoCompletion.prototype.enable = function (targetElementId) {
+    AutoCompletion.prototype.enable = function (targetElement) {
         var self = this;
-        $('#' + targetElementId).catcomplete({
+        $(targetElement).catcomplete({
             delay: 0,
             source: self._list
         });

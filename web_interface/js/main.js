@@ -5,9 +5,9 @@ require([
 ){
     "use strict";
 
-    $.getJSON("configuration.json", function (config) {
+    $.getJSON("js/configuration.json", function (config) {
         var cgiRoot = config.cgi_root;
-        var thumbnailUrlRoot = config.thumnail_url_root;
+        var thumbnailUrlRoot = config.thumbnail_url_root;
         var mslANLinkRoot = config.msl_an_link_root;
         var containerId = "mteContainer";
         new MTEViewer({
