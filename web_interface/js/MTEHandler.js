@@ -31,7 +31,7 @@ define([
             success: function (returnedList) {
                 var formattedList = util.getReformattedList(returnedList);
                 if (formattedList.length === 0 && targetMatches !== 0) {
-                    featchResultsWOProperties (searchStr, formattedList, util, mteInterface, listener);
+                    featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, listener);
                 } else {
                     if (formattedList.length === 1) {
                         mteInterface.setStatusLabel("1 target found");
@@ -97,9 +97,9 @@ define([
         });
     }
 
-    function featchResultsWOProperties (searchStr, formattedList, util, mteInterface, mteListener) {
+    function featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, mteListener) {
         $.ajax({
-            url: "http://mte.jpl.nasa.gov/cgi/getResultsWOProperties.py",
+            url: cgiRoot + CONSTANTS.SERVER_GET_RESULTS_WITHOUT_PROPERTIES,
             type: "post",
             dataType: "json",
             data: {

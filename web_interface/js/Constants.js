@@ -30,6 +30,7 @@ define([], function () {
     CONSTANTS.SERVER_GET_COMPONENTS = "getComponentsNameAndLabel.py";
     CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR = "getResultsBySearchStr.py";
     CONSTANTS.SERVER_GET_STATISTIC = "getStatistics.py";
+    CONSTANTS.SERVER_GET_RESULTS_WITHOUT_PROPERTIES = "getResultsWOProperties.py";
 
     return CONSTANTS;
 })

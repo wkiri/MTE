@@ -166,7 +166,6 @@ define([
         var targetName = resultBlock.targetName;
         var thumbnailUrl = resultBlock.thumbnailUrl;
         var anLink = resultBlock.anLink;
-        var targetAssociates = resultBlock.associates;
         var divHeader = document.getElementById("singleTargetDivHeader");
         var divDisplay = document.getElementById("singleTargetDivDisplay");
 

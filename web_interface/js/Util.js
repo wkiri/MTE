@@ -87,7 +87,7 @@ define([], function () {
       return formattedList;
    }
 
-   Util.prototype.addResultsToList = function (resultList, formattedList) {
+   Util.prototype.addResultsToList = function (returnedList, formattedList) {
       for (var i = 0; i < returnedList.results.length; i++) {
          var targetName = returnedList.results[i][0];
          var targetId = returnedList.results[i][1];
@@ -116,6 +116,11 @@ define([], function () {
       for (var i = 0; i < resultBlock.associates.length; i++) {
          var component = resultBlock.associates[i].component;
          var componentLabel = resultBlock.associates[i].componentLabel.toLocaleLowerCase();
+
+         if (displayList[componentLabel] === undefined) {
+            continue;
+         }
+
          if (this.isNameInList(component, displayList[componentLabel], "component")) {
             for (var j = 0; j < displayList[componentLabel].length; j++) {
                if (displayList[componentLabel][j].component === component) {
