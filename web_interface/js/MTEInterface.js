@@ -251,6 +251,41 @@ define([
         if (displayList.feature.length > 0) {
             buildPropertyFeature (propertyContentUl, displayList);
         }
+
+        ///////////testing mmgis//////////////////////////////////
+        ////1st method////
+        //var mmgisDiv = document.createElement('div');
+        //mmgisDiv.className = 'mte-mmgis-div';
+        //divDisplay.appendChild(mmgisDiv);
+        //$.ajax({
+        //    url: "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html",
+        //    //url: "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/Layers/ChemCam/MSL_CHEMCAM_oxides_sol1126_geo.json",
+        //    success: function (mmgisPage){
+        //        mmgisDiv.innerHTML = mmgisPage;
+        //    }
+        //});
+        ////1st method end/////
+
+        ////2nd method/////////
+        //$(mmgisDiv).load("http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html");
+        ////2nd method end//////
+
+        ////3rd method/////////
+        var mmgisDiv = document.createElement('div');
+        mmgisDiv.className = 'mte-mmgis-div';
+        divDisplay.appendChild(mmgisDiv);
+
+        var iframe = document.createElement("iframe");
+        iframe.className = "mte-mmgis-iframe";
+        iframe.src = "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html";
+        mmgisDiv.appendChild(iframe);
+
+        $("#searchTool").click();
+        $("#searchToolB").click();
+        $("#auto_search").val("Windjana 614");
+        $("#searchToolSelect").click();
+        ////3rd method end/////
+        ///////////testing mmgis end//////////////////////////////
     }
 
     MTEInterface.prototype.createColumnChart = function (statisticList) {
