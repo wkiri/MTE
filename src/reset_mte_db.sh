@@ -5,7 +5,7 @@
 DB=mte
 
 # Delete old tables
-psql -d $DB -c 'drop table contains, components, targets, documents, anchors, targets_an;'
+psql -d $DB -c 'drop table contains, components, targets, documents, anchors, targets_an, targets_mmgis;'
 
 # Create new ones
 ./create_db.py
@@ -25,6 +25,9 @@ psql -d $DB -c 'drop table contains, components, targets, documents, anchors, ta
 # Add the Analyst's Notebook table
 ./insert_an.py -db $DB 2>/dev/null
 
+# Add the MMGIS lat/lon table
+./insert_mmgis.py -db $DB 2>/dev/null
+
 # Check that it worked
 echo 'Documents:'
 psql -d $DB -c 'SELECT COUNT(*) from documents;'
@@ -36,5 +39,7 @@ echo 'Contains:'
 psql -d $DB -c 'SELECT COUNT(*) from contains;'
 echo 'Anchors:'
 psql -d $DB -c 'SELECT COUNT(*) from anchors;'
-echo 'Targets_AN:'
+echo 'Targets_an:'
 psql -d $DB -c 'SELECT COUNT(*) from targets_an;'
+echo 'Targets_mmgis:'
+psql -d $DB -c 'SELECT COUNT(*) from targets_mmgis;'
