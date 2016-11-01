@@ -10,6 +10,7 @@ define([], function () {
     CONSTANTS.SUBTITLE_STYLE = "mte-subtitle";
     CONSTANTS.SEARCH_STYLE = "mte-search";
     CONSTANTS.RESULTS_STYLE = "mte-results";
+    CONSTANTS.MMGIS_STYLE = "mte-mmgis";
     CONSTANTS.SEARCHBUTTON_ID = "searchButton";
     CONSTANTS.SEARCHBUTTON_STYLE = "btn btn-info";
     CONSTANTS.SEARCHBUTTON_IMG = "images/search-icon.png";
@@ -26,6 +27,7 @@ define([], function () {
     CONSTANTS.RESULTS_STATUS_STYLE = "mte-results-status";
     CONSTANTS.RESULTS_DISPLAY_ID = "mteResultsDisplay";
     CONSTANTS.RESULTS_DISPLAY_STYLE = "mte-results-display";
+    CONSTANTS.MMGIS_IFRAME_STYLE = "mte-mmgis-iframe";
     CONSTANTS.SERVER_GET_TARGETS = "getTargetsName.py";
     CONSTANTS.SERVER_GET_COMPONENTS = "getComponentsNameAndLabel.py";
     CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR = "getResultsBySearchStr.py";

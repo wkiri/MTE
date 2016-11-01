@@ -54,6 +54,12 @@ try:
             targetId = records[0][0]
             targetFirstSol = records[0][1]
 
+        sql_targets_mmgis = "select target_latitude, target_longitude from targets_mmgis where target_name = '%s'" % (target_name[0])
+        cursor.execute(sql_targets_mmgis)
+        coord_records = cursor.fetchall()
+        targetLat = coord_records[0][0]
+        targetLon = coord_records[0][1]
+
         #sql_contains = "select doc_id, component_name, excerpt from contains where target_name = '%s'" % (target_name[0])
         sql_contains = "select doc_id, contains.component_name, excerpt, component_label from contains, components where target_name = '%s' and (component_label='Element' or component_label='Feature' or component_label='Material' or component_label='Mineral') and contains.component_name = components.component_name order by case component_label when 'Element' then 1 when 'Mineral' then 2 when 'Material' then 3 when 'Feature' then 4 else 5 end;" % (target_name[0])
         cursor.execute(sql_contains)
@@ -70,7 +76,7 @@ try:
             year = doc_result[0][2]
             venue = doc_result[0][3]
             docUrl = doc_result[0][4]
-            results.append([targetName, targetId, targetFirstSol, componentName, componentLabel, authors, title, excerpt, year, venue, docUrl])
+            results.append([targetName, targetId, targetFirstSol, componentName, componentLabel, authors, title, excerpt, year, venue, docUrl, targetLat, targetLon])
     return_dic["results"] = results
 except:
     return_dic["results"] = ""

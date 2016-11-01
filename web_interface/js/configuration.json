@@ -1,5 +1,6 @@
 {
   "cgi_root": "https://mte.jpl.nasa.gov/cgi/",
   "thumbnail_url_root": "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=",
-  "msl_an_link_root": "https://an.rsl.wustl.edu/msl/mslBrowser/an3.aspx?it=G1&ii="
+  "msl_an_link_root": "https://an.rsl.wustl.edu/msl/mslBrowser/an3.aspx?it=G1&ii=",
+  "mmgis_url_root": "https://miplmmgis.jpl.nasa.gov/mmgis/MMGIS/?mission=MSL"
 }

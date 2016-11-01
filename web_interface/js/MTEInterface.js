@@ -5,9 +5,10 @@ define([
 ) {
     "use strict";
 
-    var MTEInterface = function (containerId, thumbnailUrlRoot, mslANLinkRoot) {
+    var MTEInterface = function (containerId, thumbnailUrlRoot, mslANLinkRoot, mmgisUrlRoot) {
         this._thumbnailUrlRoot = thumbnailUrlRoot;
         this._mslANLinkRoot = mslANLinkRoot;
+        this._mmgisUrlRoot = mmgisUrlRoot;
         this._mteContainer = document.getElementById(containerId);
         this._mteLogo = document.createElement("div");
         this._mteSubtitle = document.createElement("div");
@@ -22,6 +23,7 @@ define([
             CONSTANTS.STATSBUTTON_IMG, CONSTANTS.STATSBUTTON_DATA_TARGET);
         this._mteResultsStatus = document.createElement("div");
         this._mteResultsDisplay = document.createElement("div");
+        this._mteMMGIS = document.createElement("div");
 
         return this;
     }
@@ -31,10 +33,12 @@ define([
         this._mteSubtitle.className = CONSTANTS.SUBTITLE_STYLE;
         this._mteSearch.className = CONSTANTS.SEARCH_STYLE;
         this._mteResults.className = CONSTANTS.RESULTS_STYLE;
+        this._mteMMGIS.className = CONSTANTS.MMGIS_STYLE;
         this._mteContainer.appendChild(this._mteLogo);
         this._mteContainer.appendChild(this._mteSubtitle);
         this._mteContainer.appendChild(this._mteSearch);
         this._mteContainer.appendChild(this._mteResults);
+        this._mteContainer.appendChild(this._mteMMGIS);
 
         //logo panel
         this._mteLogo.appendChild(document.createTextNode(CONSTANTS.LOGO_STR));
@@ -74,9 +78,13 @@ define([
         while (this._mteResultsDisplay.hasChildNodes()) {
             this._mteResultsDisplay.removeChild(this._mteResultsDisplay.lastChild);
         }
+
+        while (this._mteMMGIS.hasChildNodes()) {
+            this._mteMMGIS.removeChild(this._mteMMGIS.lastChild);
+        }
     }
 
-    MTEInterface.prototype.displayResults = function (formattedList, mteListener, util) {
+    MTEInterface.prototype.displayResults = function (formattedList, mteListener, util, mmgisUrlRoot) {
         for (var i = 0; i < formattedList.length; i++) {
             //unit result container
             var resultBlock = document.createElement("div");
@@ -118,6 +126,8 @@ define([
             $(targetDiv).attr("data-target", "#singleTargetDiv");
             resultBlock.targetName = formattedList[i].label;
             resultBlock.firstSol = formattedList[i].firstSol;
+            resultBlock.targetLat = formattedList[i].targetLat;
+            resultBlock.targetLon = formattedList[i].targetLon;
 
             //properties
             var propertyDiv = document.createElement("div");
@@ -160,9 +170,12 @@ define([
             mteListener.appendTargetClickEventListener(targetDiv, resultBlock);
             mteListener.appendTargetClickEventListener(thumbnailDiv, resultBlock);
         }
+
+        //append mmgis multiple targets display
+        mmgisMultiTargetsHandler(this._mteMMGIS, formattedList, util, mmgisUrlRoot);
     }
 
-    MTEInterface.prototype.buildSingleTargetPage = function (resultBlock, displayList, mteListener) {
+    MTEInterface.prototype.buildSingleTargetPage = function (resultBlock, displayList, mteListener, mmgisUrlRoot) {
         var targetName = resultBlock.targetName;
         var thumbnailUrl = resultBlock.thumbnailUrl;
         var anLink = resultBlock.anLink;
@@ -252,40 +265,21 @@ define([
             buildPropertyFeature (propertyContentUl, displayList);
         }
 
-        ///////////testing mmgis//////////////////////////////////
-        ////1st method////
-        //var mmgisDiv = document.createElement('div');
-        //mmgisDiv.className = 'mte-mmgis-div';
-        //divDisplay.appendChild(mmgisDiv);
-        //$.ajax({
-        //    url: "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html",
-        //    //url: "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/Layers/ChemCam/MSL_CHEMCAM_oxides_sol1126_geo.json",
-        //    success: function (mmgisPage){
-        //        mmgisDiv.innerHTML = mmgisPage;
-        //    }
-        //});
-        ////1st method end/////
-
-        ////2nd method/////////
-        //$(mmgisDiv).load("http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html");
-        ////2nd method end//////
-
-        ////3rd method/////////
         var mmgisDiv = document.createElement('div');
-        mmgisDiv.className = 'mte-mmgis-div';
-        divDisplay.appendChild(mmgisDiv);
-
         var iframe = document.createElement("iframe");
-        iframe.className = "mte-mmgis-iframe";
-        iframe.src = "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html";
-        mmgisDiv.appendChild(iframe);
+        mmgisDiv.className = 'mte-mmgis-div';
+        iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
 
-        $("#searchTool").click();
-        $("#searchToolB").click();
-        $("#auto_search").val("Windjana 614");
-        $("#searchToolSelect").click();
-        ////3rd method end/////
-        ///////////testing mmgis end//////////////////////////////
+        if (resultBlock.targetLat !== "None" && resultBlock.targetLon !== "None" &&
+            resultBlock.targetLat !== undefined && resultBlock.targetLon !== undefined) {
+            iframe.src = mmgisUrlRoot + "&lat=" + resultBlock.targetLat + "&lon=" + resultBlock.targetLon +  "&zoom=18";
+            mmgisDiv.appendChild(iframe);
+            divDisplay.appendChild(mmgisDiv);
+        }
+
+        var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        var mmgisAutoSearchInput = innerDoc.getElementById("auto_search");
+        mmgisAutoSearchInput.value = targetName;
     }
 
     MTEInterface.prototype.createColumnChart = function (statisticList) {
@@ -581,6 +575,35 @@ define([
         }
 
         return button;
+    }
+
+    function mmgisMultiTargetsHandler (mmgisDiv, formattedList, util, mmgisUrlRoot) {
+        var boundingbox, centerLat, centerLon, zoomLevel;
+
+        if (formattedList.length > 1) {
+            boundingbox = util.getBoundingbox(formattedList);
+            centerLat = util.getCenterLat(boundingbox);
+            centerLon = util.getCenterLon(boundingbox);
+            zoomLevel = util.getZoomlevel(boundingbox);
+        } else if (formattedList.length === 1) {
+            centerLat = formattedList[0].targetLat;
+            centerLon = formattedList[0].targetLon;
+            zoomLevel = 18;
+        } else {
+            centerLat = "None";
+            centerLon = "None";
+            zoomLevel = "None";
+        }
+
+        if (centerLat === "None" || centerLon === "None" || zoomLevel === "None" ||
+            centerLat === undefined || centerLon === undefined || zoomLevel === undefined) {
+            return;
+        } else {
+            var iframe = document.createElement("iframe");
+            iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
+            iframe.src = mmgisUrlRoot + "&lat=" + centerLat + "&lon=" + centerLon + "&zoom=" + zoomLevel;
+            mmgisDiv.appendChild(iframe);
+        }
     }
 
     return MTEInterface;
