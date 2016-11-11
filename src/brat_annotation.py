@@ -131,14 +131,23 @@ class BratAnnotation:
                             break
 
                         # Compute the likely start and end of the sentence
+                        # surrounding the component
                         content = content[0]
                         cursor.execute("SELECT span_start, span_end, text " +
                                        "FROM anchors " +
                                        "WHERE anchor_id='%s';" \
-                                           % (self.doc_id+'_'+self.anchor))
+                                           % (self.doc_id+'_'+v))
                         (anchor_start,anchor_end,text) = cursor.fetchone()
-                        # Start: first capital letter after last period.
-                        sent_start = max(content[:anchor_start].rfind('.'),0)
+
+                        # Start: first capital letter after last period before last capital letter!
+                        sent_start = 0
+                        # Last preceding capital
+                        m = [m for m in re.finditer('[A-Z]',content[:anchor_start])]
+                        if m:
+                            sent_start = m[-1].start()
+                        # Last preceding period
+                        sent_start = max(content[:sent_start].rfind('.'),0)
+                        # Next capital
                         m = re.search('[A-Z]',content[sent_start:])
                         if m:
                             sent_start = sent_start + m.start()
