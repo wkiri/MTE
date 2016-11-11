@@ -6,14 +6,15 @@
 # Kiri Wagstaff
 # February 18, 2016
 
-import sys, os
+import sys, os, io
 import string
 import re
 
 # Input files
 #textdir = '../text/lpsc15-C-pre-annotate-sol1159'
 #textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
-textdir = '../text/lpsc16-C-pre-annotate'
+#textdir = '../text/lpsc16-C-pre-annotate'
+textdir = '../../MTE-corpus/lpsc14-text'
 
 # Reference files
 elementfile = '../ref/elements.txt'
@@ -47,17 +48,18 @@ def pre_annotate(lines, items, name, outf, start_t):
         # will cause a split.  This way we can update span_start
         # correctly even if there are multiple spaces present.
         words = l.split(' ')
+        # Convert UTF-8 to a Unicode string, so funky chars don't get counted
+        # as two bytes instead of one.
+        words = [w.decode('utf8') for w in words]
         for (i,w) in enumerate(words):
-            extra = 0 # Characters we stripped off but still need to count in spans
             end_of_sentence = False
             # Remove any trailing \n etc.
             w_strip = w.strip()
-            #print w,w_strip
+            #print '<%s>,<%s>' % (w,w_strip)
             # Track whether this is a potential end of sentence
             # to avoid spurious element abbreviation annotations
             if w_strip.endswith('.'):
                 end_of_sentence = True
-            #print w,w_strip
             # Remove any punctuation, except '_' and '+' (ions) and '-'
             # and '.' (e.g., Mt. Sharp)
             w_strip = re.sub('[%s]' % re.escape(mypunc), '', w_strip)
@@ -72,6 +74,7 @@ def pre_annotate(lines, items, name, outf, start_t):
                              ' '.join([w_strip, w_next_1, w_next_2]))]
 
             for (my_word, my_word_strip) in phrases:
+                extra = 0 # Characters we stripped off but still need to count in spans
                 # If it ends with - or ., take it off
                 if (my_word_strip.endswith('-') or 
                     my_word_strip.endswith('.')):
@@ -89,7 +92,11 @@ def pre_annotate(lines, items, name, outf, start_t):
                     else:
                         # This handles leading and trailing punctuation,
                         # but not cases where there is internal punctuation
-                        span_start_strip = span_start + my_word.index(my_word_strip)
+                        try:
+                            span_start_strip = span_start + my_word.index(my_word_strip)
+                        except: # internal punctuation, so skip it
+                            print 'Skipping', my_word, my_word_strip
+                            continue
                         span_end    = span_start_strip + len(my_word_strip)# + extra
                         '''
                         print '%s, %s, %s goes from %d (%d) to %d' % \
@@ -97,22 +104,27 @@ def pre_annotate(lines, items, name, outf, start_t):
                              span_start_strip,
                              my_word.index(my_word_strip),
                              span_end)
-                             '''
-                    # Format: Tx\tTarget <span_start> <span_end>\t<word>
+                        raw_input()
+                        '''
+
+                        # Format: Tx\tTarget <span_start> <span_end>\t<word>
                         outf.write('T' + str(target_ind) + '\t' +
                                    name + ' ' + str(span_start_strip) + 
                                    ' ' + str(span_end) + '\t' +
                                    my_word_strip + '\n')
-                    # Set up for the next target
+                        # Set up for the next target
                         target_ind += 1
                 else:
                     span_end    = span_start + len(my_word_strip) + extra
                     
-            #print '<%s>, span %d to %d' % (w, span_start, span_end)
+                #print '<%s>, <%s>, span %d to %d' % (w, my_word, span_start, span_end)
+
             # Either way, update span_start
             span_end   = span_start + len(w)
+            #span_start = span_end
             span_start = span_end + 1 # Assumes followed by space 
             # (or newline, for final word in line)
+
         span_start -= 1 # Uncount the newline (double-count)
 
     # return the latest target_ind for ongoing use
@@ -136,6 +148,9 @@ def pre_annotate_suffix(lines, suffix, min_len, nonmatches, name, outf, start_t)
         # will cause a split.  This way we can update span_start
         # correctly even if there are multiple spaces present.
         words = l.split(' ')
+        # Convert UTF-8 to a Unicode string, so funky chars don't get counted
+        # as two bytes instead of one.
+        words = [w.decode('utf8') for w in words]
         for w in words:
             # Remove any trailing \n etc.
             w_strip = w.strip()
@@ -247,6 +262,8 @@ print 'Read in %d MER target names.' % len(mer_targets)
 
 # Iterate through documents; output to .ann file
 for fn in dirlist:
+    #if int(fn.split('.')[0]) < 1063:
+    #    continue
     print fn
 
     # Read in the input .txt document
@@ -257,7 +274,7 @@ for fn in dirlist:
 
     # Create the annotations
     start_t = 1
-    with open(annfile, 'w') as outf:
+    with io.open(annfile, 'w', encoding='utf8') as outf:
         start_t = pre_annotate(lines, elements,        'Element', outf, start_t)
         start_t = pre_annotate(lines, chemcam_targets, 'Target',  outf, start_t)
 #        start_t = pre_annotate(lines, mer_targets,     'Target',  outf, start_t)
