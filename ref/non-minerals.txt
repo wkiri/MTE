@@ -28,6 +28,7 @@ ConcentrationsMeteorite
 Condrite
 ContentsMeteorite
 Contents⇒Meteorite
+Crater-to-tektite
 CreativeSuite
 CryovolcanicSatellite
 Definite
@@ -97,6 +98,7 @@ Metorite
 Mgsuite
 Mg-Suite
 Micro-tektite
+Microtektite
 Micrometeorite
 Mini-satellite
 Multiple-satellite
@@ -116,9 +118,10 @@ Planet-satellite
 Planetsatellite
 Prerequisite
 Primitivemeteorite
-Protosatellite
+Proto-tektite
 Proto-Earth-satellite
 ProtoEarth-satellite
+Protosatellite
 Quite
 R-chondrite
 Relavite
@@ -158,3 +161,4 @@ White
 ⇒⇒⇒Meteorite
 ≥CI-chondrite
 „Meteorite
+µ-tektite
