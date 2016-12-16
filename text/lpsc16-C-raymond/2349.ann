@@ -1,0 +1,33 @@
+T3	Target 3107 3115	Buckskin
+T4	Target 3145 3153	Buckskin
+T5	Target 3272 3280	Buckskin
+T6	Target 4719 4726	Big Sky
+T8	Target 4731 4740	Greenhorn
+T9	Target 4891 4898	Big Sky
+T11	Target 4903 4912	Greenhorn
+T15	Target 5708 5716	Buckskin
+T18	Target 7736 7745	Greenhorn
+T19	Mineral 3337 3346	tridymite
+T20	Mineral 5682 5691	tridymite
+T21	Mineral 5456 5463	sulfate
+T1	Material 3299 3305	silica
+T2	Contains 3306 3316	enrichment
+E1	Contains:T2 Cont:T1 Targ:T5 Cont2:T19 Cont3:T22
+A1	Amount E1 Contains_High
+T22	Material 3351 3367	amorphous silica
+T23	Locality 3236 3247	Marias Pass
+R1	IsSituatedIn Arg1:T5 Arg2:T23	
+T7	Locality 4801 4814	Bridger Basin
+R2	IsSituatedIn Arg1:T8 Arg2:T7	
+R3	IsSituatedIn Arg1:T6 Arg2:T7	
+T24	Formation 4780 4787	Stimson
+R4	BelongsTo Arg1:T8 Arg2:T24	
+R5	BelongsTo Arg1:T6 Arg2:T24	
+T10	Contains 5692 5703	detected in
+E2	Contains:T10 Targ:T15 Cont:T20
+T12	Process 5752 5760	detrital
+R6	Shows Arg1:T15 Arg2:T12	
+T13	Material 7705 7721	amorphous silica
+T14	Contains 7691 7704	enrichment of
+E3	Contains:T14 Cont:T13 Targ:T18
+A2	Amount E3 Contains_High
