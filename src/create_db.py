@@ -150,7 +150,7 @@ try:
     cursor.execute('grant select, insert, update '
                    'on contains, components, targets, documents, '
                    'anchors, targets_an, targets_mmgis '
-                   'to youlu, thammegr, wkiri;')
+                   'to youlu, thammegr, wkiri, ksingh;')
     cursor.execute('grant select '
                    'on contains, components, targets, documents, '
                    'anchors, targets_an, targets_mmgis '
