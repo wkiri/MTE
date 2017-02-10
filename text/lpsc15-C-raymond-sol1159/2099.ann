@@ -189,3 +189,18 @@ T121	Element 7231 7233	Mg
 T122	Feature 7240 7261	dendritic concretions
 R21	Shows Arg1:T117 Arg2:T122	
 R22	Shows Arg1:T116 Arg2:T122	
+T123	Target 3599 3605	Chinle
+T124	Target 3577 3593	Confidence Hills
+T125	Target 4216 4232	Carvivore Canyon
+T126	Target 4233 4247	Alexander Hill
+T127	Target 4262 4272	Whale Rock
+T128	Target 4285 4299	Alexander Hill
+T129	Target 4300 4316	Carnivore Canyon
+T130	Target 5029 5039	Whale Rock
+T131	Target 6666 6681	Alexander Hills
+T132	Target 6756 6772	Confidence Hills
+T133	Target 6777 6787	Whale Rock
+T134	Target 6792 6803	Pink Cliffs
+T135	Target 6806 6812	Chinle
+T136	Target 6819 6830	San Gabriel
+T137	Target 7381 7391	Whale Rock

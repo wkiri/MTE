@@ -20,7 +20,6 @@ T23	Element 7695 7696	B
 T24	Target 3409 3415	Darwin
 T25	Target 4852 4858	Darwin
 T26	Target 5716 5721	Delta
-T27	Target 7712 7720	Anderson
 T28	Locality 3511 3522	Cooperstown
 T29	Locality 3527 3535	Kimberly
 T30	Mineral 3314 3334	plagioclase feldspar
@@ -66,3 +65,5 @@ E6	Contains:T52 Cont:T51 Targ:T50
 A5	Confidence E6 Neutral
 T53	Locality 7084 7092	Kimberly
 T54	Site 6951 6959	Rocknest
+T55	Target 5626 5636	Book Cliff
+T56	Target 5680 5691	Pink Cliffs

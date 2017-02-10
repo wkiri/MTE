@@ -186,3 +186,5 @@ E19	StratRel:T116 Obj:T115 Subj:T113 Subj2:T59 Subj3:T112 Subj4:T110 Subj5:T58 S
 A17	Position E19 IsPartOf
 T117	Unit 5575 5586	Rugged unit
 T118	Element 5682 5690	potassic
+T119	Locality 1290 1301	Cooperstown
+T120	Locality 1324 1333	Kimberley

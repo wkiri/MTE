@@ -71,3 +71,13 @@ E10	Contains:T62 Cont:T38 Targ:T49
 T63	Contains 6332 6345	concentration
 E11	Contains:T63 Cont:T64 Targ:T53
 T64	Material 6319 6322	MgO
+T41	Target 3390 3399	Goldstone
+T42	Target 3473 3482	Goldstone
+T43	Contains 3530 3548	spectra line ratio
+E12	Contains:T43 Cont:T19 Targ:T42
+T65	Target 3813 3822	Goldstone
+T66	Target 5170 5179	Goldstone
+T67	Target 5277 5286	Goldstone
+T68	Contains 5154 5165	composition
+E13	Contains:T68 Cont:T69 Targ:T66
+T69	Material 5150 5153	MgO

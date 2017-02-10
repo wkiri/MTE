@@ -104,3 +104,6 @@ E8	Contains:T65 Targ:T63 Targ2:T62 Cont:T64
 A11	Confidence E8 Neutral
 T10	Locality 4840 4853	Pahrump Hills
 T11	Mineral 4871 4879	hematite
+T12	Target 5990 5998	Perdido2
+T13	Target 6071 6079	Perdido2
+T14	Target 6260 6272	Bonanza_King

@@ -28,3 +28,5 @@ T5	Contains 4964 4968	high
 E1	Contains:T5 Cont:T8 Targ:T56
 A1	Amount E1 Contains_High
 T8	Element 4969 4971	Ni
+T13	Target 4735 4745	Adirondack
+T16	Region 6433 6445	Gusev crater
