@@ -126,8 +126,6 @@ define([
             $(targetDiv).attr("data-target", "#singleTargetDiv");
             resultBlock.targetName = formattedList[i].label;
             resultBlock.firstSol = formattedList[i].firstSol;
-            resultBlock.targetLat = formattedList[i].targetLat;
-            resultBlock.targetLon = formattedList[i].targetLon;
 
             //properties
             var propertyDiv = document.createElement("div");
@@ -172,7 +170,7 @@ define([
         }
 
         //append mmgis multiple targets display
-        mmgisMultiTargetsHandler(this._mteMMGIS, formattedList, util, mmgisUrlRoot);
+        mmgisMultiTargetsHandler(this._mteMMGIS, formattedList, mmgisUrlRoot);
     }
 
     MTEInterface.prototype.buildSingleTargetPage = function (resultBlock, displayList, mteListener, mmgisUrlRoot) {
@@ -269,17 +267,9 @@ define([
         var iframe = document.createElement("iframe");
         mmgisDiv.className = 'mte-mmgis-div';
         iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
-
-        if (resultBlock.targetLat !== "None" && resultBlock.targetLon !== "None" &&
-            resultBlock.targetLat !== undefined && resultBlock.targetLon !== undefined) {
-            iframe.src = mmgisUrlRoot + "&lat=" + resultBlock.targetLat + "&lon=" + resultBlock.targetLon +  "&zoom=18";
-            mmgisDiv.appendChild(iframe);
-            divDisplay.appendChild(mmgisDiv);
-        }
-
-        var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        var mmgisAutoSearchInput = innerDoc.getElementById("auto_search");
-        mmgisAutoSearchInput.value = targetName;
+        iframe.src = mmgisUrlRoot + "&searchStr=" + targetName;
+        mmgisDiv.appendChild(iframe);
+        divDisplay.appendChild(mmgisDiv);
     }
 
     MTEInterface.prototype.createColumnChart = function (statisticList) {
@@ -577,33 +567,19 @@ define([
         return button;
     }
 
-    function mmgisMultiTargetsHandler (mmgisDiv, formattedList, util, mmgisUrlRoot) {
-        var boundingbox, centerLat, centerLon, zoomLevel;
+    function mmgisMultiTargetsHandler (mmgisDiv, formattedList, mmgisUrlRoot) {
+        var targetName;
+        var mmgisUrl = mmgisUrlRoot;
+        var iframe = document.createElement("iframe");
+        iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
 
-        if (formattedList.length > 1) {
-            boundingbox = util.getBoundingbox(formattedList);
-            centerLat = util.getCenterLat(boundingbox);
-            centerLon = util.getCenterLon(boundingbox);
-            zoomLevel = util.getZoomlevel(boundingbox);
-        } else if (formattedList.length === 1) {
-            centerLat = formattedList[0].targetLat;
-            centerLon = formattedList[0].targetLon;
-            zoomLevel = 18;
-        } else {
-            centerLat = "None";
-            centerLon = "None";
-            zoomLevel = "None";
+        for (var i = 0; i < formattedList.length; i++) {
+            targetName = formattedList[i].label;
+            mmgisUrl += "&searchStr=" + targetName;
         }
 
-        if (centerLat === "None" || centerLon === "None" || zoomLevel === "None" ||
-            centerLat === undefined || centerLon === undefined || zoomLevel === undefined) {
-            return;
-        } else {
-            var iframe = document.createElement("iframe");
-            iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
-            iframe.src = mmgisUrlRoot + "&lat=" + centerLat + "&lon=" + centerLon + "&zoom=" + zoomLevel;
-            mmgisDiv.appendChild(iframe);
-        }
+        iframe.src = mmgisUrl;
+        mmgisDiv.appendChild(iframe);
     }
 
     return MTEInterface;

@@ -48,8 +48,8 @@ define([], function () {
          var targetName = list.results[i][0];
          var targetId = list.results[i][1];
          var targetFirstSol = list.results[i][2];
-         var targetLat = list.results[i][11];
-         var targetLon = list.results[i][12];
+         //var targetLat = list.results[i][11];
+         //var targetLon = list.results[i][12];
          if (this.isNameInList(targetName, formattedList, "label")) {
             for (var j = 0; j < formattedList.length; j++) {
                if (formattedList[j].label !== targetName) {
@@ -72,8 +72,8 @@ define([], function () {
                label: targetName,
                id: targetId,
                firstSol: targetFirstSol,
-               targetLat: targetLat,
-               targetLon: targetLon,
+               //targetLat: targetLat,
+               //targetLon: targetLon,
                associates: [{
                   component: list.results[i][3],
                   componentLabel: list.results[i][4],
@@ -190,73 +190,6 @@ define([], function () {
       return function (a,b) {
          var A = key(a), B = key(b);
          return ( (A < B) ? -1 : ((A > B) ? 1 : 0) ) * [-1,1][+!!reverse];
-      }
-   }
-
-   Util.prototype.getBoundingbox = function (formattedList) {
-      var west = Number.MAX_VALUE;
-      var east = -Number.MAX_VALUE;
-      var south = Number.MAX_VALUE;
-      var north = -Number.MAX_VALUE;
-
-      for (var i = 0; i < formattedList.length; i++) {
-         var targetLat = formattedList[i].targetLat;
-         var targetLon = formattedList[i].targetLon;
-
-         if (targetLat === "None" || targetLon === "None") {
-            continue;
-         }
-
-         if (targetLat <= south) {
-            south = targetLat;
-         }
-
-         if (targetLat >= north) {
-            north = targetLat;
-         }
-
-         if (targetLon <= west) {
-            west = targetLon;
-         }
-
-         if (targetLon >= east) {
-            east = targetLon;
-         }
-      }
-
-      return {
-         west: west,
-         east: east,
-         south: south,
-         north: north
-      }
-   }
-
-   Util.prototype.getCenterLat = function (boundingbox) {
-      return (boundingbox.north + boundingbox.south) / 2;
-   }
-
-   Util.prototype.getCenterLon = function (boundingbox) {
-      return (boundingbox.east + boundingbox.west) / 2;
-   }
-
-   Util.prototype.getZoomlevel = function (boundingbox) {
-      //based on the zoom level statistics of openstreetmap provided in
-      //http://wiki.openstreetmap.org/wiki/Zoom_levels, we construct a
-      //zoomlevel : degree arrays.
-      //Note that we only use the zoom levels 8-19.
-      var openstreetmapZoomlevel = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
-      var openstreetmapDegree = [1.406, 0.703, 0.352, 0.176, 0.088, 0.044, 0.022, 0.011, 0.005, 0.003, 0.001, 0.0005];
-      var horizonDistance = boundingbox.east  - boundingbox.west;
-      var verticalDistance = boundingbox.north - boundingbox.south;
-      var referenceDistance = horizonDistance >= verticalDistance ? horizonDistance : verticalDistance;
-
-      for (var i = openstreetmapDegree.length - 1; i >= 0; i--) {
-         if (referenceDistance > openstreetmapDegree[i]) {
-            continue;
-         }
-
-         return openstreetmapZoomlevel[i];
       }
    }
 

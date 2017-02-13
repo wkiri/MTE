@@ -1,6 +1,6 @@
 {
-  "cgi_root": "https://mte.jpl.nasa.gov/cgi/",
+  "cgi_root": "https://mte.jpl.nasa.gov/cgi/dev/",
   "thumbnail_url_root": "https://an.rsl.wustl.edu/msl/mslbrowser/sqlImageHandler.ashx?t=th&id=",
   "msl_an_link_root": "https://an.rsl.wustl.edu/msl/mslBrowser/an3.aspx?it=G1&ii=",
-  "mmgis_url_root": "https://miplmmgis.jpl.nasa.gov/mmgis/MMGIS/?mission=MTE"
+  "mmgis_url_root": "https://mte.jpl.nasa.gov/MMGIS/?mission=Test&searchFile=ChemCam"
 }
