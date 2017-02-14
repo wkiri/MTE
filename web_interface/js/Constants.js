@@ -21,7 +21,7 @@ define([], function () {
     CONSTANTS.SEARCHCOMP_STYPE = "mte-search-component input-group";
     CONSTANTS.INPUTFIELD_ID = "mteSearchInput";
     CONSTANTS.INPUTFIELD_STYLE = "form-control";
-    CONSTANTS.INPUTFIELD_PLACEHOLDER_STR = "Enter target or component name";
+    CONSTANTS.INPUTFIELD_PLACEHOLDER_STR = "Enter target name or component name or primary author";
     CONSTANTS.BUTTON_SPAN_STYLE = "input-group-btn";
     CONSTANTS.RESULTS_STATUS_ID = "mteResultsStatus";
     CONSTANTS.RESULTS_STATUS_STYLE = "mte-results-status";
@@ -33,6 +33,7 @@ define([], function () {
     CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR = "getResultsBySearchStr.py";
     CONSTANTS.SERVER_GET_STATISTIC = "getStatistics.py";
     CONSTANTS.SERVER_GET_RESULTS_WITHOUT_PROPERTIES = "getResultsWOProperties.py";
+    CONSTANTS.SERVER_GET_PRIMARY_AUTHOR = "getPrimaryAuthorName.py";
 
     return CONSTANTS;
 })

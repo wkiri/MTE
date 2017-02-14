@@ -163,7 +163,9 @@ define([
         }
 
         //append mmgis multiple targets display
-        mmgisMultiTargetsHandler(this._mteMMGIS, formattedList, mmgisUrlRoot);
+        if (formattedList.length > 0) {
+            mmgisMultiTargetsHandler(this._mteMMGIS, formattedList, mmgisUrlRoot);
+        }
     }
 
     MTEInterface.prototype.buildSingleTargetPage = function (resultBlock, displayList, mteListener, mmgisUrlRoot) {

@@ -27,6 +27,7 @@ searchStr = parameters.getvalue("searchStr")
 
 sql_target = "select distinct target_name from targets where lower(target_name) = '%s'" % (searchStr)
 sql_target_by_component_name = "select distinct target_name from contains where lower(component_name) = '%s'" % (searchStr)
+sql_target_by_primaryauthor = "select distinct target_name from contains, documents where contains.doc_id = documents.doc_id and lower(primaryauthor)='%s'" % (searchStr)
 
 target_list = []
 results = []
@@ -39,6 +40,10 @@ try:
     target_list.extend(target_name)
 
     cursor.execute(sql_target_by_component_name)
+    target_name = cursor.fetchall()
+    target_list.extend(target_name)
+
+    cursor.execute(sql_target_by_primaryauthor)
     target_name = cursor.fetchall()
     target_list.extend(target_name)
 

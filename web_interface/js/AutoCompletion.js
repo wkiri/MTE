@@ -13,6 +13,7 @@ define([
         customize();
         loadTargets(this._list, cgiRoot);
         loadComponents(this._list, cgiRoot);
+        loadPrimaryAuthor(this._list, cgiRoot);
     }
 
     AutoCompletion.prototype.enable = function (targetElement) {
@@ -97,6 +98,33 @@ define([
             list.push({
                 label: results[i][0],
                 category: results[i][1]
+            });
+        }
+    }
+
+    function loadPrimaryAuthor (list, cgiRoot) {
+        $.ajax({
+            url: cgiRoot + CONSTANTS.SERVER_GET_PRIMARY_AUTHOR,
+            type: "post",
+            dataType: "json",
+            success: function (returnedList) {
+                primaryAuthorCallback(returnedList, list)
+            }
+        });
+    }
+
+    function primaryAuthorCallback (returnedList, list) {
+        var results = returnedList.primary_author;
+        var util = new Util();
+
+        for (var i = 0; i < results.length; i++) {
+            if (util.isNameInList(results[i][0], list, "label")) {
+                continue;
+            }
+
+            list.push({
+                label: results[i][0],
+                category: "Primary Author"
             });
         }
     }
