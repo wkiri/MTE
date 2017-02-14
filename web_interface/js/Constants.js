@@ -18,7 +18,7 @@ define([], function () {
     CONSTANTS.STATSBUTTON_STYLE = "btn btn-info";
     CONSTANTS.STATSBUTTON_IMG = "images/statistics.png";
     CONSTANTS.STATSBUTTON_DATA_TARGET = "statistics-results";
-    CONSTANTS.SEARCHCOMP_STYPE = "mte-search-component input-group col-lg-9";
+    CONSTANTS.SEARCHCOMP_STYPE = "mte-search-component input-group";
     CONSTANTS.INPUTFIELD_ID = "mteSearchInput";
     CONSTANTS.INPUTFIELD_STYLE = "form-control";
     CONSTANTS.INPUTFIELD_PLACEHOLDER_STR = "Enter target or component name";
