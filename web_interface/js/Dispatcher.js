@@ -28,7 +28,7 @@ define([
         var parameterTokens = parameterStr.split("=");
 
         if (parameterTokens.length !== 2) {
-            throw new Error("Invalid URL. Valid URL is in the form of http://hostname:port?lookup=target_name.");
+            throw new Error("Invalid URL. Valid URL is in the format of http://hostname:port?lookup=target_name.");
         }
 
         return parameterTokens[1];

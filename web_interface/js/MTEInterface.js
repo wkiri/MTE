@@ -97,19 +97,12 @@ define([
             thumbnailDiv.className = "mte-results-display-block-img";
             $(thumbnailDiv).attr("data-toggle", "modal");
             $(thumbnailDiv).attr("data-target", "#singleTargetDiv");
-            if (formattedList[i].id !== undefined && formattedList[i].id !== "None") {
-                thumbnailImg.src = this._thumbnailUrlRoot + formattedList[i].id;
-            } else {
-                thumbnailImg.src = "images/empty_placeholder.png";
-            }
+            thumbnailImg.src = this._thumbnailUrlRoot + formattedList[i].label;
+            thumbnailErrorHandler(thumbnailImg);
             thumbnailDiv.appendChild(thumbnailImg);
             resultBlock.appendChild(thumbnailDiv);
-            if (formattedList[i].id !== undefined && formattedList[i].id !== "None") {
-                resultBlock.thumbnailUrl = this._thumbnailUrlRoot + formattedList[i].id;
-                resultBlock.anLink = this._mslANLinkRoot + formattedList[i].id;
-            } else {
-                resultBlock.thumbnailUrl = "images/empty_placeholder.png";
-            }
+            resultBlock.thumbnailUrl = this._thumbnailUrlRoot + formattedList[i].label;
+            resultBlock.anLink = this._mslANLinkRoot + formattedList[i].label;
 
             //text div
             var textDiv = document.createElement("div");
@@ -218,15 +211,16 @@ define([
         mteListener.appendShareButtonEventListener(shareButton, shareInput);
 
         //anButton
-        if (anLink !== undefined && anLink.length > 0) {
-            var anButton = document.createElement("input");
-            anButton.type = "button";
-            anButton.className = "btn btn-info btn-sm";
-            anButton.id = "anButton";
-            anButton.value = "Go to MSL Analyst's Notebook"
-            divHeader.appendChild(anButton);
-            mteListener.appendANLinkEventListener(anButton, anLink);
-        }
+        var anButton = document.createElement("input");
+        anButton.type = "button";
+        anButton.className = "btn btn-info btn-sm";
+        anButton.id = "anButton";
+        anButton.value = "Go to MSL Analyst's Notebook"
+        divHeader.appendChild(anButton);
+        mteListener.appendANLinkEventListener(anButton, anLink);
+
+        //check thumbnail, if it doesn't exist, then we assume that the AN link is not available.
+        thumbnailErrorHandler(thumbnail, divHeader, anButton);
 
         //root list
         var rootUl = document.createElement("ul");
@@ -580,6 +574,16 @@ define([
 
         iframe.src = mmgisUrl;
         mmgisDiv.appendChild(iframe);
+    }
+
+    function thumbnailErrorHandler (thumbnailElement, anButtonParent, anButton) {
+        thumbnailElement.addEventListener("error", function () {
+            thumbnailElement.src = "images/empty_placeholder.png";
+
+            if (anButtonParent!== undefined && anButton !== undefined) {
+                anButtonParent.removeChild(anButton);
+            }
+        });
     }
 
     return MTEInterface;
