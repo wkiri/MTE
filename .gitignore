@@ -4,6 +4,7 @@ __pycache__/
 *~
 .DS_Store
 __MACOSX
+.stats_cache
 
 # Custom
 papers/15-ket/AuthorKit
