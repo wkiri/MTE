@@ -1,0 +1,82 @@
+T9	Element 1121 1123	Fe
+T11	Element 1949 1951	Fe
+T13	Element 2889 2891	Fe
+T14	Element 2893 2895	Al
+T15	Element 2901 2902	S
+T16	Element 3110 3112	Fe
+T17	Element 4304 4308	lead
+T18	Element 4312 4316	iron
+T19	Element 4368 4374	oxygen
+T24	Element 6220 6222	Fe
+T25	Element 6429 6431	Fe
+T26	Element 6566 6568	Fe
+T30	Target 1285 1293	Sheepbed
+T31	Target 1643 1651	Sheepbed
+T32	Target 1765 1775	Cumberland
+T33	Target 3320 3327	Portage
+T34	Target 3616 3624	Sheepbed
+T35	Target 4543 4550	Portage
+T38	Mineral 818 826	Hematite
+T39	Mineral 1183 1191	Hematite
+T40	Mineral 1358 1366	smectite
+T41	Mineral 1443 1452	magnetite
+T42	Mineral 1684 1692	smectite
+T43	Mineral 1697 1706	magnetite
+T44	Mineral 1858 1867	magnetite
+T45	Mineral 1878 1886	hematite
+T46	Mineral 1992 2000	hematite
+T47	Mineral 2101 2109	Hematite
+T48	Mineral 2238 2246	Hematite
+T49	Mineral 3493 3501	goethite
+T50	Mineral 3545 3551	pyrite
+T51	Mineral 3556 3563	apatite
+T52	Mineral 3924 3932	Hematite
+T53	Mineral 4094 4103	kaolinite
+T54	Mineral 4335 4344	magnetite
+T55	Mineral 4388 4396	hematite
+T56	Mineral 4900 4908	goethite
+T57	Mineral 4953 4961	hematite
+T58	Mineral 5091 5099	hematite
+T59	Mineral 5112 5121	magnetite
+T60	Mineral 5377 5385	hematite
+T61	Mineral 5574 5582	Hematite
+T62	Mineral 5699 5707	hematite
+T63	Mineral 5842 5850	hematite
+T64	Mineral 6117 6125	hematite
+T65	Mineral 6501 6509	hematite
+T66	Mineral 6514 6522	goethite
+T67	Mineral 6648 6656	hematite
+T68	Mineral 6856 6864	hematite
+T69	Mineral 6890 6898	Hematite
+T70	Mineral 7174 7182	Hematite
+T71	Mineral 10 18	HEMATITE
+T1	Region 818 832	Hematite Ridge
+T2	Material 1112 1116	clay
+T3	Mineral 1121 1130	Fe oxides
+T4	Member 1285 1300	Sheepbed member
+R1	BelongsTo Arg1:T30 Arg2:T4	
+T5	Material 1306 1314	mudstone
+T6	Contains 1301 1305	is a
+E1	Contains:T6 Targ:T30 Cont:T5
+A1	Confidence E1 High
+T7	Feature 1318 1326	basaltic
+R2	Shows Arg1:T30 Arg2:T7	
+T8	Contains 1348 1352	with
+E2	Contains:T8 Targ:T30 Cont:T40 Cont2:T29 Cont3:T72 Cont4:T41
+T29	Mineral 1373 1389	igneous minerals
+T72	Material 1400 1424	X-ray amorphous material
+T10	Member 1643 1658	Sheepbed Member
+R3	BelongsTo Arg1:T31 Arg2:T10	
+T73	Contains 1718 1728	identified
+E3	Contains:T73 Targ:T74 Targ2:T32 Cont:T43 Cont2:T42
+A2	Confidence E3 High
+T74	Target 1750 1760	John Klein
+R4	BelongsTo Arg1:T74 Arg2:T10	
+R5	BelongsTo Arg1:T32 Arg2:T10	
+T75	Locality 1809 1818	Kimberley
+T12	Mineral 3508 3518	serpentine
+T76	Material 3529 3533	clay
+T77	Member 3616 3631	Sheepbed Member
+R6	BelongsTo Arg1:T34 Arg2:T77	
+T78	Locality 3647 3662	Yellowknife Bay
+R7	IsSituatedIn Arg1:T34 Arg2:T78	

@@ -103,3 +103,5 @@ T99	Contains 5799 5809	determined
 E6	Contains:T99 Cont:T100 Targ:T85
 A4	Confidence E6 High
 T100	Mineral 5874 5887	clay minerals
+T40	Target 6476 6486	Frome_Rock
+T57	Target 6548 6562	Bathurst_Inlet

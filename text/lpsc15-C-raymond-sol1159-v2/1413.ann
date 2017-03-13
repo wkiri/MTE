@@ -83,3 +83,5 @@ A7	Amount E5 Contains_High
 T32	Contains 5958 5969	increase in
 E6	Contains:T32 Targ:T74 Cont:T50 Cont2:T51
 A8	Amount E6 Contains_High
+T33	Locality 1530 1539	Kimberley
+R3	IsSituatedIn Arg1:T68 Arg2:T33	

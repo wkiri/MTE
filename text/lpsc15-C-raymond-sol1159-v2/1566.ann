@@ -1,0 +1,7 @@
+T5	Element 1005 1007	Fe
+T6	Element 4635 4636	S
+T7	Element 4641 4643	Cl
+T8	Element 5562 5564	Fe
+T13	Target 3488 3500	Dismal Lakes
+T1	Feature 3447 3480	low color contrast between grains
+R1	Shows Arg1:T13 Arg2:T1	

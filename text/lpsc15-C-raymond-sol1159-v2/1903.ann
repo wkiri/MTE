@@ -32,3 +32,6 @@ E4	Contains:T30 Targ:T24 Cont:T5
 A3	Confidence E4 Low
 A4	Amount E3 Contains_High
 A5	Amount E4 Contains_High
+T6	Locality 2108 2121	Bradbury Rise
+T7	Locality 4574 4587	Bradbury Rise
+R2	IsSituatedIn Arg1:T23 Arg2:T7	
