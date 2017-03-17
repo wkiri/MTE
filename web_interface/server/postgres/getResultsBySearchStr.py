@@ -61,7 +61,7 @@ try:
 
         sql_contains = "select doc_id, contains.component_name, excerpt, component_label from contains, components where target_name = '%s' and (component_label='Element' or component_label='Feature' or component_label='Material' or component_label='Mineral') and contains.component_name = components.component_name order by case component_label when 'Element' then 1 when 'Mineral' then 2 when 'Material' then 3 when 'Feature' then 4 else 5 end;" % (target_name[0])
         cursor.execute(sql_contains)
-        records = cursor.fetchall() 
+        records = cursor.fetchall()
         for record in records:
             sql_documents = "select primaryauthor, title, year, venue, doc_url from documents where doc_id = '%s'" % (record[0])
             cursor.execute(sql_documents)

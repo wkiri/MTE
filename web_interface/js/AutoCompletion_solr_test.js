@@ -49,13 +49,21 @@ define([
     }
 
     function loadTargets (list, cgiRoot) {
+        //$.ajax({
+        //    url: cgiRoot + CONSTANTS.SERVER_GET_TARGETS,
+        //    type: "post",
+        //    dataType: "json",
+        //    success: function (returnedList) {
+        //        targetsCallback(returnedList, list);
+        //    }
+        //});
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_TARGETS,
-           type: "post",
-           dataType: "json",
-           success: function (returnedList) {
-               targetsCallback(returnedList, list);
-           }
+            url: "http://127.0.0.1:5000/getTargetNames/brat",
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                targetsCallback(returnedList, list);
+            }
         });
     }
 
@@ -76,13 +84,21 @@ define([
     }
 
     function loadComponents (list, cgiRoot) {
+        //$.ajax({
+        //    url: cgiRoot + CONSTANTS.SERVER_GET_COMPONENTS,
+        //    type: "post",
+        //    dataType: "json",
+        //    success: function (returnedList) {
+        //        componentsCallback(returnedList, list)
+        //    }
+        //});
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_COMPONENTS,
-           type: "post",
-           dataType: "json",
-           success: function (returnedList) {
-               componentsCallback(returnedList, list)
-           }
+            url: "http://127.0.0.1:5000/getElementNames/brat",
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                componentsCallback(returnedList, list)
+            }
         });
     }
 
@@ -103,13 +119,21 @@ define([
     }
 
     function loadPrimaryAuthor (list, cgiRoot) {
+        //$.ajax({
+        //    url: cgiRoot + CONSTANTS.SERVER_GET_PRIMARY_AUTHOR,
+        //    type: "post",
+        //    dataType: "json",
+        //    success: function (returnedList) {
+        //        primaryAuthorCallback(returnedList, list)
+        //    }
+        //});
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_PRIMARY_AUTHOR,
-           type: "post",
-           dataType: "json",
-           success: function (returnedList) {
-               primaryAuthorCallback(returnedList, list)
-           }
+            url: "http://127.0.0.1:5000/getPrimaryAuthorNames",
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                primaryAuthorCallback(returnedList, list)
+            }
         });
     }
 
