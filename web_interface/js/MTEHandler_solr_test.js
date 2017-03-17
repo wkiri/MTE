@@ -21,27 +21,47 @@ define([
             return;
         }
 
+        //$.ajax({
+        //    url: cgiRoot + CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR,
+        //    type: "post",
+        //    dataType: "json",
+        //    data: {
+        //        searchStr: searchStr
+        //    },
+        //    success: function (returnedList) {
+        //        var formattedList = util.getReformattedList(returnedList);
+        //        if (formattedList.length === 0 && targetMatches !== 0) {
+        //            featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, listener, mmgisUrlRoot);
+        //        } else {
+        //            if (formattedList.length === 1) {
+        //                mteInterface.setStatusLabel("1 target found");
+        //            } else {
+        //                mteInterface.setStatusLabel(formattedList.length + " targets found");
+        //            }
+        //
+        //            mteInterface.displayResults(formattedList, listener, util, mmgisUrlRoot);
+        //        }
+        //    }
+        //});
+        var solr_url = "http://127.0.0.1:5000/getResultsBySearchStr/brat/" + searchStr;
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR,
-           type: "post",
-           dataType: "json",
-           data: {
-               searchStr: searchStr
-           },
-           success: function (returnedList) {
-               var formattedList = util.getReformattedList(returnedList);
-               if (formattedList.length === 0 && targetMatches !== 0) {
-                   featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, listener, mmgisUrlRoot);
-               } else {
-                   if (formattedList.length === 1) {
-                       mteInterface.setStatusLabel("1 target found");
-                   } else {
-                       mteInterface.setStatusLabel(formattedList.length + " targets found");
-                   }
+            url: solr_url,
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                var formattedList = util.getReformattedList(returnedList);
+                if (formattedList.length === 0 && targetMatches !== 0) {
+                    featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, listener, mmgisUrlRoot);
+                } else {
+                    if (formattedList.length === 1) {
+                        mteInterface.setStatusLabel("1 target found");
+                    } else {
+                        mteInterface.setStatusLabel(formattedList.length + " targets found");
+                    }
 
-                   mteInterface.displayResults(formattedList, listener, util, mmgisUrlRoot);
-               }
-           }
+                    mteInterface.displayResults(formattedList, listener, util, mmgisUrlRoot);
+                }
+            }
         });
     }
 
@@ -85,10 +105,23 @@ define([
         window.open(anLink);
     }
 
+    // MTEHandler.prototype.statisticHandler = function (mteInterface, cgiRoot, util) {
+    //     $.ajax({
+    //         url: cgiRoot + CONSTANTS.SERVER_GET_STATISTIC,
+    //         type: "post",
+    //         dataType: "json",
+    //         success: function (returnedDict) {
+    //             var statisticList = util.getStatisticList(returnedDict);
+    //             mteInterface.createColumnChart(statisticList);
+    //         }
+    //     });
+    // }
+
     MTEHandler.prototype.statisticHandler = function (mteInterface, cgiRoot, util) {
+        var solrUrl = "http://127.0.0.1:5000/getStatistics/brat";
         $.ajax({
-            url: cgiRoot + CONSTANTS.SERVER_GET_STATISTIC,
-            type: "post",
+            url: solrUrl,
+            type: "get",
             dataType: "json",
             success: function (returnedDict) {
                 var statisticList = util.getStatisticList(returnedDict);
