@@ -105,3 +105,19 @@ A4	Confidence E6 High
 T100	Mineral 5874 5887	clay minerals
 T40	Target 6476 6486	Frome_Rock
 T57	Target 6548 6562	Bathurst_Inlet
+T61	Element 10 18	FLUORINE
+T62	Element 23 30	LITHIUM
+T65	Element 1460 1461	F
+T66	Element 3687 3688	K
+T67	Mineral 3689 3697	feldspar
+T68	Mineral 3687 3697	K-feldspar
+T69	Element 5999 6001	Ca
+T70	Element 6002 6003	F
+T71	Mineral 7131 7136	micas
+T72	Mineral 7202 7211	smectites
+T73	Mineral 7411 7415	mica
+T74	Mineral 8162 8168	illite
+T86	Mineral 8169 8174	micas
+T101	Element 8179 8181	Mg
+T102	Mineral 8182 8191	smectites
+T103	Mineral 8179 8191	Mg-smectites

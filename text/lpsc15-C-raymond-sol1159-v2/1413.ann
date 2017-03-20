@@ -85,3 +85,6 @@ E6	Contains:T32 Targ:T74 Cont:T50 Cont2:T51
 A8	Amount E6 Contains_High
 T33	Locality 1530 1539	Kimberley
 R3	IsSituatedIn Arg1:T68 Arg2:T33	
+T34	Element 1141 1143	Mn
+T59	Element 5648 5650	Zn
+T60	Element 6187 6189	Mn

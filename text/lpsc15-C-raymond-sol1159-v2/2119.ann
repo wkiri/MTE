@@ -40,3 +40,11 @@ T45	Element 6843 6844	S
 T46	Element 7028 7029	B
 T47	Element 7054 7055	B
 T49	Mineral 1192 1201	bassanite
+T1	Element 30 38	HYDROGEN
+T2	Mineral 1072 1079	sulfate
+T3	Mineral 1064 1079	calcium sulfate
+T8	Mineral 1182 1188	gypsum
+T19	Mineral 2995 3001	gypsum
+T20	Mineral 3105 3111	gypsum
+T48	Mineral 5477 5481	opal
+T50	Mineral 5538 5542	opal

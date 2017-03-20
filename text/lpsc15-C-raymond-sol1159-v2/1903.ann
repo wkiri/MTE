@@ -35,3 +35,10 @@ A5	Amount E4 Contains_High
 T6	Locality 2108 2121	Bradbury Rise
 T7	Locality 4574 4587	Bradbury Rise
 R2	IsSituatedIn Arg1:T23 Arg2:T7	
+T8	Locality 1917 1932	Yellowknife Bay
+T15	Formation 1917 1942	Yellowknife Bay formation
+T16	Target 3069 3078	Gillespie
+T17	Mineral 6056 6063	sulfate
+T31	Mineral 6048 6063	calcium sulfate
+T32	Mineral 6149 6156	sulfate
+T33	Mineral 7253 7259	gypsum

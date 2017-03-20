@@ -40,9 +40,9 @@ T51	Mineral 5648 5665	oligoclase-albite
 T52	Mineral 5912 5922	macusanite
 T53	Mineral 6505 6515	macusanite
 T54	Mineral 7616 7624	basanite
-T55	Mineral 8771 8782	anorthosite
-T56	Mineral 8786 8793	granite
-T57	Mineral 9883 9891	andesite
+T55	Material 8771 8782	anorthosite
+T56	Material 8786 8793	granite
+T57	Mineral 9876 9891	Trachy andesite
 T1	Locality 1519 1532	Bradbury rise
 T2	Feature 1693 1704	light-toned
 R1	Shows Arg1:T26 Arg2:T2	
@@ -107,3 +107,30 @@ T83	Target 10091 10104	Meeting House
 T84	Target 9942 9953	Peacok Hill
 T85	Target 10070 10080	Wind River
 T86	Target 10081 10090	Harrisson
+T87	Mineral 1449 1457	feldspar
+T88	Mineral 1868 1876	feldspar
+T89	Element 2551 2553	Al
+T90	Element 2554 2556	Si
+T91	Element 2559 2561	Fe
+T92	Element 2562 2564	Mg
+T93	Element 2566 2568	Si
+T94	Element 4758 4760	Si
+T95	Element 4774 4776	Ba
+T96	Mineral 4853 4861	feldspar
+T97	Mineral 4841 4861	plagioclase feldspar
+T98	Element 4908 4910	Al
+T99	Element 5058 5059	K
+T100	Mineral 5058 5068	K-feldspar
+T101	Mineral 5465 5472	olivine
+T102	Element 6412 6414	Al
+T103	Element 6415 6417	Si
+T104	Element 6423 6425	Fe
+T105	Element 6426 6428	Mg
+T106	Element 6430 6432	Si
+T107	Mineral 6705 6711	quartz
+T108	Mineral 7136 7145	basanites
+T109	Mineral 7154 7169	trachyandesites
+T110	Mineral 7539 7545	quartz
+T111	Element 7935 7936	K
+T112	Mineral 7937 7945	feldspar
+T113	Mineral 7935 7945	K-feldspar

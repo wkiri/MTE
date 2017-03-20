@@ -18,3 +18,9 @@ T36	Element 5306 5313	calcium
 T38	Element 5624 5626	Mg
 T39	Element 5654 5655	S
 T41	Element 5831 5833	Mg
+T1	Mineral 5314 5321	sulfate
+T2	Mineral 5306 5321	calcium sulfate
+T3	Element 5795 5796	-
+T4	Element 5858 5860	Ni
+T5	Mineral 5891 5899	sulfates
+T6	Mineral 5903 5911	sulfides

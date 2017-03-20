@@ -1,0 +1,68 @@
+T14	Element 5391 5393	Li
+T15	Element 5398 5400	Mn
+T16	Element 5476 5478	Fe
+T17	Element 5537 5539	Cl
+T18	Element 5541 5543	Sr
+T19	Element 5548 5550	Cr
+T20	Element 5579 5581	Cl
+T21	Element 5586 5588	Sr
+T22	Element 5614 5615	H
+T23	Element 5725 5726	H
+T24	Element 5839 5841	Ca
+T25	Element 5887 5889	Cl
+T26	Element 5894 5895	H
+T27	Element 5982 5984	Cl
+T28	Element 6162 6164	Cl
+T29	Element 6169 6170	H
+T30	Element 6197 6199	Ca
+T31	Element 6302 6304	Ca
+T32	Element 6309 6311	Cl
+T33	Element 6324 6326	Ca
+T34	Element 6331 6332	H
+T35	Element 6378 6380	Cl
+T36	Element 6385 6386	H
+T38	Element 6529 6531	Ca
+T39	Element 6533 6535	Cl
+T40	Element 6540 6541	H
+T41	Element 6675 6677	Cl
+T42	Element 6682 6683	H
+T43	Element 6720 6727	calcium
+T44	Element 7054 7055	H
+T1	Locality 1010 1017	Pahrump
+T2	Locality 1029 1042	Hidden Valley
+T3	Locality 1266 1273	Pahrump
+T4	Locality 1464 1471	Pahrump
+T5	Locality 1791 1804	Hidden Valley
+T6	Site 1935 1943	Rocknest
+T7	Site 1948 1957	Dingo Gap
+T8	Site 1990 1998	Rocknest
+T9	Site 2101 2110	Dingo Gap
+T10	Locality 3049 3056	Pahrump
+T11	Site 3279 3288	Dingo Gap
+T12	Site 3371 3379	Rocknest
+T47	Locality 3442 3455	Hidden Valley
+T48	Locality 3460 3467	Pahrump
+T13	Locality 3591 3604	Hidden Valley
+T49	Site 4522 4531	Dingo Gap
+T50	Site 4536 4544	Rocknest
+T51	Locality 4638 4651	Hidden Valley
+T52	Locality 4656 4663	Pahrump
+T53	Site 5188 5197	Dingo Gap
+T54	Site 5357 5365	Rocknest
+T55	Site 5443 5451	Rocknest
+T56	Locality 5480 5493	Hidden Valley
+T57	Locality 5552 5565	Hidden Valley
+T58	Locality 5601 5608	Pahrump
+T59	Locality 5641 5654	Hidden Valley
+T60	Locality 5686 5693	Pahrump
+T61	Locality 5730 5743	Hidden Valley
+T62	Locality 5789 5796	Pahrump
+T63	Locality 5954 5967	Hidden Valley
+T64	Locality 6080 6087	Pahrump
+T37	Material 6477 6489	perchlorates
+T65	Target 6781 6797	Confidence Hills
+T66	Locality 6809 6816	Pahrump
+T67	Material 6842 6854	perchlorates
+T68	Site 6867 6875	Rocknest
+T69	Site 6969 6977	Rocknest
+T70	Site 6979 6988	Dingo Gap

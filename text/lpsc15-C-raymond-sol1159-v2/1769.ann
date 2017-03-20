@@ -80,3 +80,14 @@ T77	Member 3616 3631	Sheepbed Member
 R6	BelongsTo Arg1:T34 Arg2:T77	
 T78	Locality 3647 3662	Yellowknife Bay
 R7	IsSituatedIn Arg1:T34 Arg2:T78	
+T20	Mineral 932 939	sulfate
+T21	Mineral 1591 1598	olivine
+T22	Mineral 3366 3373	olivine
+T23	Mineral 3735 3743	pyroxene
+T27	Mineral 3748 3756	feldspar
+T28	Mineral 3898 3907	carbonate
+T36	Mineral 4008 4017	carbonate
+T37	Mineral 4086 4092	quartz
+T79	Mineral 4134 4143	carbonate
+T80	Mineral 4289 4299	carbonates
+T81	Mineral 6569 6578	carbonate

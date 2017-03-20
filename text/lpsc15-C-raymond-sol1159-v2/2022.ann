@@ -48,3 +48,4 @@ T47	Material 3274 3288	coarser grains
 T48	Contains 3263 3273	consist of
 E2	Contains:T48 Cont:T47 Targ:T43 Targ2:T46
 T12	Material 5644 5648	SiO2
+T20	Element 47 55	HYDROGEN

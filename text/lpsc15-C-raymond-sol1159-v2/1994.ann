@@ -71,3 +71,6 @@ T46	Feature 7212 7251	dune and ripple cross-stratified facies
 R24	Shows Arg1:T45 Arg2:T46	
 T47	Target 6078 6088	Whale Rock
 T48	Feature 6009 6016	boxwork
+T49	Element 5601 5608	calcium
+T50	Mineral 5609 5616	sulfate
+T51	Mineral 5601 5616	calcium-sulfate

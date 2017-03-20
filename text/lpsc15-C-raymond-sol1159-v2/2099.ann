@@ -48,11 +48,6 @@ T53	Element 6991 6993	Cr
 T54	Element 6998 7000	Li
 T55	Element 7017 7019	Fe
 T56	Element 7467 7469	Mg
-T57	Element 7573 7574	S
-T58	Element 7659 7660	O
-T59	Element 7743 7744	K
-T60	Element 7781 7782	N
-T61	Element 7898 7899	C
 T62	Target 2616 2622	Darwin
 T63	Mineral 5336 5344	ilmenite
 T1	Target 1931 1947	Confidence Hills
@@ -204,3 +199,6 @@ T134	Target 6792 6803	Pink Cliffs
 T135	Target 6806 6812	Chinle
 T136	Target 6819 6830	San Gabriel
 T137	Target 7381 7391	Whale Rock
+T138	Mineral 5506 5513	sulfate
+T139	Mineral 5498 5513	calcium sulfate
+T140	Element 5633 5635	Mg

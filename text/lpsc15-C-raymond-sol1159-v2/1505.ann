@@ -65,3 +65,30 @@ T77	Mineral 26 35	ANHYDRITE
 T78	Mineral 87 102	CALCIUM SULFATE
 T1	Formation 8791 8810	Shoemaker formation
 T2	Region 8814 8830	Meridiani Planum
+T3	Mineral 95 102	SULFATE
+T4	Element 87 94	CALCIUM
+T5	Mineral 2580 2588	jarosite
+T10	Element 2578 2579	K
+T20	Mineral 4528 4535	sulfate
+T21	Mineral 4626 4633	sulfate
+T25	Mineral 4790 4797	sulfate
+T26	Mineral 4782 4797	calcium sulfate
+T27	Mineral 4684 4691	sulfate
+T28	Mineral 4814 4820	gypsum
+T29	Mineral 4995 5002	sulfate
+T79	Mineral 5090 5096	gypsum
+T80	Mineral 7685 7692	sulfate
+T81	Mineral 7677 7692	calcium sulfate
+T82	Mineral 8061 8067	gypsum
+T83	Mineral 8005 8014	anhydrate
+T84	Mineral 8293 8300	sulfate
+T85	Mineral 8285 8300	calcium sulfate
+T86	Mineral 8362 8368	Gypsum
+T87	Mineral 8410 8417	sulfate
+T88	Mineral 8402 8417	calcium sulfate
+T89	Mineral 8542 8548	gypsum
+T90	Mineral 8649 8655	gypsum
+T91	Mineral 8736 8742	gypsum
+T92	Mineral 8946 8952	gypsum
+T93	Mineral 9126 9133	sulfate
+T94	Mineral 9512 9518	gypsum

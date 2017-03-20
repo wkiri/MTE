@@ -1,0 +1,61 @@
+T7	Element 5829 5833	iron
+T11	Target 2529 2539	Cumberland
+T12	Target 2551 2559	Windjana
+T13	Target 4242 4250	Sheepbed
+T14	Target 4822 4832	Cumberland
+T15	Target 4844 4854	Cumberland
+T16	Target 4927 4937	Cumberland
+T17	Target 5164 5174	Cumberland
+T18	Target 5304 5312	Windjana
+T21	Target 6283 6293	Cumberland
+T22	Target 6299 6307	Windjana
+T23	Mineral 5724 5732	hematite
+T24	Mineral 5856 5865	magnetite
+T25	Mineral 5890 5898	hematite
+T26	Mineral 5902 5911	magnetite
+T1	Target 2507 2517	John Klein
+T2	Target 2574 2589	Confidence Hill
+T3	Target 3668 3680	Bonanza King
+T4	Target 2677 2689	Bonanza King
+T5	Target 4212 4222	John Klein
+T6	Locality 4339 4354	Yellowknife Bay
+T9	Target 4553 4563	John Klein
+T10	Target 4974 4984	John Klein
+T27	Locality 5104 5119	Yellowknife Bay
+R1	IsSituatedIn Arg1:T16 Arg2:T27	
+R2	IsSituatedIn Arg1:T10 Arg2:T27	
+T28	Material 5211 5228	organic molecules
+T29	Contains 5198 5210	detection of
+E1	Contains:T29 Cont:T28 Targ:T17
+A1	Confidence E1 High
+A2	Amount E1 Contains
+T30	Material 5328 5337	sandstone
+T31	Contains 5324 5327	The
+E2	Contains:T31 Cont:T30 Targ:T18
+T19	Target 5519 5535	Confidence Hills
+T32	Feature 4580 4592	fine-grained
+R3	Shows Arg1:T9 Arg2:T32	
+T33	Feature 4594 4605	homogeneous
+R4	Shows Arg1:T9 Arg2:T33	
+T34	Material 4606 4614	mudstone
+T35	Contains 4564 4577	appears to be
+E3	Contains:T35 Cont:T34 Targ:T9
+T36	Feature 4656 4674	hairline fractures
+R5	Shows Arg1:T9 Arg2:T36	
+T37	Material 4641 4648	sulfate
+T38	Contains 4616 4627	crosscut by
+E4	Contains:T38 Cont:T37 Targ:T9
+T39	Contains 5688 5700	evidence for
+E5	Contains:T39 Targ:T19 Cont:T23
+T40	Contains 5881 5889	ratio of
+E6	Contains:T40 Targ:T41 Cont:T25 Cont2:T26
+T41	Target 5915 5931	Confidence Hills
+T8	Target 6267 6277	John Klein
+T20	Target 6313 6329	Confidence Hills
+T42	Target 6403 6415	Bonanza King
+T43	Unit 4242 4259	Sheepbed mudstone
+R6	BelongsTo Arg1:T5 Arg2:T43	
+R7	IsSituatedIn Arg1:T5 Arg2:T6	
+T44	Region 4363 4374	Gale Crater
+R8	IsSituatedIn Arg1:T5 Arg2:T44	
+T45	Target 5040 5050	John Klein

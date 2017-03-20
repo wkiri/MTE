@@ -15,8 +15,6 @@ T18	Element 6794 6796	Cl
 T19	Element 6802 6804	Br
 T20	Element 7037 7039	Mg
 T21	Element 7081 7083	At
-T22	Element 7616 7617	B
-T23	Element 7695 7696	B
 T24	Target 3409 3415	Darwin
 T25	Target 4852 4858	Darwin
 T26	Target 5716 5721	Delta
@@ -67,3 +65,7 @@ T53	Locality 7084 7092	Kimberly
 T54	Site 6951 6959	Rocknest
 T55	Target 5626 5636	Book Cliff
 T56	Target 5680 5691	Pink Cliffs
+T27	Locality 3427 3434	Pahrump
+T57	Mineral 3461 3469	feldspar
+T58	Mineral 3451 3469	potassium feldspar
+T59	Element 6655 6657	Mg

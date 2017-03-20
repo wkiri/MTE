@@ -1,0 +1,96 @@
+T15	Element 5735 5737	Ca
+T16	Element 5742 5744	Si
+T17	Element 5973 5975	Na
+T18	Element 5980 5981	K
+T19	Element 6644 6646	Ba
+T20	Element 6659 6661	Rb
+T22	Element 8060 8062	Si
+T23	Element 8064 8066	Al
+T24	Element 8068 8070	Na
+T25	Element 8075 8076	K
+T26	Element 8103 8105	Ba
+T27	Target 3270 3277	Pisolet
+T28	Target 3301 3309	Harrison
+T29	Target 3333 3340	Becraft
+T30	Target 3400 3407	Sparkle
+T31	Target 4595 4602	Sparkle
+T32	Target 4806 4813	Becraft
+T33	Target 5197 5201	Mara
+T34	Target 6220 6224	Link
+T35	Target 6582 6590	Harrison
+T36	Target 7227 7235	Harrison
+T37	Mineral 4633 4650	oligoclase-albite
+T38	Mineral 4865 4875	macusanite
+T39	Mineral 5259 5268	pigeonite
+T40	Mineral 5658 5668	macusanite
+T41	Mineral 5673 5684	shergottite
+T42	Mineral 7565 7579	trachyandesite
+T43	Mineral 7648 7656	basanite
+T44	Mineral 8556 8570	trachyandesite
+T1	Target 3364 3372	La Reine
+T2	Target 4179 4185	Jake-M
+T3	Feature 4541 4552	Light-toned
+T4	Feature 4553 4562	intrusive
+R1	Shows Arg1:T31 Arg2:T4	
+R2	Shows Arg1:T31 Arg2:T3	
+T5	Feature 4768 4779	Vesiculated
+T6	Feature 4780 4791	light-toned
+R3	Shows Arg1:T32 Arg2:T6	
+R4	Shows Arg1:T32 Arg2:T5	
+T7	Mineral 5246 5254	andesine
+T8	Feature 5224 5231	noritic
+R5	Shows Arg1:T33 Arg2:T8	
+T9	Contains 6255 6259	rich
+E1	Contains:T9 Cont:T10 Targ:T34
+A1	Amount E1 Contains_High
+T10	Element 6253 6254	K
+T11	Material 6260 6272	conglomerate
+T12	Contains 6273 6280	targets
+E2	Contains:T12 Cont:T11 Targ:T34
+T13	Feature 6523 6534	phenocrysts
+R6	Shows Arg1:T35 Arg2:T13	
+T14	Feature 6553 6564	porphyritic
+R7	Shows Arg1:T35 Arg2:T14	
+T45	Mineral 6511 6522	plagioclase
+T46	Contains 6535 6543	observed
+E3	Contains:T46 Cont:T45 Targ:T35 Cont2:T48
+T47	Feature 6501 6507	zoning
+R8	Shows Arg1:T35 Arg2:T47	
+T48	Element 6494 6495	k
+T21	Mineral 8593 8607	trachyandesite
+T49	Material 8556 8562	basalt
+T50	Mineral 8563 8571	basanite
+T51	Material 8617 8626	Trachytes
+T52	Material 8679 8685	gabbro
+T53	Material 8686 8693	norites
+T54	Material 8710 8723	granodiorites
+T55	Material 8724 8732	diorites
+T56	Mineral 729 738	feldspars
+T57	Mineral 1067 1075	feldspar
+T58	Element 4294 4296	Al
+T59	Element 4297 4299	Si
+T60	Element 4305 4307	Fe
+T61	Element 4308 4310	Mg
+T62	Element 4312 4314	Si
+T63	Mineral 4348 4354	quartz
+T64	Mineral 4356 4367	plagioclase
+T65	Mineral 4384 4393	nepheline
+T66	Mineral 4442 4449	olivine
+T67	Element 4652 4654	Al
+T68	Element 4655 4657	Si
+T69	Mineral 4966 4981	alkali-feldspar
+T71	Mineral 5119 5129	oligoclase
+T72	Element 5413 5415	Al
+T73	Element 5416 5418	Si
+T74	Element 5424 5426	Fe
+T75	Element 5427 5429	Mg
+T76	Element 5431 5433	Si
+T77	Mineral 5876 5887	plagioclase
+T78	Mineral 5945 5954	feldspars
+T79	Element 6347 6349	Na
+T80	Element 6350 6351	K
+T81	Element 6723 6724	K
+T82	Mineral 6730 6739	feldspars
+T70	Mineral 7438 7444	quartz
+T83	Mineral 7982 7993	plagioclase
+T84	Mineral 8004 8012	felspars
