@@ -1,0 +1,69 @@
+T1	Element 2768 2770	Si
+T2	Element 2772 2774	Ti
+T3	Element 2776 2778	Al
+T4	Element 2780 2782	Fe
+T5	Element 2784 2786	Mg
+T6	Element 2788 2790	Ca
+T7	Element 2792 2794	Na
+T8	Element 2800 2801	K
+T9	Element 3246 3247	S
+T10	Element 3462 3463	S
+T11	Element 3593 3595	Cl
+T12	Element 4096 4098	Ca
+T13	Element 4148 4150	Ca
+T14	Element 4385 4387	Ca
+T15	Element 4960 4962	Ca
+T16	Element 4977 4979	Ca
+T17	Element 6075 6079	iron
+T18	Element 6590 6594	iron
+T19	Element 6729 6733	iron
+T20	Element 6847 6849	Ca
+T21	Element 7151 7153	Ca
+T22	Element 7349 7351	Ca
+T23	Element 7513 7517	iron
+T24	Element 8022 8024	Ca
+T25	Element 8095 8097	Ca
+T26	Element 8214 8216	Ca
+T27	Element 8616 8617	B
+T28	Element 8743 8747	iron
+T29	Target 909 919	John Klein
+T30	Target 1103 1113	Cumberland
+T31	Target 1564 1574	John Klein
+T32	Target 1717 1727	John Klein
+T33	Target 1885 1895	Cumberland
+T34	Target 2031 2039	Sheepbed
+T35	Target 2085 2093	Sheepbed
+T36	Target 3654 3664	John Klein
+T37	Target 3853 3863	Cumberland
+T38	Target 4193 4203	John Klein
+T39	Target 4226 4236	Cumberland
+T40	Target 4535 4545	John Klein
+T41	Target 4606 4616	Cumberland
+T42	Target 5671 5681	John Klein
+T43	Target 5715 5725	John Klein
+T44	Target 5743 5753	Cumberland
+T45	Target 6692 6702	Cumberland
+T46	Target 7069 7079	John Klein
+T47	Target 7121 7131	John Klein
+T48	Target 7211 7221	John Klein
+T49	Target 7303 7313	Cumberland
+T50	Target 7980 7990	John Klein
+T51	Target 8068 8078	Cumberland
+T52	Target 8258 8268	Cumberland
+T53	Target 8602 8610	Anderson
+T54	Target 8796 8806	John Klein
+T55	Target 8847 8857	Cumberland
+T56	Target 8988 8998	John Klein
+T57	Target 9039 9049	Cumberland
+T58	Mineral 2476 2489	Fe-forsterite
+T59	Mineral 2491 2497	augite
+T60	Mineral 2500 2509	pigeonite
+T61	Mineral 2526 2535	magnetite
+T62	Mineral 2537 2547	pyrrhotite
+T63	Mineral 2549 2559	akaganeite
+T64	Mineral 2578 2587	anhydrite
+T65	Mineral 2590 2599	bassanite
+T66	Mineral 2668 2676	smectite
+T67	Mineral 2441 2452	plagioclase
+T68	Mineral 2465 2473	sanidine
+T69	Mineral 2511 2524	orthopyroxene

@@ -1,0 +1,111 @@
+T1	Element 2601 2603	Al
+T2	Element 3646 3648	Al
+T3	Element 6856 6858	Al
+T4	Target 857 873	Confidence Hills
+T5	Target 961 969	Mt Sharp
+T6	Target 1238 1254	Confidence Hills
+T7	Target 2166 2182	Confidence Hills
+T8	Target 3152 3168	Confidence Hills
+T9	Target 4272 4280	Rocknest
+T10	Target 4282 4292	John Klein
+T11	Target 4294 4304	Cumberland
+T12	Target 4310 4318	Windjana
+T13	Target 4537 4548	Mount Sharp
+T14	Target 4703 4713	John Klein
+T15	Target 4718 4728	Cumberland
+T16	Target 5162 5172	John Klein
+T17	Target 5282 5298	Confidence Hills
+T18	Target 6179 6187	Windjana
+T19	Target 6244 6254	John Klein
+T20	Target 6259 6269	Cumberland
+T21	Target 6954 6964	Cumberland
+T22	Target 6966 6976	John Klein
+T23	Target 6982 6998	Confidence Hills
+T24	Target 7815 7823	Mt Sharp
+T25	Target 8104 8112	Windjana
+T26	Target 8246 8254	Windjana
+T27	Mineral 1317 1325	hematite
+T28	Mineral 1337 1346	magnetite
+T29	Mineral 1466 1476	forsterite
+T30	Mineral 1647 1655	jarosite
+T31	Mineral 2982 2990	jarosite
+T32	Mineral 2992 3001	magnetite
+T33	Mineral 3208 3214	augite
+T34	Mineral 3219 3227	hematite
+T35	Mineral 3342 3351	pigeonite
+T36	Mineral 3353 3362	magnetite
+T37	Mineral 3368 3378	forsterite
+T38	Mineral 3482 3494	cristobalite
+T39	Mineral 3496 3504	ilmenite
+T40	Mineral 3506 3514	jarosite
+T41	Mineral 3532 3544	cristobalite
+T42	Mineral 3738 3746	hematite
+T43	Mineral 3876 3884	Hematite
+T44	Mineral 3886 3894	Hematite
+T45	Mineral 4022 4030	hematite
+T46	Mineral 4124 4132	hematite
+T47	Mineral 4142 4150	hematite
+T48	Mineral 4362 4370	hematite
+T49	Mineral 4409 4417	hematite
+T50	Mineral 4474 4482	hematite
+T51	Mineral 4960 4968	smectite
+T52	Mineral 5078 5086	smectite
+T53	Mineral 5129 5135	illite
+T54	Mineral 5455 5461	Augite
+T55	Mineral 5471 5479	Hematite
+T56	Mineral 5526 5535	Pigeonite
+T57	Mineral 5544 5553	Magnetite
+T58	Mineral 5562 5572	Forsterite
+T59	Mineral 5581 5593	Cristobalite
+T60	Mineral 5604 5612	Ilmenite
+T61	Mineral 5623 5631	Jarosite
+T62	Mineral 6421 6429	jarosite
+T63	Mineral 6439 6451	cristobalite
+T64	Mineral 6457 6465	ilmenite
+T65	Mineral 6503 6511	jarosite
+T66	Mineral 6787 6799	cristobalite
+T67	Mineral 7412 7420	hematite
+T68	Mineral 7642 7650	hematite
+T69	Mineral 7842 7850	hematite
+T70	Mineral 1356 1370	phyllosilicate
+T71	Mineral 1384 1393	feldspars
+T72	Mineral 1404 1415	plagioclase
+T73	Mineral 1427 1435	feldspar
+T74	Mineral 1478 1491	orthopyroxene
+T75	Mineral 1510 1523	clinopyroxene
+T76	Mineral 3007 3015	pyroxene
+T77	Mineral 3100 3114	phyllosilicate
+T78	Mineral 3195 3206	plagioclase
+T79	Mineral 3291 3305	phyllosilicate
+T80	Mineral 3314 3322	feldspar
+T81	Mineral 3327 3340	orthopyroxene
+T82	Mineral 3520 3526	quartz
+T83	Mineral 3748 3763	phyllosilicates
+T84	Mineral 3769 3777	sulfates
+T85	Mineral 4677 4692	phyllosilicates
+T86	Mineral 4885 4893	pyroxene
+T87	Mineral 5255 5269	phyllosilicate
+T88	Mineral 5364 5378	phyllosilicate
+T89	Mineral 5433 5444	Plagioclase
+T90	Mineral 5504 5517	Orthopyroxene
+T91	Mineral 5642 5648	Quartz
+T92	Mineral 5659 5673	Phyllosilicate
+T93	Mineral 5728 5737	Feldspars
+T94	Mineral 5770 5778	feldspar
+T95	Mineral 5794 5805	Plagioclase
+T96	Mineral 5875 5886	plagioclase
+T97	Mineral 5896 5904	andesine
+T98	Mineral 5919 5929	oligoclase
+T99	Mineral 6032 6043	plagioclase
+T100	Mineral 6048 6056	feldspar
+T101	Mineral 6105 6115	orthoclase
+T102	Mineral 6146 6154	feldspar
+T103	Mineral 6211 6219	feldspar
+T104	Mineral 6358 6367	feldspars
+T105	Mineral 6431 6437	quartz
+T106	Mineral 6925 6939	phyllosilicate
+T107	Mineral 7015 7029	Phyllosilicate
+T108	Mineral 7291 7305	phyllosilicate
+T109	Mineral 7652 7667	phyllosilicates
+T110	Mineral 7673 7681	sulfates
+T111	Mineral 8037 8048	plagioclase

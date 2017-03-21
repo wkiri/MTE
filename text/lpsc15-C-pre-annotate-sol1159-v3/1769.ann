@@ -1,0 +1,77 @@
+T1	Element 1121 1123	Fe
+T2	Element 1949 1951	Fe
+T3	Element 2889 2891	Fe
+T4	Element 2893 2895	Al
+T5	Element 2901 2902	S
+T6	Element 3110 3112	Fe
+T7	Element 4304 4308	lead
+T8	Element 4312 4316	iron
+T9	Element 4368 4374	oxygen
+T10	Element 4864 4868	lead
+T11	Element 6220 6222	Fe
+T12	Element 6429 6431	Fe
+T13	Element 6566 6568	Fe
+T14	Element 6722 6723	C
+T15	Target 803 810	Mission
+T16	Target 818 832	Hematite Ridge
+T17	Target 974 982	Mt Sharp
+T18	Target 1183 1197	Hematite Ridge
+T19	Target 1285 1293	Sheepbed
+T20	Target 1643 1651	Sheepbed
+T21	Target 1750 1760	John Klein
+T22	Target 1765 1775	Cumberland
+T23	Target 2101 2115	Hematite Ridge
+T24	Target 2238 2252	Hematite Ridge
+T25	Target 3320 3327	Portage
+T26	Target 3616 3624	Sheepbed
+T27	Target 3924 3938	Hematite Ridge
+T28	Target 4543 4550	Portage
+T29	Target 5574 5588	Hematite Ridge
+T30	Target 6890 6904	Hematite Ridge
+T31	Target 7174 7188	Hematite Ridge
+T32	Target 7275 7282	Thomson
+T33	Target 7751 7755	Reed
+T34	Mineral 818 826	Hematite
+T35	Mineral 1183 1191	Hematite
+T36	Mineral 1358 1366	smectite
+T37	Mineral 1443 1452	magnetite
+T38	Mineral 1684 1692	smectite
+T39	Mineral 1697 1706	magnetite
+T40	Mineral 1858 1867	magnetite
+T41	Mineral 1878 1886	hematite
+T42	Mineral 1992 2000	hematite
+T43	Mineral 2101 2109	Hematite
+T44	Mineral 2238 2246	Hematite
+T45	Mineral 3493 3501	goethite
+T46	Mineral 3545 3551	pyrite
+T47	Mineral 3556 3563	apatite
+T48	Mineral 3924 3932	Hematite
+T49	Mineral 4094 4103	kaolinite
+T50	Mineral 4335 4344	magnetite
+T51	Mineral 4388 4396	hematite
+T52	Mineral 4900 4908	goethite
+T53	Mineral 5091 5099	hematite
+T54	Mineral 5112 5121	magnetite
+T55	Mineral 5377 5385	hematite
+T56	Mineral 5574 5582	Hematite
+T57	Mineral 5699 5707	hematite
+T58	Mineral 5842 5850	hematite
+T59	Mineral 6117 6125	hematite
+T60	Mineral 6501 6509	hematite
+T61	Mineral 6514 6522	goethite
+T62	Mineral 6648 6656	hematite
+T63	Mineral 6890 6898	Hematite
+T64	Mineral 7174 7182	Hematite
+T65	Mineral 1373 1389	igneous minerals
+T66	Mineral 1591 1598	olivine
+T67	Mineral 2813 2820	olivine
+T68	Mineral 3366 3373	olivine
+T69	Mineral 3508 3518	serpentine
+T70	Mineral 3735 3743	pyroxene
+T71	Mineral 3748 3756	feldspar
+T72	Mineral 3898 3907	carbonate
+T73	Mineral 4008 4017	carbonate
+T74	Mineral 4086 4092	quartz
+T75	Mineral 4134 4143	carbonate
+T76	Mineral 4289 4299	carbonates
+T77	Mineral 6569 6578	carbonate

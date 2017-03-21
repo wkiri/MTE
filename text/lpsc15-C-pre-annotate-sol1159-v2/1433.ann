@@ -1,0 +1,36 @@
+T1	Element 1104 1108	iron
+T2	Element 5265 5266	S
+T3	Element 5499 5500	P
+T4	Target 447 455	Winnipeg
+T5	Target 1015 1023	Mt Sharp
+T6	Target 1666 1674	Windjana
+T7	Target 1762 1774	Bonanza_King
+T8	Target 2068 2084	Confidence_Hills
+T9	Target 2122 2127	Panum
+T10	Target 2144 2159	Stovepipe_Wells
+T11	Target 2348 2357	Maturango
+T12	Target 2543 2551	Windjana
+T13	Target 2543 2566	Windjana drill tailings
+T14	Target 3049 3057	Windjana
+T15	Target 3049 3072	Windjana drill tailings
+T16	Target 3150 3162	Bonanza_King
+T17	Target 3921 3936	Stovepipe_Wells
+T18	Target 3937 3953	Confidence_Hills
+T19	Target 3960 3969	Maturango
+T20	Target 4628 4640	Bonanza_King
+T21	Target 4707 4715	Mt Sharp
+T22	Target 5085 5093	Mt Sharp
+T23	Target 5416 5421	Clark
+T24	Target 6260 6272	Bonanza_King
+T25	Target 6465 6480	Stovepipe_Wells
+T26	Mineral 3124 3133	magnetite
+T27	Mineral 3135 3143	ilmenite
+T28	Mineral 3698 3712	ferricopiapite
+T29	Mineral 3716 3724	jarosite
+T30	Mineral 4291 4299	hematite
+T31	Mineral 4734 4742	jarosite
+T32	Mineral 4747 4756	copiapite
+T33	Mineral 1091 1099	sulfates
+T34	Mineral 4681 4689	sulfates
+T35	Mineral 4817 4824	sulfate
+T36	Mineral 6178 6185	sulfate
