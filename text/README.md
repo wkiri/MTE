@@ -1,7 +1,7 @@
 This directory contains several sets of annotated LPSC abstracts,
 suitable for viewing/interaction with the brat tool.
 
-LPSC 2015:
+## LPSC 2015:
 - lpsc15-C-pre-annotate-sol-1159: auto-annotation of Element, Mineral,
   and Targets
   (abstracts that mention ChemCam only; target list through sol 1159)
@@ -12,14 +12,14 @@ LPSC 2015:
   pre_annotate.py script.  Raymond didn't use these versions, but they
   demonstate the output that can be achieved using keywords/lists.
 
-LPSC 2016:
+## LPSC 2016:
 - lpsc16-C-pre-annotate: auto-annotation of Element, Mineral,
   and Targets
   (abstracts that mention ChemCam only)
 - lpsc16-C-raymond: Raymond's manual annotations
   (edits to the pre-annotate versions)
 
-Other:
+## Other:
 - eval-annot-raymond.xlsx: evaluation of the pre-annotate versions
   versus Raymond's annotations
 
