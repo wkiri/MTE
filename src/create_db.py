@@ -74,24 +74,6 @@ try:
         create_table_cmd += ");"
         cursor.execute(create_table_cmd)
 
-    # -------- targets_mmgis -----------
-    # Table of information from Fred Calef's MMGIS project.
-    # Could potentially be merged with the targets table,
-    # but since the targets table is currently inferred from the text,
-    # it is incomplete.  For now we'll keep them separate.
-    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
-                   "WHERE table_name='targets_mmgis')")
-    table_exists = cursor.fetchone()[0]
-    if not table_exists:
-        print "Creating the ChemCam MMGIS table from scratch."
-        create_table_cmd  = "CREATE TABLE targets_mmgis ("
-        create_table_cmd += " target_name       varchar,"
-        # Geospatial coordinates
-        create_table_cmd += " target_latitude   float,"
-        create_table_cmd += " target_longitude  float"
-        create_table_cmd += ");"
-        cursor.execute(create_table_cmd)
-
     # -------- components -----------
     cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables " +
                    "WHERE table_name='components')")
@@ -161,11 +143,11 @@ try:
     # Update permissions
     cursor.execute('grant select, insert, update '
                    'on contains, components, targets, documents, '
-                   'anchors, targets_an, targets_mmgis '
+                   'anchors, targets_an '
                    'to youlu, thammegr, wkiri, ksingh;')
     cursor.execute('grant select '
                    'on contains, components, targets, documents, '
-                   'anchors, targets_an, targets_mmgis '
+                   'anchors, targets_an '
                    'to mtedbuser;')
 
     # Commit changes
