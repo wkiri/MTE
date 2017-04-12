@@ -31,14 +31,13 @@ psql -d $DB -c 'drop table contains, components, targets, documents, anchors, ta
 # Add the content from .ann files
 # These are old with poor-quality text extraction
 #./update_db.py -db $DB -anns ../text/lpsc15-C-raymond-sol707  -idprefix lpsc15- 2>/dev/null
-./update_db.py -db $DB -anns ../text/lpsc15-C-raymond-sol1159 -idprefix lpsc15- 2>/dev/null
+#./update_db.py -db $DB -anns ../text/lpsc15-C-raymond-sol1159 -idprefix lpsc15- 2>/dev/null
+# Raymond's updated annotations for LPSC 2015
+./update_db.py -db $DB -anns ../text/lpsc15-C-raymond-sol1159-v2 -idprefix lpsc15- 2>/dev/null
 ./update_db.py -db $DB -anns ../text/lpsc16-C-raymond -idprefix lpsc16- 2>/dev/null
 
 # Add the Analyst's Notebook table
 ./insert_an.py -db $DB 2>/dev/null
-
-# Add the MMGIS lat/lon table
-./insert_mmgis.py -db $DB 2>/dev/null
 
 # Check that it worked
 echo 'Documents:'
@@ -53,5 +52,3 @@ echo 'Anchors:'
 psql -d $DB -c 'SELECT COUNT(*) from anchors;'
 echo 'Targets_an:'
 psql -d $DB -c 'SELECT COUNT(*) from targets_an;'
-echo 'Targets_mmgis:'
-psql -d $DB -c 'SELECT COUNT(*) from targets_mmgis;'
