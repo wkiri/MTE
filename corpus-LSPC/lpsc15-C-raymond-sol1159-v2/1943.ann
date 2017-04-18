@@ -1,0 +1,136 @@
+T13	Element 4747 4749	Ca
+T14	Element 4751 4753	Al
+T15	Element 4879 4881	Si
+T16	Element 4973 4974	K
+T17	Element 4976 4978	Si
+T18	Element 4980 4982	Na
+T19	Element 4987 4989	Ba
+T20	Element 5016 5018	Ba
+T21	Element 5136 5138	Ti
+T22	Element 5140 5142	Fe
+T23	Element 5144 5146	Mg
+T24	Element 5245 5246	K
+T25	Element 5248 5250	Na
+T26	Target 1736 1744	Blanchet
+T27	Target 1746 1751	Stark
+T28	Target 4456 4464	Harrison
+T29	Target 4525 4532	Clinton
+T30	Target 4558 4566	Blanchet
+T31	Target 5587 5594	Clinton
+T32	Target 5848 5855	Becraft
+T33	Target 6070 6078	Harrison
+T34	Target 9954 9962	Blanchet
+T35	Target 9963 9970	Clinton
+T36	Target 9982 9987	Stark
+T37	Target 9988 9995	Sparkle
+T38	Target 9996 10001	Stock
+T39	Target 10002 10012	Chakonipau
+T40	Target 10022 10027	Falla
+T41	Target 10047 10054	Horlick
+T42	Target 10055 10062	Becraft
+T43	Target 10105 10109	Ross
+T44	Target 10110 10115	Bindi
+T45	Target 10116 10125	Wilkinson
+T46	Target 10126 10132	Angelo
+T47	Target 10133 10141	Dougalls
+T48	Target 10142 10147	Albee
+T49	Target 10148 10152	Nita
+T50	Mineral 2855 2865	macusanite
+T51	Mineral 5648 5665	oligoclase-albite
+T52	Mineral 5912 5922	macusanite
+T53	Mineral 6505 6515	macusanite
+T54	Mineral 7616 7624	basanite
+T55	Material 8771 8782	anorthosite
+T56	Material 8786 8793	granite
+T57	Mineral 9876 9891	Trachy andesite
+T1	Locality 1519 1532	Bradbury rise
+T2	Feature 1693 1704	light-toned
+R1	Shows Arg1:T26 Arg2:T2	
+R2	Shows Arg1:T27 Arg2:T2	
+R3	IsSituatedIn Arg1:T26 Arg2:T1	
+R4	IsSituatedIn Arg1:T27 Arg2:T1	
+T3	Feature 4438 4449	porphyritic
+T4	Feature 4450 4455	clast
+T5	Feature 4470 4480	polylithic
+T6	Material 4481 4493	conglomerate
+T7	Contains 4465 4469	in a
+E1	Contains:T7 Targ:T28 Cont:T6
+A1	Confidence E1 High
+R5	Shows Arg1:T28 Arg2:T5	
+R6	Shows Arg1:T28 Arg2:T4	
+R7	Shows Arg1:T28 Arg2:T3	
+T8	Feature 4508 4514	coarse
+T9	Feature 4515 4524	intrusive
+R8	Shows Arg1:T29 Arg2:T9	
+R9	Shows Arg1:T29 Arg2:T8	
+T10	Feature 4545 4556	vesiculated
+R10	Shows Arg1:T30 Arg2:T10	
+T11	Contains 5579 5586	such as
+E2	Contains:T11 Targ:T31 Cont:T12
+A2	Confidence E2 High
+T12	Material 5573 5578	rocks
+T59	Feature 5561 5572	Light-toned
+R11	Shows Arg1:T31 Arg2:T59	
+T60	Contains 5840 5847	such as
+E3	Contains:T60 Targ:T32 Cont:T61
+A3	Confidence E3 High
+T61	Material 5834 5839	rocks
+T62	Feature 5810 5821	Vesiculated
+T63	Feature 5822 5833	light-toned
+R12	Shows Arg1:T32 Arg2:T63	
+R13	Shows Arg1:T32 Arg2:T62	
+T64	Contains 5983 5990	satured
+E4	Contains:T64 Cont:T65 Targ:T32
+A4	Amount E4 Contains_High
+T65	Material 5976 5982	silica
+T66	Mineral 6011 6026	alkali-feldspar
+T67	Contains 5997 6007	mixed with
+E5	Contains:T67 Cont:T66 Targ:T32
+T68	Feature 6038 6049	Porphyritic
+R14	Shows Arg1:T33 Arg2:T68	
+T58	Target 9971 9981	Robin Hood
+T69	Target 10013 10021	Noriss 2
+T70	Target 10028 10035	Sledger
+T71	Target 10036 10046	Bird River
+T72	Target 10063 10069	Liitle
+T73	Target 1756 1765	Thor Lake
+T74	Mineral 5060 5068	feldspar
+T75	Element 5297 5299	Al
+T76	Element 5300 5302	Si
+T77	Element 5308 5310	Fe
+T78	Element 5311 5313	Mg
+T79	Element 5315 5317	Si
+T80	Element 5667 5669	Al
+T81	Element 5670 5672	Si
+T82	Material 6205 6211	gabbro
+T83	Target 10091 10104	Meeting House
+T84	Target 9942 9953	Peacok Hill
+T85	Target 10070 10080	Wind River
+T86	Target 10081 10090	Harrisson
+T87	Mineral 1449 1457	feldspar
+T88	Mineral 1868 1876	feldspar
+T89	Element 2551 2553	Al
+T90	Element 2554 2556	Si
+T91	Element 2559 2561	Fe
+T92	Element 2562 2564	Mg
+T93	Element 2566 2568	Si
+T94	Element 4758 4760	Si
+T95	Element 4774 4776	Ba
+T96	Mineral 4853 4861	feldspar
+T97	Mineral 4841 4861	plagioclase feldspar
+T98	Element 4908 4910	Al
+T99	Element 5058 5059	K
+T100	Mineral 5058 5068	K-feldspar
+T101	Mineral 5465 5472	olivine
+T102	Element 6412 6414	Al
+T103	Element 6415 6417	Si
+T104	Element 6423 6425	Fe
+T105	Element 6426 6428	Mg
+T106	Element 6430 6432	Si
+T107	Mineral 6705 6711	quartz
+T108	Mineral 7136 7145	basanites
+T109	Mineral 7154 7169	trachyandesites
+T110	Mineral 7539 7545	quartz
+T111	Element 7935 7936	K
+T112	Mineral 7937 7945	feldspar
+T113	Mineral 7935 7945	K-feldspar

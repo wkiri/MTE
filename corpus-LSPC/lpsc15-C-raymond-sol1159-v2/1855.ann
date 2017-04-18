@@ -1,0 +1,299 @@
+T1	Element 1109 1111	Mg
+T2	Element 1113 1115	Ca
+T3	Element 1120 1122	Cl
+T4	Element 1142 1144	Al
+T5	Element 1146 1148	Si
+T6	Element 1150 1151	P
+T7	Element 1156 1157	K
+T8	Element 1171 1173	Zn
+T9	Element 1178 1180	Ge
+T10	Element 1569 1571	Mg
+T11	Element 1573 1574	S
+T12	Element 1579 1581	Ni
+T13	Element 1696 1698	Cl
+T14	Element 1727 1729	Mg
+T15	Element 1731 1733	Ni
+T16	Element 1738 1739	S
+T17	Element 2182 2184	Al
+T18	Element 2234 2236	Fe
+T19	Element 2380 2382	Na
+T20	Element 2383 2385	Mg
+T21	Element 2386 2388	Al
+T22	Element 2389 2391	Si
+T23	Element 2392 2393	P
+T24	Element 2394 2395	S
+T25	Element 2396 2398	Cl
+T26	Element 2399 2400	K
+T27	Element 2401 2403	Ca
+T28	Element 2404 2406	Ti
+T29	Element 2407 2409	Cr
+T30	Element 2410 2412	Mn
+T31	Element 2413 2415	Fe
+T32	Element 2416 2418	Ni
+T33	Element 2419 2421	Zn
+T34	Element 2422 2424	Br
+T35	Element 2450 2451	P
+T36	Element 2903 2905	Al
+T37	Element 2910 2912	Si
+T38	Element 2923 2925	Fe
+T39	Element 2973 2975	Mg
+T40	Element 2980 2982	Ni
+T41	Element 2990 2991	S
+T42	Element 3333 3335	Zn
+T43	Element 3340 3342	Ge
+T44	Element 3402 3404	Br
+T45	Element 3578 3586	Selenium
+T46	Element 3591 3595	lead
+T47	Element 3672 3674	Se
+T48	Element 3811 3813	Pb
+T49	Element 3899 3901	Pb
+T50	Element 4028 4030	Se
+T51	Element 4332 4334	Mg
+T52	Element 4336 4338	Ca
+T53	Element 4343 4344	S
+T54	Element 4521 4522	P
+T55	Element 4791 4793	Na
+T56	Element 4794 4796	Mg
+T57	Element 4797 4799	Al
+T58	Element 4800 4802	Si
+T59	Element 4803 4804	P
+T60	Element 4805 4806	S
+T61	Element 4807 4809	Cl
+T62	Element 4810 4811	K
+T63	Element 4812 4814	Ca
+T64	Element 4815 4817	Ti
+T65	Element 4818 4820	Cr
+T66	Element 4821 4823	Mn
+T67	Element 4824 4826	Fe
+T68	Element 4827 4829	Ni
+T69	Element 4830 4832	Zn
+T70	Element 4833 4835	Br
+T71	Element 4850 4851	P
+T72	Element 5284 5286	Mg
+T73	Element 5288 5290	Ca
+T74	Element 5295 5297	Fe
+T75	Element 5314 5316	Al
+T76	Element 5318 5320	Si
+T77	Element 5361 5363	Mg
+T78	Element 5559 5561	Cl
+T79	Element 5565 5566	S
+T80	Element 5623 5624	S
+T81	Element 5629 5631	Cl
+T82	Element 5673 5675	Cl
+T83	Element 5812 5813	S
+T84	Element 5817 5819	Cl
+T85	Element 6207 6209	Al
+T86	Element 6214 6216	Si
+T87	Element 6232 6234	Mg
+T88	Element 6236 6238	Ca
+T89	Element 6243 6245	Fe
+T90	Element 7300 7302	Cl
+T91	Element 7312 7314	Cl
+T92	Element 7318 7319	S
+T93	Element 7365 7367	Cl
+T94	Target 1488 1495	Mammoth
+T95	Target 1500 1508	Morrison
+T96	Target 2481 2491	Cumberland
+T97	Target 2496 2504	Windjana
+T98	Target 2631 2638	Portage
+T99	Target 4975 4984	Santa Ana
+T100	Target 6465 6476	Mount Sharp
+T101	Target 6844 6850	Agency
+T102	Target 7193 7200	Stephen
+T103	Mineral 6484 6492	hematite
+T104	Mineral 1819 1827	sulfates
+T105	Mineral 6504 6512	sulfates
+T106	Locality 815 822	Pahrump
+T107	Target 1248 1257	Shoemaker
+T108	Target 1482 1490	Moenkopi
+T109	Target 1492 1499	Mammoth
+T110	Target 1504 1512	Morrison
+T111	Feature 1450 1469	diagenetic features
+R1	Shows Arg1:T108 Arg2:T111	
+R2	Shows Arg1:T109 Arg2:T111	
+R3	Shows Arg1:T110 Arg2:T111	
+T112	Contains 1549 1572	are clearly enriched in
+E1	Contains:T112 Targ:T108 Targ2:T109 Targ3:T110 Cont:T113 Cont2:T114 Cont3:T115
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T113	Element 1573 1575	Mg
+T114	Element 1577 1578	S
+T115	Element 1583 1585	Ni
+T116	Contains 1640 1655	consistent with
+E2	Contains:T116 Targ:T108 Targ2:T109 Targ3:T110 Cont:T117
+A3	Confidence E2 Neutral
+T117	Material 1656 1661	MgSO4
+T118	Element 1672 1674	Ni
+T119	Material 1672 1682	Ni-sulfate
+T120	Contains 1666 1671	minor
+E3	Contains:T120 Targ:T108 Targ2:T109 Targ3:T110 Cont:T119 Cont2:T118
+A4	Confidence E3 Neutral
+A5	Amount E3 Contains_Low
+T121	Element 1700 1702	Cl
+T122	Contains 1703 1729	shows a similar enrichment
+E4	Contains:T122 Cont:T121 Targ:T108 Targ2:T109 Targ3:T110
+A6	Amount E4 Contains_High
+T123	Contains 1744 1775	extrapolate towards the bedrock
+E5	Contains:T123 Targ:T108 Targ2:T109 Targ3:T110 Cont:T126 Cont2:T125 Cont3:T124
+T124	Element 1731 1733	Mg
+T125	Element 1735 1737	Ni
+T126	Element 1742 1743	S
+T127	Material 1823 1831	sulfates
+T128	Contains 1777 1787	indicating
+E6	Contains:T128 Targ:T108 Targ2:T109 Targ3:T110 Cont:T127
+T129	Feature 1268 1276	bedrocks
+R4	Shows Arg1:T107 Arg2:T129	
+T130	Locality 1240 1247	Pahrump
+R5	IsSituatedIn Arg1:T108 Arg2:T130	
+R6	IsSituatedIn Arg1:T109 Arg2:T130	
+R7	IsSituatedIn Arg1:T110 Arg2:T130	
+T131	Target 3758 3772	AlexanderHills
+T132	Element 3728 3730	Se
+T133	Contains 3731 3740	is ~50ppm
+E7	Contains:T133 Cont:T132 Targ:T131
+T134	Contains 3886 3903	clear enrichments
+E8	Contains:T134 Cont:T135 Targ:T136 Targ2:T137
+A7	Confidence E8 High
+A8	Amount E8 Contains_High
+T135	Element 3867 3869	Pb
+T136	Target 3918 3927	PinkCliff
+T137	Target 3932 3941	BookCliff
+T138	Site 3997 4006	WhaleRock
+T139	Target 4021 4029	SantaAna
+R8	IsSituatedIn Arg1:T139 Arg2:T138	
+T140	Contains 3947 3954	largest
+E9	Contains:T140 Cont:T141 Targ:T139
+A9	Confidence E9 Neutral
+A10	Amount E9 Contains_High
+T141	Element 3955 3957	Pb
+T142	Locality 4075 4082	Pahrump
+R9	IsSituatedIn Arg1:T139 Arg2:T142	
+T143	Target 4364 4372	SantaAna
+T144	Contains 4373 4387	has even lower
+E10	Contains:T144 Cont:T145 Cont2:T146 Cont3:T147 Targ:T143
+A11	Amount E10 Contains_Low
+T145	Element 4388 4390	Mg
+T146	Element 4392 4394	Ca
+T147	Element 4399 4400	S
+R10	IsSituatedIn Arg1:T143 Arg2:T142	
+T148	Contains 4406 4422	clearly elevated
+E11	Contains:T148 Cont:T149 Targ:T143
+A12	Confidence E11 High
+A13	Amount E11 Contains_High
+T149	Element 4423 4433	phosphorus
+T150	Target 4472 4483	BonanzaKing
+T151	Contains 4572 4576	high
+E12	Contains:T151 Targ:T150 Cont:T152 Targ2:T143
+A14	Amount E12 Contains_High
+T152	Element 4577 4578	P
+T153	Feature 4749 4765	high Fe/Mn ratio
+R11	Shows Arg1:T150 Arg2:T153	
+R12	Shows Arg1:T143 Arg2:T153	
+T154	Material 4821 4829	Feoxides
+T155	Contains 4773 4792	could point towards
+E13	Contains:T155 Cont:T154 Targ:T150 Targ2:T143
+A15	Confidence E13 Low
+T156	Target 2124 2130	Mojave
+T157	Feature 2102 2120	lath-like textures
+R13	Shows Arg1:T156 Arg2:T157	
+T158	Target 2483 2492	JohnKlein
+T159	Target 2497 2507	Cumberland
+T160	Target 2512 2520	Windjana
+T161	Target 2531 2541	Conf.Hills
+T162	Target 2703 2712	WhaleRock
+T163	Target 2712 2718	Chinle
+T164	Target 2720 2734	AlexanderHills
+T165	Target 2734 2743	BookCliff
+T166	Target 2745 2754	PinkCliff
+T167	Target 2754 2763	Shoemaker
+T168	Target 4927 4942	BonanzaKing_DRT
+T169	Target 4949 4962	Maturango_DRT
+T170	Target 4969 4982	SantaAna2_DRT
+T171	Target 5042 5051	Santa Ana
+T172	Target 5057 5067	BonanzaKin
+T173	Target 7280 7287	Stephen
+T174	Element 1113 1115	Mg
+T175	Element 1117 1119	Ca
+T176	Element 1124 1126	Cl
+T177	Element 1146 1148	Al
+T178	Element 1150 1152	Si
+T179	Element 1154 1155	P
+T180	Element 1160 1161	K
+T181	Element 1175 1177	Zn
+T182	Element 1182 1184	Ge
+T183	Element 2187 2189	Al
+T184	Element 2386 2388	Na
+T185	Element 2389 2391	Mg
+T186	Element 2392 2394	Al
+T187	Element 2395 2397	Si
+T188	Element 2398 2399	P
+T189	Element 2400 2401	S
+T190	Element 2402 2404	Cl
+T191	Element 2405 2406	K
+T192	Element 2407 2409	Ca
+T193	Element 2410 2412	Ti
+T194	Element 2413 2415	Cr
+T195	Element 2416 2418	Mn
+T196	Element 2419 2421	Fe
+T197	Element 2422 2424	Ni
+T198	Element 2425 2427	Zn
+T199	Element 2428 2430	Br
+T200	Element 2431 2433	Ge
+T201	Target 2648 2655	Portage
+T202	Element 2939 2941	Al
+T203	Element 2946 2948	Si
+T204	Element 2959 2961	Fe
+T205	Element 3010 3012	Mg
+T206	Element 3017 3019	Ni
+T207	Element 3027 3028	S
+T208	Element 3389 3391	Zn
+T209	Element 3396 3398	Ge
+T210	Element 3458 3460	Br
+T211	Element 3634 3642	Selenium
+T212	Element 3647 3651	lead
+T213	Element 3808 3809	S
+T214	Element 3810 3812	Se
+T215	Element 4084 4086	Se
+T216	Mineral 4150 4158	sulfides
+T217	Mineral 4186 4194	sulfates
+T218	Element 4850 4852	Na
+T219	Element 4853 4855	Mg
+T220	Element 4856 4858	Al
+T221	Element 4859 4861	Si
+T222	Element 4862 4863	P
+T223	Element 4864 4865	S
+T224	Element 4866 4868	Cl
+T225	Element 4869 4870	K
+T226	Element 4871 4873	Ca
+T227	Element 4874 4876	Ti
+T228	Element 4877 4879	Cr
+T229	Element 4880 4882	Mn
+T230	Element 4883 4885	Fe
+T231	Element 4886 4888	Ni
+T232	Element 4889 4891	Zn
+T233	Element 4892 4894	Br
+T234	Element 5351 5353	Mg
+T235	Element 5355 5357	Ca
+T236	Element 5362 5364	Fe
+T237	Element 5381 5383	Al
+T238	Element 5385 5387	Si
+T239	Element 5393 5394	K
+T240	Element 5430 5432	Mg
+T241	Element 5438 5440	Ni
+T242	Mineral 5441 5449	sulfates
+T243	Mineral 5438 5449	Ni-sulfates
+T244	Element 5516 5518	Ca
+T245	Mineral 5519 5527	sulfates
+T246	Mineral 5516 5527	Ca-sulfates
+T247	Element 5628 5630	Cl
+T248	Element 5634 5635	S
+T249	Element 5692 5693	S
+T250	Element 5698 5700	Cl
+T251	Element 5742 5744	Cl
+T252	Element 5881 5882	S
+T253	Element 5886 5888	Cl
+T254	Element 6276 6278	Al
+T255	Element 6283 6285	Si
+T256	Element 6301 6303	Mg
+T257	Element 6305 6307	Ca
+T258	Element 6312 6314	Fe

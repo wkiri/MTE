@@ -1,0 +1,83 @@
+T5	Element 1778 1780	Si
+T6	Element 1797 1799	Si
+T7	Element 1817 1819	Si
+T11	Element 2813 2815	Si
+T13	Element 3075 3077	Si
+T14	Element 3289 3291	Si
+T15	Element 3426 3428	Si
+T16	Element 3446 3448	Si
+T18	Element 3494 3496	Si
+T19	Element 3514 3516	Si
+T21	Element 3627 3629	Mg
+T22	Element 3849 3851	Mg
+T23	Element 3892 3894	Mg
+T24	Element 4137 4139	Si
+T25	Element 4302 4304	Mg
+T26	Element 4532 4534	Mg
+T27	Element 4755 4757	Mg
+T28	Element 4851 4853	Si
+T29	Element 4893 4895	Mg
+T30	Element 5003 5005	Mg
+T31	Element 5404 5406	Si
+T32	Element 5423 5425	Si
+T34	Element 5480 5482	Si
+T35	Element 5574 5576	Mg
+T36	Element 5639 5641	Mg
+T37	Element 5843 5845	Si
+T38	Element 5856 5858	Mg
+T39	Element 6017 6019	Mg
+T40	Element 6284 6286	Mg
+T45	Target 2106 2114	Windjana
+T46	Target 5471 5479	Windjana
+T47	Target 5630 5638	Windjana
+T48	Target 5699 5707	Windjana
+T49	Target 5915 5923	Windjana
+T50	Target 6070 6078	Windjana
+T51	Target 6108 6116	Windjana
+T52	Target 6179 6187	Windjana
+T53	Target 6305 6313	Windjana
+T1	Material 2084 2087	MgO
+T2	Contains 2088 2101	concentration
+E1	Contains:T2 Targ:T45 Cont:T1
+T3	Feature 2133 2154	relatively homogenous
+R1	Shows Arg1:T45 Arg2:T3	
+T4	Target 2459 2468	Goldstone
+T8	Target 2595 2604	Goldstone
+T9	Target 2653 2662	Goldstone
+T10	Target 2831 2840	Goldstone
+T12	Contains 2816 2830	line ratio for
+E2	Contains:T12 Cont:T11 Targ:T10
+T17	Target 3613 3622	Goldstone
+T20	Contains 3623 3626	the
+E3	Contains:T20 Cont:T21 Targ:T17
+T44	Target 3872 3881	Goldstone
+T54	Contains 3883 3891	Observed
+E4	Contains:T54 Cont:T23 Targ:T44
+T55	Target 4165 4174	Goldstone
+T56	Contains 4152 4160	observed
+E5	Contains:T56 Targ:T55 Cont:T24
+T57	Target 4362 4371	Goldstone
+T33	Contains 5483 5488	ratio
+E6	Contains:T33 Cont:T34 Targ:T46
+T58	Contains 5642 5645	448
+E7	Contains:T58 Cont:T36 Targ:T47
+T59	Material 5784 5787	MgO
+T60	Contains 5788 5802	weight percent
+E8	Contains:T60 Cont:T59 Targ:T48
+T61	Contains 5846 5851	ratio
+E9	Contains:T61 Cont:T37 Targ:T49
+T62	Contains 5859 5879	448 nm line strength
+E10	Contains:T62 Cont:T38 Targ:T49
+T63	Contains 6332 6345	concentration
+E11	Contains:T63 Cont:T64 Targ:T53
+T64	Material 6319 6322	MgO
+T41	Target 3390 3399	Goldstone
+T42	Target 3473 3482	Goldstone
+T43	Contains 3530 3548	spectra line ratio
+E12	Contains:T43 Cont:T19 Targ:T42
+T65	Target 3813 3822	Goldstone
+T66	Target 5170 5179	Goldstone
+T67	Target 5277 5286	Goldstone
+T68	Contains 5154 5165	composition
+E13	Contains:T68 Cont:T69 Targ:T66
+T69	Material 5150 5153	MgO

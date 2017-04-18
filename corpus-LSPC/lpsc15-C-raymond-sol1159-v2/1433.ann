@@ -1,0 +1,113 @@
+T6	Element 1104 1108	iron
+T17	Target 1666 1674	Windjana
+T18	Target 2122 2127	Panum
+T19	Target 2144 2159	Stovepipe_Wells
+T20	Target 2348 2357	Maturango
+T21	Target 2543 2551	Windjana
+T22	Target 3049 3057	Windjana
+T23	Target 3921 3936	Stovepipe_Wells
+T24	Target 3960 3969	Maturango
+T26	Target 6465 6480	Stovepipe_Wells
+T27	Mineral 3124 3133	magnetite
+T28	Mineral 3135 3143	ilmenite
+T29	Mineral 3698 3712	ferricopiapite
+T30	Mineral 3716 3724	jarosite
+T31	Mineral 4291 4299	hematite
+T32	Mineral 4734 4742	jarosite
+T33	Mineral 4747 4756	copiapite
+T1	Locality 1616 1625	Kimberley
+R1	IsSituatedIn Arg1:T17 Arg2:T1	
+T2	Target 1762 1774	Bonanza_King
+T3	Locality 1814 1826	Happy Valley
+R2	IsSituatedNear Arg1:T2 Arg2:T3	
+T4	Target 2011 2019	Perdido2
+R3	IsSituatedNear Arg1:T4 Arg2:T3	
+T5	Locality 2036 2049	Pahrump Hills
+T7	Target 2068 2084	Confidence_Hills
+R4	IsSituatedIn Arg1:T7 Arg2:T5	
+R5	IsSituatedIn Arg1:T18 Arg2:T5	
+R6	IsSituatedIn Arg1:T19 Arg2:T5	
+T8	Material 2330 2334	rock
+T9	Contains 2335 2341	target
+E1	Contains:T9 Cont:T8 Targ:T20
+T16	Feature 2630 2662	lowest peak relative reflectance
+R7	Shows Arg1:T21 Arg2:T16	
+T34	Feature 2688 2713	largest 535 nm band depth
+R8	Shows Arg1:T21 Arg2:T34	
+T35	Feature 2718 2770	relatively high redblue (670/440nm) ratio and slopes
+R9	Shows Arg1:T21 Arg2:T35	
+T36	Contains 2772 2797	consistent with a greater
+E2	Contains:T36 Cont:T37 Targ:T21
+A1	Confidence E2 Neutral
+T37	Material 2798 2826	ferric crystalline component
+A2	Amount E2 Contains_High
+T38	Feature 2836 2867	least negative 750-840 nm slope
+R10	Shows Arg1:T21 Arg2:T38	
+T39	Mineral 2921 2928	olivine
+T40	Mineral 2929 2937	pyroxene
+T41	Material 2948 2967	amorphous component
+T42	Contains 2869 2889	suggestive of either
+E3	Contains:T42 Targ:T21 Cont:T39 Cont2:T40 Cont3:T41
+A3	Confidence E3 Low
+A4	Amount E3 Contains_Low
+T43	Contains 3073 3087	likely contain
+E4	Contains:T43 Cont:T27 Cont2:T28 Targ:T22
+A5	Confidence E4 Neutral
+A6	Amount E4 Contains
+T44	Target 3150 3162	Bonanza_King
+T45	Feature 3236 3254	spectrally neutral
+R11	Shows Arg1:T44 Arg2:T45	
+T46	Feature 3260 3287	relatively high reflectance
+R12	Shows Arg1:T44 Arg2:T46	
+T47	Feature 3293 3324	lowest red/blue ratio and slope
+R13	Shows Arg1:T44 Arg2:T47	
+T48	Feature 3330 3389	weakest band depth at 600 nm (weak ferric oxide absorption)
+R14	Shows Arg1:T44 Arg2:T48	
+T49	Feature 3397 3422	possible band near 433 nm
+T50	Target 3525 3533	Perdido2
+R15	Shows Arg1:T50 Arg2:T49	
+R16	Shows Arg1:T44 Arg2:T49	
+T51	Feature 3578 3602	largest 750-840 nm slope
+R17	Shows Arg1:T50 Arg2:T51	
+T52	Feature 3608 3624	600/840 nm ratio
+R18	Shows Arg1:T50 Arg2:T52	
+T53	Contains 3679 3697	is consistent with
+E5	Contains:T53 Targ:T50 Cont:T29 Cont2:T30
+A7	Confidence E5 Neutral
+T54	Target 3938 3954	Confidence_Hills
+T55	Locality 3981 3994	Pahrump Hills
+R19	IsSituatedIn Arg1:T24 Arg2:T55	
+R20	IsSituatedIn Arg1:T54 Arg2:T55	
+R21	IsSituatedIn Arg1:T23 Arg2:T55	
+T56	Feature 4067 4106	deep absorptions at ~560 nm and ~660 nm
+R22	Shows Arg1:T23 Arg2:T56	
+R23	Shows Arg1:T54 Arg2:T56	
+R24	Shows Arg1:T24 Arg2:T56	
+T57	Feature 4114 4159	flattening or dropoff in reflectance > 750 nm
+R25	Shows Arg1:T23 Arg2:T57	
+R26	Shows Arg1:T54 Arg2:T57	
+R27	Shows Arg1:T24 Arg2:T57	
+T58	Contains 4199 4264	consistent with the presence of a combination of small amounts of
+E6	Contains:T58 Cont:T31 Targ:T24 Targ2:T54 Targ3:T23
+A8	Confidence E6 Neutral
+T59	Contains 4301 4330	perhaps with additional other
+E7	Contains:T59 Targ:T24 Targ2:T54 Targ3:T23 Cont:T60 Cont2:T61
+A9	Confidence E7 Low
+A10	Amount E7 Contains
+T60	Material 4331 4380	poorly-crystalline and/or nanophase ferric oxides
+T61	Material 4384 4397	oxyhydroxides
+T62	Target 4628 4640	Bonanza_King
+T63	Target 4645 4653	Perdido2
+T64	Mineral 4674 4689	ferric sulfates
+T65	Contains 4654 4673	provide evidence of
+E8	Contains:T65 Targ:T63 Targ2:T62 Cont:T64
+A11	Confidence E8 Neutral
+T10	Locality 4840 4853	Pahrump Hills
+T11	Mineral 4871 4879	hematite
+T12	Target 5990 5998	Perdido2
+T13	Target 6071 6079	Perdido2
+T14	Target 6260 6272	Bonanza_King
+T15	Mineral 61 69	SULFATES
+T25	Mineral 1091 1099	sulfates
+T66	Mineral 4817 4824	sulfate
+T67	Mineral 6178 6185	sulfate

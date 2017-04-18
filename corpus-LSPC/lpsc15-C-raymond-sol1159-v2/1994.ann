@@ -1,0 +1,76 @@
+T11	Element 6112 6119	calcium
+T1	Locality 48 61	PAHRUMP HILLS
+T2	Locality 951 964	Pahrump Hills
+T3	Locality 1109 1122	Pahrump Hills
+T4	Formation 1171 1177	Murray
+T5	Locality 1348 1361	Pahrump Hills
+T6	Locality 1534 1547	Pahrump Hills
+T7	Target 1749 1765	Confidence Hills
+T8	Locality 1792 1805	Pahrump Hills
+R1	IsSituatedIn Arg1:T7 Arg2:T8	
+T12	Locality 1873 1886	Pahrump Hills
+T13	Target 2774 2789	Confidence Hill
+T14	Locality 2829 2842	Pahrump Hills
+T15	Locality 3018 3031	Pahrump Hills
+T9	Target 3785 3794	Shoemaker
+T16	Target 3796 3811	Alexander Hills
+T17	Target 3817 3823	Chinle
+T18	Feature 3829 3874	laminae are distinctly rhythmic in appearance
+R2	Shows Arg1:T17 Arg2:T18	
+R3	Shows Arg1:T16 Arg2:T18	
+R4	Shows Arg1:T9 Arg2:T18	
+T19	Target 3920 3931	Pink Cliffs
+T20	Target 3936 3951	Alexander Hills
+T21	Target 4222 4233	Pink Cliffs
+T22	Target 4235 4246	Book Cliffs
+T23	Target 4248 4263	Alexander Hills
+T24	Target 4269 4285	Carnivore Canyon
+T25	Feature 4167 4205	Resistant mudstone/siltstone intervals
+R5	Shows Arg1:T21 Arg2:T25	
+R6	Shows Arg1:T22 Arg2:T25	
+R7	Shows Arg1:T23 Arg2:T25	
+R8	Shows Arg1:T24 Arg2:T25	
+T26	Target 4379 4390	Book Cliffs
+T27	Target 4392 4407	Alexander Hills
+T28	Target 4413 4429	Carnivore Canyon
+T29	Feature 4287 4324	Coarse cm- to mm-scale planar laminae
+R9	Shows Arg1:T26 Arg2:T29	
+R10	Shows Arg1:T27 Arg2:T29	
+R11	Shows Arg1:T28 Arg2:T29	
+T30	Feature 4329 4358	possible cross-stratification
+R12	Shows Arg1:T26 Arg2:T30	
+R13	Shows Arg1:T27 Arg2:T30	
+R14	Shows Arg1:T28 Arg2:T30	
+T31	Feature 4435 4481	portions of these outcrops appear more massive
+R15	Shows Arg1:T28 Arg2:T31	
+R16	Shows Arg1:T27 Arg2:T31	
+R17	Shows Arg1:T26 Arg2:T31	
+T32	Feature 4679 4725	Parallel and low-angle, mm-scale cross-laminae
+T33	Target 4778 4784	Chinle
+R18	Shows Arg1:T33 Arg2:T32	
+T10	Target 4989 4999	Whale Rock
+T34	Target 5989 5995	Chinle
+T35	Locality 5036 5049	Pahrump Hills
+R19	IsSituatedIn Arg1:T10 Arg2:T35	
+T36	Material 5069 5104	very fine to fine-grained sandstone
+T37	Contains 5105 5113	exhibits
+E1	Contains:T37 Targ:T10 Cont:T36
+T38	Feature 5114 5156	dune and ripple-scale cross-stratification
+R20	Shows Arg1:T10 Arg2:T38	
+T39	Target 5158 5168	Whale Rock
+T41	Feature 5816 5827	concretions
+T40	Feature 5829 5845	crystal clusters
+T42	Feature 5851 5898	parallelsided, positive relief host rock ridges
+R21	DoesNotShow Arg1:T34 Arg2:T42	
+R22	DoesNotShow Arg1:T34 Arg2:T40	
+R23	Shows Arg1:T34 Arg2:T41	
+T43	Target 7197 7203	Chinle
+T44	Feature 7166 7193	low-angle cross laminations
+T45	Target 7268 7278	Whale Rock
+T46	Feature 7212 7251	dune and ripple cross-stratified facies
+R24	Shows Arg1:T45 Arg2:T46	
+T47	Target 6078 6088	Whale Rock
+T48	Feature 6009 6016	boxwork
+T49	Element 5601 5608	calcium
+T50	Mineral 5609 5616	sulfate
+T51	Mineral 5601 5616	calcium-sulfate

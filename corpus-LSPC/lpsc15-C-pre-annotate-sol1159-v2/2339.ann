@@ -1,0 +1,77 @@
+T1	Element 4597 4599	Si
+T2	Element 4601 4603	Al
+T3	Element 4605 4607	Fe
+T4	Element 4609 4611	Mg
+T5	Element 4613 4615	Ca
+T6	Element 4617 4619	Na
+T7	Element 4621 4622	K
+T8	Element 4992 4994	Si
+T9	Element 5640 5641	S
+T10	Element 5643 5645	Cl
+T11	Element 5651 5653	Br
+T12	Element 5761 5763	Si
+T13	Element 5766 5768	Mg
+T14	Element 5770 5772	Fe
+T15	Element 5774 5776	Ca
+T16	Element 5778 5780	Na
+T17	Element 5782 5783	K
+T18	Element 5941 5943	Al
+T19	Element 5957 5959	Si
+T20	Element 5977 5979	Fe
+T21	Element 6151 6153	Ca
+T22	Element 6155 6157	Na
+T23	Element 6159 6161	Mg
+T24	Element 6163 6165	Fe
+T25	Element 6180 6182	Si
+T26	Element 6184 6186	Al
+T27	Element 6192 6193	K
+T28	Element 6490 6492	Fe
+T29	Element 6509 6511	Si
+T30	Element 6731 6733	Mg
+T31	Element 6735 6737	Ca
+T32	Element 6739 6740	S
+T33	Element 6746 6748	Cl
+T34	Element 6952 6954	Cl
+T35	Element 6959 6961	Br
+T36	Element 7101 7103	Mg
+T37	Element 7107 7109	Ca
+T38	Element 7114 7115	S
+T39	Element 7125 7127	Mg
+T40	Element 7132 7134	Cl
+T41	Element 7220 7222	Fe
+T42	Element 7227 7229	Mn
+T43	Element 7794 7796	Cl
+T44	Element 7798 7800	Br
+T45	Element 8281 8283	Br
+T46	Element 8288 8290	Cl
+T47	Element 8327 8329	Fe
+T48	Element 8513 8515	Fe
+T49	Element 9140 9141	B
+T50	Element 9369 9371	Br
+T51	Element 9376 9378	Cl
+T52	Element 9788 9790	Br
+T53	Target 705 713	Mt Sharp
+T54	Target 705 715	Mt Sharp 1
+T55	Target 1141 1149	Mt Sharp
+T56	Target 1141 1151	Mt Sharp 2
+T57	Target 1308 1316	Mt Sharp
+T58	Target 2156 2172	Confidence Hills
+T59	Target 3625 3641	Confidence Hills
+T60	Target 3643 3654	Pink Cliffs
+T61	Target 3656 3667	Book Cliffs
+T62	Target 5998 6014	Confidence Hills
+T63	Target 6445 6461	Confidence Hills
+T64	Target 6891 6902	Book Cliffs
+T65	Target 7264 7280	Confidence Hills
+T66	Target 8589 8597	Mt Sharp
+T67	Target 8828 8836	Mt Sharp
+T68	Target 9321 9337	Confidence Hills
+T69	Target 9542 9550	Mt Sharp
+T70	Target 9626 9633	Topanga
+T71	Target 9644 9655	Book Cliffs
+T72	Mineral 1107 1115	hematite
+T73	Mineral 2037 2045	hematite
+T74	Mineral 2348 2356	jarosite
+T75	Mineral 8380 8388	hematite
+T76	Mineral 2358 2364	gypsum
+T77	Mineral 6261 6268	sulfate

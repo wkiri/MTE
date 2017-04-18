@@ -1,0 +1,18 @@
+T5	Element 1005 1007	Fe
+T6	Element 4635 4636	S
+T7	Element 4641 4643	Cl
+T8	Element 5562 5564	Fe
+T13	Target 3488 3500	Dismal Lakes
+T1	Feature 3447 3480	low color contrast between grains
+R1	Shows Arg1:T13 Arg2:T1	
+T2	Mineral 4534 4544	carbonates
+T3	Element 5303 5305	Fe
+T4	Element 5336 5338	Fe
+T9	Element 5374 5380	Sulfur
+T10	Element 5412 5420	Potassic
+T11	Element 5442 5443	K
+T12	Element 5475 5480	Sodic
+T14	Element 5510 5512	Na
+T15	Element 5683 5684	-
+T16	Element 5689 5691	Na
+T17	Element 5869 5871	Si

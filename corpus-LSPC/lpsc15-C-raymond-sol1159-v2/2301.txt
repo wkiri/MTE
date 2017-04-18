@@ -1,0 +1,126 @@
+
+2301.PDF
+CHEMCAM INVESTIGATION OF THE JOHN KLEIN AND CUMBERLAND DRILL TAILINGS. R. S. Jackson1, R. C. 
+Wiens2, H. E. Newsom1, D. T. Vaniman3, L.W. Beegle4, S. Maurice5, J. M. Williams1, and the MSL Team; Univ. of New Mexico (Albuquerque, 
+NM 87131; rjacks04@unm.edu), 2Los Alamos National Laboratory, 3Planetary Science Institute, 4Jet Propulsion Laboratory. 5IRAP/CNRS 
+Introduction: This study utilizes ChemCam data 
+for bedrock, drill hole walls, tailings, and unprocessed 
+and sieved dump piles to investigate chemical variations with depth in the drill holes and possible effects 
+of the drilling and sample processing. The ChemCam 
+instrument on the Mars Science Laboratory (MSL) 
+rover includes a Laser Induced Breakdown Spectroscopy (LIBS) tool that allows 400 m spot chemical 
+analyses on Mars. This microprobe device is designed 
+for rapid remote analyses [1]. Following the use of 
+MSL s drill at John Klein on sol 182, ChemCam analyzed the tailings in the area around the drill hole on 
+four occasions from sol 183 to 234 and also sampled 
+the drill hole wall on sol 227. After drilling at Cumberland on sol 279, the tailings were sampled on sols 281 
+and 289 and the drill hole wall was sampled on sol 
+284. The two main drill holes are 6.5 cm deep and 
+have a diameter of 1.6 cm; MSL also sieved the material to <150 m before introducing it to the CheMin 
+and SAM instruments. Unused portions of both the 
+sieved and unsieved material were dumped back onto 
+the surface and analyzed by APXS and ChemCam [3]. 
+ Fig. 1: a) Colorized RMI mosaic of the John Klein drill hole 
+and tailings (lighter colored material), with the first 10 
+observation points from CCAM02183 b) MAHLI image 
+from sol 270 of the John Klein drill hole, with 7 of the 10 
+ChemCam observations from CCAM02227 adjacent to 
+white, Ca-sulfate veins. c) A night time MAHLI image taken 
+on sol 293 of the Cumberland drill hole, showing ChemCam 
+shots from CCAM07284 with almost no veins visible. 
+Geologic Background: The drill sites are both in 
+the Sheepbed Member of the Yellowknife Bay Formation. The Sheepbed is the lowest exposed member 
+of the Yellowknife Bay formation and is interpreted as 
+a mudstone that formed in a lacustrine system [2]. The 
+Yellowknife Bay Formation is made up of detrital basaltic materials in addition to clay minerals and an 
+amorphous component. In the two drill samples, the 
+CheMin X-Ray Diffraction investigation detected plagioclase (plus minor sanidine), Fe-forsterite, augite, 
+pigeonite, orthopyroxene, magnetite, pyrrhotite, akaganeite, and Ca-sulfates (anhydrite & bassanite). In 
+addition, ~50 weight percent of both drill samples consist of smectite plus an amorphous component [3]. 
+Analytical Details: The LIBS oxide weight percentages of Si, Ti, Al, Fe, Mg, Ca, Na, and K were 
+calculated with the PLS1 algorithm [e.g., 4]. The concentrations are preliminary, and will be revised for 
+future publication after a new calibration is released. 
+For these sequences, ChemCam made observations at 
+several locations with 30 or 50 laser shots per location; 
+Fig. 2 displays single shot data; Fig. 3 uses the averages of all the shots at a single location (ignoring the first 
+5 to avoid dust contamination). In this study S is not 
+quantified, but is thought to make up most of a missing component when low major-element totals are 
+reported. The missing component is the reported total 
+subtracted from 100%; this is used as a proxy for S in 
+graphs and is supported by the detection of sulfides 
+and Ca-sulfates by CheMin [3], but the missing component includes H2O, Cl, and other minor elements. 
+Target Rock Compositions: The John Klein target 
+had 3 analysis sequences with 23 total observations, 
+including 10 observations vertically from the surface 
+down the bore wall and 3 observations on the tailings 
+from CCAM02183. Cumberland observations included 
+9 sequences with 84 observations, including 10 observations vertically down the bore wall. As shown in Fig. 
+3d, the compositions from surface of the rocks cluster 
+in two groups. The first has relatively low Ca and the 
+most observations; the second is a high Ca cluster, 
+with at least 4 observations (3 John Klein observations 
+and one Cumberland observation). 
+ Fig. 2: Graph of all Laser Shots on both bore walls (Observations correspond to labels in Fig. 1). Arrows point to areas 
+with high Ca percentages and indicate sampled Ca-sulfate 
+veins. Shots are on the upper 2 cm of the bore wall. 
+Drill Tailings: ChemCam ran 4 sequences on the 
+John Klein drill tailings with 30 observations and 2 
+sequences on the Cumberland drill tailings with 15 
+observations. The drill tailings oxide compositions are 
+as expected compared to the bulk rock mineralogy 
+reported by CheMin. However, results for the drill 
+2301.pdf46th Lunar and Planetary Science Conference (2015)
+tailings fall along a mixing trend not seen within the 
+target rocks, roughly separated into a lower Ca and a 
+higher Ca group. As such, it seems reasonable to assume that the drill tailings are a mixture of rock and 
+veins and the chemical distribution of the mixed material depends on the local abundance of veins. Since the 
+tailings are almost exclusively from the first 2 cm of 
+the drill hole while the material sampled by the drilling 
+apparatus and delivered to the interior instruments are 
+dominantly from 2-4 cm down the drill hole, any differences between the drill tailings and the drillsampled material could reflect chemical variations 
+with depth. The drill sampled material was dumped 
+after portions were delivered for analysis by SAM and 
+CheMin; dump piles were then analyzed by ChemCam. The John Klein sample was dumped back onto 
+the John Klein tailings and the Cumberland material 
+was carried by the rover for ~200 sols before being 
+dumped. For both dump piles the first 10 shots at each 
+observation point were used in the analysis in order to 
+avoid including any surface material underneath the 
+piles. The first set of graphs in Fig. 3a-c, show a positive correlation between silica and iron. This probably 
+represents a dilution of the mafic silicates from the 
+basalt derived sediments by the Ca-sulfate material. In 
+addition, the observations in the tailings do not fall into 
+the two categories seen in the data from the surface of 
+the rocks, indicating that the tailings are a mixture of 
+mafic sediments and Ca-sulfate material. The John 
+Klein dump pile follows the trend seen in the tailings, 
+but the dump pile values are at the bottom left portion 
+of the trend indicating lower silica and iron. This result 
+may be due to a greater amount of Ca-sulfate veins in 
+that region of the hole. At Cumberland there is distinctly lower iron and silica in the dump pile, compared to the tailings. The next graph (Fig. 3d-e) displays the variation between Ca and the missing component. As previously, the drill tailings represent a 
+mixing trend between the basaltic sediments and diagenetic features, with 4 to 6 Ca-sulfate features identifiable in the data from the rocks and John Klein drill 
+hole wall. Graph 3b suggests that John Klein would 
+have higher Ca and missing component values than the 
+tailings, but the John Klein dump pile has a higher 
+missing component but low and constrained Ca. While 
+the Cumberland dump pile values are lower in both Ca 
+and missing component; these values suggest less Casulfate features in the middle portion of the drill hole, 
+indicating that the reason for the low silica and iron in 
+Fig. 3c is not due to an increase in Ca-sulfate features. 
+Conclusion: The drill tailings represent a mixture 
+of basaltic sediments and diagenetic material like Casulfates; the shots on the drill site surfaces are closer to 
+pure end members. In addition, it is possible that there 
+is a difference in the distribution of materials with 
+depth, evidenced by the data in the dump pile; however, there does not seem to be enough data to ascribe a 
+cause. The John Klein drill tailings have an average Ca 
+composition of 7.7 1.5 weight percent and Cumberland tailings have a Ca composition of 7.5 1.0 weight 
+percent. At these concentrations, the veins most likely 
+contribute about 19% of the Ca component in John 
+Klein and about 8% in Cumberland in order to be consistent with CheMin measurements. References: [1] Wiens R. C. et al. (2012) Space Science Review, 170, 167. [2] Grotzinger J. P. et al. (2013) Science, DOI: 10.1126/science.1242777. [3] Vaniman D. T. et 
+al. (2013) Science, DOI: 10.1126/science.1243480. [4] Clegg 
+S.M. et al. (2009) Spectrochim. Acta B64, 79-88., Anderson, 
+R. B., et al. (2011). Icarus, 215(2), 608 627. 
+Fig. 3: All data are shots averaged by observation point a) Variation in SiO2 and iron for drill tailings, wall & surface of rocks b) 
+John Klein drill tailings compared to dump pile c) Cumberland drill tailings compared to dump pile d) Variation in CaO & missing component for drill tailings, bore wall, & surface of rocks e) John Klein drill tailings compared to dump pile f) Cumberland 
+drill tailings compared to dump pile 
+2301.pdf46th Lunar and Planetary Science Conference (2015)

@@ -1,0 +1,64 @@
+T5	Element 4173 4175	Ca
+T6	Element 4905 4907	Ca
+T7	Target 5671 5681	John Klein
+T9	Mineral 1704 1715	Fe-smectite
+T10	Mineral 1716 1726	nontronite
+T11	Mineral 1740 1751	Mg-smectite
+T12	Mineral 1752 1760	saponite
+T13	Mineral 2431 2441	nontronite
+T14	Mineral 2603 2612	Bassanite
+T15	Mineral 2638 2648	nontronite
+T16	Mineral 2730 2740	nontronite
+T17	Mineral 2881 2890	anhydrite
+T18	Mineral 3270 3279	Bassanite
+T19	Mineral 3284 3293	anhydrite
+T20	Mineral 3309 3317	saponite
+T21	Mineral 3372 3381	kieserite
+T22	Mineral 3409 3420	hexahydrite
+T23	Mineral 3425 3434	kieserite
+T24	Mineral 4013 4021	saponite
+T25	Mineral 4792 4800	saponite
+T26	Mineral 5338 5348	nontronite
+T27	Mineral 5353 5361	saponite
+T28	Mineral 5705 5713	saponite
+T29	Mineral 5762 5771	anhydrite
+T30	Mineral 5776 5785	bassanite
+T31	Mineral 368 383	Phyllosilicates
+T32	Mineral 488 495	Sulfate
+T33	Mineral 687 702	phyllosilicates
+T34	Mineral 707 715	sulfates
+T35	Mineral 841 856	phyllosilicates
+T36	Mineral 861 869	sulfates
+T37	Mineral 987 1002	Phyllosilicates
+T38	Mineral 1236 1251	phyllosilicates
+T39	Mineral 1393 1408	phyllosilicates
+T40	Mineral 1413 1421	sulfates
+T41	Mineral 1525 1533	sulfates
+T42	Mineral 2479 2493	phyllosilicate
+T43	Mineral 2945 2951	gypsum
+T44	Mineral 3045 3053	sulfates
+T45	Mineral 3544 3551	sulfate
+T46	Mineral 3688 3694	quartz
+T47	Mineral 4724 4732	sulfates
+T48	Mineral 4967 4982	phyllosilicates
+T49	Mineral 5216 5223	sulfate
+T50	Mineral 5383 5398	phyllosilicates
+T51	Mineral 5460 5475	Phyllosilicates
+T52	Mineral 5480 5488	sulfates
+T53	Mineral 5935 5943	sulfates
+T54	Mineral 6019 6034	phyllosilicates
+T55	Mineral 6253 6261	sulfates
+T56	Mineral 6301 6309	sulfates
+T57	Mineral 6337 6352	phyllosilicates
+T58	Mineral 6409 6424	phyllosilicates
+T59	Mineral 6578 6586	sulfates
+T60	Mineral 6630 6645	phyllosilicates
+T1	Contains 5714 5728	was identified
+E1	Contains:T1 Targ:T7 Cont:T28 Cont2:T29 Cont3:T30
+A1	Confidence E1 High
+T2	Mineral 5808 5818	Ca-sulfate
+T3	Contains 5795 5806	presence of
+E2	Contains:T3 Targ:T7 Cont:T2
+A2	Confidence E2 High
+T4	Feature 5819 5824	veins
+R1	Shows Arg1:T7 Arg2:T4	

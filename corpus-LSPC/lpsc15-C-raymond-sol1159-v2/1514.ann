@@ -1,0 +1,115 @@
+T1	Element 261 263	Ca
+T2	Element 267 269	Na
+T5	Element 2884 2886	Na
+T6	Element 2891 2893	Ca
+T7	Element 3010 3012	Na
+T8	Element 3017 3019	Ca
+T9	Element 3580 3582	Fe
+T10	Element 3979 3981	Fe
+T12	Element 5506 5510	iron
+T18	Target 486 494	Badwater
+T19	Target 2705 2713	Badwater
+T20	Target 5791 5801	Taltheilei
+T21	Target 5812 5818	Miette
+T22	Target 5830 5840	Shackleton
+T23	Target 5852 5860	Harrison
+T24	Target 5872 5878	Lamboo
+T25	Target 5890 5907	BonanzaKing2_CCAM
+T26	Target 6323 6332	Natkusiak
+T27	Target 6344 6356	Richardson_2
+T28	Target 6395 6406	Husky_Creek
+T29	Target 6438 6443	Cosmo
+T30	Target 6459 6463	Mell
+T31	Mineral 2930 2939	anorthite
+T32	Mineral 3164 3173	anorthite
+T34	Mineral 4465 4474	pigeonite
+T37	Mineral 208 216	feldspar
+T38	Mineral 437 445	feldspar
+T39	Contains 468 485	sampled on target
+E1	Contains:T39 Targ:T18 Cont:T38
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T40	Feature 426 436	anorthitic
+R1	Shows Arg1:T18 Arg2:T40	
+T4	Contains 2685 2697	for a target
+E3	Contains:T4 Targ:T19 Cont:T3 Cont2:T5 Cont3:T6 Cont4:T41
+T3	Mineral 2660 2671	plagioclase
+T41	Mineral 2903 2911	feldspar
+T42	Contains 3137 3163	this sample is nearly pure
+E2	Contains:T42 Cont:T32 Targ:T19
+A3	Confidence E2 High
+A4	Amount E2 Contains_High
+T11	Mineral 5730 5738	feldspar
+T33	Contains 5739 5751	compositions
+E4	Contains:T33 Cont:T11 Targ:T20 Targ2:T21 Targ3:T22 Targ4:T23 Targ5:T24 Targ6:T25
+T43	Mineral 6507 6515	pyroxene
+T44	Contains 6474 6506	all have more than 20 shots with
+E5	Contains:T44 Cont:T43 Targ:T30 Targ2:T29 Targ3:T45 Targ4:T28 Targ5:T46 Targ6:T27 Targ7:T26
+A5	Confidence E5 High
+T45	Target 6418 6426	Red Wine
+T46	Target 6368 6383	Bonnet Plume_DW
+T35	Mineral 6569 6578	pigeonite
+T47	Mineral 6579 6585	augite
+T13	Element 363 365	Ca
+T14	Element 367 369	Ca
+T15	Element 370 372	Na
+T16	Element 2648 2650	Ca
+T17	Element 2652 2654	Ca
+T36	Element 2655 2657	Na
+T48	Mineral 3590 3598	feldspar
+T49	Mineral 3600 3608	pyroxene
+T50	Mineral 3614 3621	olivine
+T51	Element 3627 3629	Ca
+T52	Element 3630 3632	Na
+T53	Element 3633 3634	K
+T54	Element 3635 3637	Al
+T55	Element 3648 3650	Si
+T56	Element 3652 3654	Mg
+T57	Element 3655 3657	Fe
+T58	Mineral 3708 3715	olivine
+T59	Element 3721 3723	Na
+T60	Element 3724 3725	K
+T61	Element 3726 3728	Al
+T62	Element 3739 3741	Si
+T63	Element 3743 3745	Mg
+T64	Element 3746 3748	Fe
+T65	Element 3749 3751	Ca
+T66	Mineral 3801 3809	pyroxene
+T67	Element 3815 3817	Mg
+T68	Element 3818 3820	Fe
+T69	Element 3821 3823	Mn
+T70	Element 3824 3826	Ti
+T71	Element 3837 3839	Si
+T72	Element 3841 3843	Na
+T73	Element 3844 3846	Ca
+T74	Element 3847 3848	K
+T75	Mineral 3898 3906	feldspar
+T76	Element 3911 3913	Si
+T77	Element 3923 3925	Fe
+T78	Element 3927 3929	Fe
+T79	Element 3930 3932	Mg
+T80	Mineral 4079 4087	feldspar
+T81	Mineral 4128 4136	feldspar
+T82	Mineral 4242 4251	feldspars
+T83	Mineral 4310 4323	plagionclases
+T84	Mineral 4388 4396	Pyroxene
+T85	Element 4564 4566	Ca
+T86	Element 4568 4570	Ca
+T87	Element 4571 4573	Na
+T88	Element 4574 4575	K
+T89	Element 5163 5165	Si
+T90	Element 5167 5169	Fe
+T91	Element 5170 5172	Mg
+T92	Mineral 5332 5339	olivine
+T93	Mineral 5423 5431	olivines
+T94	Mineral 5647 5655	feldspar
+T95	Mineral 5968 5976	feldspar
+T96	Mineral 6025 6033	feldspar
+T97	Mineral 6145 6153	pyroxene
+T98	Element 6194 6196	Si
+T99	Element 6198 6200	Fe
+T100	Element 6201 6203	Mg
+T101	Element 6204 6206	Mn
+T102	Element 6207 6209	Ti
+T103	Element 6210 6212	Ca
+T104	Mineral 6609 6618	pyroxenes

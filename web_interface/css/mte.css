@@ -33,11 +33,16 @@
 .mte-search-component {
     position: absolute;
     top: 10px;
-    left: 78px;
 }
 
 .mte-results {
     float: left;
+}
+
+.mte-mmgis {
+    float:left;
+    width: 752px;
+    height: 752px;
 }
 
 .mte-results-status {
@@ -170,8 +175,7 @@ ul {
 
 .mte-mmgis-div {
     width: 100%;
-    height: 500px;
-    background-color: red;
+    height: 752px;
 }
 
 .mte-mmgis-iframe {

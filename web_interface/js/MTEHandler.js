@@ -7,7 +7,7 @@ define([
 
     var MTEHandler = function () {}
 
-    MTEHandler.prototype.searchHandler = function (mteInterface, autoCompletionList, cgiRoot, util, listener) {
+    MTEHandler.prototype.searchHandler = function (mteInterface, autoCompletionList, cgiRoot, mmgisUrlRoot, util, listener) {
         var searchStr = $(mteInterface._inputField).val().toLowerCase();
         var targetMatches = util.getTargetMatches(autoCompletionList, searchStr);
         var componentMatches = util.getComponentMatches(autoCompletionList, searchStr);
@@ -22,26 +22,26 @@ define([
         }
 
         $.ajax({
-            url: cgiRoot + CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR,
-            type: "post",
-            dataType: "json",
-            data: {
-                searchStr: searchStr
-            },
-            success: function (returnedList) {
-                var formattedList = util.getReformattedList(returnedList);
-                if (formattedList.length === 0 && targetMatches !== 0) {
-                    featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, listener);
-                } else {
-                    if (formattedList.length === 1) {
-                        mteInterface.setStatusLabel("1 target found");
-                    } else {
-                        mteInterface.setStatusLabel(formattedList.length + " targets found");
-                    }
+           url: cgiRoot + CONSTANTS.SERVER_GET_RESULTS_BY_SEARCHSTR,
+           type: "post",
+           dataType: "json",
+           data: {
+               searchStr: searchStr
+           },
+           success: function (returnedList) {
+               var formattedList = util.getReformattedList(returnedList);
+               if (formattedList.length === 0 && targetMatches !== 0) {
+                   featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, listener, mmgisUrlRoot);
+               } else {
+                   if (formattedList.length === 1) {
+                       mteInterface.setStatusLabel("1 target found");
+                   } else {
+                       mteInterface.setStatusLabel(formattedList.length + " targets found");
+                   }
 
-                    mteInterface.displayResults(formattedList, listener, util);
-                }
-            }
+                   mteInterface.displayResults(formattedList, listener, util, mmgisUrlRoot);
+               }
+           }
         });
     }
 
@@ -52,7 +52,7 @@ define([
         }
     }
 
-    MTEHandler.prototype.targetClickHandler = function (resultBlock, util, mteInterface, mteListener) {
+    MTEHandler.prototype.targetClickHandler = function (resultBlock, util, mteInterface, mteListener, mmgisUrlRoot) {
         var displayList = util.getDisplayList(resultBlock);
 
         //case-insensitive sort (A-Z)
@@ -69,7 +69,7 @@ define([
             return str.trim().toLowerCase();
         }));
 
-        mteInterface.buildSingleTargetPage(resultBlock, displayList, mteListener);
+        mteInterface.buildSingleTargetPage(resultBlock, displayList, mteListener, mmgisUrlRoot);
     }
 
     MTEHandler.prototype.shareButtonHandler = function (shareInput) {
@@ -97,7 +97,7 @@ define([
         });
     }
 
-    function featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, mteListener) {
+    function featchResultsWOProperties (cgiRoot, searchStr, formattedList, util, mteInterface, mteListener, mmgisUrlRoot) {
         $.ajax({
             url: cgiRoot + CONSTANTS.SERVER_GET_RESULTS_WITHOUT_PROPERTIES,
             type: "post",
@@ -113,7 +113,7 @@ define([
                     mteInterface.setStatusLabel(formattedList.length + " targets found");
                 }
 
-                mteInterface.displayResults(formattedList, mteListener, util);
+                mteInterface.displayResults(formattedList, mteListener, util, mmgisUrlRoot);
             }
         });
     }

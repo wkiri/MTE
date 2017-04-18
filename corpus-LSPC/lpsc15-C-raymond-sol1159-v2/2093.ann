@@ -1,0 +1,71 @@
+T1	Element 3451 3460	potassium
+T5	Element 4987 4989	Fe
+T6	Element 4994 4996	Mg
+T7	Element 5035 5039	iron
+T9	Element 6297 6304	calcium
+T10	Element 6309 6318	magnesium
+T11	Element 6343 6351	fluorine
+T12	Element 6354 6361	Calcium
+T13	Element 6370 6377	Calcium
+T14	Element 6619 6621	Mg
+T15	Element 6631 6633	Mg
+T16	Element 6788 6789	S
+T17	Element 6791 6792	N
+T18	Element 6794 6796	Cl
+T19	Element 6802 6804	Br
+T20	Element 7037 7039	Mg
+T21	Element 7081 7083	At
+T24	Target 3409 3415	Darwin
+T25	Target 4852 4858	Darwin
+T26	Target 5716 5721	Delta
+T28	Locality 3511 3522	Cooperstown
+T29	Locality 3527 3535	Kimberly
+T30	Mineral 3314 3334	plagioclase feldspar
+T31	Contains 3363 3379	is a contributor
+E1	Contains:T31 Targ:T24 Cont:T30
+A1	Confidence E1 High
+T32	Feature 3383 3405	coarser-grained facies
+R1	Shows Arg1:T24 Arg2:T32	
+T33	Material 4821 4833	conglomerate
+T34	Contains 4835 4842	such as
+E2	Contains:T34 Targ:T25 Cont:T33
+T2	Feature 4860 4867	pebbles
+R2	Shows Arg1:T25 Arg2:T2	
+T3	Feature 4884 4900	igneous textures
+R3	Shows Arg1:T25 Arg2:T3	
+T35	Mineral 4937 4948	plagioclase
+T36	Contains 4955 4968	being present
+E3	Contains:T36 Cont:T35 Targ:T25
+A2	Confidence E3 Neutral
+T4	Site 4977 4985	Rocknest
+T37	Mineral 5072 5079	olivine
+T8	Locality 5156 5171	Yellowknife Bay
+T38	Target 5347 5357	Book Cliff
+T39	Target 5362 5372	Pink Cliff
+T40	Target 5482 5492	Pink Cliff
+T41	StratRel 5494 5499	lower
+E4	StratRel:T41 Subj:T40 Obj:T38
+A3	Position E4 IsStratBelow
+T42	Target 5658 5671	Goblin Valley
+T43	Target 5733 5749	San Rafael Swell
+T44	Target 5773 5786	Castle Valley
+T45	Target 5788 5797	Ibex Pass
+T46	Target 5809 5820	Saddle Peak
+T47	Target 5943 5954	Pink Cliffs
+T48	Material 5905 5927	altered mineral phases
+T49	Contains 5928 5939	are present
+E5	Contains:T49 Targ:T47 Cont:T48
+A4	Confidence E5 Neutral
+T50	Target 5980 5991	Book Cliffs
+T51	Mineral 6050 6070	plagioclase feldspar
+T52	Contains 6071 6081	is present
+E6	Contains:T52 Cont:T51 Targ:T50
+A5	Confidence E6 Neutral
+T53	Locality 7084 7092	Kimberly
+T54	Site 6951 6959	Rocknest
+T55	Target 5626 5636	Book Cliff
+T56	Target 5680 5691	Pink Cliffs
+T27	Locality 3427 3434	Pahrump
+T57	Mineral 3461 3469	feldspar
+T58	Mineral 3451 3469	potassium feldspar
+T59	Element 6655 6657	Mg

@@ -5,9 +5,10 @@ define([
 ) {
     "use strict";
 
-    var MTEInterface = function (containerId, thumbnailUrlRoot, mslANLinkRoot) {
+    var MTEInterface = function (containerId, thumbnailUrlRoot, mslANLinkRoot, mmgisUrlRoot) {
         this._thumbnailUrlRoot = thumbnailUrlRoot;
         this._mslANLinkRoot = mslANLinkRoot;
+        this._mmgisUrlRoot = mmgisUrlRoot;
         this._mteContainer = document.getElementById(containerId);
         this._mteLogo = document.createElement("div");
         this._mteSubtitle = document.createElement("div");
@@ -22,6 +23,7 @@ define([
             CONSTANTS.STATSBUTTON_IMG, CONSTANTS.STATSBUTTON_DATA_TARGET);
         this._mteResultsStatus = document.createElement("div");
         this._mteResultsDisplay = document.createElement("div");
+        this._mteMMGIS = document.createElement("div");
 
         return this;
     }
@@ -31,10 +33,12 @@ define([
         this._mteSubtitle.className = CONSTANTS.SUBTITLE_STYLE;
         this._mteSearch.className = CONSTANTS.SEARCH_STYLE;
         this._mteResults.className = CONSTANTS.RESULTS_STYLE;
+        this._mteMMGIS.className = CONSTANTS.MMGIS_STYLE;
         this._mteContainer.appendChild(this._mteLogo);
         this._mteContainer.appendChild(this._mteSubtitle);
         this._mteContainer.appendChild(this._mteSearch);
         this._mteContainer.appendChild(this._mteResults);
+        this._mteContainer.appendChild(this._mteMMGIS);
 
         //logo panel
         this._mteLogo.appendChild(document.createTextNode(CONSTANTS.LOGO_STR));
@@ -74,9 +78,13 @@ define([
         while (this._mteResultsDisplay.hasChildNodes()) {
             this._mteResultsDisplay.removeChild(this._mteResultsDisplay.lastChild);
         }
+
+        while (this._mteMMGIS.hasChildNodes()) {
+            this._mteMMGIS.removeChild(this._mteMMGIS.lastChild);
+        }
     }
 
-    MTEInterface.prototype.displayResults = function (formattedList, mteListener, util) {
+    MTEInterface.prototype.displayResults = function (formattedList, mteListener, util, mmgisUrlRoot) {
         for (var i = 0; i < formattedList.length; i++) {
             //unit result container
             var resultBlock = document.createElement("div");
@@ -89,19 +97,12 @@ define([
             thumbnailDiv.className = "mte-results-display-block-img";
             $(thumbnailDiv).attr("data-toggle", "modal");
             $(thumbnailDiv).attr("data-target", "#singleTargetDiv");
-            if (formattedList[i].id !== undefined && formattedList[i].id !== "None") {
-                thumbnailImg.src = this._thumbnailUrlRoot + formattedList[i].id;
-            } else {
-                thumbnailImg.src = "images/empty_placeholder.png";
-            }
+            thumbnailImg.src = this._thumbnailUrlRoot + formattedList[i].label;
+            thumbnailErrorHandler(thumbnailImg);
             thumbnailDiv.appendChild(thumbnailImg);
             resultBlock.appendChild(thumbnailDiv);
-            if (formattedList[i].id !== undefined && formattedList[i].id !== "None") {
-                resultBlock.thumbnailUrl = this._thumbnailUrlRoot + formattedList[i].id;
-                resultBlock.anLink = this._mslANLinkRoot + formattedList[i].id;
-            } else {
-                resultBlock.thumbnailUrl = "images/empty_placeholder.png";
-            }
+            resultBlock.thumbnailUrl = this._thumbnailUrlRoot + formattedList[i].label;
+            resultBlock.anLink = this._mslANLinkRoot + formattedList[i].label;
 
             //text div
             var textDiv = document.createElement("div");
@@ -160,9 +161,14 @@ define([
             mteListener.appendTargetClickEventListener(targetDiv, resultBlock);
             mteListener.appendTargetClickEventListener(thumbnailDiv, resultBlock);
         }
+
+        //append mmgis multiple targets display
+        if (formattedList.length > 0) {
+            mmgisMultiTargetsHandler(this._mteMMGIS, formattedList, mmgisUrlRoot);
+        }
     }
 
-    MTEInterface.prototype.buildSingleTargetPage = function (resultBlock, displayList, mteListener) {
+    MTEInterface.prototype.buildSingleTargetPage = function (resultBlock, displayList, mteListener, mmgisUrlRoot) {
         var targetName = resultBlock.targetName;
         var thumbnailUrl = resultBlock.thumbnailUrl;
         var anLink = resultBlock.anLink;
@@ -207,15 +213,16 @@ define([
         mteListener.appendShareButtonEventListener(shareButton, shareInput);
 
         //anButton
-        if (anLink !== undefined && anLink.length > 0) {
-            var anButton = document.createElement("input");
-            anButton.type = "button";
-            anButton.className = "btn btn-info btn-sm";
-            anButton.id = "anButton";
-            anButton.value = "Go to MSL Analyst's Notebook"
-            divHeader.appendChild(anButton);
-            mteListener.appendANLinkEventListener(anButton, anLink);
-        }
+        var anButton = document.createElement("input");
+        anButton.type = "button";
+        anButton.className = "btn btn-info btn-sm";
+        anButton.id = "anButton";
+        anButton.value = "Go to MSL Analyst's Notebook"
+        divHeader.appendChild(anButton);
+        mteListener.appendANLinkEventListener(anButton, anLink);
+
+        //check thumbnail, if it doesn't exist, then we assume that the AN link is not available.
+        thumbnailErrorHandler(thumbnail, divHeader, anButton);
 
         //root list
         var rootUl = document.createElement("ul");
@@ -252,40 +259,13 @@ define([
             buildPropertyFeature (propertyContentUl, displayList);
         }
 
-        ///////////testing mmgis//////////////////////////////////
-        ////1st method////
-        //var mmgisDiv = document.createElement('div');
-        //mmgisDiv.className = 'mte-mmgis-div';
-        //divDisplay.appendChild(mmgisDiv);
-        //$.ajax({
-        //    url: "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html",
-        //    //url: "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/Layers/ChemCam/MSL_CHEMCAM_oxides_sol1126_geo.json",
-        //    success: function (mmgisPage){
-        //        mmgisDiv.innerHTML = mmgisPage;
-        //    }
-        //});
-        ////1st method end/////
-
-        ////2nd method/////////
-        //$(mmgisDiv).load("http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html");
-        ////2nd method end//////
-
-        ////3rd method/////////
         var mmgisDiv = document.createElement('div');
-        mmgisDiv.className = 'mte-mmgis-div';
-        divDisplay.appendChild(mmgisDiv);
-
         var iframe = document.createElement("iframe");
-        iframe.className = "mte-mmgis-iframe";
-        iframe.src = "http://miplmmgis.jpl.nasa.gov/mmgis/MMWebGIS/Missions/MSL/MSL.html";
+        mmgisDiv.className = 'mte-mmgis-div';
+        iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
+        iframe.src = mmgisUrlRoot + "&searchStr=" + targetName;
         mmgisDiv.appendChild(iframe);
-
-        $("#searchTool").click();
-        $("#searchToolB").click();
-        $("#auto_search").val("Windjana 614");
-        $("#searchToolSelect").click();
-        ////3rd method end/////
-        ///////////testing mmgis end//////////////////////////////
+        divDisplay.appendChild(mmgisDiv);
     }
 
     MTEInterface.prototype.createColumnChart = function (statisticList) {
@@ -581,6 +561,31 @@ define([
         }
 
         return button;
+    }
+
+    function mmgisMultiTargetsHandler (mmgisDiv, formattedList, mmgisUrlRoot) {
+        var targetName;
+        var mmgisUrl = mmgisUrlRoot;
+        var iframe = document.createElement("iframe");
+        iframe.className = CONSTANTS.MMGIS_IFRAME_STYLE;
+
+        for (var i = 0; i < formattedList.length; i++) {
+            targetName = formattedList[i].label;
+            mmgisUrl += "&searchStr=" + targetName;
+        }
+
+        iframe.src = mmgisUrl;
+        mmgisDiv.appendChild(iframe);
+    }
+
+    function thumbnailErrorHandler (thumbnailElement, anButtonParent, anButton) {
+        thumbnailElement.addEventListener("error", function () {
+            thumbnailElement.src = "images/empty_placeholder.png";
+
+            if (anButtonParent!== undefined && anButton !== undefined) {
+                anButtonParent.removeChild(anButton);
+            }
+        });
     }
 
     return MTEInterface;

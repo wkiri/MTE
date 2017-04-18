@@ -48,6 +48,8 @@ define([], function () {
          var targetName = list.results[i][0];
          var targetId = list.results[i][1];
          var targetFirstSol = list.results[i][2];
+         //var targetLat = list.results[i][11];
+         //var targetLon = list.results[i][12];
          if (this.isNameInList(targetName, formattedList, "label")) {
             for (var j = 0; j < formattedList.length; j++) {
                if (formattedList[j].label !== targetName) {
@@ -70,6 +72,8 @@ define([], function () {
                label: targetName,
                id: targetId,
                firstSol: targetFirstSol,
+               //targetLat: targetLat,
+               //targetLon: targetLon,
                associates: [{
                   component: list.results[i][3],
                   componentLabel: list.results[i][4],

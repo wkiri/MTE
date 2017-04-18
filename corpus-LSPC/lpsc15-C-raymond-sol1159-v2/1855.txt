@@ -1,0 +1,93 @@
+
+1855.PDF
+CHEMICAL EVIDENCE FOR AN AQUEOUS HISTORY AT PAHRUMP, GALE CRATER, MARS, AS SEEN BY THE APXS. R.Gellert1, J.A.Berger2, N.Boyd1, J.L.Campbell1, E.D.Desouza1, B.Elliott3, M.Fisk4, B.Pavri5, G.M.Perrett1, M.Schmidt6, L.Thompson3, S.VanBommel1, A.S.Yen5. 1Univ. of Guelph (Guelph, ON, N1G2W1, Canada; rgellert@uoguelph.ca), 2Western Univ., London, ON, 3Univ. of New Brunswick, Fredericton, NB, 4Oregon State University, Corvallis, OR, 5Jet Propulsion Lab, Pasadena, CA, 6Brock Univ., St Catharines, ON 
+Introduction: The MSL Alpha-Particle-X-ray- Spectrometer(APXS)[1] is the third generation of chemical in-situ instruments of its kind onboard a NASA Mars rover. Over the first 850 sols at Gale Crater it has measured ~190 spots on 140 distinct samples along the traverse. 40 targets have been measured at Pahrump, an extensive bedrock at the base of Mount Sharp. 
+Pahrump Chemistry: APXS data were taken of the dumped drill fines delivered to SAM and Chemin. Compared to soil and the previous drill targets at Gale, Pahrump is very distinct in major and minor elements. It is significantly depleted in Mg, Ca and Cl, while elevated in Al, Si, P and K, and high in Zn and Ge, see fig 1. Pahrump Drill Site: At the lowest point at Pahrump(Shoemaker), brushed bedrocks, a mini-drill hole and ejected drill fines were measured. Similar results indicate a homogeneous composition on a 50cm lateral and 6cm depth scale for the drill hole. Three diagenetic features, ~2cm wide (Moenkopi, Mammoth and Morrison), were measured with rasters. These are clearly enriched in Mg, S and Ni [2,3]. These elements are correlated in a molar ratio consistent with MgSO4 and minor Ni-sulfate, see fig 2. Only Cl shows a similar enrichment. Mg, Ni and S extrapolate towards the bedrock, indicating the addition of ~10 weight percent sulfates by a postdepositional aqueous event. 
+ Elemental trends uphill: Curiosity climbed the exposed bedrock uphill with dedicated stops for contact science seeking further promising drill targets. The overall composition in brushed bedrocks remained quite constant, even for lath-like textures in Mojave. Minor trends with elevation became apparent in fig. 3. Al is elevated in the middle section by ~25%, while Fe is depleted. It is important to note that multiple spots at the selected sections (indicated by their name in fig. 3) show consistent trends. 
+Na Mg Al Si P S Cl K Ca Ti Cr Mn Fe Ni Zn Br Ge0.1
+1
+10
+ 
+ 
+ratio
+ to P
+orta
+ge s
+oil
+ JohnKlein YKB Cumberland YKB Windjana Kimberley Conf.Hills Pahrump
+Figure 1 Comparison of the 4 drill samples at Gale. Plotted is the logarithmic ratio to the soil Portage 
+0.6
+0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+1.4
+WhaleRockChinle
+AlexanderHillsBookCliff
+PinkCliffShoemaker
+ 
+ 
+ratio
+ to s
+oil
+ Al2O3 FeO SiO2
+Figure 3 Major element trends along the uphill traverse. Left is the lowest point at Pahrump. Note the overall substantially higher Al and Si and lower Fe content compared to the soil and YKB 
+Figure 2 Mg and Ni versus S in the diagenetic features. The bedrock samples are the brushed surface, the 1cm mini drill and fines from 1-6cm depth. 
+0 1 2 3 4 5 6 7 8 9 10 11 120
+1
+2
+3
+4
+5
+6
+7
+8
+9
+diageneticfeatures
+bedrock
+ideal MgSO4
+ 
+MgO
+SO3
+ MgO 20*Ni
+1855.pdf46th Lunar and Planetary Science Conference (2015)
+Trace Elements: Pahrump is significantly enriched in Zn and Ge, similar to previous mudstone and sandstone drill samples. Br is variable and enriched in surface features. For the first time at Gale, two additional trace elements, quantifiable by the APXS at elevated abundances, appear at Pahrump. Selenium and lead are both consistently above their approximate limit of detection of ~20ppm. Se is ~50ppm from the base to AlexanderHills and disappears above. The very low S/Se ratio of ~500 could be caused by aqueous interaction. Pb is ~50 ppm with clear enrichments to ~100ppm at PinkCliff and BookCliff. The largest Pb of ~ 200ppm is at the highest point at WhaleRock in the sample SantaAna, which so far stands out in many elements at Pahrump. Se enrichment might be indicative of redox conditions that formed sulfides instead of the predominant sulfates. Top Section: While the lower sections show quite smooth trends with elevation, the uppermost part of the outcrop shows significant deviations in a few elements. There, SantaAna has even lower Mg, Ca and S, but clearly elevated phosphorus. It shares many elemental traits with BonanzaKing, measured in HiddenValley ~300m before reaching Pahrump; most significantly, they share high P, very rare in Gale Crater so far. This similarity over a large distance might indicate the extent of the deposits, eroded since their formation. Both samples have a very high Fe/Mn ratio, which could point towards a higher Fe3+/FeT ratio and Feoxides as cement. 
+1
+10
+Na Mg Al Si P S Cl K Ca Ti Cr Mn Fe Ni Zn Br
+ 
+ 
+ratio
+ to P
+orta
+ge
+ BonanzaKing_DRT (722) Maturango_DRT (755) SantaAna2_DRT (844)
+ Figure 4: Comparison of the topmost Pahrump sample Santa Ana with BonanzaKing Summary: The APXS determined the composition of ~40 samples so far at Pahrump. The bulk composition of the measured drill fines will be used to constrain the results from SAM and Chemin and to extract the composition of the amorphous phase[4]. The bedrock is substantially lower in Mg, Ca and Fe and elevated in Al, Si, and K. For the first time in 
+ 
+ Gale, Mg- and Ni-sulfates form post-depositional features. So far, these were predominantly Ca-sulfates in veins or fracture fills, indicating different water chemistry and possibly different timing. The Cl vs S plot in Fig 5 reveals that Pahrump is remarkably low in S and Cl, except in the diagenetic features. With Cl values as low as 0.4% it is at the lower end of all samples encountered before at Gale. Fig 5 shows various samples of MER with extreme S or Cl, all interpreted as deposits that were formed under favorable conditions for habitability [e.g. 5,6]. Possibly Curiosity entered at Pahrump a new area dominated by different water chemistry, possibly older and less acidic, similar to Opportunity at Endeavour Crater [5]. For the first time the homogeneous bedrock shows an elevated CIA, exceeding that of the basaltic soil. The elevated Al and Si, and the lower Mg, Ca and Fe could indicate mobilization of these elements. Smooth trends observed by the high precision APXS data will allow selecting future drill targets. This will also enable detailed comparison with samples acquired uphill at Mount Sharp, where hematite, clays and sulfates are predicted from orbit. References: [1] Gellert et al. (2009) LPSC, #2364, [2] Thompson, this conference, [3] VanBommel, this conference, [4] Morris et al., this conference, [5] Squyres et al (2012) Science, 1220476, [6] Gellert et al (2006), JGR 111 
+Acknowledgements: The MSL APXS is managed and financed by the Canadian Space Agency, with MDA as prime contractor to build the instrument. Science team funding is provided by CSA and NASA. We appreciate and acknowledge the unwavering support of dedicated engineers at JPL during operations. 
+0 5 10 15 20 25 30 35 40
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+IslandRocks
+BurnsFm
+ColumbiaHills
+Grasberg
+Gale before
+750
+PahrumpPasoRobles
+Stephen
+S/Cl basaltic soils
+ Opportunity Spirit Curiosity before sol 750 Curiosity Pahrump basaltic soils
+ Cl
+SO3Fig 5 Cl vs S of MER and MSL. Pahrump is remarkably low in Cl and generally close to the constant S/Cl of soils, compared to previous MSL samples 
+1855.pdf46th Lunar and Planetary Science Conference (2015)

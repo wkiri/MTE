@@ -1,0 +1,111 @@
+T11	Element 2369 2371	Mn
+T12	Element 2517 2519	Mn
+T13	Element 2571 2573	Mn
+T14	Element 2666 2668	Fe
+T15	Element 2672 2673	S
+T16	Element 2750 2756	oxygen
+T17	Element 2879 2881	Mn
+T18	Element 3080 3082	Mn
+T19	Element 3386 3395	manganese
+T20	Element 3498 3500	Mn
+T21	Element 3776 3785	manganese
+T22	Element 4037 4039	Mn
+T23	Element 4114 4116	Mn
+T24	Element 4233 4235	Mn
+T25	Element 4518 4520	Mn
+T28	Element 5022 5024	Mn
+T29	Element 5250 5252	Mn
+T31	Element 5353 5355	Si
+T32	Element 5360 5362	Ca
+T33	Element 5393 5395	Mn
+T34	Element 5422 5424	Mn
+T35	Element 5479 5481	Ca
+T36	Element 5506 5508	Cl
+T37	Element 5512 5513	S
+T38	Element 5532 5534	Mn
+T39	Element 5575 5576	C
+T40	Element 5620 5622	Mn
+T41	Element 5793 5795	Mn
+T42	Element 5797 5799	Mg
+T43	Element 5801 5803	Cl
+T44	Element 5805 5807	Ni
+T45	Element 5809 5811	Cu
+T46	Element 5813 5815	Co
+T47	Element 5821 5823	Zn
+T48	Element 5875 5877	Ni
+T49	Element 5882 5884	Cu
+T50	Element 5916 5918	Mn
+T51	Element 6499 6505	oxygen
+T52	Element 6910 6912	Mn
+T53	Element 7146 7148	Mn
+T54	Element 7311 7313	Mn
+T55	Element 7938 7940	Mn
+T56	Element 8083 8085	Mn
+T59	Element 9454 9456	Mn
+T60	Element 9669 9671	Fe
+T61	Element 9724 9726	Mn
+T63	Target 3436 3445	Dillinger
+T64	Target 3605 3612	Stephen
+T65	Target 3635 3639	Neil
+T66	Target 3655 3663	Mondooma
+T67	Target 3800 3807	Stephen
+T68	Target 3809 3813	Neil
+T69	Target 3819 3827	Mondooma
+T70	Target 3868 3875	Stephen
+T71	Target 3887 3891	Neil
+T72	Target 3907 3915	Mondooma
+T73	Target 3975 3982	Stephen
+T74	Target 4439 4447	Mondooma
+T75	Target 4542 4550	Windjana
+T76	Target 4578 4585	Stephen
+T77	Target 4590 4594	Neil
+T78	Target 4644 4651	Stephen
+T79	Target 4898 4906	Mondooma
+T80	Target 5288 5296	Windjana
+T81	Target 5706 5713	Stephen
+T82	Target 5742 5750	Windjana
+T83	Target 6061 6068	Stephen
+T85	Target 9811 9818	Stephen
+T86	Mineral 6926 6933	despite
+T1	Element 2689 2691	Mn
+T2	Element 2794 2796	Mn
+T3	Locality 3460 3469	Kimberley
+T4	Contains 3501 3531	concentrations highly elevated
+E1	Contains:T4 Cont:T20 Targ:T64 Targ2:T65 Targ3:T66
+A1	Amount E1 Contains_High
+T5	Contains 3786 3796	abundances
+E2	Contains:T5 Cont:T21 Targ:T67 Targ2:T68 Targ3:T69
+A2	Amount E2 Contains
+T6	Contains 4236 4245	abundance
+E3	Contains:T6 Targ:T74 Cont:T24
+A3	Amount E3 Contains_High
+T7	Locality 4488 4497	Kimberley
+T8	Feature 4662 4675	dark material
+T9	Feature 4688 4706	surface dust layer
+R1	Shows Arg1:T78 Arg2:T8	
+R2	Shows Arg1:T78 Arg2:T9	
+T10	Feature 4919 4927	fin-like
+R3	Shows Arg1:T79 Arg2:T10	
+T26	Feature 4934 4943	resistant
+R4	Shows Arg1:T79 Arg2:T26	
+T27	Contains 5770 5789	elevated abundances
+E4	Contains:T27 Targ:T81 Cont:T41 Cont2:T42 Cont3:T43 Cont4:T44 Cont5:T45 Cont6:T46 Cont7:T47
+A4	Amount E4 Contains_High
+T30	Material 5955 5964	Mn-oxides
+T62	Feature 6081 6098	very dark surface
+R5	Shows Arg1:T83 Arg2:T62	
+T57	Element 23 32	MANGANESE
+T58	Element 70 76	OXYGEN
+T84	Element 3128 3130	Mn
+T87	Element 3354 3356	Mn
+T88	Contains 4029 4036	highest
+E5	Contains:T88 Cont:T22 Targ:T73
+A5	Confidence E5 High
+A6	Amount E5 Contains_High
+T89	Contains 5002 5009	highest
+E6	Contains:T89 Cont:T28 Targ:T79
+A7	Amount E6 Contains_High
+T90	Mineral 5643 5650	sulfate
+T91	Mineral 5652 5660	chloride
+T92	Mineral 5665 5674	carbonate
+T93	Element 6222 6224	Mn

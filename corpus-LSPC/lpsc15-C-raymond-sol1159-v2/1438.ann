@@ -1,0 +1,203 @@
+T19	Element 4669 4670	K
+T20	Element 4688 4690	Na
+T22	Element 5069 5070	K
+T24	Element 5375 5376	K
+T25	Element 5390 5391	K
+T27	Element 5623 5624	K
+T28	Element 5655 5663	Hydrogen
+T29	Element 5848 5849	F
+T30	Element 5856 5858	Li
+T31	Element 5860 5862	Mn
+T32	Element 5869 5871	Zn
+T33	Element 5881 5883	Ni
+T34	Element 5919 5921	Mn
+T35	Element 6105 6106	K
+T36	Element 6198 6199	K
+T37	Element 6332 6333	K
+T38	Element 6891 6892	F
+T39	Element 6894 6896	Mn
+T40	Element 6901 6903	Zn
+T41	Element 7043 7044	K
+T42	Target 2648 2652	Liga
+T43	Target 2733 2743	Square_Top
+T44	Target 2816 2825	Dillinger
+T45	Target 3052 3058	Beagle
+T46	Target 3088 3097	Dillinger
+T47	Target 3255 3265	Square_Top
+T48	Target 3270 3274	Liga
+T49	Target 4443 4452	Dillinger
+T50	Target 4521 4529	Sheepbed
+T51	Target 4702 4710	Sheepbed
+T52	Target 4743 4749	Darwin
+T53	Target 4824 4830	Darwin
+T54	Target 4959 4968	Dillinger
+T55	Target 5161 5170	Dillinger
+T56	Target 5304 5313	Dillinger
+T57	Target 5455 5459	Liga
+T58	Target 5464 5474	Square_Top
+T59	Target 5505 5514	Dillinger
+T60	Mineral 5273 5279	illite
+T61	Element 14 22	POTASSIC
+T1	Unit 1536 1542	Rugged
+T2	Unit 1551 1559	Striated
+T3	Locality 1774 1785	Cooperstown
+T4	Unit 1909 1920	Rugged unit
+R1	Associated Arg1:T3 Arg2:T4	
+T5	Formation 1957 1982	Yellowknife Bay Formation
+T6	StratRel 1928 1952	is topographically above
+E1	StratRel:T6 Subj:T4 Obj:T5 Subj2:T8
+A1	Position E1 IsStratAbove
+T7	Member 2128 2146	Pine_Plains member
+T8	Formation 2049 2070	Cooperstown formation
+T9	Member 2206 2223	Rensselaer member
+T10	StratRel 2196 2205	overlying
+E2	StratRel:T10 Subj:T9 Subj2:T7
+A2	Position E2 IsStratAbove
+T11	StratRel 2071 2105	can be subdivided into two members
+E3	StratRel:T11 Subj:T7 Subj2:T9 Obj:T8
+A3	Position E3 IsPartOf
+T12	Target 2533 2546	Point_Coulomb
+T13	Member 2533 2553	Point_Coulomb member
+T62	Locality 2311 2320	Kimberley
+T63	Formation 2445 2464	Kimberley formation
+T64	StratRel 2465 2487	includes seven members
+E4	StratRel:T64 Obj:T63 Subj:T13 Subj2:T66 Subj3:T74 Subj4:T79 Subj5:T86
+A4	Position E4 IsPartOf
+T65	Locality 2629 2642	Violet Valley
+T66	Member 2648 2659	Liga member
+T67	Material 2569 2590	breccio-conglomerates
+T68	Contains 2554 2568	constituted of
+E5	Contains:T68 Cont:T67 Targ:T12
+A5	Confidence E5 High
+T69	Material 2697 2707	sandstones
+T70	Contains 2660 2670	made up of
+E6	Contains:T70 Targ:T42 Cont:T69
+A6	Confidence E6 High
+T71	Feature 2671 2684	planar-bedded
+R2	Shows Arg1:T42 Arg2:T71	
+T72	Feature 2685 2696	very coarse
+R3	Shows Arg1:T42 Arg2:T72	
+T73	Feature 2719 2727	granules
+R4	Shows Arg1:T42 Arg2:T73	
+T74	Member 2733 2750	Square_Top member
+T75	Material 2800 2810	sandstones
+T76	Contains 2751 2767	corresponding to
+E7	Contains:T76 Cont:T75 Targ:T43
+A7	Confidence E7 High
+T77	Feature 2768 2781	south-dipping
+R5	Shows Arg1:T43 Arg2:T77	
+R6	IsSituatedIn Arg1:T12 Arg2:T65	
+T78	Feature 2782 2799	faintly-laminated
+R7	Shows Arg1:T43 Arg2:T78	
+T79	Member 2816 2832	Dillinger member
+T80	Contains 2833 2843	containing
+E8	Contains:T80 Targ:T44 Cont:T81
+A8	Confidence E8 High
+T81	Material 2861 2871	sandstones
+T82	Feature 2844 2860	cross-stratified
+R8	Shows Arg1:T44 Arg2:T82	
+T83	StratRel 2644 2647	the
+E9	StratRel:T83 Subj:T66 Obj:T13
+A9	Position E9 IsStratAbove
+T84	StratRel 2729 2732	the
+E10	StratRel:T84 Subj:T74 Obj:T66 Obj2:T13
+A10	Position E10 IsStratAbove
+T85	StratRel 2812 2815	the
+E11	StratRel:T85 Subj:T79 Obj:T74 Obj2:T66 Obj3:T13
+A11	Position E11 IsStratAbove
+T14	Site 2944 2958	Mt. Remarkable
+T86	Member 2944 2965	Mt. Remarkable member
+T87	Feature 2904 2917	butte-forming
+T88	Feature 2918 2925	massive
+T89	Material 2926 2936	sandstones
+T90	StratRel 2900 2903	the
+E12	StratRel:T90 Subj:T86 Obj:T79 Obj2:T74 Obj3:T66 Subj2:T13
+A12	Position E12 IsStratAbove
+T91	Unit 3027 3047	Hummocky Plains unit
+T92	Feature 2971 2983	fine-grained
+T93	Feature 2984 2993	resistant
+T94	Feature 2994 3002	boulders
+T95	Member 3052 3065	Beagle member
+T96	StratRel 2967 2970	and
+E13	StratRel:T96 Subj:T95 Obj:T86 Obj2:T79 Subj2:T74 Subj3:T66 Subj4:T13
+A13	Position E13 IsStratAbove
+R9	BelongsTo Arg1:T45 Arg2:T91	
+R10	BelongsTo Arg1:T45 Arg2:T95	
+R11	Shows Arg1:T45 Arg2:T94	
+R12	Shows Arg1:T45 Arg2:T93	
+R13	Shows Arg1:T45 Arg2:T92	
+R14	BelongsTo Arg1:T44 Arg2:T79	
+R15	BelongsTo Arg1:T43 Arg2:T74	
+R16	BelongsTo Arg1:T42 Arg2:T66	
+R17	BelongsTo Arg1:T12 Arg2:T13	
+R18	BelongsTo Arg1:T12 Arg2:T63	
+R19	BelongsTo Arg1:T42 Arg2:T63	
+R20	BelongsTo Arg1:T43 Arg2:T63	
+R21	BelongsTo Arg1:T44 Arg2:T63	
+R22	BelongsTo Arg1:T45 Arg2:T63	
+T15	Member 3102 3123	Mt. Remarkable member
+T97	Unit 3149 3160	Rugged unit
+R23	BelongsTo Arg1:T46 Arg2:T97	
+T98	Unit 3207 3227	Hummocky Plains unit
+T99	Unit 3236 3249	Striated unit
+T100	StratRel 3165 3202	are located stratigraphically between
+E14	StratRel:T100 Subj:T15 Subj2:T97 Subj3:T46 Obj:T98 Obj2:T99
+A14	Position E14 IsStratNear
+T101	Member 3270 3281	Liga member
+T102	Unit 3307 3320	Striated unit
+R24	BelongsTo Arg1:T48 Arg2:T102	
+R25	BelongsTo Arg1:T47 Arg2:T102	
+T16	Member 4443 4459	Dillinger member
+R26	BelongsTo Arg1:T49 Arg2:T16	
+R27	BelongsTo Arg1:T48 Arg2:T101	
+T17	Element 4492 4500	potassic
+T103	Locality 4531 4534	YKB
+R28	IsSituatedIn Arg1:T50 Arg2:T103	
+T18	Target 4715 4727	Bardin_Bluff
+T104	Material 4729 4741	conglomerate
+T105	Contains 4728 4729	(
+E15	Contains:T105 Targ:T18 Cont:T104
+T106	Site 4743 4758	Darwin waypoint
+R29	IsSituatedIn Arg1:T18 Arg2:T106	
+T107	Unit 4997 5008	Rugged unit
+T108	Locality 5012 5021	Kimberley
+R30	Associated Arg1:T108 Arg2:T107	
+T21	Contains 5286 5303	identified in the
+E16	Contains:T21 Targ:T56 Cont:T23 Cont2:T60
+A15	Confidence E16 High
+T23	Material 5280 5285	clays
+T109	Contains 5336 5374	are consistent with this enrichment in
+E17	Contains:T109 Cont:T24 Targ:T56
+A16	Amount E17 Contains_High
+T26	Contains 5392 5421	abundance gradually increases
+E18	Contains:T26 Cont:T25 Targ:T57 Targ2:T58 Targ3:T59
+T110	Member 5464 5481	Square_Top member
+R31	BelongsTo Arg1:T58 Arg2:T110	
+T111	Unit 5440 5453	Striated unit
+R32	BelongsTo Arg1:T57 Arg2:T111	
+R33	BelongsTo Arg1:T58 Arg2:T111	
+T112	Unit 5492 5503	Rugged unit
+R34	BelongsTo Arg1:T59 Arg2:T112	
+T113	Member 5519 5540	Mt. Remarkable member
+T114	Locality 5550 5559	Kimberley
+T115	Formation 5550 5569	Kimberley formation
+T116	StratRel 5543 5549	in the
+E19	StratRel:T116 Obj:T115 Subj:T113 Subj2:T59 Subj3:T112 Subj4:T110 Subj5:T58 Subj6:T57 Subj7:T111
+A17	Position E19 IsPartOf
+T117	Unit 5575 5586	Rugged unit
+T118	Element 5682 5690	potassic
+T119	Locality 1290 1301	Cooperstown
+T120	Locality 1324 1333	Kimberley
+T121	Element 835 843	potassic
+T122	Unit 999 1010	Rugged unit
+T123	Unit 1064 1077	Striated unit
+T124	Locality 1716 1727	Cooperstown
+T125	Locality 1732 1741	Kimberley
+T126	Element 4366 4368	Mn
+T127	Element 5143 5145	Na
+T128	Element 5146 5147	K
+T129	Locality 5641 5652	Cooperstown
+T130	Formation 5929 5950	Cooperstown formation
+T131	Element 6521 6522	K
+T132	Element 6541 6542	K
+T133	Element 6705 6706	K

@@ -1,0 +1,55 @@
+T9	Element 5440 5442	Ca
+T10	Element 5444 5445	S
+T11	Element 5447 5449	Mg
+T12	Element 7237 7245	chlorine
+T13	Element 7258 7264	carbon
+T16	Target 6148 6156	Sheepbed
+T17	Target 6656 6666	Cumberland
+T18	Target 6689 6697	Sheepbed
+T19	Mineral 3755 3763	hematite
+T20	Mineral 3765 3773	Hematite
+T21	Mineral 3922 3930	hematite
+T1	Formation 598 614	Murray formation
+T2	Locality 730 743	Pahrump Hills
+T22	Formation 788 804	Murray formation
+T23	Locality 875 888	Pahrump Hills
+T3	Target 3469 3485	Confidence Hills
+T4	Locality 3368 3381	Pahrump Hills
+R1	IsSituatedIn Arg1:T3 Arg2:T4	
+T5	Target 3713 3729	Confidence Hills
+T6	Contains 3742 3750	contains
+E1	Contains:T6 Cont:T19 Targ:T5
+A1	Amount E1 Contains_High
+T7	Feature 3645 3653	basaltic
+R2	Shows Arg1:T5 Arg2:T7	
+T8	Feature 3664 3683	alteration products
+R3	Shows Arg1:T5 Arg2:T8	
+T24	Contains 3654 3658	with
+E2	Contains:T24 Cont:T25 Targ:T5
+T25	Mineral 3691 3706	phyllosilicates
+T26	Locality 4090 4103	Pahrump Hills
+T27	Target 5001 5007	Mojave
+T28	Target 5022 5033	Pink Cliffs
+T29	Locality 5046 5059	Pahrump Hills
+R4	IsSituatedIn Arg1:T28 Arg2:T29	
+R5	IsSituatedIn Arg1:T27 Arg2:T29	
+T30	Feature 5109 5165	mm-scale lenticular-shaped crystal laths or pseudomorphs
+R6	Shows Arg1:T27 Arg2:T30	
+T31	Feature 5400 5432	concentration of mobile elements
+R7	DoesNotShow Arg1:T27 Arg2:T31	
+T32	Locality 6169 6184	Yellowknife Bay
+R8	IsSituatedIn Arg1:T16 Arg2:T32	
+T33	Contains 6678 6684	within
+E3	Contains:T33 Targ:T17 Cont:T34
+T34	Material 6698 6706	mudstone
+T35	Locality 6710 6725	Yellowknife Bay
+R9	IsSituatedIn Arg1:T17 Arg2:T35	
+R10	IsSituatedIn Arg1:T18 Arg2:T35	
+T36	Material 6771 6784	chlorobenzene
+T37	Contains 6742 6767	definitive identification
+E4	Contains:T37 Targ:T17 Cont:T36 Cont2:T38
+A2	Confidence E4 High
+A3	Amount E4 Contains
+T38	Material 6798 6813	dichloroalkanes
+T14	Element 5982 5983	H
+T15	Element 6196 6197	H

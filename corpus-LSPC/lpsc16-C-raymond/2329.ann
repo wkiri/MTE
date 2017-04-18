@@ -1,0 +1,7 @@
+T5	Target 2755 2760	Ameto
+T10	Mineral 3438 3446	Hematite
+T11	Mineral 3585 3593	hematite
+T12	Mineral 4227 4235	hematite
+T13	Mineral 3670 3677	olivine
+T1	Feature 2890 2896	layers
+R1	Shows Arg1:T5 Arg2:T1	

@@ -1,0 +1,24 @@
+T10	Element 7888 7892	iron
+T11	Element 7897 7906	magnesium
+T17	Target 1524 1532	Sheepbed
+T18	Target 8195 8201	Darwin
+T19	Mineral 2523 2532	magnetite
+T20	Mineral 8736 8745	magnetite
+T21	Mineral 8747 8755	hematite
+T22	Mineral 8757 8767	akaganeite
+T23	Mineral 8770 8778	smectite
+T1	Target 4492 4506	Gillespie Lake
+T2	Feature 4564 4569	voids
+R1	Shows Arg1:T1 Arg2:T2	
+T3	Feature 4646 4664	secondary porosity
+R2	Shows Arg1:T1 Arg2:T3	
+T4	Locality 1545 1560	Yellowknife Bay
+T5	Material 1533 1541	mudstone
+T6	Contains 1519 1522	the
+E1	Contains:T6 Targ:T17 Cont:T5
+R3	IsSituatedIn Arg1:T17 Arg2:T4	
+T7	Feature 1572 1593	preserved void spaces
+R4	Shows Arg1:T17 Arg2:T7	
+T8	Feature 1596 1610	hollow nodules
+R5	Shows Arg1:T17 Arg2:T8	
+T9	Element 7923 7925	Fe
