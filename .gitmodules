@@ -1,0 +1,3 @@
+[submodule "parser-indexer-py"]
+	path = parser-indexer-py
+	url = https://github.com/USCDataScience/parser-indexer-py
