@@ -8,6 +8,7 @@
 
 import sys, os, re, string
 import dbutils
+import itertools
 
 # Map annotation labels to database table names and columns
 lookups = {'Target':   ('targets', 'target_name'),   
@@ -207,3 +208,16 @@ class BratAnnotation:
         else:
             raise RuntimeError('Unknown label %s' % self.label)
 
+
+    def __str__(self):
+        ret = self.label + ' (%s)' % self.annotation_id
+        if self.type == 'anchor':
+            ret += ': %s (%s - %s)' % (self.name, self.start, self.end)
+        elif self.type == 'event':
+            ret += ': ' + ''.join(['(%s,%s) ' % (t,c) 
+                                   for (t,c) in list(itertools.product(self.targets, self.cont))])
+        elif self.type == 'relation':
+            ret += ': %s -> %s' % (self.arg1, self.arg2)
+        elif self.type == 'attribute':
+            ret += ': %s is %s' % (self.arg1, self.value)
+        return ret
