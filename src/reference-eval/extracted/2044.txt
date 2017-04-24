@@ -1,0 +1,10 @@
+[1] Wiens et al. (2012) Space Sci. Rev. 170; 
+[2] Maurice et al. (2012) Space Sci. Rev. 170; 
+[3] Bridges et al. (2016) LPSC XLVII; 
+[4] Schröder et al. (2015) LPSC XLVI #2022, 
+[5] Meslin et al. (2013) Science 341; 
+[6] Cousin et al. (2015) Icarus 249; 
+[7] Edgett, K.S. et al. (2016) LPSC XLVII. 
+[8]Wiens et al. (2015) AGU; 
+[9] Johnson, J.R. et al. (2016) LPSC XLVII. 
+[10] Elhmann et al. (2016) LPSC XLVII. Sol Target Name <500 µm points Sol Target Name <500 µm points 1155 Pinckney 1, 4, 5, 6 1177 Karibib All points 1162 Arris_Drift 1, 2, 4, 5 1182 Hoanib All points except #9 1167 Fish_River All points 1182 Awasib All points except #4 1169 Abbabis 1, 2, 3 1184 Barby ccam3 All points except #4 1174 Sinclair 2, 4, 5 1184 Kibnas_ccam All points except #4 2044.

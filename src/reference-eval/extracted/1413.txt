@@ -1,0 +1,10 @@
+[1] Maurice S. et al. (2012) Space Sci. Rev.,  doi:10.1007/s11214-012-9902-4. 
+[2] Wiens R.C. et al. (2012) Space Sci. Rev., doi:10.1007/s11214-012-9912-2. 
+[3] Ollila A . M . e t a l . ( 2 0 1 4 ) J . G e o p h y s . R e s . , d o i :10.1002/2013JE004517, 
+[4] Lanza N. L. et al. (2014) Geophys. Res. Let., doi: 10.1002/2014GL060329 
+[5] Kramida, A., Ralchenko, Yu., Reader, J., and NIST ASD Team (2014). NIST Atomic Spectra Database (ver. 5.2) 
+[6] Wiens et al. (2013) Spect. Chem. Acta B, doi:10.1016/j.sab.2013.02.003, 
+[7] Wiens R.C. et al. (2013) Spect. Chem. Acta B, 82, 1-27 
+[8] Fabre et al. (2014) Spect. Chem. Acta B, doi: 10.1016/j.sab.2014.03.014, 
+[9] Berger et al. (2014) AGU, P51E-3988, 
+[10] Lanza et al. (2014) Nature Geosciences, submitted.Zn detection vs timeZnO (wt.%) from 481nm line prediction0246810Sol number0 200 400 600 800No Zn detection around Bradbury rise and Yellowknife BayIncrease of Zn around Kimberley outcropYarrada (7.0 wt.%)�11413.

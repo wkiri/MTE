@@ -1,0 +1,9 @@
+[1] Delory, G. T., et al. (2007). Development of the first audio microphone for use on the surface of Mars. J. Acous. Soc. of Am., 121(5), 3116-3116.
+[2] Phoenix mission website http://phoenix.lpl.arizona.edu.
+[3] Petculescu, A., Lueptow, R. M. (2007). Atmospheric acoustics of titan, mars, venus, and earth. Icarus, 186(2), 413-419.
+[4] Zelenyi et al. (2015). Scientific objectives of the scientific equipment of the landing platform of the ExoMars-2018 mission. Solar System Research, 49(7), 509-517.
+[5] Statham, S. M., et al. (2012). Automated, Real-Time Health Monitoring of Structures for Interplanetary Exploration Systems. AIAA journal, 50(12), 2670-2682.
+[6] Chaléard, C., et al. (1997), Correction of ma-trix effects in quantitative elemental analysis with laser abla-tion optical emission spectrometry, J. Anal. Atom. Spectrom. 12, 183–188.
+[7] Wiens, R. C., et al. (2015), ChemCam: Che-mostratigraphy by the first Mars microprobe. Elements 11, 33-38.
+[8] Williams, J. P. (2001). Acoustic environment of the Martian surface. Journal of Geophysical Research: Planets (1991–2012), 106(E3), 5033-5041.
+[10] Maurice, S. et al. (2015) Science Objectives of the SuperCam Instrument for the Mars2020 Rover. 46th LPSC, #1832.

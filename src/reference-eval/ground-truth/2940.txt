@@ -1,0 +1,6 @@
+[1] Lanza et al. (2014). Icarus, in press.
+[2] Wiens R. et al. (2012) Space Sci. Rev., 170.
+[3] Zhao T. et al (2012) J. Machine Learning Research, 13(1):1059–1062.
+[4] Wasserman L. (2000) J. Math. Psych., 44(1):92–107.
+[5] Lasue et al. (2014). LPSC XLV, abstract #1224.
+[6] Nachon et al. (2014). J. Geophys. Res. Planets 119, 1991-2016.

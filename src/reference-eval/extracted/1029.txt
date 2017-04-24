@@ -1,0 +1,15 @@
+[1] Kring D. et al. (1995) Chapter 2 of Planetary Surface Instruments Workshop. LPI Tech. Rept. 95-05. 
+[2] Herrick R. et al. (2014) Goals, Objectives, and In-vestigations for Venus Exploration. NASA/JPL report. 
+[3] Treiman A.H. and Dyar M.D. (2015) Venus Tech-nology Workshop, Abstr. 4020. 
+[4] Gellert R. et al. (2006) JGR Planets 111, E02S05. 
+[5] Sharpton, V.L. et al. (2015) Venus Exploration Targets Workshop, Draft Report. 
+[6] Lasue J. et al. (2014) Eighth International Conference on Mars. Abstr. 1444. 
+[7].  1029.
+[8], showing ~25 points for each set of uncertainties (
+[9], showing ~50 points for each set of uncertainties (
+[10].   
+[11] Grotzinger J.P. et al. (2012) Space Sci. Rev. 170, 5-56. 
+[12] Gilmore M. et al. (2015) Icarus 254, 350-361. 
+[13] Ivanov M.A. (2001) Solar System Research 35, 1-17. 
+[14] Hashimoto G.L. et al. (2008) JGR Planets 113, E00B24. 
+[15] Anderson R.B. et al. (2015) Second Planetary Data Workshop, Abstract #7031.     

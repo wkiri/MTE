@@ -1,0 +1,4 @@
+[1] Bell J.F. III, J.N. Maki, G.L. Mehall, M.A. Ravine M.A. Caplinger, and the Mastcam-Z Science Team, Mastcam-Z: A Geologic, Stereoscopic,and Multispectral Investi-gation on the NASA Mars-2020 Rover, Abstract #1151, Presented at "International Workshop on Instrumenta-tion for Planetary Missions (IPM-2014)," Greenbelt, Maryland, November 4-7, 2014. http://ssed.gsfc.nasa.gov/IPM/PDF/1151.pdf
+[2] Barnes R. et al: PRo3D®: A tool for high resolution rendering and geological analysis of Martian rover-derived digital outcrop models. Geological Society of America Abstracts with Programs. Vol. 47, No. 7, p.111. https://gsa.confex.com/gsa/2015AM/webprogram/Paper265784.html
+[3] Anderson, R., et al. (2015). ChemCam results from the Shaler outcrop in Gale crater, Mars. Icarus, 249, 2-21.
+[4] Edgar, L. A., et al. (2014). A fluvial sandbody on Mars: Reconstruction of the Shaler outcrop, Gale Crater, Mars. Lunar and Planetary Science 45, abs. no. 1648.

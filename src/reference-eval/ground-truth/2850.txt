@@ -1,0 +1,15 @@
+[1] Greenwood & Earnshaw (2002) Chemistry of the Elements, 2nd Ed.;
+[2] Jolliff et al. (2006) Am. Mineral. 91:1583;
+[3] Yen et al. (2014) Eos P34A-04;
+[4] Usui et al. (2008) J.Geophys. Res. 113: E12S44;
+[5] Forni et al. (2014) Intl. Conf. Mars 8:1062;
+[6] Schmidt et al. (2014) JGR Planets 119:1;
+[7] Gellert et al. (2014) LPSC 1876;
+[8] Adcock et al. (2013) Am. Mineral. 99:1121;
+[9] Maurice et al. (2012) Space Sci. Rev. 170:95;
+[10] Wiens et al. (2012) Space Sci Rev. 170:167;
+[11] Clegg et al. (2009) Spectrochim. Acta B 64:79;
+[12] Ollila et al. (2014) J.Geophys. Res. Planets 119:255;
+[13] Cremers & Radziemski (2013) Handbook of Laser-Induced Breakdown Spectroscopy, 2nd Ed.;
+[14] Fabre et al. (2011) Spectrochim. Acta B 66:280;
+[15] Wiens et al. (2013) Spectrochim. Acta B 82:1.

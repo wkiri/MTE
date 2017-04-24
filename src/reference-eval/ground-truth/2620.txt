@@ -1,0 +1,20 @@
+[1] Williams R.M.E. et al. (2014) AGU abstr. P42C02.
+[2] Blake D.F. et al. (2012) Space Sci. Rev. 170, 341.
+[3] Bish D.L. et al. (2013) Science 341, 1238932.
+[4] Vaniman D.T. et al. (2014) Science 343, 1243480.
+[5] Dera P. et al. (2013) High Press. Res. 33, 466.
+[6] Chipera S.J. & Bish D.L. (2002) J. Appl. Crystallogr. 35, 744.
+[7] McLennan S.M. et al. (2014) Science 343, 1244734.
+[8] Blaney D.L. et al. (2014) JGRP 119, 2109.
+[9] Schmidt M. et al. (2014) JGRP 119, 64.
+[10] Stolper E.M. et al. (2013) Science 341, 1239463.
+[11] Sautter V. et al. (2014) JGRP 119, 306.
+[12] Foley S.F. et al. (1987) Earth Sci. Rev. 24, 81.
+[13] Earthchem & GEOROC databases: www.earthchem.org/; http://georoc.mpchmainz.gwdg.de/georoc/.
+[14] Treiman A.H. & Filiberto J. (in press) MaPS, DOI: 10.1111/maps.12363.
+[15] Goodrich C.A. et al. (2013) MaPS 48, 2371-2405.
+[16] Kastner M. & Siever R. (1979) Am. Jour. Sci. 279, 435.
+[17] Fedo C.M. et al. (1995) Geology 23, 921.
+[18] Glazner A.F. (1988) Bull. GSA 100, 424.
+[19] Berger J. et al. (2014) AGU abstr. P51E3988.
+[20] Blake D.F. et al. (2013) Science 341, 1239505.

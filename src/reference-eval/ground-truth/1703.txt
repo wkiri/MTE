@@ -1,0 +1,11 @@
+[1] McCubbin et al. (2013) 44th LPSC.
+[2] Patiño Douce et al. (2011) Chem. Geol.
+[3] Forni et al. (2015) GRL.
+[4] Gaft et al. (2014) Spectrochim. Acta B.
+[5] Forni et al. (2015) 46th LPSC.
+[6] Treiman et al. (2015), JGR Planets.
+[7] Cousin et al. (2015), EMSLIBS, P-37.
+[8] Anderson et al., (2016) 47th LPSC, this conf.
+[9] Blank et al. (2015), 46th LPSC.
+[10] Wiens et al. (2013), Spectrochim. Acta B.
+[11] Rapin et al. (2016) 47th LPSC, this conf.

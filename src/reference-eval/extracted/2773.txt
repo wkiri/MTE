@@ -1,0 +1,5 @@
+[1] Feudalea R. et al. (2002) Chemo-metrics and Intelligent Laboratory Systems 64, 181–192. 
+[2].  RMSEP w/o CT RMSEP w/ CT % Difference KGAMEDS 8.207 6.582 19.807 NAU2HIS 10.631 8.976 15.574 NAU2LOS 7.008 4.343 38.022 NAU2MEDS 8.461 7.279 13.972 NORITE 5.875 3.202 45.492 PICRITE 5.151 4.680 9.136 SHERGOTTITE 3.157 3.155 0.036 2773.
+[3] Clegg S. M. (2014) LPS XLV, Abstract #2378. 
+[4] Wiens R. et al. (2013) Spectrochimica Acta Part B 82, 1–27. 
+[5] Pedregosa, F. et al. (2011) J. Machine Learning 12,  2825–2830. 

@@ -1,0 +1,11 @@
+[1] McCubbin et al. (2013) 44th LPSC. 
+[2] Patiño Douce et al. (2011) Chem. Geol. 
+[3] Forni et al. (2015) GRL. 
+[4] Gaft et al. (2014) Spectrochim. Acta B. 
+[5] Forni et al. (2015) 46th LPSC. 
+[6] Treiman et al. (2015), JGR Planets. 
+[7] Cousin et al. (2015), EMSLIBS, P-37. 
+[8] Anderson et al., (2016) 47th LPSC, this conf. 
+[9] Blank et al. (2015), 46th LPSC. 
+[10] Wiens et al. (2013), Spectrochim. Acta B. 
+[11] Rapin et al. (2016) 47th LPSC, this conf.  CaF molecular lineCaCl molecularline (593.7)CaCaCl (617.6 and 620.0)P II(602.6, 604.5, 605.95) Fluorapatite (3 -TCP+1CaF2)ChlorapatiteBasalt00.050.10.150.20.250.30.350.40.450.50 2 4 6 8 10 12 14Intensity of CaF line @ 603 nm  (norm 3)Fluorine (wt%)B-TCP + n CaF2 (n = 0.1 to 5)B-TCP + n CaF2 + (1-n) CaCl2n FA + (1-n) HABest fit95% Prediction Limits Durango apatiteMud Tank apatite0.00.51.01.52.02.53.03.54.04.55.00 0.5 1 1.5 2 2.5 3 3.5 4H signal (normalized to carbon @248 nm)OH (wt%)1703.

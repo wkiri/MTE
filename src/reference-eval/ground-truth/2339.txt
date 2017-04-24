@@ -1,0 +1,6 @@
+[1] http://mars.jpl.nasa.gov/msl/news/-whatsnew/ press release 11-Sep-2014;
+[2] Milliken, R.E. et al. (2010), GRL, 37, L04201;
+[3] http://mars.jpl.nasa.gov/msl/news/whatsnew/ press release 4-Nov-2014;
+[4] Stack, K. et al. (2015) this conference;
+[5] Wiens et al. (2013) Spectrochim. Acta B, 82, 1-27;
+[6] Forni, O. et al. (2015) this conference.

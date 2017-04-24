@@ -1,0 +1,5 @@
+[1] Martínez G. M. et al. (2016) Icarus, doi: http://dx.doi.org/10.1016/j.icarus.2015.12.004. 
+[2] Savijärvi H. (2016) Icarus, 265, 63-69. 
+[3] McConnochie T. et al. (2015) AGU Fall Meeting. 
+[4] Beck P. et al. (2010) JGR, 115, E10011. 
+[5] Zent A. P. et al. (2001) JGR, 106, 14667-14674.  Acknowledgments: This research is supported by a grant from JPL 1449038. We also thank the REMS team for their support of this investigation.                 0 20 40 60 80 100 120 140 160 0  100  200  300  400  500  600  700  800  900  1000 1100 1200208 272 333 25 70 116 167 227 292 350 39VMR (ppm)Sol NumberSolar LongitudeSpring Summer Fall Winter Spring Summer FallCCAM/DaytimeREMS/Nighttime 0 2 4 6 8 10 12 0  100  200  300  400  500  600  700  800  900  1000 1100 1200151 208 272 333 25 70 116 167 227 292 350 39 85Day-to-night ratioSol NumberSolar LongitudeSpring Summer Fall Winter Spring Summer Fall

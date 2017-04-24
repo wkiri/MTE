@@ -1,0 +1,21 @@
+[1] Clegg S.M. et al (2015), this meet-ing. 
+[2] Poulet F. et al. 2005. Nature 438, 623. 
+[3] Mustard J.F. et al. (2008) Nature 454, 309. 
+[4] Gendrin A. et al. (2005). Science 307, 1587. 
+[5] Carter J. (2013) JGR 118, 831. 
+[6] Ehlmann B.L. et al. (2008) Science 322, 1828. 
+[7] Ehlmann B.L. et al. (2009) JGR 114, E00D08. 
+[8] Loizeau D. et al. (2012) Icarus 219, 476. 
+[9] Mustard J.F. et al. (2005). Science 307, 1594. 
+[10] Carter J. and Poulet F. (2013). Nature Geoscience 6, 1008. 
+[11] Wolff M. et al. (2015) in The Atmosphere and Climate of Mars. Cambridge Univer-sity Press. 
+[12] Johnson J.R. et al. (2015) Icarus, http://dx.doi.org/10.1016/j.icarus.2014.02.028. 
+[13] Ehlmann B.L. and Edwards, C. (2014) AREPS 42, 291. 
+[14] Swayze G.A. et al (2003) JGR 108, 5105. 
+[15] Bertaux J.-L. et al. (2000) PSS 48, 1303. Design du spectro IR 17 RF driver Detector  front-end electronics Thermal strap to thermal I/F 
+[16] in the near infrared and CRISM in the SWIR band 
+[78]. SuperCam also covers the 0.4-0.9 µm range. 1736.
+[87]. In addition, VISIR spectroscopy might provide a tool to identify complex organic compounds from absorptions at 1.7 and 2.3-2.5 µm due to various combinations of CH2 and CH3 asymmetric and symmetric stretch 
+[88].  SuperCam records atmospheric CO2, CO, H2O, O2 (IR and 700-850 nm) and O3 (UV). The full spectral range is used to measure scattered light diagnostic of aerosol size distribution, composition, and opacity. These measurements will be made by fitting the observed sky radiance to multiple-scattering discrete-ordinates radiative transfer models with gas absorption handled by the correlated-k method, as has been done with ChemCam 
+[89]; cf. 
+[90].  

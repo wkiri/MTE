@@ -1,0 +1,6 @@
+[1] Johnson, J.R., et al., Icarus, http://dx.doi.org/10.1016/j.icarus.2014.02.028, 2014;
+[2] Wiens, R., et al., Space Sci Rev., 170, 167-227, 2012; Maurice, S., et al., Space Sci Rev., 170, 95-106, 2012;
+[3] Farrand et al., Icarus, 241, 346–357, 2014;
+[4] Cloutis, E. et al., Icarus, 184, 121-157, 2006;
+[5] Clark, R. et al., USGS Spectral Library, USGS Data Series 231, 2007;
+[6] Cavanagh, P., et al., this issue.

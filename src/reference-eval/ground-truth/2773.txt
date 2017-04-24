@@ -1,0 +1,5 @@
+[1] Feudalea R. et al. (2002) Chemometrics and Intelligent Laboratory Systems 64, 181–192.
+[2] Vaniman D. et al. (2012) Space Sci. Revs., DOI 10.1007/s11214-012-9886-0.
+[3] Clegg S. M. (2014) LPS XLV, Abstract #2378.
+[4] Wiens R. et al. (2013) Spectrochimica Acta Part B 82, 1–27.
+[5] Pedregosa, F. et al. (2011) J. Machine Learning 12, 2825–2830.

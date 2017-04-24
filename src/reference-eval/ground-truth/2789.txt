@@ -1,0 +1,18 @@
+[1] Grotzinger et al. (2013) Science, 10.1126/science.1242777.
+[2] Mangold et al. (2015) EGU, submitted.
+[3] McLennan et al. (2015) LPS XLVI, this issue.
+[4] Gasnault et al. (2013) LPS XLIV, Abstract #1994.
+[5] Gasnault et al. (2014) Mars 8 Conf., Abstract #1269.
+[6] Schmidt et al. (2015) LPS XLVI, this issue.
+[7] Wiens R.C. et al. (2012) Space Sci. Rev., 10.1007/s11214-012-9902-4.
+[8] Maurice S. et al. (2012) Space Sci. Rev., 10.1007/s11214-012-9912-2.
+[9] Wiens et al. (2013) SCAB 82, 1-27.
+[10] Sautter et al. (2014) JGR 119, 10.1002/ 2013JE004472.
+[11] Nachon et al. (2014) JGR 119, 10.1002/2013JE004588.
+[12] Sautter et al. (2015) LPS XLVI, this issue.
+[13] Fisk et al. (2014) AGU, Abstract # P54B-08.
+[14] Le Deit et al. (2015) LPS XLVI, this issue.
+[15] Rousseeuw (1987) J. Comput. Appl. Math. 20, 53–65.
+[16] Cousin et al. (2015) LPS XLVI, this issue.
+[17] Nachon et al. (2015) LPS XLVI, this issue.
+[18] Forni et al. (2015) LPS XLVI, this issue.

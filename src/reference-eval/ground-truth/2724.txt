@@ -1,0 +1,6 @@
+[1] Cousin, A. et al. (2011) Spectrochim. Acta B, 66, 805–814.
+[2] Schröder, S. et al. (2013) Icarus, 223, 61–73.
+[3] Wiens, R. C. et al. (2013) Spectrochim. Acta B, 82, 1–27.
+[4] Ralchenko, Y. et al. (2011) NIST Atomic Spectra Database (v.4.1.0), http://physics.nist.gov/asd
+[5] Ollila, A. M. (2011) LPS XLII, 2395.
+[6] Dyar, M. D. et al. (2011) Spectrochim. Acta B, 66, 39–56.

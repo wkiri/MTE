@@ -1,0 +1,14 @@
+[1] Maurice, S. et al. (2012) Space Sci. Rev., 170, 95-166.
+[2] Wiens, R. C. et al. (2012) Space Sci. Rev., 170, 167-227.
+[3] Cremers, D. A. and Radziemski, L. J. (2013) Handbook of laser-induced breakdown spectroscopy. 2nd ed. John Wiley & Sons Ltd, UK.
+[4] Nachon, M. et al. (2014) J. Geophys. Res. Planets, 119, 1991-2016.
+[5] Blaney D. L. et al. (2015) EPSC 2015, Vol. 10, id. EPSC2015-391.
+[6] Clegg, S. M. et al. (2013) LPS XLIV, Abstract #2087.
+[7] Forni, O. et al. (2015) Geophys. Res. Lett., 42, 1020–1028.
+[8] Anderson, D. E. et al. (2015) LPS XLVI, Abstract #2724.
+[9] Wiens, R. C. et al. (2013) Spectrochim. Acta B, 82, 1–27.
+[10] C-QuEST:http://pds-geosciences.wustl.edu/workshops/ChemCam\_Workshop\_Mar15.htm
+[11] Cousin, A. et al. (2011) Spectrochim. Acta B, 66, 805–814.
+[12] Schröder, S. et al. (2013) Icarus, 223, 61–73.
+[13] Ollila, A. M. et al. (2011) LPS XLII, Abstract #2395.
+[14] McWorter, D. B. and Sunada, D. K. (1977) Ground-water Hydrology and Hydraulics, Water Resources Publications, LLC., Colorado, USA.
