@@ -75,7 +75,7 @@ T75	Locality 920 929	Kimberley
 R1	IsSituatedIn Arg1:T37 Arg2:T75	
 R2	IsSituatedIn Arg1:T38 Arg2:T75	
 T76	Element 1635 1637	Mn
-T77	Element 1678 1679	t
+T77	Element 1676 1684	potassic
 T78	Contains 1671 1675	is a
 E2	Contains:T78 Targ:T40 Cont:T77 Cont2:T82
 T79	Element 1686 1688	Fe
