@@ -50,12 +50,12 @@ define([
 
     function loadTargets (list, cgiRoot) {
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_TARGETS,
-           type: "post",
-           dataType: "json",
-           success: function (returnedList) {
-               targetsCallback(returnedList, list);
-           }
+            url: "https://mte.jpl.nasa.gov/solr_proxy/getTargetNames/brat",
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                targetsCallback(returnedList, list);
+            }
         });
     }
 
@@ -77,12 +77,12 @@ define([
 
     function loadComponents (list, cgiRoot) {
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_COMPONENTS,
-           type: "post",
-           dataType: "json",
-           success: function (returnedList) {
-               componentsCallback(returnedList, list)
-           }
+            url: "https://mte.jpl.nasa.gov/solr_proxy/getElementNames/brat",
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                componentsCallback(returnedList, list)
+            }
         });
     }
 
@@ -104,12 +104,12 @@ define([
 
     function loadPrimaryAuthor (list, cgiRoot) {
         $.ajax({
-           url: cgiRoot + CONSTANTS.SERVER_GET_PRIMARY_AUTHOR,
-           type: "post",
-           dataType: "json",
-           success: function (returnedList) {
-               primaryAuthorCallback(returnedList, list)
-           }
+            url: "https://mte.jpl.nasa.gov/solr_proxy/getPrimaryAuthorNames",
+            type: "get",
+            dataType: "json",
+            success: function (returnedList) {
+                primaryAuthorCallback(returnedList, list)
+            }
         });
     }
 
