@@ -19,6 +19,13 @@ suitable for viewing/interaction with the brat tool.
 - lpsc16-C-raymond: Raymond's manual annotations
   (edits to the pre-annotate versions)
 
+## Experiments: 
+- The directory 'experiments-karan' contains jSRE examples generated over multiple experiments
+-- lpsc-brat: Used coreNLP old model for entities and brat for relationships
+-- lpsc-brat-neg: Used coreNLP old model for entities and brat for relationships with more negative examplples
+-- lpsc-brat-neg-no-ref: Used coreNLP new model for entities and brat for relationships with more negative examples
+- The directory 'experiments-karan' also contains examples split between train, dev and test
+
 ## Other:
 - eval-annot-raymond.xlsx: evaluation of the pre-annotate versions
   versus Raymond's annotations
