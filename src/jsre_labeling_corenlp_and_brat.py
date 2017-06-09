@@ -152,6 +152,10 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
              'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
              'outputFormat': 'json'}
 
+    if not os.path.exists(out_path):
+        print 'Creating output directory %s' % out_path
+        os.mkdir(out_path)
+
     # Select *.txt files
     in_files = [fn for fn in os.listdir(in_path) if fn.endswith('.txt')]
     in_files.sort()
