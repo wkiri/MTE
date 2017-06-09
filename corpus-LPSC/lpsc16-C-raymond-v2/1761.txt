@@ -1,0 +1,59 @@
+
+1761.PDF
+DIURNAL VARIATION OF NEAR-SURFACE ATMOSPHERIC WATER VAPOR AT GALE CRATER: ANALYSIS FROM REMS AND CHEMCAM MEASUREMENTS. G. M. Mart nez1, T. McConnochie2, N. O. Renno1, P.-Y. Meslin3, E. Fischer1, A. Vicente-Retortillo4, C. S. Borlina1, O. Kemppinen5, M. Genzer5, A.-M. Harri5, M. de la Torre-Ju rez6, M.-P. Zorzano7,8, F. Javier Mart n-Torres7,9, N. Bridges10, S. Maurice3, O. Gasnault3, J. G mez-Elvira8, R. Wiens11 and the REMS team, 1University of Michigan, Ann Arbor, MI, United States, 2University of Maryland, College Park, MD, United States, 3IRAP, Universit de Toulouse/CNRS, Toulouse, France, 4Universidad Complutense, Madrid, Spain, 5Finnish Meteorological Institute, Helsinki, Finland, 6Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, United States, 7Lule University of Technology, Lule , Sweden, 8Centro de Astrobiolog a, Torrej n de Ardoz, Madrid, Spain, 9Instituto Andaluz de Ciencias de la Tierra (CSIC-UGR), Granada, Spain, 10Johns Hopkins University, MD, United States, 11Los Alamos National Laboratory, Los Alamos, NM, United States. 
+ Introduction: Measurements by Curiosity s Rover 
+Environmental Monitoring Station (REMS) and ChemCam (CCAM) instruments are analyzed to shed light on the hydrological cycle at Gale crater. In particular, nighttime REMS measurements taken when the atmospheric volume mixing ratio (VMR) and its uncertainty are the lowest (between 05:00 and 06:00 LTST) [1], and daytime CCAM passive sky measurements taken when the VMR is expected to be the highest (between 10:00 and 14:00 LTST) [2] are analyzed. 
+We find that throughout the Martian year, the diurnal amplitude of the near-surface VMR at Gale crater is maximum in the winter, when its day-to-night ratio is about 6. Local surface-atmosphere interactions, either via frost formation [1] and/or exchange of adsorbed water with the atmosphere [2], could explain the large diurnal amplitude. 
+ REMS and ChemCam Measurements: VMR is 
+calculated from simultaneous REMS measurements of pressure (P), temperature (T) and relative humidity (RH) at 1.6 m (VMR is defined as RH es(T)/P, where es is the saturation water vapor pressure over ice). The REMS relative humidity sensor has recently been recalibrated (June 2015), providing RH values slightly lower than those in the previous calibration (Dec 2014). In this article, we only use RH data obtained with the latest recalibration parameters and taken during the first three seconds of measurements after the sensor has been turned off for more than 30 minutes. This conservative condition is applied to avoid the artificially low values of relative humidity due to the heating of the sensor by the REMS control electronics. 
+The full diurnal cycle of VMR cannot be analyzed using only REMS data because the uncertainty in daytime REMS-derived VMR values is very high [1]. The REMS-derived VMR values with lowest uncertainty are those resulting from nighttime measurements, in particular between 05:00 and 06:00 LTST, when the RH is maximum. 
+Daytime VMR is inferred by fitting the output of a multiple-scattering discrete-ordinates radiative transfer 
+model to CCAM passive sky observations [3]. CCAM makes these observations predominately in the vicinity of 11:00 12:00 LTST, but occasionally in the early morning near 08:00 LTST. 
+CCAM water vapor error bars are estimated by first calculating the covariance matrix of the model fit residuals over the entire data set. Then, for each measurement, a set of simulated random errors with this covariance matrix is generated and used to repeatedly (32,000 times) perturb the model fit and so generate a probability density function for the measurement. 
+The CCAM uncertainties are dominated by the random effects of detector background variations, with some contribution from poisson electron counting statistics. The systematic effects of detector background are small for CCAM-measured water vapor. Uncertainties caused by the imperfectly-known distribution of scattering aerosol in the atmosphere are eliminated by fitting a nearby CO2 absorption line and taking advantage of the known CO2 mixing ratio. 
+The derivation of atmospheric water vapor from CCAM measurements is done by initially assuming that VMR is constant with height, but then the vertical averaging function of the measurement can be calculated and shows that in typical atmospheric conditions, the VMR in the 0 5 km altitude range above the local surface has a 50% weight in the results, with 5 10 km and 10+ km having 30% and 20% weights, respectively. 
+Results: Fig. 1 shows VMR values as derived from daytime CCAM (red) and nighttime REMS (blue) measurements. The error bars in the REMS-derived VMR values shown in Fig. 1 are calculated using the uncertainties in REMS RH and P measurements [1]. Analysis of the seasonal evolution of the VMR [1] is not the aim of this investigation. However, it is interesting to note that there may be some important photodissociation processes that can account for transient sudden changes along the seasonal cycle. Namely, if the UV irradiance is masked by atmospheric dust then H2O photolysis should be diminished and thus UV irradiance and VMR should be anticorrelated. Prelimi1761.pdf47th Lunar and Planetary Science Conference (2016)
+nary REMS measurements show a fairly noticeable anticorrelation between these two observables, particularly during spring and summer. 
+ 
+ 
+Fig. 2 shows the ratio between daytime CCAM and nighttime REMS derived VMR values corresponding to the time period shown in Fig. 1. Except on sol 720, the VMR ratio is above 1, indicating higher daytime than nighttime values. In particular, the VMR ratio is maximum in winter, coinciding with the time of the year when nighttime frost formation followed by daytime sublimation is most likely [1]. The error bars shown in Fig. 2 are calculated by assuming that the uncertainties in CCAM and REMS VMR estimates shown in Fig. 1 are independent. 
+ 
+ 
+Discussion: Various processes might explain the differences between the nighttime REMS and the daytime CCAM derived VMR values shown in Fig. 1. Potential explanations include: 
+ Surface nighttime frost formation followed by daytime sublimation in winter [1], when the ratio between daytime and nighttime VMR values is the largest. 
+ Surface nighttime adsorption of water vapor by the regolith followed by daytime desorption. This mechanism can work throughout the year [2]. It is expected to be more efficient at lower temperatures, although it remains unclear whether kinetics would allow for the exchange of adsorbed water on hourly time scales necessary to track insolation [4-5]. 
+ Large scale circulations changing vertical H2O profiles at different times of the year. 
+The first two mechanisms would imply that the regolith plays a significant role in the diurnal hydrological cycle at Gale. We are currently analyzing the type of terrain where measurements shown in Fig. 2. were taken. Also, we are trying to understand which of the above mechanisms are most likely to explain the diurnal variation of VMR shown in Figs. 1 and 2. 
+ References: [1] Mart nez G. M. et al. (2016) Icarus, doi: http://dx.doi.org/10.1016/j.icarus.2015.12.004. [2] Savij rvi H. (2016) Icarus, 265, 63-69. [3] McConnochie T. et al. (2015) AGU Fall Meeting. [4] Beck P. et al. (2010) JGR, 115, E10011. [5] Zent A. P. et al. (2001) JGR, 106, 14667-14674. 
+ Acknowledgments: This research is supported by 
+a grant from JPL 1449038. We also thank the REMS team for their support of this investigation. 
+ 
+ 0 20 40 60 80
+ 100 120 140 160
+ 0 100 200 300 400 500 600 700 800 900 1000 1100 1200
+208 272 333 25 70 116 167 227 292 350 39
+VMR 
+(ppm)
+Sol Number
+Solar Longitude
+Spring Summer Fall Winter Spring Summer Fall
+CCAM/DaytimeREMS/Nighttime
+ 0
+ 2
+ 4
+ 6
+ 8
+ 10
+ 12
+ 0 100 200 300 400 500 600 700 800 900 1000 1100 1200
+151 208 272 333 25 70 116 167 227 292 350 39 85
+Day-t
+o-nigh
+t rati
+o
+Sol Number
+Solar Longitude
+Spring Summer Fall Winter Spring Summer Fall
+Fig 1. Daytime (10:00-14:00 LTST) CCAM (red) and nighttime (05:00-06:00 LTST) REMS (blue) values of VMR. Only REMS measurements for the first 1000 sols are analyzed here. REMS VMR values with large uncertainty (spring) are not shown. 
+Fig 2. Ratio of daytime CCAM to nighttime REMS VMR values corresponding to measurements taken on the same sol. Values in magenta show a lower end > 1, indicating a certain diurnal variation. 
+1761.pdf47th Lunar and Planetary Science Conference (2016)

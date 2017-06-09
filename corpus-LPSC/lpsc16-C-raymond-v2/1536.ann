@@ -1,0 +1,36 @@
+T3	Element 5486 5487	S
+T4	Element 5489 5491	Ti
+T5	Element 5508 5509	S
+T6	Element 5675 5677	Si
+T7	Element 5730 5732	Si
+T8	Element 5734 5736	Al
+T9	Element 5873 5875	Si
+T10	Element 5890 5894	iron
+T14	Target 3970 3977	Portage
+T15	Site 3988 3996	Rocknest
+T16	Mineral 2656 2663	olivine
+T17	Mineral 6368 6375	olivine
+T1	Region 1476 1494	Bagnold Dune Field
+R1	IsSituatedIn Arg1:T14 Arg2:T15	
+T2	Target 4428 4434	Warsaw
+T12	Target 4481 4490	Weissrand
+T13	Target 4520 4525	Barby
+T18	Target 4575 4581	Kibnas
+T19	Target 5646 5651	Barby
+T20	Target 5697 5703	Warsaw
+T21	Contains 5652 5674	has the second highest
+E1	Contains:T21 Targ:T19 Cont:T6
+A1	Amount E1 Contains_High
+T22	Contains 5705 5716	the highest
+E2	Contains:T22 Cont:T23 Targ:T20
+A2	Amount E2 Contains_High
+T23	Element 5717 5719	Ni
+T24	Material 5741 5748	alkalis
+T25	Target 5752 5757	Barby
+T26	Contains 5721 5729	Elevated
+E3	Contains:T26 Cont:T7 Cont2:T8 Cont3:T24 Targ:T25
+A3	Amount E3 Contains_High
+T27	Target 6459 6464	Barby
+T11	Element 5496 5498	Mn
+T28	Element 6021 6023	Fe
+T29	Element 6040 6042	Fe

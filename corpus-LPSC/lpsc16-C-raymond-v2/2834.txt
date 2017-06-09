@@ -1,0 +1,170 @@
+
+2834.PDF
+MARS SEDIMENTARY ROCK METROLOGY FROM MAHLI QUANTITATIVE RELIEF MODELS. J. B. Garvin1, K. S. Edgett2, D. M. Fey2, R. Dotson5, J. Frawley4 , M. R. Kennedy2, G. M. Krezoski2, M. E. Minitti3; 1NASA Goddard (NASA GSFC, Greenbelt, MD 20771; james.b.garvin@nasa.gov), 2MSSS, San Diego, CA, 3Planetary Sciences Institute, Tucson, AZ, 4HBG at NASA s GSFC, 5Fireball at NASA s GSFC. 
+ 
+Introduction: For rocks on a planetary body 
+surface, the quantitative morphology (i.e., relief) of the 
+exposed rock at sub-millimeter, petrographic scales is a 
+function of inherent rock and grain properties 
+(formative and diagenetic processes) that have acted in 
+concert with physical and chemical weathering and 
+erosion (modificative processes) of that surface [1]. The 
+nature of the materials and processes will vary as a 
+function of the nature of the world on which the rock 
+occurs. Rock textural elements (e.g., grains, cements, 
+vugs, vesicles) of differing physical properties respond 
+to weathering and erosion differently. For example, on 
+Mars, wind erosion enhances subtleties in the 
+inhomogeneity of exposed, very fine-grained 
+sedimentary rocks (e.g., mudstones in Gale crater [2]). 
+On Earth, repeated monitoring of such surfaces, over 
+time, can yield information about weathering and 
+erosion rates [3]. Such measurements can also provide 
+information regarding habitable rock surfaces (and/or 
+micro-scale sub-surfaces) and the interaction of the rock 
+surface with biology [4], as well as feed into 
+documentation of where observations were made or 
+samples extracted relative to 3-D reconstructions of 
+bedding, stratigraphic relations, and global coordinate 
+systems. 
+The Mars Science Laboratory (MSL) payload 
+includes the Mars Hand Lens Imager (MAHLI) [5] and 
+the Mars 2020 rover SHERLOC investigation includes 
+WATSON, a duplicate of MAHLI. In support of 
+MAHLI and future WATSON science and sample 
+extraction and documentation efforts, we have, since 
+October 2015, been exploring the use of MAHLI as a 
+rock surface 3-D metrology Quantitative Relief Model 
+(QRM) system. We acquire 5 individual overlapping 
+color images arranged a + pattern with 0.4 cm offsets, 
+permitting analysis of sub-millimeter-scale texture 
+using engineering metrology techniques [6]. Here, we 
+showcase our earliest MAHLI 5-image QRM 
+experiments designed to assess the scientific quality and 
+the noise floor of the system by analysis of six clastic 
+sedimentary rock surfaces acquired at ~31 m/pixel 
+scale within patches ~ 4.9 cm x 3.8 cm in area. 
+MAHLI Stereo QRM Imaging: The focusable 
+color MAHLI camera can acquire sub-mm spatial 
+resolution images of martian geologic materials from its 
+location on the turret on the Curiosity rover arm. We 
+acquired multiple 5-frame MAHLI stereo overlapping 
+images in a cruciform pattern ( + ) on sols 1130, 1150, 
+1157, 1166, and 1184 that survey an array of different 
+sedimentary rock surface morphologies. These initial 
+examples reflect the potential for measuring textures at 
+< 0.10 mm vertical scales for geologic materials of 
+scientific importance, ideally associated with 
+independent measurements of chemistry. Further 5frame QRM s are planned after rigorous analysis of the 
+vertical error budget intrinsic to the MAHLI stereo 
+imaging configuration (5-frames) and geologic 
+assessment. Our focus here is on a first-order 
+characterization of QRM s for different rock surface 
+morphologies and extractable geologic information 
+pertaining to the evolution of individual rock surfaces. 
+Initial QRM-5 Experiment (Greenhorn): On Sol 
+1130 a preliminary 5-frame MAHLI stereo imaging 
+experiment was conducted to evaluate the quality of 
+derived QRM s for potential further scientific 
+utilization during the MSL Extended Mission and using 
+the WATSON camera on the Mars 2020 rover mission. 
+The experiment was designed to allow for multi-angle 
+(5 frames) MAHLI stereo-overlap-imaging of the highsilica Greenhorn rock surface after DRT brushing and 
+prior to drilling for SAM/CheMin analysis. Greenhorn 
+was selected on the basis of its interesting geochemistry 
+from APXS and ChemCam, as well as its finely-layered, 
+coarse-grained sandstone (Stimson) appearance. 
+Figure 1: Sol 1130 MAHLI QRM imaging experiment with resulting relief model (QRM) for the Greenhorn sandstone. The 5 frames 
+overlapped a 4.9 x 3.8 cm patch of the Greenhorn rock surface from 
+a standoff of 5 cm and produced a 0.06 mm gridded relief model with 
+a statistical noise level (vertical) of < 0.03 mm. 
+ As illustrated in Fig. 1, the resulting QRM 
+relief model of Greenhorn displays an organized array 
+of relief elements, arranged in a quasi-linear pattern 
+with a total dynamic range of < 2.4 mm. The subtle 
+layering that is visible in individual MAHLI images is 
+expressed as relief, suggesting offsets less than 0.5 mm. 
+The distribution of local slopes for this rock surface is 
+2834.pdf47th Lunar and Planetary Science Conference (2016)
+dominated by the tilted layers that run left-to-right, 
+suggesting a more recently exposed rock surface than 
+others in this region. Using methods borrowed from 
+engineering metrology standardized analysis, we have 
+examined the textures of the Greenhorn rock in terms of 
+facet distributions (slope azimuth), cumulative 
+distribution of relief elements after normalization (to a 
+mean reference level), and for periodic patterns in the 
+sub-mm relief. The total variance of local relief is ~ 0.45 
+mm, but when normalized to a mean local reference 
+level, the value is 0.24 mm, which appears to represent 
+an effective statistical parameter associated with grainsize for the sandstone surface. 
+MAHLI QRM analysis: Our emphasis has been on 
+evaluating the utility of sub-mm relief models (QRMs) 
+at spatial scales of < 0.10 mm for different rock and sand 
+patches. This initial analysis showcases the potential 
+vertical precision limits of the MAHLI stereo imaging 
+for quantifying process-related surface textures, and the 
+potential for identifying specific roughness signatures. 
+It is recognized that the sample size of six rocks is 
+incomplete but the analysis to date illustrates the 
+potential. 
+Of particular interest are variations in residual relief 
+after normalizing each QRM to a mean reference relief 
+level. Figure 2 illustrates the spatial differences, and 
+suggests that standard deviation of residual relief across 
+the QRM s for surfaces represents an objective measure 
+of geologic texture . In this case, the Swartkloofberg 
+mudstone exhibits a value of 0.061 mm (SD z ) which 
+~15% larger than coarse sand (0.053 mm). Such 
+quantitative differences are easily measured in the 
+residual QRMs. In contrast, the laminated 
+Swartkloofberg mudstone illustrated in Fig. 2 is vastly 
+different than the Greenhorn sandstone. In this case the 
+mudstone exhibits a roughness of ~ 0.061 mm relative 
+to that at Greenhorn (0.24 mm). It is also instructive to 
+examine the angular distribution of facets at different 
+scales for these rock surfaces. We can compute the 
+directional distribution of slopes for the rock surfaces 
+(QRM) and measure patterns and their degree of 
+organization. For Greenhorn, the azimuths of dominant 
+facet orientations are clearly separated by 90 degrees, 
+documenting the orthogonal pattern of tilted layers and 
+cross-cutting features. 
+Figure 2: MAHLI residual QRM s for mudstone 
+(Swartkloofberg) versus Barby coarse sand (sol 1184). Note 
+the layered pattern in the mudstone at left (sol 1166). 
+Comparative QRM Analysis: We can compare the 
+QRM s from the six rock surfaces using cumulative 
+relief analysis methods. For the smooth mudstones and 
+the Ellis Canyon sandstone, the distributions are nearly 
+identical, but offset from other surfaces. When 
+comparing the slope azimuth distributions for the 
+linearly-textured Greenhorn versus Swartkloofberg, it is 
+evident that non-random distributions can be 
+discriminated. From these preliminary assessments, we 
+conclude that sub-mm quantitative relief patterns and 
+potentially signatures can be measured by means of 
+MAHLI-derived QRM s, and that to first order 
+statistical differences may be associated with key 
+geologic processes. Further analysis using terrestrial 
+sedimentary rocks measured by means of GSFC 
+metrology scanners are underway for comparison with 
+MAHLI QRM s to isolate specific patterns associated 
+with processes operating at the rock-atmosphere 
+interface on Mars. 
+Conclusion and Future Work: Experimental 
+MAHLI QRM s demonstrate vertical precision levels 
+better than 0.03 mm at spatial scales of < 0.1 mm. 
+Quantitative metrology-based analysis of such QRM s 
+is a first step beyond routine, qualitative anaglyph 
+evaluation, and offers the possibility of new boundary 
+conditions for micro-relief analysis of the origin of rock 
+textures on Mars. 
+References: [1] G mez-Pujol, L., et al. (2006) Earth 
+Surface Processes and Landforms, 31, 1792-1801. [2] 
+Stack, K. M., et al (2014) JGR 119 (7) 1635 1664. [3] 
+Moses, C., et al (2014) Earth Science Reviews, 135, 
+141-161. [4] Gorbushina A. & W. Broughton (2009) 
+Ann. Rev. Microbiol. 63, p. 431-450 [5] Edgett, K.S. et al. (2012), Space Sci. Rev., doi: 10.1007/s11214-0129910-4. [6] Leach R. (2013) Char. Areal Surface 
+Texture, Springer, 355 pp. 
+2834.pdf47th Lunar and Planetary Science Conference (2016)

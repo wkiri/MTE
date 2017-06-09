@@ -1,0 +1,84 @@
+T1	Element 1312 1316	iron
+T2	Element 1471 1475	iron
+T3	Element 2139 2143	iron
+T4	Element 2288 2292	iron
+T5	Element 2434 2438	iron
+T6	Element 3566 3570	iron
+T7	Element 3712 3716	iron
+T8	Element 3884 3888	iron
+T9	Element 4048 4052	iron
+T11	Element 4424 4428	iron
+T13	Element 5199 5203	iron
+T14	Element 5656 5660	iron
+T15	Element 5788 5792	iron
+T17	Element 7161 7165	iron
+T18	Element 7743 7747	Iron
+T20	Target 4470 4479	Littleton
+T21	Target 4687 4696	Littleton
+T22	Target 5804 5811	Lebanon
+T23	Target 5816 5825	Littleton
+T24	Target 6085 6094	Littleton
+T25	Target 7108 7117	Littleton
+T26	Mineral 2759 2767	troilite
+T27	Mineral 2955 2966	octahedrite
+T28	Mineral 3019 3027	troilite
+T29	Mineral 3961 3969	troilite
+T30	Mineral 4077 4085	Troilite
+T31	Mineral 5250 5258	kamacite
+T32	Mineral 5557 5565	troilite
+T19	Feature 4674 4683	scalloped
+R1	Shows Arg1:T21 Arg2:T19	
+T12	Target 5204 5218	Shelter Island
+T33	Target 4391 4398	Lebanon
+T16	Feature 5955 6003	elliptical to round cavities of varying diameter
+R2	Shows Arg1:T24 Arg2:T16	
+T34	Feature 7032 7058	two mappable texture types
+R3	Shows Arg1:T25 Arg2:T34	
+T35	Element 28 32	IRON
+T36	Target 1328 1340	Block Island
+T37	Target 1349 1362	Oile n Ruaidh
+T38	Target 2823 2837	Shelter Island
+T39	Target 3147 3163	Heat Shield Rock
+T10	Process 1317 1327	meteorites
+R4	Shows Arg1:T36 Arg2:T10	
+R5	Shows Arg1:T37 Arg2:T10	
+T40	Contains 1312 1327	iron meteorites
+E1	Contains:T40 Cont:T1 Targ:T36 Targ2:T37
+T41	Feature 2859 2879	nozzle-like features
+R6	Shows Arg1:T38 Arg2:T41	
+T42	Feature 2899 2937	differentially eroded inclusive masses
+R7	Shows Arg1:T38 Arg2:T42	
+T43	Process 3137 3146	meteorite
+R8	Shows Arg1:T39 Arg2:T43	
+T44	Process 4429 4439	meteorites
+R9	Shows Arg1:T33 Arg2:T44	
+T45	Contains 4424 4439	iron meteorites
+E2	Contains:T45 Cont:T11 Targ:T33
+A1	Confidence E2 High
+A2	Amount E2 Contains_High
+A3	Confidence E1 High
+A4	Amount E1 Contains_High
+T46	Feature 5228 5246	mineral inclusions
+T47	Feature 5250 5265	kamacite plates
+R10	Shows Arg1:T12 Arg2:T47	
+R11	Shows Arg1:T12 Arg2:T46	
+T48	Process 5277 5300	differential weathering
+R12	Shows Arg1:T12 Arg2:T48	
+T49	Process 5793 5803	meteorites
+T50	Contains 5788 5803	iron meteorites
+E3	Contains:T50 Cont:T15 Targ:T22 Targ2:T23
+T51	Feature 5834 5842	flutings
+T52	Feature 5847 5855	scallops
+T53	Feature 5861 5878	oriented symmetry
+R13	Shows Arg1:T23 Arg2:T51	
+R14	Shows Arg1:T23 Arg2:T52	
+R15	Shows Arg1:T23 Arg2:T53	
+R16	Shows Arg1:T22 Arg2:T51	
+R17	Shows Arg1:T22 Arg2:T52	
+R18	Shows Arg1:T22 Arg2:T53	
+R19	Shows Arg1:T22 Arg2:T16	
+R20	Shows Arg1:T23 Arg2:T16	
+T54	Feature 6929 6950	Cavernous excavations
+T55	Feature 6970 6979	boreholes
+R21	Shows Arg1:T25 Arg2:T54	
+R22	Shows Arg1:T25 Arg2:T55	
