@@ -41,7 +41,7 @@ T50	Mineral 5338 5345	olivine
 T51	Mineral 5669 5676	olivine
 T52	Mineral 7099 7106	olivine
 T53	Mineral 77 85	HEMATITE
-T2	Mineral 861 865	SiO2
+T2	Material 861 865	SiO2
 T54	Mineral 898 906	hematite
 T55	Mineral 965 972	olivine
 T56	Locality 1628 1639	Marias Pass
@@ -70,7 +70,7 @@ E3	Contains:T70 Targ:T10 Cont:T40
 A3	Confidence E3 Low
 A4	Amount E3 Contains_Low
 T71	Element 3393 3397	iron
-T72	Mineral 3423 3427	SiO2
+T72	Material 3423 3427	SiO2
 T73	Contains 3624 3651	likely from the presence of
 E4	Contains:T73 Targ:T11 Cont:T41
 A5	Confidence E4 Neutral
@@ -129,5 +129,5 @@ T34	Mineral 6984 6991	olivine
 T38	Target 2541 2547	Tsumeb
 T98	Target 2574 2578	Engo
 T6	Element 6312 6314	Fe
-T12	Mineral 6452 6456	SiO2
+T12	Material 6452 6456	SiO2
 T13	Locality 8107 8119	Bagnold Dune

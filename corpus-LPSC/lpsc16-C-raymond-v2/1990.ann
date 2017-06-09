@@ -84,7 +84,7 @@ T70	Locality 2641 2648	Pahrump
 R14	IsSituatedIn Arg1:T67 Arg2:T70	
 T71	Formation 3423 3439	Murray Formation
 R15	BelongsTo Arg1:T41 Arg2:T71	
-T72	Mineral 3463 3467	SiO2
+T72	Material 3463 3467	SiO2
 T73	Contains 3451 3462	a very high
 E3	Contains:T73 Targ:T41 Cont:T72
 A1	Amount E3 Contains_High

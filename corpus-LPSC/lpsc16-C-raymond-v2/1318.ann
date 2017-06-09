@@ -8,5 +8,5 @@ T7	Element 9100 9102	Zn
 T8	Element 9103 9105	Mn
 T9	Element 9106 9108	Cr
 T10	Element 9109 9111	Co
-T11	Mineral 6131 6135	SiO2
-T12	Mineral 7850 7854	SiO2
+T11	Material 6131 6135	SiO2
+T12	Material 7850 7854	SiO2

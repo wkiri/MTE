@@ -21,11 +21,11 @@ T7	Mineral 4995 5002	leucite
 T11	Element 5313 5314	K
 T22	Element 5400 5402	Al
 T23	Element 5403 5405	Si
-T24	Mineral 5850 5854	SiO2
+T24	Material 5850 5854	SiO2
 T25	Element 7737 7738	K
 T26	Element 7593 7594	K
 T27	Element 7045 7047	Mg
-T28	Mineral 6051 6055	SiO2
+T28	Material 6051 6055	SiO2
 T29	Element 7435 7437	Mg
 T30	Mineral 7739 7748	feldspars
 T31	Mineral 7737 7748	K-feldspars

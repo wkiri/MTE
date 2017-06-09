@@ -44,9 +44,9 @@ T42	Locality 5279 5290	Marias Pass
 T43	Contains 5633 5645	was observed
 E1	Contains:T43 Cont:T30 Targ:T27
 A1	Confidence E1 High
-T28	Mineral 2203 2207	SiO2
+T28	Material 2203 2207	SiO2
 T44	Locality 2918 2933	Yellowknife Bay
-T45	Mineral 3992 3996	SiO2
+T45	Material 3992 3996	SiO2
 T46	Element 4634 4635	K
 T47	Element 4636 4638	Na
 T48	Material 5713 5717	opal

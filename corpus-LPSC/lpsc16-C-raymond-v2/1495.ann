@@ -39,7 +39,7 @@ T34	Contains 7651 7655	rich
 E2	Contains:T34 Cont:T35 Targ:T12 Targ2:T30
 A2	Amount E2 Contains_High
 T35	Element 7648 7650	Si
-T36	Mineral 4694 4698	SiO2
+T36	Material 4694 4698	SiO2
 T37	Element 5133 5135	Fe
 T38	Element 5203 5205	Ca
 T39	Mineral 5203 5214	Ca-sulfates

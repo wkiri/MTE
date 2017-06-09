@@ -97,5 +97,5 @@ T67	Target 8484 8489	Barby
 T68	Target 8524 8532	Sinclair
 T69	Target 8546 8552	Kibnas
 T70	Site 4827 4836	Dingo Gap
-T71	Mineral 6392 6396	SiO2
-T72	Mineral 7365 7369	SiO2
+T71	Material 6392 6396	SiO2
+T72	Material 7365 7369	SiO2

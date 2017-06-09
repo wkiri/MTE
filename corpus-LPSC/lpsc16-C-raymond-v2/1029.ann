@@ -37,8 +37,8 @@ T39	Mineral 4207 4218	Plagioclase
 T40	Material 4340 4346	basalt
 T10	Mineral 2708 2714	Quartz
 T11	Material 2889 2895	silica
-T42	Mineral 3325 3329	SiO2
-T43	Mineral 3576 3580	SiO2
+T42	Material 3325 3329	SiO2
+T43	Material 3576 3580	SiO2
 T41	Material 3342 3346	TiO2
 T44	Material 3361 3366	Al2O3
 T45	Material 3380 3385	Cr2O3

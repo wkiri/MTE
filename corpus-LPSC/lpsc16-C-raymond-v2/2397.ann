@@ -64,7 +64,7 @@ A2	Position E2 IsStratAbove
 T66	Feature 1834 1854	thick cross bed sets
 T8	Formation 2013 2019	Murray
 R1	BelongsTo Arg1:T29 Arg2:T8	
-T67	Mineral 2045 2049	SiO2
+T67	Material 2045 2049	SiO2
 T68	Contains 2029 2044	has a very high
 E3	Contains:T68 Targ:T29 Cont:T67
 A3	Amount E3 Contains_High
@@ -93,11 +93,11 @@ R7	Shows Arg1:T34 Arg2:T80
 T13	Formation 4150 4159	Murray Fm
 T81	Member 4773 4785	Missoula Mbr
 T82	Member 5197 5209	Missoula Mbr
-T83	Mineral 5587 5591	SiO2
+T83	Material 5587 5591	SiO2
 T84	Contains 5582 5586	high
 E5	Contains:T84 Cont:T83 Targ:T38
 A5	Amount E5 Contains_High
-T85	Mineral 6795 6799	SiO2
+T85	Material 6795 6799	SiO2
 T86	Contains 6768 6786	is actually higher
 E6	Contains:T86 Targ:T41 Cont:T85 Cont2:T21
 A6	Amount E6 Contains_High

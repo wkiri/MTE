@@ -73,7 +73,7 @@ T59	Unit 2917 2928	Rugged unit
 T60	Unit 2937 2950	Striated unit
 T61	Element 4209 4210	K
 T62	Element 4270 4271	K
-T63	Mineral 4303 4307	SiO2
+T63	Material 4303 4307	SiO2
 T64	Element 4680 4681	K
 T65	Mineral 4682 4691	feldspars
 T66	Mineral 4680 4691	K-feldspars

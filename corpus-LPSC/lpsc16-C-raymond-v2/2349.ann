@@ -31,7 +31,7 @@ T13	Material 7705 7721	amorphous silica
 T14	Contains 7691 7704	enrichment of
 E3	Contains:T14 Cont:T13 Targ:T18
 A2	Amount E3 Contains_High
-T16	Mineral 2291 2295	SiO2
-T17	Mineral 3841 3845	SiO2
-T25	Mineral 4431 4435	SiO2
-T26	Mineral 4658 4662	SiO2
+T16	Material 2291 2295	SiO2
+T17	Material 3841 3845	SiO2
+T25	Material 4431 4435	SiO2
+T26	Material 4658 4662	SiO2
