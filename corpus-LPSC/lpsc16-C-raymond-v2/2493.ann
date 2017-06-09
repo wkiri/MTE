@@ -1,0 +1,26 @@
+T1	Element 2479 2481	Li
+T2	Element 3512 3514	Fe
+T3	Element 3718 3722	Iron
+T4	Element 3868 3870	Fe
+T5	Element 4323 4325	Fe
+T6	Element 4703 4705	Fe
+T7	Element 6212 6214	Fe
+T8	Element 7127 7129	Fe
+T12	Target 2907 2911	Soda
+T13	Target 3030 3034	Soda
+T14	Target 3766 3770	Soda
+T15	Target 4133 4141	Rocknest
+T16	Target 4372 4376	Soda
+T17	Material 2790 2794	soil
+T18	Contains 2796 2811	were identified
+E1	Contains:T18 Targ:T12 Cont:T17
+T19	Contains 3723 3736	concentration
+E2	Contains:T19 Cont:T3 Targ:T14
+T20	Feature 4670 4724	slightly higher concentration of Fe nearer the surface
+R1	Shows Arg1:T16 Arg2:T20	
+T9	Element 2341 2343	Mn
+T10	Element 3933 3935	Fe
+T11	Element 3984 3986	Fe
+T21	Element 4805 4807	Fe
+T22	Element 6385 6387	Fe
+T23	Element 6436 6438	Fe

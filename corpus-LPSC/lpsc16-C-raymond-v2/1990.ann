@@ -1,0 +1,132 @@
+T1	Element 1092 1093	F
+T2	Element 1095 1097	Cl
+T3	Element 1099 1101	Li
+T4	Element 1103 1105	Sr
+T5	Element 1107 1109	Ba
+T6	Element 1115 1117	Rb
+T7	Element 1156 1164	fluorine
+T8	Element 3769 3777	Fluorine
+T9	Element 3831 3839	fluorine
+T10	Element 3941 3949	fluorine
+T11	Element 3990 3998	fluorine
+T12	Element 4261 4269	fluorine
+T13	Element 4339 4347	fluorine
+T14	Element 4545 4553	fluorine
+T15	Element 4692 4700	Fluorine
+T16	Element 4795 4803	fluorine
+T17	Element 4918 4926	fluorine
+T18	Element 5002 5010	fluorine
+T19	Element 5074 5082	fluorine
+T20	Element 5108 5115	calcium
+T21	Element 5292 5300	fluorine
+T22	Element 5458 5459	F
+T23	Element 5522 5523	F
+T24	Element 5552 5553	F
+T25	Element 5582 5584	Ca
+T26	Element 5690 5692	Si
+T27	Element 5694 5696	Mg
+T28	Element 5698 5700	Al
+T29	Element 5990 5997	calcium
+T30	Element 6112 6119	calcium
+T31	Element 6321 6322	F
+T32	Element 6365 6366	F
+T33	Element 6375 6376	C
+T34	Element 6680 6688	fluorine
+T35	Element 7000 7008	fluorine
+T36	Element 7118 7119	F
+T37	Element 7555 7563	fluorine
+T39	Target 2443 2454	Pink Cliffs
+T40	Target 2456 2467	Book Cliffs
+T41	Target 3398 3401	Elk
+T42	Target 4067 4082	Alvord Mountain
+T43	Target 4720 4727	Big Sky
+T45	Target 4842 4857	Alvord Mountain
+T46	Target 5197 5212	Alvord Mountain
+T47	Target 5590 5597	Big Sky
+T49	Target 5629 5634	Heath
+T50	Mineral 5161 5168	apatite
+T51	Mineral 5215 5223	fluorite
+T52	Mineral 5426 5434	fluorite
+T53	Mineral 6407 6415	Fluorite
+T54	Mineral 6523 6531	fluorite
+T55	Mineral 6840 6848	fluorite
+T56	Mineral 7023 7031	fluorite
+T57	Mineral 5728 5742	phyllosilicate
+T58	Mineral 7452 7467	phyllosilicates
+T59	Element 10 18	FLUORINE
+T38	Locality 2155 2168	Pahrump Hills
+R1	IsSituatedIn Arg1:T39 Arg2:T38	
+R2	IsSituatedIn Arg1:T40 Arg2:T38	
+T60	Target 2469 2484	Alexander Hills
+R3	IsSituatedIn Arg1:T60 Arg2:T38	
+T61	Target 2490 2506	Carnivore Canyon
+R4	IsSituatedIn Arg1:T61 Arg2:T38	
+T62	Feature 2388 2397	resistant
+R5	Shows Arg1:T39 Arg2:T62	
+R6	Shows Arg1:T40 Arg2:T62	
+R7	Shows Arg1:T60 Arg2:T62	
+R8	Shows Arg1:T61 Arg2:T62	
+T63	Feature 2398 2418	laminated to massive
+R9	Shows Arg1:T39 Arg2:T63	
+R10	Shows Arg1:T40 Arg2:T63	
+R11	Shows Arg1:T60 Arg2:T63	
+R12	Shows Arg1:T61 Arg2:T63	
+T64	Material 2420 2438	mudstone/siltstone
+T65	Contains 2440 2442	at
+E1	Contains:T65 Cont:T64 Targ:T39 Targ2:T40 Targ3:T60 Targ4:T61
+T66	Feature 2512 2528	cross-stratified
+T67	Target 2548 2558	Whale Rock
+R13	Shows Arg1:T67 Arg2:T66	
+T68	Material 2530 2539	sandstone
+T69	Contains 2541 2547	at the
+E2	Contains:T69 Cont:T68 Targ:T67
+T70	Locality 2641 2648	Pahrump
+R14	IsSituatedIn Arg1:T67 Arg2:T70	
+T71	Formation 3423 3439	Murray Formation
+R15	BelongsTo Arg1:T41 Arg2:T71	
+T72	Mineral 3463 3467	SiO2
+T73	Contains 3451 3462	a very high
+E3	Contains:T73 Targ:T41 Cont:T72
+A1	Amount E3 Contains_High
+T74	Locality 3330 3342	Maria s Pass
+R16	IsSituatedIn Arg1:T41 Arg2:T74	
+T75	Site 3977 3988	Garden City
+R17	IsSituatedIn Arg1:T42 Arg2:T75	
+T76	Contains 3999 4020	contents are very hig
+E4	Contains:T76 Cont:T11 Targ:T42
+A2	Amount E4 Contains_High
+T44	Contains 4701 4719	is detected in the
+E5	Contains:T44 Cont:T15 Targ:T43
+T77	Contains 4787 4794	highest
+E6	Contains:T77 Cont:T16 Targ:T45
+A3	Amount E6 Contains_High
+T78	Contains 5224 5236	is preferred
+E7	Contains:T78 Targ:T46 Cont:T51
+A4	Confidence E7 Low
+T48	Contains 5547 5551	have
+E8	Contains:T48 Cont:T24 Targ:T47 Targ2:T49
+T79	Contains 5661 5689	are strongly correlated with
+E9	Contains:T79 Targ:T49 Targ2:T47 Cont:T26 Cont2:T27 Cont3:T28
+A5	Confidence E9 High
+T80	Contains 5715 5727	suggesting a
+E10	Contains:T80 Targ:T49 Targ2:T47 Cont:T57
+A6	Confidence E10 Low
+T81	Element 1279 1280	F
+T82	Mineral 5172 5180	fluorite
+T83	Mineral 5243 5251	apatites
+T84	Element 5345 5354	phophorus
+T85	Mineral 5414 5422	apatites
+T86	Mineral 5492 5500	apatites
+T87	Element 5868 5869	F
+T88	Mineral 5912 5920	apatites
+T89	Mineral 5998 6007	sulphates
+T90	Mineral 5990 6007	calcium sulphates
+T91	Mineral 6009 6017	Apatites
+T92	Mineral 6121 6129	sulphate
+T93	Mineral 6396 6405	silicates
+T94	Mineral 6598 6608	phosphates
+T95	Mineral 6721 6731	phosphates
+T96	Element 7297 7299	Ca
+T97	Mineral 7300 7309	sulphates
+T98	Mineral 7297 7309	Ca-sulphates
+T99	Element 7336 7337	F

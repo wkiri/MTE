@@ -1,0 +1,133 @@
+T1	Element 1109 1113	zinc
+T3	Region 1031 1043	Bagnold Dune
+T4	Target 1678 1686	Buckskin
+T5	Target 1864 1871	Big Sky
+T7	Target 2049 2058	Greenhorn
+T8	Target 2372 2379	Augusta
+T9	Region 2645 2657	Bagnold Dune
+T10	Target 3110 3118	Buckskin
+T11	Target 3558 3565	Big Sky
+T14	Target 3608 3622	Telegraph Peak
+T15	Target 3849 3858	Greenhorn
+T16	Target 4186 4193	Big Sky
+T18	Target 4261 4269	Buckskin
+T19	Target 4423 4430	Augusta
+T20	Target 4726 4742	Confidence Hills
+T21	Target 5083 5097	Hematite Ridge
+T22	Target 5851 5859	Buckskin
+T23	Target 5861 5868	Big Sky
+T25	Target 5870 5879	Greenhorn
+T26	Target 5929 5937	Buckskin
+T27	Target 6051 6058	Big Sky
+T29	Target 6161 6168	Big Sky
+T31	Target 6173 6182	Greenhorn
+T32	Target 6606 6613	Augusta
+T33	Target 6878 6892	Hematite Ridge
+T35	Target 7959 7969	Cumberland
+T36	Target 7971 7987	Confidence Hills
+T37	Target 7992 8006	Telegraph Peak
+T39	Mineral 3238 3247	magnetite
+T40	Mineral 3327 3335	hematite
+T41	Mineral 3652 3661	magnetite
+T42	Mineral 3985 3994	magnetite
+T43	Mineral 3998 4006	ilmenite
+T44	Mineral 4526 4534	hematite
+T45	Mineral 5037 5045	hematite
+T46	Mineral 5083 5091	Hematite
+T47	Mineral 6878 6886	Hematite
+T48	Mineral 3793 3801	sulfates
+T49	Mineral 5225 5232	olivine
+T50	Mineral 5338 5345	olivine
+T51	Mineral 5669 5676	olivine
+T52	Mineral 7099 7106	olivine
+T53	Mineral 77 85	HEMATITE
+T2	Mineral 861 865	SiO2
+T54	Mineral 898 906	hematite
+T55	Mineral 965 972	olivine
+T56	Locality 1628 1639	Marias Pass
+T57	Unit 1775 1782	Stimson
+T58	Material 1783 1792	sandstone
+T59	Target 2821 2827	Hoanib
+T60	Site 2752 2761	High Dune
+T61	Material 2805 2810	sands
+T62	Contains 2811 2813	at
+E1	Contains:T62 Targ:T59 Cont:T61
+A1	Confidence E1 High
+T63	Target 2879 2884	Barby
+T64	Target 2889 2895	Kibnas
+T65	Feature 2935 2947	ripple crest
+R1	Shows Arg1:T63 Arg2:T65	
+T66	Feature 2965 2971	trough
+R2	Shows Arg1:T64 Arg2:T66	
+T67	Feature 3146 3170	relatively flat spectrum
+R3	Shows Arg1:T10 Arg2:T67	
+T68	Material 3252 3258	silica
+T69	Contains 3172 3200	likely owing to the presence
+E2	Contains:T69 Targ:T10 Cont:T39 Cont2:T68
+A2	Confidence E2 Low
+T70	Contains 3286 3320	is consistent with the presence of
+E3	Contains:T70 Targ:T10 Cont:T40
+A3	Confidence E3 Low
+A4	Amount E3 Contains_Low
+T71	Element 3393 3397	iron
+T72	Mineral 3423 3427	SiO2
+T73	Contains 3624 3651	likely from the presence of
+E4	Contains:T73 Targ:T11 Cont:T41
+A5	Confidence E4 Neutral
+T74	Contains 3701 3720	possibly from minor
+E5	Contains:T74 Targ:T11 Cont:T75
+A6	Confidence E5 Low
+A7	Amount E5 Contains_Low
+T75	Mineral 3721 3729	hematite
+T76	Contains 3767 3785	may indicate trace
+E6	Contains:T76 Targ:T11 Cont:T48
+A8	Confidence E6 Low
+A9	Amount E6 Contains_Low
+T77	Contains 3945 3984	potentially related to small amounts of
+E7	Contains:T77 Targ:T15 Cont:T42 Cont2:T43
+A10	Confidence E7 Low
+A11	Amount E7 Contains_Low
+T78	Contains 4069 4085	ikely from minor
+E8	Contains:T78 Targ:T15 Cont:T82
+A12	Confidence E8 Neutral
+A13	Amount E8 Contains_Low
+T79	Material 3386 3412	ferric iron-bearing phases
+T80	Contains 3361 3385	is consistent with minor
+E9	Contains:T80 Targ:T10 Cont:T79
+A14	Confidence E9 Neutral
+A15	Amount E9 Contains_Low
+T81	Contains 3418 3422	high
+E10	Contains:T81 Targ:T10 Cont:T72
+A16	Confidence E10 High
+A17	Amount E10 Contains_High
+T82	Material 4112 4125	ferric phases
+T83	Target 4432 4438	Tsumeb
+T84	Target 4445 4449	Engo
+T85	Contains 4469 4513	in which spectral characteristics similar to
+E11	Contains:T85 Cont:T44 Targ:T84 Targ2:T83 Targ3:T19
+A18	Confidence E11 Low
+T86	Mineral 4691 4699	hematite
+T87	Contains 4700 4707	bearing
+E12	Contains:T87 Targ:T20 Cont:T86
+A19	Confidence E12 High
+T88	Region 5176 5189	Bagnold Dunes
+T89	Material 5150 5155	sands
+T90	Mineral 5351 5360	pyroxenes
+T91	Material 6035 6049	ferric sulfate
+T92	Contains 5999 6012	suggestive of
+E13	Contains:T92 Targ:T26 Cont:T91
+A20	Confidence E13 Low
+T93	Target 6145 6159	Telegraph Peak
+T94	Target 6615 6621	Tsumeb
+T95	Target 6623 6627	Engo
+T96	Feature 6577 6598	hematite-like spectra
+R4	Shows Arg1:T32 Arg2:T96	
+R5	Shows Arg1:T94 Arg2:T96	
+R6	Shows Arg1:T95 Arg2:T96	
+T97	Mineral 6665 6673	hematite
+T34	Mineral 6984 6991	olivine
+T38	Target 2541 2547	Tsumeb
+T98	Target 2574 2578	Engo
+T6	Element 6312 6314	Fe
+T12	Mineral 6452 6456	SiO2
+T13	Locality 8107 8119	Bagnold Dune

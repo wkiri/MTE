@@ -1,0 +1,150 @@
+T1	Element 1627 1629	Br
+T2	Element 1631 1633	Cl
+T3	Element 3114 3116	Mg
+T4	Element 3118 3119	K
+T5	Element 3121 3123	Zn
+T6	Element 3129 3131	Br
+T7	Element 3215 3217	Na
+T8	Element 3945 3947	Cl
+T9	Element 3949 3951	Br
+T10	Element 4089 4091	Mn
+T11	Element 4231 4233	Cl
+T12	Element 4238 4240	Br
+T13	Element 4304 4306	Zn
+T14	Element 4308 4310	Mn
+T15	Element 4312 4314	Cu
+T16	Element 4320 4322	Ni
+T17	Element 4368 4370	Br
+T18	Element 4375 4377	Cl
+T19	Element 4488 4490	Br
+T20	Element 4495 4497	Cl
+T21	Element 4552 4554	Cl
+T22	Element 4556 4558	Mn
+T23	Element 4564 4566	Br
+T24	Element 4665 4667	Br
+T25	Element 4669 4670	K
+T26	Element 4672 4674	Na
+T27	Element 4680 4682	Cl
+T28	Element 5178 5180	Br
+T29	Element 5182 5184	Cl
+T30	Element 5754 5756	Cl
+T31	Element 5762 5764	Br
+T32	Element 6246 6248	Br
+T33	Element 6250 6252	Cl
+T37	Target 1317 1324	Stephen
+T38	Target 1404 1412	Windjana
+T39	Target 1529 1537	Windjana
+T40	Target 1655 1663	Windjana
+T41	Target 1737 1746	Dillinger
+T42	Target 1973 1981	Windjana
+T43	Target 2100 2109	Dillinger
+T44	Target 2226 2234	Windjana
+T45	Target 2330 2337	Stephen
+T46	Target 2375 2384	Dillinger
+T47	Target 2427 2434	Stephen
+T48	Target 2555 2563	Windjana
+T49	Target 2572 2579	Stephen
+T50	Target 2884 2892	Windjana
+T51	Target 2897 2904	Stephen
+T52	Target 2911 2919	Windjana
+T53	Target 3135 3143	Windjana
+T54	Target 3321 3328	Stephen
+T55	Target 3698 3706	Windjana
+T56	Target 3743 3751	Windjana
+T57	Target 4122 4130	Windjana
+T58	Target 4154 4161	Stephen
+T59	Target 4349 4356	Stephen
+T60	Target 4589 4597	Windjana
+T61	Target 4900 4908	Windjana
+T62	Target 5090 5098	Windjana
+T63	Target 5512 5519	Stephen
+T64	Target 5607 5614	Stephen
+T65	Target 5619 5627	Windjana
+T66	Target 5772 5780	Windjana
+T67	Target 5790 5798	Windjana
+T68	Target 6193 6201	Windjana
+T69	Target 6379 6387	Windjana
+T72	Mineral 2008 2024	igneous minerals
+T73	Mineral 2026 2035	feldspars
+T74	Target 52 60	WINDJANA
+T35	Element 1295 1297	Mn
+T36	Contains 1298 1302	rich
+E1	Contains:T36 Targ:T37 Cont:T35
+A1	Amount E1 Contains_High
+T75	Locality 920 929	Kimberley
+R1	IsSituatedIn Arg1:T37 Arg2:T75	
+R2	IsSituatedIn Arg1:T38 Arg2:T75	
+T76	Element 1635 1637	Mn
+T77	Element 1678 1679	t
+T78	Contains 1671 1675	is a
+E2	Contains:T78 Targ:T40 Cont:T77 Cont2:T82
+T79	Element 1686 1688	Fe
+T80	Contains 1688 1692	rich
+E3	Contains:T80 Targ:T40 Cont:T79
+A2	Amount E3 Contains_High
+T81	Feature 1694 1710	cross-stratified
+T82	Material 1711 1720	sandstone
+T83	Member 1737 1753	Dillinger member
+R3	BelongsTo Arg1:T40 Arg2:T83	
+T84	Process 1815 1822	aeolian
+R4	Shows Arg1:T40 Arg2:T84	
+T85	Mineral 2037 2046	pyroxenes
+T86	Contains 1996 2007	composed of
+E4	Contains:T86 Targ:T42 Cont:T72 Cont2:T73 Cont3:T85
+A3	Amount E4 Contains_High
+T87	Material 2054 2089	low temperature alteration products
+T88	Contains 2049 2053	with
+E5	Contains:T88 Targ:T42 Cont:T87
+T89	Material 2272 2276	salt
+T90	Element 2281 2283	Mn
+T91	Contains 2284 2288	rich
+E6	Contains:T91 Targ:T45 Cont:T90 Cont2:T89
+A4	Amount E6 Contains_High
+T92	Member 2375 2391	Dillinger member
+R5	BelongsTo Arg1:T45 Arg2:T92	
+T93	Material 2511 2542	bedding-parallel fracture fill.
+T94	Contains 2494 2509	could represent
+E7	Contains:T94 Targ:T47 Cont:T93
+A5	Confidence E7 Low
+T95	Contains 3148 3165	among the highest
+E8	Contains:T95 Targ:T53 Cont:T5 Cont2:T4 Cont3:T3
+A6	Amount E8 Contains_High
+T96	Contains 3219 3254	concentrations are among the lowest
+E9	Contains:T96 Targ:T53 Cont:T7
+A7	Amount E9 Contains_Low
+T97	Contains 3297 3301	high
+E10	Contains:T97 Cont:T98 Targ:T54
+A8	Amount E10 Contains_High
+T98	Element 3302 3304	Mn
+T99	Feature 3860 3865	layer
+R6	Shows Arg1:T56 Arg2:T99	
+T100	Contains 3919 3943	is primarily composed of
+E11	Contains:T100 Targ:T56 Cont:T8 Cont2:T9 Cont3:T101
+A9	Amount E11 Contains_High
+T101	Element 3957 3959	Mn
+T102	Contains 4096 4118	not nearly as abundant
+E12	Contains:T102 Cont:T10 Targ:T57 Targ2:T58
+A10	Amount E12 Contains_High
+T103	Contains 4567 4584	trends with depth
+E13	Contains:T103 Cont:T21 Cont2:T22 Cont3:T23 Targ:T60
+T104	Process 4927 4944	aqueous processes
+T105	Feature 4891 4896	layer
+R7	Shows Arg1:T61 Arg2:T105	
+R8	Shows Arg1:T61 Arg2:T104	
+T106	Contains 5745 5753	elevated
+E14	Contains:T106 Cont:T30 Cont2:T31 Targ:T66
+A11	Amount E14 Contains_High
+T107	Feature 6180 6185	layer
+R9	Shows Arg1:T68 Arg2:T107	
+T108	Contains 6232 6245	This layer is
+E15	Contains:T108 Targ:T68 Cont:T32 Cont2:T33 Cont3:T109
+A12	Amount E15 Contains_High
+T109	Element 6259 6261	Mn
+T110	Process 6293 6309	fracture filling
+R10	Shows Arg1:T68 Arg2:T110	
+T34	Element 2172 2174	Fe
+T70	Contains 2175 2179	rich
+E16	Contains:T70 Targ:T43 Cont:T34
+A13	Amount E16 Contains_High
+T71	Element 5190 5192	Mn
+T111	Element 5488 5490	Mn

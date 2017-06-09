@@ -1,0 +1,101 @@
+T1	Element 1910 1912	Na
+T2	Element 1916 1917	H
+T3	Element 1951 1952	H
+T4	Element 2995 2996	S
+T5	Element 2998 2999	H
+T6	Element 3001 3003	Cl
+T7	Element 4614 4616	Li
+T8	Target 2365 2373	Pinckney
+T9	Target 3509 3517	Pinckney
+T12	Target 7155 7163	Pinckney
+T13	Target 8291 8299	Pinckney
+T14	Mineral 6512 6519	olivine
+T15	Mineral 7628 7635	olivine
+T16	Target 2375 2386	Arris_Drift
+T17	Target 2388 2398	Fish_River
+T18	Target 2400 2407	Abbabis
+T19	Target 2409 2417	Sinclair
+T20	Target 2419 2426	Karibib
+T21	Target 2428 2433	Barby
+T22	Target 2444 2450	Kibnas
+T23	Target 2491 2497	Hoanib
+T24	Target 2502 2508	Awasib
+T25	Material 2345 2350	soils
+T26	Contains 2331 2344	correspond to
+E1	Contains:T26 Cont:T25 Targ:T8 Targ2:T16 Targ3:T17 Targ4:T18 Targ5:T19 Targ6:T20 Targ7:T21 Targ8:T22
+T27	Feature 2356 2363	ripples
+R1	Shows Arg1:T8 Arg2:T27	
+R2	Shows Arg1:T16 Arg2:T27	
+R3	Shows Arg1:T17 Arg2:T27	
+R4	Shows Arg1:T18 Arg2:T27	
+R5	Shows Arg1:T19 Arg2:T27	
+R6	Shows Arg1:T20 Arg2:T27	
+R7	Shows Arg1:T21 Arg2:T27	
+R8	Shows Arg1:T22 Arg2:T27	
+T28	Contains 2470 2473	are
+E2	Contains:T28 Cont:T29 Targ:T23 Targ2:T24
+A1	Confidence E2 High
+A2	Confidence E1 High
+T29	Material 2484 2489	soils
+T30	Feature 2474 2488	disturbed soil
+R9	Shows Arg1:T23 Arg2:T30	
+R10	Shows Arg1:T24 Arg2:T30	
+T31	Target 2527 2532	Barby
+T32	Feature 2538 2575	grains that are mostly <500 m in size
+R11	Shows Arg1:T31 Arg2:T32	
+T33	Feature 2598 2602	dark
+R12	Shows Arg1:T31 Arg2:T33	
+T34	Feature 2609 2632	a few bright components
+R13	Shows Arg1:T31 Arg2:T34	
+T35	Target 3384 3392	Sinclair
+T36	Target 3394 3401	Abbabis
+T37	Target 3403 3413	Fish_River
+T38	Target 3419 3424	Barby
+T39	Target 3519 3530	Arris_Drift
+T40	Target 3532 3540	Sinclair
+T41	Target 3542 3548	Hoanib
+T42	Target 3550 3556	Awasib
+T43	Target 3561 3567	Kibnas
+T44	Target 4120 4127	Abbabis
+T45	Target 4132 4142	Fish_River
+T46	Material 4217 4220	K2O
+T47	Contains 4209 4216	highest
+E3	Contains:T47 Cont:T46 Targ:T48 Targ2:T49
+A3	Amount E3 Contains_High
+T48	Target 4233 4239	Awasib
+T49	Target 4244 4252	Sinclair
+T50	Material 4198 4203	Soils
+T51	Contains 4229 4232	are
+E4	Contains:T51 Targ:T48 Targ2:T49 Cont:T50
+T10	Target 6214 6221	Abbabis
+T11	Material 6245 6250	CaSO4
+T52	Contains 6228 6242	corresponds to
+E5	Contains:T52 Cont:T11 Targ:T10
+T53	Feature 7112 7125	Coarse grains
+R14	Shows Arg1:T12 Arg2:T53	
+T54	Target 7189 7200	Arris_Drift
+R15	Shows Arg1:T54 Arg2:T53	
+T55	Target 7205 7212	Abbabis
+R16	Shows Arg1:T55 Arg2:T53	
+T56	Target 7221 7229	Sinclair
+R17	Shows Arg1:T56 Arg2:T53	
+T57	Target 7239 7245	Hoanib
+R18	Shows Arg1:T57 Arg2:T53	
+T58	Target 7250 7256	Awasib
+R19	Shows Arg1:T58 Arg2:T53	
+T59	Target 7261 7266	Barby
+R20	Shows Arg1:T59 Arg2:T53	
+T60	Target 7278 7284	Kibnas
+R21	Shows Arg1:T60 Arg2:T53	
+T61	Target 8316 8323	Karibib
+T62	Target 8340 8351	Arris_Drift
+T63	Target 8368 8374	Hoanib
+T64	Target 8402 8412	Fish_River
+T65	Target 8429 8435	Awasib
+T66	Target 8463 8470	Abbabis
+T67	Target 8484 8489	Barby
+T68	Target 8524 8532	Sinclair
+T69	Target 8546 8552	Kibnas
+T70	Site 4827 4836	Dingo Gap
+T71	Mineral 6392 6396	SiO2
+T72	Mineral 7365 7369	SiO2

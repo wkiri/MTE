@@ -1,0 +1,62 @@
+T2	Target 3572 3581	Greenhorn
+T4	Target 3960 3969	Greenhorn
+T5	Target 4050 4059	Greenhorn
+T6	Target 4313 4322	Greenhorn
+T7	Target 4387 4396	Greenhorn
+T8	Target 4599 4608	Greenhorn
+T9	Target 5224 5233	Greenhorn
+T10	Target 6799 6808	Greenhorn
+T11	Target 6903 6912	Greenhorn
+T12	Target 7184 7193	Greenhorn
+T13	Target 7850 7859	Greenhorn
+T3	Contains 3949 3953	high
+E1	Contains:T3 Cont:T14 Targ:T4
+A1	Amount E1 Contains_High
+T14	Material 3953 3959	silica
+T15	Feature 4158 4172	finely-layered
+R1	Shows Arg1:T5 Arg2:T15	
+T16	Feature 4175 4189	coarse-grained
+R2	Shows Arg1:T5 Arg2:T16	
+T17	Material 4190 4199	sandstone
+T18	Contains 4210 4220	appearance
+E2	Contains:T18 Cont:T17 Targ:T5
+T19	Unit 4201 4208	Stimson
+R3	BelongsTo Arg1:T5 Arg2:T19	
+T20	Material 4397 4401	rock
+T21	Contains 4383 4386	the
+E3	Contains:T21 Targ:T7 Cont:T20
+T22	Target 6723 6737	Swartkloofberg
+T23	Material 6738 6746	mudstone
+T24	Contains 6708 6711	the
+E4	Contains:T24 Targ:T22 Cont:T23
+T25	Feature 6712 6721	laminated
+R4	Shows Arg1:T22 Arg2:T25	
+T26	Feature 7335 7357	cross-cutting features
+R5	Shows Arg1:T12 Arg2:T26	
+T27	Feature 7316 7329	tilted layers
+R6	Shows Arg1:T12 Arg2:T27	
+T28	Target 7406 7420	Swartkloofberg
+T29	Target 7429 7434	Barby
+T30	Material 7435 7446	coarse sand
+T31	Contains 7422 7428	versus
+E5	Contains:T31 Targ:T29 Cont:T30
+T32	Material 7395 7403	mudstone
+T33	Contains 7391 7394	for
+E6	Contains:T33 Cont:T32 Targ:T28
+T34	Feature 7469 7484	layered pattern
+R7	Shows Arg1:T28 Arg2:T34	
+T35	Target 7678 7690	Ellis Canyon
+T36	Material 7691 7700	sandstone
+T37	Contains 7674 7677	the
+E7	Contains:T37 Targ:T35 Cont:T36
+T38	Feature 7832 7849	linearly-textured
+R8	Shows Arg1:T13 Arg2:T38	
+T39	Target 7867 7881	Swartkloofberg
+T1	Contains 4309 4312	the
+E8	Contains:T1 Targ:T6 Cont:T40
+A2	Confidence E8 High
+T40	Material 4323 4332	sandstone
+T41	Target 6511 6525	Swartkloofberg
+T42	Contains 6507 6510	the
+E9	Contains:T42 Targ:T41 Cont:T43
+T43	Material 6527 6535	mudstone
