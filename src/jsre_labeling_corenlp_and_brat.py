@@ -17,9 +17,6 @@ from pycorenlp import StanfordCoreNLP
 from pysolr import Solr
 
 
-accept_labels = set(['Element', 'Mineral', 'Target'])
-
-
 def parse(txt_file, ann_file, accept_entities):
     with open(txt_file) as text_file, open(ann_file) as ann_file:
         texts = text_file.read().decode('utf8')
