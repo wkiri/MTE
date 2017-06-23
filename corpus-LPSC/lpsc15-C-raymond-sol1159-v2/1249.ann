@@ -57,7 +57,7 @@ E2	Contains:T44 Cont:T43 Targ:T33
 A2	Amount E2 Contains_High
 T45	Contains 3511 3524	have moderate
 E3	Contains:T45 Cont:T46 Targ:T33
-T46	Mineral 3525 3529	SiO2
+T46	Material 3525 3529	SiO2
 T47	Contains 3555 3570	compositions of
 E4	Contains:T47 Cont:T15 Cont2:T16 Cont3:T17 Cont4:T18 Cont5:T19 Targ:T33
 T48	Contains 3762 3771	richer in
