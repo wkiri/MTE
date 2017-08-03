@@ -21,18 +21,16 @@
 import sys, os, io
 import re
 import tika
-
+tika.TikaClientOnly = True
 from tika import parser
 
 # Local files
 #pdfdir  = '../text/lpsc14-pdfs'
 #textdir = '../../MTE-corpus/lpsc14-text'
-#pdfdir  = '../text/lpsc15-pdfs'
-#textdir = '../../MTE-corpus/lpsc15-text'
-#textdir = '../text/lpsc15-all'
-pdfdir  = '../text/lpsc16-pdfs'
-textdir = '../../MTE-corpus/lpsc16-text'
-#textdir = '../text/lpsc16-all'
+pdfdir  = '../../pdfs/lpsc15-pdfs'
+textdir = '../../MTE-corpus/lpsc15-text'
+#pdfdir  = '../text/lpsc16-pdfs'
+#textdir = '../../MTE-corpus/lpsc16-text'
 
 dirlist = [fn for fn in os.listdir(pdfdir) if
            fn.endswith('.pdf')]
@@ -48,8 +46,12 @@ for fn in dirlist:
     print fn
     parsed = parser.from_file(pdfdir + '/' + fn)
 
-    if parsed['content'] == None:
-        print 'Tika found no content in %s.' % fn
+    try:
+        if parsed['content'] == None:
+            print 'Tika found no content in %s.' % fn
+            continue
+    except:
+        print 'Tika could not parse %s.' % fn
         continue
 
     with io.open(textdir + '/' + fn[0:-4] + '.txt', 'w', encoding='utf8') as outf:
@@ -76,11 +78,16 @@ for fn in dirlist:
         cleaned = re.sub(r'[\r|\n]+','', cleaned)
 
         # Stick newlines back in after xxxx.PDF and xxxx.pdf
-        cleaned = re.sub(r'([0-9][0-9][0-9][0-9].PDF)', '\\1\n', cleaned,
+        #cleaned = re.sub(r'([0-9][0-9][0-9][0-9].PDF)', '\\1\n', cleaned,
+        #                 flags=re.IGNORECASE)
+        cleaned = re.sub(r'([0-9][0-9][0-9][0-9].PDF)', '', cleaned,
                          flags=re.IGNORECASE)
         # And "Lunar and Planetary Science Conference (201x)"
+        #cleaned = re.sub(r'(Lunar and Planetary Science Conference \(201[0-9]\))', 
+        #                 '\\1\n', cleaned,
+        #                 flags=re.IGNORECASE)
         cleaned = re.sub(r'(Lunar and Planetary Science Conference \(201[0-9]\))', 
-                         '\\1\n', cleaned,
+                         '', cleaned,
                          flags=re.IGNORECASE)
 
         outf.write(cleaned)
