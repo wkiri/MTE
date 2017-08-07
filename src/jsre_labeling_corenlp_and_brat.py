@@ -2,14 +2,21 @@
 #
 # Read in a text file, run CoreNLP to get features (pos, lemma, NER),
 # and convert it to JSRE's data ("examples") format.
-# Interactively solicity labels from the user.
-# Note: see below for how to select whether 'elements' or 'minerals'
-# will be used to generate the candidate relation pairs
-# (enables separate evaluation for these classes).
 #
-# Author: Kiri Wagstaff
+# Authors: Kiri Wagstaff and Karanjeet Singh
 # Created on: March 13, 2017
-# Modified on: March 30, 2017
+#
+# Copyright 2017, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.
 
 import sys, os, io
 import argparse
@@ -21,10 +28,9 @@ def parse(txt_file, ann_file, accept_entities):
     with open(txt_file) as text_file, open(ann_file) as ann_file:
         texts = text_file.read().decode('utf8')
         text_file.close()
-        # texts = text_file.read()
         anns = map(lambda x: x.strip().split('\t'), ann_file)
         anns = filter(lambda x: len(x) > 2, anns)
-        # FIXME: ignoring the annotatiosn which are complex
+        # FIXME: ignoring the annotations which are complex
 
         anns = filter(lambda x: ';' not in x[1], anns)
 
@@ -179,7 +185,7 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
         doc = corenlp_server.annotate(text, properties=props)
 
         with io.open(os.path.join(out_path, out_fn), 'w', encoding='utf8') as outf:
-            # Goal: Map Raymond's .ann (brat) annotations into the CoreNLP-parsed
+            # Map Raymond's .ann (brat) annotations into the CoreNLP-parsed
             # sentence/token structure.
             ex_id = 0
             for s in doc['sentences']:

@@ -30,7 +30,7 @@ suitable for viewing/interaction with the brat tool.
 - eval-annot-raymond.xlsx: evaluation of the pre-annotate versions
   versus Raymond's annotations
 
-Deprecated:
+## Deprecated:
 - lpsc15-A: relation annotations (contains, contains-high,
   contains-low) 
 - lpsc15-B: contains as an event, with confidence and amount
