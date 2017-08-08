@@ -1,0 +1,92 @@
+T1	Element 14 16	Zn
+T2	Element 754 756	Li
+T3	Element 758 760	Sr
+T4	Element 762 764	Ba
+T5	Element 771 773	Rb
+T6	Element 835 837	Mn
+T7	Element 1040 1042	Zn
+T8	Element 1157 1159	Zn
+T9	Element 1246 1248	Zn
+T10	Element 1443 1445	Zn
+T11	Element 1626 1628	Zn
+T12	Element 1668 1670	Zn
+T13	Element 2124 2126	Zn
+T14	Element 2137 2139	Zn
+T15	Element 2175 2177	Zn
+T16	Element 2315 2317	Zn
+T17	Element 2457 2459	Zn
+T18	Element 2785 2787	Zn
+T19	Element 3048 3050	Zn
+T20	Element 3104 3106	Zn
+T21	Element 3270 3272	Zn
+T28	Element 3491 3493	Zn
+T29	Element 3544 3546	Zn
+T30	Element 3816 3818	Zn
+T31	Element 4258 4260	Zn
+T32	Element 4351 4353	Zn
+T33	Element 4566 4568	Zn
+T34	Element 4821 4823	Zn
+T35	Element 5285 5287	Zn
+T36	Element 5402 5404	Zn
+T37	Element 5529 5530	S
+T38	Element 5548 5550	Zn
+T39	Element 5724 5726	Zn
+T40	Element 5766 5768	Zn
+T41	Element 5793 5795	Zn
+T42	Element 5864 5866	Zn
+T43	Element 5913 5915	Mn
+T44	Element 5920 5922	Na
+T45	Element 6023 6025	Mn
+T46	Element 6046 6048	Mn
+T47	Element 6275 6277	Zn
+T48	Element 6456 6458	Zn
+T49	Element 6637 6639	Zn
+T50	Element 6692 6694	Zn
+T51	Element 6843 6845	Mn
+T55	Element 7875 7877	Zn
+T56	Element 7896 7898	Zn
+T57	Element 7899 7900	O
+T58	Element 7988 7990	Zn
+T59	Element 8054 8056	Zn
+T60	Target 1456 1463	Yarrada
+T61	Target 4631 4638	Yarrada
+T62	Target 4904 4911	Yarrada
+T63	Target 5042 5049	Yarrada
+T64	Target 5730 5738	Windjana
+T65	Target 5774 5781	Stephen
+T66	Target 5870 5877	Yarrada
+T67	Target 6556 6563	Yarrada
+T69	Target 8082 8089	Yarrada
+T70	Mineral 5603 5613	sphalerite
+T71	Element 1137 1139	Mn
+T72	Contains 1485 1502	strong enrichment
+E1	Contains:T72 Targ:T60 Cont:T10
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T73	Locality 1526 1535	Kimberley
+R1	IsSituatedIn Arg1:T60 Arg2:T73	
+T74	Element 2631 2633	Zn
+T22	Contains 4965 4983	highest content in
+E2	Contains:T22 Cont:T23 Targ:T62
+A3	Confidence E2 High
+A4	Amount E2 Contains_High
+T23	Material 4984 4987	ZnO
+T24	Element 5592 5594	Zn
+T25	Contains 5703 5720	strong enrichment
+E3	Contains:T25 Cont:T39 Targ:T64 Targ2:T65
+A5	Amount E3 Contains_High
+T26	Locality 5679 5688	Kimberley
+R2	IsSituatedIn Arg1:T64 Arg2:T26	
+T27	Material 5806 5809	MnO
+T75	Contains 5810 5814	rich
+E4	Contains:T75 Targ:T65 Cont:T27
+A6	Amount E4 Contains_High
+T76	Feature 5806 5822	MnO-rich coating
+R3	Shows Arg1:T65 Arg2:T76	
+T77	Contains 5850 5863	enrichment of
+E5	Contains:T77 Cont:T42 Targ:T66
+A7	Amount E5 Contains_High
+T78	Contains 5901 5912	increase in
+E6	Contains:T78 Targ:T66 Cont:T43 Cont2:T44
+A8	Amount E6 Contains_High
+T79	Element 6130 6132	Mn

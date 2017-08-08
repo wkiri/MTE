@@ -1,0 +1,113 @@
+T1	Element 1098 1102	iron
+T5	Target 1673 1681	Windjana
+T6	Target 1769 1781	Bonanza_King
+T7	Target 2076 2092	Confidence_Hills
+T8	Target 2130 2135	Panum
+T9	Target 2152 2167	Stovepipe_Wells
+T10	Target 2356 2365	Maturango
+T11	Target 2557 2565	Windjana
+T13	Target 3063 3071	Windjana
+T15	Target 3164 3176	Bonanza_King
+T16	Target 3938 3953	Stovepipe_Wells
+T17	Target 3955 3971	Confidence_Hills
+T18	Target 3977 3986	Maturango
+T19	Target 4651 4663	Bonanza_King
+T21	Target 6226 6238	Bonanza_King
+T22	Target 6434 6449	Stovepipe_Wells
+T23	Mineral 3138 3147	magnetite
+T24	Mineral 3715 3729	ferricopiapite
+T25	Mineral 3733 3741	jarosite
+T26	Mineral 4309 4317	hematite
+T27	Mineral 4757 4765	jarosite
+T28	Mineral 4770 4779	copiapite
+T29	Mineral 52 60	SULFATES
+T4	Mineral 1085 1093	sulfates
+T30	Locality 1623 1632	Kimberley
+R1	IsSituatedIn Arg1:T5 Arg2:T30	
+T31	Locality 1821 1833	Happy Valley
+R2	IsSituatedNear Arg1:T6 Arg2:T31	
+T32	Target 2018 2026	Perdido2
+R3	IsSituatedNear Arg1:T32 Arg2:T31	
+T33	Locality 2044 2057	Pahrump Hills
+R4	IsSituatedIn Arg1:T7 Arg2:T33	
+R5	IsSituatedIn Arg1:T8 Arg2:T33	
+R6	IsSituatedIn Arg1:T9 Arg2:T33	
+T34	Contains 2343 2349	target
+E1	Contains:T34 Cont:T35 Targ:T10
+T35	Material 2338 2342	rock
+T12	Feature 2644 2676	lowest peak relative reflectance
+T36	Feature 2702 2727	largest 535 nm band depth
+T37	Feature 2732 2784	relatively high redblue (670/440nm) ratio and slopes
+T38	Contains 2786 2811	consistent with a greater
+E2	Contains:T38 Targ:T11 Cont:T39
+T39	Material 2813 2840	erric crystalline component
+A1	Confidence E2 Neutral
+A2	Amount E2 Contains_High
+T40	Feature 2850 2881	least negative 750-840 nm slope
+T41	Contains 2883 2903	suggestive of either
+E3	Contains:T41 Cont:T44 Cont2:T45 Cont3:T42 Targ:T11
+A3	Confidence E3 Low
+A4	Amount E3 Contains_Low
+T42	Mineral 2935 2942	olivine
+T44	Material 2962 2981	amorphous component
+T45	Mineral 2943 2951	pyroxene
+R7	Shows Arg1:T11 Arg2:T12	
+R8	Shows Arg1:T11 Arg2:T36	
+R9	Shows Arg1:T11 Arg2:T37	
+R10	Shows Arg1:T11 Arg2:T40	
+T14	Contains 3087 3101	likely contain
+E4	Contains:T14 Targ:T13 Cont:T23 Cont2:T43
+A5	Confidence E4 Neutral
+A6	Amount E4 Contains
+T43	Mineral 3149 3157	ilmenite
+T46	Feature 3251 3269	spectrally neutral
+T47	Feature 3275 3302	relatively high reflectance
+T48	Feature 3308 3339	lowest red/blue ratio and slope
+T49	Feature 3345 3404	weakest band depth at 600 nm (weak ferric oxide absorption)
+T50	Feature 3412 3437	possible band near 433 nm
+R11	Shows Arg1:T15 Arg2:T46	
+R12	Shows Arg1:T15 Arg2:T47	
+R13	Shows Arg1:T15 Arg2:T48	
+R14	Shows Arg1:T15 Arg2:T49	
+R15	Shows Arg1:T15 Arg2:T50	
+T51	Target 3541 3549	Perdido2
+R16	Shows Arg1:T51 Arg2:T50	
+T52	Feature 3594 3618	largest 750-840 nm slope
+T53	Feature 3624 3640	600/840 nm ratio
+R17	Shows Arg1:T51 Arg2:T52	
+R18	Shows Arg1:T51 Arg2:T53	
+T54	Contains 3696 3714	is consistent with
+E5	Contains:T54 Targ:T51 Cont:T24 Cont2:T25
+A7	Confidence E5 Neutral
+T55	Locality 3998 4011	Pahrump Hills
+R19	IsSituatedIn Arg1:T18 Arg2:T55	
+R20	IsSituatedIn Arg1:T17 Arg2:T55	
+R21	IsSituatedIn Arg1:T16 Arg2:T55	
+T56	Feature 4084 4123	deep absorptions at ~560 nm and ~660 nm
+R22	Shows Arg1:T18 Arg2:T56	
+R23	Shows Arg1:T17 Arg2:T56	
+R24	Shows Arg1:T16 Arg2:T56	
+T57	Feature 4131 4176	flattening or dropoff in reflectance > 750 nm
+R25	Shows Arg1:T18 Arg2:T57	
+R26	Shows Arg1:T16 Arg2:T57	
+R27	Shows Arg1:T17 Arg2:T57	
+T58	Contains 4217 4282	consistent with the presence of a combination of small amounts of
+E6	Contains:T58 Cont:T26 Targ:T16 Targ2:T17 Targ3:T18
+A8	Confidence E6 Neutral
+T59	Contains 4319 4348	perhaps with additional other
+E7	Contains:T59 Targ:T18 Targ2:T17 Targ3:T16 Cont:T60 Cont2:T61
+A9	Confidence E7 Low
+A10	Amount E7 Contains
+T60	Material 4349 4398	poorly-crystalline and/or nanophase ferric oxides
+T61	Material 4402 4415	oxyhydroxides
+T62	Target 4668 4676	Perdido2
+T63	Contains 4677 4696	provide evidence of
+E8	Contains:T63 Targ:T62 Targ2:T19 Cont:T64
+A11	Confidence E8 Neutral
+T64	Material 4697 4712	ferric sulfates
+T65	Mineral 4840 4847	sulfate
+T66	Locality 4864 4877	Pahrump Hills
+T67	Mineral 4895 4903	hematite
+T2	Target 5956 5964	Perdido2
+T68	Mineral 6144 6151	sulfate
+T69	Target 6037 6045	Perdido2

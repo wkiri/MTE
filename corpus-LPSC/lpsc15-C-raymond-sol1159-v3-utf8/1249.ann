@@ -1,0 +1,116 @@
+T1	Element 3310 3312	Si
+T2	Element 3314 3316	Al
+T3	Element 3559 3561	Ca
+T4	Element 3563 3565	Mg
+T5	Element 3567 3569	Al
+T6	Element 3571 3573	Ti
+T7	Element 3579 3580	K
+T8	Element 3786 3787	H
+T10	Element 4171 4177	sodium
+T11	Element 4263 4265	Na
+T12	Element 4357 4365	chlorine
+T13	Element 4387 4389	Cl
+T14	Element 4454 4456	Ca
+T15	Element 4762 4764	Ca
+T16	Element 4812 4814	Ca
+T18	Target 1328 1341	Winnipesaukee
+T20	Target 1807 1817	Kahochella
+T21	Target 2095 2108	Winnipesaukee
+T22	Target 2229 2242	Winnipesaukee
+T23	Target 4426 4439	Winnipesaukee
+T24	Target 4684 4697	Winnipesaukee
+T25	Target 5811 5818	Tappers
+T26	Target 6409 6416	Tappers
+T28	Target 7195 7208	Winnipesaukee
+T29	Target 7624 7631	Tappers
+T17	Member 1136 1157	Gillespie Lake member
+T30	Locality 1161 1176	Yellowknife Bay
+T31	Site 1235 1245	Point Lake
+T32	Feature 1288 1297	spherical
+T33	Feature 1302 1319	apparently hollow
+R1	Shows Arg1:T18 Arg2:T33	
+R2	Shows Arg1:T18 Arg2:T32	
+T19	Member 1720 1741	Gillespie Lake member
+T34	Target 1757 1765	Tochatwi
+R3	BelongsTo Arg1:T34 Arg2:T19	
+R4	BelongsTo Arg1:T20 Arg2:T19	
+T35	Feature 2246 2252	hollow
+T36	Feature 2254 2263	spherical
+T37	Feature 2277 2314	darker than the surrounding sediments
+R5	Shows Arg1:T22 Arg2:T35	
+R6	Shows Arg1:T22 Arg2:T36	
+R7	Shows Arg1:T22 Arg2:T37	
+T38	Feature 2352 2399	overall dimension is approximately 38 mm across
+T39	Feature 2405 2428	walls are ~2-3 mm thick
+R8	Shows Arg1:T22 Arg2:T38	
+R9	Shows Arg1:T22 Arg2:T39	
+T40	Feature 2434 2460	outer surface is irregular
+T41	Feature 2468 2475	flecked
+T42	Feature 2481 2501	lighter-toned grains
+R10	Shows Arg1:T22 Arg2:T40	
+R11	Shows Arg1:T22 Arg2:T41	
+R12	Shows Arg1:T22 Arg2:T42	
+T43	Contains 3299 3309	is high in
+E1	Contains:T43 Cont:T1 Cont2:T2 Cont3:T44 Targ:T22
+T44	Material 3322 3329	alkalis
+T45	Contains 3470 3477	high in
+E2	Contains:T45 Cont:T46 Targ:T22
+T46	Material 3478 3482	FeOT
+T47	Contains 3499 3512	have moderate
+E3	Contains:T47 Cont:T48 Targ:T22
+T48	Material 3513 3517	SiO2
+T49	Contains 3543 3558	compositions of
+E4	Contains:T49 Cont:T3 Cont2:T4 Cont3:T5 Cont4:T6 Cont5:T7 Targ:T22
+T50	Contains 3750 3759	richer in
+E5	Contains:T50 Cont:T51 Targ:T22
+T51	Material 3760 3764	Na2O
+T52	Contains 3779 3785	strong
+E6	Contains:T52 Cont:T8 Targ:T22
+A1	Amount E6 Contains_High
+A2	Amount E5 Contains_High
+A3	Amount E2 Contains_High
+A4	Amount E1 Contains_High
+T53	Contains 3811 3820	poorer in
+E7	Contains:T53 Cont:T54 Targ:T22
+A5	Amount E7 Contains_Low
+T54	Material 3821 3825	FeOT
+T55	Feature 4016 4051	increased H in the interior surface
+T56	Contains 4178 4188	enrichment
+E8	Contains:T56 Cont:T10 Targ:T22
+A6	Confidence E8 High
+A7	Amount E8 Contains_High
+R13	Shows Arg1:T22 Arg2:T55	
+T9	Element 4026 4027	H
+T57	Feature 4171 4212	sodium enrichment on the interior surface
+R14	Shows Arg1:T22 Arg2:T57	
+T58	Feature 4443 4449	hollow
+R15	Shows Arg1:T23 Arg2:T58	
+T59	Element 4462 4466	iron
+T60	Contains 4467 4471	rich
+E9	Contains:T60 Cont:T59 Targ:T23 Cont2:T14
+A8	Amount E9 Contains_High
+T61	Element 4592 4596	iron
+T62	Feature 4717 4735	light-toned flecks
+R16	Shows Arg1:T24 Arg2:T62	
+T63	Site 5179 5189	Point Lake
+T64	Locality 5201 5216	Yellowknife Bay
+T65	Locality 5863 5879	Moonlight Valley
+T66	Site 5903 5917	Dingo Gap Dune
+R17	IsSituatedNear Arg1:T25 Arg2:T65	
+R18	IsSituatedNear Arg1:T25 Arg2:T66	
+T67	Feature 5934 5952	~0.6 m in diameter
+T68	Feature 6033 6063	walls are fractured vertically
+T69	Feature 6188 6199	ventifacted
+T70	Feature 6204 6222	unevenly weathered
+R19	Shows Arg1:T25 Arg2:T67	
+R20	Shows Arg1:T25 Arg2:T68	
+R21	Shows Arg1:T25 Arg2:T69	
+R22	Shows Arg1:T25 Arg2:T70	
+T71	Feature 7209 7215	hollow
+T72	Feature 7216 7225	spherical
+R23	Shows Arg1:T28 Arg2:T71	
+R24	Shows Arg1:T28 Arg2:T72	
+T27	Feature 7602 7610	Circular
+T73	Feature 7633 7648	~0.6 m diameter
+R25	Shows Arg1:T29 Arg2:T73	
+R26	Shows Arg1:T29 Arg2:T27	
