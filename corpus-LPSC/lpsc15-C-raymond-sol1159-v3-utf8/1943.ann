@@ -1,0 +1,146 @@
+T1	Element 4751 4753	Ca
+T2	Element 4755 4757	Al
+T3	Element 4883 4885	Si
+T4	Element 4977 4978	K
+T5	Element 4980 4982	Si
+T6	Element 4984 4986	Na
+T7	Element 4991 4993	Ba
+T8	Element 5020 5022	Ba
+T9	Element 5141 5143	Ti
+T10	Element 5145 5147	Fe
+T11	Element 5149 5151	Mg
+T12	Element 5250 5251	K
+T13	Target 1734 1742	Blanchet
+T14	Target 1744 1749	Stark
+T15	Target 1754 1763	Thor Lake
+T16	Target 4459 4467	Harrison
+T17	Target 4528 4535	Clinton
+T18	Target 4561 4569	Blanchet
+T19	Target 5592 5599	Clinton
+T20	Target 5793 5800	Becraft
+T21	Target 6015 6023	Harrison
+T22	Target 9903 9911	Blanchet
+T23	Target 9912 9919	Clinton
+T24	Target 9920 9930	Robin Hood
+T25	Target 9932 9937	Stark
+T26	Target 9938 9945	Sparkle
+T27	Target 9947 9952	Stock
+T28	Target 9954 9964	Chakonipau
+T30	Target 9966 9974	Noriss 2
+T31	Target 9976 9981	Falla
+T32	Target 9990 10000	Bird River
+T33	Target 10001 10008	Horlick
+T34	Target 10009 10016	Becraft
+T35	Target 10059 10063	Ross
+T36	Target 10065 10070	Bindi
+T37	Target 10071 10080	Wilkinson
+T38	Target 10081 10087	Angelo
+T39	Target 10088 10096	Dougalls
+T40	Target 10097 10102	Albee
+T41	Target 10103 10107	Nita
+T42	Mineral 2855 2865	macusanite
+T43	Mineral 5653 5670	oligoclase-albite
+T44	Mineral 5857 5867	macusanite
+T45	Mineral 6451 6461	macusanite
+T46	Mineral 7561 7569	basanite
+T47	Mineral 8716 8727	anorthosite
+T48	Mineral 8731 8738	granite
+T51	Mineral 4845 4856	plagioclase
+T52	Mineral 4845 4865	plagioclase feldspar
+T53	Mineral 4857 4865	feldspar
+T54	Mineral 5373 5379	quartz
+T55	Mineral 5381 5392	plagioclase
+T56	Mineral 5409 5418	nepheline
+T57	Mineral 5470 5477	olivine
+T58	Mineral 6086 6096	oligoclase
+T59	Mineral 6651 6657	quartz
+T60	Mineral 1445 1453	feldspar
+T61	Locality 1516 1529	Bradbury rise
+T62	Feature 1690 1701	light-toned
+R1	IsSituatedIn Arg1:T13 Arg2:T61	
+R2	IsSituatedIn Arg1:T14 Arg2:T61	
+R3	IsSituatedIn Arg1:T15 Arg2:T61	
+R4	Shows Arg1:T13 Arg2:T62	
+R5	Shows Arg1:T14 Arg2:T62	
+R6	Shows Arg1:T15 Arg2:T62	
+T63	Mineral 1866 1874	feldspar
+T64	Element 2551 2553	Al
+T65	Element 2554 2556	Si
+T66	Element 2559 2561	Fe
+T67	Element 2562 2564	Mg
+T68	Element 2566 2568	Si
+T69	Feature 4441 4452	porphyritic
+T70	Feature 4453 4458	clast
+R7	Shows Arg1:T16 Arg2:T70	
+R8	Shows Arg1:T16 Arg2:T69	
+T71	Feature 4473 4483	polylithic
+T72	Material 4484 4496	conglomerate
+R9	Shows Arg1:T16 Arg2:T71	
+T73	Contains 4468 4472	in a
+E1	Contains:T73 Targ:T16 Cont:T72
+A1	Confidence E1 High
+T74	Feature 4511 4517	coarse
+T75	Feature 4518 4527	intrusive
+R10	Shows Arg1:T17 Arg2:T75	
+R11	Shows Arg1:T17 Arg2:T74	
+T76	Feature 4548 4559	vesiculated
+R12	Shows Arg1:T18 Arg2:T76	
+T77	Element 4762 4764	Si
+T78	Element 4778 4780	Ba
+T79	Element 4912 4914	Al
+T80	Element 5062 5063	K
+T81	Mineral 5064 5072	feldspar
+T82	Mineral 5062 5072	K-feldspar
+T83	Element 5253 5255	Na
+T84	Element 5313 5315	Fe
+T85	Element 5302 5304	Al
+T86	Element 5305 5307	Si
+T87	Element 5316 5318	Mg
+T88	Element 5320 5322	Si
+T89	Feature 5566 5577	Light-toned
+T90	Material 5578 5583	rocks
+T91	Element 5673 5675	Al
+T92	Element 5676 5678	Si
+T93	Contains 5584 5591	such as
+E2	Contains:T93 Targ:T19 Cont:T90
+A2	Confidence E2 High
+R13	Shows Arg1:T19 Arg2:T89	
+T94	Feature 5755 5766	Vesiculated
+T95	Feature 5767 5778	light-toned
+T96	Material 5779 5784	rocks
+T97	Contains 5785 5792	such as
+E3	Contains:T97 Targ:T20 Cont:T96
+A3	Confidence E3 High
+R14	Shows Arg1:T20 Arg2:T95	
+R15	Shows Arg1:T20 Arg2:T94	
+T98	Material 5921 5927	silica
+T99	Mineral 5956 5971	alkali-feldspar
+T100	Contains 5942 5952	mixed with
+E4	Contains:T100 Cont:T99 Targ:T20
+T101	Contains 5928 5935	satured
+E5	Contains:T101 Targ:T20 Cont:T98
+A4	Amount E5 Contains_High
+T102	Feature 5983 5994	Porphyritic
+R16	Shows Arg1:T21 Arg2:T102	
+T103	Material 6151 6157	gabbro
+T104	Element 6098 6100	Al
+T105	Element 6101 6103	Si
+T106	Element 5892 5894	Al
+T107	Element 5895 5897	Si
+T108	Element 6358 6360	Al
+T109	Element 6361 6363	Si
+T110	Element 6369 6371	Fe
+T111	Element 6372 6374	Mg
+T112	Element 6376 6378	Si
+T113	Mineral 7083 7092	basanites
+T114	Mineral 7101 7116	trachyandesites
+T115	Mineral 7484 7490	quartz
+T116	Mineral 7881 7889	feldspar
+T117	Element 7879 7880	K
+T118	Mineral 7879 7889	K-feldspar
+T49	Mineral 9824 9839	Trachy andesite
+T50	Target 9891 9902	Peacok Hill
+T29	Target 9982 9989	Sledger
+T119	Target 10035 10044	Harrisson
+T120	Target 10045 10058	Meeting House
+T121	Target 10017 10034	Liitle Wind River

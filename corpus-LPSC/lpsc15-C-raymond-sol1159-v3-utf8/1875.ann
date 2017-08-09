@@ -1,0 +1,33 @@
+T1	Element 482 488	nickel
+T2	Element 497 501	iron
+T3	Element 507 511	iron
+T4	Element 596 598	Fe
+T5	Element 667 673	nickel
+T6	Element 976 982	nickel
+T8	Element 1597 1599	Ni
+T9	Element 1827 1829	Ni
+T10	Element 1945 1947	Cr
+T11	Element 1996 1998	Ni
+T12	Element 3004 3010	nickel
+T13	Element 3149 3155	nickel
+T14	Element 4544 4550	Nickel
+T15	Element 4591 4593	Ni
+T16	Element 5733 5735	Ni
+T17	Element 6270 6276	nickel
+T19	Element 7121 7123	Ni
+T20	Element 7504 7510	nickel
+T21	Element 7693 7695	Ni
+T22	Element 7865 7867	Ni
+T23	Element 8043 8045	Ni
+T24	Element 8197 8199	Ni
+T25	Element 8225 8227	Ni
+T26	Element 8297 8299	Ni
+T27	Element 8411 8413	Ni
+T28	Target 4973 4982	Natkusiak
+T43	Element 28 34	NICKEL
+T7	Target 4720 4730	Adirondack
+T31	Element 4955 4957	Ni
+T32	Contains 4950 4954	high
+E1	Contains:T32 Cont:T31 Targ:T28
+A1	Amount E1 Contains_High
+T33	Region 6361 6373	Gusev crater

@@ -1,0 +1,41 @@
+T1	Element 366 375	manganese
+T2	Element 613 622	Manganese
+T3	Element 757 766	Manganese
+T4	Element 1775 1784	manganese
+T5	Element 2408 2417	manganese
+T6	Element 3552 3561	manganese
+T10	Element 3893 3895	Mn
+T11	Element 4457 4459	Mn
+T12	Element 4583 4585	Mn
+T13	Element 4998 5000	Mn
+T14	Element 5569 5578	manganese
+T18	Element 6431 6440	manganese
+T19	Mineral 2452 2462	Pyrolusite
+T20	Mineral 3041 3051	pyrolusite
+T29	Mineral 5712 5722	hollandite
+T31	Mineral 5894 5905	romanechite
+T35	Mineral 3657 3667	pyrolusite
+T36	Mineral 3682 3690	bixbyite
+T37	Mineral 3706 3717	hausmannite
+T38	Mineral 3737 3746	vernadite
+T39	Mineral 3805 3815	birnessite
+T40	Mineral 4117 4128	hausmannite
+T41	Mineral 4174 4184	birnessite
+T42	Mineral 4189 4198	vernadite
+T44	Mineral 5752 5764	cryptomelane
+T45	Mineral 5810 5822	cryptomelane
+T46	Mineral 5855 5865	pyrolusite
+T47	Mineral 6591 6602	hausmannite
+T48	Element 43 52	MANGANESE
+T33	Mineral 2468 2479	Psilomelane
+T34	Mineral 3058 3069	psilomelane
+T7	Mineral 4156 4172	phyllomanganates
+T8	Contains 4466 4473	bearing
+E1	Contains:T8 Cont:T11 Targ:T9 Targ2:T21
+T9	Target 4480 4488	Pinnacle
+T21	Target 4493 4507	Stuart Islands
+T22	Feature 4529 4542	dark coatings
+R1	Shows Arg1:T21 Arg2:T22	
+R2	Shows Arg1:T9 Arg2:T22	
+T15	Mineral 6259 6275	phyllomanganates
+T16	Mineral 6315 6331	phyllomanganates

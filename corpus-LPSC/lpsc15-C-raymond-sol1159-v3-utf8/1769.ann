@@ -1,0 +1,101 @@
+T1	Element 1117 1119	Fe
+T2	Element 1948 1950	Fe
+T3	Element 2895 2897	Fe
+T4	Element 2899 2901	Al
+T5	Element 2907 2908	S
+T6	Element 3116 3118	Fe
+T8	Element 4268 4272	iron
+T9	Element 4324 4330	oxygen
+T11	Element 6197 6199	Fe
+T12	Element 6406 6408	Fe
+T13	Element 6544 6546	Fe
+T15	Region 813 827	Hematite Ridge
+T17	Region 1179 1193	Hematite Ridge
+T18	Target 1283 1291	Sheepbed
+T19	Target 1642 1650	Sheepbed
+T20	Target 1749 1759	John Klein
+T21	Target 1764 1774	Cumberland
+T22	Region 2101 2115	Hematite Ridge
+T23	Region 2239 2253	Hematite Ridge
+T24	Target 3328 3335	Portage
+T25	Target 3626 3634	Sheepbed
+T26	Region 3937 3951	Hematite Ridge
+T27	Target 4498 4505	Portage
+T28	Region 5542 5556	Hematite Ridge
+T29	Region 6871 6885	Hematite Ridge
+T30	Region 7156 7170	Hematite Ridge
+T35	Mineral 1356 1364	smectite
+T37	Mineral 1683 1691	smectite
+T40	Mineral 1878 1886	hematite
+T41	Mineral 1991 1999	hematite
+T42	Mineral 2101 2109	Hematite
+T43	Mineral 2239 2247	Hematite
+T44	Mineral 3501 3509	goethite
+T46	Mineral 3564 3571	apatite
+T47	Mineral 3937 3945	Hematite
+T52	Mineral 5053 5061	hematite
+T54	Mineral 5342 5350	hematite
+T55	Mineral 5542 5550	Hematite
+T57	Mineral 5813 5821	hematite
+T58	Mineral 6091 6099	hematite
+T59	Mineral 6479 6487	hematite
+T60	Mineral 6492 6500	goethite
+T62	Mineral 6871 6879	Hematite
+T64	Mineral 813 821	Hematite
+T65	Mineral 1179 1187	Hematite
+T66	Mineral 1371 1387	igneous minerals
+T67	Mineral 1441 1450	magnetite
+T68	Mineral 1590 1597	olivine
+T69	Mineral 1696 1705	magnetite
+T70	Mineral 1858 1867	magnetite
+T75	Mineral 2819 2826	olivine
+T76	Mineral 3374 3381	olivine
+T78	Mineral 3516 3526	serpentine
+T79	Mineral 3553 3559	pyrite
+T80	Mineral 3746 3754	pyroxene
+T81	Mineral 3759 3767	feldspar
+T82	Mineral 3911 3920	carbonate
+T84	Mineral 4021 4030	carbonate
+T85	Mineral 4099 4105	quartz
+T86	Mineral 4107 4116	kaolinite
+T87	Mineral 4147 4156	carbonate
+T88	Mineral 4245 4255	carbonates
+T91	Mineral 4291 4300	magnetite
+T92	Mineral 4344 4352	hematite
+T94	Mineral 4856 4864	goethite
+T95	Mineral 4909 4917	hematite
+T97	Mineral 5074 5083	magnetite
+T100	Mineral 5667 5675	hematite
+T105	Mineral 6547 6556	carbonate
+T106	Mineral 6627 6635	hematite
+T107	Mineral 6836 6844	hematite
+T109	Mineral 7156 7164	Hematite
+T110	Mineral 1 9	HEMATITE
+T14	Member 1283 1298	Sheepbed member
+T16	Mineral 928 935	sulfate
+T33	Mineral 1117 1126	Fe oxides
+T34	Material 1108 1112	clay
+R1	BelongsTo Arg1:T18 Arg2:T14	
+T36	Contains 1299 1303	is a
+E1	Contains:T36 Targ:T18 Cont:T73
+A1	Confidence E1 High
+T73	Material 1304 1312	mudstone
+T111	Feature 1316 1324	basaltic
+R2	Shows Arg1:T18 Arg2:T111	
+T112	Contains 1346 1350	with
+E2	Contains:T112 Targ:T18 Cont:T35 Cont2:T66 Cont3:T113 Cont4:T67
+T113	Material 1398 1422	X-ray amorphous material
+T38	Member 1642 1657	Sheepbed Member
+R3	BelongsTo Arg1:T19 Arg2:T38	
+T74	Contains 1717 1727	identified
+E3	Contains:T74 Cont:T69 Cont2:T37 Targ:T20 Targ2:T21
+A2	Confidence E3 High
+R4	BelongsTo Arg1:T21 Arg2:T38	
+R5	BelongsTo Arg1:T20 Arg2:T38	
+T39	Locality 1809 1818	Kimberley
+T45	Member 3626 3641	Sheepbed Member
+R6	BelongsTo Arg1:T25 Arg2:T45	
+T71	Locality 3657 3672	Yellowknife Bay
+R7	IsSituatedIn Arg1:T25 Arg2:T71	
+T48	Mineral 4133 4141	zeolites
+T7	Material 3537 3541	clay

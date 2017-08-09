@@ -1,0 +1,80 @@
+T1	Element 3454 3463	potassium
+T2	Element 4934 4936	Fe
+T3	Element 4941 4943	Mg
+T4	Element 4982 4986	iron
+T5	Element 6249 6256	calcium
+T6	Element 6261 6270	magnesium
+T7	Element 6295 6303	fluorine
+T8	Element 6305 6312	Calcium
+T9	Element 6321 6328	Calcium
+T10	Element 6572 6574	Mg
+T11	Element 6584 6586	Mg
+T12	Element 6742 6743	S
+T13	Element 6745 6746	N
+T14	Element 6748 6750	Cl
+T15	Element 6756 6758	Br
+T16	Element 6992 6994	Mg
+T20	Target 3412 3418	Darwin
+T21	Target 4799 4805	Darwin
+T22	Site 4924 4932	Rocknest
+T23	Target 5574 5585	Book Cliffs
+T24	Target 5606 5619	Goblin Valley
+T25	Target 5628 5639	Pink Cliffs
+T26	Target 5664 5669	Delta
+T27	Target 5681 5697	San Rafael Swell
+T28	Target 5721 5734	Castle Valley
+T29	Target 5736 5745	Ibex Pass
+T30	Target 5757 5768	Saddle Peak
+T31	Target 5892 5903	Pink Cliffs
+T32	Target 5930 5941	Book Cliffs
+T33	Site 6906 6914	Rocknest
+T35	Mineral 3316 3327	plagioclase
+T36	Mineral 4884 4895	plagioclase
+T38	Mineral 5019 5026	olivine
+T39	Mineral 6000 6011	plagioclase
+T40	Mineral 6000 6020	plagioclase feldspar
+T41	Mineral 6012 6020	feldspar
+T42	Mineral 6271 6278	sulfate
+T43	Mineral 6313 6320	Sulfate
+T44	Mineral 6329 6336	sulfate
+T45	Mineral 6960 6967	olivine
+T19	Mineral 3316 3336	plagioclase feldspar
+T46	Locality 3430 3437	Pahrump
+T47	Feature 3386 3408	coarser-grained facies
+R1	Shows Arg1:T20 Arg2:T47	
+T48	Contains 3366 3382	is a contributor
+E1	Contains:T48 Targ:T20 Cont:T19
+A1	Confidence E1 High
+T49	Mineral 3464 3472	feldspar
+T50	Mineral 3454 3472	potassium feldspar
+T51	Locality 3514 3525	Cooperstown
+T52	Locality 3530 3538	Kimberly
+T53	Material 4768 4781	conglomerates
+T54	Contains 4782 4789	such as
+E2	Contains:T54 Cont:T53 Targ:T21
+T55	Feature 4807 4814	pebbles
+T56	Feature 4831 4847	igneous textures
+R2	Shows Arg1:T21 Arg2:T55	
+R3	Shows Arg1:T21 Arg2:T56	
+T37	Contains 4902 4915	being present
+E3	Contains:T37 Cont:T36 Targ:T21
+A2	Confidence E3 Neutral
+T57	Locality 5103 5118	Yellowknife Bay
+T58	Target 5295 5305	Book Cliff
+T59	Target 5310 5320	Pink Cliff
+T60	Target 5430 5440	Pink Cliff
+T61	StratRel 5442 5447	lower
+E4	StratRel:T61 Subj:T60 Obj:T58
+A3	Position E4 IsStratBelow
+T62	Material 5854 5876	altered mineral phases
+T63	Contains 5877 5888	are present
+E5	Contains:T63 Targ:T31 Cont:T62
+A4	Confidence E5 Neutral
+T64	Contains 6021 6031	is present
+E6	Contains:T64 Cont:T40
+A5	Confidence E6 Neutral
+T65	Element 6280 6282	Mn
+T66	Mineral 6321 6336	Calcium sulfate
+T67	Mineral 6305 6320	Calcium Sulfate
+T68	Element 6609 6611	Mg
+T69	Locality 7039 7047	Kimberly

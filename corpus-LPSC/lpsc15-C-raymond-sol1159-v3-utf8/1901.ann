@@ -1,0 +1,102 @@
+T5	Element 4260 4269	magnesium
+T7	Element 5862 5871	magnesium
+T8	Element 5873 5875	Mg
+T9	Element 5902 5908	sulfur
+T10	Element 5910 5911	S
+T11	Element 6331 6333	Mg
+T12	Element 6338 6339	S
+T13	Element 6410 6416	nickel
+T14	Element 6418 6420	Ni
+T15	Element 6436 6440	zinc
+T16	Element 6442 6444	Zn
+T17	Element 6677 6679	Ni
+T18	Element 6695 6697	Zn
+T19	Element 7381 7383	Ni
+T20	Element 7389 7391	Zn
+T21	Element 7934 7936	Ni
+T22	Element 7941 7943	Zn
+T25	Target 1310 1326	Confidence Hills
+T26	Target 1335 1346	Pink Cliffs
+T27	Target 2266 2277	Pink Cliffs
+T28	Target 2358 2374	Confidence Hills
+T29	Target 5208 5215	Mammoth
+T30	Target 5964 5980	Confidence Hills
+T31	Target 6020 6029	Maturango
+T32	Target 6081 6088	Mammoth
+T33	Target 6122 6131	Maturango
+T34	Target 6169 6176	Mammoth
+T35	Target 6461 6470	Maturango
+T36	Target 6547 6555	Bathurst
+T37	Target 6566 6576	John Klein
+T39	Mineral 4246 4255	anhydrite
+T40	Mineral 4270 4277	sulfate
+T24	Locality 1023 1030	Pahrump
+T43	Target 1295 1304	Shoemaker
+T1	Target 1395 1405	Whale Rock
+R1	IsSituatedIn Arg1:T43 Arg2:T24	
+R2	IsSituatedIn Arg1:T25 Arg2:T24	
+R3	IsSituatedIn Arg1:T26 Arg2:T24	
+R4	IsSituatedIn Arg1:T1 Arg2:T24	
+T2	Target 2252 2261	Shoemaker
+T44	Locality 2224 2231	Pahrump
+R5	IsSituatedIn Arg1:T2 Arg2:T44	
+R6	IsSituatedIn Arg1:T27 Arg2:T44	
+R7	IsSituatedIn Arg1:T28 Arg2:T44	
+T3	Feature 3147 3174	Diagenetic crystal clusters
+T4	Feature 3182 3191	laminated
+T38	Material 3192 3200	mudstone
+T45	Target 3204 3213	Shoemaker
+T46	Contains 3201 3203	at
+E1	Contains:T46 Targ:T45 Cont:T38
+R8	Shows Arg1:T45 Arg2:T4	
+R9	Shows Arg1:T45 Arg2:T3	
+T47	Feature 3248 3281	deformation during crystal growth
+R10	DoesNotShow Arg1:T45 Arg2:T47	
+T48	Mineral 4216 4225	evaporite
+T49	Mineral 4260 4277	magnesium sulfate
+T50	Locality 5181 5188	Pahrump
+T51	Feature 5198 5206	dendrite
+T52	Target 5298 5306	Meonkopi
+T53	Feature 5281 5296	crystal cluster
+T6	Target 6105 6113	Moenkopi
+R11	Shows Arg1:T29 Arg2:T51	
+R12	Shows Arg1:T52 Arg2:T53	
+R13	IsSituatedIn Arg1:T29 Arg2:T50	
+T54	Feature 5230 5235	lathe
+R14	Shows Arg1:T29 Arg2:T54	
+T55	Feature 5322 5360	scratch marks where brushed by the DRT
+R15	Shows Arg1:T52 Arg2:T55	
+T56	Feature 5371 5426	more erosionally reisitant than the surrounding outcrop
+R16	Shows Arg1:T52 Arg2:T56	
+T57	Feature 5476 5492	unusual hardness
+R17	DoesNotShow Arg1:T52 Arg2:T57	
+T58	Locality 5964 5989	Confidence Hills locality
+T41	Feature 6003 6010	bedrock
+R18	Shows Arg1:T31 Arg2:T41	
+R19	IsSituatedIn Arg1:T31 Arg2:T58	
+T42	Feature 6040 6050	diagenetic
+T59	Feature 6071 6079	dendrite
+R20	Shows Arg1:T32 Arg2:T59	
+R21	Shows Arg1:T32 Arg2:T42	
+T60	Feature 6096 6103	cluster
+R22	Shows Arg1:T6 Arg2:T42	
+R23	Shows Arg1:T6 Arg2:T60	
+T61	Target 6136 6144	Moenkopi
+T62	Contains 6290 6300	enrichment
+E2	Contains:T62 Targ:T32 Targ2:T6 Cont:T11 Cont2:T12
+A1	Amount E2 Contains_High
+T63	Contains 6379 6401	substantial enrichment
+E3	Contains:T63 Targ:T6 Targ2:T32 Cont:T14 Cont2:T16
+A2	Amount E3 Contains_High
+T64	Target 6557 6564	Winjana
+T65	Material 6518 6524	alkali
+T66	Contains 6514 6517	low
+E4	Contains:T66 Targ:T35 Cont:T65 Targ2:T36 Targ3:T64 Targ4:T37
+A3	Amount E4 Contains_Low
+T67	Material 6604 6610	silica
+T68	Contains 6588 6603	a bit higher in
+E5	Contains:T68 Targ:T35 Cont:T67
+A4	Amount E5 Contains_High
+T69	Contains 6650 6676	show a clear enrichment in
+E6	Contains:T69 Targ:T35 Cont:T17 Cont2:T18
+A5	Amount E6 Contains_High
