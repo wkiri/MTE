@@ -1,0 +1,95 @@
+T3	Element 3566 3568	Cu
+T4	Element 3663 3665	Cu
+T5	Element 3874 3878	iron
+T6	Element 4008 4012	iron
+T7	Element 4129 4133	iron
+T8	Element 4187 4191	Iron
+T9	Element 4339 4343	iron
+T10	Element 4399 4403	iron
+T11	Element 4665 4672	calcium
+T12	Element 4718 4725	calcium
+T13	Element 7328 7332	iron
+T14	Element 7520 7527	calcium
+T17	Element 8121 8128	calcium
+T18	Element 8236 8243	calcium
+T19	Element 8942 8949	calcium
+T22	Mineral 444 452	Jarosite
+T23	Mineral 668 676	jarosite
+T24	Mineral 770 778	jarosite
+T25	Mineral 884 893	anhydrite
+T26	Mineral 982 991	anhydrite
+T27	Mineral 1042 1051	anhydrite
+T28	Mineral 1373 1381	jarosite
+T29	Mineral 1840 1848	jarosite
+T30	Mineral 2539 2549	K-jarosite
+T31	Mineral 2717 2725	jarosite
+T32	Mineral 3385 3393	Jarosite
+T33	Mineral 3614 3622	graphite
+T34	Mineral 3852 3860	Goethite
+T35	Mineral 4590 4598	jarosite
+T36	Mineral 4767 4776	bassanite
+T37	Mineral 4901 4910	anhydrite
+T38	Mineral 5009 5018	bassanite
+T39	Mineral 5118 5127	anhydrite
+T40	Mineral 5164 5173	anhydrite
+T41	Mineral 5233 5242	bassanite
+T42	Mineral 5305 5314	anhydrite
+T43	Mineral 5431 5440	anhydrite
+T44	Mineral 5572 5581	anhydrite
+T45	Mineral 5840 5848	jarosite
+T46	Mineral 6119 6127	jarosite
+T47	Mineral 6150 6158	jarosite
+T48	Mineral 6305 6313	jarosite
+T49	Mineral 6402 6410	jarosite
+T50	Mineral 6528 6536	jarosite
+T51	Mineral 6866 6874	jarosite
+T52	Mineral 6940 6948	jarosite
+T53	Mineral 7128 7136	jarosite
+T54	Mineral 7166 7174	jarosite
+T55	Mineral 7649 7658	anhydrite
+T56	Mineral 7737 7746	anhydrite
+T57	Mineral 7910 7919	bassanite
+T58	Mineral 8031 8040	anhydrite
+T59	Mineral 8169 8177	jarosite
+T60	Mineral 8384 8393	bassanite
+T61	Mineral 8900 8909	Anhydrite
+T62	Mineral 9036 9045	anhydrite
+T63	Mineral 9162 9171	anhydrite
+T64	Mineral 9225 9234	anhydrite
+T65	Mineral 9295 9304	Anhydrite
+T66	Mineral 9317 9326	bassanite
+T67	Mineral 9699 9708	anhydrite
+T87	Mineral 4468 4475	sulfate
+T88	Mineral 4565 4572	sulfate
+T90	Mineral 4622 4629	sulfate
+T91	Mineral 4726 4733	sulfate
+T92	Mineral 4750 4756	gypsum
+T95	Mineral 4928 4935	sulfate
+T97	Mineral 5023 5029	gypsum
+T100	Mineral 5223 5229	gypsum
+T116	Mineral 7432 7439	sulfate
+T117	Mineral 7528 7535	sulfate
+T120	Mineral 7899 7905	gypsum
+T123	Mineral 8129 8136	sulfate
+T125	Mineral 8197 8203	Gypsum
+T126	Mineral 8244 8251	sulfate
+T127	Mineral 8373 8379	gypsum
+T129	Mineral 8480 8486	gypsum
+T130	Mineral 8566 8572	gypsum
+T131	Mineral 8773 8779	gypsum
+T133	Mineral 8950 8957	sulfate
+T141	Mineral 17 26	ANHYDRITE
+T142	Element 77 84	CALCIUM
+T143	Mineral 85 92	SULFATE
+T144	Mineral 77 92	CALCIUM SULFATE
+T1	Element 2539 2540	K
+T2	Mineral 2541 2549	jarosite
+T68	Mineral 4718 4733	calcium sulfate
+T69	Mineral 7520 7535	calcium sulfate
+T15	Mineral 7844 7853	anhydrate
+T16	Mineral 8121 8136	calcium sulfate
+T70	Mineral 8236 8251	calcium sulfate
+T71	Formation 8620 8639	Shoemaker formation
+T72	Region 8643 8659	Meridiani Planum
+T73	Mineral 8942 8957	calcium sulfate
+T74	Mineral 9331 9337	gypsum

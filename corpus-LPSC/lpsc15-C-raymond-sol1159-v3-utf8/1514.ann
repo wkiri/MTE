@@ -1,0 +1,116 @@
+T1	Element 251 253	Ca
+T2	Element 257 259	Na
+T3	Element 2870 2872	Na
+T4	Element 2877 2879	Ca
+T5	Element 2998 3000	Na
+T6	Element 3005 3007	Ca
+T7	Element 3569 3571	Fe
+T8	Element 3977 3979	Fe
+T9	Element 5441 5445	iron
+T11	Target 475 483	Badwater
+T12	Target 2691 2699	Badwater
+T13	Target 5727 5737	Taltheilei
+T14	Target 5748 5754	Miette
+T15	Target 5766 5776	Shackleton
+T16	Target 5788 5796	Harrison
+T17	Target 5808 5814	Lamboo
+T18	Target 5826 5843	BonanzaKing2_CCAM
+T19	Target 6259 6268	Natkusiak
+T20	Target 6279 6291	Richardson_2
+T21	Target 6330 6341	Husky_Creek
+T22	Target 6353 6361	Red Wine
+T23	Target 6373 6378	Cosmo
+T24	Target 6394 6398	Mell
+T27	Mineral 6504 6520	pigeonite-augite
+T28	Mineral 198 206	feldspar
+T29	Mineral 289 297	feldspar
+T30	Mineral 426 434	feldspar
+T31	Mineral 2646 2657	plagioclase
+T32	Mineral 2891 2899	feldspar
+T33	Mineral 2918 2927	anorthite
+T34	Mineral 3154 3163	anorthite
+T35	Mineral 3579 3587	feldspar
+T36	Mineral 3589 3597	pyroxene
+T37	Mineral 3603 3610	olivine
+T38	Mineral 3700 3707	olivine
+T39	Mineral 3796 3804	pyroxene
+T40	Mineral 3895 3903	feldspar
+T41	Mineral 4017 4025	feldspar
+T42	Mineral 4066 4074	feldspar
+T43	Mineral 4180 4189	feldspars
+T44	Mineral 4326 4334	Pyroxene
+T45	Mineral 4403 4412	pigeonite
+T46	Mineral 5071 5078	olivine
+T47	Mineral 5268 5275	olivine
+T49	Mineral 5583 5591	feldspar
+T50	Mineral 5666 5674	feldspar
+T51	Mineral 5904 5912	feldspar
+T52	Mineral 5961 5969	feldspar
+T53	Mineral 6081 6089	pyroxene
+T54	Mineral 6442 6450	pyroxene
+T55	Element 352 354	Ca
+T56	Element 356 358	Ca
+T57	Element 359 361	Na
+T58	Contains 457 474	sampled on target
+E1	Contains:T58 Cont:T30 Targ:T11
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T59	Feature 415 425	anorthitic
+R1	Shows Arg1:T11 Arg2:T59	
+T60	Element 2634 2636	Ca
+T61	Element 2638 2640	Ca
+T62	Element 2641 2643	Na
+T63	Contains 2671 2683	for a target
+E2	Contains:T63 Targ:T12 Cont:T31 Cont2:T3 Cont3:T4 Cont4:T32
+T64	Contains 3127 3153	this sample is nearly pure
+E3	Contains:T64 Cont:T34 Targ:T12
+A3	Confidence E3 High
+A4	Amount E3 Contains_High
+T25	Element 3619 3621	Ca
+T65	Element 3622 3624	Na
+T66	Element 3625 3626	K
+T67	Element 3627 3629	Al
+T68	Element 3640 3642	Si
+T69	Element 3644 3646	Mg
+T70	Element 3647 3649	Fe
+T71	Element 3716 3718	Na
+T72	Element 3719 3720	K
+T73	Element 3721 3723	Al
+T74	Element 3734 3736	Si
+T75	Element 3738 3740	Mg
+T76	Element 3741 3743	Fe
+T77	Element 3744 3746	Ca
+T78	Element 3813 3815	Mg
+T79	Element 3816 3818	Fe
+T80	Element 3819 3821	Mn
+T81	Element 3822 3824	Ti
+T82	Element 3835 3837	Si
+T83	Element 3839 3841	Na
+T84	Element 3842 3844	Ca
+T85	Element 3846 3847	)
+T86	Element 3910 3912	Si
+T87	Element 3922 3924	Fe
+T88	Element 3926 3928	Fe
+T89	Element 3929 3931	Mg
+T26	Mineral 4248 4261	plagionclases
+T48	Element 4501 4503	Ca
+T90	Element 4505 4507	Ca
+T91	Element 4508 4510	Na
+T92	Element 4512 4513	)
+T93	Element 5099 5101	Si
+T94	Element 5103 5105	Fe
+T95	Element 5106 5108	Mg
+T96	Mineral 5359 5367	olivines
+T97	Contains 5675 5687	compositions
+E4	Contains:T97 Cont:T50 Targ:T13 Targ2:T14 Targ3:T15 Targ4:T16 Targ5:T17 Targ6:T18
+T98	Element 6130 6132	Si
+T99	Element 6134 6136	Fe
+T100	Element 6137 6139	Mg
+T101	Element 6140 6142	Mn
+T102	Element 6143 6145	Ti
+T103	Element 6146 6148	Ca
+T104	Target 6303 6318	Bonnet Plume_DW
+T105	Contains 6409 6441	all have more than 20 shots with
+E5	Contains:T105 Targ:T24 Targ2:T23 Targ3:T22 Targ4:T21 Targ5:T104 Targ6:T20 Targ7:T19 Cont:T54
+A5	Confidence E5 High
+T106	Mineral 6544 6553	pyroxenes
