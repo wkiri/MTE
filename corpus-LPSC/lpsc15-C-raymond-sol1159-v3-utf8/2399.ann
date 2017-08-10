@@ -1,0 +1,25 @@
+T1	Element 5838 5840	Mg
+T2	Element 5845 5846	S
+T3	Element 6509 6511	Ca
+T4	Element 6516 6517	S
+T5	Target 5029 5045	Confidence Hills
+T6	Target 5589 5605	Confidence Hills
+T7	Locality 980 993	Pahrump Hills
+T8	Formation 1061 1077	Murray formation
+T9	Locality 4248 4261	Pahrump Hills
+T10	Feature 4729 4736	Laminae
+T11	Feature 4752 4783	thin (mm-scale) parallel layers
+R1	Shows Arg1:T5 Arg2:T11	
+R2	Shows Arg1:T5 Arg2:T10	
+R3	IsSituatedIn Arg1:T5 Arg2:T9	
+T12	Target 5074 5089	Alexander Hills
+T13	Target 5094 5100	Chinle
+R4	IsSituatedIn Arg1:T12 Arg2:T9	
+R5	IsSituatedIn Arg1:T13 Arg2:T9	
+T14	Material 5250 5259	evaporite
+T15	Feature 5463 5471	Clusters
+T16	Feature 5487 5545	resistant features that are embedded in the recessive unit
+R6	Shows Arg1:T6 Arg2:T16	
+R7	Shows Arg1:T6 Arg2:T15	
+T17	Feature 5658 5680	dendritic morphologies
+R8	Shows Arg1:T6 Arg2:T17	

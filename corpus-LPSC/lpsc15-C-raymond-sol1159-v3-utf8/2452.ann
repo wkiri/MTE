@@ -1,0 +1,99 @@
+T5	Element 5678 5680	Ca
+T6	Element 5685 5687	Si
+T7	Element 5915 5917	Na
+T8	Element 5922 5923	K
+T9	Element 6585 6587	Ba
+T10	Element 6600 6602	Rb
+T11	Element 8004 8006	Si
+T12	Element 8008 8010	Al
+T13	Element 8012 8014	Na
+T14	Element 8019 8020	K
+T15	Element 8047 8049	Ba
+T16	Target 3271 3278	Pisolet
+T17	Target 3302 3310	Harrison
+T18	Target 3334 3341	Becraft
+T19	Target 3365 3373	La Reine
+T20	Target 3400 3407	Sparkle
+T21	Target 4595 4602	Sparkle
+T22	Target 4748 4755	Becraft
+T23	Target 5140 5144	Mara
+T24	Target 6161 6165	Link
+T25	Target 6523 6531	Harrison
+T26	Mineral 4633 4650	oligoclase-albite
+T27	Mineral 4807 4817	macusanite
+T28	Mineral 5600 5610	macusanite
+T29	Mineral 7527 7541	trachyandesite
+T30	Mineral 7610 7618	basanite
+T31	Mineral 8537 8551	trachyandesite
+T32	Mineral 725 734	feldspars
+T33	Mineral 790 799	feldspars
+T34	Mineral 4348 4354	quartz
+T35	Mineral 4356 4367	plagioclase
+T36	Mineral 4384 4393	nepheline
+T37	Mineral 4442 4449	olivine
+T38	Mineral 5061 5071	oligoclase
+T39	Mineral 5189 5197	andesine
+T40	Mineral 5202 5211	pigeonite
+T41	Mineral 5819 5830	plagioclase
+T42	Mineral 5888 5897	feldspars
+T43	Mineral 6452 6463	plagioclase
+T44	Mineral 6671 6680	feldspars
+T45	Mineral 7924 7935	plagioclase
+T1	Mineral 1063 1071	feldspar
+T2	Element 4294 4296	Al
+T3	Element 4297 4299	Si
+T4	Element 4305 4307	Fe
+T46	Element 4308 4310	Mg
+T47	Element 4312 4314	Si
+T48	Target 4179 4185	Jake-M
+T49	Feature 4541 4552	Light-toned
+T50	Feature 4553 4562	intrusive
+R1	Shows Arg1:T21 Arg2:T50	
+R2	Shows Arg1:T21 Arg2:T49	
+T51	Element 4653 4655	Al
+T52	Element 4656 4658	Si
+T53	Feature 4710 4721	Vesiculated
+T54	Feature 4722 4733	light-toned
+R3	Shows Arg1:T22 Arg2:T54	
+R4	Shows Arg1:T22 Arg2:T53	
+T55	Element 4842 4844	Al
+T56	Element 4845 4847	Si
+T57	Mineral 4908 4923	alkali-feldspar
+T58	Feature 5167 5174	noritic
+R5	Shows Arg1:T23 Arg2:T58	
+T59	Element 5355 5357	Al
+T60	Element 5358 5360	Si
+T61	Element 5366 5368	Fe
+T62	Element 5369 5371	Mg
+T63	Element 5373 5375	Si
+T64	Element 6194 6195	K
+T65	Contains 6196 6200	rich
+E1	Contains:T65 Cont:T64 Targ:T24
+A1	Amount E1 Contains_High
+T66	Material 6201 6213	conglomerate
+T67	Contains 6214 6221	targets
+E2	Contains:T67 Cont:T66 Targ:T24
+T68	Element 6288 6290	Na
+T69	Element 6291 6292	K
+T70	Element 6435 6436	k
+T71	Feature 6442 6448	zoning
+T72	Feature 6464 6475	phenocrysts
+T73	Contains 6476 6484	observed
+E3	Contains:T73 Targ:T25 Cont:T43 Cont2:T70
+T74	Feature 6494 6505	porphyritic
+R6	Shows Arg1:T25 Arg2:T74	
+R7	Shows Arg1:T25 Arg2:T72	
+R8	Shows Arg1:T25 Arg2:T71	
+T75	Element 6664 6665	K
+T76	Target 7168 7178	Harrison's
+T77	Mineral 7379 7385	quartz
+T78	Mineral 7939 7954	alkali-felspars
+T79	Material 8500 8506	basalt
+T80	Mineral 8507 8515	basanite
+T81	Material 8561 8570	Trachytes
+T82	Material 8623 8629	gabbro
+T83	Material 8630 8637	norites
+T84	Material 8654 8667	granodiorites
+T85	Material 8668 8676	diorites
+T86	Element 5073 5075	Al
+T87	Element 5076 5078	Si

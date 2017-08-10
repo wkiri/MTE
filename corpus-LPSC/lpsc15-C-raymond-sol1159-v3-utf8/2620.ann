@@ -1,0 +1,230 @@
+T1	Element 1293 1302	potassium
+T2	Element 1322 1323	K
+T3	Element 1458 1459	K
+T4	Element 1560 1561	K
+T5	Element 1765 1766	K
+T6	Element 3995 3996	K
+T7	Element 4013 4017	iron
+T8	Element 6017 6021	iron
+T9	Element 6095 6096	K
+T10	Element 6101 6103	Fe
+T11	Element 6156 6160	iron
+T12	Element 6405 6406	K
+T13	Element 6744 6746	Al
+T14	Element 6749 6751	Ca
+T15	Element 6915 6916	K
+T16	Element 7913 7915	Zn
+T17	Element 8246 8255	potassium
+T18	Element 10125 10127	Cl
+T19	Element 10222 10224	Ni
+T20	Element 10238 10240	Zn
+T21	Element 10254 10256	Br
+T22	Target 1106 1114	Windjana
+T23	Target 1240 1248	Windjana
+T24	Target 1899 1907	Windjana
+T25	Target 2273 2282	Dillinger
+T26	Target 2505 2514	Dillinger
+T27	Target 2527 2535	Windjana
+T28	Target 2598 2606	Windjana
+T29	Target 3740 3748	Windjana
+T30	Target 3847 3855	Windjana
+T31	Target 4157 4165	Windjana
+T32	Target 4482 4490	Windjana
+T33	Target 4839 4847	Windjana
+T34	Target 5774 5784	John_Klein
+T35	Target 5789 5799	Cumberland
+T36	Target 5860 5868	Windjana
+T37	Target 6032 6040	Windjana
+T38	Target 6351 6359	Windjana
+T39	Target 6508 6516	Windjana
+T40	Target 6645 6653	Windjana
+T41	Target 7104 7112	Windjana
+T42	Target 7250 7258	Windjana
+T43	Target 8309 8317	Windjana
+T47	Target 10281 10288	Portage
+T48	Mineral 4179 4185	Augite
+T51	Mineral 4271 4279	Ilmenite
+T53	Mineral 4306 4316	Akaganeite
+T54	Mineral 4324 4332	Hematite
+T56	Mineral 4940 4953	Fe-forsterite
+T57	Mineral 5216 5222	augite
+T59	Mineral 5894 5903	magnetite
+T60	Mineral 5915 5923	hematite
+T61	Mineral 5925 5935	akaganeite
+T64	Mineral 1293 1311	potassium feldspar
+T65	Mineral 1303 1311	feldspar
+T66	Mineral 1380 1391	plagioclase
+T67	Mineral 3995 4005	K feldspar
+T68	Mineral 3997 4005	feldspar
+T70	Mineral 4166 4173	Olivine
+T72	Mineral 4192 4201	Pigeonite
+T73	Mineral 4218 4229	Plagioclase
+T74	Mineral 4253 4263	Pyrrhotite
+T76	Mineral 4289 4298	Magnetite
+T79	Mineral 4341 4350	Anhydrite
+T80	Mineral 4359 4365	Quartz
+T81	Mineral 4371 4385	Phyllosilicate
+T82	Mineral 4884 4899	phyllosilicates
+T83	Mineral 4929 4936	olivine
+T84	Mineral 4972 4983	plagioclase
+T85	Mineral 4987 4995	andesine
+T86	Mineral 5016 5024	feldspar
+T87	Mineral 5106 5114	sanidine
+T89	Mineral 5227 5236	pigeonite
+T90	Mineral 5262 5275	Orthopyroxene
+T91	Mineral 5475 5490	phyllosilicates
+T92	Mineral 5820 5835	phyllosilicates
+T96	Mineral 5958 5967	anhydrite
+T98	Mineral 6136 6151	phyllosilicates
+T100	Mineral 7033 7042	pigeonite
+T101	Mineral 7050 7063	orthopyroxene
+T102	Mineral 7616 7627	plagioclase
+T103	Mineral 8010 8019	magnetite
+T104	Mineral 8141 8148	olivine
+T105	Mineral 8246 8264	potassium feldspar
+T106	Mineral 8256 8264	feldspar
+T107	Target 31 39	WINDJANA
+T108	Locality 51 60	KIMBERLEY
+R1	IsSituatedIn Arg1:T107 Arg2:T108	
+T109	Material 1115 1124	sandstone
+T110	Contains 1102 1105	the
+E1	Contains:T110 Targ:T22 Cont:T109
+T111	Locality 1141 1150	Kimberley
+T112	Region 1159 1170	Gale Crater
+R2	IsSituatedIn Arg1:T22 Arg2:T111	
+R3	IsSituatedIn Arg1:T22 Arg2:T112	
+T113	Contains 1266 1289	containing an abundance
+E2	Contains:T113 Targ:T23 Cont:T64 Cont2:T2
+A1	Confidence E2 High
+A2	Amount E2 Contains_High
+T114	Contains 1363 1379	low abundance of
+E3	Contains:T114 Cont:T66 Targ:T23
+A3	Confidence E3 High
+A4	Amount E3 Contains_Low
+T115	Element 1401 1403	Na
+T116	Element 1404 1405	K
+T117	Feature 1397 1405	low Na/K
+R4	Shows Arg1:T23 Arg2:T117	
+T118	Contains 1444 1457	enrichment in
+E4	Contains:T118 Cont:T3 Targ:T23
+A5	Amount E4 Contains_High
+T119	Contains 1555 1559	high
+E5	Contains:T119 Targ:T23 Cont:T4
+A6	Amount E5 Contains_High
+A7	Confidence E4 High
+T120	Element 1664 1665	K
+T121	Contains 1760 1764	high
+E6	Contains:T121 Cont:T5 Targ:T23
+A8	Amount E6 Contains_High
+T122	Element 1844 1845	K
+T123	Locality 1885 1894	Kimberley
+R5	IsSituatedIn Arg1:T24 Arg2:T123	
+T124	Locality 1914 1923	Kimberley
+T125	Feature 2228 2241	thinly bedded
+T126	Feature 2243 2255	cross-bedded
+T127	Material 2256 2265	sandstone
+T128	Contains 2268 2271	the
+E7	Contains:T128 Targ:T25 Cont:T127
+T129	Unit 2273 2287	Dillinger Unit
+R6	BelongsTo Arg1:T25 Arg2:T129	
+R7	Shows Arg1:T25 Arg2:T126	
+R8	Shows Arg1:T25 Arg2:T125	
+T130	Unit 2505 2518	Dillinger Uni
+R9	BelongsTo Arg1:T26 Arg2:T130	
+R10	BelongsTo Arg1:T27 Arg2:T130	
+T131	Contains 3976 3991	high abundances
+E8	Contains:T131 Targ:T30 Cont:T67
+A9	Amount E8 Contains_High
+T49	Contains 4100 4103	wt%
+E9	Contains:T49 Targ:T31 Cont:T70 Cont2:T48 Cont3:T72 Cont4:T50 Cont5:T74 Cont6:T51 Cont7:T76 Cont8:T53 Cont9:T54 Cont10:T79 Cont11:T80 Cont12:T81 Cont13:T69
+T50	Mineral 4235 4245	K-Feldspar
+T52	Element 4235 4236	K
+T55	Mineral 4237 4245	Feldspar
+T69	Material 4390 4399	Amorphous
+T71	Contains 4216 4217	*
+E10	Contains:T71 Cont:T73 Targ:T31
+A10	Confidence E10 Low
+T75	Contains 4848 4880	contains significant proportions
+E11	Contains:T75 Targ:T33 Cont:T82 Cont2:T77
+A11	Amount E11 Contains_High
+T77	Material 4904 4922	amorphous material
+T78	Element 4940 4942	Fe
+T132	Mineral 4943 4953	forsterite
+T133	Contains 4937 4939	is
+E12	Contains:T133 Cont:T83 Cont2:T56 Targ:T33 Cont3:T84 Cont4:T85 Cont5:T136
+T134	Element 5028 5029	K
+T135	Contains 5030 5034	rich
+E13	Contains:T135 Cont:T134 Targ:T33
+A12	Amount E13 Contains_High
+T136	Mineral 5009 5024	alkali feldspar
+T137	Element 5163 5164	K
+T58	Contains 5282 5328	is present at CheMin's nominal detection limit
+E14	Contains:T58 Cont:T90 Targ:T36
+A13	Confidence E14 Low
+A14	Amount E14 Contains_Low
+T62	Mineral 5698 5707	smectites
+T88	Contains 5876 5893	contains abundant
+E15	Contains:T88 Targ:T36 Cont:T59
+A15	Confidence E15 High
+A16	Amount E15 Contains_High
+T93	Contains 5909 5914	minor
+E16	Contains:T93 Cont:T60 Cont2:T61 Cont3:T96 Targ:T36
+A17	Amount E16 Contains_Low
+T94	Contains 5983 5998	high abundances
+E17	Contains:T94 Cont:T99 Targ:T37 Cont2:T138
+A18	Amount E17 Contains_High
+T95	Element 6002 6003	K
+T97	Mineral 6004 6012	feldspar
+T99	Mineral 6002 6012	K-feldspar
+T138	Mineral 6018 6028	ron oxides
+T139	Contains 6090 6094	high
+E18	Contains:T139 Cont:T9 Cont2:T10 Targ:T37
+A19	Amount E18 Contains_High
+T140	Element 6486 6487	K
+T141	Mineral 6488 6496	feldspar
+T142	Mineral 6486 6496	K-feldspar
+T143	Contains 6467 6482	high abundances
+E19	Contains:T143 Cont:T142 Targ:T39
+A20	Amount E19 Contains_High
+T144	Element 6841 6843	Al
+T145	Element 7007 7008	K
+T146	Mineral 7009 7017	feldspar
+T147	Mineral 7007 7017	K-feldspar
+T148	Contains 7209 7224	high abundances
+E20	Contains:T148 Cont:T151 Targ:T42
+A21	Amount E20 Contains_High
+T149	Element 7228 7229	K
+T150	Mineral 7230 7238	feldspar
+T151	Mineral 7228 7238	K-feldspar
+T152	Element 7521 7522	K
+T153	Mineral 7523 7531	feldspar
+T154	Mineral 7521 7531	K-feldspar
+T63	Contains 7897 7912	relatively high
+E21	Contains:T63 Targ:T155 Cont:T16
+A22	Amount E21 Contains_High
+T155	Target 7834 7842	Windjana
+T156	Contains 8233 8242	abundance
+E22	Contains:T156 Cont:T105 Targ:T43
+A23	Amount E22 Contains_High
+T157	Element 8344 8345	K
+T158	Mineral 8344 8350	K-spar
+T159	Element 8513 8514	K
+T160	Mineral 8515 8523	feldspar
+T161	Mineral 8513 8523	K-feldspar
+T162	Element 8385 8394	potassium
+T163	Element 8626 8635	potassium
+T44	Contains 10006 10009	wt%
+E23	Contains:T44 Cont:T45 Cont2:T46 Targ:T174 Cont3:T164 Cont4:T165 Cont5:T166 Cont6:T167 Cont7:T18 Cont8:T168 Cont9:T169 Cont10:T170 Cont11:T171 Cont12:T172 Cont13:T173 Cont14:T19 Cont15:T20 Cont16:T21 Targ2:T47
+T45	Material 10043 10047	Na2O
+T46	Material 10056 10059	MgO
+T164	Material 10069 10074	Al2O3
+T165	Material 10083 10087	SiO2
+T166	Material 10098 10102	P2O5
+T167	Material 10113 10116	SO3
+T168	Material 10138 10141	K2O
+T169	Material 10151 10154	CaO
+T170	Material 10163 10167	TiO2
+T171	Material 10178 10183	Cr2O3
+T172	Material 10194 10197	MnO
+T173	Material 10208 10211	FeO
+T174	Target 10033 10041	Windjana
