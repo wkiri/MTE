@@ -118,7 +118,7 @@ T32	Mineral 1419 1427	feldspar
 T39	Mineral 1412 1427	alkali feldspar
 T42	Material 1432 1447	mafic silicates
 T43	Contains 1581 1605	minor contributions from
-E3	Contains:T43 Targ:T7 Cont:T75
+E3	Contains:T43 Targ:T7 Cont:T75 Cont2:T146
 A2	Amount E3 Contains_Low
 T44	Target 2752 2754	CH
 T45	Target 865 867	CH
@@ -162,3 +162,91 @@ T115	Mineral 7806 7813	sulfate
 T137	Mineral 7802 7813	ron-sulfate
 T138	Target 7839 7841	CH
 T142	Element 7886 7890	iron
+T146	Element 1606 1612	sulfur
+T148	Contains 3894 3908	was identified
+E8	Contains:T148 Cont:T41 Targ:T9
+T149	Contains 4004 4018	identification
+E9	Contains:T149 Cont:T99 Targ:T9
+T150	Contains 4102 4112	indicating
+E10	Contains:T150 Cont:T100 Targ:T9
+T151	Contains 4170 4191	is significantly more
+E11	Contains:T151 Cont:T101 Targ:T9
+A10	Amount E11 Contains_High
+T152	Contains 4241 4244	0.8
+E12	Contains:T152 Cont:T101 Targ:T10
+T153	Contains 4246 4249	0.6
+E13	Contains:T153 Cont:T101 Targ:T11
+T154	Contains 4251 4254	0.7
+E14	Contains:T154 Cont:T101 Targ:T12
+T155	Contains 4260 4263	0.6
+E15	Contains:T155 Cont:T101 Targ:T13
+T156	Contains 4344 4358	high abundance
+E16	Contains:T156 Cont:T102 Targ:T9
+A11	Amount E16 Contains_High
+T157	Feature 4610 4629	broad peak at ~10 Å
+T158	Target 4577 4579	CH
+R3	Shows Arg1:T158 Arg2:T157	
+T159	Contains 4666 4676	containing
+E17	Contains:T159 Cont:T105 Targ:T15 Targ2:T16
+T160	Contains 4798 4800	is
+E18	Contains:T160 Cont:T106 Targ:T158
+T161	Target 5174 5176	CH
+T162	Contains 5185 5202	there is ~ 11 wt%
+E19	Contains:T162 Cont:T107 Targ:T161
+T163	Contains 5287 5296	abundance
+E20	Contains:T163 Targ:T18 Cont:T109 Cont2:T51 Cont3:T111 Cont4:T14 Cont5:T112 Cont6:T53 Cont7:T114 Cont8:T55 Cont9:T116 Cont10:T117 Cont11:T118 Cont12:T119 Cont13:T120
+T164	Contains 5685 5706	There is evidence for
+E21	Contains:T164 Cont:T122 Targ:T67
+T165	Contains 5758 5771	most abundant
+E22	Contains:T165 Cont:T123 Targ:T67
+A12	Amount E22 Contains_High
+T166	Contains 5790 5819	best modeled by two different
+E23	Contains:T166 Cont:T124 Cont2:T125 Cont3:T126 Targ:T67
+T167	Contains 6002 6019	was also detected
+E24	Contains:T167 Targ:T67 Cont:T127 Cont2:T86 Cont3:T128 Cont4:T3 Cont5:T129
+T168	Contains 6145 6152	rich in
+E25	Contains:T168 Targ:T19 Cont:T4 Cont2:T87 Cont3:T131
+T169	Contains 6178 6188	similar to
+E26	Contains:T169 Cont:T130 Targ:T20 Targ2:T21
+T170	Contains 6296 6299	the
+E27	Contains:T170 Targ:T88 Cont:T132
+T171	Contains 6346 6356	identified
+E28	Contains:T171 Targ:T88 Cont:T133 Cont2:T134 Cont3:T135 Cont4:T136
+T172	Contains 6421 6442	near detection limits
+E29	Contains:T172 Cont:T61 Targ:T88
+A13	Amount E29 Contains_Low
+T173	Contains 6600 6602	an
+E30	Contains:T173 Targ:T88 Cont:T91 Cont2:T90 Cont3:T89
+T174	Contains 6747 6774	identification is tentative
+E31	Contains:T174 Cont:T62 Targ:T88
+A14	Confidence E31 Low
+T175	Contains 6885 6890	peaks
+E32	Contains:T175 Cont:T139 Targ:T22 Targ2:T23 Targ3:T24
+T176	Material 7053 7075	amorphous component(s)
+T177	Contains 7022 7049	contains a large percentage
+E33	Contains:T177 Cont:T176 Targ:T94
+A15	Amount E33 Contains_High
+T178	Contains 7266 7275	component
+E34	Contains:T178 Cont:T141 Targ:T98
+T179	Contains 7336 7357	detection of abundant
+E35	Contains:T179 Cont:T63 Targ:T98
+A16	Amount E35 Contains_High
+T180	Formation 7524 7540	Murray formation
+T181	Contains 7650 7705	consistent with the Murray formation orbital mineralogy
+E36	Contains:T181 Targ:T103 Cont:T143 Cont2:T144 Cont3:T145
+T182	Contains 7776 7784	presence
+E37	Contains:T182 Cont:T65 Cont2:T137 Cont3:T115 Cont4:T113 Targ:T138
+T183	Contains 7963 7979	higher abundance
+E38	Contains:T183 Targ:T104 Cont:T147
+A17	Amount E38 Contains_High
+T184	Material 8018 8024	alkali
+T185	Contains 8025 8029	rich
+E39	Contains:T185 Cont:T184 Targ:T25
+A18	Amount E39 Contains_High
+T186	Feature 8091 8110	basaltic mineralogy
+R4	Shows Arg1:T110 Arg2:T186	
+T187	Process 7886 7915	ironbearing fluid interaction
+R5	Shows Arg1:T138 Arg2:T187	
+T188	Process 8172 8186	igneous origin
+R6	Shows Arg1:T26 Arg2:T188	
+T189	Target 1 17	CONFIDENCE HILLS
