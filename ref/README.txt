@@ -17,7 +17,7 @@ cut -f6 -d',' ~/Research/IMBUE/data/chemcam/msl_ccam_obs.csv | grep -v
 Target | sort | uniq | wc -l
 
 Note:
-I manually added 17 targets to the lists starting with sol 1159.
+I manually added 16 targets to the lists starting with sol 1159.
 These are cases where the target names don't exist in their base form,
 although numbered variants (that don't end with _N) do.  To wit:
 
@@ -29,7 +29,6 @@ John_Klein
 Mojave2
 Mojave
 Mont_Wright
-Rocknest
 Rocknest_3
 Ronan
 Ruker
