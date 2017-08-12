@@ -63,9 +63,9 @@ T41	Feature 5757 5768	concretions
 T42	Feature 5770 5786	crystal clusters
 T43	Feature 5792 5839	parallelsided, positive relief host rock ridges
 T45	Target 5930 5936	Chinle
-R21	Shows Arg1:T45 Arg2:T43	
-R22	Shows Arg1:T45 Arg2:T42	
-R23	Shows Arg1:T45 Arg2:T41	
+R21	DoesNotShow Arg1:T45 Arg2:T43	
+R22	DoesNotShow Arg1:T45 Arg2:T42	
+R23	DoesNotShow Arg1:T45 Arg2:T41	
 T44	Feature 5950 5957	boxwork
 T46	Target 6019 6029	Whale Rock
 R24	Shows Arg1:T46 Arg2:T44	
