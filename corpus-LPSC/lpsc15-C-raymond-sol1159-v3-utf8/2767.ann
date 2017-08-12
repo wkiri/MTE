@@ -1,0 +1,71 @@
+T1	Element 5325 5327	Li
+T2	Element 5471 5473	Cl
+T3	Element 5475 5477	Sr
+T4	Element 5482 5484	Cr
+T5	Element 5513 5515	Cl
+T6	Element 5520 5522	Sr
+T7	Element 5548 5549	H
+T8	Element 5658 5659	H
+T9	Element 5772 5774	Ca
+T10	Element 5820 5822	Cl
+T11	Element 5827 5828	H
+T12	Element 5914 5916	Cl
+T13	Element 6095 6097	Cl
+T14	Element 6102 6103	H
+T15	Element 6130 6132	Ca
+T16	Element 6235 6237	Ca
+T17	Element 6242 6244	Cl
+T18	Element 6257 6259	Ca
+T19	Element 6311 6313	Cl
+T21	Element 6462 6464	Ca
+T22	Element 6466 6468	Cl
+T23	Element 6473 6474	H
+T24	Element 6610 6612	Cl
+T25	Element 6617 6618	H
+T26	Element 6655 6662	calcium
+T27	Element 6989 6990	H
+T29	Site 1932 1940	Rocknest
+T30	Site 1987 1995	Rocknest
+T31	Site 3366 3374	Rocknest
+T32	Site 4427 4435	Rocknest
+T33	Site 4475 4483	Rocknest
+T34	Site 5291 5299	Rocknest
+T35	Site 5377 5385	Rocknest
+T36	Target 6716 6732	Confidence Hills
+T37	Site 6802 6810	Rocknest
+T38	Site 6904 6912	Rocknest
+T39	Locality 1007 1014	Pahrump
+T40	Locality 1026 1039	Hidden Valley
+T41	Locality 1263 1270	Pahrump
+T42	Locality 1461 1468	Pahrump
+T43	Locality 1788 1801	Hidden Valley
+T44	Site 1945 1954	Dingo Gap
+T45	Site 2098 2107	Dingo Gap
+T46	Locality 3047 3054	Pahrump
+T47	Site 3274 3283	Dingo Gap
+T48	Locality 3586 3599	Hidden Valley
+T49	Locality 3455 3462	Pahrump
+T50	Locality 3437 3450	Hidden Valley
+T51	Site 4461 4470	Dingo Gap
+T52	Locality 4442 4449	Pahrump
+T53	Locality 4577 4590	Hidden Valley
+T54	Locality 4595 4602	Pahrump
+T55	Site 5122 5131	Dingo Gap
+T56	Locality 5414 5427	Hidden Valley
+T57	Locality 5432 5439	Pahrump
+T58	Element 5332 5334	Mn
+T59	Element 5410 5412	Fe
+T60	Locality 5486 5499	Hidden Valley
+T61	Locality 5535 5542	Pahrump
+T62	Locality 5575 5588	Hidden Valley
+T63	Locality 5663 5676	Hidden Valley
+T64	Locality 5620 5627	Pahrump
+T65	Locality 5722 5729	Pahrump
+T66	Locality 5887 5900	Hidden Valley
+T67	Locality 6013 6020	Pahrump
+T68	Element 6264 6265	H
+T69	Element 6319 6320	.
+T20	Material 6410 6422	perchlorates
+T70	Locality 6744 6751	Pahrump
+T71	Material 6777 6789	perchlorates
+T72	Site 6914 6923	Dingo Gap
