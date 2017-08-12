@@ -1,0 +1,16 @@
+T4	Element 6541 6543	Mg
+T5	Element 6589 6590	S
+T6	Element 6595 6597	Ca
+T7	Target 3191 3202	Bell Island
+T8	Target 3385 3396	Bell Island
+T9	Target 5084 5095	Bell Island
+T10	Target 6109 6120	Bell Island
+T11	Target 6266 6277	Bell Island
+T12	Target 7577 7588	Bell Island
+T13	Mineral 6437 6444	sulfate
+T1	Mineral 6300 6307	sulfate
+T2	Contains 6308 6312	rich
+E1	Contains:T2 Cont:T1 Targ:T11
+A1	Amount E1 Contains_High
+T3	Feature 6313 6317	vein
+R1	Shows Arg1:T11 Arg2:T3	
