@@ -86,7 +86,7 @@ T75	Target 3200 3216	Carnivore Canyon
 T76	Target 3217 3227;3228 3232	Alexander  Hill
 T77	Target 3237 3243	Chinle
 T78	Contains 3124 3139	common increase
-E2	Contains:T78 Cont:T14 Cont2:T15 Targ:T74 Targ2:T75 Targ3:T76 Targ4:T77 Targ5:T76 Targ6:T77
+E2	Contains:T78 Cont:T14 Cont2:T15 Targ:T74 Targ2:T75 Targ3:T76 Targ4:T77
 A1	Amount E2 Contains_High
 T79	Target 3261 3276	Confidence Hill
 T80	Contains 3283 3306	is characterized by low
