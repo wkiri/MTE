@@ -1,0 +1,199 @@
+T1	Element 33 35	Li
+T2	Element 37 39	Sr
+T3	Element 41 43	Rb
+T4	Element 48 50	Ba
+T5	Element 755 757	Li
+T6	Element 759 761	Sr
+T7	Element 763 765	Ba
+T8	Element 771 773	Rb
+T9	Element 1255 1257	Li
+T10	Element 1259 1261	Sr
+T11	Element 1263 1265	Ba
+T12	Element 1270 1272	Rb
+T13	Element 2438 2440	Li
+T14	Element 2442 2444	Sr
+T15	Element 2446 2448	Rb
+T16	Element 2453 2455	Ba
+T17	Element 3158 3164	barium
+T18	Element 3313 3315	Li
+T19	Element 3364 3366	Sr
+T20	Element 3368 3370	Rb
+T21	Element 3375 3377	Ba
+T22	Element 3500 3502	Li
+T23	Element 3539 3541	Sr
+T24	Element 3582 3584	Rb
+T25	Element 3772 3774	Li
+T26	Element 3788 3790	Sr
+T27	Element 3803 3805	Rb
+T28	Element 3822 3824	Ba
+T29	Element 4405 4407	Rb
+T30	Element 4412 4414	Ba
+T31	Element 4589 4591	Li
+T32	Element 4593 4595	Sr
+T33	Element 4597 4599	Rb
+T34	Element 4604 4606	Ba
+T35	Element 5035 5037	Li
+T36	Element 5145 5147	Li
+T37	Element 5305 5307	Sr
+T38	Element 5604 5606	Sr
+T39	Element 5684 5686	Sr
+T40	Element 5726 5735	potassium
+T41	Element 5768 5770	Rb
+T42	Element 5929 5931	Rb
+T43	Element 6045 6047	Ba
+T44	Element 6177 6179	Ba
+T45	Element 6647 6655	Rubidium
+T46	Element 6660 6666	barium
+T47	Element 6714 6723	potassium
+T48	Element 6730 6739	strontium
+T49	Element 6767 6774	calcium
+T50	Element 6832 6834	Rb
+T51	Element 6937 6946	aluminium
+T52	Element 6951 6958	silicon
+T53	Element 6978 6980	Sr
+T54	Element 7001 7003	Na
+T55	Element 7005 7006	K
+T56	Element 7196 7198	Rb
+T57	Element 7200 7202	Ba
+T58	Element 7207 7209	Sr
+T59	Element 7335 7337	Sr
+T60	Element 7385 7387	Sr
+T61	Element 7389 7391	Rb
+T62	Element 7395 7397	Ba
+T63	Element 7475 7477	Sr
+T64	Element 7479 7481	Rb
+T65	Element 7487 7489	Ba
+T66	Element 7546 7553	lithium
+T67	Element 7615 7616	K
+T68	Element 7626 7628	Fe
+T69	Element 7630 7632	Na
+T70	Element 7634 7636	Mg
+T71	Element 7676 7680	iron
+T72	Element 7685 7694	manganese
+T73	Element 7801 7803	Li
+T74	Element 7919 7921	Rb
+T75	Element 7955 7962	lithium
+T76	Element 7984 7985	K
+T77	Element 8034 8036	Rb
+T78	Element 8150 8159	strontium
+T79	Element 8161 8169	rubidium
+T80	Element 8171 8177	barium
+T81	Element 8182 8189	lithium
+T82	Element 8347 8349	Rb
+T83	Element 8351 8353	Ba
+T84	Element 8715 8717	Rb
+T85	Element 8719 8721	Ba
+T86	Element 8723 8725	Li
+T87	Element 8730 8732	Sr
+T91	Target 5182 5191	Marquette
+T92	Target 5470 5482	Soledad_Pass
+T93	Target 5640 5647	Carrara
+T94	Target 6195 6203	Sledgers
+T95	Target 7295 7307	Soledad Pass
+T96	Mineral 1939 1947	sulfates
+T97	Mineral 5892 5902	carbonates
+T98	Contains 5148 5155	content
+E1	Contains:T98 Cont:T36 Targ:T91
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T99	Feature 5205 5215	dark-toned
+R1	Shows Arg1:T91 Arg2:T99	
+T100	Contains 5221 5250	with a moderate abundances of
+E2	Contains:T100 Cont:T101 Targ:T91 Cont2:T89
+A3	Confidence E2 High
+A4	Amount E2 Contains
+T101	Material 5251 5256	Al2O3
+T102	Contains 5444 5453	18,880ppm
+E3	Contains:T102 Cont:T37 Targ:T92
+A5	Confidence E3 High
+A6	Amount E3 Contains_High
+T103	Contains 5672 5680	2640 ppm
+E4	Contains:T103 Targ:T93 Cont:T39
+A7	Confidence E4 High
+A8	Amount E4 Contains_High
+T104	Feature 5700 5713	white crystal
+R2	Shows Arg1:T93 Arg2:T104	
+T105	Contains 5714 5725	enriched in
+E5	Contains:T105 Cont:T40 Targ:T93
+A9	Confidence E5 High
+A10	Amount E5 Contains_High
+T106	Contains 5935 5942	1386ppm
+E6	Contains:T106 Cont:T42
+A11	Confidence E6 High
+A12	Amount E6 Contains_High
+T107	Target 5959 5969	Frome_Rock
+T108	Feature 5983 5989	pebble
+T109	Material 5995 5999	soil
+T110	Contains 5990 5994	in a
+E7	Contains:T110 Cont:T109 Targ:T107
+R3	Shows Arg1:T107 Arg2:T108	
+T111	Contains 6000 6010	containing
+E8	Contains:T111 Targ:T107 Cont:T112
+A13	Confidence E8 High
+T112	Material 6023 6026	K2O
+T113	Element 6131 6132	K
+T114	Contains 6183 6191	1640 ppm
+E9	Contains:T114 Targ:T94 Cont:T44
+A14	Confidence E9 High
+A15	Amount E9 Contains_High
+T115	Feature 6207 6214	whitish
+R4	Shows Arg1:T94 Arg2:T115	
+T116	Contains 6268 6272	high
+E10	Contains:T116 Cont:T117 Cont2:T118 Cont3:T119 Targ:T94
+A16	Confidence E10 High
+A17	Amount E10 Contains_High
+T117	Material 6273 6276	K2O
+T118	Material 6288 6292	SiO2
+T119	Material 6309 6314	Al2O3
+T120	Element 6384 6386	Sr
+T121	Element 6387 6389	Rb
+T122	Element 6390 6392	Ba
+T123	Element 6842 6844	Ba
+T124	Element 6867 6868	K
+T125	Element 7011 7013	Al
+T126	Element 7070 7071	K
+T127	Mineral 7072 7080	felspars
+T128	Mineral 7070 7080	K-felspars
+T129	Element 7231 7232	K
+T130	Mineral 7232 7241	feldspars
+T131	Mineral 7231 7241	Kfeldspars
+T132	Mineral 7246 7258	plagioclases
+T133	Element 7280 7284	iron
+T134	Contains 7284 7288	rich
+E11	Contains:T134 Cont:T133 Targ:T95
+A18	Confidence E11 High
+A19	Amount E11 Contains_High
+T135	Feature 7289 7293	vein
+R5	Shows Arg1:T95 Arg2:T135	
+T136	Contains 7324 7334	has a high
+E12	Contains:T136 Cont:T59 Targ:T95
+A20	Confidence E12 High
+A21	Amount E12 Contains_High
+T137	Material 7352 7355	CaO
+T138	Material 7360 7363	K2O
+T139	Contains 7364 7371	are low
+E13	Contains:T139 Cont:T138 Cont2:T137 Targ:T95
+A22	Confidence E13 High
+A23	Amount E13 Contains_Low
+T140	Element 7422 7423	K
+T141	Element 7521 7522	K
+T142	Element 7649 7651	Li
+T143	Element 7808 7810	Fe
+T144	Element 7811 7813	Mn
+T145	Target 7843 7853	Frome_Rock
+T146	Contains 7862 7885	is particularly rich in
+E14	Contains:T146 Targ:T145 Cont:T147 Cont2:T74
+A24	Confidence E14 High
+A25	Amount E14 Contains_High
+T147	Material 7886 7889	K2O
+T148	Element 7990 7992	Fe
+T149	Element 8068 8070	Li
+T150	Element 8071 8072	K
+T151	Element 8077 8079	Li
+T152	Element 8080 8082	Fe
+T153	Element 8358 8360	Sr
+T154	Element 8460 8461	K
+T155	Mineral 8462 8470	felspars
+T156	Mineral 8460 8470	K-felspars
+T88	Element 7641 7643	Al
+T89	Material 5274 5277	FeO

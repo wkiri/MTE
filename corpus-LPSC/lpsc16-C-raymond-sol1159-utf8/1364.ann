@@ -1,0 +1,33 @@
+T1	Element 4732 4738	carbon
+T2	Element 4743 4749	oxygen
+T3	Element 5290 5294	iron
+T4	Element 6079 6085	carbon
+T5	Element 6090 6098	hydrogen
+T6	Element 6191 6199	nitrogen
+T7	Element 6256 6264	nitrogen
+T8	Element 6312 6320	nitrogen
+T9	Element 6364 6370	carbon
+T10	Element 6375 6383	hydrogen
+T11	Element 6415 6421	carbon
+T12	Element 6437 6443	carbon
+T13	Element 6507 6515	hydrogen
+T14	Element 7354 7360	carbon
+T17	Target 1198 1208	Cumberland
+T21	Mineral 3501 3511	nontronite
+T22	Mineral 6931 6948	adeninenontronite
+T24	Mineral 1951 1966	phyllosilicates
+T25	Mineral 2026 2041	Phyllosilicates
+T27	Mineral 5372 5380	sulfates
+T28	Mineral 8647 8657	nontronite
+T16	Material 852 869	organic molecules
+T29	Material 1028 1041	chlorobenzene
+T30	Material 1052 1076	chlorinated hydrocarbons
+T31	Contains 1129 1176	were recently found at a very low concentration
+E1	Contains:T31 Targ:T17 Cont:T30 Cont2:T29 Cont3:T16
+A1	Amount E1 Contains_Low
+T32	Material 1209 1217	mudstone
+T18	Element 6206 6207	C
+T19	Element 6208 6209	N
+T15	Element 8825 8826	N
+T20	Element 8827 8828	H
+T23	Element 8833 8834	C

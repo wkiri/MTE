@@ -1,0 +1,114 @@
+T1	Element 811 817	Copper
+T2	Element 859 861	Cu
+T3	Element 1094 1100	copper
+T4	Element 1276 1278	Cu
+T5	Element 1634 1640	copper
+T6	Element 1746 1752	Copper
+T7	Element 1800 1802	Cu
+T8	Element 1839 1841	Ti
+T9	Element 1889 1891	Na
+T10	Element 1931 1933	Cu
+T11	Element 2159 2161	Cu
+T12	Element 2528 2530	Cu
+T13	Element 2650 2652	Cu
+T14	Element 2869 2871	Cu
+T15	Element 3059 3061	Ti
+T16	Element 3066 3068	Na
+T17	Element 3088 3096	Titanium
+T18	Element 3253 3255	Cu
+T19	Element 3288 3296	titanium
+T20	Element 3334 3336	Cu
+T21	Element 3403 3405	Na
+T22	Element 3519 3521	Ti
+T23	Element 3628 3630	Cu
+T24	Element 3726 3732	Copper
+T25	Element 3788 3790	Cu
+T26	Element 3866 3868	Cu
+T27	Element 3908 3910	Cu
+T28	Element 4194 4196	Cu
+T29	Element 4268 4270	Cu
+T30	Element 4359 4361	Cu
+T31	Element 4437 4439	Cu
+T32	Element 4622 4624	Cu
+T33	Element 4719 4721	Cu
+T34	Element 4738 4744	copper
+T35	Element 4958 4960	Cu
+T36	Element 5089 5091	Cu
+T37	Element 5201 5202	K
+T38	Element 5258 5260	Cu
+T39	Element 5265 5267	Fe
+T40	Element 5317 5323	copper
+T41	Element 5389 5391	Cu
+T42	Element 5536 5542	copper
+T43	Element 5622 5624	Cu
+T44	Element 5795 5797	Cu
+T45	Element 5824 5826	Cu
+T46	Element 6051 6055	zinc
+T47	Element 6057 6059	Zn
+T48	Element 6080 6084	iron
+T49	Element 6144 6146	Cu
+T50	Element 6152 6154	Zn
+T51	Element 6224 6230	copper
+T52	Element 6478 6485	calcium
+T53	Element 6537 6543	copper
+T54	Element 6564 6570	sulfur
+T55	Element 6636 6642	copper
+T56	Element 6692 6698	Copper
+T57	Element 6793 6795	Cu
+T61	Target 4163 4167	Liga
+T62	Target 4335 4342	Stephen
+T63	Target 4463 4473	Square_Top
+T64	Target 4535 4542	Portage
+T65	Target 5426 5436	Greenwater
+T66	Target 5467 5473	Lamboo
+T67	Target 5766 5773	Caribou
+T68	Target 5972 5976	Liga
+T69	Target 6188 6195	Laurens
+T70	Target 6446 6453	Laurens
+T71	Target 6509 6516	Rapitan
+T74	Mineral 1463 1471	sulfates
+T75	Mineral 6370 6382	chalcopyrite
+T76	Mineral 6486 6493	sulfate
+T77	Element 1 7	COPPER
+T78	Contains 4218 4221	ppm
+E1	Contains:T78 Targ:T61 Cont:T28
+A1	Confidence E1 High
+T79	Contains 4371 4374	ppm
+E2	Contains:T79 Cont:T30 Targ:T62
+A2	Confidence E2 High
+T80	Contains 4485 4488	ppm
+E3	Contains:T80 Cont:T31 Targ:T63
+A3	Confidence E3 High
+A4	Amount E3 Contains_Low
+T81	Contains 4574 4577	ppm
+E4	Contains:T81 Targ:T64 Cont:T31
+T82	Element 5208 5210	Fe
+T83	Element 5411 5413	Fe
+T84	Contains 5414 5418	rich
+E5	Contains:T84 Cont:T83 Targ:T65 Targ2:T66
+A5	Confidence E5 High
+A6	Amount E5 Contains_High
+T85	Contains 5782 5785	has
+E6	Contains:T85 Targ:T67 Cont:T44 Cont2:T86
+A7	Confidence E6 High
+A8	Amount E6 Contains_High
+T86	Material 5814 5817	MnO
+T87	Element 5925 5927	Cu
+T88	Feature 5951 5956	mafic
+R1	Shows Arg1:T68 Arg2:T88	
+T89	Element 6158 6160	Fe
+T90	Contains 6204 6212	contains
+E7	Contains:T90 Targ:T69 Cont:T51
+A9	Confidence E7 High
+A10	Amount E7 Contains_High
+T73	Element 6286 6292	sulfur
+T91	Contains 6274 6297	seems to be sulfur-rich
+E8	Contains:T91 Targ:T69 Cont:T73
+A11	Confidence E8 Low
+A12	Amount E8 Contains_High
+T58	Element 6243 6247	iron
+T59	Contains 6235 6252	is also iron-rich
+E9	Contains:T59 Cont:T58 Targ:T69
+A13	Confidence E9 High
+A14	Amount E9 Contains_High
+T60	Element 6915 6917	Fe
