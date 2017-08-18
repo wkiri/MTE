@@ -1,0 +1,25 @@
+T1	Element 1856 1864	hydrogen
+T2	Element 1874 1875	H
+T3	Element 2036 2043	calcium
+T4	Element 2110 2118	hydrogen
+T5	Element 2485 2493	hydrogen
+T6	Element 2785 2786	H
+T7	Element 2802 2803	C
+T8	Element 2995 2997	Fe
+T9	Element 3214 3222	hydrogen
+T10	Element 3227 3233	carbon
+T11	Element 3265 3271	carbon
+T12	Element 3360 3368	hydrogen
+T14	Element 5059 5067	hydrogen
+T15	Element 5092 5098	carbon
+T16	Element 5100 5101	C
+T18	Element 5221 5228	calcium
+T24	Mineral 728 735	olivine
+T25	Mineral 2044 2052	sulfates
+T27	Mineral 2297 2303	quartz
+T28	Mineral 4547 4551	opal
+T29	Mineral 5229 5237	sulfates
+T34	Element 29 37	HYDROGEN
+T23	Material 1084 1090	silica
+T35	Mineral 2036 2052	calcium sulfates
+T13	Mineral 5221 5237	calcium sulfates
