@@ -7,7 +7,7 @@ T6	Target 847 863	Confidence Hills
 T7	Target 1228 1244	Confidence Hills
 T8	Target 2159 2175	Confidence Hills
 T9	Target 3147 3163	Confidence Hills
-T10	Target 4272 4280	Rocknest
+T10	Site 4272 4280	Rocknest
 T11	Target 4282 4292	John Klein
 T12	Target 4294 4304	Cumberland
 T13	Target 4310 4318	Windjana
@@ -172,8 +172,6 @@ E10	Contains:T150 Cont:T100 Targ:T9
 T151	Contains 4170 4191	is significantly more
 E11	Contains:T151 Cont:T101 Targ:T9
 A10	Amount E11 Contains_High
-T152	Contains 4241 4244	0.8
-E12	Contains:T152 Cont:T101 Targ:T10
 T153	Contains 4246 4249	0.6
 E13	Contains:T153 Cont:T101 Targ:T11
 T154	Contains 4251 4254	0.7

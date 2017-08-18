@@ -127,3 +127,10 @@ T107	Mineral 8021 8030	smectites
 T108	Mineral 8018 8030	Mg-smectites
 T59	Feature 2218 2240	bedsets 10-20 cm thick
 R11	Shows Arg1:T50 Arg2:T59	
+T109	Contains 6227 6234	content
+E7	Contains:T109 Cont:T28 Targ:T103
+T110	Contains 6244 6248	high
+E8	Contains:T110 Cont:T29 Targ:T103
+A5	Amount E8 Contains_High
+T111	Contains 6397 6408	observed at
+E9	Contains:T111 Targ:T104 Cont:T28
