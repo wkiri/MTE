@@ -1,0 +1,64 @@
+T1	Element 1518 1520	Si
+T2	Element 1522 1524	Ti
+T3	Element 1526 1528	Al
+T4	Element 1530 1532	Fe
+T5	Element 1534 1536	Mg
+T6	Element 1538 1540	Ca
+T7	Element 1542 1544	Na
+T8	Element 1550 1551	K
+T9	Element 1664 1665	S
+T10	Element 1879 1880	S
+T11	Element 2047 2053	sulfur
+T12	Element 2067 2073	sulfur
+T13	Element 2128 2130	Cl
+T14	Element 4138 4140	Ca
+T15	Element 4205 4207	Si
+T16	Element 4209 4211	Al
+T17	Element 4217 4218	K
+T18	Element 4230 4232	Mg
+T19	Element 5712 5716	iron
+T20	Element 5800 5802	Mg
+T25	Target 3927 3943	Confidence Hills
+T26	Target 3948 3954	Mojave
+T27	Target 4089 4103	Telegraph Peak
+T28	Target 4300 4316	Confidence Hills
+T29	Target 4499 4515	Confidence Hills
+T30	Target 4840 4854	Telegraph Peak
+T33	Mineral 3694 3702	hematite
+T35	Mineral 3757 3766	magnetite
+T36	Mineral 3773 3783	forsterite
+T39	Mineral 3824 3832	jarosite
+T41	Mineral 5297 5305	jarosite
+T43	Mineral 3665 3676	plagioclase
+T44	Mineral 3681 3687	augite
+T46	Mineral 3721 3734	orthopyroxene
+T47	Mineral 3741 3750	pigeonite
+T50	Mineral 3790 3802	cristobalite
+T51	Mineral 3809 3817	ilmenite
+T53	Mineral 3839 3845	quartz
+T54	Mineral 3851 3865	phyllosilicate
+T55	Mineral 4466 4474	jarosite
+T57	Mineral 5317 5325	hematite
+T58	Mineral 5330 5339	magnetite
+T59	Mineral 5681 5689	sulfates
+T60	Mineral 5717 5725	sulfates
+T61	Mineral 5942 5950	sulfates
+T21	Locality 1124 1137	Pahrump Hills
+T22	Formation 1155 1171	Murray formation
+T23	Material 1238 1246	mudstone
+T24	Material 1251 1260	siltstone
+T31	Material 1297 1306	siltstone
+T32	Material 1311 1320	sandstone
+T34	Mineral 1967 1975	sulfides
+T37	Element 1980 1982	Ca
+T38	Mineral 1983 1991	sulfates
+T40	Mineral 3709 3714	Kspar
+T42	Contains 4487 4498	detected at
+E1	Contains:T42 Cont:T55 Targ:T29
+A1	Amount E1 Contains_Low
+T45	Feature 4823 4827	vein
+R1	Shows Arg1:T30 Arg2:T45	
+T48	Element 5808 5810	Fe
+T49	Mineral 5811 5819	sulfates
+T52	Mineral 5808 5819	Fe-sulfates
+T56	Locality 4257 4272	Yellowknife Bay

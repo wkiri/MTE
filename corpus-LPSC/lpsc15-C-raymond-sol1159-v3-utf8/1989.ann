@@ -1,0 +1,136 @@
+T1	Element 1299 1307	chlorine
+T2	Element 1312 1320	fluorine
+T3	Element 1371 1379	fluorine
+T4	Element 3598 3599	K
+T5	Element 3816 3818	Fe
+T6	Element 3827 3829	Ca
+T7	Element 3834 3836	Na
+T8	Element 3872 3874	Li
+T9	Element 3876 3878	Rb
+T10	Element 3880 3882	Zn
+T11	Element 3884 3886	Ni
+T12	Element 4115 4123	Fluorine
+T13	Element 4238 4239	F
+T14	Element 4979 4987	fluorine
+T15	Element 5087 5095	fluorine
+T16	Element 5284 5292	fluorine
+T17	Element 5339 5347	fluorine
+T18	Element 5484 5492	fluorine
+T19	Element 5522 5523	K
+T20	Element 5525 5527	Al
+T21	Element 5529 5531	Si
+T22	Element 5536 5538	Mg
+T23	Element 5834 5835	F
+T24	Element 5847 5849	Ca
+T25	Element 6035 6037	Li
+T26	Element 6163 6171	fluorine
+T27	Element 6198 6205	lithium
+T28	Element 6219 6226	lithium
+T29	Element 6249 6257	fluorine
+T30	Element 6430 6437	Lithium
+T31	Element 6476 6483	lithium
+T32	Element 6612 6614	Li
+T33	Element 6735 6743	fluorine
+T34	Element 6745 6752	lithium
+T35	Element 6793 6802	magnesium
+T36	Element 6840 6848	fluorine
+T37	Element 6853 6860	lithium
+T38	Element 7111 7118	lithium
+T39	Element 7482 7489	lithium
+T40	Element 7543 7550	lithium
+T41	Element 7570 7578	fluorine
+T42	Element 7644 7652	fluorine
+T43	Element 7658 7665	lithium
+T44	Element 7693 7701	fluorine
+T45	Element 8434 8438	zinc
+T46	Element 8443 8452	manganese
+T47	Target 1923 1933	Square Top
+T48	Target 1957 1966	Dillinger
+T49	Target 2053 2062	Dillinger
+T50	Target 2117 2125	Windjana
+T51	Target 2530 2539	Dillinger
+T52	Target 3366 3374	Sheepbed
+T53	Target 3941 3948	Yarrada
+T54	Target 3993 4000	Stephen
+T55	Target 4002 4006	Neil
+T56	Target 4012 4020	Mondooma
+T57	Target 5249 5258	Dillinger
+T58	Target 5700 5708	Windjana
+T60	Mineral 4488 4496	fluorite
+T61	Mineral 5894 5902	fluorite
+T63	Mineral 7013 7019	illite
+T64	Mineral 7607 7615	smectite
+T65	Mineral 8376 8384	fluorite
+T68	Mineral 5929 5937	Fluorite
+T69	Mineral 6879 6884	micas
+T70	Mineral 6983 6988	micas
+T71	Mineral 7259 7263	mica
+T72	Mineral 7397 7402	micas
+T73	Mineral 7894 7899	micas
+T76	Element 1 9	FLUORINE
+T77	Element 14 21	LITHIUM
+T78	Element 1440 1441	F
+T79	Member 1922 1941	"Square Top" member
+R1	BelongsTo Arg1:T47 Arg2:T79	
+T80	Member 1956 1974	"Dillinger" member
+T81	Member 1994 2017	"Mt. Remarkable" member
+T82	StratRel 1946 1955	overlying
+E1	StratRel:T82 Subj:T80 Obj:T79
+A1	Position E1 IsStratAbove
+R2	BelongsTo Arg1:T48 Arg2:T80	
+T83	Member 2053 2069	Dillinger member
+R3	BelongsTo Arg1:T49 Arg2:T83	
+R4	BelongsTo Arg1:T50 Arg2:T83	
+T84	Material 2155 2165	sandstones
+T85	Feature 2171 2202	centimeter-scale stratification
+T86	Feature 2282 2294	crossbedding
+R5	Shows Arg1:T50 Arg2:T85	
+R6	Shows Arg1:T50 Arg2:T86	
+T87	Contains 2147 2154	exposed
+E2	Contains:T87 Cont:T84 Targ:T50
+T88	Feature 2391 2419	complex paleoflow hydraulics
+R7	Shows Arg1:T50 Arg2:T88	
+T89	Member 2530 2546	Dillinger member
+R8	BelongsTo Arg1:T51 Arg2:T89	
+T90	Member 3366 3381	Sheepbed member
+T91	Locality 3385 3400	Yellowknife Bay
+R9	BelongsTo Arg1:T52 Arg2:T90	
+R10	IsSituatedIn Arg1:T52 Arg2:T91	
+T92	Element 3643 3644	K
+T93	Mineral 3645 3653	feldspar
+T94	Mineral 3643 3653	K-feldspar
+T95	Element 3823 3825	Mg
+T96	Material 3930 3933	ZnO
+T97	Contains 3966 3978	was detected
+E3	Contains:T97 Targ:T53 Cont:T96
+A2	Amount E3 Contains_High
+T98	Contains 4053 4057	high
+E4	Contains:T98 Cont:T99 Targ:T56 Targ2:T55 Targ3:T54
+A3	Amount E4 Contains_High
+T99	Material 4058 4061	MnO
+T66	Contains 5276 5283	contain
+E5	Contains:T66 Cont:T16 Targ:T57
+T100	Contains 5672 5682	determined
+E6	Contains:T100 Targ:T58 Cont:T62
+A4	Confidence E6 High
+T62	Material 5746 5759	clay minerals
+T67	Element 5869 5871	Ca
+T101	Element 5872 5873	F
+T102	Element 6103 6104	F
+T103	Target 6338 6348	Frome_Rock
+T104	Target 6409 6423	Bathurst_Inlet
+T105	Mineral 7053 7062	smectites
+T74	Mineral 8001 8007	illite
+T75	Mineral 8008 8013	micas
+T106	Element 8018 8020	Mg
+T107	Mineral 8021 8030	smectites
+T108	Mineral 8018 8030	Mg-smectites
+T59	Feature 2218 2240	bedsets 10-20 cm thick
+R11	Shows Arg1:T50 Arg2:T59	
+T109	Contains 6227 6234	content
+E7	Contains:T109 Cont:T28 Targ:T103
+T110	Contains 6244 6248	high
+E8	Contains:T110 Cont:T29 Targ:T103
+A5	Amount E8 Contains_High
+T111	Contains 6397 6408	observed at
+E9	Contains:T111 Targ:T104 Cont:T28

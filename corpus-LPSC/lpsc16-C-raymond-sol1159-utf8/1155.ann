@@ -1,0 +1,134 @@
+T1	Element 1107 1111	zinc
+T4	Region 1024 1036	Bagnold Dune
+T5	Target 1683 1691	Buckskin
+T6	Target 1869 1876	Big Sky
+T8	Target 2054 2063	Greenhorn
+T9	Target 2381 2388	Augusta
+T10	Region 2659 2671	Bagnold Dune
+T11	Target 3128 3136	Buckskin
+T12	Target 3576 3583	Big Sky
+T15	Target 3626 3640	Telegraph Peak
+T16	Target 3867 3876	Greenhorn
+T17	Target 4205 4212	Big Sky
+T19	Target 4280 4288	Buckskin
+T20	Target 4446 4453	Augusta
+T21	Target 4749 4765	Confidence Hills
+T22	Target 5106 5120	Hematite Ridge
+T23	Target 5826 5834	Buckskin
+T24	Target 5836 5843	Big Sky
+T26	Target 5845 5854	Greenhorn
+T27	Target 5904 5912	Buckskin
+T28	Target 6026 6033	Big Sky
+T30	Target 6120 6134	Telegraph Peak
+T31	Target 6137 6144	Big Sky
+T33	Target 6149 6158	Greenhorn
+T34	Target 6586 6593	Augusta
+T35	Target 6857 6871	Hematite Ridge
+T36	Region 6929 6941	Bagnold Dune
+T38	Target 7943 7953	Cumberland
+T39	Target 7955 7971	Confidence Hills
+T40	Target 7976 7990	Telegraph Peak
+T41	Region 8091 8103	Bagnold Dune
+T44	Mineral 3670 3679	magnetite
+T45	Mineral 4003 4012	magnetite
+T46	Mineral 4016 4024	ilmenite
+T48	Mineral 5060 5068	hematite
+T51	Mineral 3256 3265	magnetite
+T52	Mineral 3345 3353	hematite
+T54	Mineral 3739 3747	hematite
+T55	Mineral 3811 3819	sulfates
+T58	Mineral 4549 4557	hematite
+T60	Mineral 5106 5114	Hematite
+T61	Mineral 5252 5259	olivine
+T62	Mineral 5365 5372	olivine
+T63	Mineral 5640 5647	olivine
+T64	Mineral 6017 6024	sulfate
+T65	Mineral 6857 6865	Hematite
+T66	Mineral 7084 7091	olivine
+T67	Mineral 68 76	HEMATITE
+T3	Material 854 858	SiO2
+T68	Mineral 891 899	hematite
+T69	Mineral 958 965	olivine
+T70	Locality 1633 1644	Marias Pass
+T7	Unit 1780 1787	Stimson
+T71	Material 1788 1797	sandstone
+T72	Target 2552 2558	Tsumeb
+T73	Target 2585 2589	Engo
+T74	Site 2766 2775	High Dune
+T75	Material 2819 2824	sands
+T76	Target 2835 2841	Hoanib
+T77	Contains 2825 2827	at
+E1	Contains:T77 Cont:T75 Targ:T76
+A1	Confidence E1 High
+T14	Target 2893 2898	Barby
+T18	Target 2903 2909	Kibnas
+T25	Feature 2949 2961	ripple crest
+R1	Shows Arg1:T18 Arg2:T29	
+R2	Shows Arg1:T14 Arg2:T25	
+T29	Feature 2978 2984	trough
+T32	Material 3270 3276	silica
+T42	Feature 3164 3188	relatively flat spectrum
+R3	Shows Arg1:T11 Arg2:T42	
+T43	Contains 3190 3221	likely owing to the presence of
+E2	Contains:T43 Targ:T11 Cont:T51 Cont2:T32
+A2	Confidence E2 Low
+T47	Contains 3304 3338	is consistent with the presence of
+E3	Contains:T47 Targ:T11 Cont:T52
+A3	Confidence E3 Low
+A4	Amount E3 Contains_Low
+T49	Contains 3379 3403	is consistent with minor
+E4	Contains:T49 Targ:T11 Cont:T53
+A5	Confidence E4 Neutral
+A6	Amount E4 Contains_Low
+T50	Element 3411 3415	iron
+T53	Material 3404 3430	ferric iron-bearing phases
+T56	Material 3441 3445	SiO2
+T57	Contains 3436 3440	high
+E5	Contains:T57 Cont:T56 Targ:T11
+A7	Confidence E5 High
+A8	Amount E5 Contains_High
+T13	Contains 3642 3669	likely from the presence of
+E6	Contains:T13 Targ:T12 Cont:T44
+A9	Confidence E6 Neutral
+T59	Contains 3719 3738	possibly from minor
+E7	Contains:T59 Cont:T54 Targ:T12
+A10	Confidence E7 Low
+A11	Amount E7 Contains_Low
+T78	Contains 3785 3803	may indicate trace
+E8	Contains:T78 Cont:T55 Targ:T12
+A12	Confidence E8 Low
+A13	Amount E8 Contains_Low
+T79	Material 4130 4143	ferric phases
+T80	Contains 3963 4002	potentially related to small amounts of
+E9	Contains:T80 Cont:T45 Cont2:T46 Targ:T16
+A14	Confidence E9 Low
+A15	Amount E9 Contains_Low
+T81	Contains 4086 4103	likely from minor
+E10	Contains:T81 Cont:T79 Targ:T16
+A16	Confidence E10 Neutral
+A17	Amount E10 Contains_Low
+T82	Target 4455 4461	Tsumeb
+T83	Target 4468 4472	Engo
+T84	Contains 4492 4536	in which spectral characteristics similar to
+E11	Contains:T84 Cont:T58 Targ:T83 Targ2:T82 Targ3:T20
+A18	Confidence E11 Low
+T85	Mineral 4714 4722	hematite
+T86	Contains 4723 4730	bearing
+E12	Contains:T86 Cont:T85 Targ:T21
+A19	Confidence E12 High
+T87	Material 5177 5182	sands
+T88	Region 5203 5216	Bagnold Dunes
+T89	Mineral 5378 5387	pyroxenes
+T90	Contains 5974 5987	suggestive of
+E13	Contains:T90 Targ:T27 Cont:T64
+A20	Confidence E13 Low
+T91	Element 6288 6290	Fe
+T92	Material 6428 6432	SiO2
+T93	Feature 6557 6578	hematite-like spectra
+T94	Target 6595 6601	Tsumeb
+T95	Target 6603 6607	Engo
+R4	Shows Arg1:T34 Arg2:T93	
+R5	Shows Arg1:T94 Arg2:T93	
+R6	Shows Arg1:T95 Arg2:T93	
+T96	Mineral 6645 6653	hematite
+T97	Mineral 6968 6975	olivine

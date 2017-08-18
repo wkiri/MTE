@@ -1,0 +1,51 @@
+T1	Element 875 883	hydrogen
+T2	Element 961 969	Hydrogen
+T3	Element 1436 1437	H
+T4	Element 3554 3562	hydrogen
+T5	Element 3587 3588	H
+T6	Element 3755 3756	H
+T7	Element 3807 3808	H
+T8	Element 4127 4135	hydrogen
+T9	Element 4144 4145	H
+T10	Element 4222 4230	hydrogen
+T11	Element 4993 5001	hydrogen
+T12	Element 5021 5022	H
+T13	Element 5124 5125	H
+T14	Element 5258 5259	H
+T15	Element 5494 5496	Si
+T16	Element 6102 6103	H
+T17	Element 6234 6242	hydrogen
+T18	Element 6301 6303	Ca
+T19	Element 6463 6465	Na
+T20	Element 6470 6471	K
+T21	Element 6584 6592	chlorine
+T22	Element 6638 6640	Cl
+T23	Element 6802 6804	Cl
+T24	Element 6820 6821	H
+T25	Element 6875 6877	Sr
+T26	Element 6882 6884	Cr
+T27	Element 6997 6999	Mn
+T28	Element 7248 7249	H
+T29	Element 7254 7256	Cl
+T30	Element 7361 7363	Ca
+T32	Target 2438 2451	Saline Valley
+T33	Target 2453 2461	Redlands
+T34	Target 2463 2475	Desert Range
+T35	Target 3197 3210	Saline Valley
+T36	Target 3215 3223	Redlands
+T38	Element 40 48	HYDROGEN
+T39	Locality 56 69	HIDDEN VALLEY
+T40	Locality 1380 1393	Hidden Valley
+T31	Locality 1582 1595	Hidden Valley
+T41	Locality 1764 1777	Hidden Valley
+T42	Locality 1948 1961	Hidden Valley
+R1	IsSituatedIn Arg1:T32 Arg2:T42	
+R2	IsSituatedIn Arg1:T33 Arg2:T42	
+R3	IsSituatedIn Arg1:T34 Arg2:T42	
+T43	Material 2418 2422	sand
+T44	Contains 2414 2417	the
+E1	Contains:T44 Cont:T43 Targ:T32 Targ2:T33 Targ3:T34
+T45	Contains 3266 3276	consist of
+E2	Contains:T45 Cont:T46 Targ:T36 Targ2:T35
+T46	Material 3277 3291	coarser grains
+T47	Material 5600 5604	SiO2

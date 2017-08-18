@@ -1,0 +1,203 @@
+T1	Element 1010 1012	Li
+T2	Element 1014 1016	Sr
+T3	Element 1018 1020	Ba
+T4	Element 2686 2688	Mg
+T5	Element 3108 3116	aluminum
+T6	Element 3121 3129	titanium
+T7	Element 3274 3276	Al
+T8	Element 3414 3416	Al
+T9	Element 3616 3618	Al
+T10	Element 3633 3635	Ti
+T11	Element 3768 3775	lithium
+T12	Element 3843 3845	Li
+T13	Element 3881 3883	Li
+T14	Element 3924 3926	Al
+T15	Element 4017 4019	Li
+T16	Element 4419 4421	Al
+T17	Element 4423 4425	Mg
+T18	Element 4430 4431	H
+T19	Element 4448 4450	Fe
+T20	Element 4551 4553	Li
+T21	Element 4558 4560	Cr
+T22	Element 4702 4704	Mg
+T23	Element 4709 4711	Al
+T24	Element 4745 4746	H
+T25	Element 4793 4795	Li
+T26	Element 4904 4906	Li
+T27	Element 5043 5045	Ca
+T28	Element 5211 5213	Ti
+T29	Element 5405 5412	calcium
+T30	Element 5469 5471	Mg
+T31	Element 5473 5475	Ni
+T32	Element 5481 5482	S
+T33	Element 6141 6143	Mg
+T34	Element 6145 6147	Ti
+T35	Element 6149 6151	Al
+T36	Element 6288 6290	Ca
+T37	Element 6879 6881	Al
+T38	Element 6883 6885	Mg
+T39	Element 6887 6888	H
+T40	Element 6890 6892	Cr
+T41	Element 6897 6899	Li
+T42	Element 7362 7364	Mg
+T43	Target 1906 1922	Confidence Hills
+T44	Target 1978 1989	Pink Cliffs
+T45	Target 1997 2008	Book Cliffs
+T46	Target 2094 2105	San Gabriel
+T47	Target 2591 2597	Darwin
+T48	Target 3150 3161	San Gabriel
+T49	Target 3288 3299	Pink Cliffs
+T50	Target 3306 3317	Book Cliffs
+T51	Target 3546 3562	Confidence Hills
+T52	Target 3934 3945	Book Cliffs
+T53	Target 5013 5021	Vaqueros
+T54	Target 6009 6025	Confidence Hills
+T55	Target 6650 6666	Confidence Hills
+T56	Target 6688 6699	Pink Cliffs
+T57	Target 6718 6729	San Gabriel
+T58	Target 6783 6794	Pink Cliffs
+T59	Target 6976 6987	Pink Cliffs
+T60	Target 7002 7018	Confidence Hills
+T62	Element 5137 5144	sulphur
+T63	Mineral 5246 5254	ilmenite
+T64	Mineral 5413 5420	sulfate
+T65	Mineral 6295 6302	sulfate
+T66	Element 1027 1029	Rb
+T67	Locality 1612 1619	Pahrump
+R1	IsSituatedIn Arg1:T43 Arg2:T67	
+R2	IsSituatedIn Arg1:T44 Arg2:T67	
+T68	Feature 1952 1974	platy fractured layers
+R3	Shows Arg1:T43 Arg2:T68	
+R4	IsSituatedIn Arg1:T45 Arg2:T67	
+T69	Feature 2024 2091	resistant layers of various thickness separated by recessive layers
+R5	Shows Arg1:T45 Arg2:T69	
+R6	Shows Arg1:T44 Arg2:T69	
+T70	Feature 2126 2149	finely laminated layers
+R7	Shows Arg1:T46 Arg2:T70	
+T71	Target 2152 2168	Carnivore Canyon
+T72	Target 2174 2188	Alexander Hill
+R8	IsSituatedIn Arg1:T46 Arg2:T67	
+R9	IsSituatedIn Arg1:T71 Arg2:T67	
+R10	IsSituatedIn Arg1:T72 Arg2:T67	
+T73	Feature 2211 2266	massive resistant layers with poorly visible lamination
+R11	Shows Arg1:T72 Arg2:T73	
+R12	Shows Arg1:T71 Arg2:T73	
+T74	Target 2293 2299	Chinle
+T75	Target 2310 2320	Whale Rock
+R13	IsSituatedIn Arg1:T74 Arg2:T67	
+R14	IsSituatedIn Arg1:T75 Arg2:T67	
+T61	Material 2558 2571	conglomerates
+T76	Contains 2584 2586	at
+E1	Contains:T76 Targ:T47 Cont:T61
+T77	Element 2759 2761	Mg
+T78	Contains 3089 3104	common increase
+E2	Contains:T78 Cont:T5 Cont2:T6 Targ:T48 Targ2:T79 Targ3:T80 Targ4:T81
+A1	Amount E2 Contains_High
+T79	Target 3165 3181	Carnivore Canyon
+T80	Target 3182 3196	Alexander Hill
+T81	Target 3203 3209	Chinle
+T82	Target 3228 3243	Confidence Hill
+T83	Contains 3250 3273	is characterized by low
+E3	Contains:T83 Cont:T7 Targ:T82
+A2	Amount E3 Contains_Low
+T84	Contains 3319 3335	are intermediate
+E4	Contains:T84 Targ:T50 Targ2:T49 Cont:T7
+A3	Amount E4 Contains
+T85	Target 3341 3351	Whale Rock
+T86	Contains 3393 3413	having generally low
+E5	Contains:T86 Targ:T85 Cont:T8
+A4	Amount E5 Contains_Low
+T87	Material 3507 3514	alkalis
+T88	Target 3568 3574	Chinle
+T89	Target 3578 3588	Whale Rock
+T90	Contains 3590 3604	being very low
+E6	Contains:T90 Targ:T89 Cont:T87
+A5	Confidence E6 High
+A6	Amount E6 Contains_Low
+T91	Target 3952 3968	Carnivore Canyon
+T92	Target 3969 3984	Alexander Hills
+T93	Contains 3992 4016	are the most enriched in
+E7	Contains:T93 Cont:T15 Targ:T92 Targ2:T91 Targ3:T52
+A7	Confidence E7 High
+A8	Amount E7 Contains_High
+T94	Target 4183 4199	Carvivore Canyon
+T95	Target 4200 4214	Alexander Hill
+T96	Target 4230 4240	Whale Rock
+T97	Target 4258 4273	Alexander Hill-
+T98	Target 4273 4289	Carnivore Canyon
+T99	Element 4599 4601	Fe
+T100	Element 4770 4772	Mg
+T101	Target 4942 4952	Whale Rock
+T102	Contains 5022 5037	is dominated by
+E8	Contains:T102 Targ:T53 Cont:T27
+A9	Confidence E8 High
+A10	Amount E8 Contains_High
+T103	Material 5095 5104	sulphates
+T104	Contains 5084 5094	suggesting
+E9	Contains:T104 Cont:T103 Targ:T53
+A11	Confidence E9 Low
+T105	Contains 5151 5161	is unclear
+E10	Contains:T105 Cont:T62 Targ:T53
+A12	Confidence E10 Low
+T106	Target 5181 5190	Orrocopia
+T107	Contains 5192 5200	contains
+E11	Contains:T107 Targ:T106 Cont:T28
+A13	Confidence E11 High
+A14	Amount E11 Contains_High
+T108	Contains 5226 5245	suggesting enhanced
+E12	Contains:T108 Cont:T63 Targ:T106
+A15	Confidence E12 Low
+A16	Amount E12 Contains_High
+T109	Mineral 5405 5420	calcium sulfate
+T110	Element 5538 5540	Mg
+T111	Locality 6076 6083	Pahrump
+R15	IsSituatedIn Arg1:T54 Arg2:T111	
+T112	Contains 6120 6122	it
+E13	Contains:T112 Cont:T33 Cont2:T34 Cont3:T35 Targ:T54
+A17	Confidence E13 Neutral
+A18	Amount E13 Contains_Low
+T113	Contains 6168 6196	exhibits a large variability
+E14	Contains:T113 Cont:T114 Targ:T54
+A19	Confidence E14 Neutral
+A20	Amount E14 Contains
+T114	Element 6200 6202	Fe
+T115	Target 6228 6238	Whale Rock
+R16	IsSituatedIn Arg1:T115 Arg2:T111	
+T116	Contains 6278 6287	with high
+E15	Contains:T116 Cont:T36 Cont2:T65 Targ:T115 Cont3:T117
+A21	Confidence E15 High
+A22	Amount E15 Contains_High
+T117	Material 6349 6369	titano-ferros oxides
+T118	Target 6559 6574	Alexander Hills
+T119	Target 6673 6683	Whale Rock
+T120	Target 6703 6709	Chinle
+T121	Element 6811 6813	Li
+T122	Contains 6796 6810	is enriched in
+E16	Contains:T122 Targ:T58 Cont:T121
+A23	Confidence E16 High
+A24	Amount E16 Contains_High
+T123	Target 6816 6831	Alexander Hills
+T124	Feature 6837 6859	very faint laminations
+R17	Shows Arg1:T123 Arg2:T124	
+T125	Contains 6865 6878	s enriched in
+E17	Contains:T125 Cont:T37 Cont2:T38 Cont3:T39 Cont4:T40 Cont5:T41 Targ:T123
+A25	Confidence E17 Neutral
+A26	Amount E17 Contains_High
+T126	Contains 6904 6915	depleted in
+E18	Contains:T126 Cont:T127 Targ:T123
+A27	Confidence E18 Neutral
+A28	Amount E18 Contains_Low
+T127	Element 6916 6918	Fe
+T128	Contains 7061 7069	presence
+E19	Contains:T128 Targ:T60 Targ2:T59 Cont:T130 Cont2:T132
+T129	Element 7102 7104	Ca
+T130	Material 7102 7113	Ca-sulphate
+T131	Feature 7114 7119	veins
+T132	Element 7128 7130	Mg
+T133	Feature 7136 7157	dendritic concretions
+R18	Shows Arg1:T60 Arg2:T131	
+R19	Shows Arg1:T59 Arg2:T131	
+R20	Shows Arg1:T60 Arg2:T133	
+R21	Shows Arg1:T60 Arg2:T133	
+T134	Target 7275 7285	Whale Rock
+R22	Shows Arg1:T59 Arg2:T133	

@@ -1,0 +1,49 @@
+T2	Element 6001 6003	Fe
+T3	Element 6005 6007	Al
+T4	Element 6228 6230	Al
+T6	Target 2469 2478	Ashuanipi
+T7	Target 2565 2575	Robin Hood
+T8	Target 2584 2592	Harrison
+T10	Mineral 5607 5613	augite
+T11	Mineral 2816 2824	Feldspar
+T12	Mineral 5028 5035	olivine
+T13	Mineral 5267 5276	feldspars
+T14	Mineral 5517 5524	olivine
+T15	Mineral 5537 5545	pyroxene
+T17	Mineral 5633 5640	olivine
+T18	Mineral 5787 5794	olivine
+T1	Mineral 1438 1446	feldspar
+T19	Material 2389 2401	igneous rock
+T20	Feature 2405 2413	volcanic
+T21	Contains 2418 2426	includes
+E1	Contains:T21 Cont:T19 Cont2:T24 Targ:T6
+T22	Feature 2427 2431	dark
+T23	Feature 2433 2445	fine grained
+T24	Material 2446 2454	basaltic
+R1	Shows Arg1:T6 Arg2:T23	
+R2	Shows Arg1:T6 Arg2:T22	
+R3	Shows Arg1:T6 Arg2:T20	
+T25	Feature 2479 2489	float rock
+R4	Shows Arg1:T6 Arg2:T25	
+T26	Feature 2492 2506	Coarse-grained
+T27	Mineral 2521 2529	feldspar
+T28	Contains 2530 2534	rich
+E2	Contains:T28 Cont:T27 Targ:T7 Targ2:T8
+A1	Amount E2 Contains_High
+R5	Shows Arg1:T7 Arg2:T26	
+R6	Shows Arg1:T8 Arg2:T26	
+T29	Target 2621 2627	Hottah
+T30	Material 2634 2646	conglomerate
+T31	Material 2726 2730	SiO2
+T32	Material 3239 3243	SiO2
+T33	Material 3746 3750	SiO2
+T34	Mineral 3871 3879	feldspar
+T35	Material 3919 3923	SiO2
+T36	Material 4206 4210	SiO2
+T37	Material 4803 4807	SiO2
+T38	Mineral 4903 4911	feldspar
+T39	Mineral 5040 5051	hypersthene
+T40	Target 5574 5582	Humphrey
+T16	Mineral 6631 6640	amphibole
+T5	Target 7524 7530	Bounce
+T9	Target 7535 7544	Wishstone

@@ -1,0 +1,61 @@
+T1	Element 475 482	Calcium
+T2	Element 621 628	calcium
+T3	Element 1208 1209	H
+T4	Element 1327 1335	hydrogen
+T5	Element 1563 1570	calcium
+T6	Element 1707 1715	hydrogen
+T7	Element 1784 1791	calcium
+T8	Element 2077 2085	hydrogen
+T9	Element 2323 2324	H
+T10	Element 2341 2342	C
+T11	Element 2586 2593	calcium
+T12	Element 2638 2640	Ca
+T13	Element 2654 2655	O
+T14	Element 2669 2671	Fe
+T15	Element 2828 2836	hydrogen
+T16	Element 2841 2847	carbon
+T17	Element 2894 2901	calcium
+T18	Element 2923 2924	H
+T19	Element 2929 2930	C
+T20	Element 3223 3224	H
+T21	Element 3236 3237	C
+T22	Element 4029 4030	H
+T23	Element 4064 4070	carbon
+T24	Element 4391 4392	H
+T25	Element 4457 4465	hydrogen
+T26	Element 4954 4955	H
+T27	Element 4982 4988	carbon
+T28	Element 5451 5458	calcium
+T31	Mineral 3006 3015	bassanite
+T32	Mineral 3020 3029	anhydrite
+T37	Mineral 5064 5073	anhydrite
+T38	Mineral 5745 5754	bassanite
+T40	Mineral 483 490	sulfate
+T41	Mineral 629 637	sulfates
+T42	Mineral 1002 1010	sulfates
+T43	Mineral 1571 1578	sulfate
+T44	Mineral 1792 1800	sulfates
+T45	Mineral 2594 2601	sulfate
+T46	Mineral 2902 2909	sulfate
+T47	Mineral 2998 3004	gypsum
+T50	Mineral 3392 3398	gypsum
+T51	Mineral 3400 3409	bassanite
+T52	Mineral 3414 3423	anhydrite
+T53	Mineral 4120 4129	anhydrite
+T54	Mineral 4430 4439	anhydrite
+T55	Mineral 5016 5022	gypsum
+T56	Mineral 5037 5046	bassanite
+T58	Mineral 5459 5467	sulfates
+T60	Mineral 5818 5824	gypsum
+T61	Mineral 5829 5838	bassanite
+T62	Mineral 28 35	SULFATE
+T64	Element 20 27	CALCIUM
+T63	Mineral 20 35	CALCIUM SULFATE
+T65	Mineral 475 490	Calcium sulfate
+T66	Mineral 621 637	calcium sulfates
+T29	Mineral 1563 1578	calcium sulfate
+T30	Feature 1728 1733	veins
+T33	Mineral 1784 1800	calcium sulfates
+T34	Mineral 2586 2601	calcium sulfate
+T35	Mineral 2894 2909	calcium sulfate
+T36	Mineral 5451 5467	calcium sulfates

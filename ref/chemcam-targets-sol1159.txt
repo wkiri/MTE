@@ -696,6 +696,7 @@ Missoula_B
 Missoula_C
 Missoula_D
 Moiese
+Mojave2
 Mojave2_DTa
 Mojave2_DTb
 Mojave2_FDH_ChemCam
@@ -704,6 +705,7 @@ Mojave2_MDH_ChemCam
 Mojave2_PSDP_CC
 Mojave2_post_sieve_dump
 Mojave2_presieve_dump
+Mojave
 Mojave_Bedrock
 Mojave_Chunks
 Mojave_Chunks_Passive
@@ -712,6 +714,7 @@ Monarch
 Mondooma
 Mono
 Monroe
+Mont_Wright
 Mont_Wright_337
 Montaigne
 Moogana
@@ -871,7 +874,6 @@ Ritchie_ccam
 Robin_Hood
 Rochester
 Rock_Stream
-Rocknest
 Rocknest3
 Rocknest3_1
 Rocknest3_2
@@ -880,14 +882,17 @@ Rocknest6
 Rocknest6a
 Rocknest6b
 Rocknest7
+Rocknest_3
 Rocknest_3_Top1
 Rodent_Hill
 Roebuck
+Ronan
 Ronan_drt_2
 Rosebud
 Ross
 Rove
 Rowatt
+Ruker
 Ruker_RP_ccam
 Rusty_Shale
 Ruth
@@ -910,6 +915,7 @@ Schmutz2
 Schoharie
 Seal_Lake
 Searles
+Seeley
 Seeley_1031
 Selow
 Selwyn
@@ -961,6 +967,7 @@ Soledad_Pass
 Solsville
 Sorrel_Springs
 Sorrel_Springs_2
+South_Park
 South_Park2
 Sparkle
 Sphinx
@@ -987,6 +994,7 @@ Straight_Cliffs
 Sulky_CCAM
 Summer_Hill
 Sunburst
+Sutton
 Sutton Inlier
 Sutton Inlier 2
 Sutton_Inlier_3
@@ -1065,6 +1073,7 @@ Wabush
 Wagita
 Wagon_Box
 Wakham_Bay
+Wallace
 Wallace_ccam1
 Wallal
 Walsh

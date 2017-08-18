@@ -1,0 +1,54 @@
+T1	Element 4711 4713	Si
+T2	Element 5360 5362	Si
+T3	Element 5364 5366	Mg
+T4	Element 5368 5369	K
+T5	Element 5600 5602	Si
+T6	Element 5823 5825	Si
+T7	Element 5869 5871	Si
+T8	Element 6315 6317	Si
+T9	Element 8007 8009	Si
+T10	Element 8304 8306	Fe
+T11	Element 8432 8434	Fe
+T12	Target 7948 7951	Elk
+T18	Mineral 5090 5099	magnetite
+T19	Mineral 5127 5135	jarosite
+T20	Mineral 5890 5902	cristobalite
+T21	Mineral 5904 5913	tridymite
+T22	Mineral 8146 8154	hematite
+T23	Mineral 8487 8496	magnetite
+T24	Mineral 8613 8621	jarosite
+T25	Mineral 798 806	hematite
+T26	Mineral 956 964	hematite
+T27	Mineral 4131 4139	hematite
+T28	Mineral 4444 4452	jarosite
+T29	Mineral 4454 4460	gypsum
+T30	Mineral 4857 4865	pyroxene
+T31	Mineral 5047 5055	feldspar
+T32	Mineral 5057 5065	pyroxene
+T33	Mineral 5077 5085	hematite
+T35	Mineral 5117 5125	sulfates
+T41	Mineral 8504 8512	hematite
+T13	Mineral 812 819	sulfate
+T14	Material 4688 4692	SiO2
+T15	Element 5067 5069	Fe
+T16	Element 5137 5139	Ca
+T17	Mineral 5140 5148	sulfates
+T34	Mineral 5137 5148	Ca-sulfates
+T36	Element 5209 5211	Si
+T37	Element 6542 6544	Si
+T38	Element 6693 6695	Si
+T39	Element 7584 7586	Si
+T40	Element 7129 7131	Si
+T42	Element 7312 7314	Si
+T43	Contains 7587 7591	rich
+E1	Contains:T43 Cont:T39 Targ:T12 Targ2:T44
+A1	Amount E1 Contains_High
+T44	Target 7956 7963	Lamoose
+T45	Material 7919 7928	mudstones
+T46	Contains 7898 7901	are
+E2	Contains:T46 Cont:T45 Targ:T12 Targ2:T44
+A2	Confidence E2 High
+T47	Feature 7902 7918	finely laminated
+R1	Shows Arg1:T12 Arg2:T47	
+R2	Shows Arg1:T44 Arg2:T47	
+T48	Element 7778 7780	Si

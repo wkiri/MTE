@@ -1,0 +1,155 @@
+T1	Element 2726 2728	Si
+T2	Element 2730 2732	Ti
+T3	Element 2734 2736	Al
+T4	Element 2738 2740	Fe
+T5	Element 2742 2744	Mg
+T6	Element 2746 2748	Ca
+T7	Element 2750 2752	Na
+T8	Element 2758 2759	K
+T9	Element 3198 3199	S
+T10	Element 3413 3414	S
+T11	Element 3542 3544	Cl
+T12	Element 4037 4039	Ca
+T13	Element 4088 4090	Ca
+T14	Element 4321 4323	Ca
+T15	Element 4830 4832	Ca
+T16	Element 4846 4848	Ca
+T17	Element 5930 5934	iron
+T18	Element 6436 6440	iron
+T19	Element 6573 6577	iron
+T20	Element 6691 6693	Ca
+T21	Element 6992 6994	Ca
+T22	Element 7187 7189	Ca
+T23	Element 7349 7353	iron
+T24	Element 7851 7853	Ca
+T25	Element 7923 7925	Ca
+T26	Element 8040 8042	Ca
+T28	Element 8565 8569	iron
+T29	Target 890 900	John Klein
+T30	Target 1082 1092	Cumberland
+T31	Target 1538 1548	John Klein
+T32	Target 1688 1698	John Klein
+T33	Target 1853 1863	Cumberland
+T34	Target 1997 2005	Sheepbed
+T35	Target 2051 2059	Sheepbed
+T36	Target 3602 3612	John Klein
+T37	Target 3797 3807	Cumberland
+T38	Target 4132 4142	John Klein
+T39	Target 4164 4174	Cumberland
+T40	Target 4468 4478	John Klein
+T41	Target 4538 4548	Cumberland
+T42	Target 5532 5542	John Klein
+T43	Target 5575 5585	John Klein
+T44	Target 5603 5613	Cumberland
+T45	Target 6278 6288	John Klein
+T46	Target 6536 6546	Cumberland
+T47	Target 6912 6922	John Klein
+T48	Target 6963 6973	John Klein
+T49	Target 7051 7061	John Klein
+T50	Target 7141 7151	Cumberland
+T51	Target 7809 7819	John Klein
+T52	Target 7896 7906	Cumberland
+T53	Target 8056 8066	John Klein
+T54	Target 8083 8093	Cumberland
+T56	Target 8617 8627	John Klein
+T57	Target 8668 8678	Cumberland
+T58	Target 8809 8819	John Klein
+T59	Target 8860 8870	Cumberland
+T60	Mineral 2437 2450	Fe-forsterite
+T64	Mineral 2497 2507	pyrrhotite
+T65	Mineral 2509 2519	akaganeite
+T66	Mineral 2538 2547	anhydrite
+T67	Mineral 2627 2635	smectite
+T68	Mineral 2402 2413	plagioclase
+T69	Mineral 2426 2434	sanidine
+T70	Mineral 2452 2458	augite
+T71	Mineral 2460 2469	pigeonite
+T72	Mineral 2471 2484	orthopyroxene
+T73	Mineral 2486 2495	magnetite
+T77	Mineral 2550 2559	bassanite
+T83	Element 1783 1785	Ca
+T84	Mineral 1786 1793	sulfate
+T85	Mineral 1783 1793	Ca-sulfate
+T86	StratRel 1981 1992	are both in
+E1	StratRel:T86 Subj2:T33 Obj:T87 Subj:T32
+A1	Position E1 IsPartOf
+T87	Member 1997 2012	Sheepbed Member
+R1	BelongsTo Arg1:T34 Arg2:T87	
+T88	StratRel 2013 2019	of the
+E2	StratRel:T88 Subj:T87 Obj:T89
+A2	Position E2 IsPartOf
+T89	Formation 2020 2045	Yellowknife Bay Formation
+T90	Member 2047 2059	The Sheepbed
+R2	BelongsTo Arg1:T35 Arg2:T90	
+T91	StratRel 2060 2095	is the lowest exposed member of the
+E3	StratRel:T91 Subj:T90 Obj:T92
+A3	Position E3 IsPartOf
+T92	Formation 2096 2121	Yellowknife Bay formation
+T93	Formation 2199 2224	Yellowknife Bay Formation
+T61	Contains 2324 2348	In the two drill samples
+E4	Contains:T61 Targ2:T33 Cont:T68 Cont2:T60 Cont3:T70 Cont4:T71 Cont5:T72 Cont6:T73 Cont7:T64 Cont8:T65 Cont9:T75 Cont10:T66 Cont11:T77 Targ:T32
+T62	Contains 2415 2425	plus minor
+E5	Contains:T62 Cont:T69 Targ:T33 Targ2:T32
+A4	Amount E5 Contains_Low
+T63	Element 2525 2527	Ca
+T74	Mineral 2528 2536	sulfates
+T75	Mineral 2525 2536	Ca-sulfates
+T76	Contains 2575 2626	~50 weight percent of both drill samples consist of
+E6	Contains:T76 Cont:T67 Cont2:T78 Targ2:T33 Targ:T32
+T78	Material 2644 2663	amorphous component
+T94	Element 3475 3477	Ca
+T95	Mineral 3478 3486	sulfates
+T96	Mineral 3475 3486	Ca-sulfates
+T97	Contains 4324 4335	percentages
+E7	Contains:T97 Cont:T14 Targ:T38 Targ2:T39
+T98	Element 4357 4359	Ca
+T99	Mineral 4360 4367	sulfate
+T100	Mineral 4357 4367	Ca-sulfate
+T101	Feature 4368 4373	veins
+R3	Shows Arg1:T38 Arg2:T101	
+R4	Shows Arg1:T39 Arg2:T101	
+T102	Mineral 5919 5925	silica
+T103	Element 6036 6038	Ca
+T104	Mineral 6039 6046	sulfate
+T105	Mineral 6036 6046	Ca-sulfate
+T79	Material 6425 6431	silica
+T80	Element 6253 6255	Ca
+T106	Mineral 6256 6263	sulfate
+T107	Mineral 6253 6263	Ca-sulfate
+T108	Contains 6408 6418	indicating
+E8	Contains:T108 Cont:T79 Cont2:T18 Targ:T45
+T109	Contains 6556 6566	distinctly
+E9	Contains:T109 Cont:T19 Cont2:T110 Targ:T46
+T110	Material 6582 6588	silica
+T111	Element 6848 6850	Ca
+T112	Mineral 6851 6858	sulfate
+T113	Mineral 6848 6858	Ca-sulfate
+T114	Contains 6974 6979	would
+E10	Contains:T114 Targ:T48 Cont:T21
+T115	Contains 7162 7168	values
+E11	Contains:T115 Cont:T22 Targ:T50
+T81	Element 7239 7241	Ca
+T116	Mineral 7241 7248	sulfate
+T117	Mineral 7239 7248	Casulfate
+T118	Contains 7249 7257	features
+E12	Contains:T118 Cont:T117 Targ:T50
+T119	Material 7338 7344	silica
+T120	Element 7394 7396	Ca
+T121	Mineral 7397 7404	sulfate
+T122	Mineral 7394 7404	Ca-sulfate
+T123	Element 7517 7519	Ca
+T124	Mineral 7519 7527	sulfates
+T125	Mineral 7517 7527	Casulfates
+T126	Contains 7854 7865	composition
+E13	Contains:T126 Cont:T24 Targ:T51
+T127	Contains 7926 7937	composition
+E14	Contains:T127 Cont:T25 Targ:T52
+T128	Feature 7994 7999	veins
+R5	Shows Arg1:T53 Arg2:T128	
+R6	Shows Arg1:T54 Arg2:T128	
+T55	Material 8556 8560	SiO2
+T82	Material 8732 8735	CaO
+T27	Element 6488 6490	Ca
+T129	Mineral 6491 6498	sulfate
+T130	Mineral 6488 6498	Ca-sulfate
+T131	Element 7127 7129	Ca

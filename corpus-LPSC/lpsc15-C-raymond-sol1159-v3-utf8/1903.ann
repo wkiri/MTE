@@ -1,0 +1,48 @@
+T2	Element 4560 4567	calcium
+T3	Element 4694 4696	Mn
+T4	Element 4714 4716	Zn
+T6	Element 5904 5910	sulfur
+T7	Element 5915 5922	calcium
+T8	Element 5981 5988	calcium
+T9	Element 6070 6079	magnesium
+T10	Element 6108 6110	Ni
+T13	Element 7000 7007	calcium
+T18	Target 2574 2582	Sheepbed
+T19	Target 2776 2784	Sheepbed
+T20	Target 3026 3034	Sheepbed
+T21	Target 3450 3458	Sheepbed
+T23	Target 4600 4606	Tingey
+T24	Target 4662 4670	Windjana
+T27	Mineral 3337 3344	sulfate
+T28	Mineral 4568 4575	sulfate
+T29	Mineral 5989 5996	sulfate
+T30	Mineral 6081 6088	sulfate
+T31	Mineral 7008 7015	sulfate
+T32	Mineral 7183 7189	gypsum
+T14	Locality 1909 1924	Yellowknife Bay
+T15	Formation 1909 1934	Yellowknife Bay formation
+T16	Locality 2100 2113	Bradbury Rise
+T17	Member 2574 2589	Sheepbed member
+T22	Contains 2567 2573	of the
+E1	Contains:T22 Targ:T18 Cont:T25
+T25	Material 2558 2566	mudstone
+T26	Target 3063 3072	Gillespie
+T33	Member 3077 3091	Glenelg member
+T1	Locality 4508 4521	Bradbury Rise
+T34	Contains 4536 4559	confirm the presence of
+E2	Contains:T34 Targ:T23 Cont:T35 Cont2:T2
+A1	Confidence E2 High
+T35	Mineral 4560 4575	calcium sulfate
+R1	IsSituatedIn Arg1:T23 Arg2:T1	
+T36	Contains 4685 4693	identify
+E3	Contains:T36 Cont:T3 Targ:T24
+A2	Confidence E3 High
+A3	Amount E3 Contains_High
+T5	Contains 4702 4713	potentially
+E4	Contains:T5 Cont:T4 Targ:T24
+A4	Confidence E4 Low
+A5	Amount E4 Contains_High
+T11	Mineral 5981 5996	calcium sulfate
+T12	Element 6112 6114	Zn
+T37	Mineral 7000 7015	calcium sulfate
+R2	BelongsTo Arg1:T18 Arg2:T17	

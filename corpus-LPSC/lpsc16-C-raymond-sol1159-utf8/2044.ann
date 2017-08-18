@@ -1,0 +1,101 @@
+T1	Element 1902 1904	Na
+T2	Element 1908 1909	H
+T3	Element 1943 1944	H
+T4	Element 2990 2991	S
+T5	Element 2993 2994	H
+T6	Element 2996 2998	Cl
+T7	Element 4606 4608	Li
+T8	Target 2359 2367	Pinckney
+T9	Target 3503 3511	Pinckney
+T12	Target 7086 7094	Pinckney
+T13	Target 8219 8227	Pinckney
+T14	Mineral 6446 6453	olivine
+T15	Mineral 7559 7566	olivine
+T16	Target 2369 2380	Arris_Drift
+T17	Target 2382 2392	Fish_River
+T18	Target 2394 2401	Abbabis
+T19	Target 2403 2411	Sinclair
+T20	Target 2413 2420	Karibib
+T21	Target 2422 2427	Barby
+T22	Target 2438 2444	Kibnas
+T23	Contains 2325 2338	correspond to
+E1	Contains:T23 Cont:T24 Targ:T8 Targ2:T16 Targ3:T17 Targ4:T18 Targ5:T19 Targ6:T20 Targ7:T21 Targ8:T22
+A1	Confidence E1 High
+T24	Material 2339 2344	soils
+T25	Feature 2350 2357	ripples
+R1	Shows Arg1:T8 Arg2:T25	
+R2	Shows Arg1:T16 Arg2:T25	
+R3	Shows Arg1:T17 Arg2:T25	
+R4	Shows Arg1:T18 Arg2:T25	
+R5	Shows Arg1:T19 Arg2:T25	
+R6	Shows Arg1:T20 Arg2:T25	
+R7	Shows Arg1:T21 Arg2:T25	
+R8	Shows Arg1:T22 Arg2:T25	
+T26	Target 2521 2526	Barby
+T27	Feature 2532 2570	grains that are mostly <500 µm in size
+R9	Shows Arg1:T26 Arg2:T27	
+T28	Target 3513 3524	Arris_Drift
+T29	Target 3378 3386	Sinclair
+T30	Target 3388 3395	Abbabis
+T31	Target 3397 3407	Fish_River
+T32	Target 3413 3418	Barby
+T33	Target 3526 3534	Sinclair
+T34	Target 3536 3542	Hoanib
+T35	Target 3544 3550	Awasib
+T36	Target 3555 3561	Kibnas
+T37	Target 4225 4231	Awasib
+T38	Target 4112 4119	Abbabis
+T39	Target 4124 4134	Fish_River
+T40	Material 4190 4195	Soils
+T41	Contains 4201 4208	highest
+E2	Contains:T41 Cont:T42 Targ:T37 Targ2:T44
+A2	Amount E2 Contains_High
+T42	Material 4209 4212	K2O
+T43	Contains 4213 4220	content
+E3	Contains:T43 Cont:T40 Targ:T37 Targ2:T44
+T44	Target 4236 4244	Sinclair
+T10	Site 4819 4828	Dingo Gap
+T11	Material 6324 6328	SiO2
+T45	Target 6144 6151	Abbabis
+T46	Material 6175 6180	CaSO4
+T47	Contains 6158 6172	corresponds to
+E4	Contains:T47 Targ:T45 Cont:T46
+T48	Feature 7043 7056	Coarse grains
+T49	Target 7120 7131	Arris_Drift
+T50	Target 7136 7143	Abbabis
+T51	Target 7152 7160	Sinclair
+T52	Target 7169 7175	Hoanib
+T53	Target 7180 7186	Awasib
+T54	Target 7191 7196	Barby
+T55	Target 7208 7214	Kibnas
+R10	Shows Arg1:T12 Arg2:T48	
+R11	Shows Arg1:T49 Arg2:T48	
+R12	Shows Arg1:T50 Arg2:T48	
+R13	Shows Arg1:T51 Arg2:T48	
+R14	Shows Arg1:T52 Arg2:T48	
+R15	Shows Arg1:T53 Arg2:T48	
+R16	Shows Arg1:T54 Arg2:T48	
+R17	Shows Arg1:T55 Arg2:T48	
+T56	Material 7296 7300	SiO2
+T57	Target 8244 8251	Karibib
+T58	Target 8268 8279	Arris_Drift
+T59	Target 8296 8302	Hoanib
+T60	Target 8329 8339	Fish_River
+T61	Target 8356 8362	Awasib
+T62	Target 8389 8396	Abbabis
+T63	Target 8410 8415	Barby
+T64	Target 8448 8456	Sinclair
+T65	Target 8470 8476	Kibnas
+T66	Target 2485 2491	Hoanib
+T67	Target 2496 2502	Awasib
+T68	Material 2478 2483	soils
+T69	Feature 2468 2483	disturbed soils
+T70	Contains 2464 2467	are
+E5	Contains:T70 Cont:T68 Targ:T66 Targ2:T67
+A3	Confidence E5 High
+R18	Shows Arg1:T66 Arg2:T69	
+R19	Shows Arg1:T67 Arg2:T69	
+T71	Feature 2593 2597	dark
+T72	Feature 2604 2627	a few bright components
+R20	Shows Arg1:T26 Arg2:T71	
+R21	Shows Arg1:T26 Arg2:T72	

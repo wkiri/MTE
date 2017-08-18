@@ -1,0 +1,250 @@
+T1	Element 2594 2596	Al
+T2	Element 3643 3645	Al
+T3	Element 5990 5991	K
+T4	Element 6153 6154	K
+T5	Element 6802 6804	Al
+T6	Target 847 863	Confidence Hills
+T7	Target 1228 1244	Confidence Hills
+T8	Target 2159 2175	Confidence Hills
+T9	Target 3147 3163	Confidence Hills
+T10	Site 4272 4280	Rocknest
+T11	Target 4282 4292	John Klein
+T12	Target 4294 4304	Cumberland
+T13	Target 4310 4318	Windjana
+T15	Target 4703 4713	John Klein
+T16	Target 4718 4728	Cumberland
+T17	Target 5110 5120	John Klein
+T18	Target 5229 5245	Confidence Hills
+T19	Target 6124 6132	Windjana
+T20	Target 6189 6199	John Klein
+T21	Target 6204 6214	Cumberland
+T22	Target 6899 6909	Cumberland
+T23	Target 6911 6921	John Klein
+T24	Target 6927 6943	Confidence Hills
+T25	Target 8050 8058	Windjana
+T26	Target 8192 8200	Windjana
+T27	Mineral 1307 1315	hematite
+T28	Mineral 1327 1336	magnetite
+T33	Mineral 3339 3348	pigeonite
+T34	Mineral 3350 3359	magnetite
+T35	Mineral 3365 3375	forsterite
+T36	Mineral 3479 3491	cristobalite
+T37	Mineral 3493 3501	ilmenite
+T38	Mineral 3503 3511	jarosite
+T40	Mineral 3737 3745	hematite
+T41	Mineral 3885 3893	Hematite
+T46	Mineral 4409 4417	hematite
+T47	Mineral 4474 4482	hematite
+T48	Mineral 4903 4911	smectite
+T49	Mineral 5023 5031	smectite
+T50	Mineral 5077 5083	illite
+T51	Mineral 5401 5407	Augite
+T53	Mineral 5472 5481	Pigeonite
+T55	Mineral 5508 5518	Forsterite
+T61	Mineral 6448 6456	jarosite
+T62	Mineral 6734 6746	cristobalite
+T63	Mineral 7358 7366	hematite
+T65	Mineral 7788 7796	hematite
+T68	Mineral 1348 1362	phyllosilicate
+T69	Mineral 1376 1385	feldspars
+T70	Mineral 1396 1407	plagioclase
+T72	Mineral 1458 1468	forsterite
+T73	Mineral 1470 1483	orthopyroxene
+T74	Mineral 1502 1515	clinopyroxene
+T75	Mineral 1639 1647	jarosite
+T76	Mineral 2975 2983	jarosite
+T77	Mineral 2985 2994	magnetite
+T78	Mineral 3000 3008	pyroxene
+T79	Mineral 3095 3109	phyllosilicate
+T80	Mineral 3190 3201	plagioclase
+T81	Mineral 3203 3209	augite
+T82	Mineral 3214 3222	hematite
+T83	Mineral 3288 3302	phyllosilicate
+T84	Mineral 3311 3319	feldspar
+T85	Mineral 3324 3337	orthopyroxene
+T92	Mineral 3517 3523	quartz
+T93	Mineral 3529 3541	cristobalite
+T95	Mineral 3747 3762	phyllosilicates
+T96	Mineral 3768 3776	sulfates
+T97	Mineral 3874 3882	Hematite
+T99	Mineral 4022 4030	hematite
+T100	Mineral 4124 4132	hematite
+T101	Mineral 4142 4150	hematite
+T102	Mineral 4362 4370	hematite
+T105	Mineral 4677 4692	phyllosilicates
+T106	Mineral 4828 4836	pyroxene
+T107	Mineral 5203 5217	phyllosilicate
+T108	Mineral 5312 5326	phyllosilicate
+T109	Mineral 5379 5390	Plagioclase
+T111	Mineral 5417 5425	Hematite
+T112	Mineral 5450 5463	Orthopyroxene
+T114	Mineral 5490 5499	Magnetite
+T116	Mineral 5527 5539	Cristobalite
+T117	Mineral 5550 5558	Ilmenite
+T118	Mineral 5569 5577	Jarosite
+T119	Mineral 5588 5594	Quartz
+T120	Mineral 5605 5619	Phyllosilicate
+T121	Mineral 5674 5683	Feldspars
+T122	Mineral 5716 5724	feldspar
+T123	Mineral 5739 5750	Plagioclase
+T124	Mineral 5820 5831	plagioclase
+T125	Mineral 5841 5849	andesine
+T126	Mineral 5864 5874	oligoclase
+T127	Mineral 5977 5988	plagioclase
+T128	Mineral 5993 6001	feldspar
+T129	Mineral 6050 6060	orthoclase
+T130	Mineral 6091 6099	feldspar
+T131	Mineral 6156 6164	feldspar
+T132	Mineral 6303 6312	feldspars
+T133	Mineral 6366 6374	jarosite
+T134	Mineral 6376 6382	quartz
+T135	Mineral 6384 6396	cristobalite
+T136	Mineral 6402 6410	ilmenite
+T139	Mineral 6870 6884	phyllosilicate
+T140	Mineral 6960 6974	Phyllosilicate
+T141	Mineral 7237 7251	phyllosilicate
+T143	Mineral 7588 7596	hematite
+T144	Mineral 7598 7613	phyllosilicates
+T145	Mineral 7619 7627	sulfates
+T147	Mineral 7983 7994	plagioclase
+T29	Locality 915 928	Pahrump Hills
+R1	IsSituatedIn Arg1:T6 Arg2:T29	
+T30	Contains 1298 1306	abundant
+E1	Contains:T30 Cont:T27 Targ:T7
+A1	Amount E1 Contains_High
+T31	Contains 1320 1326	lesser
+E2	Contains:T31 Targ:T7 Cont:T28 Cont2:T68 Cont3:T69 Cont4:T70 Cont5:T39 Cont6:T42 Cont7:T72 Cont8:T73 Cont9:T74
+T32	Mineral 1419 1427	feldspar
+T39	Mineral 1412 1427	alkali feldspar
+T42	Material 1432 1447	mafic silicates
+T43	Contains 1581 1605	minor contributions from
+E3	Contains:T43 Targ:T7 Cont:T75 Cont2:T146
+A2	Amount E3 Contains_Low
+T44	Target 2752 2754	CH
+T45	Target 865 867	CH
+T52	Target 1681 1683	CH
+T54	Element 1517 1519	Ca
+T56	Element 1529 1531	Ca
+T57	Contains 3174 3189	is dominated by
+E4	Contains:T57 Targ:T9 Cont:T80 Cont2:T81 Cont3:T82
+A3	Confidence E4 High
+A4	Amount E4 Contains_High
+T58	Contains 3224 3280	Other phases present well above detection limits include
+E5	Contains:T58 Targ:T9 Cont:T83 Cont2:T59 Cont3:T85 Cont4:T33 Cont5:T34 Cont6:T35 Cont7:T60
+A5	Confidence E5 High
+A6	Amount E5 Contains
+T59	Mineral 3304 3319	alkali feldspar
+T60	Material 3402 3421	amorphous component
+T64	Contains 3423 3478	Minor to trace phases close to detection limits include
+E6	Contains:T64 Targ:T9 Cont:T36 Cont2:T37 Cont3:T38 Cont4:T92
+A7	Amount E6 Contains_Low
+T66	Contains 3542 3569	identification is tentative
+E7	Contains:T66 Cont:T93 Targ:T9
+A8	Confidence E7 Low
+A9	Amount E7 Contains
+T14	Mineral 5435 5441	K-spar
+T67	Target 5735 5737	CH
+T71	Feature 5707 5731	multiple feldspar phases
+R2	Shows Arg1:T67 Arg2:T71	
+T86	Mineral 5990 6001	K- feldspar
+T87	Mineral 6153 6164	K- feldspar
+T88	Target 6300 6302	CH
+T89	Element 6603 6605	Fe
+T90	Mineral 6606 6613	sulfate
+T91	Mineral 6603 6613	Fe-sulfate
+T94	Target 7019 7021	CH
+T98	Target 7279 7281	CH
+T103	Target 7633 7635	CH
+T104	Target 7921 7923	CH
+T110	Target 8070 8072	CH
+T113	Element 7801 7805	iron
+T115	Mineral 7806 7813	sulfate
+T137	Mineral 7802 7813	ron-sulfate
+T138	Target 7839 7841	CH
+T142	Element 7886 7890	iron
+T146	Element 1606 1612	sulfur
+T148	Contains 3894 3908	was identified
+E8	Contains:T148 Cont:T41 Targ:T9
+T149	Contains 4004 4018	identification
+E9	Contains:T149 Cont:T99 Targ:T9
+T150	Contains 4102 4112	indicating
+E10	Contains:T150 Cont:T100 Targ:T9
+T151	Contains 4170 4191	is significantly more
+E11	Contains:T151 Cont:T101 Targ:T9
+A10	Amount E11 Contains_High
+T153	Contains 4246 4249	0.6
+E13	Contains:T153 Cont:T101 Targ:T11
+T154	Contains 4251 4254	0.7
+E14	Contains:T154 Cont:T101 Targ:T12
+T155	Contains 4260 4263	0.6
+E15	Contains:T155 Cont:T101 Targ:T13
+T156	Contains 4344 4358	high abundance
+E16	Contains:T156 Cont:T102 Targ:T9
+A11	Amount E16 Contains_High
+T157	Feature 4610 4629	broad peak at ~10 Å
+T158	Target 4577 4579	CH
+R3	Shows Arg1:T158 Arg2:T157	
+T159	Contains 4666 4676	containing
+E17	Contains:T159 Cont:T105 Targ:T15 Targ2:T16
+T160	Contains 4798 4800	is
+E18	Contains:T160 Cont:T106 Targ:T158
+T161	Target 5174 5176	CH
+T162	Contains 5185 5202	there is ~ 11 wt%
+E19	Contains:T162 Cont:T107 Targ:T161
+T163	Contains 5287 5296	abundance
+E20	Contains:T163 Targ:T18 Cont:T109 Cont2:T51 Cont3:T111 Cont4:T14 Cont5:T112 Cont6:T53 Cont7:T114 Cont8:T55 Cont9:T116 Cont10:T117 Cont11:T118 Cont12:T119 Cont13:T120
+T164	Contains 5685 5706	There is evidence for
+E21	Contains:T164 Cont:T122 Targ:T67
+T165	Contains 5758 5771	most abundant
+E22	Contains:T165 Cont:T123 Targ:T67
+A12	Amount E22 Contains_High
+T166	Contains 5790 5819	best modeled by two different
+E23	Contains:T166 Cont:T124 Cont2:T125 Cont3:T126 Targ:T67
+T167	Contains 6002 6019	was also detected
+E24	Contains:T167 Targ:T67 Cont:T127 Cont2:T86 Cont3:T128 Cont4:T3 Cont5:T129
+T168	Contains 6145 6152	rich in
+E25	Contains:T168 Targ:T19 Cont:T4 Cont2:T87 Cont3:T131
+T169	Contains 6178 6188	similar to
+E26	Contains:T169 Cont:T130 Targ:T20 Targ2:T21
+T170	Contains 6296 6299	the
+E27	Contains:T170 Targ:T88 Cont:T132
+T171	Contains 6346 6356	identified
+E28	Contains:T171 Targ:T88 Cont:T133 Cont2:T134 Cont3:T135 Cont4:T136
+T172	Contains 6421 6442	near detection limits
+E29	Contains:T172 Cont:T61 Targ:T88
+A13	Amount E29 Contains_Low
+T173	Contains 6600 6602	an
+E30	Contains:T173 Targ:T88 Cont:T91 Cont2:T90 Cont3:T89
+T174	Contains 6747 6774	identification is tentative
+E31	Contains:T174 Cont:T62 Targ:T88
+A14	Confidence E31 Low
+T175	Contains 6885 6890	peaks
+E32	Contains:T175 Cont:T139 Targ:T22 Targ2:T23 Targ3:T24
+T176	Material 7053 7075	amorphous component(s)
+T177	Contains 7022 7049	contains a large percentage
+E33	Contains:T177 Cont:T176 Targ:T94
+A15	Amount E33 Contains_High
+T178	Contains 7266 7275	component
+E34	Contains:T178 Cont:T141 Targ:T98
+T179	Contains 7336 7357	detection of abundant
+E35	Contains:T179 Cont:T63 Targ:T98
+A16	Amount E35 Contains_High
+T180	Formation 7524 7540	Murray formation
+T181	Contains 7650 7705	consistent with the Murray formation orbital mineralogy
+E36	Contains:T181 Targ:T103 Cont:T143 Cont2:T144 Cont3:T145
+T182	Contains 7776 7784	presence
+E37	Contains:T182 Cont:T65 Cont2:T137 Cont3:T115 Cont4:T113 Targ:T138
+T183	Contains 7963 7979	higher abundance
+E38	Contains:T183 Targ:T104 Cont:T147
+A17	Amount E38 Contains_High
+T184	Material 8018 8024	alkali
+T185	Contains 8025 8029	rich
+E39	Contains:T185 Cont:T184 Targ:T25
+A18	Amount E39 Contains_High
+T186	Feature 8091 8110	basaltic mineralogy
+R4	Shows Arg1:T110 Arg2:T186	
+T187	Process 7886 7915	ironbearing fluid interaction
+R5	Shows Arg1:T138 Arg2:T187	
+T188	Process 8172 8186	igneous origin
+R6	Shows Arg1:T26 Arg2:T188	
+T189	Target 1 17	CONFIDENCE HILLS

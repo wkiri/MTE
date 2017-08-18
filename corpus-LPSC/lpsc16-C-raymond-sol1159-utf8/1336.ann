@@ -1,0 +1,83 @@
+T1	Element 1679 1681	Al
+T2	Element 1683 1685	Si
+T3	Element 1687 1689	Fe
+T4	Element 1691 1693	Mg
+T5	Element 1695 1697	Na
+T6	Element 1703 1704	K
+T7	Element 3393 3395	Fe
+T8	Element 3430 3432	Mg
+T9	Element 3537 3546	potassium
+T10	Element 4196 4198	Al
+T11	Element 4537 4546	potassium
+T12	Element 5069 5077	aluminum
+T13	Element 5318 5320	Si
+T14	Element 7751 7752	K
+T15	Element 8065 8067	Fe
+T16	Element 8090 8092	Mg
+T17	Element 8132 8134	Mg
+T18	Element 8146 8148	Fe
+T20	Target 2900 2908	Bathurst
+T22	Target 3159 3167	Sheepbed
+T23	Target 3258 3266	Sheepbed
+T24	Site 3282 3290	Rocknest
+T25	Target 3461 3469	Bathurst
+T26	Target 3869 3875	Darwin
+T27	Target 5595 5603	Buckskin
+T29	Site 8031 8039	Rocknest
+T31	Mineral 2604 2613	feldspars
+T32	Mineral 2693 2702	feldspars
+T33	Mineral 2753 2761	feldspar
+T34	Mineral 2878 2884	quartz
+T35	Mineral 4215 4224	feldspars
+T36	Mineral 4640 4648	sanidine
+T37	Mineral 5491 5500	Tridymite
+T38	Mineral 5645 5649	opal
+T39	Mineral 7699 7707	feldspar
+T40	Mineral 8164 8171	sulfate
+T30	Material 2195 2199	SiO2
+T41	Locality 2910 2925	Yellowknife Bay
+T42	Element 3116 3118	Ca
+T43	Feature 3116 3132	Ca-sulfate veins
+R1	Shows Arg1:T22 Arg2:T43	
+T44	Feature 3219 3236	diagenetic ridges
+R2	Shows Arg1:T23 Arg2:T44	
+T45	Material 3984 3988	SiO2
+T47	Element 4569 4571	Na
+T46	Element 4567 4568	K
+T48	Locality 5211 5222	Marias Pass
+T49	Contains 5565 5580	was observed by
+E1	Contains:T49 Cont:T37 Targ:T27
+A1	Confidence E1 High
+T50	Element 7798 7799	K
+T51	Element 7800 7802	Na
+T52	Element 7864 7865	K
+T53	Element 7866 7868	Na
+T28	Locality 8104 8111	Pahrump
+T54	Site 2890 2898	Rocknest
+T19	Unit 3015 3032	Sheepbed mudstone
+R3	Associated Arg1:T41 Arg2:T19	
+T55	Contains 3142 3155	were observed
+E2	Contains:T55 Targ:T22 Cont:T57 Cont2:T56 Cont3:T42
+T56	Mineral 3119 3126	sulfate
+T57	Mineral 3116 3126	Ca-sulfate
+T21	Element 3212 3214	Mg
+T58	Contains 3214 3218	rich
+E3	Contains:T58 Targ:T23 Cont:T21
+A2	Amount E3 Contains_High
+T59	Contains 3522 3533	enrichments
+E4	Contains:T59 Targ:T25 Cont:T9
+A3	Amount E4 Contains_High
+T60	Locality 3557 3563	Shaler
+T61	Locality 2931 2937	Shaler
+T62	Feature 3614 3626	foreset beds
+R4	Shows Arg1:T60 Arg2:T62	
+T63	Feature 3680 3720	alternating recessive and resistant beds
+T64	Site 3880 3891	Cooperstown
+T65	Locality 3918 3931	Bradbury Rise
+T66	Locality 4350 4359	Kimberley
+T67	Feature 4407 4419	foreset beds
+T68	Contains 5622 5641	significant amounts
+E5	Contains:T68 Cont:T38 Targ:T27
+A4	Amount E5 Contains_High
+T69	Unit 5796 5803	Stimson
+T70	Process 5804 5811	aeolian

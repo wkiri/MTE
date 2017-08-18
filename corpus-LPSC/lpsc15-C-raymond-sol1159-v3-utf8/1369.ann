@@ -1,0 +1,83 @@
+T1	Element 1767 1769	Si
+T2	Element 1786 1788	Si
+T3	Element 1806 1808	Si
+T5	Element 2801 2803	Si
+T6	Element 3063 3065	Si
+T7	Element 3276 3278	Si
+T8	Element 3431 3433	Si
+T11	Element 3452 3453	S
+T13	Element 3501 3503	Si
+T14	Element 3521 3523	Si
+T16	Element 3633 3635	Mg
+T17	Element 3872 3874	Mg
+T18	Element 3913 3915	Mg
+T19	Element 4099 4101	Si
+T20	Element 4264 4266	Mg
+T21	Element 4492 4494	Mg
+T22	Element 4719 4721	Mg
+T23	Element 4814 4816	Si
+T24	Element 4856 4858	Mg
+T25	Element 4966 4968	Mg
+T26	Element 5366 5368	Si
+T27	Element 5385 5387	Si
+T30	Element 5443 5445	Si
+T31	Element 5538 5540	Mg
+T33	Element 5602 5604	Mg
+T34	Element 5811 5813	Si
+T35	Element 5824 5826	Mg
+T36	Element 5982 5984	Mg
+T37	Element 6249 6251	Mg
+T41	Target 2096 2104	Windjana
+T42	Target 2448 2457	Goldstone
+T43	Target 2584 2593	Goldstone
+T44	Target 2642 2651	Goldstone
+T45	Target 2819 2828	Goldstone
+T46	Target 3395 3404	Goldstone
+T47	Target 3480 3489	Goldstone
+T48	Target 3619 3628	Goldstone
+T49	Target 3836 3845	Goldstone
+T50	Target 3893 3902	Goldstone
+T51	Target 4127 4136	Goldstone
+T52	Target 4324 4333	Goldstone
+T53	Target 5133 5142	Goldstone
+T54	Target 5240 5249	Goldstone
+T55	Target 5434 5442	Windjana
+T56	Target 5593 5601	Windjana
+T57	Target 5663 5671	Windjana
+T58	Target 5883 5891	Windjana
+T59	Target 6035 6043	Windjana
+T60	Target 6072 6080	Windjana
+T61	Target 6144 6152	Windjana
+T62	Target 6270 6278	Windjana
+T4	Contains 2078 2091	concentration
+E1	Contains:T4 Cont:T40 Targ:T41
+T40	Material 2074 2077	MgO
+T63	Feature 2123 2144	relatively homogenous
+R1	Shows Arg1:T41 Arg2:T63	
+T64	Contains 2804 2818	line ratio for
+E2	Contains:T64 Cont:T5 Targ:T45
+T28	Contains 5117 5128	composition
+E3	Contains:T28 Cont:T32 Targ:T53
+T9	Contains 3537 3555	spectra line ratio
+E4	Contains:T9 Cont:T14 Targ:T47
+T10	Contains 3629 3632	the
+E5	Contains:T10 Targ:T48 Cont:T16
+T12	Contains 3904 3912	Observed
+E6	Contains:T12 Cont:T18 Targ:T50
+T15	Contains 4114 4122	observed
+E7	Contains:T15 Targ:T51 Cont:T19
+T32	Material 5113 5116	MgO
+T65	Contains 5446 5451	ratio
+E8	Contains:T65 Cont:T30 Targ:T55
+T66	Contains 5605 5608	448
+E9	Contains:T66 Cont:T33 Targ:T56
+T67	Material 5752 5755	MgO
+T68	Contains 5756 5770	weight percent
+E10	Contains:T68 Cont:T67 Targ:T57
+T69	Contains 5814 5819	ratio
+E11	Contains:T69 Cont:T34 Targ:T58
+T70	Contains 5827 5847	448 nm line strength
+E12	Contains:T70 Targ:T58 Cont:T35
+T71	Contains 6297 6310	concentration
+E13	Contains:T71 Cont:T72 Targ:T62
+T72	Material 6284 6287	MgO

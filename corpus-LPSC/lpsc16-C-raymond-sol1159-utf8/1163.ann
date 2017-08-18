@@ -1,0 +1,90 @@
+T1	Element 1826 1835	potassium
+T2	Element 5266 5267	K
+T3	Element 5816 5817	K
+T4	Element 5824 5833	potassium
+T5	Element 5952 5961	potassium
+T6	Element 6089 6090	K
+T10	Locality 1614 1622	Rocknest
+T11	Target 1628 1636	Bathurst
+T12	Target 3860 3866	Darwin
+T13	Target 4726 4732	Beagle
+T15	Target 4951 4959	Windjana
+T16	Target 5034 5043	Dillinger
+T17	Target 5481 5485	Liga
+T18	Target 5508 5518	Square Top
+T19	Target 7407 7416	Dillinger
+T20	Mineral 5228 5234	illite
+T21	Mineral 5239 5246	biotite
+T22	Mineral 4334 4343	feldspars
+T23	Mineral 4359 4371	anorthoclase
+T24	Mineral 4376 4384	sanidine
+T25	Mineral 4587 4596	feldspars
+T26	Mineral 4875 4883	sanidine
+T27	Mineral 5005 5013	sanidine
+T28	Mineral 5214 5219	micas
+T29	Mineral 7569 7581	anorthoclase
+T30	Mineral 7582 7590	feldspar
+T31	Mineral 7595 7603	sanidine
+T32	Element 5 13	POTASSIC
+T33	Element 1204 1213	potassium
+T34	Feature 1219 1226	clastic
+T35	Material 1227 1238	sedimentary
+T9	Element 1473 1481	potassic
+T36	Target 1606 1612	Shaler
+T37	Material 1651 1654	K2O
+T38	Contains 1655 1664	abundance
+E1	Contains:T38 Cont:T37 Targ:T36 Targ3:T11
+A1	Confidence E1 High
+A2	Amount E1 Contains_High
+T39	Contains 1599 1605	namely
+E2	Contains:T39 Cont:T9 Targ:T36 Targ3:T11
+A3	Confidence E2 High
+A4	Amount E2 Contains_High
+T40	Site 1881 1892	Cooperstown
+T41	Site 1915 1924	Kimberley
+T42	Locality 2106 2115	Kimberley
+T43	Locality 2090 2101	Cooperstown
+T44	Element 2154 2162	potassic
+T45	Unit 2449 2455	Rugged
+T46	Unit 2360 2368	Striated
+T47	Unit 2290 2296	Rugged
+T48	Locality 2394 2405	Cooperstown
+T49	Formation 2494 2507	YKB formation
+T50	Locality 2532 2543	Cooperstown
+T51	Material 2623 2633	sandstones
+T52	Locality 2645 2654	Kimberley
+T53	Locality 2725 2736	Cooperstown
+T54	Formation 2776 2795	Kimberley formation
+T56	Formation 2867 2886	Kimberley formation
+T57	Unit 2915 2926	Rugged unit
+T58	Unit 2935 2948	Striated unit
+T59	Locality 3443 3454	Cooperstown
+T60	Locality 3459 3468	Kimberley
+T61	Element 4206 4207	K
+T62	Element 4145 4146	K
+T63	Material 4239 4243	SiO2
+T69	Element 4616 4617	K
+T70	Mineral 4618 4627	feldspars
+T71	Mineral 4616 4627	K-feldspars
+T72	Contains 4884 4890	in the
+E3	Contains:T72 Cont:T26 Targ2:T15
+A5	Confidence E3 High
+A6	Amount E3 Contains_High
+T73	Contains 4984 5001	content of 20 wt%
+E4	Contains:T73 Cont:T27 Targ:T15
+A7	Confidence E4 High
+T74	Element 5168 5169	K
+T55	Material 5599 5603	FeOT
+T64	Contains 5575 5598	have high abundances of
+E5	Contains:T64 Cont:T55 Targ:T17 Targ2:T18
+A8	Confidence E5 High
+A9	Amount E5 Contains_High
+T65	Element 5732 5734	Fe
+T66	Element 5743 5745	Fe
+T67	Element 5768 5770	Fe
+T68	Material 5969 5977	trachyte
+T75	Element 6127 6135	potassic
+T76	Element 7330 7332	Mn
+R1	Associated Arg1:T48 Arg2:T45	
+T7	Element 5360 5361	K
+T8	Member 4891 4907	Dillinger member

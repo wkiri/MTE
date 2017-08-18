@@ -113,7 +113,6 @@ Altisite
 Alum-(K)
 Alum-(Na)
 Aluminite
-Aluminium
 Aluminoceladonite
 Aluminocerite-(Ce)
 Aluminocopiapite
@@ -187,7 +186,6 @@ Anthonyite
 Anthophyllite
 Antigorite
 Antimonselite
-Antimony
 Antipinite
 Antlerite
 Anyuiite
@@ -247,7 +245,6 @@ Arrojadite-(SrFe)
 Arsenatrotitanite
 Arsenbrackebuschite
 Arsendescloizite
-Arsenic
 Arseniopleite
 Arseniosiderite
 Arsenmarcobaldiite
@@ -498,7 +495,6 @@ Birunite
 Bischofite
 Bismite
 Bismoclite
-Bismuth
 Bismuthinite
 Bismutite
 Bismutocolumbite
@@ -668,7 +664,6 @@ Cabalzarite
 Cabriite
 Cabvinite
 Cacoxenite
-Cadmium
 Cadmoindite
 Cadmoselite
 Cadwaladerite
@@ -800,7 +795,6 @@ Cerchiaraite-(Mn)
 Cerianite-(Ce)
 Cerite-(Ce)
 Cerite-(La)
-Cerium
 ?ern_ite
 Ceruleite
 Cerussite
@@ -914,7 +908,6 @@ Chromceladonite
 Chromferide
 Chromio-pargasite
 Chromite
-Chromium
 Chromium-dravite
 Chromo-alumino-povondraite
 Chromphyllite
@@ -1019,7 +1012,6 @@ Coombsite
 Cooperite
 Coparsite
 Copiapite
-Copper
 Coquandite
 Coquimbite
 Coralloite
@@ -1797,7 +1789,6 @@ Godlevskite
 Godovikovite
 Goedkenite
 Goethite
-Gold
 Goldfieldite
 Goldichite
 Goldmanite
@@ -2176,7 +2167,6 @@ Inderite
 Indialite
 Indigirite
 Indite
-Indium
 Inesite
 Ingersonite
 Ingodite
@@ -2193,10 +2183,8 @@ Iraqite-(La)
 Irarsite
 Irhtemite
 Iridarsenite
-Iridium
 Iriginite
 Irinarassite
-Iron
 Irtyshite
 Iseite
 Ishiharaite
@@ -2651,7 +2639,6 @@ Lazarenkoite
 Lazaridisite
 Lazulite
 Lazurite
-Lead
 Leadamalgam
 Leadhillite
 Lechatelierite
@@ -3034,7 +3021,6 @@ Meniaylovite
 Menshikovite
 Menzerite-(Y)
 Mercallite
-Mercury
 Mereheadite
 Mereiterite
 Merelaniite
@@ -3331,7 +3317,6 @@ Newberyite
 Neyite
 Ne?ilovite
 Niahite
-Nickel
 Nickelaustinite
 Nickelbischofite
 Nickelblödite
@@ -3482,7 +3467,6 @@ Osarsite
 Osbornite
 Oscarkempffite
 Oskarssonite
-Osmium
 Osumilite
 Osumilite-(Mg)
 Oswaldpeetersite
@@ -3536,7 +3520,6 @@ Palarstanide
 Palenzonaite
 Palermoite
 Palladinite
-Palladium
 Palladoarsenide
 Palladobismutharsenide
 Palladodymite
@@ -3766,7 +3749,6 @@ Plancheite
 Planerite
 Plá?ilite
 Platarsite
-Platinum
 Plattnerite
 Plavnoite
 Playfairite
@@ -3999,7 +3981,6 @@ Rhabdophane-(Y)
 Rheniite
 Rhodarsenide
 Rhodesite
-Rhodium
 Rhodizite
 Rhodochrosite
 Rhodonite
@@ -4107,7 +4088,6 @@ Rustenburgite
 Rustumite
 Ruthenarsenite
 Rutheniridosmine
-Ruthenium
 Rutherfordine
 Rutile
 Rynersonite
@@ -4245,7 +4225,6 @@ Seifertite
 Seinäjokite
 Sejkoraite-(Y)
 Sekaninaite
-Selenium
 Selenojalpaite
 Selenopolybasite
 Selenostephanite
@@ -4315,11 +4294,9 @@ Sigloite
 Siidraite
 Silhydrite
 Silicocarnotite
-Silicon
 Silinaite
 Sillénite
 Sillimanite
-Silver
 Silvialite
 Simferite
 Simmonsite
@@ -4603,7 +4580,6 @@ Teineite
 Telargpalite
 Tellurantimony
 Tellurite
-Tellurium
 Tellurobismuthite
 Tellurohauchecornite
 Telluromandarinoite
@@ -4677,7 +4653,6 @@ Tilasite
 Tilleyite
 Tillmannsite
 Timroseite
-Tin
 Tinaksite
 Tincalconite
 Tinnunculite
@@ -4692,7 +4667,6 @@ Tisinalite
 Tissintite
 Tistarite
 Titanite
-Titanium
 Titanoholtite
 Titanomaghemite
 Titanowodginite
@@ -4790,7 +4764,6 @@ Tumchaite
 Tundrite-(Ce)
 Tundrite-(Nd)
 Tunellite
-Tungsten
 Tungstenite
 Tungstibite
 Tungstite
@@ -4874,7 +4847,6 @@ Vanadinite
 Vanadiocarpholite
 Vanadio-oxy-chromium-dravite
 Vanadio-oxy-dravite
-Vanadium
 Vanadoallanite-(La)
 Vanadoandrosite-(Ce)
 Vanadomalayaite
@@ -5201,7 +5173,6 @@ Ziesite
 Zigrasite
 Zimbabweite
 Ziminaite
-Zinc
 Zincalstibite
 Zincaluminite
 Zincgartrellite

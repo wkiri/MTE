@@ -1,0 +1,101 @@
+T2	Element 3969 3973	iron
+T3	Element 6139 6146	calcium
+T4	Element 6163 6170	calcium
+T5	Element 6225 6232	calcium
+T6	Element 6346 6353	calcium
+T7	Element 6370 6377	calcium
+T8	Element 6454 6461	calcium
+T9	Element 6577 6584	calcium
+T10	Target 620 628	Buckskin
+T11	Target 841 850	Meeteetse
+T12	Target 1209 1218	Meeteetse
+T13	Target 1666 1675	Meeteetse
+T14	Target 1810 1819	Meeteetse
+T15	Target 1892 1901	Meeteetse
+T16	Target 2007 2016	Meeteetse
+T17	Target 3274 3283	Meeteetse
+T18	Target 3427 3436	Meeteetse
+T19	Target 3475 3486	Fisch_Scale
+T20	Target 3524 3533	Meeteetse
+T21	Target 3648 3655	Mission
+T22	Target 3658 3667	Meeteetse
+T23	Target 3672 3676	Cody
+T24	Target 3783 3786	Elk
+T25	Target 4173 4182	Meeteetse
+T26	Target 4348 4357	Meeteetse
+T27	Target 4453 4462	Meeteetse
+T28	Target 4736 4745	Meeteetse
+T29	Target 5509 5518	Meeteetse
+T30	Target 5523 5527	Cody
+T31	Target 5958 5967	Meeteetse
+T32	Target 6086 6091	Leroy
+T33	Target 6248 6257	Meeteetse
+T34	Target 6293 6302	Meeteetse
+T35	Target 6307 6311	Cody
+T36	Target 6389 6400	Fisch_Scale
+T37	Target 6533 6542	Meeteetse
+T38	Target 6779 6788	Meeteetse
+T39	Target 6858 6867	Meeteetse
+T40	Target 7054 7063	Meeteetse
+T41	Target 7172 7181	Meeteetse
+T42	Target 7252 7263	Fisch_Scale
+T43	Target 7273 7282	Meeteetse
+T44	Target 7294 7300	Piegan
+T45	Target 7306 7313	Mission
+T46	Target 7392 7401	Meeteetse
+T47	Target 7406 7410	Cody
+T48	Target 7558 7561	Elk
+T49	Target 7776 7785	Meeteetse
+T50	Target 8021 8030	Meeteetse
+T51	Target 8553 8562	Meeteetse
+T53	Mineral 6147 6154	sulfate
+T54	Mineral 6171 6178	sulfate
+T55	Mineral 6233 6240	sulfate
+T56	Mineral 6462 6469	sulfate
+T57	Mineral 6585 6592	sulfate
+T1	Locality 859 872	Bridger Basin
+R1	IsSituatedIn Arg1:T11 Arg2:T1	
+T58	Locality 1254 1267	Bridger Basin
+R2	IsSituatedIn Arg1:T12 Arg2:T58	
+T59	Target 2243 2247	Cody
+T60	Feature 2333 2345	fine grained
+R3	Shows Arg1:T59 Arg2:T60	
+T52	Feature 2400 2407	nodules
+R4	Shows Arg1:T59 Arg2:T52	
+T61	Feature 3490 3500	dark-toned
+R5	Shows Arg1:T19 Arg2:T61	
+T62	Feature 3600 3610	dark-toned
+T63	Locality 3629 3640	Marias Pass
+R6	IsSituatedIn Arg1:T21 Arg2:T63	
+R7	Shows Arg1:T21 Arg2:T62	
+T64	Feature 3689 3700	light-toned
+R8	Shows Arg1:T23 Arg2:T64	
+R9	Shows Arg1:T22 Arg2:T64	
+T65	Material 3739 3745	silica
+T66	Contains 3731 3738	highest
+E1	Contains:T66 Cont:T65 Targ:T24
+A1	Amount E1 Contains_High
+T67	Feature 5554 5569	diagenetic halo
+R10	Shows Arg1:T30 Arg2:T67	
+R11	Shows Arg1:T29 Arg2:T67	
+T68	Material 5605 5611	silica
+T69	Contains 5600 5604	high
+E2	Contains:T69 Cont:T68 Targ:T30 Targ2:T29
+A2	Amount E2 Contains_Low
+T70	Contains 6099 6138	determined that the veins are filled by
+E3	Contains:T70 Targ:T32 Cont:T3 Cont2:T53 Cont3:T72
+A3	Confidence E3 High
+A4	Amount E3 Contains
+T71	Mineral 6163 6178	calcium sulfate
+T72	Mineral 6139 6154	calcium sulfate
+T73	Material 6317 6323	silica
+T74	Contains 6324 6335	enrichments
+E4	Contains:T74 Cont:T73 Targ:T35 Targ2:T34
+A5	Amount E4 Contains_High
+T75	Contains 6337 6345	very low
+E5	Contains:T75 Targ:T34 Targ2:T35 Cont:T76
+A6	Amount E5 Contains_Low
+T76	Material 6346 6359	calcium oxide
+T77	Mineral 6454 6469	calcium sulfate
+T78	Target 6869 6876	Big_Sky
+T79	Target 6877 6886	Greenhorn

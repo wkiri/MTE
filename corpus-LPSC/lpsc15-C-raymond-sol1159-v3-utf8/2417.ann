@@ -1,0 +1,62 @@
+T1	Element 5759 5763	iron
+T4	Target 2499 2509	John Klein
+T5	Target 2521 2531	Cumberland
+T6	Target 2543 2551	Windjana
+T7	Target 2566 2582	Confidence Hills
+T8	Target 2669 2681	Bonanza King
+T10	Target 3660 3672	Bonanza King
+T12	Target 4114 4124	John Klein
+T13	Target 4204 4214	John Klein
+T14	Target 4234 4242	Sheepbed
+T15	Target 4484 4494	John Klein
+T16	Target 4753 4763	Cumberland
+T17	Target 4775 4785	Cumberland
+T18	Target 4859 4869	Cumberland
+T19	Target 4906 4916	John Klein
+T20	Target 4972 4982	John Klein
+T21	Target 5096 5106	Cumberland
+T22	Target 5235 5243	Windjana
+T24	Target 5449 5465	Confidence Hills
+T26	Target 5845 5861	Confidence Hills
+T28	Target 6191 6201	John Klein
+T29	Target 6207 6217	Cumberland
+T30	Target 6223 6231	Windjana
+T31	Target 6237 6253	Confidence Hills
+T32	Target 6327 6339	Bonanza King
+T35	Mineral 5820 5828	hematite
+T37	Mineral 5654 5662	hematite
+T39	Mineral 5786 5795	magnetite
+T41	Mineral 5832 5841	magnetite
+T2	Unit 4234 4251	Sheepbed mudstone
+R1	BelongsTo Arg1:T13 Arg2:T2	
+T3	Locality 4270 4285	Yellowknife Bay
+T9	Region 4294 4305	Gale Crater
+R2	IsSituatedIn Arg1:T13 Arg2:T3	
+R3	IsSituatedIn Arg1:T13 Arg2:T9	
+T11	Contains 4495 4508	appears to be
+E1	Contains:T11 Targ:T15 Cont:T38
+T34	Feature 4511 4523	fine-grained
+T36	Feature 4525 4536	homogeneous
+T38	Material 4537 4545	mudstone
+R4	Shows Arg1:T15 Arg2:T34	
+R5	Shows Arg1:T15 Arg2:T36	
+T40	Contains 4547 4558	crosscut by
+E2	Contains:T40 Targ:T15 Cont:T42
+T42	Material 4572 4579	sulfate
+T43	Feature 4587 4605	hairline fractures
+R6	Shows Arg1:T15 Arg2:T43	
+T44	Locality 5036 5051	Yellowknife Bay
+R7	IsSituatedIn Arg1:T18 Arg2:T44	
+R8	IsSituatedIn Arg1:T19 Arg2:T44	
+T45	Contains 5130 5142	detection of
+E3	Contains:T45 Targ:T21 Cont:T46
+A1	Confidence E3 High
+A2	Amount E3 Contains
+T46	Material 5143 5160	organic molecules
+T47	Material 5259 5268	sandstone
+T48	Contains 5255 5258	The
+E4	Contains:T48 Targ:T22 Cont:T47
+T23	Contains 5618 5630	evidence for
+E5	Contains:T23 Cont:T37 Targ:T24
+T25	Contains 5811 5819	ratio of
+E6	Contains:T25 Cont:T35 Cont2:T41 Targ:T26

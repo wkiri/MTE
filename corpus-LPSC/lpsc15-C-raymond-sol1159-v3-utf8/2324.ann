@@ -1,0 +1,25 @@
+T1	Element 4274 4281	lithium
+T2	Element 7045 7052	lithium
+T3	Element 8921 8928	lithium
+T4	Target 6164 6172	Sheepbed
+T8	Target 7331 7339	Bathurst
+T9	Target 7411 7415	Jake
+T10	Target 7518 7522	Jake
+T11	Target 7656 7664	Bathurst
+T12	Target 8746 8750	Jake
+T13	Feature 1693 1701	Yardangs
+T14	Region 4814 4831	Bagnold dunefield
+T15	Locality 5564 5580	Moonlight Valley
+T16	Feature 5621 5635	undercut walls
+T17	Feature 5640 5654	scree boulders
+T5	Target 7162 7176	Bathurst Inlet
+T6	Target 7181 7188	Jake M.
+T7	Contains 7219 7223	show
+E1	Contains:T7 Targ:T5 Targ2:T6 Cont:T2
+T18	Element 7495 7497	Li
+T19	Feature 7540 7553	rough surface
+R1	Shows Arg1:T10 Arg2:T19	
+T20	Feature 7680 7694	smooth surface
+R2	Shows Arg1:T11 Arg2:T20	
+T21	Locality 8118 8133	Yellowknife Bay
+T22	Target 8998 9012	Slide Mountain

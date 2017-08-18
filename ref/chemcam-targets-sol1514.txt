@@ -452,6 +452,7 @@ East_River
 Eastman
 Eaton_Canyon
 Eaton_Canyon_2
+Ebony
 Ebony_1335
 Edith
 Eenhana
@@ -624,6 +625,7 @@ Hay_Creek_new
 Hayden_Peak
 Hayhook
 Heath
+Hebron
 Hebron_RMI_1225
 Hector
 Heimdall
@@ -716,6 +718,7 @@ Kam
 Kamanjab
 Kaniapiskau
 Kanyuak
+Kapako
 Kapako_sol1309
 Kapvik
 Karfenkliff
@@ -862,8 +865,10 @@ Lubango
 Lubango_Tailings_LIBS
 Lubango_drill_hole_1
 Lubango_drill_hole_RMI
+Lubango_postsieve
 Lubango_postsieve_1337
 Lubango_postsieve_dump_ccam
+Lubango_presieve
 Lubango_presieve_dump
 Lubango_presieve_dump_ccam
 Lubango_tailings
@@ -903,10 +908,12 @@ Mariental
 Marimba
 Marimba2_ccam
 Marimba2_ccam_SITE
+Marimba2_tailings
 Marimba2_tailings_A
 Marimba2_tailings_B
 Marimba_Drill_Hole_1420_ccam
 Marimba_postsieve_ccam
+Marimba_tailings
 Marimba_tailings_1420
 Marquette
 Marsden
@@ -948,6 +955,7 @@ Mikberg
 Mill
 Millport
 Minnekahta
+Mirabib
 Mirabib_ccam_DRT_2
 Mission
 Mission_Creek
@@ -957,6 +965,7 @@ Missoula_B
 Missoula_C
 Missoula_D
 Moiese
+Mojave2
 Mojave2_DTa
 Mojave2_DTb
 Mojave2_FDH_ChemCam
@@ -965,6 +974,7 @@ Mojave2_MDH_ChemCam
 Mojave2_PSDP_CC
 Mojave2_post_sieve_dump
 Mojave2_presieve_dump
+Mojave
 Mojave_Bedrock
 Mojave_Chunks
 Mojave_Chunks_Passive
@@ -974,6 +984,7 @@ Monarch
 Mondooma
 Mono
 Monroe
+Mont_Wright
 Mont_Wright_337
 Montaigne
 Moogana
@@ -1122,6 +1133,7 @@ Partridge
 Patterson_Lake
 Pauline
 Peace_Vallis_Channel
+Peace_Vallis_Fan
 Peace_Vallis_Fan_Sol1237
 Peace_Vallis_Fan_Sol1241
 Peach_Spring
@@ -1143,6 +1155,7 @@ Perdido
 Petaluma
 Pethei
 Petty
+Piambo
 Piambo_1316
 Pickhandle_DRT
 Piegan
@@ -1252,9 +1265,11 @@ Rocknest6
 Rocknest6a
 Rocknest6b
 Rocknest7
+Rocknest_3
 Rocknest_3_Top1
 Rodent_Hill
 Roebuck
+Ronan
 Ronan_drt_2
 Rooibank
 Rooibank_60A
@@ -1266,6 +1281,7 @@ Roter_Kamm
 Rove
 Rowatt
 Rubikon_ccam
+Ruker
 Ruker_RP_ccam
 Rum_Island
 Rundu
@@ -1306,6 +1322,7 @@ Sebina_tailings_ccam
 Sebina_tailings_ccam_2
 Seeheim
 Seeis
+Seeley
 Seeley_1031
 Seleka
 Selow
@@ -1367,6 +1384,7 @@ Songo
 Sonneblom_ccam
 Sorrel_Springs
 Sorrel_Springs_2
+South_Park
 South_Park2
 Soutrivier
 Soyo
@@ -1402,6 +1420,7 @@ Sulky_CCAM
 Sumbe
 Summer_Hill
 Sunburst
+Sutton
 Sutton Inlier
 Sutton Inlier 2
 Sutton_Inlier_3
@@ -1520,6 +1539,7 @@ Wagita
 Wagon_Box
 Wakham_Bay
 Waku_Kungo
+Wallace
 Wallace_ccam1
 Wallal
 Walsh

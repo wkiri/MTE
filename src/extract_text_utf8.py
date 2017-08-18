@@ -23,13 +23,14 @@ import re
 import tika
 tika.TikaClientOnly = True
 from tika import parser
+from progressbar import ProgressBar, ETA, Bar, Percentage
 
 # Local files
-#pdfdir  = '../text/lpsc14-pdfs'
-#textdir = '../../MTE-corpus/lpsc14-text'
-pdfdir  = '../../pdfs/lpsc15-pdfs'
-textdir = '../../MTE-corpus/lpsc15-text'
-#pdfdir  = '../text/lpsc16-pdfs'
+pdfdir  = '../../pdfs/lpsc14-pdfs'
+textdir = '../../MTE-corpus/lpsc14-text'
+#pdfdir  = '../../pdfs/lpsc15-pdfs'
+#textdir = '../../MTE-corpus/lpsc15-text'
+#pdfdir  = '../../pdfs/lpsc16-pdfs'
 #textdir = '../../MTE-corpus/lpsc16-text'
 
 dirlist = [fn for fn in os.listdir(pdfdir) if
@@ -42,8 +43,14 @@ print '  Writing output text files to %s.' % textdir
 if not os.path.exists(textdir):
     os.mkdir(textdir)
 
-for fn in dirlist:
-    print fn
+widgets = ['Files (of %d): ' % len(dirlist), Percentage(), ' ', Bar('='), ' ', ETA()]
+pbar = ProgressBar(widgets=widgets, maxval=len(dirlist)).start()
+    
+for (i, fn) in enumerate(dirlist):
+    pbar.update(i)
+    #if int(fn.split('.')[0]) != 1001:
+    #    continue
+    #print fn
     parsed = parser.from_file(pdfdir + '/' + fn)
 
     try:
@@ -70,6 +77,9 @@ for fn in dirlist:
 #                 0x00B9:0x31, 0x00B2:0x32, 0x00B3:0x33, # exponents
         cleaned = cleaned.translate(punc)
 
+        # Replace newlines that separate words with a space (unless hyphen)
+        cleaned = re.sub(r'([^\s-])[\r|\n]+([^\s])','\\1 \\2', cleaned)
+
         # Remove hyphenation at the end of lines 
         # (this is sometimes bad, as with "Fe-\nrich")
         cleaned = cleaned.replace('-\n','\n')
@@ -86,9 +96,12 @@ for fn in dirlist:
         #cleaned = re.sub(r'(Lunar and Planetary Science Conference \(201[0-9]\))', 
         #                 '\\1\n', cleaned,
         #                 flags=re.IGNORECASE)
-        cleaned = re.sub(r'(Lunar and Planetary Science Conference \(201[0-9]\))', 
+        cleaned = re.sub(r'([0-9][0-9].. Lunar and Planetary Science Conference \(201[0-9]\))', 
                          '', cleaned,
                          flags=re.IGNORECASE)
+
+        # Remove mailto: links
+        cleaned = re.sub(r'mailto:[^\s]+','', cleaned)
 
         outf.write(cleaned)
         outf.close()

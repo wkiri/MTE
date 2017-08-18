@@ -1,0 +1,137 @@
+T1	Target 1048 1064	Confidence Hills
+T2	Target 1556 1567	Pink Cliffs
+T3	Target 1569 1580	Book Cliffs
+T4	Target 2678 2694	Confidence Hills
+T5	Target 2843 2859	Confidence Hills
+T6	Target 3074 3083	Maturango
+T7	Target 3085 3101	Confidence Hills
+T8	Target 3147 3154	Mammoth
+T9	Target 3824 3835	Pink Cliffs
+T10	Target 3880 3891	Pink Cliffs
+T11	Target 4467 4473	Mojave
+T12	Target 4535 4541	Mojave
+T13	Target 4560 4571	Pink Cliffs
+T14	Target 4900 4911	Pink Cliffs
+T15	Target 5080 5091	Book Cliffs
+T16	Target 5108 5119	Book Cliffs
+T17	Target 5383 5394	Book Cliffs
+T18	Target 5558 5571	Goblin Valley
+T19	Target 5691 5702	Book Cliffs
+T20	Target 5714 5723	Punchbowl
+T21	Target 5725 5737	Afton Canyon
+T22	Target 5743 5750	Topanga
+T23	Target 6025 6031	Puente
+T24	Target 6036 6042	Mescal
+T25	Target 6170 6175	Cajon
+T26	Target 6322 6332	Pickhandle
+T27	Target 6334 6343	Goldstone
+T28	Site 890 906	Bradbury Landing
+T29	Formation 955 971	Murray Formation
+T30	Locality 985 998	Pahrump Hills
+T31	Target 1545 1554	Shoemaker
+T32	Target 1582 1597	Alexander Hills
+T33	Target 1599 1605	Chinle
+T34	Target 1611 1621	Whale Rock
+T35	Locality 1678 1691	Pahrump Hills
+T36	Locality 2332 2345	Pahrump Hills
+T37	Locality 2759 2772	Pahrump Hills
+R1	IsSituatedIn Arg1:T4 Arg2:T37	
+T38	Feature 2810 2824	Mt. Sharp rock
+R2	Shows Arg1:T5 Arg2:T38	
+T39	Feature 2904 2945	siltstone or mudstone based on grain size
+R3	Shows Arg1:T5 Arg2:T39	
+T40	Target 3103 3110	Paradox
+T41	Target 3156 3164	Moenkopi
+T42	Target 3170 3178	Morrison
+T43	Feature 3127 3146	diagenetic features
+R4	Shows Arg1:T8 Arg2:T43	
+R5	Shows Arg1:T41 Arg2:T43	
+R6	Shows Arg1:T42 Arg2:T43	
+T44	Target 3184 3193	Shoemaker
+T45	Locality 3244 3257	Pahrump Hills
+T46	Feature 3333 3349	fine laminations
+T47	Target 3357 3366	Shoemaker
+R7	Shows Arg1:T47 Arg2:T46	
+T48	Locality 3306 3319	Pahrump Hills
+T49	Target 3414 3420	Pelona
+T50	Feature 3425 3459	fine and evenly spaced laminations
+R8	Shows Arg1:T49 Arg2:T50	
+T51	Feature 3477 3488	laminations
+T52	Target 3467 3474	Ricardo
+R9	Shows Arg1:T52 Arg2:T51	
+T53	Target 3731 3740	Shoemaker
+T54	Target 3716 3723	Ricardo
+T55	Feature 3939 3953	more resistant
+R10	Shows Arg1:T10 Arg2:T55	
+T56	Feature 4023 4042	diagenetic textures
+R11	Shows Arg1:T10 Arg2:T56	
+T57	Feature 4640 4667	light colored crystal laths
+T58	Feature 4705 4718	crystal laths
+R12	Shows Arg1:T11 Arg2:T58	
+T59	Feature 4818 4837	diagenetic clusters
+T60	Target 4851 4858	Potatoe
+R13	Shows Arg1:T60 Arg2:T59	
+T61	Target 4917 4925	Rosamead
+T62	Target 4930 4947	Pilot Knob Valley
+T63	Target 5018 5025	Potatoe
+T64	Feature 5031 5050	diagenetic clusters
+R14	Shows Arg1:T63 Arg2:T64	
+T65	Feature 5201 5229	horizontal planar lamination
+T66	Feature 5243 5259	cross lamination
+R15	Shows Arg1:T16 Arg2:T65	
+R16	Shows Arg1:T16 Arg2:T66	
+T67	Feature 5622 5626	vugs
+T68	Target 5527 5538	Jail Canyon
+T69	Target 5540 5556	Old Dad Mountain
+T70	Target 5577 5585	Anaverde
+R17	Shows Arg1:T68 Arg2:T67	
+R18	Shows Arg1:T69 Arg2:T67	
+R19	Shows Arg1:T18 Arg2:T67	
+R20	Shows Arg1:T70 Arg2:T67	
+T71	Feature 5763 5783	light toned crystals
+T72	Feature 5802 5823	dark toned inclusions
+R21	Shows Arg1:T19 Arg2:T71	
+R22	Shows Arg1:T20 Arg2:T71	
+R23	Shows Arg1:T21 Arg2:T71	
+R24	Shows Arg1:T22 Arg2:T71	
+R25	Shows Arg1:T19 Arg2:T72	
+R26	Shows Arg1:T20 Arg2:T72	
+R27	Shows Arg1:T21 Arg2:T72	
+R28	Shows Arg1:T22 Arg2:T72	
+T73	Target 5826 5841	Alexander Hills
+T74	Target 5858 5873	Alexander Hills
+T75	Feature 5920 5938	chemical anomalies
+R29	Shows Arg1:T74 Arg2:T75	
+T76	Feature 5981 6013	grain size could not be resolved
+R30	Shows Arg1:T23 Arg2:T76	
+R31	Shows Arg1:T24 Arg2:T76	
+T77	Feature 6059 6063	soft
+R32	Shows Arg1:T23 Arg2:T77	
+R33	Shows Arg1:T24 Arg2:T77	
+T78	Target 6120 6135	Alexander Hills
+T79	Target 6180 6186	Chinle
+T80	Target 6203 6209	Chinle
+T81	Feature 6265 6295	parallel and cross- lamination
+R34	Shows Arg1:T80 Arg2:T81	
+T82	Target 6345 6354	Coachella
+T83	Target 6360 6367	Tropico
+T84	Feature 6396 6407	laminations
+R35	Shows Arg1:T26 Arg2:T84	
+R36	Shows Arg1:T27 Arg2:T84	
+R37	Shows Arg1:T82 Arg2:T84	
+R38	Shows Arg1:T83 Arg2:T84	
+T85	Target 6586 6592	Chinle
+T86	Feature 6617 6647	parallel and cross laminations
+R39	Shows Arg1:T85 Arg2:T86	
+T87	Target 6673 6683	Whale Rock
+T88	Target 6765 6775	Whale Rock
+T89	Feature 6801 6863	rock fragment that appears to have fallen off the main outcrop
+R40	Shows Arg1:T88 Arg2:T89	
+T90	Target 6881 6891	Whale Rock
+T91	Locality 7034 7047	Pahrump Hills
+T92	Feature 6902 6928	cross-stratified sandstone
+R41	Shows Arg1:T90 Arg2:T92	
+T93	Target 6958 6969	San Andreas
+T94	Feature 6994 7012	light toned grains
+R42	Shows Arg1:T93 Arg2:T94	
+T95	Feature 7060 7076	Murray formation

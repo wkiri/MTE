@@ -25,14 +25,13 @@ import re
 # Input files
 #textdir = '../text/lpsc15-C-pre-annotate-sol1159'
 #textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
-# Same as first version of lpsc16-C
-textdir = '../text/lpsc15-C-pre-annotate-sol1159-v3'
+#textdir = '../text/lpsc15-C-pre-annotate-sol1159-v3'
 #textdir = '../text/lpsc16-C-pre-annotate'
 #textdir = '../../MTE-corpus/lpsc16-text'
 
 # Reference files
 elementfile = '../ref/elements.txt'
-chemcamfile = '../ref/chemcam-targets-sol1159.txt'
+chemcamfile = '../ref/chemcam-targets-sol1514.txt'
 mineralfile = '../ref/minerals.txt'
 nonminfile  = '../ref/non-minerals.txt' # Things that end in -ite but aren't minerals
 MERfile     = '../ref/MER-targets-pruned.txt'
@@ -262,14 +261,21 @@ with open(chemcamfile, 'r') as inf:
     # Add a version with trailing _DRT or _drt removed
     chemcam_targets += [cc[:-4] for cc in chemcam_targets \
                              if cc.endswith('_DRT') or cc.endswith('_drt')]
+    # Add a version with trailing _RMI or _RMI removed
+    chemcam_targets += [cc[:-4] for cc in chemcam_targets \
+                             if cc.endswith('_DRT') or cc.endswith('_drt')]
     # Add a version with trailing _1 or _2 removed
     chemcam_targets += [cc[:-2] for cc in chemcam_targets \
                              if cc.endswith('_1') or cc.endswith('_2')] 
     # Add a version with _ converted to space
     chemcam_targets += [re.sub('_', ' ', cc) for cc in chemcam_targets \
                             if '_' in cc]
+
+# Get rid of duplicates
+t = len(chemcam_targets)
+chemcam_targets = list(set(chemcam_targets))
     
-print 'Read in %d ChemCam target names.' % len(chemcam_targets)
+print 'Read in %d -> %d ChemCam target names.' % (t, len(chemcam_targets))
 
 '''
 # Read in the MER targets file
@@ -290,7 +296,7 @@ print 'Read in %d MER target names.' % len(mer_targets)
 
 # Iterate through documents; output to .ann file
 for fn in dirlist:
-    #if int(fn.split('.')[0]) > 1018:
+    #if int(fn.split('.')[0]) != 1034:
     #    continue
     print fn
 
