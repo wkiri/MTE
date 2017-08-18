@@ -16,16 +16,14 @@ T15	Element 8065 8067	Fe
 T16	Element 8090 8092	Mg
 T17	Element 8132 8134	Mg
 T18	Element 8146 8148	Fe
-T19	Target 2890 2898	Rocknest
 T20	Target 2900 2908	Bathurst
-T21	Target 3015 3023	Sheepbed
 T22	Target 3159 3167	Sheepbed
 T23	Target 3258 3266	Sheepbed
-T24	Target 3282 3290	Rocknest
+T24	Site 3282 3290	Rocknest
 T25	Target 3461 3469	Bathurst
 T26	Target 3869 3875	Darwin
 T27	Target 5595 5603	Buckskin
-T29	Target 8031 8039	Rocknest
+T29	Site 8031 8039	Rocknest
 T31	Mineral 2604 2613	feldspars
 T32	Mineral 2693 2702	feldspars
 T33	Mineral 2753 2761	feldspar
@@ -55,3 +53,31 @@ T51	Element 7800 7802	Na
 T52	Element 7864 7865	K
 T53	Element 7866 7868	Na
 T28	Locality 8104 8111	Pahrump
+T54	Site 2890 2898	Rocknest
+T19	Unit 3015 3032	Sheepbed mudstone
+R3	Associated Arg1:T41 Arg2:T19	
+T55	Contains 3142 3155	were observed
+E2	Contains:T55 Targ:T22 Cont:T57 Cont2:T56 Cont3:T42
+T56	Mineral 3119 3126	sulfate
+T57	Mineral 3116 3126	Ca-sulfate
+T21	Element 3212 3214	Mg
+T58	Contains 3214 3218	rich
+E3	Contains:T58 Targ:T23 Cont:T21
+A2	Amount E3 Contains_High
+T59	Contains 3522 3533	enrichments
+E4	Contains:T59 Targ:T25 Cont:T9
+A3	Amount E4 Contains_High
+T60	Locality 3557 3563	Shaler
+T61	Locality 2931 2937	Shaler
+T62	Feature 3614 3626	foreset beds
+R4	Shows Arg1:T60 Arg2:T62	
+T63	Feature 3680 3720	alternating recessive and resistant beds
+T64	Site 3880 3891	Cooperstown
+T65	Locality 3918 3931	Bradbury Rise
+T66	Locality 4350 4359	Kimberley
+T67	Feature 4407 4419	foreset beds
+T68	Contains 5622 5641	significant amounts
+E5	Contains:T68 Cont:T38 Targ:T27
+A4	Amount E5 Contains_High
+T69	Unit 5796 5803	Stimson
+T70	Process 5804 5811	aeolian

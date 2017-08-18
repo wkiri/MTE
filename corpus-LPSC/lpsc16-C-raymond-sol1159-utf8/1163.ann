@@ -4,11 +4,10 @@ T3	Element 5816 5817	K
 T4	Element 5824 5833	potassium
 T5	Element 5952 5961	potassium
 T6	Element 6089 6090	K
-T10	Target 1614 1622	Rocknest
+T10	Locality 1614 1622	Rocknest
 T11	Target 1628 1636	Bathurst
 T12	Target 3860 3866	Darwin
 T13	Target 4726 4732	Beagle
-T14	Target 4891 4900	Dillinger
 T15	Target 4951 4959	Windjana
 T16	Target 5034 5043	Dillinger
 T17	Target 5481 5485	Liga
@@ -34,11 +33,11 @@ T9	Element 1473 1481	potassic
 T36	Target 1606 1612	Shaler
 T37	Material 1651 1654	K2O
 T38	Contains 1655 1664	abundance
-E1	Contains:T38 Cont:T37 Targ:T36 Targ2:T10 Targ3:T11
+E1	Contains:T38 Cont:T37 Targ:T36 Targ3:T11
 A1	Confidence E1 High
 A2	Amount E1 Contains_High
 T39	Contains 1599 1605	namely
-E2	Contains:T39 Cont:T9 Targ:T36 Targ2:T10 Targ3:T11
+E2	Contains:T39 Cont:T9 Targ:T36 Targ3:T11
 A3	Confidence E2 High
 A4	Amount E2 Contains_High
 T40	Site 1881 1892	Cooperstown
@@ -88,3 +87,4 @@ T75	Element 6127 6135	potassic
 T76	Element 7330 7332	Mn
 R1	Associated Arg1:T48 Arg2:T45	
 T7	Element 5360 5361	K
+T8	Member 4891 4907	Dillinger member
