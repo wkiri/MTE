@@ -1,0 +1,218 @@
+\def\year{2018}\relax
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article} %DO NOT CHANGE THIS
+\usepackage{aaai18}  %Required
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage{graphicx}  %Required
+\frenchspacing  %Required
+\setlength{\pdfpagewidth}{8.5in}  %Required
+\setlength{\pdfpageheight}{11in}  %Required
+\copyrighttext{Copyright 2017, California Institute of Technology. 
+Government sponsorship acknowledged.}
+%PDF Info Is Required:
+  \pdfinfo{
+/Title (Extracting Information from Scientific Publications for
+Planetary Science)
+/Author (Kiri L. Wagstaff, Raymond Francis, Thamme Gowda, Nina L. Lanza,
+You Lu, Ellen Riloff, Karanjeet Singh)}
+\setcounter{secnumdepth}{0}  
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{Extracting Information from Scientific Publications for
+Planetary Science}
+\author{
+Kiri L. Wagstaff$^1$,
+Raymond Francis$^1$,
+Thamme Gowda$^{1,2}$,
+Nina L. Lanza$^3$,\\
+{\Large \bf You Lu$^1$,
+Ellen Riloff$^4$, and
+Karanjeet Singh$^{1,5}$}\\
+$^1$Jet Propulsion Laboratory, California Institute of Technology,
+4800 Oak Grove Drive, Pasadena, CA 91109\\
+\{firstname.lastname\}@jpl.nasa.gov\\
+$^2$Information Sciences Institute, University of Southern
+California,
+4676 Admiralty Way \#1001, Marina Del Rey, CA 90292\\
+tg@isi.edu
+}
+\maketitle
+\begin{abstract}
+We have constructed an information extraction system called the Mars
+Target Encyclopedia (MTE) that takes in planetary science publications
+and extracts scientific knowledge.  The extracted knowledge is stored
+in a searchable database that can greatly accelerate the ability of
+scientists to compare new discoveries with what is already known.  To
+date, we have applied this system to $\sim$6000 documents and achieved
+XX\% precision in the extracted information. 
+\end{abstract}
+
+\section{Introduction}
+
+Scientists everywhere are overwhelmed by the stream of new information
+that is published by domain-relevant conferences, workshops, and
+journals.  It is difficult both to come up to speed in a new area and
+to stay current with the latest discoveries.  In planetary
+exploration, new discoveries are potentially made each time new data
+is transmitted.  For example, our rovers on Mars have sent back
+compositional data for thousands of individual targets (e.g., rocks,
+soils), and some of those observations have transformed our
+understanding of past environments on the planet {\bf
+[cite... Nature?]}. 
+
+To interpret new observations correctly, it is necessary to be able to
+compare them with what is already known.  For example, if we observe
+high manganese content as a particular location, we want to know if it
+is consistent with previous observations or indicates an anomalous new
+discovery.  However, no central database exists in which you can query...
+
+We have created a system that uses information extraction methods to
+analyze planetary science publications and identify compositional
+relationships between Mars surface targets and elements or minerals.
+The extracted information is stored in a searchable database that
+allows users to ask questions such as ``Which targets contain
+hematite?'' or ``What is known about target Dillinger?''  It also
+enables entirely new kinds of information visualization, such as a map
+display of all locations where the Mars rover Curiosity has detected
+hematite. 
+
+Because Mars surface targets follow no standard naming convention,
+they can be very difficult to identify in natural text.  Names are
+borrowed from Earth locations or people, and a sampling of the names
+hints at the challenge of accurately detecting them: ``Dunkirk'',
+``Ithaca'', ``Jake'',  ``Old\_woman'', ``Pistol''.  Keyword-based
+searches return many spurious hits, and no tool yet exists...
+
+
+... provide guidance for next steps in exploration 
+- hypothesis generation and data collection.
+
+leveraged a small amount of hand-labeled text to train a
+
+precision more important than recall
+
+\section{Related Work}
+
+GeoDeepDive
+
+work at ISI?
+
+\section{Machine Learning for Information Extraction}
+
+{\bf [system diagram from PPT?]}
+
+{\bf Text extraction.}  We used the Apache Tika
+parser~\cite{mattmann:tika11} to convert the source PDF files into
+UTF-8 text.
+
+Reference extraction.
+
+We focus on the extraction of information about targets identified by
+the ChemCam instrument on the Mars Science Laboratory rover.  ChemCam
+obtains compositional spectra from up to seven meters away from a
+given target, and the resulting spectrum can be analyzed to identify
+individual elements within the target~\cite{maurice:chemcam12}.  As of
+sol 1159, ChemCam had observed more than 1100 distinct targets.
+
+\subsection{Named Entity Recognition}
+
+- CoreNLP NER CRF
+- gazettes - number of items in each (target, element, mineral)
+
+{\bf [gazettes are available where online]}
+
+Target:
+
+
+- Basilisk gazettes
+
+\subsection{Relation Extraction}
+
+- jSRE SVM
+
+\section{Experimental Results}
+
+\subsection{Corpus}
+
+Our corpus consists of two-page extended abstracts (in PDF format) that
+were published by the Lunar and Planetary Science conference (LPSC).  We
+identified and manually annotated 113 {\bf [check]} documents from
+LPSC 2015 and 2016 that mentioned ``ChemCam.''  We used the 2015
+documents for training and the 2016 documents for testing.
+
+{\bf [annotated docs are available where?]}
+
+\subsection{NER Results}
+
+\begin{table}
+\caption{Classification accuracy on Mars rover surface images.}
+\label{tab:msl}
+\begin{center}
+\begin{tabular}{l|ll}
+Classifier & Train ($n=$) & Test ($n=$) \\ \hline
+Random & & \\
+Most common & & \\
+MSLNet & & \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+{\bf [precision/recall per class - bar plot?]}
+
+\subsection{Relation Extraction Results}
+
+\begin{table}
+\caption{Classification accuracy on Mars orbital images.}
+\label{tab:hirise}
+\begin{center}
+\begin{tabular}{l|ll}
+Classifier & Train ($n=$) & Test ($n=$) \\ \hline
+Random & & \\
+Most common & & \\
+HiRISENet & & \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+[precision/recall per class - bar plot?]
+
+\subsection{Large-scale Evaluation}
+
+We collected all 6000 {\bf [check]} LPSC documents that were published
+in 2014, 2015, and 2016 and ingested them into the MTE.
+
+{\bf [table of num docs, num NER, num RE, time consumed]}
+
+{\bf [Nina's evaluation of extracted information}
+
+\subsection{Limitations}
+- no sentence-crossing relationships (about 30\%? recalc this number)
+- NER cannot handle overlapping annotations (e.g., calcium sulfate)
+
+\section{Conclusions and Next Steps}
+% and lessons learned
+
+This work lies at the intersection of information extraction, machine
+learning, and planetary science.  
+
+The MTE is not comprehensive.  There may be compositional information
+that was never written up in a scientific publication and therefore
+would not be included in the MTE.  Instead, the MTE extracts and
+indexes only the information that was judged by scientists to be
+worthy of publication to the scientific community.  The MTE leverages
+and mirrors this selection bias, and its holdings (like the source
+publications) contain only the most valuable and salient information.
+
+\section{Acknowledgments}
+This research was carried out in part at the Jet Propulsion Laboratory,
+California Institute of Technology, under a contract with the National
+Aeronautics and Space Administration.  {\bf [acks for Ellen, Nina?]}
+
+\bibliography{mte}
+\bibliographystyle{aaai}
+\end{document}
