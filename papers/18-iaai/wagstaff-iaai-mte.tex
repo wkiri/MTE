@@ -108,9 +108,17 @@ The Mars Target Encyclopedia (MTE) is an information extraction system
 that takes in scientific publications in PDF format and extracts
 knowledge of use to planetary scientists studying the planet Mars.
 The MTE is composed of four modules: preprocessing, named entity
-recognition (NER), relation extraction (RE), and database updates.
+recognition (NER), relation extraction (RE), and database updates (see
+Figure~\ref{fig:mte}).
 
-{\bf [system diagram from PPT?]}
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.25in]{fig/system.pdf}
+\end{center}
+\caption{Mars Target Encyclopedia processing pipeline.}
+\label{fig:mte}
+\end{figure}
+% This figure comes from 2017-06-23-mte.pptx
 
 \subsection{Document Preprocessing}
 
@@ -179,7 +187,7 @@ annotate each document.  We created thousands of manual annotations in
 Table~\ref{tab:docs}).
 
 We used the 2015 documents for training and divided the 2016 documents
-for into validation ($n=xx$) and testing ($n=xx$) sets.
+for into validation ($n=20$) and testing ($n=32$) sets.
 
 \begin{table}
 \caption{Manual annotations for LPSC documents.}
@@ -197,12 +205,23 @@ Total & \\
 \end{center}
 \end{table}
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.25in]{fig/brat-example.png}
+\end{center}
+\caption{Excerpt from document lpsc16-1155 showing compositional
+annotations created with the brat web annotation tool.}
+\label{fig:brat}
+\end{figure}
+
 The annotated relationships ranged from simple (e.g., a pattern such
 as ``X contains Y'' within a sentence) to complex (e.g., relationships
 that crossed sentence boundaries or involved pronouns like ``it'' and
-other anaphora).
-
-{\bf [insert brat screenshot here]}
+other anaphora).  Figure~\ref{fig:brat} shows an excerpt from one
+document that contains several statements about the composition of the
+target Buckskin.  The vocabulary used to indicate a compositional
+relationship varies, and the last two relationships cross sentence
+boundaries.  
 
 {\bf [annotated docs are available where?]}
 
@@ -215,7 +234,7 @@ The best result is shown in bold.}
 \begin{center}
 \begin{tabular}{l|ll}
  & Precision & Recall \\ \hline
-Lists only & P & R \\ \hline
+Baseline: Lists only & P & R \\ \hline
 {\em CoreNLP NER CRF trained on:} & & \\
 LPSC 2015 & P & R \\
 LPSC 2015 + gazettes & P & R \\
@@ -245,7 +264,7 @@ The best result is shown in bold.}
 \begin{center}
 \begin{tabular}{l|ll}
  & Precision & Recall \\ \hline
-All-yes & P & R \\ \hline
+Baseline: All-yes & P & R \\ \hline
 {\em jSRE SVM trained on:} & & \\
 LPSC 2015, Target-Element & P & R \\
 LPSC 2015, Target-Mineral & P & R \\
