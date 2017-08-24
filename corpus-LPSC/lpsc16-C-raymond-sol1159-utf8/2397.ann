@@ -1,0 +1,114 @@
+T10	Element 3271 3278	calcium
+T12	Element 4115 4122	Calcium
+T14	Element 4181 4188	calcium
+T15	Element 4806 4813	calcium
+T16	Element 4969 4975	sulfur
+T17	Element 5045 5052	calcium
+T18	Element 5120 5127	calcium
+T19	Element 6437 6444	calcium
+T20	Element 6663 6664	P
+T21	Element 6755 6756	P
+T23	Element 6964 6971	calcium
+T25	Element 7328 7335	calcium
+T26	Element 7446 7453	calcium
+T27	Element 7731 7738	calcium
+T28	Element 7801 7808	Calcium
+T29	Target 1984 1987	Elk
+T30	Target 2980 2988	Missoula
+T31	Target 3366 3374	Missoula
+T32	Target 3662 3669	Big Arm
+T33	Target 3914 3922	Missoula
+T34	Target 3990 3998	Missoula
+T35	Target 4007 4014	Big Arm
+T36	Target 4721 4729	Missoula
+T37	Target 5146 5154	Missoula
+T38	Target 5543 5546	Elk
+T39	Target 5654 5662	Missoula
+T40	Target 6117 6125	Missoula
+T41	Target 6674 6680	Lumpry
+T42	Target 7174 7182	Missoula
+T43	Target 7540 7548	Missoula
+T44	Target 7694 7702	Missoula
+T45	Target 7942 7950	Missoula
+T46	Mineral 6192 6201	tridymite
+T47	Mineral 3279 3286	sulfate
+T48	Mineral 4123 4130	sulfate
+T49	Mineral 4189 4196	sulfate
+T50	Mineral 4814 4821	sulfate
+T51	Mineral 5053 5060	sulfate
+T52	Mineral 5128 5135	sulfate
+T54	Mineral 6445 6452	sulfate
+T55	Mineral 6495 6502	sulfate
+T56	Mineral 6609 6616	sulfate
+T57	Mineral 6972 6979	sulfate
+T58	Mineral 7336 7343	sulfate
+T59	Mineral 7454 7461	sulfate
+T60	Mineral 7739 7746	sulfate
+T61	Mineral 7809 7816	sulfate
+T62	Mineral 8024 8031	sulfate
+T1	Target 1307 1315	Missoula
+T2	Target 1316 1321	Ronan
+T3	Unit 1335 1341	Murray
+T4	Unit 1342 1349	Stimson
+T5	StratRel 1350 1357	contact
+E1	StratRel:T5 Obj:T4 Subj:T3
+A1	Position E1 IsStratNear
+T6	Formation 1607 1613	Murray
+T63	Locality 1664 1677	Pahrump Hills
+T64	Formation 1768 1774	Murray
+T7	StratRel 1801 1810	overlying
+E2	StratRel:T7 Subj:T8 Obj:T64
+A2	Position E2 IsStratAbove
+T8	Formation 1811 1818	Stimson
+T9	Feature 1829 1849	thick cross bed sets
+T53	Locality 1903 1914	Marias Pass
+T65	Formation 2010 2016	Murray
+R1	IsSituatedIn Arg1:T29 Arg2:T53	
+R2	BelongsTo Arg1:T29 Arg2:T65	
+T66	Contains 2026 2041	has a very high
+E3	Contains:T66 Cont:T67 Targ:T29
+A3	Amount E3 Contains_High
+T67	Material 2042 2046	SiO2
+T68	Target 2110 2118	Missoula
+T69	Target 2119 2124	Ronan
+T70	Formation 2425 2431	Murray
+T71	Locality 2460 2473	Pahrump Hills
+T72	StratRel 2475 2517	located 2-3 meters stratigraphically below
+E4	StratRel:T72 Subj:T71 Obj:T73
+A4	Position E4 IsStratBelow
+T73	Locality 2539 2550	Marias Pass
+T74	Member 2980 2992	Missoula Mbr
+T75	Mineral 3271 3286	calcium sulfate
+T76	Member 3366 3378	Missoula Mbr
+T11	Feature 3637 3642	float
+T77	Formation 3629 3636	Stimson
+T78	Feature 3610 3619	resistant
+R3	Shows Arg1:T32 Arg2:T11	
+R4	BelongsTo Arg1:T32 Arg2:T77	
+R5	Shows Arg1:T32 Arg2:T78	
+T79	Member 3914 3926	Missoula Mbr
+T80	Feature 4039 4065	horizontal flat-lying beds
+R6	Shows Arg1:T35 Arg2:T80	
+R7	Shows Arg1:T34 Arg2:T80	
+T81	Mineral 4115 4130	Calcium sulfate
+T13	Formation 4153 4162	Murray Fm
+T82	Mineral 4181 4196	calcium sulfate
+T83	Member 4721 4733	Missoula Mbr
+T84	Mineral 5045 5060	calcium sulfate
+T85	Mineral 4806 4821	calcium sulfate
+T86	Mineral 5120 5135	calcium sulfate
+T87	Member 5146 5158	Missoula Mbr
+T88	Material 5538 5542	SiO2
+T89	Contains 5533 5537	high
+E5	Contains:T89 Cont:T88 Targ:T38
+A5	Amount E5 Contains_High
+T90	Mineral 6437 6452	calcium sulfate
+T91	Material 6746 6750	SiO2
+T92	Contains 6719 6737	is actually higher
+E6	Contains:T92 Cont:T91 Cont2:T21 Targ:T41
+A6	Amount E6 Contains_High
+T22	Mineral 6964 6979	calcium sulfate
+T24	Mineral 7328 7343	calcium sulfate
+T93	Mineral 7446 7461	calcium sulfate
+T94	Mineral 7731 7746	calcium sulfate
+T95	Mineral 7801 7816	Calcium sulfate

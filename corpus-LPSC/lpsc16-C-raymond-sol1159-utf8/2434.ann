@@ -1,0 +1,96 @@
+T3	Element 4065 4067	Ca
+T4	Element 4790 4792	Ca
+T5	Element 4936 4938	Ca
+T6	Target 5548 5558	John Klein
+T8	Mineral 1681 1692	Fe-smectite
+T10	Mineral 1716 1727	Mg-smectite
+T12	Mineral 2399 2409	nontronite
+T14	Mineral 2603 2613	nontronite
+T15	Mineral 2694 2704	nontronite
+T16	Mineral 2842 2851	anhydrite
+T17	Mineral 3230 3239	Bassanite
+T18	Mineral 3244 3253	anhydrite
+T22	Mineral 3384 3393	kieserite
+T24	Mineral 4677 4685	saponite
+T30	Mineral 359 374	Phyllosilicates
+T31	Mineral 479 486	Sulfate
+T32	Mineral 675 690	phyllosilicates
+T33	Mineral 695 703	sulfates
+T34	Mineral 827 842	phyllosilicates
+T35	Mineral 847 855	sulfates
+T36	Mineral 973 988	Phyllosilicates
+T37	Mineral 1219 1234	phyllosilicates
+T38	Mineral 1374 1389	phyllosilicates
+T39	Mineral 1394 1402	sulfates
+T40	Mineral 1504 1512	sulfates
+T41	Mineral 1693 1703	nontronite
+T42	Mineral 1728 1736	saponite
+T44	Mineral 2446 2460	phyllosilicate
+T45	Mineral 2568 2577	Bassanite
+T49	Mineral 2864 2875	rhomboclase
+T50	Mineral 2906 2912	gypsum
+T51	Mineral 2930 2941	rhomboclase
+T52	Mineral 3005 3013	sulfates
+T53	Mineral 3217 3227	nontronite
+T56	Mineral 3269 3277	saponite
+T57	Mineral 3331 3340	kieserite
+T58	Mineral 3368 3379	hexahydrite
+T60	Mineral 3501 3508	sulfate
+T61	Mineral 3644 3650	quartz
+T62	Mineral 3652 3660	diopside
+T63	Mineral 3841 3849	saponite
+T64	Mineral 3907 3915	saponite
+T65	Mineral 4194 4202	saponite
+T66	Mineral 4608 4616	sulfates
+T68	Mineral 4851 4866	phyllosilicates
+T69	Mineral 5099 5106	sulfate
+T70	Mineral 5220 5230	nontronite
+T71	Mineral 5235 5243	saponite
+T72	Mineral 5265 5280	phyllosilicates
+T73	Mineral 5340 5355	Phyllosilicates
+T74	Mineral 5360 5368	sulfates
+T75	Mineral 5581 5589	saponite
+T76	Mineral 5638 5647	anhydrite
+T77	Mineral 5652 5661	bassanite
+T78	Mineral 5809 5817	sulfates
+T79	Mineral 5892 5907	phyllosilicates
+T80	Mineral 6123 6131	sulfates
+T81	Mineral 6170 6178	sulfates
+T82	Mineral 6205 6220	phyllosilicates
+T83	Mineral 6276 6291	phyllosilicates
+T84	Mineral 6443 6451	sulfates
+T85	Mineral 6494 6509	phyllosilicates
+T1	Element 1278 1280	Fe
+T2	Element 1281 1283	Mg
+T86	Mineral 1284 1293	smectites
+T9	Element 1681 1683	Fe
+T11	Mineral 1684 1692	smectite
+T87	Element 1716 1718	Mg
+T88	Mineral 1719 1727	smectite
+T13	Element 3665 3666	K
+T19	Mineral 3667 3675	feldspar
+T20	Mineral 3665 3675	K-feldspar
+T21	Element 3865 3867	Ca
+T23	Mineral 3868 3876	sulfates
+T43	Mineral 3865 3876	Ca-sulfates
+T46	Element 3992 3994	Ca
+T47	Element 3995 3996	S
+T48	Element 4092 4094	Ca
+T54	Mineral 4095 4103	sulfates
+T55	Mineral 4092 4103	Ca-sulfates
+T59	Element 4970 4972	Ca
+T67	Mineral 4973 4981	sulfates
+T89	Mineral 4970 4981	Ca-sulfates
+T25	Contains 5590 5604	was identified
+E1	Contains:T25 Cont:T75 Targ:T6 Cont2:T76 Cont3:T77
+A1	Confidence E1 High
+T26	Element 5627 5629	Ca
+T27	Mineral 5629 5637	sulfates
+T28	Contains 5671 5682	presence of
+E2	Contains:T28 Targ:T6 Cont:T92
+A2	Confidence E2 High
+T29	Element 5683 5685	Ca
+T90	Mineral 5686 5693	sulfate
+T91	Feature 5694 5699	veins
+T92	Mineral 5683 5693	Ca-sulfate
+R1	Shows Arg1:T6 Arg2:T91	
