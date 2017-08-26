@@ -1,0 +1,135 @@
+T1	Element 1010 1016	copper
+T2	Element 1018 1020	Cu
+T3	Element 1102 1104	Cu
+T4	Element 1343 1345	Cu
+T5	Element 1408 1410	Cu
+T6	Element 1517 1519	Cu
+T7	Element 1655 1661	Copper
+T8	Element 1688 1690	Cu
+T9	Element 1753 1755	Cu
+T10	Element 1794 1796	Cu
+T11	Element 2055 2057	Cu
+T12	Element 2240 2246	Copper
+T13	Element 2346 2348	Cu
+T14	Element 2406 2408	Ti
+T15	Element 2551 2553	Cu
+T16	Element 2617 2619	Ti
+T17	Element 2663 2665	Ti
+T18	Element 2697 2699	Cu
+T19	Element 2788 2790	Cu
+T20	Element 3137 3139	Cu
+T21	Element 3440 3442	Cu
+T22	Element 3549 3551	Cu
+T23	Element 3679 3681	Cu
+T24	Element 3698 3700	Cu
+T25	Element 3953 3955	Cu
+T26	Element 3976 3978	Cu
+T27	Element 4498 4507	manganese
+T28	Element 4687 4689	Cu
+T29	Element 4820 4822	Cu
+T30	Element 4932 4934	Cu
+T31	Element 4940 4942	Zn
+T32	Element 5233 5235	Cu
+T33	Element 5304 5306	Zn
+T34	Element 5308 5310	Mn
+T35	Element 5345 5347	Cu
+T36	Element 5914 5916	Cu
+T37	Element 6560 6566	copper
+T38	Element 7051 7053	Cu
+T39	Element 7279 7281	Cu
+T40	Element 7530 7532	Cu
+T44	Target 3237 3244	Stephen
+T45	Target 3250 3260	Stirling_2
+T46	Target 3584 3595	CC_BT_0604a
+T47	Target 3739 3743	Liga
+T48	Target 3771 3776	Harms
+T49	Target 3833 3843	Stephen_DP
+T50	Target 3872 3882	Stirling_2
+T51	Target 3909 3920	Hayden_Peak
+T52	Target 4266 4273	Stephen
+T53	Target 4609 4616	Stephen
+T54	Target 4646 4656	Stephen_DP
+T55	Target 5561 5571	Stirling_2
+T56	Target 5577 5588	CC_BT_0604a
+T57	Target 5594 5605	Hayden_Peak
+T58	Target 5615 5620	Harms
+T59	Target 5986 5997	CC_BT_0604a
+T60	Target 6165 6176	Hayden_Peak
+T61	Target 6625 6630	Harms
+T62	Target 6752 6757	Harms
+T63	Target 6871 6875	Liga
+T64	Target 7031 7035	Liga
+T65	Target 7340 7350	Stephen_DP
+T66	Target 7377 7381	Liga
+T67	Mineral 2009 2024	titanomagnetite
+T68	Mineral 1945 1952	olivine
+T69	Element 22 28	COPPER
+T43	Mineral 1920 1929	pyroxenes
+T70	Mineral 1931 1943	plagioclases
+T71	Mineral 2157 2165	sulfides
+T72	Element 2449 2451	Cu
+T73	Element 2452 2454	Ti
+T74	Element 2504 2506	Ti
+T75	Element 2507 2509	Cu
+T76	Element 2859 2861	Cu
+T77	Target 3225 3235	CC_BT_604a
+T78	Contains 3285 3286	a
+E1	Contains:T78 Cont:T79 Targ:T77
+T79	Material 3287 3291	soil
+T80	Feature 3302 3315	resistent fin
+R1	Shows Arg1:T44 Arg2:T80	
+T81	Feature 3323 3355	partially eroded surface feature
+R2	Shows Arg1:T45 Arg2:T81	
+T82	Contains 3611 3615	high
+E2	Contains:T82 Cont:T83 Targ:T46
+T83	Element 3616 3618	Cu
+A1	Amount E2 Contains_High
+T84	Contains 3683 3686	ppm
+E3	Contains:T84 Cont:T23 Targ:T47 Targ2:T48 Targ3:T85 Targ4:T49 Targ5:T50 Targ6:T51
+T85	Target 3799 3809	CC_BT_604a
+T86	Locality 4003 4012	Kimberley
+R3	IsSituatedIn Arg1:T51 Arg2:T86	
+R4	IsSituatedIn Arg1:T50 Arg2:T86	
+R5	IsSituatedIn Arg1:T49 Arg2:T86	
+R6	IsSituatedIn Arg1:T85 Arg2:T86	
+R7	IsSituatedIn Arg1:T48 Arg2:T86	
+R8	IsSituatedIn Arg1:T47 Arg2:T86	
+T87	Material 4274 4278	rock
+T88	Contains 4287 4290	has
+E4	Contains:T88 Cont:T87 Targ:T52
+T89	Feature 4293 4318	peculiar triangular shape
+T90	Locality 4358 4367	Kimberley
+R9	Shows Arg1:T52 Arg2:T89	
+R10	IsSituatedIn Arg1:T52 Arg2:T90	
+T91	Contains 4493 4497	high
+E5	Contains:T91 Cont:T27 Targ:T52
+A2	Amount E5 Contains_High
+T92	Feature 4576 4582	bluish
+T93	Feature 4583 4596	shiny surface
+R11	Shows Arg1:T53 Arg2:T93	
+R12	Shows Arg1:T53 Arg2:T92	
+T94	Contains 4815 4819	high
+E6	Contains:T94 Cont:T29 Targ:T54
+A3	Amount E6 Contains_High
+T95	Contains 4967 4974	highest
+E7	Contains:T95 Cont:T31 Targ:T54
+T96	Element 5121 5123	Cu
+T97	Element 5260 5264	Cu's
+T98	Element 5537 5539	Cu
+T99	Contains 5540 5547	bearing
+E8	Contains:T99 Cont:T98 Targ:T55 Targ2:T56 Targ3:T57 Targ4:T58
+T100	Element 5809 5811	Ti
+T101	Element 5812 5814	Cu
+T102	Element 6028 6030	Cu
+T103	Target 6062 6072	Sterling_2
+T104	Locality 6651 6660	Kimberley
+R13	IsSituatedIn Arg1:T61 Arg2:T104	
+T105	Contains 7036 7050	showed highest
+E9	Contains:T105 Cont:T38 Targ:T64
+A4	Amount E9 Contains_High
+T106	Contains 7282 7291	abundance
+E10	Contains:T106 Cont:T39 Targ:T65
+T107	Contains 7520 7524	show
+E11	Contains:T107 Cont:T40 Targ:T65
+T108	Feature 7533 7557	is mainly at the surface
+R14	Shows Arg1:T65 Arg2:T108	
