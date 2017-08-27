@@ -6,7 +6,7 @@ T5	Element 4924 4925	K
 T6	Element 4951 4953	Cr
 T7	Element 5380 5381	S
 T8	Element 5525 5526	S
-T11	Target 3621 3629	Rocknest
-T12	Target 3771 3779	Rocknest
-T13	Target 5050 5058	Rocknest
+T11	Locality 3621 3629	Rocknest
+T12	Locality 3771 3779	Rocknest
+T13	Locality 5050 5058	Rocknest
 T10	Element 4859 4861	Fe
