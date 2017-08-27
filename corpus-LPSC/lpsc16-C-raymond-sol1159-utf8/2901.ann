@@ -9,10 +9,10 @@ T8	Element 6588 6596	nitrogen
 T9	Element 7157 7159	Fe
 T10	Element 7161 7163	Al
 T11	Element 7169 7171	Si
-T13	Target 5260 5268	Rocknest
-T14	Target 5337 5345	Rocknest
-T15	Target 5696 5704	Rocknest
-T16	Target 6635 6643	Rocknest
+T13	Locality 5260 5268	Rocknest
+T14	Locality 5337 5345	Rocknest
+T15	Locality 5696 5704	Rocknest
+T16	Locality 6635 6643	Rocknest
 T12	Locality 5921 5936	Yellowknife bay
 T17	Locality 5950 5959	Kimberley
 T18	Mineral 6612 6620	nitrates
