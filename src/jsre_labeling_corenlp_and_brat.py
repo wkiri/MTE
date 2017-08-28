@@ -19,6 +19,9 @@
 # countries or providing access to foreign persons.
 
 import sys, os, io
+# The following two lines make CoreNLP happy
+reload(sys)
+sys.setdefaultencoding('UTF8')
 import argparse
 from pycorenlp import StanfordCoreNLP
 from pysolr import Solr
@@ -44,7 +47,7 @@ def parse(txt_file, ann_file, accept_entities):
             # t = ' '.join([texts[begin:end] for begin,end in zip(markers[::2], markers[1::2])])
             t = texts[markers[0]:markers[1]]
             if not t == ann[2]:
-                print("Error: Annotation mis-match, file=%s, ann=%s" % (txt_file, str(ann)))
+                print("Error: Annotation mis-match, file=%s, ann=%s, text=%s" % (txt_file, str(ann), t))
                 return None
             return (entity_type, markers, t, ann_id)
 
@@ -152,7 +155,8 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
     solr_server = Solr(solr_url)
     props = {'annotators': 'tokenize,ssplit,lemma,pos,ner',
              #'ner.model': 'ner_model_train_62r15_685k14_384k15.ser.gz',
-             'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
+             'ner.model': 'ner_model_train_62r15v3_emt_gazette.ser.gz',
+             #'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
              'outputFormat': 'json'}
 
     if not os.path.exists(out_path):
