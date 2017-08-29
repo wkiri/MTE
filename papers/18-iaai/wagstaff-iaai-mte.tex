@@ -140,34 +140,73 @@ titles or author names of cited publications.
 The named entities of greatest relevance for the MTE are elements
 (e.g., ``iron,'' ``Mg''), minerals (e.g., ``plagioclase,''
 ``hematite''), and ChemCam targets.  The periodic table provides a
-comprehensive list of elements, and we employed a list of 5XXX minerals
-provided by the International Mineralogical Association (from XXXX
-2017, available at~\url{http://nrmima.nrm.se//imalist.htm}).
+comprehensive list of elements, and we employed a list of 5228
+minerals provided by the International Mineralogical Association (the
+May 2017 release\footnote{\url{http://nrmima.nrm.se/imalist.htm}}). 
 
 Identifying Mars surface targets is more challenging, as they follow
 no standard naming convention.  Further, target names are
 fundamentally ambiguous as they are borrowed from Earth locations or
 people.  A sampling of the names hints at the challenge of accurately
 detecting them: ``Dunkirk'', ``Ithaca'', ``Jake'', ``Old\_woman'',
-``Pistol''.  We have a starting list of target names that was
-published by the ChemCam science team, but we have found it to be
-incomplete.  In addition, we found that authors invent new spelling
+``Pistol''.  We have a starting list of target
+names\footnote{\url{http://pds-geosciences.wustl.edu/msl/msl-m-chemcam-libs-4_5-rdr-v1/mslccm_1xxx/document/msl_ccam_obs.csv}}
+that was published by the ChemCam science team, but it is not fully
+curated, and we have found it to be incomplete with respect to the
+literature.
+%
+In addition, we found that authors invent new spelling
 variants and abbreviations for target names that require more than a
 simple list lookup.
 % Keyword-based web or publication searches return many spurious hits.
 
 To address the challenge of recognizing all three entity classes
-reliably, we employed a machine learning approach.
+reliably, we employed a machine learning approach.  We trained a
+custom Named Entity Recognizer (NER) using the Stanford CoreNLP NER
+system~\cite{finkel:ner05}.  This system trains a Conditional Random
+Field sequence model to assign class labels to entities within new
+documents.  We provided manually labeled documents with examples of
+the Element, Mineral, and Target classes to train the our custom
+model.  We also employed the ``gazette'' capability to provide lists
+of known terms.  This is particularly valuable for large semantic
+classes (like Mineral or Target) in which terms exist that might never
+appear in the training corpus.  The gazettes we used include the
+periodic table (Elements), the IMA list (Minerals), and the ChemCam
+observation table (Targets) as mentioned above.
 
-- CoreNLP NER CRF
-- gazettes - number of items in each (target, element, mineral)
-- Basilisk~\cite{thelen:basilisk02}
+Details:
+- CoreNLP data format (inside/outside encoding) - see Steven's wiki
+page
 
 {\bf [gazettes are available where online]}
 
+We also employed the Basilisk bootstrapping algorithm to learn
+additional related terms that belong to each entity
+class~\cite{thelen:basilisk02}.  {\bf [Ellen: add brief blurb about
+Basilisk]}  It was our hope that Basilisk, which operates on unlabeled
+text, might learn terms that would otherwise escape the CRF
+classifier, which can only learn from labeled text.  These could
+include author-created abbreviations and alternate spellings.
+
 \subsection{Relation Extraction}
 
-- jSRE SVM
+Once the entities are identified witin the text, the MTE analyzes them
+to determine which ones have a compositional relationship (i.e.,
+textual evidence that a given Target contains a given Element or
+Mineral).  
+%
+We trained a relation classifier using the jSRE~\cite{giuliano:jsre06}
+relation extraction tool.  It trains an SVM classifier to predict
+whether a relationship exists for two entities, using only shallow
+parsing.  jSRE provides SVM kernels that oeprate on local context,
+global (sentence-wide) context, or a combination of both.  In applying
+this method to biomedical publications, the authors found that most of
+the performance came from the global kernel features.
+
+Details:
+- jSRE example format encoding
+- multi-word tokens should be merged with underscores... instead, we
+operated on a per-word basis and merged relations as appropriate (hack)
 
 \section{Experimental Results}
 
@@ -178,41 +217,30 @@ Science Conference (LPSC).
 \subsection{Corpus}
 
 Our corpus consists of two-page extended LPSC abstracts in PDF format.
-We identified and manually annotated 117 documents from LPSC 2015 and
-2016 that mentioned ``ChemCam.''  We used the brat annotation
-tool~\cite{brat} to label entities and relations within these
-documents.  We estimate that it took an average of 30 minutes to
-annotate each document.  We created thousands of manual annotations in
-62 documents from LPSC 2015 and 55 documents from LPSC 2016 (see
+We selected 117 documents from LPSC 2015 and 2016 that mentioned
+``ChemCam.''  We used the html-based brat annotation tool~\cite{brat}
+to manually label entities and relations within these documents.  We
+estimate that it took an average of 30 minutes to annotate each
+document.  We created thousands of manual annotations in 62 documents
+from LPSC 2015 and 55 documents from LPSC 2016 (see
 Table~\ref{tab:docs}).
 
-We used the 2015 documents for training and divided the 2016 documents
-for into validation ($n=20$) and testing ($n=32$) sets.
-
+% cut -f2 *.ann | cut -f1 -d' ' | cut -f1 -d':' | sort | uniq -c
 \begin{table}
 \caption{Manual annotations for LPSC documents.}
 \label{tab:docs}
 \begin{center}
-\begin{tabular}{l|ll}
-Annotation & 2015 ($n=62$) & 2016 ($n=55$) \\ \hline
-Element  & \\
-Mineral  & \\
-Target   & \\ \hline
-Contains & \\ \hline
-Total & \\
-\hline
+\begin{tabular}{l|ccc}
+           & 2015     & 2016     & Total \\ 
+Annotation & (62 docs) & (55 docs) & (117 docs)\\ \hline
+Element  & 1195 & 1029 & 2224 \\
+Mineral  & 748  & 708  & 1456 \\
+Target   & 566  & 347  &  913 \\ \hline
+Contains & 434  & 262  &  696 \\ \hline
+Total    & 2943 & 2346 & 5289 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=3.25in]{fig/brat-example.png}
-\end{center}
-\caption{Excerpt from document lpsc16-1155 showing compositional
-annotations created with the brat web annotation tool.}
-\label{fig:brat}
-\end{figure}
 
 The annotated relationships ranged from simple (e.g., a pattern such
 as ``X contains Y'' within a sentence) to complex (e.g., relationships
@@ -223,9 +251,23 @@ target Buckskin.  The vocabulary used to indicate a compositional
 relationship varies, and the last two relationships cross sentence
 boundaries.  
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=3.25in]{fig/brat-example.png}
+\end{center}
+\caption{Excerpt from document lpsc16-1155 showing compositional
+annotations created with the brat web annotation tool.}
+\label{fig:brat}
+\end{figure}
+
 {\bf [annotated docs are available where?]}
 
 \subsection{Named Entity Recognition Results}
+
+Named entity recognition operates on individual words or tokens.  We
+used the 2015 documents for training and divided the 2016 documents
+into validation ($n=20$) and testing ($n=35$) sets.  (Total number of
+items?) 
 
 \begin{table}
 \caption{Named entity recognition performance on LPSC 2016 test documents.  
@@ -234,10 +276,11 @@ The best result is shown in bold.}
 \begin{center}
 \begin{tabular}{l|ll}
  & Precision & Recall \\ \hline
+Baseline: Random & P & R \\
 Baseline: Lists only & P & R \\ \hline
 {\em CoreNLP NER CRF trained on:} & & \\
 LPSC 2015 & P & R \\
-LPSC 2015 + gazettes & P & R \\
+LPSC 2015 + gazettes & 0.944 & 0.777 \\
 LPSC 2015 + Basilisk gazettes & P & R \\
 \hline
 \end{tabular}
@@ -246,50 +289,113 @@ LPSC 2015 + Basilisk gazettes & P & R \\
 
 {\bf [precision/recall per class - bar plot?]}
 
+Basilisk - output manually reviewed
+
 \subsection{Relation Extraction Results}
 
-We created a training set using relations that were annotated in the
-LPSC 2015 documents and a test set from relations in the LPSC 2016
-documents.  We processed each sentence independently.  For each pair
-of (Target, Element) or (Target, Mineral) within a sentence, we
-generated a jSRE example that encoded the sentence content.  If the
-pair of entities was connected by a relation in the manual
+The decision about whether or not a relation exists is made for a
+given pair of entities.  Processing all possible pairs of entities in
+a document would be infeasible (and likely unnecessary).  For
+simplicity, we adopted the strategy used in previous
+work~\cite{giuliano:jsre06} of generating all pairs of entities that
+occur within a single sentence.  We used CoreNLP's sentence splitter
+to divide the corpus into sentences and the NER model trained above to
+identify entities.  For each (Target, Element) or (Target, Mineral)
+pair, we generated a jSRE example that encoded the sentence content.
+If the pair of entities was connected by a relation in the manual
 annotations, we gave the example a positive label; otherwise, we gave
 it a negative label.
 
+To simulate how the system would be used in practice, we trained and
+validated the relation classifier using text from LPSC 2015 and tested
+it on LPSC 2016.  We used the first 42 LPSC 2015 documents for
+training and the remaining 20 for validation.  The number and
+distribution of the resulting jSRE examples (relationships) are given
+in Table~\ref{tab:rels}.  
+
+% for l in lpsc16-utf8/*test ; do echo $l ; cut -f1 $l | sort | uniq -c; done
 \begin{table}
-\caption{Relation extraction performance on LPSC 2016 documents. 
-The best result is shown in bold.}
-\label{tab:re}
+\caption{Number and distribution of relationships between Targets and
+Elements or Minerals. The number in parentheses is the percentage of
+positive relationships. }
+\label{tab:rels}
 \begin{center}
-\begin{tabular}{l|ll}
- & Precision & Recall \\ \hline
-Baseline: All-yes & P & R \\ \hline
-{\em jSRE SVM trained on:} & & \\
-LPSC 2015, Target-Element & P & R \\
-LPSC 2015, Target-Mineral & P & R \\
-LPSC 2015, Target-Either  & P & R \\
-\hline
+\begin{tabular}{l|ccc}
+           & Element & Mineral & Merged \\ \hline 
+Train      & 279 (38\%) & 150 (41\%) & 429 (39\%) \\
+Validation &  93 (27\%) &  70 (69\%) & 163 (45\%) \\ \hline
+Test       & 111 (37\%) &  62 (50\%) & 173 (42\%) \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-[precision/recall per class - bar plot?]
+We trained three different relation classifiers: one on Target-Element
+relations only; one on Target-Mineral relations only; and one on the
+merged set.  We were curious as to how a specialized model that was
+trained on less data would compare to a more generic model trained on
+more data.  For each model, we performed a grid search over the jSRE
+parameters by trying each of the SVM kernels (LC, GC, SL) and window
+sizes within the set \{ 1, 2, 5, 10, 15, 20 \}.  We selected the model
+parameters that led to the highest performance on the validation set
+in terms of precision.
+
+We found that the merged model out-performed the specialized models by
+a large margin (see Table~\ref{tab:re}).  We also found that the
+max-precision model did not employ the same parameters across the
+three models.  Target-Element and Target-Merged used an LC kernel with
+a window of 5, while Target-Mineral used an SL kernel with a window of 5.
+
+\begin{table}
+\caption{Relation extraction performance on LPSC 2016 documents. 
+The highest-precision result for each data set is shown in bold.}
+\label{tab:re}
+\begin{center}
+\begin{tabular}{l|ll}
+ & Precision & Recall \\ \hline
+%{\em jSRE SVM trained on:} & & \\
+\multicolumn{3}{c}{Elements ($n=111$)} \\
+jSRE-Elements & {\bf 0.531} & 0.415 \\
+Baseline: All-yes & 0.369 & 1.000 \\ \hline
+\multicolumn{3}{c}{Minerals ($n=62$)} \\
+jSRE-Minerals & {\bf 0.679} & 0.613 \\ 
+Baseline: All-yes & 0.500 & 1.000 \\ \hline
+\multicolumn{3}{c}{Merged ($n=173$)} \\
+jSRE-Merged  & {\bf 0.640} & 0.444 \\
+jSRE-Indiv.  & 0.598 & 0.447 \\
+Baseline: All-yes & 0.416 & 1.000 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+We also compared the models to a baseline approach that always
+predicted that a relationship was present (``All-yes'').  While this
+baseline always achieves a recall of 1.00, its precision is much lower
+than that of the jSRE classifier.
+
+Also:
+- mineral is an easier problem than element?
+- these are separate evaluations because separate data sets
+- recall is somewhat low, but precision is far more important
+
+{\bf [precision/recall per class - bar plot?] }
 
 \subsection{Large-scale Evaluation}
 
 We collected all 6000 {\bf [check]} LPSC documents that were published
 in 2014, 2015, and 2016 and ingested them into the MTE.  This large
-corpus contains 117 manually labeled documents as well as everything
-else that was published.
+corpus contains the 117 documents used for development and evaluation
+as well as everything else that was published at these conferences.
 
 {\bf [table of num docs, num NER, num RE, time consumed]}
 
 {\bf [Nina's evaluation of extracted information]}
 
+{\bf [spatial map - hematite search - where does this fit?]}
+
 \subsection{Limitations}
 - NER cannot handle overlapping annotations (e.g., calcium sulfate)
-- RE: no sentence-crossing relationships (about 30\%? recalc this number)
+- RE: no sentence-crossing relationships (about 30\%? recalc this
+  number, restrict to element/mineral (no material))
 
 \section{Conclusions and Next Steps}
 % and lessons learned
