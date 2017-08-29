@@ -5,36 +5,23 @@
 #
 # Kiri Wagstaff
 # February 18, 2016
-#
-# Copyright 2016, by the California Institute of Technology. ALL
-# RIGHTS RESERVED. United States Government Sponsorship
-# acknowledged. Any commercial use must be negotiated with the Office
-# of Technology Transfer at the California Institute of Technology.
-#
-# This software may be subject to U.S. export control laws and
-# regulations.  By accepting this document, the user agrees to comply
-# with all applicable U.S. export laws and regulations.  User has the
-# responsibility to obtain export licenses, or other export authority
-# as may be required before exporting such information to foreign
-# countries or providing access to foreign persons.
+# Copyright notice at bottom of file.
 
 import sys, os, io
 import string
 import re
 
 # Input files
-#textdir = '../text/lpsc15-C-pre-annotate-sol1159'
-#textdir = '../text/lpsc15-C-pre-annotate-sol1159-v2'
-#textdir = '../text/lpsc15-C-pre-annotate-sol1159-v3'
-#textdir = '../text/lpsc16-C-pre-annotate'
-#textdir = '../../MTE-corpus/lpsc16-text'
+#textdir = '../corpus-LPSC/lpsc15-C-pre-annotate-sol1159-v4-utf8'
+textdir = '../corpus-LPSC/lpsc16-C-pre-annotate-sol1159-utf8'
 
 # Reference files
-elementfile = '../ref/elements.txt'
-chemcamfile = '../ref/chemcam-targets-sol1514.txt'
-mineralfile = '../ref/minerals.txt'
-nonminfile  = '../ref/non-minerals.txt' # Things that end in -ite but aren't minerals
-MERfile     = '../ref/MER-targets-pruned.txt'
+elementfile    = '../ref/elements.txt'
+chemcamfile    = '../ref/chemcam-targets-sol1159.txt' # since LPSC 2016 is test
+mineralfile    = '../ref/minerals.txt'
+IMAmineralfile = '../ref/minerals-IMA-2017-05.txt'
+nonminfile     = '../ref/non-minerals.txt' # Things that end in -ite but aren't minerals
+MERfile        = '../ref/MER-targets-pruned.txt'
 
 # Remove any punctuation, except '_' and '+' (ions) and '-' 
 # and '.' (e.g., Mt. Sharp)
@@ -239,7 +226,17 @@ with open(mineralfile, 'r') as inf:
     lines = inf.readlines()
     minerals = [l.strip() for l in lines]
     # Add lower-case versions
-    minerals += [m.lower() for m in minerals]
+    minerals += [l.strip().lower() for l in lines]
+
+# Read in the IMA minerals file
+with open(IMAmineralfile, 'r') as inf:
+    lines = inf.readlines()
+    minerals += [l.strip() for l in lines]
+    # Add lower-case versions
+    minerals += [l.strip().lower() for l in lines]
+
+# Remove duplicates
+minerals = list(set(minerals))
 
 # Read in the non-minerals file
 with open(nonminfile, 'r') as inf:
@@ -296,8 +293,8 @@ print 'Read in %d MER target names.' % len(mer_targets)
 
 # Iterate through documents; output to .ann file
 for fn in dirlist:
-    #if int(fn.split('.')[0]) != 1034:
-    #    continue
+    #if int(fn.split('.')[0]) > 1500:
+    #    sys.exit(0)
     print fn
 
     # Read in all of the characters so we can track offsets
@@ -315,10 +312,18 @@ for fn in dirlist:
         start_t = pre_annotate(chars, elements,        'Element', outf, start_t)
         start_t = pre_annotate(chars, chemcam_targets, 'Target',  outf, start_t)
 #        start_t = pre_annotate(chars, mer_targets,     'Target',  outf, start_t)
-        start_t = pre_annotate_suffix(chars, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
+#        start_t = pre_annotate_suffix(chars, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
         start_t = pre_annotate(chars, minerals,        'Mineral', outf, start_t)
-#        sys.exit(0)
 
 
-    
-
+# Copyright 2016, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.

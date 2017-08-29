@@ -6,6 +6,7 @@
 #
 # Kiri Wagstaff
 # July 31, 2017
+# Copyright notice at bottom of file.
 
 import sys, os, re, string
 from brat_annotation import BratAnnotation
@@ -13,7 +14,7 @@ from brat_annotation import BratAnnotation
 # relation: Event with self.targets, self.cont lists
 
 def usage():
-    print './evaluate.py <annotation_dir> <groundtruth_dir>'
+    print './eval_brat.py <annotation_dir> <groundtruth_dir>'
     sys.exit(1)
 
 
@@ -30,6 +31,8 @@ def read_file_annots(fn, doc_id):
 def read_dir_annots(dirname):
     dirlist = [fn for fn in os.listdir(dirname) if
                fn.endswith('.ann')]
+    # testing: First one only
+    #dirlist = dirlist[0:5]
 
     all_annots = []
     for fn in dirlist:
@@ -198,7 +201,6 @@ def main():
 
 
 if __name__ == '__main__':
-    '''
     # Run inline tests
     import doctest
 
@@ -209,5 +211,18 @@ if __name__ == '__main__':
         print "%-20s All %3d tests passed!" % (filename, num_tests)
     else:
         sys.exit(1)
-    '''
+
     main()
+
+
+# Copyright 2017, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.
