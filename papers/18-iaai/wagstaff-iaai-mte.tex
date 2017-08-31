@@ -80,33 +80,44 @@ allows users to ask questions such as ``Which targets contain
 hematite?'' or ``What is known about target Dillinger?''  It also
 enables entirely new kinds of information visualization, such as a map
 display of all locations where the Mars rover Curiosity has detected
-hematite. 
+hematite.  The resulting Mars Target Encylopedia serves as a resource
+that can inform 
+%the development of hypotheses about the history and evolution of Mars
+%surface processes as well as 
+decisions about the next steps in Mars exploration.  
 
-We focus on the extraction of information about targets identified by
-the ChemCam instrument on the Mars Science Laboratory rover.  ChemCam
-obtains compositional spectra from up to seven meters away from a
-given target, and the resulting spectrum can be analyzed to identify
-individual elements within the target~\cite{maurice:chemcam12}.  As of
-sol 1159, ChemCam had observed more than 1100 distinct targets.
+%leveraged a small amount of hand-labeled text to train a
 
-... provide guidance for next steps in exploration 
-- hypothesis generation and data collection.
-
-leveraged a small amount of hand-labeled text to train a
-
-precision more important than recall
+%precision more important than recall
 
 \section{Related Work}
 
-GeoDeepDive
+- biomedical IE - Tikk et al. 2010, Thomas et al. 2011.  Bui et
+al. 2011
 
-work at ISI?
+- scientific pubs - extracting citations, summarizing documents
+  (Ronzano et al., 2016), Narasimham et al. 2016?, Choi et al. 2016,
+  Tsutsui et al., 2016
+
+- GeoDeepDive
+
+- other work at ISI, etc.
 
 \section{Machine Learning for Information Extraction}
 
 The Mars Target Encyclopedia (MTE) is an information extraction system
 that takes in scientific publications in PDF format and extracts
 knowledge of use to planetary scientists studying the planet Mars.
+%
+We focus on the extraction of information about targets identified by
+the ChemCam instrument on the Mars Science Laboratory rover.  ChemCam
+obtains compositional spectra from up to seven meters away from a
+given target, and the resulting spectrum can be analyzed to identify
+individual elements within the target~\cite{maurice:chemcam12}.  As of
+sol 1159 of the MSL Mission, ChemCam had observed more than 1100
+distinct targets.  New discoveries about these targets are published
+in a variety of planetary science conference and journal venues.  
+
 The MTE is composed of four modules: preprocessing, named entity
 recognition (NER), relation extraction (RE), and database updates (see
 Figure~\ref{fig:mte}).
@@ -174,11 +185,11 @@ appear in the training corpus.  The gazettes we used include the
 periodic table (Elements), the IMA list (Minerals), and the ChemCam
 observation table (Targets) as mentioned above.
 
-Details:
-- CoreNLP data format (inside/outside encoding) - see Steven's wiki
-page
+{\bf Steven: add paragraph describing details of converting our text and
+annotations into CoreNLP data format (inside/outside encoding).}
 
-{\bf [gazettes are available where online]}
+% TODO:
+%{\bf [gazettes are available where online]}
 
 We also employed the Basilisk bootstrapping algorithm to learn
 additional related terms that belong to each entity
@@ -203,10 +214,9 @@ global (sentence-wide) context, or a combination of both.  In applying
 this method to biomedical publications, the authors found that most of
 the performance came from the global kernel features.
 
-Details:
-- jSRE example format encoding
-- multi-word tokens should be merged with underscores... instead, we
-operated on a per-word basis and merged relations as appropriate (hack)
+{\bf Kiri: add details about jSRE example format encoding;
+multi-word tokens should be merged with underscores... instead, we
+operated on a per-word basis and merged relations as appropriate (hack)}
 
 \section{Experimental Results}
 
@@ -260,7 +270,8 @@ annotations created with the brat web annotation tool.}
 \label{fig:brat}
 \end{figure}
 
-{\bf [annotated docs are available where?]}
+% TODO:
+%{\bf [annotated docs are available where?]}
 
 \subsection{Named Entity Recognition Results}
 
@@ -274,13 +285,13 @@ items?)
 The best result is shown in bold.}
 \label{tab:ner}
 \begin{center}
-\begin{tabular}{l|ll}
- & Precision & Recall \\ \hline
-Baseline: Random & P & R \\
-Baseline: Lists only & P & R \\ \hline
+\begin{tabular}{l|ccc}
+ & Prec. & Recall & F1 \\ \hline
+%Baseline: Lists only & 0.592 & 0.867 & 0.703 \\ \hline  % all LPSC16
+Baseline: Lists only & 0.585 & 0.831 & 0.687 \\ \hline  % LPSC16-test
 {\em CoreNLP NER CRF trained on:} & & \\
-LPSC 2015 & P & R \\
-LPSC 2015 + gazettes & 0.944 & 0.777 \\
+LPSC 2015            & 0.948 & 0.700 & 0.805 \\
+LPSC 2015 + gazettes & 0.945 & 0.777 & 0.853 \\
 LPSC 2015 + Basilisk gazettes & P & R \\
 \hline
 \end{tabular}
@@ -337,47 +348,50 @@ more data.  For each model, we performed a grid search over the jSRE
 parameters by trying each of the SVM kernels (LC, GC, SL) and window
 sizes within the set \{ 1, 2, 5, 10, 15, 20 \}.  We selected the model
 parameters that led to the highest performance on the validation set
-in terms of precision.
+in terms of precision.  We found that the max-precision model did not
+employ the same parameters across the three models.  jSRE-Elements and
+jSRE-Merged used an LC kernel with a window of 5, while jSRE-Minerals
+used an SL kernel with a window of 5.  
 
-We found that the merged model out-performed the specialized models by
-a large margin (see Table~\ref{tab:re}).  We also found that the
-max-precision model did not employ the same parameters across the
-three models.  Target-Element and Target-Merged used an LC kernel with
-a window of 5, while Target-Mineral used an SL kernel with a window of 5.
+We found that the individual models (jSRE-Elements and jSRE-Minerals)
+achieved much higher precision than a baseline approach that always
+predicted that a relationship was present (``All-yes'') (see
+Table~\ref{tab:re}).  While this baseline always achieves a recall of
+1.00 and therefore appears superior in terms of F-measure, this
+application domain values precision much more than recall.  Content
+is included in the MTE must be of the highest reliability, even if
+this means it is not comprehensive.  
+%
+We also found that the merged model (jSRE-Merged) out-performed the
+baseline and the individual models when they were applied to the full
+(Merged) data set (jSRE-Indiv.). 
 
 \begin{table}
 \caption{Relation extraction performance on LPSC 2016 documents. 
 The highest-precision result for each data set is shown in bold.}
 \label{tab:re}
 \begin{center}
-\begin{tabular}{l|ll}
- & Precision & Recall \\ \hline
+\begin{tabular}{l|ccc}
+ & Precision & Recall & F1 \\ \hline
 %{\em jSRE SVM trained on:} & & \\
-\multicolumn{3}{c}{Elements ($n=111$)} \\
-jSRE-Elements & {\bf 0.531} & 0.415 \\
-Baseline: All-yes & 0.369 & 1.000 \\ \hline
-\multicolumn{3}{c}{Minerals ($n=62$)} \\
-jSRE-Minerals & {\bf 0.679} & 0.613 \\ 
-Baseline: All-yes & 0.500 & 1.000 \\ \hline
-\multicolumn{3}{c}{Merged ($n=173$)} \\
-jSRE-Merged  & {\bf 0.640} & 0.444 \\
-jSRE-Indiv.  & 0.598 & 0.447 \\
-Baseline: All-yes & 0.416 & 1.000 \\ \hline
+\multicolumn{4}{c}{Elements ($n=111$)} \\
+Baseline: All-yes & 0.369 & {\bf 1.000} & {\bf 0.539} \\ 
+jSRE-Elements & {\bf 0.531} & 0.415 & 0.466 \\ \hline
+\multicolumn{4}{c}{Minerals ($n=62$)} \\
+Baseline: All-yes & 0.500 & {\bf 1.000} & {\bf 0.667} \\ 
+jSRE-Minerals & {\bf 0.679} & 0.613 & 0.644 \\ \hline 
+\multicolumn{4}{c}{Merged ($n=173$)} \\
+Baseline: All-yes & 0.416 & {\bf 1.000} & {\bf 0.588} \\ 
+jSRE-Indiv.  & 0.598 & 0.447 & 0.511 \\
+jSRE-Merged  & {\bf 0.640} & 0.444 & 0.525 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
-
-We also compared the models to a baseline approach that always
-predicted that a relationship was present (``All-yes'').  While this
-baseline always achieves a recall of 1.00, its precision is much lower
-than that of the jSRE classifier.
 
 Also:
 - mineral is an easier problem than element?
 - these are separate evaluations because separate data sets
 - recall is somewhat low, but precision is far more important
-
-{\bf [precision/recall per class - bar plot?] }
 
 \subsection{Large-scale Evaluation}
 
