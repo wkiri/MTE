@@ -112,6 +112,7 @@ def eval_brat(dir_sys, dir_gt):
     Element     100.00  100.00  100.00
     Mineral     100.00  100.00  100.00
     Target      100.00  100.00  100.00
+    Total:      100.00  100.00  100.00
 
     >>> eval_brat('test_eval_brat/lpsc16-C-pre-annotate-notarget', 'test_eval_brat/lpsc16-C-pre-annotate') # doctest: +NORMALIZE_WHITESPACE
     Read 25 annotations from 1 files in test_eval_brat/lpsc16-C-pre-annotate-notarget.
@@ -120,6 +121,7 @@ def eval_brat(dir_sys, dir_gt):
     Element     100.00  100.00  100.00
     Mineral     100.00  100.00  100.00
     Target      0.00    0.00    0.00
+    Total:      96.15   100.00  98.04
 
     >>> eval_brat('test_eval_brat/lpsc16-C-pre-annotate', 'test_eval_brat/lpsc16-C-pre-annotate-notarget') # doctest: +NORMALIZE_WHITESPACE
     Read 26 annotations from 1 files in test_eval_brat/lpsc16-C-pre-annotate.
@@ -127,6 +129,7 @@ def eval_brat(dir_sys, dir_gt):
                 Recall  Prec.   F1
     Element     100.00  100.00  100.00
     Mineral     100.00  100.00  100.00
+    Total:      100.00  100.00  100.00
 
     >>> eval_brat('test_eval_brat/lpsc16-C-pre-annotate', 'test_eval_brat/lpsc16-C-raymond') # doctest: +NORMALIZE_WHITESPACE
     Read 26 annotations from 1 files in test_eval_brat/lpsc16-C-pre-annotate.
@@ -135,6 +138,7 @@ def eval_brat(dir_sys, dir_gt):
     Element     63.64   70.00   66.67
     Material    0.00    0.00    0.00
     Mineral     83.33   100.00  90.91
+    Total:      57.89   88.00   69.84
 
     >>> eval_brat('test_eval_brat/lpsc16-C-pre-annotate', 'test_eval_brat/lpsc16-C-raymond-v2') # doctest: +NORMALIZE_WHITESPACE
     Read 26 annotations from 1 files in test_eval_brat/lpsc16-C-pre-annotate.
@@ -143,6 +147,7 @@ def eval_brat(dir_sys, dir_gt):
     Element     60.00   60.00   60.00
     Material    0.00    0.00    0.00
     Mineral     68.18   100.00  81.08
+    Total:      35.59   84.00   50.00
     """
 
     # Read in the annotations to be tested
@@ -178,12 +183,17 @@ def eval_brat(dir_sys, dir_gt):
                                     if a.type == 'anchor'])))
 
     print '\t\tRecall\tPrec.\tF1'
+    tot_ncorr  = 0
+    tot_ref    = 0
+    tot_return = 0
     for ne in NE_types:
         # Compute recall
         (ncorr_r, ntot_r, recall) = compute_recall(annots_sys, annots_gt, ne)
 
         # Compute precision
         (ncorr_p, ntot_p, precision) = compute_precision(annots_sys, annots_gt, ne)
+        assert ncorr_r == ncorr_p
+
         if recall+precision < sys.float_info.epsilon:
             print '%s\t%.2f\t%.2f\t0.00' \
                 % (ne, recall, precision)
@@ -191,6 +201,21 @@ def eval_brat(dir_sys, dir_gt):
             print '%s\t%.2f\t%.2f\t%.2f' \
                 % (ne, recall, precision, 
                    2*recall*precision/(recall+precision))
+
+        tot_ncorr  += ncorr_r
+        tot_ref    += ntot_r
+        tot_return += ntot_p
+
+    tot_rec  = tot_ncorr * 100.0 / tot_ref
+    tot_prec = tot_ncorr * 100.0 / tot_return
+
+    if tot_rec+tot_prec < sys.float_info.epsilon:
+        print 'Total:\t%.2f\t%.2f\t0.00' \
+            % (tot_rec, tot_pred)
+    else:
+        print 'Total:\t%.2f\t%.2f\t%.2f' \
+            % (tot_rec, tot_prec,
+               2*tot_rec*tot_prec/(tot_rec+tot_prec))
 
 
 def main():
