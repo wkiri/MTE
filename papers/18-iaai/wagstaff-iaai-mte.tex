@@ -14,8 +14,10 @@
 Government sponsorship acknowledged.}
 %PDF Info Is Required:
   \pdfinfo{
-/Title (Extracting Information from Scientific Publications for
-Planetary Science)
+%/Title (Extracting Information from Scientific Publications for
+%Planetary Science)
+/Title (Mars Target Encyclopedia: Rock and Soil Composition Extracted
+from the Literature)
 /Author (Kiri L. Wagstaff, Raymond Francis, Thamme Gowda, Nina L. Lanza,
 You Lu, Ellen Riloff, Karanjeet Singh)}
 \setcounter{secnumdepth}{0}  
@@ -23,8 +25,10 @@ You Lu, Ellen Riloff, Karanjeet Singh)}
 % The file aaai.sty is the style file for AAAI Press 
 % proceedings, working notes, and technical reports.
 %
-\title{Extracting Information from Scientific Publications for
-Planetary Science}
+%\title{Extracting Information from Scientific Publications for
+%Planetary Science}
+\title{Mars Target Encyclopedia: Rock and Soil Composition Extracted
+from the Literature}
 \author{
 Kiri L. Wagstaff$^1$,
 Raymond Francis$^1$,
@@ -45,12 +49,17 @@ tg@isi.edu
 \begin{abstract}
 We have constructed an information extraction system called the Mars
 Target Encyclopedia that takes in planetary science publications
-and extracts scientific knowledge.  The extracted knowledge is stored
-in a searchable database that can greatly accelerate the ability of
-scientists to compare new discoveries with what is already known.  To
-date, we have applied this system to $\sim$6000 documents and achieved
-XX\% precision in the extracted information. 
+and extracts scientific knowledge about target compositions.
+The extracted knowledge is stored in a searchable database that can
+greatly accelerate the ability of scientists to compare new
+discoveries with what is already known.  To date, we have applied this
+system to $\sim$6000 documents and achieved XX\% precision in the
+extracted information.  
 \end{abstract}
+% lpsc14: 1908
+% lpsc15: 1991
+% lpsc16: 2060
+% total: 5959
 
 \section{Introduction}
 
@@ -62,8 +71,8 @@ planetary exploration, new discoveries can occur each time
 new data is transmitted.  For example, our rovers on Mars have sent
 back compositional data for thousands of individual targets (e.g.,
 rocks, soils), and some of those observations have transformed our
-understanding of past environments on the planet {\bf
-[cite... Nature?]}.
+understanding of past environments on the
+planet~\cite{grotzinger:ykb14}. 
 
 To interpret new observations correctly, it is necessary to be able to
 compare them with what is already known.  For example, if we observe
@@ -72,32 +81,60 @@ whether it is consistent with previous observations or it indicates an
 anomalous new discovery.  However, no central database exists in which
 planetary scientists can quickly make that determination.
 
-We have created a system that uses information extraction methods to
-analyze planetary science publications and identify compositional
-relationships between Mars surface targets and elements or minerals.
-The extracted information is stored in a searchable database that
-allows users to ask questions such as ``Which targets contain
-hematite?'' or ``What is known about target Dillinger?''  It also
-enables entirely new kinds of information visualization, such as a map
-display of all locations where the Mars rover Curiosity has detected
-hematite.  The resulting Mars Target Encylopedia serves as a resource
-that can inform 
+We have created a system called the Mars Target Encyclopedia (MTE)
+that uses information extraction methods to analyze planetary science
+publications and identify compositional relationships between Mars
+surface targets and elements or minerals.  The extracted information
+is stored in a searchable database that allows users to ask questions
+such as ``Which targets contain hematite?'' or ``What is known about
+target Dillinger?''  It also enables entirely new kinds of information
+visualization, such as a map display of all locations where the Mars
+rover Curiosity has detected hematite.  The resulting Mars Target
+Encylopedia serves as a resource that can inform
 %the development of hypotheses about the history and evolution of Mars
 %surface processes as well as 
 decisions about the next steps in Mars exploration.  
 
 %leveraged a small amount of hand-labeled text to train a
 
+In this paper, we describe the MTE system and its component
+technologies, the empirical performance of the system on labeled data,
+and results from a large-scale evaluation on $\sim$6000 documents.
+The MTE is currently being integrated into a public website called the
+PDS MSL Analyst's Notebook for Mars scientists and the public to
+access.
+
 %precision more important than recall
 
 \section{Related Work}
 
-- biomedical IE - Tikk et al. 2010, Thomas et al. 2011.  Bui et
-al. 2011
+A variety of text analysis methods exist for extracting information
+from text.  Some methods focus on extracting meta-data such as the
+document title, authors, and publication venue or analyzing and
+linking citations between papers~\cite{ronzano:scipub16}.
+%
+In contrast, understanding the content of a scientific publication
+requires a deeper analysis.  Information extraction (IE) of this
+nature is generally broken into two steps: (1) named entity
+recognition, to identify references to people, locations, and other
+objects of interest, and (2) relation extraction, to identify
+relationships between pairs of entities~\cite{mooney:ie05}.  Many of
+the recent advances in IE have been motivated by problems from the
+biomedical research world, such as the desire to identify
+protein-protein interactions~\cite{tikk:protein10,bui:protein11} or
+%\citeauthor{krallinger:chemistry17} (\citeyear{krallinger:chemistry17})
+%provide an in-depth review of methods for recognizing chemical
+%entities and identifying 
+chemical-protein and chemical-disease
+relations~\cite{krallinger:chemistry17}.  \citeauthor{tsutsui:ad16}
+(\citeyear{tsutsui:ad16}) used topic modeling and open IE, which does
+not require the prior identification of entities, to build a knowledge
+database about Alzheimer's disease.
+%Others have developed systems to extract information about the
+%experiments conducted in machine translation papers~\cite{choi:mt16} 
 
-- scientific pubs - extracting citations, summarizing documents
-  (Ronzano et al., 2016), Narasimham et al. 2016?, Choi et al. 2016,
-  Tsutsui et al., 2016
+To date, little such work has been done in the domain of planetary
+science. 
 
 - GeoDeepDive
 
@@ -218,6 +255,23 @@ the performance came from the global kernel features.
 multi-word tokens should be merged with underscores... instead, we
 operated on a per-word basis and merged relations as appropriate (hack)}
 
+\subsection{MTE Database}
+
+For each document, the MTE database stores document meta-data (e.g.,
+title, author, publication venue), the preprocessed text content, and
+the extracted entities and relations.  To support fast retrieval of
+documents that contain entities or relations specified in a given
+search queries, we constructed inverted indices for the entities and
+relations using Apache
+Solr\footnote{\url{http://lucene.apache.org/solr/}}. Apache Solr is an
+open source search platform powered by Apache Lucene that provides
+near real-time search and document retrieval. 
+%The storing of content was accomplished by a program that was at the
+%end of MTE pipeline described in Figure {\ref fig1}. The querying
+%functionality was offered as an API to the MTE web interface, the
+%discussion of it is beyond the scope of this article {\cite
+%https://www.hou.usra.edu/meetings/planetdata2017/pdf/7031.pdf}
+ 
 \section{Experimental Results}
 
 We developed and evaluated the MTE using a collection of scientific
@@ -288,8 +342,12 @@ The best result is shown in bold.}
 \begin{tabular}{l|ccc}
  & Prec. & Recall & F1 \\ \hline
 %Baseline: Lists only & 0.592 & 0.867 & 0.703 \\ \hline  % all LPSC16
-Baseline: Lists only & 0.585 & 0.831 & 0.687 \\ \hline  % LPSC16-test
+Baseline: Lists only & 0.831 & 0.699 & 0.760 \\ \hline  % LPSC16-test
+% TODO: resolve the fact that I get different numbers for the 
+% rows below when running my eval_brat script (which is how I got
+% the baseline numbers above).  Otherwise not a fair comparison.
 {\em CoreNLP NER CRF trained on:} & & \\
+% Numbers reported by Steven (CoreNLP)
 LPSC 2015            & 0.948 & 0.700 & 0.805 \\
 LPSC 2015 + gazettes & 0.945 & 0.777 & 0.853 \\
 LPSC 2015 + Basilisk gazettes & P & R \\
@@ -366,6 +424,8 @@ We also found that the merged model (jSRE-Merged) out-performed the
 baseline and the individual models when they were applied to the full
 (Merged) data set (jSRE-Indiv.). 
 
+% TODO: add comparison to OpenIE
+
 \begin{table}
 \caption{Relation extraction performance on LPSC 2016 documents. 
 The highest-precision result for each data set is shown in bold.}
@@ -402,7 +462,12 @@ as well as everything else that was published at these conferences.
 
 {\bf [table of num docs, num NER, num RE, time consumed]}
 
-{\bf [Nina's evaluation of extracted information]}
+{\bf [Raymond's evaluation of extracted information]}
+correct, partial, irrelevant, wrong, unsure
+
+\section{Deployment?}
+- web inteface
+- analyst's notebook
 
 {\bf [spatial map - hematite search - where does this fit?]}
 
