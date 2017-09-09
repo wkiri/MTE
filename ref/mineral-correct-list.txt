@@ -1,5 +1,5 @@
 chlorite/smectite
-chromite-ülvospinel
+chromite-√ºlvospinel
 melilites
 biopyriboles
 zeolite
@@ -24,7 +24,7 @@ smectite/chlorite
 K-plagioclase
 alkali-feldspar
 Fe-hydroxides
-wüstite
+w√ºstite
 post-perovskite
 saponite/talc
 Crspinel
@@ -34,13 +34,13 @@ Fe-oxyhydroxide
 titanomagnetite
 monazite
 amphibolite
-Rhönite
+Rh√∂nite
 illite
 Ca-pyroxene
 daubreelite
 amphiboles
 Fe-oxyhydroxides
-daubréelite
+daubr√©elite
 chlorite
 amphibole
 _-cristobalite
@@ -55,7 +55,7 @@ polymorph
 kamacite
 biotite
 picrochromite
-ulvöspinel
+ulv√∂spinel
 maskelynite
 chlorides
 Fo90
@@ -68,10 +68,10 @@ sulfide
 plagioclases
 olivines
 Apatite
-Al2(SO4)3·12H2O
+Al2(SO4)3¬∑12H2O
 HCl.3H2O
 allophanes
-akaganéite
+akagan√©ite
 nanodiamond
 phosphates
 Ol
@@ -81,6 +81,6 @@ Ice-II
 NANO-PYRRHOTITE
 Fo60-85
 Al,Tipyroxene
-magnesiowüstite
+magnesiow√ºstite
 Cl-apatite
 Stv

@@ -130,7 +130,7 @@ COSI-Corr
 54Cr
 Mo.
 235U
-·SiO2
+âˆ‘SiO2
 L-alanine
 _-alanine
 238U
@@ -163,7 +163,7 @@ Ne-E
 r-process
 40Ar
 _25Mg
-µg/ml
+Âµg/ml
 r
 10Be
 182W

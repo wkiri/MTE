@@ -21,7 +21,7 @@ APDI-13-14h
 alkali-feldspar
 pegmatites
 Fe-hydroxides
-wüstite
+w√ºstite
 birefringent
 post-perovskite
 saponite/talc
@@ -32,7 +32,7 @@ Glotch1
 Crspinel
 shreibersite
 melt[6,7,8
-chromite-ülvospinel
+chromite-√ºlvospinel
 _-CaSO4
 melilites
 Capyroxene
@@ -46,7 +46,7 @@ monazite
 amphibolite
 King
 oxalates
-Rhönite
+Rh√∂nite
 illite
 Ca(OH)2
 Ca-pyroxene
@@ -57,7 +57,7 @@ amphiboles
 Fe-oxyhydroxides
 aluminate
 benzotriazole
-daubréelite
+daubr√©elite
 chlorite
 polymorphs
 Ca-sulfates
@@ -88,7 +88,7 @@ picrochromite
 Fe-rich
 reality
 Fe3C
-ulvöspinel
+ulv√∂spinel
 cyan
 gabbro
 FeO/MnO
@@ -125,7 +125,7 @@ crystals
 MTBSTFA
 NAMs
 magma(s
-Al2(SO4)3·12H2O
+Al2(SO4)3¬∑12H2O
 TPP
 Stv
 HCl.3H2O
@@ -136,7 +136,7 @@ melted
 Chrc
 A0031
 high-Ti
-D´Orbigny
+D¬¥Orbigny
 microchondrules
 wisps
 Fe3+-minerals
@@ -144,7 +144,7 @@ allophanes
 colloids
 Fe/Al-oxides
 Fe-silicides
-akaganéite
+akagan√©ite
 clay
 Mg-sulfates
 chromites
@@ -168,7 +168,7 @@ pyroxenes
 glass
 metal
 crystal
-·H2O
+¬∑H2O
 nitrogen-rich
 Ice-II
 NANO-PYRRHOTITE
@@ -185,7 +185,7 @@ phosphide
 magnesiowust
 N-rich
 THREN-1
-magnesiowüstite
+magnesiow√ºstite
 PI-19
 CMAS-liquid
 C-poor
