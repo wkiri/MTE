@@ -32,17 +32,23 @@ from the Literature}
 Kiri L. Wagstaff$^1$,
 Raymond Francis$^1$,
 Thamme Gowda$^{1,2}$,
-Nina L. Lanza$^3$,\\
-{\Large \bf You Lu$^1$,
-Ellen Riloff$^4$, and
-Karanjeet Singh$^{1,5}$}\\
+You Lu$^1$,\\
+{\Large \bf 
+Ellen Riloff$^3$, 
+Karanjeet Singh$^1$, and
+Nina L. Lanza$^4$}\\
 $^1$Jet Propulsion Laboratory, California Institute of Technology,
-4800 Oak Grove Drive, Pasadena, CA 91109\\
-\{firstname.lastname\}@jpl.nasa.gov\\
+%4800 Oak Grove Drive, 
+Pasadena, CA 91109, \{firstname.lastname\}@jpl.nasa.gov\\
 $^2$Information Sciences Institute, University of Southern
 California,
-4676 Admiralty Way \#1001, Marina Del Rey, CA 90292\\
-tg@isi.edu
+%4676 Admiralty Way \#1001, 
+Marina Del Rey, CA 90292, tg@isi.edu\\
+$^3$School of Computing, University of Utah,
+%50 S. Central Campus Drive, 
+Salt Lake City, UT 84112, riloff@cs.utah.edu\\
+$^4$Los Alamos National Laboratory, Los Alamos, NM 87545,
+nlanza@lanl.gov\\
 }
 \maketitle
 \begin{abstract}
@@ -52,7 +58,7 @@ and extracts scientific knowledge about target compositions.
 The extracted knowledge is stored in a searchable database that can
 greatly accelerate the ability of scientists to compare new
 discoveries with what is already known.  To date, we have applied this
-system to $\sim$6000 documents and achieved 48\% precision in the
+system to $\sim$6000 documents and achieved 50--64\% precision in the
 extracted information.  
 \end{abstract}
 % lpsc14: 1908
@@ -213,7 +219,7 @@ custom Named Entity Recognizer (NER) using the Stanford CoreNLP NER
 system~\cite{finkel:ner05}.  This system trains a Conditional Random
 Field sequence model to assign class labels to entities within new
 documents.  We provided manually labeled documents with examples of
-the Element, Mineral, and Target classes to train the our custom
+the Element, Mineral, and Target classes to train our custom
 model.  We also employed the ``gazette'' capability to provide lists
 of known terms.  This is particularly valuable for large semantic
 classes (like Mineral or Target) in which terms exist that might never
@@ -469,7 +475,7 @@ predicted that a relationship was present (``All-yes'') (see
 Table~\ref{tab:re}).  While this baseline always achieves a recall of
 1.00 and therefore appears superior in terms of F-measure, this
 application domain values precision much more than recall.  Content
-is included in the MTE must be of the highest reliability, even if
+included in the MTE must be of the highest reliability, even if
 this means it is not comprehensive.  
 %
 We also found that the merged model (jSRE-Merged) out-performed the
@@ -592,7 +598,7 @@ indexes only the information that was judged by scientists to be
 worthy of publication to the scientific community.  The MTE leverages
 and mirrors this selection bias, and its holdings (like the source
 publications) contain only the most valuable and salient information.
-This incompleteness is important to the convey to the user so that
+This incompleteness is important to convey to the user so that
 they interpret results correctly.
 
 On the technical side, there are two important limitations to the MTE
@@ -655,8 +661,10 @@ California Institute of Technology, under a contract with the National
 Aeronautics and Space Administration.  
 % TODO:
 %{\bf [acks for Ellen, Nina?]}
-We also thank the Multimission Ground System and Services (MGSS)
+We thank the Multimission Ground System and Services (MGSS)
 program for funding and enthusiastically supporting this work.
+N. Lanza would like to acknowledge the support of the ChemCam
+project. 
 
 \bibliography{mte}
 \bibliographystyle{aaai}
