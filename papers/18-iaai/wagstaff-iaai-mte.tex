@@ -88,14 +88,14 @@ planetary scientists can quickly make that determination.
 
 We have created a system called the Mars Target Encyclopedia (MTE)
 that uses information extraction methods to analyze planetary science
-publications and identify compositional relationships between Mars
+publications and identify stated compositional relationships between Mars
 surface targets and elements or minerals.  The extracted information
 is stored in a searchable database that allows users to ask questions
 such as ``Which targets contain hematite?'' or ``What is known about
 target Dillinger?''  It also enables entirely new kinds of information
 visualization, such as a map display of all locations where the Mars
-rover Curiosity has detected hematite.  The resulting Mars Target
-Encyclopedia serves as a resource that can inform
+rover Curiosity has detected hematite.  Ultimately, the MTE may serve 
+as a resource to inform
 %the development of hypotheses about the history and evolution of Mars
 %surface processes as well as 
 decisions about the next steps in Mars exploration.  
@@ -106,7 +106,7 @@ In this paper, we describe the MTE system and its component
 technologies, the empirical performance of the system on labeled data,
 and results from a large-scale evaluation on $\sim$6000 documents.
 The MTE is currently being integrated into a public website called the
-PDS (Planetary Data System) MSL Analyst's Notebook for Mars scientists
+PDS (Planetary Data System) Analyst's Notebook for Mars scientists
 and the public to access.
 
 %precision more important than recall
@@ -118,7 +118,7 @@ from text.  Some methods focus on extracting meta-data such as the
 document title, authors, and publication venue or analyzing and
 linking citations between papers~\cite{ronzano:scipub16}.
 %
-In contrast, understanding the content of a scientific publication
+However, understanding the content of a scientific publication
 requires a deeper analysis.  Information extraction (IE) of this
 nature is generally broken into two steps: (1) named entity
 recognition, to identify references to people, locations, and other
@@ -138,27 +138,37 @@ database about Alzheimer's disease.
 %Others have developed systems to extract information about the
 %experiments conducted in machine translation papers~\cite{choi:mt16} 
 
-%To date, little such work has been done in the domain of planetary
-%science. {\bf [more here]}
+To date, little such work has been done in the domain of planetary
+science. The GeoDeepDive project performs text data mining on
+scientific publications about (Earth) rock formations and
+stratigraphy~\cite{zhang:geodeepdive13}.
+% see also https://geodeepdive.org/about.html
+% where they seem to have expanded - the language at least is
+% not just about Geo.  But DeepDive itself is the generic version,
+% I think?
 %
-%- GeoDeepDive
-%
-%- other work at ISI, etc.
+%- other work at ISI, etc.  Can't find any!!!  Not even for geology.
+% PaleoDeepDive is the closest and that's fossils.
+By applying and extending information extraction methods to planetary
+science publications, we have the opportunity to benefit an entirely
+new population of scientists, researchers, and interested members of
+the public.
 
 \section{Machine Learning for Information Extraction}
 
 The Mars Target Encyclopedia (MTE) is an information extraction system
 that takes in scientific publications in PDF format and extracts
-knowledge of use to planetary scientists studying the planet Mars.
+knowledge that is useful to scientists studying the planet Mars.
 %
-We focus on the extraction of information about targets identified by
-the ChemCam instrument on the Mars Science Laboratory rover.  ChemCam
-obtains compositional spectra from up to seven meters away from a
-given target, and the resulting spectrum can be analyzed to identify
-individual elements within the target~\cite{maurice:chemcam12}.  As of
-sol 1159 of the MSL Mission, ChemCam had observed more than 1100
-distinct targets.  New discoveries about these targets are published
-in a variety of planetary science conference and journal venues.  
+We focus on the extraction of information about targets (e.g., rocks,
+soils) identified by the ChemCam instrument on the Curiosity rover.
+ChemCam uses a laser spectrometer to obtain compositional spectra from
+up to seven meters away from a given target. The resulting spectra can
+be analyzed to identify individual elements within the
+target~\cite{maurice:chemcam12}.  As of sol 1159 of the Curiosity
+rover's mission, ChemCam had observed more than 1100 distinct targets.
+New discoveries about these targets are published in a variety of
+planetary science conference and journal venues.
 
 The MTE is composed of four modules: preprocessing, named entity
 recognition (NER), relation extraction (RE), and database updates (see
@@ -185,7 +195,7 @@ Next, the MTE creates a copy of the text content in which the
 References section is omitted.  We defined a regular expression to
 identify the References section.
 % show the regexp?
-This step helps the NER component avoid spurious detections in the
+This step helps the NER module avoid spurious detections in the
 titles or author names of cited publications.
 
 \subsection{Named Entity Recognition}
@@ -215,7 +225,7 @@ simple list lookup.
 
 To address the challenge of recognizing all three entity classes
 reliably, we employed a machine learning approach.  We trained a
-custom Named Entity Recognizer (NER) using the Stanford CoreNLP NER
+custom Named Entity Recognizer using the Stanford CoreNLP NER
 system~\cite{finkel:ner05}.  This system trains a Conditional Random
 Field sequence model to assign class labels to entities within new
 documents.  We provided manually labeled documents with examples of
@@ -223,7 +233,7 @@ the Element, Mineral, and Target classes to train our custom
 model.  We also employed the ``gazette'' capability to provide lists
 of known terms.  This is particularly valuable for large semantic
 classes (like Mineral or Target) in which terms exist that might never
-appear in the training corpus.  The gazettes we used include the
+appear in the training corpus.  The gazettes that we used include the
 periodic table (Elements), the IMA list (Minerals), and the ChemCam
 observation table (Targets) as mentioned above.
 
@@ -298,7 +308,13 @@ the performance came from the global kernel features.
 
 For each document, the MTE database stores document meta-data (e.g.,
 title, author, publication venue), the preprocessed text content, and
-the extracted entities and relations.  To support fast retrieval of
+the extracted entities and relations.  To provide full traceability,
+it also stores the parsed sentence from which the relation was
+extracted and a link to the original PDF.  Users can immediately see
+the source context and decide whether they would like to access the
+full document for more information.
+ 
+To support fast retrieval of
 documents that contain entities or relations specified in a given
 search queries, we constructed inverted indices for the entities and
 relations using Apache
@@ -315,7 +331,9 @@ near real-time search and document retrieval.
 
 We developed and evaluated the MTE using a collection of scientific
 papers that were published over three years of the Lunar and Planetary
-Science Conference (LPSC).
+Science Conference (LPSC).  These papers are publicly accessible from
+the LPSC websites
+(e.g., \url{https://www.hou.usra.edu/meetings/lpsc2014/}). 
 
 \subsection{Corpus}
 
@@ -324,7 +342,8 @@ We selected 117 documents from LPSC 2015 and 2016 that mentioned
 ``ChemCam.''  We used the html-based brat annotation tool~\cite{brat}
 to manually label entities and relations within these documents.  We
 estimate that it took an average of 30 minutes to annotate each
-document.  We created thousands of manual annotations in 62 documents
+document, or a total of more than 58 hours of labor for the full
+corpus.  We created thousands of manual annotations in 62 documents
 from LPSC 2015 and 55 documents from LPSC 2016 (see
 Table~\ref{tab:docs}).
 
@@ -350,14 +369,16 @@ as ``X contains Y'' within a sentence) to complex (e.g., relationships
 that crossed sentence boundaries or involved pronouns like ``it'' and
 other anaphora).  Figure~\ref{fig:brat} shows an excerpt from one
 document that contains several statements about the composition of the
-target Buckskin.  The vocabulary used to indicate a compositional
-relationship varies, and the last two relationships cross sentence
+target Big Sky.  The vocabulary used to indicate a compositional
+relationship varies, and the final relationship crosses a sentence
 boundaries.  
 
-% TODO: Improve this figure (see Thamme's suggestions)
+% lpsc16-1155
 \begin{figure}
 \begin{center}
-\includegraphics[width=3.25in]{fig/brat-example.png}
+%\includegraphics[width=3.25in]{fig/brat-example.png}
+%\includegraphics[width=3.25in]{fig/lpsc16-1155-bigsky.png}
+\includegraphics[width=3.25in]{fig/lpsc16-1155-bigsky-2.png}
 \end{center}
 \caption{Excerpt from document lpsc16-1155 showing compositional
 annotations created with the brat web annotation tool.}
@@ -403,8 +424,8 @@ Baseline: Lists only & 0.831 & 0.699 & 0.760 \\ \hline  % LPSC16-test
 % the baseline numbers above).  Otherwise not a fair comparison.
 {\em CoreNLP NER CRF trained on:} & & \\
 % Numbers reported by Steven (CoreNLP)
-LPSC 2015            & 0.948 & 0.700 & 0.805 \\
-LPSC 2015 + gazettes & 0.945 & 0.777 & 0.853 \\
+LPSC 2015            & {\bf 0.948} & 0.700 & 0.805 \\
+LPSC 2015 + gazettes & 0.945 & {\bf 0.777} & {\bf 0.853} \\
 %LPSC 2015 + Basilisk gazettes & P & R \\
 \hline
 \end{tabular}
@@ -439,7 +460,7 @@ distribution of the resulting jSRE examples (relationships) are given
 in Table~\ref{tab:rels}.  
 
 % for l in lpsc16-utf8/*test ; do echo $l ; cut -f1 $l | sort | uniq -c; done
-\begin{table}
+\begin{table}[b]
 \caption{Number and distribution of relationships between Targets and
 Elements or Minerals. The number in parentheses is the percentage of
 positive relationships. }
@@ -485,7 +506,7 @@ baseline and the individual models when they were applied to the full
 % TODO: add comparison to OpenIE
 
 \begin{table}
-\caption{Relation extraction performance on LPSC 2016 documents. 
+\caption{Relation extraction performance on LPSC 2016 (test) documents. 
 The highest-precision result for each data set is shown in bold.}
 \label{tab:re}
 \begin{center}
@@ -506,10 +527,10 @@ jSRE-Merged  & {\bf 0.640} & 0.444 & 0.525 \\ \hline
 \end{center}
 \end{table}
 
-Also:
-- mineral is an easier problem than element?
-- these are separate evaluations because separate data sets
-- recall is somewhat low, but precision is far more important
+%Also:
+%- mineral is an easier problem than element?
+%- these are separate evaluations because separate data sets
+%- recall is somewhat low, but precision is far more important
 
 \subsection{Large-scale Evaluation}
 
@@ -524,28 +545,35 @@ as everything else that was published at these conferences.
 It would be infeasible to ask humans to manually label all 5959
 documents to evaluate our results, so instead we performed a manual
 review of only the extracted relations.  This allows us to measure
-precision, but not recall.  In this domain, precision is far more
-important than recall: it is vital that any information stored in the
-MTE is reliable and correct, even if it is incomplete.
+precision, but not recall.  However, as noted above, precision is far more
+important than recall in this domain, as it captures the true utility
+of the extracted information when used in practice.
+%: it is vital that any information stored in the
+%MTE is reliable and correct, even if it is incomplete.
 
 The manual review results are shown in Table~\ref{tab:large}.  Our
-manual reviewer examined each relation and its source sentence and
-judged the relation as Correct, Partial (e.g., only one word of a
-multi-word Target name was extracted), Irrelevant (a correct
-extraction from the sentence, but the content is not about Mars),
+manual reviewer examined each extracted relation and its source
+sentence to judge the relation as Correct, Partial (e.g., only one
+word of a multi-word Target name was extracted), Irrelevant (a correct
+extraction from the sentence, but the content was not about Mars),
 Wrong, or Unsure (the reviewer could not determine whether the
-relation was correct). 
+relation was correct).
 %
 Overall, the fraction of Correct relations was 50\%.  Many of the
-Partial relations will be corrected in the next iteration of the
-system.  The Irrelevant relations are in some ways quite interesting;
+Partial relations occurred due to limited support for extracting
+multi-word entities.  This is an area for future improvement.
+The Irrelevant relations are in some ways quite interesting;
 there are several relations that express the composition of meteorites
-that happen to have the same names as (real) Mars targets.
+that happen to have the same names as (real) Mars targets.  The system
+correctly interpreted the source sentences, but the information does
+not (strictly) belong in the MTE.
 %
 Most of the Unsure relations came from tables whose formatting was
 lost in the conversion from PDF to text.  A useful future direction
 might be to omit table content or to capture its structure in some
-way.  If we omit these unparseable sections, we obtain 64\% Correct
+way, e.g., by using the Tabula
+tool\footnote{\url{https://github.com/tabulapdf/tabula}}.  If we omit
+these unparseable sections, we obtain 64\% Correct 
 relations, 16\% Partial, 11\% Irrelevant, and 9\% Wrong.
 
 \begin{table}
@@ -583,9 +611,11 @@ hematite is localized or has been identified throughout the mission.
 
 \begin{figure}
 \begin{center}
-\fbox{\includegraphics[width=3in]{fig/mte-hematite.png}}
+\fbox{\includegraphics[width=3.25in]{fig/mte-hematite.png}}
 \end{center}
-\caption{MTE search results for “hematite.”}
+\caption{MTE search results for ``hematite.''  Nine results
+(individual Mars targets) are returned, and a map displays the
+location of each hit, in red.}
 \label{fig:mtesearch}
 \end{figure}
 
@@ -612,18 +642,24 @@ phrase.
 Second, the relation extraction module only generates candidate
 relation pairs within a sentence.  In this corpus, 32\% of the
 manually annotated relations cross sentence boundaries.  Therefore,
-the current system cannot retrieve those relations.
+the current system cannot yet retrieve those relations.  
 % 166 / 463 (35.85%) relations cross sentences.
 % lpsc15: 35.85%
 % 47 / 210 (22.38%) relations cross sentences.
 % lpsc16: 22.38%
 % Total: 213/673 = 31.65%
-
+%
 % TODO: recalc this number with analyze_brat, restricted to Element
 % and Mineral relations
+One way to access sentence-crossing relations would be to expanding the
+number of candidate entity pairs to include all pairs within a
+paragraph.  We plan to evaluate that strategy in future work.
 
 % note that we want to move to a conceptual eval, not per-example
 % ``in this doc, does Epworth contain Fluorine?''
+%In general, an evaluation strategy that focuses on concepts rather
+%than individual relations may better reflect the quality of the
+%extracted knowledge.  For example, 
 
 \section{Conclusions and Next Steps}
 % and lessons learned
@@ -632,9 +668,10 @@ This work lies at the intersection of information extraction, machine
 learning, and planetary science.  The MTE uses current IE technology
 to provide the first database of Mars target compositional knowledge
 as expressed in the scientific literature.  The pipeline is fully
-automated, and we can employ web crawlers to seek out new papers as
-they are published.  We also plan to enable users to submit their own
-publications for analysis and augmentation of the database.
+automated, and we can employ web crawlers to seek out new (publicly
+accessible) papers as they are published.  We also plan to enable
+users to submit their own publications for analysis and augmentation
+of the database.
 
 We are in the process of integrating the MTE's content into the MSL
 Analyst's Notebook, an interactive web resource for mission scientists
@@ -646,26 +683,24 @@ the Analyst's Notebook to also connect targets to publications.
 The MTE currently contains information about ChemCam targets that was
 extracted from three years of papers published at the Lunar and
 Planetary Science Conference.  A next logical step is to expand the
-MTE to encompass targets identified by other instruments on the MSL
-rover and other missions such as the Mars Exploration Rovers (Spirit
-and Opportunity).  In addition, we plan to extend the MTE to be able
-to ingest journal papers that have been published by MSL science team
-members and the broader community.  This information will carry more
-weight as it comes from peer-reviewed sources; users will be able to
-restrict their searches to journal papers only, or to obtain all
-possible results.
+MTE to encompass targets identified by other instruments on the
+Curiosity (MSL) rover and other missions such as the Mars Exploration
+Rovers (Spirit and Opportunity).  In addition, we plan to extend the
+MTE to be able to ingest journal papers that have been published by
+MSL science team members and the broader community.  This information
+will carry more weight as it comes from peer-reviewed sources; users
+will be able to restrict their searches to journal papers only, or to
+obtain all possible results.
 
 \section{Acknowledgments}
 This research was carried out in part at the Jet Propulsion Laboratory,
 California Institute of Technology, under a contract with the National
 Aeronautics and Space Administration.  
 % TODO:
-%{\bf [acks for Ellen, Nina?]}
+%{\bf [acks for Ellen?]}
 We thank the Multimission Ground System and Services (MGSS)
-program for funding and enthusiastically supporting this work.
-N. Lanza would like to acknowledge the support of the ChemCam
-project. 
-
+program and the Mars Science Laboratory project for funding and
+enthusiastically supporting this work. 
 \bibliography{mte}
 \bibliographystyle{aaai}
 \end{document}
