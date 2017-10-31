@@ -8,68 +8,60 @@
 # Copyright notice at bottom of file.
 
 import sys, os
+import re
 # Default readline doesn't support startup or pre-input-hooks.
 # import readline
 # https://stackoverflow.com/questions/28732808/python-readline-module-on-os-x-lacks-set-pre-input-hook
 import gnureadline as readline
-import json
-import urllib2
-import requests
+import pysolr
 
 solrserver = 'http://localhost:8983/solr/docsdev/'
 
 # Query Solr server for all MTE docs
-connection = urllib2.urlopen(solrserver + 'query?q=id:lpsc15-1373&fq=type:doc')
-response = json.load(connection)
-print response['response']['numFound'], 'docs found.'
-
-# This does not return JSON format
-#resp = requests.get(solrserver + 'select',
-#                    params={'q':'id:lpsc15-1373'})
-#print resp.get('response').get('numFound'), 'docs found.'
-
+s = pysolr.Solr(solrserver)
+# This syntax was unintuitive and not documented
+docs = s.search(q='id:lpsc15-1372', fq='type:doc')
 
 # Iterate through docs to find ones that need review.
-for d in response['response']['docs']:
+for d in docs:
     print d['id']
 
     # If "old_title" field is non-empty, skip this document.
+    # Actually, no way to do this unless I updated the schema and restart Solr.
     if 'old_title' in d.keys() and d['old_title'] != '':
         continue
+
+    # Show first few lines of 'content' for context.
+    print d['content'][:200].strip()
 
     if 'old_title' in d.keys():
         print d['old_title']
     print '<%s>' % d['title']
 
-    # Show first few lines of 'content' for context.
-
     # Prompt user to view/edit desired values.
     # Title, authors, primaryauthor (+ venue, year?)
     # If venue does not exist, try to pre-populate with a guess based on id (LPSC)
-    readline.set_startup_hook(lambda: readline.insert_text(d['title']))
 
-    d['old_title'] = d['title']
-    d['title']     = raw_input('Title: ')
+    default_title = d['title']
+    # If title is Unknown, try to guess it from content.
+    if default_title == 'Unknown':
+        default_title = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
+                                  d['content']).group(1).title()
 
-    print d['old_title']
-    print d['title']
+    readline.set_startup_hook(lambda: readline.insert_text(default_title))
 
-    # Update it in Solr
-    print solrserver + 'update/json?commit=true'
-    #req = urllib2.Request(url=solrserver + 'update/json?commit=true',
-    #req = urllib2.Request(url=solrserver + 'update/json/docs',
-    #req = urllib2.Request(url=solrserver + 'update/json/docs?commit=true',
-    #                      data=json.dumps(d))
-    #req.add_header('Content-type', 'application/json')
-    #f = urllib2.urlopen(req)
+    #d['old_title'] = d['title']
+    new_title = raw_input('Title: ')
 
-    # Thist posting fails, but I don't know why
-    resp = requests.post(solrserver + 'update/json?commit=true',
-                         data=json.dumps(d).encode('utf-8', 'replace'),
-                         headers={"content-type": "application/json"})
-    if not resp or resp.status_code != 200:
-        print('Solr posting failed:', resp)
-    
+    #print d['old_title']
+    #print d['title']
+
+    if new_title != d['title']:
+        print 'Updating Solr.'
+        d['title'] = new_title
+        # This also seems to commit by default, yay.
+        s.add([d], fieldUpdates={'title':'set'})
+
 
 # Copyright 2017, by the California Institute of Technology. ALL
 # RIGHTS RESERVED. United States Government Sponsorship
