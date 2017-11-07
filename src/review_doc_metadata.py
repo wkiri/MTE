@@ -15,28 +15,31 @@ import re
 import gnureadline as readline
 import pysolr
 
-solrserver = 'http://localhost:8983/solr/docsdev/'
+solrserver = 'http://localhost:8983/solr/docs/'
 
 # Query Solr server for all MTE docs
 s = pysolr.Solr(solrserver)
 # This syntax was unintuitive and not documented
-docs = s.search(q='id:lpsc15-1372', fq='type:doc')
+docs = s.search(q='id:lpsc15-13*', fq='type:doc')
+print 'Obtained %d docs.' % len(docs)
+# Sort by id
+docs = sorted(docs, key=lambda d: d['id'])
 
 # Iterate through docs to find ones that need review.
 for d in docs:
+    print
     print d['id']
 
-    # If "old_title" field is non-empty, skip this document.
-    # Actually, no way to do this unless I updated the schema and restart Solr.
-    if 'old_title' in d.keys() and d['old_title'] != '':
+    # If "old_title_t" field is non-empty, skip this document.
+    if 'old_title_t' in d.keys() and d['old_title_t'] != '':
+        print '(Skipping; already edited.)'
         continue
 
     # Show first few lines of 'content' for context.
     print d['content'][:200].strip()
+    print
 
-    if 'old_title' in d.keys():
-        print d['old_title']
-    print '<%s>' % d['title']
+    print 'Current title: <%s>' % d['title']
 
     # Prompt user to view/edit desired values.
     # Title, authors, primaryauthor (+ venue, year?)
@@ -50,14 +53,11 @@ for d in docs:
 
     readline.set_startup_hook(lambda: readline.insert_text(default_title))
 
-    #d['old_title'] = d['title']
-    new_title = raw_input('Title: ')
-
-    #print d['old_title']
-    #print d['title']
+    d['old_title_t'] = d['title']
+    new_title = raw_input('Edit the title: ')
 
     if new_title != d['title']:
-        print 'Updating Solr.'
+        print 'Updating Solr.  Hang onto your hat!'
         d['title'] = new_title
         # This also seems to commit by default, yay.
         s.add([d], fieldUpdates={'title':'set'})
