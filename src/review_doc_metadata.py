@@ -20,7 +20,8 @@ solrserver = 'http://localhost:8983/solr/docs/'
 # Query Solr server for all MTE docs
 s = pysolr.Solr(solrserver)
 # This syntax was unintuitive and not documented
-docs = s.search(q='id:lpsc15-13*', fq='type:doc')
+#docs = s.search(q='id:lpsc15*', fq='type:doc', rows=1000)
+docs = s.search(q='id:lpsc16*', fq='type:doc', rows=1000)
 print 'Obtained %d docs.' % len(docs)
 # Sort by id
 docs = sorted(docs, key=lambda d: d['id'])
@@ -35,28 +36,38 @@ for d in docs:
         print '(Skipping; already edited.)'
         continue
 
-    # Show first few lines of 'content' for context.
-    print d['content'][:200].strip()
-    print
+    try:
+        # Show first few lines of 'content' for context.
+        print d['content'][:200].strip()
+        print
+    except:
+        pass
+
+    if 'title' not in d.keys():
+        d['title'] = 'Unknown'
 
     print 'Current title: <%s>' % d['title']
 
     # Prompt user to view/edit desired values.
     # Title, authors, primaryauthor (+ venue, year?)
     # If venue does not exist, try to pre-populate with a guess based on id (LPSC)
-
+    
     default_title = d['title']
     # If title is Unknown, try to guess it from content.
-    if default_title == 'Unknown':
-        default_title = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
-                                  d['content']).group(1).title()
+    try:
+        if default_title == 'Unknown':
+            default_title = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
+                                      d['content']).group(1).title()
+    except:
+        pass
 
     readline.set_startup_hook(lambda: readline.insert_text(default_title))
 
-    d['old_title_t'] = d['title']
     new_title = raw_input('Edit the title: ')
+    new_title = unicode(new_title, 'utf8')
 
     if new_title != d['title']:
+        d['old_title_t'] = d['title']
         print 'Updating Solr.  Hang onto your hat!'
         d['title'] = new_title
         # This also seems to commit by default, yay.
