@@ -10,7 +10,7 @@
 \frenchspacing  %Required
 \setlength{\pdfpagewidth}{8.5in}  %Required
 \setlength{\pdfpageheight}{11in}  %Required
-\copyrighttext{Copyright 2017. All rights reserved.}
+%\copyrighttext{Copyright 2017. All rights reserved.}
 %PDF Info Is Required:
   \pdfinfo{
 %/Title (Extracting Information from Scientific Publications for
@@ -107,7 +107,8 @@ technologies, the empirical performance of the system on labeled data,
 and results from a large-scale evaluation on $\sim$6000 documents.
 The MTE is currently being integrated into a public website called the
 PDS (Planetary Data System) Analyst's Notebook for Mars scientists
-and the public to access.
+and the public to access.  The automated pipeline can be used to
+ingest and analyze new publications as they become available.
 
 %precision more important than recall
 
@@ -139,8 +140,9 @@ database about Alzheimer's disease.
 %experiments conducted in machine translation papers~\cite{choi:mt16} 
 
 To date, little such work has been done in the domain of planetary
-science. The GeoDeepDive project performs text data mining on
-scientific publications about (Earth) rock formations and
+science. The closest existing work is the geology-based GeoDeepDive
+project, which performs text data mining on scientific publications
+about (Earth) rock formations and
 stratigraphy~\cite{zhang:geodeepdive13}.
 % see also https://geodeepdive.org/about.html
 % where they seem to have expanded - the language at least is
@@ -218,7 +220,7 @@ that was published by the ChemCam science team, but it is not fully
 curated, and we have found it to be incomplete with respect to the
 literature.
 %
-In addition, we found that authors invent new spelling
+In addition, we found that authors continually invent new spelling
 variants and abbreviations for target names that require more than a
 simple list lookup.
 % Keyword-based web or publication searches return many spurious hits.
@@ -343,9 +345,9 @@ We selected 117 documents from LPSC 2015 and 2016 that mentioned
 to manually label entities and relations within these documents.  We
 estimate that it took an average of 30 minutes to annotate each
 document, or a total of more than 58 hours of labor for the full
-corpus.  We created thousands of manual annotations in 62 documents
-from LPSC 2015 and 55 documents from LPSC 2016 (see
-Table~\ref{tab:docs}).
+corpus.  We created thousands of manual
+annotations~\cite{francis:mte-data} in 62 documents from LPSC 2015 and
+55 documents from LPSC 2016 (see Table~\ref{tab:docs}).
 
 % cut -f2 *.ann | cut -f1 -d' ' | cut -f1 -d':' | sort | uniq -c
 \begin{table}
@@ -558,6 +560,7 @@ word of a multi-word Target name was extracted), Irrelevant (a correct
 extraction from the sentence, but the content was not about Mars),
 Wrong, or Unsure (the reviewer could not determine whether the
 relation was correct).
+% Add examples of each category?
 %
 Overall, the fraction of Correct relations was 50\%.  Many of the
 Partial relations occurred due to limited support for extracting
@@ -609,16 +612,6 @@ of the Curiosity rover's traverse on Mars, with the locations of the
 matching targets marked in red.  One can immediately see whether
 hematite is localized or has been identified throughout the mission.
 
-\begin{figure}
-\begin{center}
-\fbox{\includegraphics[width=3.25in]{fig/mte-hematite.png}}
-\end{center}
-\caption{MTE search results for ``hematite.''  Nine results
-(individual Mars targets) are returned, and a map displays the
-location of each hit, in red.}
-\label{fig:mtesearch}
-\end{figure}
-
 \subsection{Limitations}
 
 The MTE is not comprehensive.  There may be compositional information
@@ -630,6 +623,16 @@ and mirrors this selection bias, and its holdings (like the source
 publications) contain only the most valuable and salient information.
 This incompleteness is important to convey to the user so that
 they interpret results correctly.
+
+\begin{figure}
+\begin{center}
+\fbox{\includegraphics[width=3.25in]{fig/mte-hematite.png}}
+\end{center}
+\caption{MTE search results for ``hematite.''  Nine results
+(individual Mars targets) are returned, and a map displays the
+location of each hit, in red.}
+\label{fig:mtesearch}
+\end{figure}
 
 On the technical side, there are two important limitations to the MTE
 content.  First, the current MTE cannot generate overlapping
@@ -675,7 +678,8 @@ of the database.
 
 We are in the process of integrating the MTE's content into the MSL
 Analyst's Notebook, an interactive web resource for mission scientists
-and the interested public.  The Analyst's Notebook allows users to
+and the interested public~\cite{stein:msl-an13}.  The Analyst's
+Notebook allows users to 
 browse mission plans, targets discovered, data collected, and
 summaries of each mission day on Mars.  The MTE content will enable
 the Analyst's Notebook to also connect targets to publications.
@@ -688,9 +692,25 @@ Curiosity (MSL) rover and other missions such as the Mars Exploration
 Rovers (Spirit and Opportunity).  In addition, we plan to extend the
 MTE to be able to ingest journal papers that have been published by
 MSL science team members and the broader community.  This information
-will carry more weight as it comes from peer-reviewed sources; users
+will carry more weight because it comes from peer-reviewed sources; users
 will be able to restrict their searches to journal papers only, or to
 obtain all possible results.
+
+The automatic extraction of knowledge from scientific publications can
+benefit many other areas of scientific inquiry.  In addition to
+biology and medicine, there are opportunities at the intersection
+between fields such as planetary science and astronomy.  For example,
+there are currently 3,550 confirmed exoplanets (planets outside our
+solar system) as of November 2, 2017~\cite{ipac:exo}.  Hundreds of new
+planet candidates are announced each year in new publications.
+Desirable properties to extract and store for each planet include its
+radius, temperature, period, distance from its host star, and more.
+Compositional relationships exist for elements present in the
+host star and for constituents in exoplanet atmospheres, with
+implications for the possible presence of life on other planets.
+In general, extracting information and relationships into a central,
+searchable database can help inform new hypotheses and direct future
+science investigations.
 
 \section{Acknowledgments}
 This research was carried out in part at the Jet Propulsion Laboratory,
@@ -700,7 +720,7 @@ Aeronautics and Space Administration.
 %{\bf [acks for Ellen?]}
 We thank the Multimission Ground System and Services (MGSS)
 program and the Mars Science Laboratory project for funding and
-enthusiastically supporting this work. 
+enthusiastically supporting this work.
 \bibliography{mte}
 \bibliographystyle{aaai}
 \end{document}
