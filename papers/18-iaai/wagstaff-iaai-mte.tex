@@ -61,7 +61,7 @@ and extracts scientific knowledge about target compositions.
 The extracted knowledge is stored in a searchable database that can
 greatly accelerate the ability of scientists to compare new
 discoveries with what is already known.  To date, we have applied this
-system to $\sim$6000 documents and achieved 50--64\% precision in the
+system to $\sim$6000 documents and achieved 41--56\% precision in the
 extracted information.  
 \end{abstract}
 % lpsc14: 1908
@@ -546,14 +546,16 @@ jSRE-Merged  & {\bf 0.640} & 0.444 & 0.525 \\ \hline
 \subsection{Large-scale Evaluation}
 
 We collected all LPSC documents that were published in 2014, 2015, and
-2016 ($n=5959$) and ingested them into the MTE.  This large corpus
-contains the 117 documents used for development and evaluation as well
-as everything else that was published at these conferences.
+2016, omitting the training documents from LPSC 2015, and ingested
+them into the MTE ($n=5897$).  
+% This large corpus contains the 117 documents used for development
+% and evaluation as well as everything else that was published at
+% these conferences. 
 
 % TODO
 %{\bf [table of num docs, num NER, num RE, time consumed]}
 
-It would be infeasible to ask humans to manually label all 5959
+It would be infeasible to ask humans to manually label all 5897
 documents to evaluate our results, so instead we performed a manual
 review of only the extracted relations.  This allows us to measure
 precision, but not recall.  However, as noted above, precision is far more
@@ -572,34 +574,49 @@ Wrong, or Unsure (the reviewer could not determine whether the
 relation was correct).
 % Add examples of each category?
 %
-Overall, the fraction of Correct relations was 50\%.  Many of the
+Overall, the fraction of Correct relations was 41\%.  Many of the
 Partial relations occurred due to limited support for extracting
 multi-word entities.  This is an area for future improvement.
+
 The Irrelevant relations are in some ways quite interesting;
 there are several relations that express the composition of meteorites
 that happen to have the same names as (real) Mars targets.  The system
 correctly interpreted the source sentences, but the information does
-not (strictly) belong in the MTE.
+not (strictly) belong in the MTE. 
+For example, the system inferred that ``Gibeon'' contains ``chromite''
+from this sentence: 
+``Gibeon was found in several studies to have both chromite and
+daubrelite inclusions.''
+Gibeon is the name of a Mars target and of a meteorite.
+Disambiguating the two requires more context than a single sentence.
 %
 Most of the Unsure relations came from tables whose formatting was
 lost in the conversion from PDF to text.  A useful future direction
 might be to omit table content or to capture its structure in some
 way, e.g., by using the Tabula
 tool\footnote{\url{https://github.com/tabulapdf/tabula}}.  If we omit
-these unparseable sections, we obtain 64\% Correct 
-relations, 16\% Partial, 11\% Irrelevant, and 9\% Wrong.
+these unparseable sections, we obtain 56\% Correct 
+relations, 18\% Partial, 15\% Irrelevant, and 11\% Wrong.
 
 \begin{table}
-\caption{Manual review of 1012 relations extracted from 5959 documents.} 
+%\caption{Manual review of 1012 relations extracted from 5959 documents.} 
+\caption{Manual review of 817 relations extracted from 5897 documents.} 
 \label{tab:large}
 \begin{center}
 \begin{tabular}{l|ccc|c}
         & LPSC14 & LPSC15 & LPSC16 & Total \\ \hline
-Correct    & 55\% & 75\% & 29\% & 50\% \\ \hline
-Partial    &  9\% & 12\% & 14\% & 12\% \\
-Irrelevant & 19\% &  3\% &  9\% &  9\% \\
-Wrong      & 11\% & 11\% &  2\% &  7\% \\
-Unsure     &  6\% &  0\% & 47\% & 22\% \\
+%Correct    & 55\% & 75\% & 29\% & 50\% \\ \hline
+%Partial    &  9\% & 12\% & 14\% & 12\% \\
+%Irrelevant & 19\% &  3\% &  9\% &  9\% \\
+%Wrong      & 11\% & 11\% &  2\% &  7\% \\
+%Unsure     &  6\% &  0\% & 47\% & 22\% \\
+% Updated LPSC15 to omit training docs
+% # docs = 5959 - 62 = 5897
+Correct    & 55\% & 57\% & 29\% & 41\% \\ \hline
+Partial    &  9\% & 15\% & 14\% & 13\% \\
+Irrelevant & 19\% &  6\% &  9\% & 11\% \\
+Wrong      & 11\% & 21\% &  2\% &  8\% \\
+Unsure     &  6\% &  0\% & 47\% & 28\% \\
 \hline
 \end{tabular}
 \end{center}
