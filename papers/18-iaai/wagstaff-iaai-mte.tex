@@ -7,6 +7,8 @@
 \usepackage{courier}  %Required
 \usepackage{url}  %Required
 \usepackage{graphicx}  %Required
+\usepackage{balance}
+%\balance
 \frenchspacing  %Required
 \setlength{\pdfpagewidth}{8.5in}  %Required
 \setlength{\pdfpageheight}{11in}  %Required
@@ -31,11 +33,12 @@ from the Literature}
 \author{
 Kiri L. Wagstaff$^1$,
 Raymond Francis$^1$,
-Thamme Gowda$^{1,2}$,
+Thamme Gowda$^{1,2}$\thanks{This work was done when the authors were at
+the Jet Propulsion Laboratory.},
 You Lu$^1$,\\
 {\Large \bf 
 Ellen Riloff$^3$, 
-Karanjeet Singh$^1$, and
+Karanjeet Singh$^1$\footnotemark[1], and
 Nina L. Lanza$^4$}\\
 $^1$Jet Propulsion Laboratory, California Institute of Technology,
 %4800 Oak Grove Drive, 
@@ -122,8 +125,8 @@ linking citations between papers~\cite{ronzano:scipub16}.
 However, understanding the content of a scientific publication
 requires a deeper analysis.  Information extraction (IE) of this
 nature is generally broken into two steps: (1) named entity
-recognition, to identify references to people, locations, and other
-objects of interest, and (2) relation extraction, to identify
+recognition or concept extraction, to identify references to people,
+locations, concepts, etc., and (2) relation extraction, to identify
 relationships between pairs of entities~\cite{mooney:ie05}.  Many of
 the recent advances in IE have been motivated by problems from the
 biomedical research world, such as the desire to identify
@@ -213,7 +216,7 @@ Identifying Mars surface targets is more challenging, as they follow
 no standard naming convention.  Further, target names are
 fundamentally ambiguous as they are borrowed from Earth locations or
 people.  A sampling of the names hints at the challenge of accurately
-detecting them: ``Dunkirk'', ``Ithaca'', ``Jake'', ``Old\_woman'',
+detecting them: ``Dunkirk'', ``Ithaca'', ``Jake'', ``Old woman'',
 ``Pistol''.  We have a starting list of target
 names\footnote{\url{http://pds-geosciences.wustl.edu/msl/msl-m-chemcam-libs-4_5-rdr-v1/mslccm_1xxx/document/msl_ccam_obs.csv}}
 that was published by the ChemCam science team, but it is not fully
@@ -318,7 +321,7 @@ full document for more information.
  
 To support fast retrieval of
 documents that contain entities or relations specified in a given
-search queries, we constructed inverted indices for the entities and
+search query, we constructed inverted indices for the entities and
 relations using Apache
 Solr\footnote{\url{http://lucene.apache.org/solr/}}. Apache Solr is an
 open source search platform powered by Apache Lucene that provides
@@ -340,14 +343,15 @@ the LPSC websites
 \subsection{Corpus}
 
 Our corpus consists of two-page extended LPSC abstracts in PDF format.
-We selected 117 documents from LPSC 2015 and 2016 that mentioned
-``ChemCam.''  We used the html-based brat annotation tool~\cite{brat}
-to manually label entities and relations within these documents.  We
-estimate that it took an average of 30 minutes to annotate each
+We selected 62 documents from LPSC 2015 and 55 documents from LPSC
+2016 that mentioned ``ChemCam'', and used the brat annotation
+tool~\cite{brat} to manually label entities within these documents
+(see Table~\ref{tab:docs}). This data set contains thousands of
+annotations, which are available
+here: \url{https://doi.org/10.5281/zenodo.1048419}. 
+We estimate that it took an average of 30 minutes to annotate each 
 document, or a total of more than 58 hours of labor for the full
-corpus.  We created thousands of manual
-annotations~\cite{francis:mte-data} in 62 documents from LPSC 2015 and
-55 documents from LPSC 2016 (see Table~\ref{tab:docs}).
+corpus.  
 
 % cut -f2 *.ann | cut -f1 -d' ' | cut -f1 -d':' | sort | uniq -c
 \begin{table}
@@ -392,29 +396,33 @@ annotations created with the brat web annotation tool.}
 
 \subsection{Named Entity Recognition Results}
 
-Named entity recognition operates on individual words or tokens.  We
+The Named Entity Recognizer operates on individual words or tokens.  We
 used the 2015 documents for training and divided the 2016 documents
 into validation ($n=20$) and testing ($n=35$) sets.  
 %(Total number of items?) 
-Training a basic NER classifier using the CoreNLP system yielded an
-F1-score of 0.805.  Precision was very high (nearly 0.95), and recall
-was 0.70.  Recall was highest (0.84) for the Element class, as
-expected; it was 0.73 for Minerals and 0.28 for Targets.  The Target
+As shown in Table~\ref{tab:ner}, the baseline approach of employing
+the known lists of elements, minerals, and targets achieved an
+F1 score of 0.76.  Training a basic NER classifier using the CoreNLP
+system yielded an improved F1 score of 0.805.  Virtually all of the
+improvement came from increased precision (from 0.83 to 0.95).
+Recall was highest (0.84) for the Element class, as expected; it was
+0.73 for Minerals and only 0.28 for Targets.  The Target 
 class is the most difficult one to recognize due to the lack of a
 naming convention and ambiguous names.  In addition, the Target class
 grows much faster than the set of known elements or minerals, so there
 will always be new targets in future documents that never appeared in
 the training set.
 
-However, we were able to improve NER recall by including the gazettes
-as described above.  These term lists augment the manually labeled
-documents and provide relevant domain knowledge.  With the gazettes,
-F1-score increased to 0.853 by boosting recall to 0.777.  Recall for
-the Target class, in particular, more than doubled, to 0.67.
+However, we were able to improve NER recall as well by including the
+gazettes as described above.  These term lists augment the manually
+labeled documents and provide relevant domain knowledge.  With the
+gazettes, the F1 score increased to 0.853 by boosting recall to 0.777.
+Recall for the Target class, in particular, more than doubled, to
+0.67.
 
 \begin{table}
 \caption{Named entity recognition performance on LPSC 2016 test documents.  
-The best result is shown in bold.}
+The best result for each metric is shown in bold.}
 \label{tab:ner}
 \begin{center}
 \begin{tabular}{l|ccc}
@@ -424,7 +432,7 @@ Baseline: Lists only & 0.831 & 0.699 & 0.760 \\ \hline  % LPSC16-test
 % TODO: resolve the fact that I get different numbers for the 
 % rows below when running my eval_brat script (which is how I got
 % the baseline numbers above).  Otherwise not a fair comparison.
-{\em CoreNLP NER CRF trained on:} & & \\
+{\em CoreNLP NER trained on:} & & \\
 % Numbers reported by Steven (CoreNLP)
 LPSC 2015            & {\bf 0.948} & 0.700 & 0.805 \\
 LPSC 2015 + gazettes & 0.945 & {\bf 0.777} & {\bf 0.853} \\
@@ -454,13 +462,6 @@ If the pair of entities was connected by a relation in the manual
 annotations, we gave the example a positive label; otherwise, we gave
 it a negative label.
 
-To simulate how the system would be used in practice, we trained and
-validated the relation classifier using text from LPSC 2015 and tested
-it on LPSC 2016.  We used the first 42 LPSC 2015 documents for
-training and the remaining 20 for validation.  The number and
-distribution of the resulting jSRE examples (relationships) are given
-in Table~\ref{tab:rels}.  
-
 % for l in lpsc16-utf8/*test ; do echo $l ; cut -f1 $l | sort | uniq -c; done
 \begin{table}[b]
 \caption{Number and distribution of relationships between Targets and
@@ -477,6 +478,13 @@ Test       & 111 (37\%) &  62 (50\%) & 173 (42\%) \\ \hline
 \end{center}
 \end{table}
 
+To simulate how the system would be used in practice, we trained and
+validated the relation classifier using text from LPSC 2015 and tested
+it on LPSC 2016.  We used the first 42 LPSC 2015 documents for
+training and the remaining 20 for validation.  The number and
+distribution of the resulting jSRE examples (relationships) are given
+in Table~\ref{tab:rels}.  
+
 We trained three different relation classifiers: one on Target-Element
 relations only; one on Target-Mineral relations only; and one on the
 merged set.  We were curious as to how a specialized model that was
@@ -492,7 +500,8 @@ used an SL kernel with a window of 5.  Notably, the GC kernel that the
 original authors found to be most powerful for the biomedical domain
 did not perform well in this corpus.
 
-We found that the individual models (jSRE-Elements and jSRE-Minerals)
+We found that the individual models (``jSRE-Elements'' and
+``jSRE-Minerals'') 
 achieved much higher precision than a baseline approach that always
 predicted that a relationship was present (``All-yes'') (see
 Table~\ref{tab:re}).  While this baseline always achieves a recall of
@@ -501,15 +510,15 @@ application domain values precision much more than recall.  Content
 included in the MTE must be of the highest reliability, even if
 this means it is not comprehensive.  
 %
-We also found that the merged model (jSRE-Merged) out-performed the
+We also found that the merged model (``jSRE-Merged'') out-performed the
 baseline and the individual models when they were applied to the full
-(Merged) data set (jSRE-Indiv.). 
+(Merged) data set (``jSRE-Indiv.''). 
 
 % TODO: add comparison to OpenIE
 
 \begin{table}
 \caption{Relation extraction performance on LPSC 2016 (test) documents. 
-The highest-precision result for each data set is shown in bold.}
+The best result for each metric is shown in bold.}
 \label{tab:re}
 \begin{center}
 \begin{tabular}{l|ccc}
@@ -556,7 +565,8 @@ of the extracted information when used in practice.
 The manual review results are shown in Table~\ref{tab:large}.  Our
 manual reviewer examined each extracted relation and its source
 sentence to judge the relation as Correct, Partial (e.g., only one
-word of a multi-word Target name was extracted), Irrelevant (a correct
+word of a multi-word Target name was extracted), Irrelevant (an
+appropriate 
 extraction from the sentence, but the content was not about Mars),
 Wrong, or Unsure (the reviewer could not determine whether the
 relation was correct).
@@ -627,7 +637,7 @@ they interpret results correctly.
 \begin{figure}
 \begin{center}
 %\fbox{\includegraphics[width=3.25in]{fig/mte-hematite.png}}
-\fbox{\includegraphics[width=3.25in]{fig/mte-hematite-v2.png}}
+\fbox{\includegraphics[width=3.22in]{fig/mte-hematite-v2.png}}
 \end{center}
 \caption{MTE search results for ``hematite.''  Nine results
 (individual Mars targets) are returned, and a map displays the
@@ -655,7 +665,7 @@ the current system cannot yet retrieve those relations.
 %
 % TODO: recalc this number with analyze_brat, restricted to Element
 % and Mineral relations
-One way to access sentence-crossing relations would be to expanding the
+One way to access sentence-crossing relations would be to expand the
 number of candidate entity pairs to include all pairs within a
 paragraph.  We plan to evaluate that strategy in future work.
 
