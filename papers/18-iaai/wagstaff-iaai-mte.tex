@@ -573,10 +573,18 @@ extraction from the sentence, but the content was not about Mars),
 Wrong, or Unsure (the reviewer could not determine whether the
 relation was correct).
 % Add examples of each category?
+
+Overall, the fraction of Correct relations was 41\%.  Performance on
+the LPSC documents was significantly lower than for the preceding
+years.  Since the system was trained on documents from 2015, it is
+likely that targets mentioned in 2015 would encompass those discovered
+in 2014 and 2015, while the documents from 2016 contain many newly
+discovered targets and therefore present a more difficult
+generalization task.
 %
-Overall, the fraction of Correct relations was 41\%.  Many of the
-Partial relations occurred due to limited support for extracting
-multi-word entities.  This is an area for future improvement.
+Many of the Partial relations occurred due to limited support for
+extracting multi-word entities.  This is an area for future
+improvement.
 
 The Irrelevant relations are in some ways quite interesting;
 there are several relations that express the composition of meteorites
@@ -639,6 +647,17 @@ of the Curiosity rover's traverse on Mars, with the locations of the
 matching targets marked in red.  One can immediately see whether
 hematite is localized or has been identified throughout the mission.
 
+\begin{figure}
+\begin{center}
+%\fbox{\includegraphics[width=3.25in]{fig/mte-hematite.png}}
+\fbox{\includegraphics[width=3.22in]{fig/mte-hematite-v2.png}}
+\end{center}
+\caption{MTE search results for ``hematite.''  Nine results
+(individual Mars targets) are returned, and a map displays the
+location of each hit, in red.}
+\label{fig:mtesearch}
+\end{figure}
+
 \subsection{Limitations}
 
 The MTE is not comprehensive.  There may be compositional information
@@ -650,17 +669,6 @@ and mirrors this selection bias, and its holdings (like the source
 publications) contain only the most valuable and salient information.
 This incompleteness is important to convey to the user so that
 they interpret results correctly.
-
-\begin{figure}
-\begin{center}
-%\fbox{\includegraphics[width=3.25in]{fig/mte-hematite.png}}
-\fbox{\includegraphics[width=3.22in]{fig/mte-hematite-v2.png}}
-\end{center}
-\caption{MTE search results for ``hematite.''  Nine results
-(individual Mars targets) are returned, and a map displays the
-location of each hit, in red.}
-\label{fig:mtesearch}
-\end{figure}
 
 On the technical side, there are two important limitations to the MTE
 content.  First, the current MTE cannot generate overlapping
