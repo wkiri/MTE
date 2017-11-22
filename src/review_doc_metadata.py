@@ -20,19 +20,25 @@ solrserver = 'http://localhost:8983/solr/docs/'
 # Query Solr server for all MTE docs
 s = pysolr.Solr(solrserver)
 # This syntax was unintuitive and not documented
-#docs = s.search(q='id:lpsc15*', fq='type:doc', rows=1000)
-docs = s.search(q='id:lpsc16*', fq='type:doc', rows=1000)
+docs = s.search(q='id:lpsc15*', fq='type:doc', rows=1000)
+#docs = s.search(q='id:lpsc16*', fq='type:doc', rows=1000)
 print 'Obtained %d docs.' % len(docs)
 # Sort by id
 docs = sorted(docs, key=lambda d: d['id'])
+
+fields = [('title', 'old_title_t'),
+          ('authors', 'old_authors_t'),
+          ('primaryauthor', 'old_primaryauthor_t')]
+
+f, f_old = fields[2]
 
 # Iterate through docs to find ones that need review.
 for d in docs:
     print
     print d['id']
 
-    # If "old_title_t" field is non-empty, skip this document.
-    if 'old_title_t' in d.keys() and d['old_title_t'] != '':
+    # If "old_author_t" field is non-empty, skip this document.
+    if f_old in d.keys() and d[f_old] != '':
         print '(Skipping; already edited.)'
         continue
 
@@ -43,35 +49,46 @@ for d in docs:
     except:
         pass
 
-    if 'title' not in d.keys():
-        d['title'] = 'Unknown'
+    if f not in d.keys():
+        d[f] = 'Unknown'
 
-    print 'Current title: <%s>' % d['title']
+    if f == 'primaryauthor':
+        print 'Authors:', d['authors']
+
+    if f == 'authors':
+        print 'Current %s: <%s>' % (f, d[f][0])
+    else:
+        print 'Current %s: <%s>' % (f, d[f])
 
     # Prompt user to view/edit desired values.
     # Title, authors, primaryauthor (+ venue, year?)
-    # If venue does not exist, try to pre-populate with a guess based on id (LPSC)
     
-    default_title = d['title']
+    default_value = d[f]
     # If title is Unknown, try to guess it from content.
     try:
-        if default_title == 'Unknown':
-            default_title = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
+        if f == 'title' and default_value == 'Unknown':
+            default_value = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
                                       d['content']).group(1).title()
     except:
         pass
+    # Strip numbers out of authors
+    if f == 'authors':
+        # Note: authors is a string inside a list, hence [0]
+        default_value = re.sub(r'[0-9]', '', unicode(default_value[0]))
+        
+        
+    readline.set_startup_hook(lambda: readline.insert_text(default_value))
 
-    readline.set_startup_hook(lambda: readline.insert_text(default_title))
+    new_value = raw_input('Edit the %s: ' % f)
+    new_value = unicode(new_value, 'utf8')
 
-    new_title = raw_input('Edit the title: ')
-    new_title = unicode(new_title, 'utf8')
-
-    if new_title != d['title']:
-        d['old_title_t'] = d['title']
+    if new_value != d[f]:
+        d[f_old] = d[f]
         print 'Updating Solr.  Hang onto your hat!'
-        d['title'] = new_title
+        d[f] = new_value
         # This also seems to commit by default, yay.
-        s.add([d], fieldUpdates={'title':'set'})
+        # Why don't I need to put f_old here?
+        s.add([d], fieldUpdates={f:'set'})
 
 
 # Copyright 2017, by the California Institute of Technology. ALL
