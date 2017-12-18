@@ -31,16 +31,14 @@ def read_file_annots(fn, doc_id):
 def read_dir_annots(dirname):
     dirlist = [fn for fn in os.listdir(dirname) if
                fn.endswith('.ann')]
+    dirlist.sort()
     # testing: First one only
-    #dirlist = dirlist[0:5]
+    #dirlist = [dirlist[0]]
+    #dirlist = dirlist[0:2]
 
     all_annots = []
     for fn in dirlist:
         fullname = os.path.join(dirname, fn)
-
-        # Skip empty files
-        if os.stat(fullname).st_size == 0:
-            continue
 
         # Assumes conf (e.g., 'lpsc15') is the first item in the dirname.
         # Admittedly, this is brittle!
@@ -72,8 +70,15 @@ def compute_recall(annots_sys, annots_gt, ne):
         elif len(match) > 1:
             print 'Error: more than one match with the same type.'
             print ne_gt, [(m.start, m.end, m.name) for m in match]
+        '''
+        else:
+            print 'No match for',  ne_gt
+        '''
 
-    return corr, len(nes_gt), corr * 100.0 / len(nes_gt)
+    if len(nes_gt) == 0:
+        return corr, len(nes_gt), 0.0
+    else:
+        return corr, len(nes_gt), corr * 100.0 / len(nes_gt)
 
 
 def compute_precision(annots_sys, annots_gt, ne):
@@ -104,6 +109,7 @@ def compute_precision(annots_sys, annots_gt, ne):
 
 # Evaluate the annotations in dir_sys against those in dir_gt
 def eval_brat(dir_sys, dir_gt):
+    # Note these tests only work if the script is run in git/src
     """
     >>> eval_brat('test_eval_brat/lpsc16-C-pre-annotate', 'test_eval_brat/lpsc16-C-pre-annotate') # doctest: +NORMALIZE_WHITESPACE
     Read 26 annotations from 1 files in test_eval_brat/lpsc16-C-pre-annotate.
@@ -181,6 +187,10 @@ def eval_brat(dir_sys, dir_gt):
     # NEs are marked as 'anchors' here.
     NE_types = sorted(list(set([a.label for a in annots_gt \
                                     if a.type == 'anchor'])))
+    # Restrict to ones we care about
+    NE_types = ['Element', 
+                'Mineral',
+                'Target']
 
     print '\t\tRecall\tPrec.\tF1'
     tot_ncorr  = 0
@@ -206,12 +216,12 @@ def eval_brat(dir_sys, dir_gt):
         tot_ref    += ntot_r
         tot_return += ntot_p
 
-    tot_rec  = tot_ncorr * 100.0 / tot_ref
-    tot_prec = tot_ncorr * 100.0 / tot_return
+    tot_rec  = tot_ncorr * 100.0 / tot_ref if tot_ref > 0 else 0.0
+    tot_prec = tot_ncorr * 100.0 / tot_return if tot_return > 0 else 0.0
 
     if tot_rec+tot_prec < sys.float_info.epsilon:
         print 'Total:\t%.2f\t%.2f\t0.00' \
-            % (tot_rec, tot_pred)
+            % (tot_rec, tot_prec)
     else:
         print 'Total:\t%.2f\t%.2f\t%.2f' \
             % (tot_rec, tot_prec,
@@ -226,6 +236,7 @@ def main():
 
 
 if __name__ == '__main__':
+    '''
     # Run inline tests
     import doctest
 
@@ -236,7 +247,7 @@ if __name__ == '__main__':
         print "%-20s All %3d tests passed!" % (filename, num_tests)
     else:
         sys.exit(1)
-
+    '''
     main()
 
 
