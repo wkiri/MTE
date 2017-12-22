@@ -6,7 +6,7 @@ Mars.  It combines information from all publications into a concise
 encyclopedia entry for each target that collects all known discoveries
 that relate to the target.
 
-Not sure where to start?  Try the User's Guide in docs/.
+Not sure where to start?  Try the https://github.com/wkiri/MTE/wiki .
 
 Authors: Kiri Wagstaff, Thamme Gowda, You Lu, Karanjeet Singh
 
