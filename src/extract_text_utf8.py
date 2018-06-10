@@ -76,15 +76,10 @@ for (i, fn) in enumerate(dirlist):
         # Remove all newlines
         cleaned = re.sub(r'[\r|\n]+','', cleaned)
 
-        # Stick newlines back in after xxxx.PDF and xxxx.pdf
-        #cleaned = re.sub(r'([0-9][0-9][0-9][0-9].PDF)', '\\1\n', cleaned,
-        #                 flags=re.IGNORECASE)
+        # Remove xxxx.PDF
         cleaned = re.sub(r'([0-9][0-9][0-9][0-9].PDF)', '', cleaned,
                          flags=re.IGNORECASE)
         # And "Lunar and Planetary Science Conference (201x)"
-        #cleaned = re.sub(r'(Lunar and Planetary Science Conference \(201[0-9]\))', 
-        #                 '\\1\n', cleaned,
-        #                 flags=re.IGNORECASE)
         cleaned = re.sub(r'([0-9][0-9].. Lunar and Planetary Science Conference \(201[0-9]\))', 
                          '', cleaned,
                          flags=re.IGNORECASE)
