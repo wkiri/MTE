@@ -143,9 +143,12 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
     corenlp_server = StanfordCoreNLP(corenlp_url)
     solr_server = Solr(solr_url)
     props = {'annotators': 'tokenize,ssplit,lemma,pos,ner',
-             #'ner.model': 'ner_model_train_62r15_685k14_384k15.ser.gz',
-             'ner.model': 'ner_model_train_62r15v3_emt_gazette.ser.gz',
              #'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
+             #'ner.model': 'ner_model_train_62r15_685k14_384k15.ser.gz',
+             # won't work because model inside isn't 'old'
+             #'ner.model': 'ner_model_train_62r15v3_emt_gazette_old.ser.gz',
+             'ner.model': 'ner_model_train_62r15v3_emt_gazette.ser.gz',
+             #'ner.model': 'ner_62r15v3_emt_gazette.ser.gz',
              'outputFormat': 'json'}
 
     if not os.path.exists(out_path):
@@ -177,7 +180,8 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
         # Running CoreNLP on Document
         doc = corenlp_server.annotate(text, properties=props)
 
-        with io.open(os.path.join(out_path, out_fn), 'w', encoding='utf8') as outf:
+        with io.open(os.path.join(out_path, out_fn), 'w', 
+                     encoding='utf8') as outf:
             # Map Raymond's .ann (brat) annotations into the CoreNLP-parsed
             # sentence/token structure.
             ex_id = 0
@@ -198,39 +202,42 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
                 for i in range(0, len(targets)):
                     for j in range(0, len(active)):
                         if 'ann_id' not in targets[i]:
-                            print "No annotation exist for Target:", targets[i]['word']
+                            print "No annotation exists for Target:", targets[i]['word']
                             id = generate_example_id(fnbase, s['index'], ex_id)
-                            example = generate_example(id, 0, s, targets[i]['index'], active[j]['index'])
+                            example = generate_example(id, 0, s, 
+                                                       targets[i]['index'], 
+                                                       active[j]['index'])
                             outf.write(example)
                             ex_id += 1
                             continue
                         if 'ann_id' not in active[j]:
-                            print 'No annotation exist for %s: %s' % (rel, active[j]['word'])
+                            print 'No annotation exists for %s: %s' % (rel, active[j]['word'])
                             id = generate_example_id(fnbase, s['index'], ex_id)
-                            example = generate_example(id, 0, s, targets[i]['index'], active[j]['index'])
+                            example = generate_example(id, 0, s,
+                                                       targets[i]['index'], 
+                                                       active[j]['index'])
                             outf.write(example)
                             ex_id += 1
                             continue
                         label = 0
+                        # This gives a positive label for an exact match
+                        # on the Target and active string spans.
+                        print 'Querying %s contains %s.' % \
+                            (targets[i]['word'], active[j]['word'])
                         qry_str = 'type:contains AND p_id:' + venue + '-' + fnbase + \
                                   ' AND targets_ss:' + targets[i]['ann_id'] + \
                                   ' AND cont_ss:' + active[j]['ann_id']
-                        print qry_str, "\n\n"
+                        print qry_str, "\n"
                         resp = solr_server.search(qry_str, None, fl='id')
                         if resp and resp.hits > 0:
                             label = 1
 
-                        # Change label from 1 to 2 if needed
-                        if label != 0:
-                            if targets[i]['index'] < active[j]['index']:
-                                label = 1
-                            else:
-                                label = 2
-
                         # Create a unique identifier
                         id = generate_example_id(fnbase, s['index'], ex_id)
                         ex_id += 1
-                        example = generate_example(id, label, s, targets[i]['index'], active[j]['index'])
+                        example = generate_example(id, label, s, 
+                                                   targets[i]['index'], 
+                                                   active[j]['index'])
                         outf.write(example)
                         print
 
