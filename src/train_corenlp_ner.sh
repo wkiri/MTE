@@ -1,20 +1,20 @@
 #!/bin/csh
 
-#This csh sciprt takes train.list and test.list in the format described in 
-#the step 4 of the URL below as inputs, and then create standford CoreNLP  
+#This csh script takes train.list and test.list in the format described in 
+#the step 4 of the URL below as inputs, and then creates a Stanford CoreNLP  
 #NER model, and the statistcs of testing will be captured in log file.
 #  
 #https://github.com/USCDataScience/parser-indexer-py/tree/master/src/corenlp
 #
 #USAGE:
-#./run.csh train.list test.list
+#./train_corenlp_ner.csh train.list test.list
 #
 #OUTPUT:
 #1. train.log -- it captures the messages for converting train.list 
 #                to train.tsv. Elapsed time is included at the end.
 #2. test.log -- it captures the messages for converting test.list to
 #               test.tsv. Elapsed time is included at the end.
-#3. lpsc_train.prop -- Standford CoreNLP training properties file.
+#3. lpsc_train.prop -- Stanford CoreNLP training properties file.
 #4. lpsc_train.train_log -- it captures the messages for training.
 #                            Elapsed time is included at the end.              
 #5. lpsc_train.test_log -- it captures the messages for testing. 
@@ -147,4 +147,4 @@ echo "NER model: $PWD/lpsc_${train_name}.prop" >> email.txt
 echo "Training log: $PWD/lpsc_${train_name}.train_log" >> email.txt
 echo "Testing log: $PWD/lpsc_${train_name}.test_log" >> email.txt
 
-echo `cat email.txt` | mail -s "trainging and testing for ${train_name}.list complete" you.lu@jpl.nasa.gov
+echo `cat email.txt` | mail -s "training and testing for ${train_name}.list complete" wkiri@jpl.nasa.gov
