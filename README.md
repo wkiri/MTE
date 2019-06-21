@@ -20,10 +20,11 @@ http://wkiri.com/research/papers/wagstaff-mte-16.pdf
 _Third Planetary Data Workshop_, Abstract #7031, 
 https://www.hou.usra.edu/meetings/planetdata2017/pdf/7031.pdf
 * Kiri L. Wagstaff, Raymond Francis, Thamme Gowda, You Lu, Ellen Riloff, Karanjeet Singh, and Nina L. Lanza (2018),
-"Mars Target Encyclopedia: Rock and Soil Composition Extracted from the Literature," Proceedings of the Thirtieth Annual _Conference on Innovative Applications of Artificial Intelligence_, p. 7861-7866,
+"Mars Target Encyclopedia: Rock and Soil Composition Extracted from the Literature," 
+_Proceedings of the Thirtieth Annual Conference on Innovative Applications of Artificial Intelligence_, p. 7861-7866,
 http://wkiri.com/research/papers/wagstaff-iaai-mte-18.pdf
 * T. C. Stein, R. E. Arvidson, S. J. Van Bommel, K. L. Wagstaff, and F. Zhou (2019),
-"MSL Analyst's Notebook: Curiosity APXS Concentration Data Integration and Mars Target Encyclopedia and Interface Updates<"
+"MSL Analyst's Notebook: Curiosity APXS Concentration Data Integration and Mars Target Encyclopedia and Interface Updates,"
 _50th Lunar and Planetary Science Conference_, Abstract #1820, 
 https://www.hou.usra.edu/meetings/lpsc2019/pdf/1820.pdf
 * Thomas C. Stein, Raymond E. Arvidson, Kiri L. Wagstaff, and Feng Zhou (2019),
