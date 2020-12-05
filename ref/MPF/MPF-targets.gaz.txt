@@ -1,0 +1,222 @@
+Target Aa
+Target Anthill
+Target Asterisk
+Target Auto
+Target Baba Looey
+Target Baby Bee
+Target Baby Otter
+Target Baker's Bench
+Target Bakers Bench
+Target Bam-Bam
+Target Bama
+Target Bambam
+Target Bamm Bamm
+Target Barnacle Bill
+Target Barnham
+Target Barsoom
+Target Basket
+Target Bebop
+Target Bedaius
+Target Blackhawk
+Target Boo
+Target Booboo
+Target Bookshelf
+Target Boris
+Target Bosco
+Target Bowling Ball
+Target Boyle
+Target Brak
+Target Brick
+Target Broken Wall
+Target Bug
+Target Bullwinkle
+Target Bunky
+Target Buster
+Target Cabbage Patch
+Target Calvin
+Target Carbon
+Target Cardiac Hill
+Target Casper
+Target Chimp
+Target Clunk
+Target Contour
+Target Couch
+Target Cradle
+Target Cutter
+Target Darth Vader
+Target Desert Princess
+Target Dilbert
+Target Dilbert's Boss
+Target Dogbert
+Target Dragon
+Target Duck
+Target Elvis
+Target Ender
+Target Eyebrow
+Target Flanders
+Target Flat Top
+Target Flipper
+Target Flute Top
+Target Footloose
+Target Frog
+Target Froggy
+Target Garfield
+Target Garibaldi
+Target Garrak
+Target Gator
+Target Geordi
+Target Ginger
+Target Goldilocks
+Target Goose
+Target Gosling
+Target Grandma
+Target Grizzly
+Target Grommit
+Target Gumby
+Target Half Anvil
+Target Half Dome
+Target Hamster
+Target Hardstop
+Target Hassock
+Target Hedgehog
+Target Hero
+Target Hippo
+Target Hobbes
+Target Hobbs
+Target Homer
+Target Hoppy
+Target Hoyle
+Target Iggie
+Target Iguana
+Target Indiana Jones
+Target Jailhouse
+Target Janeway
+Target Jazzy
+Target Jedi
+Target Jenkins
+Target Jenkins Dune
+Target Jiminy Cricket
+Target Ka
+Target Kitten
+Target Lamb
+Target Light
+Target Little Flat Top
+Target Little Red
+Target Lone Star
+Target Longhorn
+Target Lookout
+Target Lozenge
+Target Lumpy
+Target Lunchbox
+Target Mafalda
+Target Marvin the Martian
+Target Meatball
+Target Mermaid
+Target Mermaid
+Target Mermaid Dune
+Target Mesa
+Target Mini-Matterhorn
+Target Mint Julep
+Target Moe
+Target Mohawk
+Target Moose
+Target Mouse
+Target Mr. Ed
+Target Mr. Mole
+Target Munchkin
+Target Nappy
+Target Nibbles
+Target North T. Rex
+Target Obelisk
+Target Otter
+Target Ovoid
+Target Pancake
+Target Paz
+Target Penguin
+Target Photometry Flats
+Target Picnic
+Target Piglet
+Target Pinky
+Target Pinnochio
+Target Piper
+Target Platypus
+Target Pokey
+Target Pooh Bear
+Target Poohbear
+Target Poptart
+Target Potato
+Target Prince Charming
+Target Pumpkin
+Target Pyramid
+Target Pyramid Point
+Target Quick Draw McGraw
+Target Ratbert
+Target Ren
+Target Rimshot
+Target Roadrunner
+Target Roadrunner Flats
+Target Rocky
+Target Rogue
+Target Rolling Stone
+Target Rowdy
+Target Rye Bread
+Target Sachiko
+Target Sandworm
+Target Sardine
+Target Sassafras
+Target Sausage
+Target Scooby
+Target Scooby Doo
+Target Scooby-Doo
+Target Scooter
+Target Scout
+Target Sea Cucumber
+Target Seal
+Target Seawolf
+Target Shaggy
+Target Shark
+Target Simba
+Target Sisyphus
+Target Smidgen
+Target Snoopy
+Target Snowy
+Target Snukums
+Target Souffle
+Target Soufle
+Target South T. Rex
+Target Space Ghost
+Target Spock
+Target Spud
+Target Squash
+Target Squeeze
+Target Squid
+Target Stack
+Target Stimpy
+Target Stripe
+Target Stump
+Target Sulu
+Target The Dice
+Target The Jawbone
+Target Thor
+Target Tick
+Target Tigger
+Target Tintin
+Target Top Cat
+Target Torres
+Target Trooper
+Target Turtle
+Target Tweak
+Target Tytus
+Target Valentine
+Target Vista Point
+Target Wallace
+Target Wapi
+Target Warthog
+Target Wedge
+Target Woodie
+Target Yogi
+Target Yogi Soil
+Target Zaphod
+Target Zebra
+Target Zorak
+Target Zucchini

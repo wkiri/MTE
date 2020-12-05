@@ -1,0 +1,19 @@
+APSS
+IDD
+Light detection and ranging
+LIDAR
+Mars Descent Imager
+MARDI
+Meteorological Station
+MET
+Microscopy, Electrochemistry, and Conductivity Analyzer
+MECA
+Robotic Arm
+RA
+Robotic Arm Camera
+RAC
+SEIS
+Surface Stereo Imager
+SSI
+Thermal and Evolved Gas Analyzer
+TEGA
