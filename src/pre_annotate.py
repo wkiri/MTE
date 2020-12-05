@@ -11,27 +11,6 @@ import sys, os, io
 import string
 import re
 
-# Input files
-#textdir = '../corpus-LPSC/lpsc15-C-pre-annotate-sol1159-v4-utf8'
-textdir = '../corpus-LPSC/lpsc16-C-pre-annotate-sol1159-utf8'
-
-# Reference files
-elementfile    = '../ref/elements.txt'
-chemcamfile    = '../ref/chemcam-targets-sol1159.txt' # since LPSC 2016 is test
-mineralfile    = '../ref/minerals.txt'
-IMAmineralfile = '../ref/minerals-IMA-2017-05.txt'
-nonminfile     = '../ref/non-minerals.txt' # Things that end in -ite but aren't minerals
-MERfile        = '../ref/MER-targets-pruned.txt'
-
-# Remove any punctuation, except '_' and '+' (ions) and '-' 
-# and '.' (e.g., Mt. Sharp)
-mypunc = string.punctuation
-for p in ['_', '\+', '-', '\.']:
-    mypunc = re.sub(p, '', mypunc)
-
-# Files to analyze
-dirlist = [fn for fn in os.listdir(textdir) if
-           fn.endswith('.txt')]
 
 # Process text from input file, annotate anything that matches 'items',
 # and write out the annotations to outf with type 'name'.
@@ -204,116 +183,135 @@ def pre_annotate_suffix(chars, suffix, min_len, nonmatches, name, outf, start_t)
 
 
 ##########################################################
+def main(textdir, elementfile, mineralfile, IMAmineralfile, targetfile):
 
-print 'Annotating elements in %d files from %s.' % \
-    (len(dirlist), textdir)
+    # Check arguments
+    for f in [elementfile, mineralfile, IMAmineralfile, targetfile]:
+        if not os.path.exists(f):
+            print('Could not read %s' % f)
+            sys.exit(1)
 
-# Read in the elements file
-with open(elementfile, 'r') as inf:
-    lines = inf.readlines()
-    elements = [l.strip() for l in lines]
-    # Remove ones that are almost always FPs
-    elements.remove('As')
-    elements.remove('At')
-    elements.remove('In')
-    elements.remove('Mt')
-    elements.remove('No')
-    # Add lower-case versions of long element names
-    elements += [e.lower() for e in elements if len(e) > 3]
+    if not os.path.isdir(textdir):
+        print('Could not find text directory %s' % textdir)
+        sys.exit(1)
 
-# Read in the minerals file
-with open(mineralfile, 'r') as inf:
-    lines = inf.readlines()
-    minerals = [l.strip() for l in lines]
-    # Add lower-case versions
-    minerals += [l.strip().lower() for l in lines]
+    # Files to analyze
+    dirlist = [fn for fn in os.listdir(textdir) if
+               fn.endswith('.txt')]
 
-# Read in the IMA minerals file
-with open(IMAmineralfile, 'r') as inf:
-    lines = inf.readlines()
-    minerals += [l.strip() for l in lines]
-    # Add lower-case versions
-    minerals += [l.strip().lower() for l in lines]
+    print 'Annotating elements in %d files from %s.' % \
+        (len(dirlist), textdir)
 
-# Remove duplicates
-minerals = list(set(minerals))
+    # Remove any punctuation, except '_' and '+' (ions) and '-' 
+    # and '.' (e.g., Mt. Sharp)
+    mypunc = string.punctuation
+    for p in ['_', '\+', '-', '\.']:
+        mypunc = re.sub(p, '', mypunc)
 
-# Read in the non-minerals file
-with open(nonminfile, 'r') as inf:
-    lines = inf.readlines()
-    nonminerals = [l.strip() for l in lines]
-    # Add lower-case versions
-    nonminerals += [m.lower() for m in nonminerals]
-    
-# Read in the Chemcam targets file
-with open(chemcamfile, 'r') as inf:
-    lines = inf.readlines()
-    chemcam_targets = [l.strip() for l in lines]
-    # Add a version with space converted to _
-    chemcam_targets += [re.sub(' ', '_', cc) for cc in chemcam_targets \
+    # Read in the elements file
+    with open(elementfile, 'r') as inf:
+        lines = inf.readlines()
+        elements = [l.strip() for l in lines]
+        # Remove ones that are almost always FPs
+        elements.remove('As')
+        elements.remove('At')
+        elements.remove('In')
+        elements.remove('Mt')
+        elements.remove('No')
+        # Add lower-case versions of long element names
+        elements += [e.lower() for e in elements if len(e) > 3]
+
+    # Read in the minerals file
+    with open(mineralfile, 'r') as inf:
+        lines = inf.readlines()
+        minerals = [l.strip() for l in lines]
+        # Add lower-case versions
+        minerals += [l.strip().lower() for l in lines]
+
+    # Read in the IMA minerals file
+    with open(IMAmineralfile, 'r') as inf:
+        lines = inf.readlines()
+        minerals += [l.strip() for l in lines]
+        # Add lower-case versions
+        minerals += [l.strip().lower() for l in lines]
+
+    # Remove duplicates
+    minerals = list(set(minerals))
+
+    # Read in the targets file
+    with open(targetfile, 'r') as inf:
+        lines = inf.readlines()
+        targets = [l.strip() for l in lines]
+        # Add a version with space converted to _
+        targets += [re.sub(' ', '_', cc) for cc in targets \
                             if ' ' in cc]
-    # Add a version with trailing _CCAM or _ccam removed
-    chemcam_targets += [cc[:-5] for cc in chemcam_targets \
+        # Chemcam-specific processing:
+        # Add a version with trailing _CCAM or _ccam removed
+        targets += [cc[:-5] for cc in targets \
                             if cc.endswith('_CCAM') or cc.endswith('_ccam')]
-    # Add a version with trailing _DRT or _drt removed
-    chemcam_targets += [cc[:-4] for cc in chemcam_targets \
-                             if cc.endswith('_DRT') or cc.endswith('_drt')]
-    # Add a version with trailing _RMI or _RMI removed
-    chemcam_targets += [cc[:-4] for cc in chemcam_targets \
-                             if cc.endswith('_DRT') or cc.endswith('_drt')]
-    # Add a version with trailing _1 or _2 removed
-    chemcam_targets += [cc[:-2] for cc in chemcam_targets \
-                             if cc.endswith('_1') or cc.endswith('_2')] 
-    # Add a version with _ converted to space
-    chemcam_targets += [re.sub('_', ' ', cc) for cc in chemcam_targets \
+        # Add a version with trailing _DRT or _drt removed
+        targets += [cc[:-4] for cc in targets \
+                            if cc.endswith('_DRT') or cc.endswith('_drt')]
+        # Add a version with trailing _RMI or _RMI removed
+        targets += [cc[:-4] for cc in targets \
+                            if cc.endswith('_RMI') or cc.endswith('_rmi')]
+        # Add a version with trailing _1 or _2 removed
+        targets += [cc[:-2] for cc in targets \
+                            if cc.endswith('_1') or cc.endswith('_2')] 
+        # Add a version with _ converted to space
+        targets += [re.sub('_', ' ', cc) for cc in targets \
                             if '_' in cc]
 
-# Get rid of duplicates
-t = len(chemcam_targets)
-chemcam_targets = list(set(chemcam_targets))
-    
-print 'Read in %d -> %d ChemCam target names.' % (t, len(chemcam_targets))
+    # Get rid of duplicates
+    t = len(targets)
+    targets = list(set(targets))
+    print 'Read in %d -> %d target names.' % (t, len(targets))
 
-'''
-# Read in the MER targets file
-with open(MERfile, 'r') as inf:
-    lines = inf.readlines()
-    mer_targets = [l.strip() for l in lines]
-    # Add a version with _ converted to space
-    mer_targets_a = [re.sub('_', ' ', cc) for cc in mer_targets \
-                         if '_' in cc]
-    # Add a version with space converted to _
-    mer_targets_b = [re.sub(' ', '_', cc) for cc in mer_targets \
-                             if ' ' in cc]
-    mer_targets += mer_targets_a
-    mer_targets += mer_targets_b
+    # Iterate through documents; output to .ann file
+    for fn in dirlist:
+        # Restrict to 1998 and 1999
+        if int(fn.split('.')[0].split('_')[0]) > 1999:
+            sys.exit(0)
+        print fn
 
-print 'Read in %d MER target names.' % len(mer_targets)
-'''
+        # Read in all of the characters so we can track offsets
+        with open(textdir + '/' + fn, 'r') as inf:
+            # Convert UTF-8 to a Unicode string, so funky chars don't get counted
+            # as two bytes instead of one.
+            chars = inf.read().decode('utf8')
+            inf.close()
 
-# Iterate through documents; output to .ann file
-for fn in dirlist:
-    #if int(fn.split('.')[0]) > 1500:
-    #    sys.exit(0)
-    print fn
+        annfile = textdir + '/' + fn[0:-4] + '.ann'
 
-    # Read in all of the characters so we can track offsets
-    with open(textdir + '/' + fn, 'r') as inf:
-        # Convert UTF-8 to a Unicode string, so funky chars don't get counted
-        # as two bytes instead of one.
-        chars = inf.read().decode('utf8')
-        inf.close()
+        # Create the annotations
+        start_t = 1
+        with io.open(annfile, 'w', encoding='utf8') as outf:
+            start_t = pre_annotate(chars, elements, 'Element', outf, start_t)
+            start_t = pre_annotate(chars, targets,  'Target',  outf, start_t)
+            #        start_t = pre_annotate(chars, mer_targets,     'Target',  outf, start_t)
+            #        start_t = pre_annotate_suffix(chars, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
+            start_t = pre_annotate(chars, minerals, 'Mineral', outf, start_t)
 
-    annfile = textdir + '/' + fn[0:-4] + '.ann'
 
-    # Create the annotations
-    start_t = 1
-    with io.open(annfile, 'w', encoding='utf8') as outf:
-        start_t = pre_annotate(chars, elements,        'Element', outf, start_t)
-        start_t = pre_annotate(chars, chemcam_targets, 'Target',  outf, start_t)
-#        start_t = pre_annotate(chars, mer_targets,     'Target',  outf, start_t)
-#        start_t = pre_annotate_suffix(chars, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
-        start_t = pre_annotate(chars, minerals,        'Mineral', outf, start_t)
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS, description='Apply known target, element, and mineral types to LPSC documents')
+
+    parser.add_argument('textdir', 
+                        help='Location of input .txt files (UTF-8) and where output .ann files are written')
+    parser.add_argument('-e', '--elementfile', default='../ref/elements.txt',
+                        help='List of known element names')
+    parser.add_argument('-m', '--mineralfile', default='../ref/minerals.txt',
+                        help='List of known mineral names')
+    parser.add_argument('-i', '--IMAmineralfile', 
+                        default='../ref/minerals-IMA-2017-05.txt',
+                        help='List of known mineral names from the IMA')
+    parser.add_argument('-t', '--targetfile', 
+                        default='../ref/MSL/chemcam-targets-sol1159.txt',
+                        help='List of mission-specific target names')
+
+    args = parser.parse_args()
+    main(**vars(args))
 
 
 # Copyright 2016, by the California Institute of Technology. ALL

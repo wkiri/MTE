@@ -20,8 +20,8 @@ solrserver = 'http://localhost:8983/solr/docs/'
 # Query Solr server for all MTE docs
 s = pysolr.Solr(solrserver)
 # This syntax was unintuitive and not documented
-#docs = s.search(q='id:lpsc15*', fq='type:doc', rows=1000)
-docs = s.search(q='id:lpsc16*', fq='type:doc', rows=1000)
+docs = s.search(q='id:lpsc15*', fq='type:doc', rows=1000)
+#docs = s.search(q='id:lpsc16*', fq='type:doc', rows=1000)
 print 'Obtained %d docs.' % len(docs)
 # Sort by id
 docs = sorted(docs, key=lambda d: d['id'])
@@ -30,26 +30,17 @@ fields = [('title', 'old_title_t'),
           ('authors', 'old_authors_t'),
           ('primaryauthor', 'old_primaryauthor_t')]
 
-f, f_old = fields[0]
+f, f_old = fields[2]
 
 # Iterate through docs to find ones that need review.
 for d in docs:
     print
     print d['id']
 
-    # If "old" field is non-empty, skip this document.
-    # (Note: won't skip content that was reviewed, but already correct,
-    # so didn't need any updates.
+    # If "old_author_t" field is non-empty, skip this document.
     if f_old in d.keys() and d[f_old] != '':
         print '(Skipping; already edited.)'
         continue
-    '''
-    # Look for titles with instrument names to allow fixing caps manually
-    lower_title = d[f].lower()
-    if not ('chemin' in lower_title or 'navcam' in lower_title or
-            'hazcam' in lower_title or 'mastcam' in lower_title):
-        continue
-    '''
 
     try:
         # Show first few lines of 'content' for context.
