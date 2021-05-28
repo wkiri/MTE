@@ -11,6 +11,11 @@ import sys, os, io
 import string
 import re
 
+# Remove any punctuation, except '_' and '+' (ions) and '-' 
+# and '.' (e.g., Mt. Sharp)
+mypunc = string.punctuation
+for p in ['_', '\+', '-', '\.']:
+    mypunc = re.sub(p, '', mypunc)
 
 # Process text from input file, annotate anything that matches 'items',
 # and write out the annotations to outf with type 'name'.
@@ -183,10 +188,12 @@ def pre_annotate_suffix(chars, suffix, min_len, nonmatches, name, outf, start_t)
 
 
 ##########################################################
-def main(textdir, elementfile, mineralfile, IMAmineralfile, targetfile):
+def main(textdir, anndir, elementfile, mineralfile, IMAmineralfile,
+         propertyfile, targetfile):
 
     # Check arguments
-    for f in [elementfile, mineralfile, IMAmineralfile, targetfile]:
+    for f in [elementfile, mineralfile, IMAmineralfile,
+              propertyfile, targetfile]:
         if not os.path.exists(f):
             print('Could not read %s' % f)
             sys.exit(1)
@@ -195,18 +202,21 @@ def main(textdir, elementfile, mineralfile, IMAmineralfile, targetfile):
         print('Could not find text directory %s' % textdir)
         sys.exit(1)
 
+    if not os.path.isdir(anndir):
+        s = raw_input('Output directory %s does not exist; create it? [Y/n]'
+                      % anndir)
+        if s in ['n', 'N']:
+            print('Exiting.')
+            sys.exit(1)
+        else:
+            os.mkdir(anndir)
+
     # Files to analyze
     dirlist = [fn for fn in os.listdir(textdir) if
                fn.endswith('.txt')]
 
     print 'Annotating elements in %d files from %s.' % \
         (len(dirlist), textdir)
-
-    # Remove any punctuation, except '_' and '+' (ions) and '-' 
-    # and '.' (e.g., Mt. Sharp)
-    mypunc = string.punctuation
-    for p in ['_', '\+', '-', '\.']:
-        mypunc = re.sub(p, '', mypunc)
 
     # Read in the elements file
     with open(elementfile, 'r') as inf:
@@ -237,6 +247,20 @@ def main(textdir, elementfile, mineralfile, IMAmineralfile, targetfile):
 
     # Remove duplicates
     minerals = list(set(minerals))
+
+    # Read in the properties file
+    with open(propertyfile, 'r') as inf:
+        lines = inf.readlines()
+        properties = [l.strip() for l in lines]
+        # Add lower-case versions
+        properties += [l.strip().lower() for l in lines]
+        # Add upper-case versions
+        properties += [l.strip().upper() for l in lines]
+        # Add title-case versions
+        properties += [l.strip().title() for l in lines]
+        
+    # Remove duplicates
+    properties = list(set(properties))
 
     # Read in the targets file
     with open(targetfile, 'r') as inf:
@@ -269,9 +293,9 @@ def main(textdir, elementfile, mineralfile, IMAmineralfile, targetfile):
 
     # Iterate through documents; output to .ann file
     for fn in dirlist:
-        # Restrict to 1998 and 1999
-        if int(fn.split('.')[0].split('_')[0]) > 1999:
-            sys.exit(0)
+        # Restrict which files to process
+        #if int(fn.split('.')[0].split('_')[0]) > 1999:
+        #    sys.exit(0)
         print fn
 
         # Read in all of the characters so we can track offsets
@@ -281,31 +305,49 @@ def main(textdir, elementfile, mineralfile, IMAmineralfile, targetfile):
             chars = inf.read().decode('utf8')
             inf.close()
 
-        annfile = textdir + '/' + fn[0:-4] + '.ann'
+        #annfile = textdir + '/' + fn[0:-4] + '.ann'
+        annfile = os.path.join(anndir, fn[0:-4] + '.ann')
 
         # Create the annotations
         start_t = 1
-        with io.open(annfile, 'w', encoding='utf8') as outf:
-            start_t = pre_annotate(chars, elements, 'Element', outf, start_t)
-            start_t = pre_annotate(chars, targets,  'Target',  outf, start_t)
+        # Append to any existing annotations
+        if os.path.exists(annfile):
+            # Get the current max so ids can start after that
+            max_target_id = 0
+            with io.open(annfile, 'r', encoding='utf8') as inf:
+                for l in inf:
+                    if l.startswith('T'):
+                        id = int(l.split('\t')[0][1:])
+                        if id > max_target_id:
+                            max_target_id = id
+            start_t = max_target_id + 1
+
+        with io.open(annfile, 'a', encoding='utf8') as outf:
+            #start_t = pre_annotate(chars, elements, 'Element', outf, start_t)
+            #start_t = pre_annotate(chars, targets,  'Target',  outf, start_t)
+            start_t = pre_annotate(chars, properties,  'Property',  outf, start_t)
             #        start_t = pre_annotate(chars, mer_targets,     'Target',  outf, start_t)
             #        start_t = pre_annotate_suffix(chars, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
-            start_t = pre_annotate(chars, minerals, 'Mineral', outf, start_t)
+            #start_t = pre_annotate(chars, minerals, 'Mineral', outf, start_t)
 
 
 if __name__ == '__main__':
     import argparse
-    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS, description='Apply known target, element, and mineral types to LPSC documents')
+    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS, description='Apply known target, element, mineral, and property types to LPSC documents')
 
     parser.add_argument('textdir', 
-                        help='Location of input .txt files (UTF-8) and where output .ann files are written')
-    parser.add_argument('-e', '--elementfile', default='../ref/elements.txt',
+                        help='Location of input .txt files (UTF-8)')
+    parser.add_argument('anndir', 
+                        help='Where to write output .ann files')
+    parser.add_argument('-e', '--elementfile', default='../ref/element-correct-MPF+periodic-table.txt',
                         help='List of known element names')
-    parser.add_argument('-m', '--mineralfile', default='../ref/minerals.txt',
+    parser.add_argument('-m', '--mineralfile', default='../ref/mineral-correct-MPF+IMA.gaz.txt',
                         help='List of known mineral names')
     parser.add_argument('-i', '--IMAmineralfile', 
                         default='../ref/minerals-IMA-2017-05.txt',
                         help='List of known mineral names from the IMA')
+    parser.add_argument('-p', '--propertyfile', default='../ref/properties.txt',
+                        help='List of known properties')
     parser.add_argument('-t', '--targetfile', 
                         default='../ref/MSL/chemcam-targets-sol1159.txt',
                         help='List of mission-specific target names')

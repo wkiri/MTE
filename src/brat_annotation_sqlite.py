@@ -8,7 +8,8 @@
 # November 4, 2020
 
 import os
-from name_utils import canonical_name
+from name_utils import canonical_name, canonical_target_name, \
+    canonical_property_name
 
 
 TYPE_ENTITY = 'entity'
@@ -62,7 +63,7 @@ class BratDocument(object):
             raise RuntimeError('Invalid txt file format: %s' %
                                os.path.abspath(self.txt_path))
 
-        return file_content[0]
+        return file_content[0].decode('utf8')
 
 
 class BratAnnotation:
@@ -71,9 +72,23 @@ class BratAnnotation:
         self.ann_id = record['ann_id']
         self.type = record['type']
         self.label = record['label']
-        self.start = record['start']
-        self.end = record['end']
-        self.name = record['name']
+        if self.type == TYPE_ENTITY:
+            # Only used by entities
+            self.start = record['start']
+            self.end = record['end']
+            self.name = record['name']
+        elif self.type == TYPE_RELATION:
+            # Only used by relations
+            self.arg1 = record['arg1']
+            self.arg2 = record['arg2']
+
+    def __str__(self):
+        ret = self.label + ' (%s)' % self.ann_id
+        if self.type == TYPE_ENTITY:
+            ret += ': %s (%s - %s)' % (self.name, self.start, self.end)
+        elif self.type == TYPE_RELATION:
+            ret += ': %s -> %s' % (self.arg1, self.arg2)
+        return ret
 
     @staticmethod
     def parse_brat_line(brat_line):
@@ -88,13 +103,29 @@ class BratAnnotation:
             raise RuntimeError('Unrecognized brat ann type: %s' %
                                line_tokens[0][0])
 
+        # Add generic attribution attributes
         record = {
             'ann_id': line_tokens[0],
             'type': ann_type,
             'label': middle_tokens[0],
-            'start': int(middle_tokens[1]),
-            'end': int(middle_tokens[2]),
-            'name': canonical_name(line_tokens[2].decode('utf-8'))
         }
 
+        # Add type-specific attributes
+        if ann_type == TYPE_ENTITY:
+            record['start'] = int(middle_tokens[1])
+            record['end'] = int(middle_tokens[2])
+            nm = line_tokens[2].decode('utf-8')
+            # Use lower-case for properties
+            if record['label'] == 'Property':
+                record['name'] = canonical_property_name(nm)
+            elif record['label'] == 'Target':
+                record['name'] = canonical_target_name(nm)
+            else:
+                record['name'] = canonical_name(nm)
+        elif ann_type == TYPE_RELATION:
+            # These arguments are of the form ArgN:TXX
+            record['arg1'] = middle_tokens[1].split(':')[1]
+            record['arg2'] = middle_tokens[2].split(':')[1]
+
         return record
+

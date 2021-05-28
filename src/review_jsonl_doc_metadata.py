@@ -18,11 +18,34 @@ import json
 import string
 
 
-def main(infile, outfile):
+def update_field(doc, grobid_f_name):
+
+    value = doc['metadata'].get(grobid_f_name, '')
+    if value == '' and grobid_f_name == 'grobid:header_Title':
+        # If title is unknown, try to guess it from content.
+        value = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
+                          doc['content']).group(1).title()
+    # Standardize title capitalization
+    if value.isupper():
+        value = string.capwords(doc['metadata'].get(grobid_f_name, ''))
+                
+    readline.set_startup_hook(lambda: readline.insert_text(value.encode(sys.stdin.encoding)))
+    new_value = raw_input('%s: Edit the %s: ' % (doc['file'].split('/')[-1], grobid_f_name))
+    new_value = unicode(new_value, 'utf8')
+    doc['metadata'][grobid_f_name] = new_value
+    print('New value: %s' % doc['metadata'][grobid_f_name])
+
+
+def main(infile, outfile, start_year, start_abstract):
 
     # check arguments
     if not os.path.exists(infile):
         print('%s file not found, exiting.' % infile)
+        sys.exit(1)
+
+    if start_abstract > -1 and start_year == -1:
+        print('Warning: start_abstract specified, but no start year; ' + 
+              'please specify starting year with -y.')
         sys.exit(1)
 
     # Read in JSONL file
@@ -35,10 +58,11 @@ def main(infile, outfile):
 
         for doc in docs:
             # If you want to skip to a particular abstract, use these lines.
-            # TBD: make this a command-line argument.
-            #(yr, abst) = map(int, doc['file'].split('/')[-1].split('.')[0].split('_'))
-            #if yr < 2013 or (yr == 2013 and abst < 2219):
-            #    continue
+            (yr, abst) = map(int, doc['file'].split('/')[-1].split('.')[0].split('_'))
+            if start_year > -1 and yr < start_year:
+                continue
+            if start_abstract > -1 and yr == start_year and abst < start_abstract:
+                continue
             readline.set_startup_hook()
             s = raw_input('Review %s? [Y/n/q]' % doc['file'])
             if s == 'n' or s == 'N':
@@ -53,35 +77,8 @@ def main(infile, outfile):
             for l in non_empty[:6]:
                 print(l)
 
-            f_name = 'title'
-            title = doc['metadata'].get('grobid:header_Title', '')
-            if title == '':
-                # If title is unknown, try to guess it from content.
-                title = re.search(r'[^\.]+\.[^\.\n]+\n+([^\.]+)\.', 
-                                  doc['content']).group(1).title()
-            # Standardize title capitalization
-            if title.isupper():
-                title = string.capwords(doc['metadata'].get('grobid:header_Title', ''))
-                
-            readline.set_startup_hook(lambda: readline.insert_text(title.encode(sys.stdin.encoding)))
-            new_value = raw_input('%s: Edit the %s: ' % (doc['file'].split('/')[-1], f_name))
-            new_value = unicode(new_value, 'utf8')
-            doc['metadata']['grobid:header_Title'] = new_value
-            print('New title: %s' % doc['metadata']['grobid:header_Title'])
-
-            f_name = 'authors'
-            # Standardize title capitalization
-            #authors = string.capwords(doc['metadata'].get('grobid:header_Authors', ''))
-            authors = doc['metadata'].get('grobid:header_Authors', '')
-            #if authors == '':
-                # Really hard to do this automatically
-
-            readline.set_startup_hook(lambda: readline.insert_text(authors.encode(sys.stdin.encoding)))
-            new_value = raw_input('%s: Edit the %s: ' % (doc['file'].split('/')[-1], f_name))
-            new_value = unicode(new_value, 'utf8')
-            doc['metadata']['grobid:header_Authors'] = new_value
-            print('New authors: %s' % doc['metadata']['grobid:header_Authors'])
-
+            update_field(doc, 'grobid:header_Title')
+            update_field(doc, 'grobid:header_Authors')
             print('\n')
 
         # Write out new JSONL file
@@ -102,6 +99,10 @@ if __name__ == '__main__':
 
     parser.add_argument('infile', help='input JSON list filename')
     parser.add_argument('outfile', help='where to write updated JSON list file')
+    parser.add_argument('-y', '--start_year', type=int, default=-1,
+                        help='Start with content from this year (default: all)')
+    parser.add_argument('-a', '--start_abstract', type=int, default=-1,
+                        help='Start with content from this abstract number (default: all)')
 
     args = parser.parse_args()
     main(**vars(args))

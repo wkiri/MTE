@@ -50,6 +50,13 @@ class MteDb():
                 ')'
             )
 
+            # -------- properties -----------
+            cur.execute(
+                'CREATE TABLE properties ('
+                ' property_name  VARCHAR(80) PRIMARY KEY'
+                ')'
+            )
+
             # -------- documents: each document in the collection -----------
             cur.execute(
                 'CREATE TABLE documents ('
@@ -72,8 +79,20 @@ class MteDb():
                 'CREATE TABLE contains ('
                 ' target_id       VARCHAR(90) REFERENCES targets,'
                 ' component_name  VARCHAR(80) REFERENCES components,'
-                ' sentence_id     VARCHAR(80) REFERENCES sentences,'
-                ' PRIMARY KEY(target_id,component_name,sentence_id)'
+                ' target_sentence_id     VARCHAR(80) REFERENCES sentences,'
+                ' component_sentence_id  VARCHAR(80) REFERENCES sentences,'
+                ' PRIMARY KEY(target_id,component_name,target_sentence_id,component_sentence_id)'
+                ')'
+            )
+
+            # -------- has_property: link targets to properties -----------
+            cur.execute(
+                'CREATE TABLE has_property ('
+                ' target_id        VARCHAR(90) REFERENCES targets,'
+                ' property_name    VARCHAR(80) REFERENCES properties,'
+                ' target_sentence_id    VARCHAR(80) REFERENCES sentences,'
+                ' property_sentence_id  VARCHAR(80) REFERENCES sentences,'
+                ' PRIMARY KEY(target_id,property_name,target_sentence_id,property_sentence_id)'
                 ')'
             )
 
@@ -114,7 +133,7 @@ class MteDb():
                     'INSERT OR REPLACE INTO targets ('
                     ' target_id, target_name, mission'
                     ') VALUES (?, ?, ?)',
-                    [('%s-%s' % (r[0], r[1]), r[0], r[1]) for r in rec['targets']]
+                    [(u'%s-%s' % (r[0], r[1]), r[0], r[1]) for r in rec['targets']]
                 )
                 cur.executemany(
                     'INSERT OR REPLACE INTO components ('
@@ -122,28 +141,41 @@ class MteDb():
                     ') VALUES (?, ?)',
                     rec['components']
                 )
-                # Generate a unique sentence id for each one: doc_id-sentence_index
+                # Here's where we would insert properties, 
+                # but the NER model (in .json file) won't have any.
+
+                # Generate a unique id for each sentence: doc_id-sentence_index
                 sentences = list(set([r[3].strip() for r in rec['contains']]))
-                # Add sentences that have mentions of targets, even if no relation is present
+                # Add sentences that have mentions of targets, 
+                # even if no relation is present
                 # Assume sentences are bracketed by periods.
                 targ_sentences = [rec['content'][max(0, rec['content'].rfind('.', 0, t[2])+1):
                                                  max(t[3]+1, rec['content'].find('.', t[3])+1)].strip()
                                   for t in rec['targets']]
                 sentences = list(set(sentences + targ_sentences)) # unique only
-                sent_ids = dict(zip(sentences, ['%s-%d' % (rec['doc_id'], n) for n in range(len(sentences))]))
-                mentions = zip(['%s-%s' % (t[0], t[1]) for t in rec['targets']], 
+                sent_ids = dict(zip(sentences, 
+                                    ['%s-%d' % (rec['doc_id'], n) 
+                                     for n in range(len(sentences))]))
+                mentions = zip(['%s-%s' % (t[0], t[1]) 
+                                for t in rec['targets']], 
                                [sent_ids[s] for s in targ_sentences])
+
                 # Expand each many-to-many contains relation
                 # into pairwise relations for storage
                 rel_pairs = []
                 for r in rec['contains']:
                     for t in r[0]:
                         for c in r[2]:
-                            rel_pairs.append(('%s-%s' % (t, r[4]), c, sent_ids[r[3]]))
+                            # These auto-generated contains relations
+                            # are constrained to be within-sentence, so
+                            # target_sentence_id = component_sentence_id
+                            rel_pairs.append(('%s-%s' % (t, r[4]), c,
+                                              sent_ids[r[3]], sent_ids[r[3]]))
                 cur.executemany(
                     'INSERT OR REPLACE INTO contains ('
-                    ' target_id, component_name, sentence_id'
-                    ') VALUES (?, ?, ?)',
+                    ' target_id, component_name,'
+                    ' target_sentence_id, component_sentence_id'
+                    ') VALUES (?, ?, ?, ?)',
                     rel_pairs
                 )
                 cur.executemany(
@@ -175,7 +207,6 @@ class MteDb():
     def sentences_insertion(cursor, doc_id, sentence):
         # Check if sentence is already in the DB. If so, return its
         # corresponding sentence_id.
-        sentence = sentence.decode('utf-8')
         sentence_query = """
             SELECT sentence_id FROM sentences WHERE sentence=?
         """
@@ -211,6 +242,26 @@ class MteDb():
         """
         cursor.execute(sql, (target_id, sentence_id))
 
+    # Add a relation, assuming the argument is a name (not id)
+    @staticmethod
+    def relation_insertion(cursor, table_name, target_id, arg_name,
+                           target_sentence_id, arg_sentence_id):
+        sql = """
+            INSERT OR REPLACE INTO %s (target_id, %s, target_sentence_id, %s)
+            VALUES (?, ?, ?, ?)
+        """
+        if table_name == 'contains':
+            arg_column = 'component_name'
+            arg_id_column = 'component_sentence_id'
+        elif table_name == 'has_property':
+            arg_column = 'property_name'
+            arg_id_column = 'property_sentence_id'
+        else:
+            raise RuntimeError('Unknown table name %s' % table_name)
+        cursor.execute(sql % (table_name, arg_column, arg_id_column), 
+                       (target_id, arg_name,
+                        target_sentence_id, arg_sentence_id))
+
     @staticmethod
     def component_insertion(cursor, component_name, component_label):
         sql = """
@@ -219,6 +270,51 @@ class MteDb():
         """
         cursor.execute(sql, (component_name, component_label))
 
+    @staticmethod
+    def property_insertion(cursor, property_name):
+        sql = """
+            INSERT OR REPLACE INTO properties (property_name) 
+            VALUES (?)
+        """
+        cursor.execute(sql, (property_name,))
+
+    @staticmethod
+    def get_sentence(brat_doc, brat_ann):
+        # Search backward for a period followed by a space
+        # or a capital letter or double quotes
+        prev_period = brat_doc.txt_content.rfind('.', 0, brat_ann.start)
+        while (prev_period > 0 and
+               brat_doc.txt_content[prev_period + 1] != ' ' and
+               # Allow period + capital letter starting next sentence
+               not brat_doc.txt_content[prev_period + 1].isupper() and
+                # Allow period + "
+               brat_doc.txt_content[prev_period + 1] != '"'):
+            prev_period = brat_doc.txt_content.rfind('.', 0, prev_period - 1)
+        # If last sentence ended in period + " then skip the " too
+        if brat_doc.txt_content[prev_period + 1] == '"':
+            prev_period += 1
+            
+        sentence_start_index = max(0, prev_period + 1)
+
+        # Search forward for a period followed by a space, double quote,
+        # or capital letter
+        next_period = brat_doc.txt_content.find('.', brat_ann.end)
+        while (brat_doc.txt_content[next_period + 1] != ' ' and
+               not brat_doc.txt_content[next_period + 1].isupper() and
+               brat_doc.txt_content[next_period + 1] != '"'):
+            next_period = brat_doc.txt_content.find('.', next_period + 1)
+        # If this sentence ends in period + " then include the " too
+        if brat_doc.txt_content[next_period + 1] == '"':
+            next_period += 1
+        
+        sentence_end_index = max(brat_ann.end + 1,
+                                 next_period + 1)
+
+        sentence = brat_doc.txt_content[sentence_start_index:
+                                        sentence_end_index]
+        return sentence
+
+    
     @staticmethod
     def update_reviewer(cursor, doc_id, reviewer):
         sql = """
@@ -240,16 +336,7 @@ class MteDb():
             if brat_ann.type == TYPE_ENTITY:
                 if brat_ann.label == 'Target':
                     # Extract the sentence in which the target is mentioned.
-                    sentence_start_index = max(
-                        0,
-                        brat_doc.txt_content.rfind('.', 0, brat_ann.start) + 1
-                    )
-                    sentence_end_index = max(
-                        brat_ann.end + 1,
-                        brat_doc.txt_content.find('.', brat_ann.end) + 1
-                    )
-                    sentence = brat_doc.txt_content[sentence_start_index:
-                                                    sentence_end_index]
+                    sentence = self.get_sentence(brat_doc, brat_ann)
 
                     try:
                         target_id = self.targets_insertion(
@@ -265,11 +352,11 @@ class MteDb():
 
                         # Commit all changes to the DB
                         self.connection.commit()
-                    except Exception:
+                    except Exception as e:
                         self.connection.rollback()
                         raise RuntimeError(
-                            'Insertion error for target %s in doc %s. ' %
-                            (brat_ann.ann_id, brat_doc.doc_id)
+                            'Insertion error for target %s in doc %s: %s' %
+                            (brat_ann.ann_id, brat_doc.doc_id, e)
                         )
                 elif brat_ann.label == 'Element' or brat_ann.label == 'Mineral':
                     try:
@@ -284,16 +371,63 @@ class MteDb():
                             (brat_ann.ann_id, brat_doc.doc_id)
                         )
                 elif brat_ann.label == 'Property':
-                    raise RuntimeError('Not implemented for property label.')
+                    try:
+                        self.property_insertion(
+                            cursor, brat_ann.name
+                        )
+                        self.connection.commit()
+                    except Exception as e:
+                        self.connection.rollback()
+                        raise RuntimeError(
+                            'Insertion error for property %s (%s) in doc %s, %s' %
+                            (brat_ann.ann_id, brat_ann.name, brat_doc.doc_id, e)
+                        )
                 else:
                     raise RuntimeError('Brat annotation label not recognized: '
                                        '%s' % brat_ann.label)
 
             elif brat_ann.type == TYPE_RELATION:
-                raise RuntimeError('Not implemented for relations.')
+
+                # Look up arg1 (Target)
+                target_ann = [ba for ba in brat_doc.ann_content
+                              if ba.ann_id == brat_ann.arg1]
+                if len(target_ann) == 0:
+                    raise RuntimeError('%s: No annotation found for %s' %
+                                       (brat_doc.doc_id, brat_ann.arg1))
+                target_ann = target_ann[0]
+                target_id = target_ann.name + '-' + brat_doc.mission
+
+                # Look up arg2 (e.g., Component or Property)
+                arg2_ann = [ba for ba in brat_doc.ann_content
+                            if ba.ann_id == brat_ann.arg2]
+                if len(arg2_ann) == 0:
+                    raise RuntimeError('%s: No annotation found for %s' %
+                                       (brat_doc.doc_id, brat_ann.arg2))
+                arg2_ann = arg2_ann[0]
+
+                # Look up the sentence for the Target and Component/Property
+                target_sentence = self.get_sentence(brat_doc, target_ann)
+                target_sentence_id = self.sentences_insertion(
+                    cursor, brat_doc.doc_id, target_sentence.strip())
+                arg2_sentence = self.get_sentence(brat_doc, arg2_ann)
+                arg2_sentence_id = self.sentences_insertion(
+                    cursor, brat_doc.doc_id, arg2_sentence.strip())
+
+                # Add to the appropriate table
+                if brat_ann.label == 'Contains':
+                    relation = 'contains'
+                elif brat_ann.label == 'HasProperty':
+                    relation = 'has_property'
+                else:
+                    raise RuntimeError('%s: Relation %s not yet supported' % 
+                                       (brat_doc.doc_id, brat_ann.label))
+                self.relation_insertion(cursor, relation,
+                                        target_id, arg2_ann.name,
+                                        target_sentence_id, arg2_sentence_id)
+
             else:
-                raise RuntimeError('Brat annotation type not recognized: %s' %
-                                   brat_ann.type)
+                raise RuntimeError('%s: Brat annotation type not recognized: %s' %
+                                   (brat_doc.doc_id, brat_ann.type))
 
     # Remove existing records related to this brat_doc from `contains`,
     # `mentions`, and `sentences` tables. Records related to the `components`,
@@ -306,16 +440,31 @@ class MteDb():
         cursor = self.connection.cursor()
 
         try:
+            # Delete all contains relations with target sentences
+            # in this document
             contains_delete_sql = """
                 DELETE FROM contains 
-                WHERE sentence_id IN (
-                  SELECT c.sentence_id FROM contains AS c 
-                  INNER JOIN sentences AS s ON c.sentence_id=s.sentence_id 
+                WHERE target_sentence_id IN (
+                  SELECT c.target_sentence_id FROM contains AS c 
+                  INNER JOIN sentences AS s ON c.target_sentence_id=s.sentence_id 
                   INNER JOIN documents AS d ON s.doc_id=d.doc_id 
                   WHERE d.doc_id=?
                 );
             """
             cursor.execute(contains_delete_sql, (brat_doc.doc_id,))
+
+            # Delete all has_property relations with target sentences
+            # in this document
+            has_property_delete_sql = """
+                DELETE FROM has_property 
+                WHERE target_sentence_id IN (
+                  SELECT c.target_sentence_id FROM has_property AS c 
+                  INNER JOIN sentences AS s ON c.target_sentence_id=s.sentence_id 
+                  INNER JOIN documents AS d ON s.doc_id=d.doc_id 
+                  WHERE d.doc_id=?
+                );
+            """
+            cursor.execute(has_property_delete_sql, (brat_doc.doc_id,))
 
             mentions_delete_sql = """
                 DELETE FROM mentions 
@@ -335,12 +484,12 @@ class MteDb():
 
             # Commit the changes when all deletions were successful.
             self.connection.commit()
-        except Exception:
+        except Exception as e:
             self.connection.rollback()
             raise RuntimeError(
                 'Encountered problems to delete records related to doc_id %s '
                 'from `contains`, `mentions`, or `sentences` table. Rolling '
-                'back any changes made to the database.' % brat_doc.doc_id
+                'back any changes made to the database.' % brat_doc.doc_id, e
             )
 
     def update_brat_doc(self, brat_doc):
@@ -390,6 +539,19 @@ class MteDb():
 
         return cursor.rowcount
 
+    def remove_orphaned_properties(self):
+        cursor = self.connection.cursor()
+
+        properties_removal_sql = """
+            DELETE FROM properties WHERE property_name NOT IN 
+            (SELECT property_name FROM has_property)
+        """
+
+        cursor.execute(properties_removal_sql)
+        self.connection.commit()
+
+        return cursor.rowcount
+
     def remove_orphaned_documents(self):
         cursor = self.connection.cursor()
 
@@ -402,6 +564,13 @@ class MteDb():
         self.connection.commit()
 
         return cursor.rowcount
+
+    def add_known_target(self, target_name, mission):
+        cursor = self.connection.cursor()
+        target_id = self.targets_insertion(cursor, target_name, mission)
+        self.connection.commit()
+
+        return target_id
 
     def close(self):
         self.connection.close()

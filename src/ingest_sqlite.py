@@ -13,7 +13,7 @@ import string
 import functools
 import itertools
 from sqlite_mte import MteDb
-from name_utils import canonical_name
+from name_utils import canonical_name, canonical_target_name
 
 
 # Read JSON content and return it as a generator of dictionaries (one per file)
@@ -32,8 +32,10 @@ def read_json(jsonfile, ndocs, year=None, mission=''):
                 'abstract': (int(rec['file'].split('/')[-1].split('.')[0]) if year is not None
                              else int(rec['file'].split('/')[-1].split('_')[1].split('.')[0])),
                 # Capitalize first letter of each word in the title
-                'title': string.capwords(rec['metadata'].\
-                                         get('grobid:header_Title', '')),
+                #'title': string.capwords(rec['metadata'].\
+                #                         get('grobid:header_Title', '')),
+                # Don't do this if we assume it has already been edited
+                'title': rec['metadata'].get('grobid:header_Title', ''),
                 'authors': rec['metadata'].get('grobid:header_Authors', ''),
                 'primary_author': '',
                 'affiliations': rec['metadata'].get('grobid:header_FullAffiliations', ''),
@@ -44,15 +46,18 @@ def read_json(jsonfile, ndocs, year=None, mission=''):
                 #'content': rec['content'].strip(), # from GROBID
                 'content': rec['content_ann_s'].strip(), # for annotations
                 'targets': ([] if 'ner' not in rec['metadata'].keys() 
-                            else [(canonical_name(r['text']), mission, r['begin'], r['end']) 
+                            else [(canonical_target_name(r['text']),
+                                   mission, r['begin'], r['end']) 
                                   for r in rec['metadata']['ner'] 
                                   if r['label'] == 'Target']),
                 # Components are everything other than targets (Element, Mineral)
                 'components': ([] if 'ner' not in rec['metadata'].keys() 
-                               else [(canonical_name(r['text']), r['label']) for r in rec['metadata']['ner'] 
+                               else [(canonical_name(r['text']), r['label'])
+                                     for r in rec['metadata']['ner'] 
                                      if r['label'] != 'Target']),
                 'contains': ([] if 'rel' not in rec['metadata'].keys()
-                             else [([canonical_name(t) for t in r['target_names']], 
+                             else [([canonical_target_name(t)
+                                     for t in r['target_names']], 
                                     r['target_ids'], 
                                     [canonical_name(c) for c in r['cont_names']], 
                                     r['sentence'],
@@ -67,8 +72,12 @@ def construct_doc_url(rec):
         rec['doc_url'] = 'http://www.lpi.usra.edu/meetings/' + \
                          ('LPSC%s/pdf/' % (rec['year'] - 1900)) + \
                          str(rec['abstract']) + '.pdf'
-    else:
+    elif rec['year'] <= 2017: # 2000 through 2017
         rec['doc_url'] = 'http://www.lpi.usra.edu/meetings/' + \
+                         ('lpsc%s/pdf/' % rec['year']) + \
+                         str(rec['abstract']) + '.pdf'
+    else: # 2018 and later
+        rec['doc_url'] = 'http://www.hou.usra.edu/meetings/' + \
                          ('lpsc%s/pdf/' % rec['year']) + \
                          str(rec['abstract']) + '.pdf'
     return rec
@@ -113,6 +122,10 @@ def update_primary_author(rec):
         else:
             if in_last_name:  # Done!
                 break
+
+    # If it ends with a comma, remove it
+    pa = pa.split(',')[0]
+        
     rec['primary_author'] = pa
     return rec
 
@@ -127,7 +140,7 @@ def update_authors(rec):
         if auw.isdigit():  # handles multidigit numbers too
             continue
         # Skip over strings with commas in them (usually like "1,2")
-        if ',' in auw:
+        if auw[0].isdigit() and ',' in auw:
             continue
         au_cleaned += (auw + ' ')
     rec['authors'] = au_cleaned
@@ -140,7 +153,8 @@ def update_targets_with_JSRE(rec, mission):
     for r in rec['contains']:
         for (t, t_id) in zip(r[0], r[1]):
             (t_begin, t_end) = map(int, t_id.split('_')[1:3])
-            rec['targets'] += [(canonical_name(t), mission, t_begin, t_end)]
+            rec['targets'] += [(canonical_target_name(t), mission,
+                                t_begin, t_end)]
 
     return rec
 

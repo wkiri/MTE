@@ -11,6 +11,7 @@ import os
 import sys
 from sqlite_mte import MteDb
 from brat_annotation_sqlite import BratDocument
+from name_utils import canonical_target_name
 
 
 def doc_exists(mte_db, doc_id):
@@ -23,7 +24,7 @@ def doc_exists(mte_db, doc_id):
         raise RuntimeError('There can be only one document per doc_id')
 
 
-def main(ann_dir, db_file, mission, reviewer, remove_orphans):
+def main(ann_dir, db_file, mission, reviewer, remove_orphans, target_list):
     if not os.path.exists(ann_dir) or not os.path.isdir(ann_dir):
         print '[ERROR] Annotation directory does not exist: %s' % \
               os.path.abspath(ann_dir)
@@ -74,8 +75,27 @@ def main(ann_dir, db_file, mission, reviewer, remove_orphans):
         counts = mte_db.remove_orphaned_components()
         print '[INFO] Orphaned components removed: %d' % counts
 
+        counts = mte_db.remove_orphaned_properties()
+        print '[INFO] Orphaned properties removed: %d' % counts
+
         counts = mte_db.remove_orphaned_documents()
         print '[INFO] Orphaned documents removed: %d' % counts
+
+    if target_list is not None:
+        if not os.path.exists(target_list):
+            print '[ERROR] Target list not found: %s' % \
+                  os.path.abspath(target_list)
+            sys.exit(1)
+
+        with open(target_list, 'r') as f:
+            known_targets = f.readlines()
+            known_targets = [kt.strip() for kt in known_targets]
+
+        for kt in known_targets:
+            mte_db.add_known_target(canonical_target_name(kt), mission)
+
+        print '[INFO] Known mission targets from the target list %s have ' \
+              'been added to the DB file.' % os.path.abspath(target_list)
 
     mte_db.close()
     print '[INFO] DONE.'
@@ -99,8 +119,12 @@ if __name__ == '__main__':
                         'an empty string')
     parser.add_argument('-ro', '--remove_orphans', default=False,
                         action='store_true', help='A flag to remove orphaned '
-                        'targets, components, and documents when enabled. The '
+                        'components, and documents when enabled. The '
                         'default is disabled.')
+    parser.add_argument('-tl', '--target_list', type=str,
+                        help='(Optional) Path to a known mission target list. '
+                             'If the path is provided, the target names in the '
+                             'known mission will be added to the DB file.')
 
     args = parser.parse_args()
     main(**vars(args))
