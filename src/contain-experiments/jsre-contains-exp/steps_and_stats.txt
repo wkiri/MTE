@@ -1,0 +1,7 @@
+1. generate jsre examples:
+	python generate_jsre_examples.py # this mainly replaces solr server with the function to identify if a word-word pair exists in annotation.
+	
+	ONE IMPORTANT THING:
+		the old version of jsre model uses system ners to generate examples( generate_example() takes t['ner'] which is prediction result of the ner system. this is replaced by gold ner now )
+
+	

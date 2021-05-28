@@ -1,0 +1,23 @@
+trainFile = /uusoc/res/nlp/nlp/yuan/mars/data/stanford_ner/train/data.txt
+serializeTo = /uusoc/res/nlp/nlp/yuan/mars/saved_models/ner/model.ser.gz
+map = word=0,answer=1
+qnSize=25
+saveFeatureIndexToDisk=true
+printFeatures=true
+useClassFeature=true
+useWord=true
+useNGrams=true
+noMidNGrams=true
+useDisjunctive=true
+maxNGramLeng=6
+usePrev=true
+useNext=true
+useSequences=true
+usePrevSequences=true
+maxLeft=1
+useTypeSeqs=true
+useTypeSeqs2=true
+useTypeySequences=true
+wordShape=chris2useLC
+cleanGazette=true
+gazette=/uusoc/res/nlp/nlp/yuan/mars/experiments/targets_minerals-2017-05_elements.gaz.txt
