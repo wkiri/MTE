@@ -1,0 +1,85 @@
+T1	STATE_OR_PROVINCE 286 294	Michigan
+T2	STATE_OR_PROVINCE 327 329	MI
+T3	EMAIL 342 356	velbel@msu.edu
+T4	COUNTRY 435 442	Germany
+T5	EMAIL 444 460	goetz@mps.mpg.de
+T6	STATE_OR_PROVINCE 511 513	CA
+T7	COUNTRY 515 518	USA
+T8	STATE_OR_PROVINCE 558 560	MA
+T9	COUNTRY 562 565	USA
+T10	COUNTRY 629 636	Denmark
+T11	COUNTRY 719 721	UK
+T12	COUNTRY 785 796	Netherlands
+T13	Mineral 3925 3932	olivine
+T14	Mineral 4083 4091	hematite
+T15	Mineral 4208 4215	olivine
+T16	Mineral 4221 4233	nanohematite
+T17	Mineral 4243 4251	jarosite
+T18	Mineral 4337 4349	nanohematite
+T19	Mineral 4359 4367	jarosite
+T20	Mineral 4552 4559	olivine
+T21	Mineral 4596 4604	hematite
+T22	Mineral 4606 4615	magnetite
+T23	Mineral 4617 4625	goethite
+T24	Mineral 4665 4672	olivine
+T25	Mineral 5021 5033	nanohematite
+T26	Mineral 5038 5046	jarosite
+T27	TITLE 5062 5071	candidate
+T28	Mineral 5451 5458	olivine
+T29	Mineral 5468 5480	nanohematite
+T30	Mineral 5491 5499	jarosite
+T31	URL 6301 6358	http://speclab.cr.usgs.gov/spectral.lib04/spectrallib.des
+T32	Mineral 7097 7104	olivine
+T33	Mineral 7112 7124	nanohematite
+T34	Mineral 7139 7147	jarosite
+T35	URL 7159 7212	http://speclab.cr.usgs.gov/spectral.lib04/spectrallib
+T36	Target 3171 3179	Rosy Red
+T37	Target 6705 6713	Rosy Red
+T38	Property 43 47	SILT
+T39	Property 977 981	soil
+T40	Property 1208 1211	Red
+T41	Property 1491 1495	Fine
+T42	Property 1507 1511	fine
+T43	Property 1512 1516	sand
+T44	Property 1554 1558	silt
+T45	Property 1745 1749	soil
+T46	Property 1973 1976	red
+T47	Property 2136 2139	red
+T48	Property 2150 2155	fines
+T49	Property 2163 2167	sand
+T50	Property 2179 2183	sand
+T51	Property 2206 2214	fracture
+T52	Property 2304 2308	sand
+T53	Property 2304 2315	sand grains
+T54	Property 3120 3127	spectra
+T55	Property 3176 3179	Red
+T56	Property 3198 3201	red
+T57	Property 3741 3748	spectra
+T58	Property 3898 3905	spectra
+T59	Property 4252 4260	coatings
+T60	Property 4278 4282	silt
+T61	Property 4385 4392	spectra
+T62	Property 4457 4464	spectra
+T63	Property 4561 4573	fine-grained
+T64	Property 5299 5306	spectra
+T65	Property 5364 5371	spectra
+T66	Property 5385 5392	spectra
+T67	Property 5418 5422	soil
+T68	Property 5581 5588	spectra
+T69	Property 5793 5797	Sand
+T70	Property 5880 5884	sand
+T71	Property 6710 6713	Red
+T72	Property 6732 6735	red
+T73	Property 7066 7073	spectra
+T74	Property 3138 3143	brown
+R1	HasProperty Arg1:T36 Arg2:T74	
+R2	Contains Arg1:T36 Arg2:T13	
+T75	Mineral 4024 4036	nanohematite
+R3	Contains Arg1:T36 Arg2:T75	
+R4	Contains Arg1:T36 Arg2:T14	
+T76	Mineral 4127 4136	jarosites
+R5	Contains Arg1:T36 Arg2:T76	
+R6	Contains Arg1:T36 Arg2:T15	
+R7	Contains Arg1:T36 Arg2:T16	
+R8	Contains Arg1:T36 Arg2:T17	
+R9	HasProperty Arg1:T36 Arg2:T59	

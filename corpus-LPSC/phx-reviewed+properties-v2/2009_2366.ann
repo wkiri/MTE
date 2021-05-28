@@ -1,0 +1,27 @@
+T1	COUNTRY 244 246	UK
+T2	EMAIL 248 271	hanna.sykulska@ic.ac.uk
+T3	TITLE 1215 1229	representative
+T4	TITLE 1381 1386	finer
+T5	Target 3159 3169	Mamma Bear
+T6	Target 3211 3226	Dodo-Goldilocks
+T7	Target 3354 3364	Golden Key
+T8	Property 44 48	SOIL
+T9	Property 53 57	DUST
+T10	Property 589 593	dust
+T11	Property 598 602	soil
+T12	Property 859 862	red
+T13	Property 1033 1037	soil
+T14	Property 1138 1142	soil
+T15	Property 1261 1265	soil
+T16	Property 1368 1375	coating
+T17	Property 2436 2439	Red
+T18	Property 2900 2903	Red
+T19	Property 3129 3132	Red
+T20	Property 3203 3209	trench
+T21	Property 3334 3337	lag
+T22	Property 3334 3345	lag deposit
+T23	Property 3484 3487	lag
+T24	Property 3484 3495	lag deposit
+T25	Property 3883 3887	soil
+R1	HasProperty Arg1:T7 Arg2:T22	
+R2	HasProperty Arg1:T6 Arg2:T20	

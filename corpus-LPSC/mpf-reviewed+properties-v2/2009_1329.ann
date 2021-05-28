@@ -1,0 +1,73 @@
+T1	Mineral 3377 3384	calcite
+T2	Mineral 3388 3399	perchlorate
+T3	Target-PHX 4181 4190	Baby Bear
+T4	Element 4722 4729	calcium
+T5	Mineral 4730 4739	carbonate
+T6	Element 5139 5146	Calcium
+T7	Mineral 5147 5156	carbonate
+T8	Element 5496 5498	Ca
+T9	Element 5708 5715	calcium
+T10	Mineral 5716 5725	carbonate
+T11	Mineral 5946 5956	carbonates
+T12	Element 6346 6359	Ca-carbonates
+T13	Mineral 7890 7897	calcite
+T14	Mineral 8074 8081	calcite
+T15	Mineral 8085 8096	perchlorate
+T17	Property 414 430	patterned ground
+T18	Property 935 938	ice
+T19	Property 1074 1078	soil
+T20	Property 1099 1102	ice
+T21	Property 1141 1144	ice
+T22	Property 1194 1198	soil
+T23	Property 1696 1708	fine-grained
+T24	Property 1866 1877	bowl-shaped
+T25	Property 2161 2165	Soil
+T26	Property 2277 2281	soil
+T27	Property 2337 2341	soil
+T28	Property 2477 2481	soil
+T29	Property 2565 2569	soil
+T30	Property 2627 2633	trench
+T31	Property 2802 2808	trench
+T32	Property 2921 2925	dark
+T33	Property 3014 3018	soil
+T34	Property 3070 3073	ice
+T35	Property 3093 3097	soil
+T36	Property 3121 3124	lag
+T37	Property 3184 3190	cloddy
+T38	Property 3197 3218	mechanical properties
+T39	Property 3246 3252	cloddy
+T40	Property 3246 3258	cloddy soils
+T41	Property 3299 3305	cloddy
+T42	Property 3320 3324	soil
+T43	Property 3388 3399	perchlorate
+T44	Property 3563 3566	lag
+T45	Property 3702 3705	ice
+T46	Property 3829 3832	ice
+T47	Property 3859 3862	ice
+T48	Property 3975 3978	ice
+T49	Property 4722 4739	calcium carbonate
+T50	Property 5004 5011	igneous
+T51	Property 5298 5302	soil
+T52	Property 5708 5725	calcium carbonate
+T53	Property 5995 6001	eolian
+T54	Property 6300 6304	dust
+T55	Property 6396 6405	pedogenic
+T56	Property 6500 6504	soil
+T57	Property 6547 6551	soil
+T58	Property 7043 7046	ice
+T59	Property 7235 7238	ice
+T60	Property 7279 7282	ice
+T61	Property 7410 7413	ice
+T62	Property 7419 7422	ice
+T63	Property 7595 7598	ice
+T64	Property 7660 7663	ice
+T65	Property 7704 7708	soil
+T66	Property 7736 7739	ice
+T67	Property 7976 7980	soil
+T68	Property 7996 8002	cloddy
+T69	Property 8017 8021	soil
+T70	Property 8085 8096	perchlorate
+T71	Property 8151 8154	ice
+T72	Property 8346 8349	ice
+T73	Property 8580 8586	brines
+T74	Property 9635 9639	Soil

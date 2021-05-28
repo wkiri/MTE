@@ -1,0 +1,64 @@
+T1	STATE_OR_PROVINCE 167 169	CO
+T2	STATE_OR_PROVINCE 173 183	Washington
+T3	STATE_OR_PROVINCE 207 209	MO
+T4	EMAIL 211 235	jhanley@boulder.swri.edu
+T5	Mineral 810 819	chlorides
+T6	Mineral 821 829	sulfates
+T7	STATE_OR_PROVINCE 1787 1789	Pa
+T8	Element 1831 1833	Pa
+T9	Element 1894 1896	Pa
+T10	RELIGION 2086 2097	independent
+T11	STATE_OR_PROVINCE 2846 2848	La
+T12	STATE_OR_PROVINCE 3021 3028	Arizona
+T13	STATE_OR_PROVINCE 3029 3034	Texas
+T14	Element 5930 5932	Pa
+T15	STATE_OR_PROVINCE 6434 6436	Pa
+T16	Element 7025 7027	Pa
+T17	STATE_OR_PROVINCE 7212 7214	Pa
+T18	Target 2839 2848	La Mancha
+T19	Target 2842 2848	Mancha
+T20	Property 69 73	SOIL
+T21	Property 423 431	cohesive
+T22	Property 511 532	mechanical properties
+T23	Property 616 620	soil
+T24	Property 674 678	soil
+T25	Property 679 687	cohesion
+T26	Property 852 858	Trench
+T27	Property 1025 1033	cohesion
+T28	Property 1302 1310	cohesion
+T29	Property 1355 1361	brines
+T30	Property 1573 1581	cohesive
+T31	Property 1623 1627	Soil
+T32	Property 1877 1885	cohesion
+T33	Property 2019 2027	Cohesion
+T34	Property 2157 2165	cohesion
+T35	Property 2254 2258	soil
+T36	Property 2580 2595	angle of repose
+T37	Property 2647 2651	soil
+T38	Property 2693 2697	soil
+T39	Property 2850 2856	trench
+T40	Property 2895 2899	soil
+T41	Property 2971 2975	soil
+T42	Property 3055 3063	cohesion
+T43	Property 3354 3357	ice
+T44	Property 3633 3637	soil
+T45	Property 3838 3842	soil
+T46	Property 4356 4364	cohesion
+T47	Property 4963 4971	cohesion
+T48	Property 5157 5165	cohesion
+T49	Property 5198 5212	friction angle
+T50	Property 5322 5330	cohesion
+T51	Property 5514 5522	cohesion
+T52	Property 5723 5727	soil
+T53	Property 5782 5790	cohesion
+T54	Property 5830 5844	friction angle
+T55	Property 5902 5910	cohesion
+T56	Property 6198 6206	cohesion
+T57	Property 6440 6446	cloddy
+T58	Property 6447 6451	soil
+T59	Property 6579 6583	soil
+T60	Property 6737 6741	soil
+T61	Property 6906 6910	dune
+T62	Property 7008 7016	Cohesion
+T63	Property 7195 7203	Cohesion
+T64	Property 8022 8030	Cohesive

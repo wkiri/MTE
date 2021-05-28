@@ -1,0 +1,66 @@
+T1	EMAIL 129 146	1torloff@ucsc.edu
+T2	STATE_OR_PROVINCE 204 214	California
+T3	STATE_OR_PROVINCE 251 261	California
+T4	TITLE 837 844	general
+T5	TITLE 2388 2394	Crater
+T6	TITLE 2956 2962	crater
+T7	TITLE 3500 3506	crater
+T8	TITLE 4128 4134	crater
+T9	TITLE 4238 4244	Crater
+T10	TITLE 4401 4406	Major
+T11	TITLE 4501 4507	crater
+T12	TITLE 4985 4991	crater
+T13	TITLE 5111 5117	Crater
+T14	TITLE 5169 5175	Crater
+T15	TITLE 5269 5275	crater
+T16	TITLE 5473 5479	second
+T17	TITLE 5588 5594	crater
+T18	TITLE 5968 5974	crater
+T19	STATE_OR_PROVINCE 6030 6032	Ga
+T20	TITLE 6094 6100	crater
+T21	TITLE 6315 6321	Crater
+T22	TITLE 6493 6499	Crater
+T23	TITLE 6972 6978	crater
+T24	TITLE 7470 7476	tracer
+T25	TITLE 7620 7626	Crater
+T26	TITLE 7750 7756	crater
+T27	Property 26 42	Patterned Ground
+T28	Property 327 330	ice
+T29	Property 516 532	patterned ground
+T30	Property 804 807	ice
+T31	Property 877 893	patterned ground
+T32	Property 902 906	soil
+T33	Property 925 928	ice
+T34	Property 973 978	crack
+T35	Property 1049 1054	crack
+T36	Property 1073 1089	patterned ground
+T37	Property 1119 1135	patterned ground
+T38	Property 1362 1365	ice
+T39	Property 1492 1496	soil
+T40	Property 1500 1504	Sand
+T41	Property 1530 1535	crack
+T42	Property 1582 1586	soil
+T43	Property 1603 1608	crack
+T44	Property 1654 1658	dust
+T45	Property 1663 1667	sand
+T46	Property 1836 1840	soil
+T47	Property 2058 2074	patterned ground
+T48	Property 2108 2124	patterned ground
+T49	Property 2220 2224	rock
+T50	Property 2241 2257	patterned ground
+T51	Property 2329 2333	rock
+T52	Property 2652 2656	Rock
+T53	Property 2839 2844	crack
+T54	Property 2904 2920	patterned ground
+T55	Property 3347 3363	patterned ground
+T56	Property 3718 3728	hemisphere
+T57	Property 3861 3877	patterned ground
+T58	Property 4218 4222	Rock
+T59	Property 5008 5012	rock
+T60	Property 6271 6275	rock
+T61	Property 6527 6531	Rock
+T62	Property 6620 6636	patterned ground
+T63	Property 6737 6741	rock
+T64	Property 6917 6921	rock
+T65	Property 7502 7518	patterned ground
+T66	Property 7728 7732	rock

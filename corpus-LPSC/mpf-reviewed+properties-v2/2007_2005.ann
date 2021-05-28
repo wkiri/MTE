@@ -1,0 +1,44 @@
+T1	Element 1985 1990	Boron
+T5	Property 40 44	SOIL
+T6	Property 415 419	dust
+T7	Property 599 603	soil
+T8	Property 764 771	spectra
+T9	Property 813 817	soil
+T10	Property 965 976	composition
+T11	Property 1076 1087	composition
+T12	Property 1727 1731	rock
+T13	Property 1785 1789	rock
+T14	Property 2204 2212	basaltic
+T15	Property 2213 2221	boulders
+T16	Property 2259 2270	sedimentary
+T17	Property 2501 2504	red
+T18	Property 2660 2664	dust
+T19	Property 2917 2921	soil
+T20	Property 3000 3004	fine
+T21	Property 3208 3212	fine
+T22	Property 3221 3225	dust
+T23	Property 3414 3418	fine
+T24	Property 3529 3533	dust
+T25	Property 3553 3566	poorly sorted
+T26	Property 3699 3708	weathered
+T27	Property 3873 3877	Dust
+T28	Property 3909 3913	dust
+T29	Property 3952 3963	composition
+T30	Property 4061 4065	dust
+T31	Property 4235 4239	Soil
+T32	Property 4240 4261	mechanical properties
+T33	Property 4289 4293	soil
+T34	Property 4429 4433	Dust
+T35	Property 4528 4532	dust
+T36	Property 4567 4571	Soil
+T37	Property 4572 4593	mechanical properties
+T38	Property 4608 4629	mechanical properties
+T39	Property 4782 4790	cohesion
+T40	Property 4830 4838	cohesion
+T41	Property 4856 4870	friction angle
+T42	Property 4962 4977	angle of repose
+T43	Property 5264 5272	cohesion
+T44	Property 6441 6452	composition
+T45	Property 6788 6795	spectra
+T46	Property 6912 6916	Dust
+T47	Property 6962 6969	spectra

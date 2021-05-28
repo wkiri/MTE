@@ -1,0 +1,106 @@
+T1	TITLE 253 258	Queen
+T2	STATE_OR_PROVINCE 283 290	Ontario
+T3	COUNTRY 292 298	Canada
+T4	EMAIL 309 331	cannon@geol.queensu.ca
+T5	STATE_OR_PROVINCE 357 359	TX
+T6	STATE_OR_PROVINCE 398 400	TX
+T7	STATE_OR_PROVINCE 449 456	Arizona
+T8	STATE_OR_PROVINCE 529 531	CA
+T9	Element 606 613	calcium
+T10	Mineral 614 623	carbonate
+T11	Element 892 894	Mg
+T12	Element 898 900	Fe
+T13	Mineral 901 911	carbonates
+T14	Element 1379 1386	calcium
+T15	Mineral 1387 1396	carbonate
+T16	Element 1633 1635	Mg
+T17	Mineral 1746 1756	carbonates
+T18	Element 1902 1904	Mg
+T19	Element 2081 2089	chlorine
+T20	Element 2148 2157	magnesium
+T21	Mineral 2235 2244	carbonate
+T22	Element 2351 2353	Ca
+T23	Mineral 2495 2502	Calcite
+T24	Mineral 2634 2641	calcite
+T25	Mineral 2812 2819	calcite
+T26	STATE_OR_PROVINCE 2972 2974	MS
+T27	Mineral 3144 3151	Calcite
+T28	COUNTRY 3153 3160	Iceland
+T29	Element 3171 3173	Mg
+T30	Element 3173 3174	-
+T31	Element 3174 3185	perchlorate
+T32	STATE_OR_PROVINCE 3268 3270	MS
+T33	Element 3408 3410	Mg
+T34	STATE_OR_PROVINCE 3479 3481	MS
+T35	STATE_OR_PROVINCE 3500 3502	MS
+T36	Mineral 3826 3833	calcite
+T37	Element 3838 3840	Mg
+T38	Element 3840 3841	-
+T39	Element 3841 3852	perchlorate
+T40	Mineral 4151 4158	calcite
+T41	Element 4163 4165	Mg
+T42	Element 4165 4166	-
+T43	Element 4166 4177	perchlorate
+T44	Mineral 4309 4316	calcite
+T45	Element 4437 4439	Mg
+T46	Mineral 4592 4599	calcite
+T47	Element 4838 4844	nickel
+T48	STATE_OR_PROVINCE 5110 5114	Mass
+T49	Element 5196 5198	Mg
+T50	Mineral 5451 5458	calcite
+T51	Mineral 5532 5539	calcite
+T52	Mineral 5935 5942	calcite
+T53	Element 5947 5949	Mg
+T54	Element 5949 5950	-
+T55	Element 5950 5961	perchlorate
+T56	Mineral 6219 6226	calcite
+T57	Mineral 6624 6632	epsomite
+T58	Mineral 6754 6761	calcite
+T59	Element 6865 6867	Mg
+T60	Mineral 6911 6918	calcite
+T61	Element 6920 6922	Mg
+T62	Element 6922 6923	-
+T63	Element 6923 6934	perchlorate
+T64	TITLE 7366 7372	crater
+T65	STATE_OR_PROVINCE 8309 8312	Ind
+T66	Element 8638 8640	Po
+T67	STATE_OR_PROVINCE 8769 8771	MS
+T68	Element 8772 8774	Cu
+T69	Target 681 693	Wicked Witch
+T70	Target 4980 4992	Wicked Witch
+T71	Property 32 43	PERCHLORATE
+T72	Property 606 623	calcium carbonate
+T73	Property 694 698	soil
+T74	Property 966 973	organic
+T75	Property 991 995	soil
+T76	Property 1036 1047	perchlorate
+T77	Property 1141 1148	organic
+T78	Property 1166 1170	soil
+T79	Property 1239 1246	organic
+T80	Property 1358 1369	perchlorate
+T81	Property 1379 1396	calcium carbonate
+T82	Property 1416 1420	soil
+T83	Property 1502 1513	perchlorate
+T84	Property 2158 2169	perchlorate
+T85	Property 2330 2341	perchlorate
+T86	Property 2543 2554	perchlorate
+T87	Property 2570 2574	soil
+T88	Property 4674 4679	sharp
+T89	Property 5862 5873	perchlorate
+T90	Property 6586 6590	soil
+T91	Property 7088 7092	soil
+T92	Property 7349 7357	organics
+T93	Property 7452 7460	organics
+T94	Property 7501 7508	organic
+T95	Property 7616 7624	organics
+R1	HasProperty Arg1:T69 Arg2:T73	
+R2	Contains Arg1:T69 Arg2:T9	
+R3	Contains Arg1:T69 Arg2:T10	
+R4	HasProperty Arg1:T69 Arg2:T72	
+R5	Contains Arg1:T69 Arg2:T11	
+R6	Contains Arg1:T69 Arg2:T12	
+R7	Contains Arg1:T69 Arg2:T13	
+T96	Target 4994 4996	WW
+R8	Contains Arg1:T70 Arg2:T49	
+R9	Contains Arg1:T96 Arg2:T49	
+T97	Target 8692 8694	WW

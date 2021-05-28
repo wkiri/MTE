@@ -1,0 +1,266 @@
+T1	Target 639 644	Chimp
+T2	Target 646 655	Half Dome
+T3	Target 657 660	Moe
+T4	Target 662 668	Stimpy
+T5	Target 670 678	Flat Top
+T6	Target 919 924	Chimp
+T7	Target 1131 1136	Chimp
+T8	Target 1250 1255	Chimp
+T9	Target 1682 1687	Chimp
+T10	Target 1792 1797	Chimp
+T11	Target 1878 1883	Chimp
+T12	Target 1928 1937	Half Dome
+T13	Target 2081 2090	Half Dome
+T14	Target 2666 2675	Half Dome
+T15	Target 3051 3054	Moe
+T16	Target 3497 3500	Moe
+T17	Target 3572 3575	Moe
+T18	Target 4061 4067	Stimpy
+T19	Target 4146 4152	Stimpy
+T20	Target 4273 4279	Stimpy
+T21	Target 4899 4907	Flat Top
+T22	Target 5713 5718	Shark
+T23	Target 6137 6142	Ovoid
+T24	Target 6441 6446	Ovoid
+T25	Target 6730 6740	Half Anvil
+T26	Target 6814 6824	Half Anvil
+T27	Target 6912 6917	Ovoid
+T28	Target 6945 6955	Half Anvil
+T29	Target 7234 7240	Stimpy
+T30	Target 7245 7250	Ovoid
+T31	Target 7279 7284	Chimp
+T32	Target 7286 7295	Half Dome
+T33	Target 7301 7304	Moe
+T34	Target 7326 7336	Half Anvil
+T35	Target 7386 7391	Chimp
+T36	Target 7398 7404	Stimpy
+T37	Target 7406 7411	Ovoid
+T38	Target 7417 7427	Half Anvil
+T39	Target 7441 7450	Half Dome
+T40	Target 7470 7478	Flat Top
+T41	Target 7497 7500	Moe
+T42	Target 7571 7574	Moe
+T43	Target 7593 7602	Half Dome
+T44	Target 7639 7647	Flat Top
+T45	Target 7676 7682	Stimpy
+T46	Target 7684 7689	Ovoid
+T47	Target 7691 7701	Half Anvil
+T48	Target 7707 7712	Chimp
+T49	Property 39 43	ROCK
+T50	Property 543 547	Rock
+T51	Property 651 655	Dome
+T52	Property 670 674	Flat
+T53	Property 981 985	flat
+T54	Property 1013 1017	fine
+T55	Property 1046 1052	bright
+T56	Property 1116 1127	side facets
+T57	Property 1121 1127	facets
+T58	Property 1314 1318	rock
+T59	Property 1356 1360	dark
+T60	Property 1369 1375	pitted
+T61	Property 1390 1394	pits
+T62	Property 1439 1444	sharp
+T63	Property 1500 1505	sharp
+T64	Property 1656 1660	rock
+T65	Property 1736 1740	pits
+T66	Property 1811 1817	bright
+T67	Property 1811 1826	bright material
+T68	Property 1848 1852	rock
+T69	Property 1898 1902	DOME
+T70	Property 1933 1937	Dome
+T71	Property 1941 1952	semiangular
+T72	Property 1953 1957	rock
+T73	Property 2029 2033	rock
+T74	Property 2086 2090	Dome
+T75	Property 2213 2217	rock
+T76	Property 2342 2346	pits
+T77	Property 2407 2411	pits
+T78	Property 2456 2460	pits
+T79	Property 2571 2575	pits
+T80	Property 2584 2590	flutes
+T81	Property 2638 2642	soil
+T82	Property 2671 2675	Dome
+T83	Property 2702 2706	rock
+T84	Property 2727 2731	soil
+T85	Property 2780 2784	rock
+T86	Property 2853 2862	pyramidal
+T87	Property 2867 2878	semiangular
+T88	Property 2902 2906	rock
+T89	Property 2911 2915	soil
+T90	Property 2963 2967	rock
+T91	Property 3116 3120	rock
+T92	Property 3139 3146	massive
+T93	Property 3197 3207	flute-like
+T94	Property 3538 3549	semirounded
+T95	Property 3628 3632	pits
+T96	Property 3672 3676	pits
+T97	Property 3697 3707	flute-like
+T98	Property 3806 3810	dome
+T99	Property 3862 3866	rock
+T100	Property 4031 4035	rock
+T101	Property 4158 4162	rock
+T102	Property 4200 4204	pits
+T103	Property 4286 4293	rounded
+T104	Property 4299 4303	pits
+T105	Property 4436 4440	pits
+T106	Property 4485 4490	sharp
+T107	Property 4521 4525	FLAT
+T108	Property 4556 4563	angular
+T109	Property 4564 4568	rock
+T110	Property 4572 4581	prismatic
+T111	Property 4601 4605	flat
+T112	Property 4646 4652	bright
+T113	Property 4653 4657	fine
+T114	Property 4672 4676	rock
+T115	Property 4717 4721	rock
+T116	Property 4733 4738	sharp
+T117	Property 4744 4748	soil
+T118	Property 4764 4768	rock
+T119	Property 4798 4802	rock
+T120	Property 4894 4898	rock
+T121	Property 4899 4903	Flat
+T122	Property 4936 4947	side facets
+T123	Property 4941 4947	facets
+T124	Property 5011 5022	prominences
+T125	Property 5095 5099	pits
+T126	Property 5248 5259	prominences
+T127	Property 5309 5313	rock
+T128	Property 5409 5420	side facets
+T129	Property 5414 5420	facets
+T130	Property 5452 5456	rock
+T131	Property 5485 5491	bright
+T132	Property 5513 5519	bright
+T133	Property 5520 5524	fine
+T134	Property 5558 5568	flute-like
+T135	Property 5614 5619	sharp
+T136	Property 5708 5712	rock
+T137	Property 5879 5883	rock
+T138	Property 5935 5942	ovoidal
+T139	Property 5979 5983	ROCK
+T140	Property 6032 6038	facets
+T141	Property 6132 6136	rock
+T142	Property 6196 6201	knobs
+T143	Property 6278 6282	pits
+T144	Property 6336 6341	sharp
+T145	Property 6347 6351	pits
+T146	Property 6391 6402	prominences
+T147	Property 6436 6440	rock
+T148	Property 6458 6462	rock
+T149	Property 6510 6514	flat
+T150	Property 6559 6564	sharp
+T151	Property 6752 6757	sharp
+T152	Property 6831 6836	rough
+T153	Property 6842 6846	pits
+T154	Property 6851 6856	knobs
+T155	Property 6907 6911	rock
+T156	Property 6922 6926	flat
+T157	Property 6980 6986	bright
+T158	Property 7015 7021	bright
+T159	Property 7022 7026	fine
+T160	Property 7053 7057	dark
+T161	Property 7058 7063	knobs
+T162	Property 7106 7110	rock
+T163	Property 7226 7233	rounded
+T164	Property 7252 7263	semirounded
+T165	Property 7267 7278	semiangular
+T166	Property 7291 7295	Dome
+T167	Property 7306 7313	angular
+T168	Property 7364 7368	pits
+T169	Property 7379 7385	pitted
+T170	Property 7434 7440	pitted
+T171	Property 7446 7450	Dome
+T172	Property 7455 7466	side facets
+T173	Property 7460 7466	facets
+T174	Property 7470 7474	Flat
+T175	Property 7490 7496	pitted
+T176	Property 7529 7539	flute-like
+T177	Property 7598 7602	Dome
+T178	Property 7639 7643	Flat
+T179	Property 7796 7800	pits
+T180	Property 8074 8080	eolian
+T181	Property 8145 8149	rock
+T182	Property 8232 8236	rock
+T183	Property 8282 8292	flute-like
+T184	Property 8455 8461	flutes
+T185	Property 8470 8476	flutes
+T186	Property 8523 8529	pitted
+T187	Property 8535 8545	flute-like
+T188	Property 8583 8589	eolian
+T189	Property 8800 8804	rock
+T190	Property 8805 8811	facets
+T191	Property 8886 8890	sand
+T192	Property 8996 9000	rock
+T193	Target 2770 2773	MOE
+T194	Target 6021 6026	OVOID
+T195	Target 3771 3777	STIMPY
+T196	Target 4521 4529	FLAT TOP
+T197	Target 6674 6684	HALF ANVIL
+T198	Target 7314 7321	Fat Top
+R1	HasProperty Arg1:T6 Arg2:T54	
+R2	HasProperty Arg1:T7 Arg2:T56	
+R3	HasProperty Arg1:T7 Arg2:T57	
+R4	HasProperty Arg1:T8 Arg2:T59	
+R5	HasProperty Arg1:T8 Arg2:T60	
+R6	HasProperty Arg1:T9 Arg2:T65	
+R7	HasProperty Arg1:T10 Arg2:T67	
+R8	HasProperty Arg1:T12 Arg2:T71	
+R9	HasProperty Arg1:T13 Arg2:T76	
+R10	HasProperty Arg1:T13 Arg2:T80	
+R11	HasProperty Arg1:T193 Arg2:T86	
+R12	HasProperty Arg1:T193 Arg2:T87	
+R13	HasProperty Arg1:T15 Arg2:T92	
+R14	HasProperty Arg1:T16 Arg2:T94	
+R15	HasProperty Arg1:T17 Arg2:T95	
+R16	HasProperty Arg1:T195 Arg2:T98	
+T199	Property 3937 3948	depressions
+R17	HasProperty Arg1:T195 Arg2:T199	
+R18	HasProperty Arg1:T19 Arg2:T102	
+R19	HasProperty Arg1:T20 Arg2:T103	
+R20	HasProperty Arg1:T20 Arg2:T104	
+R21	HasProperty Arg1:T196 Arg2:T110	
+R22	HasProperty Arg1:T196 Arg2:T108	
+R23	HasProperty Arg1:T196 Arg2:T112	
+R24	HasProperty Arg1:T196 Arg2:T113	
+R25	HasProperty Arg1:T196 Arg2:T116	
+R26	HasProperty Arg1:T21 Arg2:T122	
+R27	HasProperty Arg1:T21 Arg2:T132	
+R28	HasProperty Arg1:T21 Arg2:T133	
+R29	HasProperty Arg1:T22 Arg2:T138	
+R30	HasProperty Arg1:T194 Arg2:T140	
+R31	HasProperty Arg1:T23 Arg2:T142	
+T200	Property 6180 6191	depressions
+R32	HasProperty Arg1:T23 Arg2:T200	
+R33	HasProperty Arg1:T23 Arg2:T143	
+R34	HasProperty Arg1:T23 Arg2:T144	
+R35	HasProperty Arg1:T197 Arg2:T149	
+R36	HasProperty Arg1:T197 Arg2:T151	
+R37	HasProperty Arg1:T25 Arg2:T149	
+R38	HasProperty Arg1:T25 Arg2:T151	
+R39	HasProperty Arg1:T26 Arg2:T152	
+R40	HasProperty Arg1:T26 Arg2:T153	
+R41	HasProperty Arg1:T26 Arg2:T154	
+R42	HasProperty Arg1:T28 Arg2:T158	
+R43	HasProperty Arg1:T28 Arg2:T159	
+R44	HasProperty Arg1:T28 Arg2:T160	
+R45	HasProperty Arg1:T28 Arg2:T161	
+R46	HasProperty Arg1:T29 Arg2:T163	
+R47	HasProperty Arg1:T30 Arg2:T163	
+R49	HasProperty Arg1:T31 Arg2:T165	
+R50	HasProperty Arg1:T32 Arg2:T165	
+R51	HasProperty Arg1:T32 Arg2:T164	
+R52	HasProperty Arg1:T31 Arg2:T164	
+R48	HasProperty Arg1:T33 Arg2:T164	
+R53	HasProperty Arg1:T33 Arg2:T165	
+R54	HasProperty Arg1:T198 Arg2:T167	
+R55	HasProperty Arg1:T34 Arg2:T167	
+R56	HasProperty Arg1:T35 Arg2:T169	
+R57	HasProperty Arg1:T36 Arg2:T169	
+R58	HasProperty Arg1:T37 Arg2:T169	
+R59	HasProperty Arg1:T38 Arg2:T169	
+R60	HasProperty Arg1:T39 Arg2:T170	
+R61	HasProperty Arg1:T40 Arg2:T172	
+R62	HasProperty Arg1:T41 Arg2:T175	
+R63	HasProperty Arg1:T42 Arg2:T176	
+R64	HasProperty Arg1:T43 Arg2:T176	
+R65	HasProperty Arg1:T44 Arg2:T176	
+R66	HasProperty Arg1:T8 Arg2:T62	

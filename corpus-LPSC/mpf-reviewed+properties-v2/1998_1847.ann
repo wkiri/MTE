@@ -1,0 +1,57 @@
+T1	Element 1452 1464	high-calcium
+T2	Mineral 1465 1474	pyroxenes
+T3	Mineral 1612 1620	pyroxene
+T4	Element 1844 1853	potassium
+T5	Mineral 2022 2030	feldspar
+T6	Mineral 3570 3581	baddeleyite
+T7	Element 4343 4354	ironbearing
+T8	Mineral 6666 6674	hematite
+T9	Property 217 224	spectra
+T10	Property 258 262	rock
+T11	Property 397 402	bands
+T12	Property 526 530	dust
+T13	Property 558 565	varnish
+T14	Property 835 842	spectra
+T15	Property 1047 1067	spectral reflectance
+T16	Property 1085 1089	dark
+T17	Property 1137 1142	mafic
+T18	Property 1157 1168	composition
+T19	Property 1545 1552	spectra
+T20	Property 1621 1626	bands
+T21	Property 1709 1717	basaltic
+T22	Property 1927 1936	andesites
+T23	Property 2185 2191	ridged
+T24	Property 2227 2232	mafic
+T25	Property 2339 2348	weathered
+T26	Property 2621 2626	mafic
+T27	Property 2657 2666	weathered
+T28	Property 2726 2737	sedimentary
+T29	Property 3119 3139	spectral reflectance
+T30	Property 3237 3246	vesicular
+T31	Property 3378 3386	vesicles
+T32	Property 3397 3406	vesicular
+T33	Property 4146 4152	clasts
+T34	Property 4866 4870	dark
+T35	Property 4973 4980	spectra
+T36	Property 5182 5191	vesicular
+T37	Property 5399 5406	rounded
+T38	Property 5464 5473	vesicular
+T39	Property 5486 5491	mafic
+T40	Property 5495 5504	andesitic
+T41	Property 5567 5581	silica content
+T42	Property 5691 5711	spectral reflectance
+T43	Property 5718 5738	Spectral Reflectance
+T44	Property 5769 5776	spectra
+T45	Property 5928 5935	spectra
+T46	Property 6109 6116	spectra
+T47	Property 6166 6173	spectra
+T48	Property 6215 6222	spectra
+T49	Property 6284 6291	spectra
+T50	Property 6471 6476	bands
+T51	Property 6644 6649	bands
+T52	Property 6835 6840	mafic
+T53	Property 6956 6961	mafic
+T54	Property 7035 7039	flat
+T55	Property 7105 7112	spectra
+T56	Property 7672 7676	dark
+T57	Property 7879 7886	Spectra

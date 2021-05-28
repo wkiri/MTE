@@ -1,0 +1,31 @@
+T1	Target 5460 5464	Yogi
+T2	Target 5693 5697	Yogi
+T3	Target 7876 7880	Yogi
+T4	Property 11 15	ROCK
+T5	Property 351 355	rock
+T6	Property 1268 1272	rock
+T7	Property 1852 1856	rock
+T8	Property 2255 2263	fracture
+T9	Property 2508 2512	rock
+T10	Property 2699 2707	boulders
+T11	Property 2798 2802	rock
+T12	Property 3008 3012	rock
+T13	Property 3097 3101	rock
+T14	Property 3114 3118	soil
+T15	Property 3124 3128	rock
+T16	Property 3153 3157	rock
+T17	Property 3250 3254	rock
+T18	Property 3297 3301	rock
+T19	Property 3539 3543	rock
+T20	Property 3608 3612	rock
+T21	Property 3805 3809	rock
+T22	Property 5478 5482	rock
+T23	Property 5679 5683	rock
+T24	Property 6708 6712	rock
+T25	Property 7668 7672	rock
+T26	Property 7783 7787	rock
+T27	Property 7839 7847	boulders
+T28	Property 7890 7894	rock
+T29	Property 8949 8953	rock
+R1	HasProperty Arg1:T1 Arg2:T22	
+R2	HasProperty Arg1:T2 Arg2:T23	

@@ -1,0 +1,60 @@
+T1	TITLE 94 99	SCOUT
+T2	STATE_OR_PROVINCE 225 227	MA
+T3	COUNTRY 234 237	USA
+T4	EMAIL 239 262	suzanne.young@tufts.edu
+T5	STATE_OR_PROVINCE 306 308	CA
+T6	STATE_OR_PROVINCE 345 355	California
+T7	STATE_OR_PROVINCE 391 393	CA
+T8	TITLE 438 443	Scout
+T9	RELIGION 1355 1366	independent
+T10	TITLE 1595 1601	second
+T11	Element 1626 1632	barium
+T12	Mineral 1663 1670	sulfate
+T13	COUNTRY 1774 1776	pH
+T14	Element 1904 1906	Na
+T15	Element 1909 1910	K
+T16	Element 1920 1922	Ca
+T17	Element 1947 1949	Br
+T18	Element 2106 2108	Na
+T19	Element 2111 2112	K
+T20	Mineral 2186 2194	chloride
+T21	TITLE 2320 2326	second
+T22	TITLE 2556 2562	second
+T23	Mineral 2631 2638	sulfate
+T24	TITLE 3568 3574	second
+T25	Mineral 4306 4315	carbonate
+T26	COUNTRY 4558 4560	pH
+T27	Element 4972 4974	Fe
+T28	Element 5011 5017	carbon
+T29	Mineral 5043 5052	carbonate
+T30	Element 5071 5077	oxygen
+T31	Element 5128 5136	Hydrogen
+T32	Element 5191 5192	K
+T33	Element 5261 5263	Ba
+T34	Mineral 5286 5293	sulfate
+T35	CAUSE_OF_DEATH 5589 5598	Poisoning
+T36	COUNTRY 5718 5720	pH
+T37	URL 6523 6567	http://mepag.jpl.nasa.gov/reports/index.html
+T38	Target 3554 3562	Rosy Red
+T39	Target 3632 3641	Sorceress
+T40	Target 3686 3698	Golden Goose
+T41	Property 620 624	sand
+T42	Property 3559 3562	Red
+T43	Property 3627 3630	ice
+T44	Property 3939 3942	ice
+T45	Property 4015 4018	ice
+T46	Property 4111 4114	ice
+T47	Property 4286 4297	perchlorate
+T48	Property 4410 4421	perchlorate
+T49	Property 4694 4698	rock
+T50	Property 5169 5172	ice
+T51	Property 5906 5910	soil
+T52	Property 3795 3801	clumpy
+R1	HasProperty Arg1:T40 Arg2:T52	
+R2	HasProperty Arg1:T40 Arg2:T48	
+R3	HasProperty Arg1:T38 Arg2:T48	
+T53	Property 4515 4520	CaCO3
+R5	HasProperty Arg1:T39 Arg2:T48	
+R7	HasProperty Arg1:T39 Arg2:T53	
+R4	HasProperty Arg1:T38 Arg2:T53	
+R6	HasProperty Arg1:T40 Arg2:T53	

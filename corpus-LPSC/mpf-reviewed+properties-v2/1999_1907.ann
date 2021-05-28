@@ -1,0 +1,112 @@
+T2	Target 2944 2948	Yogi
+T4	Target 3173 3185	Mermaid Dune
+T5	Target 6681 6687	Geordi
+T6	Target 6702 6711	Half Dome
+T7	Target 6734 6740	Mohawk
+T8	Target 6748 6755	Grommit
+T9	Target 6864 6872	Flat Top
+T10	Target 6877 6886	Flute Top
+T11	Target 11307 11312	Ender
+T12	Target 11313 11322	Flute Top
+T13	Target 11323 11329	Garrak
+T14	Target 11330 11336	Geordi
+T15	Target 11337 11344	Grommit
+T16	Target 11345 11354	Half Dome
+T17	Target 11355 11359	Jedi
+T18	Target 11360 11363	Moe
+T19	Target 11364 11370	Mohawk
+T20	Target 11371 11376	Mouse
+T21	Target 11377 11384	Pancake
+T22	Target 11385 11392	Pumpkin
+T23	Target 11393 11396	Ren
+T24	Target 11397 11402	Shark
+T25	Target 11403 11408	Stump
+T26	Target 11409 11416	Wallace
+T27	Property 1 5	ROCK
+T28	Property 585 589	pits
+T29	Property 591 597	flutes
+T30	Property 603 610	grooves
+T31	Property 641 647	flutes
+T32	Property 693 697	rock
+T33	Property 717 721	pits
+T34	Property 752 756	rock
+T35	Property 1090 1095	flute
+T36	Property 1248 1252	rock
+T37	Property 1330 1334	rock
+T38	Property 1350 1359	ventifact
+T39	Property 1489 1495	Flutes
+T40	Property 1602 1608	flutes
+T41	Property 1632 1638	flutes
+T42	Property 2174 2178	Rock
+T43	Property 2294 2303	soil-like
+T44	Property 2294 2312	soil-like deposits
+T45	Property 2365 2369	soil
+T46	Property 2390 2395	scour
+T47	Property 2527 2533	flutes
+T48	Property 2561 2565	pits
+T49	Property 2864 2873	ventifact
+T50	Property 2916 2922	flutes
+T51	Property 2938 2942	rock
+T52	Property 2960 2964	soil
+T53	Property 3012 3017	scour
+T54	Property 3139 3147	basaltic
+T55	Property 3148 3152	sand
+T56	Property 3148 3163	sand or granule
+T57	Property 3156 3163	granule
+T58	Property 3181 3185	Dune
+T59	Property 3331 3339	sediment
+T60	Property 3512 3518	knobby
+T61	Property 3648 3654	flutes
+T62	Property 3769 3774	flute
+T63	Property 3845 3851	flutes
+T64	Property 3928 3934	flutes
+T65	Property 4015 4021	flutes
+T66	Property 4332 4338	flutes
+T67	Property 4376 4381	flute
+T68	Property 4514 4519	flute
+T69	Property 5287 5292	flute
+T70	Property 5364 5370	Flutes
+T71	Property 5672 5677	flute
+T72	Property 5735 5740	flute
+T73	Property 5858 5864	flutes
+T74	Property 6002 6008	flutes
+T75	Property 6619 6625	Flutes
+T76	Property 6671 6677	flutes
+T77	Property 6707 6711	Dome
+T78	Property 6778 6782	rock
+T79	Property 6791 6798	Grooves
+T80	Property 6799 6803	ROCK
+T81	Property 6864 6868	Flat
+T82	Property 6877 6882	Flute
+T83	Property 6895 6904	ventifact
+T84	Property 7081 7087	flutes
+T85	Property 7092 7099	grooves
+T86	Property 7149 7153	rock
+T87	Property 7208 7212	pits
+T88	Property 7259 7265	flutes
+T89	Property 7495 7500	flute
+T90	Property 7542 7547	flute
+T91	Property 7735 7739	rock
+T92	Property 8216 8220	rock
+T93	Property 8231 8237	pitted
+T94	Property 8367 8373	pitted
+T95	Property 8410 8414	rock
+T96	Property 8856 8860	rock
+T97	Property 9300 9304	sand
+T98	Property 9379 9388	sediments
+T99	Property 9456 9462	flutes
+T100	Property 9666 9674	sediment
+T101	Property 11313 11318	Flute
+T102	Property 11350 11354	Dome
+T103	Property 11448 11457	Ventifact
+T104	Property 11510 11516	flutes
+T105	Property 11563 11568	flute
+T106	Property 11746 11750	rock
+T107	Property 11826 11830	rock
+R1	HasProperty Arg1:T4 Arg2:T56	
+R2	HasProperty Arg1:T5 Arg2:T76	
+R3	HasProperty Arg1:T6 Arg2:T76	
+T3	Target 6719 6726	Ga rrak
+R4	HasProperty Arg1:T3 Arg2:T76	
+R5	HasProperty Arg1:T7 Arg2:T76	
+R6	HasProperty Arg1:T8 Arg2:T76	

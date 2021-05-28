@@ -1,0 +1,168 @@
+T1	TITLE 14 19	SCOUT
+T2	STATE_OR_PROVINCE 175 179	W.V.
+T3	STATE_OR_PROVINCE 223 225	TX
+T4	EMAIL 233 255	brad.sutter-2@nasa.gov
+T5	STATE_OR_PROVINCE 295 297	TX
+T6	STATE_OR_PROVINCE 328 330	MO
+T7	STATE_OR_PROVINCE 342 349	Arizona
+T8	TITLE 398 403	Scout
+T9	Mineral 747 756	carbonate
+T10	TITLE 2173 2180	cleaner
+T11	TITLE 4778 4784	second
+T12	STATE_OR_PROVINCE 5578 5580	MS
+T13	STATE_OR_PROVINCE 5591 5593	MS
+T14	Target 5980 5982	BC
+T15	Target 6058 6060	BC
+T16	Target 6322 6324	BC
+T17	Mineral 6508 6517	kieserite
+T18	Element 6556 6558	Fe
+T20	Element 6559 6572	oxyhydroxides
+T21	Mineral 6574 6584	nontronite
+T22	Mineral 6589 6598	kaolinite
+T23	Mineral 6684 6692	saponite
+T24	Mineral 6694 6708	montmorilonite
+T25	Mineral 6710 6718	chlorite
+T26	Mineral 6891 6900	kieserite
+T27	Mineral 7551 7561	carbonates
+T28	Element 7573 7575	Ca
+T29	Element 7698 7705	calcium
+T30	Mineral 7711 7720	carbonate
+T31	Target 7899 7901	BC
+T32	Element 7957 7959	Ca
+T33	Mineral 7965 7974	carbonate
+T34	Target 8198 8200	BC
+T35	Target 8493 8495	BC
+T36	Element 8905 8907	He
+T37	Element 8911 8912	F
+T38	Target 1499 1508	Baby Bear
+T39	Target 1510 1522	Wicked Witch
+T40	Target 1581 1589	Rosy Red
+T41	Target 1600 1613	Burning Coals
+T42	Target 3231 3244	Burning Coals
+T43	Target 5819 5828	Baby Bear
+T44	Target 5835 5847	Wicked Witch
+T45	Target 5858 5866	Rosy Red
+T46	Target 5965 5978	Burning Coals
+T47	Target 5988 5996	Rosy Red
+T48	Target 6209 6219	Wonderland
+T49	Target 6445 6454	Baby Bear
+T50	Target 7161 7169	Rosy Red
+T51	Target 7602 7614	Wicked Witch
+T52	Target 7884 7897	Burning Coals
+T53	Target 9064 9072	Rosy Red
+T54	Target 9075 9084	Baby Bear
+T55	Target 9085 9097	Wicked Witch
+T56	Target 9098 9111	Burning Coals
+T57	Target 9112 9120	Rosy Red
+T58	Property 471 479	organics
+T59	Property 578 582	soil
+T60	Property 661 672	composition
+T61	Property 734 745	perchlorate
+T62	Property 798 802	soil
+T63	Property 988 992	soil
+T64	Property 1586 1589	Red
+T65	Property 2313 2317	soil
+T66	Property 5249 5253	soil
+T67	Property 5624 5628	soil
+T68	Property 5863 5866	Red
+T69	Property 5993 5996	Red
+T70	Property 6094 6098	soil
+T71	Property 6261 6264	lag
+T72	Property 6272 6276	soil
+T73	Property 6284 6287	ice
+T74	Property 6371 6374	ice
+T75	Property 7080 7084	soil
+T76	Property 7166 7169	Red
+T77	Property 9069 9072	Red
+T78	Property 9117 9120	Red
+T79	Property 1492 1497	soils
+R1	HasProperty Arg1:T38 Arg2:T79	
+R2	HasProperty Arg1:T39 Arg2:T79	
+T80	Property 1574 1579	soils
+R3	HasProperty Arg1:T40 Arg2:T80	
+R4	HasProperty Arg1:T41 Arg2:T80	
+T81	Property 5643 5648	soils
+T82	Property 5803 5808	soils
+R5	HasProperty Arg1:T43 Arg2:T82	
+T83	Target 5830 5832	BB
+R6	HasProperty Arg1:T83 Arg2:T82	
+R7	HasProperty Arg1:T44 Arg2:T82	
+T84	Target 5849 5851	WW
+R8	HasProperty Arg1:T84 Arg2:T82	
+R9	HasProperty Arg1:T45 Arg2:T82	
+T85	Target 5870 5873	RR1
+R10	HasProperty Arg1:T85 Arg2:T82	
+T86	Target 6000 6003	RR2
+T87	Target 6051 6053	WW
+T88	Target 5926 5929	RR1
+T89	Target 6007 6009	BB
+T90	Target 6011 6014	RR1
+T91	Target 6020 6023	RR2
+T92	Property 6029 6036	surface
+T93	Property 6075 6085	subsurface
+R11	HasProperty Arg1:T15 Arg2:T93	
+R12	HasProperty Arg1:T87 Arg2:T93	
+R13	HasProperty Arg1:T91 Arg2:T92	
+R14	HasProperty Arg1:T90 Arg2:T92	
+R15	HasProperty Arg1:T89 Arg2:T92	
+T94	Target 6091 6093	BB
+R16	HasProperty Arg1:T94 Arg2:T70	
+T95	Target 6233 6235	WW
+R17	HasProperty Arg1:T95 Arg2:T71	
+T96	Property 6268 6271	icy
+T97	Property 6268 6276	icy soil
+R18	HasProperty Arg1:T95 Arg2:T97	
+R19	HasProperty Arg1:T95 Arg2:T73	
+R20	HasProperty Arg1:T95 Arg2:T72	
+T98	Property 6325 6335	subsurface
+R21	HasProperty Arg1:T16 Arg2:T98	
+T99	Target 6456 6458	BB
+R22	Contains Arg1:T49 Arg2:T17	
+R23	Contains Arg1:T99 Arg2:T17	
+T19	Mineral 6556 6572	Fe-oxyhydroxides
+R24	Contains Arg1:T49 Arg2:T19	
+R25	Contains Arg1:T49 Arg2:T21	
+R26	Contains Arg1:T49 Arg2:T22	
+R27	Contains Arg1:T99 Arg2:T19	
+R28	Contains Arg1:T99 Arg2:T21	
+R29	Contains Arg1:T99 Arg2:T22	
+T100	Property 7153 7160	surface
+R30	HasProperty Arg1:T50 Arg2:T100	
+T101	Target 7171 7174	RR1
+T102	Target 7176 7179	RR2
+R31	HasProperty Arg1:T101 Arg2:T100	
+R32	HasProperty Arg1:T102 Arg2:T100	
+T103	Target 7254 7256	BB
+T104	Target 7353 7355	BB
+T105	Target 7508 7511	RR2
+R33	Contains Arg1:T105 Arg2:T27	
+R34	Contains Arg1:T105 Arg2:T28	
+R35	Contains Arg1:T51 Arg2:T29	
+T106	Property 7591 7601	subsurface
+R36	HasProperty Arg1:T51 Arg2:T106	
+R37	Contains Arg1:T51 Arg2:T30	
+T107	Property 7873 7883	subsurface
+R38	HasProperty Arg1:T52 Arg2:T107	
+R39	HasProperty Arg1:T31 Arg2:T107	
+T108	Target 7938 7940	WW
+R40	Contains Arg1:T52 Arg2:T32	
+R41	Contains Arg1:T52 Arg2:T33	
+T109	Target 8003 8005	BB
+T110	Target 8007 8010	RR1
+T111	Target 8015 8018	RR2
+T112	Mineral 8035 8040	MgSO4
+R42	Contains Arg1:T31 Arg2:T32	
+R43	Contains Arg1:T31 Arg2:T33	
+R44	Contains Arg1:T31 Arg2:T112	
+R45	Contains Arg1:T52 Arg2:T112	
+T113	Target 8191 8193	RR
+T114	Target 8486 8488	RR
+R46	Contains Arg1:T49 Arg2:T23	
+R47	Contains Arg1:T99 Arg2:T23	
+R48	Contains Arg1:T49 Arg2:T24	
+R49	Contains Arg1:T99 Arg2:T24	
+R50	Contains Arg1:T49 Arg2:T25	
+R51	Contains Arg1:T99 Arg2:T25	
+T115	Mineral 6722 6732	serpentine
+R52	Contains Arg1:T49 Arg2:T115	
+R53	Contains Arg1:T99 Arg2:T115	

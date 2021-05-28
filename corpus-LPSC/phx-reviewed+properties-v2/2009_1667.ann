@@ -1,0 +1,52 @@
+T1	TITLE 29 34	QUEEN
+T2	STATE_OR_PROVINCE 53 55	AS
+T3	TITLE 970 975	Queen
+T4	TITLE 1927 1932	layer
+T5	TITLE 2799 2804	Queen
+T6	TITLE 3150 3155	Queen
+T7	Target 3199 3209	Snow Queen
+T8	TITLE 3312 3319	rougher
+T9	TITLE 3427 3432	Queen
+T10	Element 3769 3771	Ti
+T11	Element 3776 3777	S
+T12	TITLE 4201 4206	model
+T13	TITLE 4377 4382	model
+T14	TITLE 4911 4916	Queen
+T15	Target 965 975	Snow Queen
+T16	Target 1241 1249	Holy Cow
+T17	Target 1541 1549	Holy Cow
+T18	Target 2794 2804	Snow Queen
+T19	Target 3145 3155	Snow Queen
+T21	Target 3422 3432	Snow Queen
+T22	Target 4906 4916	Snow Queen
+T23	Property 49 52	ICE
+T24	Property 916 922	bright
+T25	Property 938 944	smooth
+T26	Property 1157 1160	ice
+T27	Property 1606 1609	ice
+T28	Property 1705 1709	dark
+T29	Property 2079 2083	dust
+T30	Property 2158 2162	fine
+T31	Property 2171 2175	dust
+T32	Property 2370 2374	dark
+T33	Property 2451 2454	ice
+T34	Property 2608 2611	ice
+T35	Property 2679 2683	dark
+T36	Property 3104 3107	ice
+T37	Property 3173 3179	smooth
+T38	Property 3540 3543	ice
+T39	Property 3585 3588	lag
+T40	Property 3585 3596	lag deposit
+T41	Property 3820 3824	dust
+T42	Property 4001 4004	ice
+T43	Property 4234 4237	ice
+T44	Property 4253 4259	trench
+T45	Property 4410 4414	dust
+T46	Property 4527 4531	dust
+T47	Property 4711 4715	dust
+R1	HasProperty Arg1:T15 Arg2:T25	
+R2	HasProperty Arg1:T15 Arg2:T24	
+R3	HasProperty Arg1:T17 Arg2:T27	
+R4	HasProperty Arg1:T18 Arg2:T36	
+R5	HasProperty Arg1:T19 Arg2:T37	
+R6	HasProperty Arg1:T21 Arg2:T40	

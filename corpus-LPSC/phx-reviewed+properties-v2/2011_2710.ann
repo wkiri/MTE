@@ -1,0 +1,113 @@
+T1	COUNTRY 279 286	Germany
+T2	STATE_OR_PROVINCE 335 337	CA
+T3	COUNTRY 339 342	USA
+T4	COUNTRY 405 412	Denmark
+T5	COUNTRY 494 496	UK
+T6	COUNTRY 559 570	Netherlands
+T7	STATE_OR_PROVINCE 614 616	MI
+T8	COUNTRY 618 621	USA
+T9	STATE_OR_PROVINCE 3032 3034	NE
+T10	TITLE 3087 3093	Singer
+T11	Element 3900 3909	magnesium
+T12	Mineral 3910 3921	perchlorate
+T13	Element 4296 4305	magnesium
+T14	Mineral 4306 4317	perchlorate
+T15	Element 6646 6655	magnesium
+T16	Mineral 6656 6667	perchlorate
+T17	IDEOLOGY 6890 6893	far
+T18	IDEOLOGY 6894 6898	left
+T19	IDEOLOGY 7043 7046	far
+T20	IDEOLOGY 7047 7052	right
+T21	URL 7310 7379	http://speclab.cr.usgs.gov/spectral.lib04/spectrallib.desc+plots.html
+T22	Target 3396 3406	Golden Key
+T23	Target 4076 4091	Dodo-Goldilocks
+T24	Target 4684 4694	Golden Key
+T25	Target 5072 5086	DodoGoldilocks
+T26	Property 733 737	soil
+T27	Property 865 869	soil
+T28	Property 1625 1628	Red
+T29	Property 2131 2135	soil
+T30	Property 2469 2476	spectra
+T31	Property 2808 2811	red
+T32	Property 2896 2903	spectra
+T33	Property 2999 3003	soil
+T34	Property 3078 3085	spectra
+T35	Property 3167 3170	red
+T36	Property 3171 3176	fines
+T37	Property 3191 3198	spectra
+T38	Property 3311 3318	spectra
+T39	Property 3451 3458	Spectra
+T40	Property 3484 3488	soil
+T41	Property 3527 3530	red
+T42	Property 3531 3536	fines
+T43	Property 3555 3558	red
+T44	Property 3605 3612	spectra
+T45	Property 3634 3640	bright
+T46	Property 3652 3658	bright
+T47	Property 3857 3864	spectra
+T48	Property 3889 3896	spectra
+T49	Property 3910 3921	perchlorate
+T50	Property 3983 3990	spectra
+T51	Property 4021 4024	ice
+T52	Property 4092 4098	trench
+T53	Property 4131 4134	ice
+T54	Property 4288 4291	ice
+T55	Property 4306 4317	perchlorate
+T56	Property 4704 4711	Spectra
+T57	Property 4757 4762	fines
+T58	Property 5000 5003	ice
+T59	Property 5022 5027	fines
+T60	Property 5028 5031	ice
+T61	Property 5061 5068	spectra
+T62	Property 5087 5093	trench
+T63	Property 5094 5097	ice
+T64	Property 5102 5105	ice
+T65	Property 5117 5120	ice
+T66	Property 5319 5324	fines
+T67	Property 5501 5508	spectra
+T68	Property 5558 5565	spectra
+T69	Property 5666 5670	soil
+T70	Property 5697 5700	red
+T71	Property 5898 5901	Red
+T72	Property 5902 5907	fines
+T73	Property 5915 5919	sand
+T74	Property 5927 5931	sand
+T75	Property 5971 5976	fines
+T76	Property 6015 6020	fines
+T77	Property 6158 6162	dust
+T78	Property 6189 6193	sand
+T79	Property 6226 6230	sand
+T80	Property 6331 6338	spectra
+T81	Property 6357 6364	spectra
+T82	Property 6383 6387	soil
+T83	Property 6414 6421	spectra
+T84	Property 6454 6459	fines
+T85	Property 6638 6641	ice
+T86	Property 6656 6667	perchlorate
+T87	Property 6691 6694	red
+T88	Property 6695 6700	fines
+T89	Property 6715 6719	sand
+T90	Property 6734 6738	sand
+T91	Property 6758 6763	fines
+T92	Property 6850 6854	soil
+T93	Property 6884 6888	dust
+T94	Property 6913 6917	soil
+T95	Property 6948 6952	sand
+T96	Property 7035 7040	fines
+T97	Property 7115 7119	soil
+T98	Target 5072 5093	DodoGoldilocks trench
+R1	HasProperty Arg1:T98 Arg2:T63	
+T99	Property 5102 5111	ice clods
+R2	HasProperty Arg1:T98 Arg2:T99	
+R3	HasProperty Arg1:T98 Arg2:T61	
+R4	HasProperty Arg1:T24 Arg2:T56	
+R5	HasProperty Arg1:T24 Arg2:T57	
+T100	Property 5001 5009	ce clods
+T101	Target 4076 4098	Dodo-Goldilocks trench
+R6	HasProperty Arg1:T101 Arg2:T52	
+R7	HasProperty Arg1:T101 Arg2:T51	
+R8	HasProperty Arg1:T101 Arg2:T50	
+R9	HasProperty Arg1:T22 Arg2:T39	
+R10	HasProperty Arg1:T22 Arg2:T40	
+R11	HasProperty Arg1:T22 Arg2:T41	
+R12	HasProperty Arg1:T22 Arg2:T42	

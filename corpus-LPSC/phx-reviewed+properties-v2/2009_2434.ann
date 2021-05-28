@@ -1,0 +1,118 @@
+T1	STATE_OR_PROVINCE 231 238	Arizona
+T2	STATE_OR_PROVINCE 247 249	AZ
+T3	STATE_OR_PROVINCE 294 296	TX
+T4	STATE_OR_PROVINCE 327 329	TX
+T5	STATE_OR_PROVINCE 378 388	Washington
+T6	STATE_OR_PROVINCE 413 415	MO
+T7	STATE_OR_PROVINCE 462 467	Texas
+T8	STATE_OR_PROVINCE 491 493	TX
+T9	Mineral 980 989	carbonate
+T10	Mineral 1275 1285	carbonates
+T11	Element 1314 1316	Ca
+T12	Element 1316 1317	-
+T13	Element 1317 1321	rich
+T14	Mineral 1468 1478	carbonates
+T15	TITLE 1499 1503	host
+T16	Element 1557 1559	Mg
+T17	Element 1559 1560	-
+T18	Element 1560 1564	rich
+T19	Element 1916 1918	Mg
+T20	Element 1918 1919	-
+T21	Element 1919 1923	rich
+T22	Mineral 1924 1934	carbonates
+T23	Mineral 2208 2218	carbonates
+T24	Element 2721 2722	K
+T25	Element 2733 2734	K
+T26	Element 2780 2788	nitrogen
+T27	Mineral 2930 2937	calcite
+T28	TITLE 3208 3213	layer
+T29	Element 3406 3408	Ni
+T30	TITLE 3502 3511	candidate
+T31	Mineral 3564 3571	calcite
+T32	Mineral 3581 3590	aragonite
+T33	Mineral 3662 3669	calcite
+T34	Element 4250 4252	Mg
+T35	Element 4256 4258	Fe
+T36	Mineral 4259 4269	carbonates
+T37	Mineral 4448 4456	zeolites
+T38	Mineral 4525 4534	carbonate
+T39	Mineral 4610 4619	carbonate
+T40	Element 4802 4804	Po
+T41	Element 4945 4947	Ni
+T42	Mineral 5116 5126	carbonates
+T43	Mineral 5150 5159	carbonate
+T44	Mineral 5222 5232	carbonates
+T45	Mineral 5250 5260	carbonates
+T46	Mineral 5437 5446	carbonate
+T47	Mineral 5583 5593	carbonates
+T48	TITLE 5812 5817	layer
+T49	TITLE 5884 5889	layer
+T50	Element 6068 6075	calcium
+T51	Element 6188 6195	calcium
+T52	Mineral 6196 6205	carbonate
+T53	Mineral 6280 6287	calcite
+T54	Mineral 6512 6522	carbonates
+T55	Mineral 7036 7046	Carbonates
+T56	TITLE 7198 7204	crater
+T57	TITLE 7378 7384	crater
+T58	Mineral 7404 7413	carbonate
+T59	Mineral 7479 7489	carbonates
+T60	Mineral 7668 7677	carbonate
+T61	Element 7727 7729	Mg
+T62	Element 7729 7730	-
+T63	Element 7730 7740	carbonates
+T64	Mineral 7817 7826	carbonate
+T65	Mineral 7875 7885	carbonates
+T66	Element 8050 8052	Mg
+T67	Element 8052 8053	-
+T68	Element 8053 8057	rich
+T69	Mineral 8058 8067	carbonate
+T70	Mineral 8135 8144	carbonate
+T71	TITLE 8622 8626	Rev.
+T72	STATE_OR_PROVINCE 8849 8851	WI
+T73	STATE_OR_PROVINCE 9267 9271	Mass
+T74	COUNTRY 9507 9511	U.S.
+T75	STATE_OR_PROVINCE 10700 10702	OK
+T76	STATE_OR_PROVINCE 11463 11465	OK
+T77	STATE_OR_PROVINCE 12213 12215	OK
+T78	Element 12446 12447	K
+T79	TITLE 19086 19093	Acrobat
+T80	TITLE 19103 19109	Reader
+T81	TITLE 22561 22568	Acrobat
+T82	TITLE 22579 22585	Reader
+T83	Target 3141 3153	Wicked Witch
+T84	Target 3221 3231	Snow White
+T85	Target 3805 3817	Wicked Witch
+T86	Target 4858 4870	Wicked Witch
+T87	Target 5044 5056	Wicked Witch
+T88	Property 14 31	CALCIUM CARBONATE
+T89	Property 1224 1232	basaltic
+T90	Property 1637 1641	dust
+T91	Property 2618 2622	Soil
+T92	Property 3204 3207	ice
+T93	Property 3232 3238	trench
+T94	Property 4321 4328	organic
+T95	Property 4374 4378	soil
+T96	Property 4578 4582	soil
+T97	Property 4644 4648	soil
+T98	Property 5145 5149	soil
+T99	Property 5506 5510	soil
+T100	Property 5807 5811	soil
+T101	Property 6099 6107	basaltic
+T102	Property 6188 6205	calcium carbonate
+T103	Property 6995 6999	dust
+T104	Property 7435 7439	soil
+T105	Property 7576 7582	eolian
+T106	Property 7649 7653	dust
+T107	Property 7709 7716	spectra
+T108	Property 7834 7838	dust
+T109	Property 7850 7856	eolian
+T110	Property 7964 7968	rock
+T111	Property 8160 8164	dust
+T112	Property 8785 8789	Soil
+T113	Target 3221 3238	Snow White trench
+R1	HasProperty Arg1:T113 Arg2:T92	
+R2	HasProperty Arg1:T83 Arg2:T93	
+R3	HasProperty Arg1:T84 Arg2:T93	
+R4	HasProperty Arg1:T85 Arg2:T95	
+R5	HasProperty Arg1:T85 Arg2:T94	

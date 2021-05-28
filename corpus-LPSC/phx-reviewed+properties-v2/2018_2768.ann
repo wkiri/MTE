@@ -1,0 +1,26 @@
+T1	STATE_OR_PROVINCE 586 588	MI
+T2	COUNTRY 590 593	USA
+T3	EMAIL 606 620	velbel@msu.edu
+T4	TITLE 1061 1066	layer
+T5	STATE_OR_PROVINCE 2455 2463	Michigan
+T6	COUNTRY 2465 2469	USA.
+T7	Element 3139 3147	aluminum
+T8	Element 3160 3166	carbon
+T9	Element 3194 3200	carbon
+T10	Property 34 38	SAND
+T11	Property 54 62	SEDIMENT
+T12	Property 133 137	SAND
+T13	Property 142 146	SILT
+T14	Property 706 710	Soil
+T15	Property 1004 1020	patterned ground
+T16	Property 1070 1078	basaltic
+T17	Property 1079 1083	sand
+T18	Property 1119 1122	ice
+T19	Property 1195 1199	soil
+T20	Property 1236 1239	ice
+T21	Property 1555 1558	red
+T22	Property 2371 2387	patterned ground
+T23	Property 2743 2746	ice
+T24	Property 2836 2840	silt
+T25	Property 2878 2882	fine
+T26	Property 2883 2887	sand

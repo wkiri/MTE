@@ -1,0 +1,105 @@
+T1	Target 3503 3508	Wedge
+T2	Target 920 933	Barnacle Bill
+T3	Target 1346 1359	Barnacle Bill
+T4	Target 1595 1608	Barnacle Bill
+T5	Target 3233 3246	Barnacle Bill
+T6	Target 3248 3252	Yogi
+T8	Target 3510 3515	Shark
+T9	Target 3517 3522	Chimp
+T10	Target 5123 5128	Shark
+T11	Target 5150 5154	Yogi
+T12	Target 5326 5331	Wedge
+T13	Target 5681 5694	Barnacle Bill
+T14	Target 5696 5704	Flat Top
+T15	Target 5706 5711	Chimp
+T16	Target 6082 6088	Stimpy
+T17	Target 7652 7665	Barnacle Bill
+T18	Property 382 388	eolian
+T19	Property 389 393	dust
+T20	Property 789 793	dust
+T21	Property 794 801	coating
+T22	Property 895 898	red
+T23	Property 999 1002	red
+T24	Property 1003 1015	fine-grained
+T25	Property 1016 1022	eolian
+T26	Property 1721 1726	bluer
+T27	Property 1944 1948	dust
+T28	Property 2220 2223	red
+T29	Property 2421 2424	red
+T30	Property 2600 2604	rock
+T31	Property 2634 2638	rock
+T32	Property 2794 2798	rock
+T33	Property 2826 2831	bluer
+T34	Property 2880 2885	knobs
+T35	Property 2944 2948	pits
+T36	Property 2979 2983	dust
+T37	Property 3028 3032	dust
+T38	Property 3036 3040	pits
+T39	Property 3080 3083	red
+T40	Property 3121 3124	red
+T41	Property 3227 3231	rock
+T42	Property 3284 3287	red
+T43	Property 3415 3421	pitted
+T44	Property 3439 3448	prismatic
+T45	Property 3483 3487	rock
+T46	Property 3551 3555	pits
+T47	Property 3734 3738	pits
+T48	Property 3875 3881	pitted
+T49	Property 3956 3960	pits
+T50	Property 3975 3979	sand
+T51	Property 4003 4007	pits
+T52	Property 4045 4049	pits
+T53	Property 4083 4087	rock
+T54	Property 4141 4145	dust
+T55	Property 4153 4157	pits
+T56	Property 4209 4212	pit
+T57	Property 4835 4839	dust
+T58	Property 4968 4972	rock
+T59	Property 5076 5080	dust
+T60	Property 5321 5325	rock
+T61	Property 5627 5631	Flat
+T62	Property 5696 5700	Flat
+T63	Property 5782 5786	dust
+T64	Property 5787 5794	coating
+T65	Property 5897 5901	rock
+T66	Property 5902 5908	facets
+T67	Property 5986 5990	dust
+T68	Property 5991 5998	coating
+T69	Property 6174 6178	soil
+T70	Property 6247 6253	cloddy
+T71	Property 6282 6285	red
+T72	Property 6309 6315	cloddy
+T73	Property 6316 6320	soil
+T74	Property 6417 6421	fine
+T75	Property 6422 6426	dust
+T76	Property 6444 6448	soil
+T77	Property 6472 6476	dust
+T78	Property 6534 6537	red
+T79	Property 6580 6584	dust
+T80	Property 7079 7083	dust
+T81	Property 7084 7092	coatings
+T82	Property 7137 7143	eolian
+T83	Property 7693 7697	rock
+T84	Property 7764 7768	rock
+T85	Property 7818 7822	rock
+T86	Property 7853 7857	rock
+R1	HasProperty Arg1:T1 Arg2:T43	
+R2	HasProperty Arg1:T1 Arg2:T44	
+R3	HasProperty Arg1:T8 Arg2:T43	
+R4	HasProperty Arg1:T8 Arg2:T44	
+R5	HasProperty Arg1:T9 Arg2:T43	
+R6	HasProperty Arg1:T9 Arg2:T44	
+R7	HasProperty Arg1:T10 Arg2:T59	
+R8	HasProperty Arg1:T11 Arg2:T59	
+R9	HasProperty Arg1:T13 Arg2:T63	
+R10	HasProperty Arg1:T13 Arg2:T64	
+R11	HasProperty Arg1:T14 Arg2:T63	
+R12	HasProperty Arg1:T14 Arg2:T64	
+R13	HasProperty Arg1:T15 Arg2:T63	
+R14	HasProperty Arg1:T15 Arg2:T64	
+R15	HasProperty Arg1:T13 Arg2:T61	
+R16	HasProperty Arg1:T14 Arg2:T61	
+R17	HasProperty Arg1:T15 Arg2:T61	
+R18	HasProperty Arg1:T1 Arg2:T46	
+R19	HasProperty Arg1:T8 Arg2:T46	
+R20	HasProperty Arg1:T9 Arg2:T46	

@@ -1,0 +1,40 @@
+T1	Mineral 3662 3668	quartz
+T2	Property 56 61	FINES
+T3	Property 419 423	sand
+T4	Property 872 876	sand
+T5	Property 1111 1115	dust
+T6	Property 1144 1152	sediment
+T7	Property 1174 1186	fine-grained
+T8	Property 1187 1198	sedimentary
+T9	Property 1220 1231	composition
+T10	Property 1330 1334	dune
+T11	Property 1570 1574	sand
+T12	Property 1637 1641	sand
+T13	Property 2065 2069	sand
+T14	Property 2065 2076	sand grains
+T15	Property 2221 2225	rock
+T16	Property 2248 2256	cohesive
+T17	Property 2672 2676	sand
+T18	Property 3542 3546	silt
+T19	Property 3959 3963	sand
+T20	Property 5730 5735	fines
+T21	Property 6080 6084	sand
+T22	Property 7311 7315	rock
+T23	Property 7397 7401	sand
+T24	Property 7491 7495	dune
+T25	Property 7669 7673	dune
+T26	Property 7804 7808	dune
+T27	Property 7925 7929	sand
+T28	Property 7970 7974	sand
+T29	Property 7970 7981	sand grains
+T30	Property 8283 8287	sand
+T31	Property 8283 8294	sand grains
+T32	Property 8377 8381	dune
+T33	Property 8522 8526	dune
+T34	Property 8773 8784	sedimentary
+T35	Property 8785 8789	rock
+T36	Property 8853 8861	sediment
+T37	Property 8910 8922	fine-grained
+T38	Property 8923 8934	sedimentary
+T39	Property 8956 8967	composition
+T40	Property 10123 10127	Sand

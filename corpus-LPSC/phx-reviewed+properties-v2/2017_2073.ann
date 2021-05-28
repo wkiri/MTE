@@ -1,0 +1,52 @@
+T1	STATE_OR_PROVINCE 190 192	MB
+T2	COUNTRY 194 200	Canada
+T3	EMAIL 210 235	daniel.m.applin@gmail.com
+T4	Element 347 353	carbon
+T5	TITLE 698 703	Scout
+T6	Element 881 887	carbon
+T7	Element 1301 1307	carbon
+T8	Element 2441 2447	sodium
+T9	Element 2452 2459	calcium
+T10	Mineral 3294 3304	carbonates
+T11	Element 3320 3321	S
+T12	Element 3322 3323	N
+T13	Mineral 3501 3511	carbonates
+T14	Element 3759 3760	C
+T15	Element 3832 3844	carboxylates
+T16	Element 3886 3892	Sodium
+T17	TITLE 3987 3993	second
+T18	Element 4167 4173	sodium
+T19	Element 4187 4193	sodium
+T20	Element 4215 4221	Sodium
+T21	Mineral 4316 4326	carbonates
+T22	Element 4516 4522	sodium
+T23	TITLE 4747 4754	general
+T24	Element 4783 4788	Fermi
+T25	Element 4788 4789	-
+T26	Element 4789 4797	enhanced
+T27	Element 5179 5186	calcium
+T28	Element 5191 5197	sodium
+T29	Element 5248 5254	sodium
+T30	Element 5259 5266	calcium
+T31	Element 5317 5326	magnesium
+T32	Element 5570 5576	carbon
+T33	Mineral 5939 5949	carbonates
+T34	CAUSE_OF_DEATH 6430 6443	complications
+T35	Property 1 21	SPECTRAL REFLECTANCE
+T36	Property 1106 1126	spectral reflectance
+T37	Property 1270 1290	spectral reflectance
+T38	Property 1984 1991	spectra
+T39	Property 2114 2121	Spectra
+T40	Property 2171 2178	spectra
+T41	Property 2268 2275	spectra
+T42	Property 2303 2308	sharp
+T43	Property 2383 2388	sharp
+T44	Property 2476 2481	sharp
+T45	Property 2910 2917	spectra
+T46	Property 3181 3186	sharp
+T47	Property 3198 3203	bands
+T48	Property 4041 4046	sharp
+T49	Property 4152 4159	spectra
+T50	Property 5452 5472	spectral reflectance
+T51	Property 5866 5873	spectra
+T52	Property 6270 6277	spectra

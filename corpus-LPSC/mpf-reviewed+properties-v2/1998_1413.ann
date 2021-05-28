@@ -1,0 +1,77 @@
+T1	Target 3294 3301	Mermaid
+T2	Target 3384 3391	Mermaid
+T3	Target 4485 4492	Mermaid
+T4	Target 4871 4877	Soufle
+T5	Property 546 555	duneforms
+T6	Property 855 864	ventifact
+T7	Property 865 871	flutes
+T8	Property 1089 1095	bright
+T9	Property 1333 1343	hemisphere
+T10	Property 1923 1933	hemisphere
+T11	Property 2342 2346	sand
+T12	Property 2384 2388	dust
+T13	Property 2404 2408	dust
+T14	Property 2523 2532	duneforms
+T15	Property 2768 2772	rock
+T16	Property 2899 2905	bright
+T17	Property 2906 2909	red
+T18	Property 2935 2941	bright
+T19	Property 2942 2945	red
+T20	Property 3164 3174	transverse
+T21	Property 3316 3326	transverse
+T22	Property 3428 3439	composition
+T23	Property 3637 3641	dust
+T24	Property 3657 3661	dark
+T25	Property 3662 3665	red
+T26	Property 3714 3718	Rock
+T27	Property 3775 3781	bright
+T28	Property 3864 3870	Knobby
+T29	Property 3915 3919	soil
+T30	Property 3962 3968	bright
+T31	Property 3973 3977	dark
+T32	Property 3978 3983	bands
+T33	Property 4183 4192	duneforms
+T34	Property 4269 4272	lag
+T35	Property 4269 4280	lag deposit
+T36	Property 4439 4443	dark
+T37	Property 4513 4516	lag
+T38	Property 4513 4524	lag deposit
+T39	Property 4528 4536	basaltic
+T40	Property 4669 4672	lag
+T41	Property 4915 4919	dark
+T42	Property 4954 4969	mm-sized grains
+T43	Property 5003 5012	weathered
+T44	Property 5079 5083	rock
+T45	Property 5162 5166	soil
+T46	Property 5284 5288	rock
+T47	Property 5357 5361	soil
+T48	Property 5509 5516	grooves
+T49	Property 5534 5540	flutes
+T50	Property 5632 5641	ventifact
+T51	Property 5642 5648	flutes
+T52	Property 5687 5691	dust
+T53	Property 5703 5707	sand
+T54	Property 5703 5714	sand grains
+T55	Property 5872 5881	duneforms
+T56	Property 5936 5942	bright
+T57	Property 6329 6339	hemisphere
+T58	Property 6450 6459	ventifact
+T59	Property 6460 6466	flutes
+T60	Property 6783 6793	hemisphere
+T61	Property 6836 6845	ventifact
+T62	Property 6846 6852	flutes
+T63	Property 6959 6963	dust
+T64	Property 6994 7003	duneforms
+T65	Property 7025 7029	soil
+T66	Property 7064 7068	soil
+T67	Target 5085 5093	Flat-top
+R1	HasProperty Arg1:T1 Arg2:T21	
+R2	HasProperty Arg1:T2 Arg2:T23	
+R3	HasProperty Arg1:T2 Arg2:T24	
+R4	HasProperty Arg1:T2 Arg2:T25	
+R5	HasProperty Arg1:T3 Arg2:T36	
+R6	HasProperty Arg1:T4 Arg2:T41	
+R7	HasProperty Arg1:T4 Arg2:T42	
+R8	HasProperty Arg1:T3 Arg2:T38	
+R9	HasProperty Arg1:T3 Arg2:T39	
+R10	HasProperty Arg1:T3 Arg2:T37	

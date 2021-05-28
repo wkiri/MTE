@@ -1,0 +1,205 @@
+T3	Mineral 6042 6047	micas
+T4	Mineral 6065 6074	feldspars
+T5	Mineral 6078 6085	granite
+T7	Target 2452 2458	Stimpy
+T8	Target 2947 2953	Squash
+T9	Target 3440 3446	Squash
+T10	Target 3766 3771	Chimp
+T11	Target 3786 3791	Zebra
+T12	Target 3985 4000	Mini-Matterhorn
+T13	Target 4002 4006	Yogi
+T14	Target 4008 4017	Half Dome
+T15	Target 4019 4024	Ender
+T16	Target 4026 4031	Squid
+T17	Target 4033 4041	Flat Top
+T18	Target 4043 4048	Stack
+T19	Target 4054 4060	Booboo
+T20	Target 4181 4189	Flat Top
+T21	Target 4521 4534	Barnacle Bill
+T22	Target 5191 5196	Chimp
+T23	Target 5429 5434	Chimp
+T24	Target 6739 6744	Wedge
+T25	Target 6746 6759	Barnacle Bill
+T26	Target 6765 6770	Shark
+T27	Target 7208 7221	Barnacle Bill
+T28	Target 7226 7232	Bambam
+T29	Target 7364 7379	Prince Charming
+T30	Target 7384 7389	Shark
+T31	Target 9527 9532	Chimp
+T32	Property 33 37	ROCK
+T33	Property 476 480	rock
+T34	Property 1187 1193	pitted
+T35	Property 1195 1201	knobby
+T36	Property 1203 1209	smooth
+T37	Property 1352 1356	pits
+T38	Property 1365 1369	rock
+T39	Property 1414 1420	pitted
+T40	Property 1547 1550	Pit
+T41	Property 1721 1725	pits
+T42	Property 1735 1752	volcanic vesicles
+T43	Property 1744 1752	vesicles
+T44	Property 1862 1870	vesicles
+T45	Property 1916 1924	vesicles
+T46	Property 1929 1946	chemically etched
+T47	Property 1947 1951	pits
+T48	Property 2054 2058	rock
+T49	Property 2158 2162	pits
+T50	Property 2343 2351	vesicles
+T51	Property 2356 2365	ventifact
+T52	Property 2356 2370	ventifact pits
+T53	Property 2366 2370	pits
+T54	Property 2409 2413	dust
+T55	Property 2418 2422	sand
+T56	Property 2447 2451	rock
+T57	Property 2493 2510	volcanic vesicles
+T58	Property 2502 2510	vesicles
+T59	Property 2571 2574	pit
+T60	Property 2645 2649	pits
+T61	Property 2702 2709	grooves
+T62	Property 2728 2732	rock
+T63	Property 2931 2935	rock
+T64	Property 2941 2945	rock
+T65	Property 2975 2981	knobby
+T66	Property 2993 2998	lobes
+T67	Property 3003 3014	protrusions
+T68	Property 3110 3121	protrusions
+T69	Property 3168 3172	rock
+T70	Property 3219 3227	sediment
+T71	Property 3233 3240	rounded
+T72	Property 3241 3248	cobbles
+T73	Property 3283 3287	rock
+T74	Property 3316 3327	protrusions
+T75	Property 3370 3374	rock
+T76	Property 3416 3420	dust
+T77	Property 3478 3489	protrusions
+T78	Property 3643 3659	light-dark bands
+T79	Property 3654 3659	bands
+T80	Property 3813 3820	banding
+T81	Property 3923 3927	rock
+T82	Property 3961 3976	linear features
+T83	Property 4013 4017	Dome
+T84	Property 4033 4037	Flat
+T85	Property 4067 4074	banding
+T86	Property 4144 4154	lineations
+T87	Property 4181 4185	Flat
+T88	Property 4297 4301	flat
+T89	Property 4322 4332	lineations
+T90	Property 4561 4571	lineations
+T91	Property 4618 4622	rock
+T92	Property 4684 4699	linear features
+T93	Property 4737 4741	rock
+T94	Property 4782 4786	rock
+T95	Property 4894 4905	sedimentary
+T96	Property 4936 4944	vesicles
+T97	Property 5103 5107	pits
+T98	Property 5257 5267	lineations
+T99	Property 5292 5300	vesicles
+T100	Property 5335 5342	banding
+T101	Property 5403 5407	rock
+T102	Property 5487 5498	exfoliation
+T103	Property 5517 5521	rock
+T104	Property 5571 5580	weathered
+T105	Property 5597 5601	rock
+T106	Property 5642 5646	rock
+T107	Property 5763 5767	dark
+T108	Property 5790 5794	rock
+T109	Property 5806 5811	crack
+T110	Property 5957 5968	exfoliation
+T111	Property 5980 5991	exfoliation
+T112	Property 6125 6129	rock
+T113	Property 6306 6310	ROCK
+T114	Property 6395 6406	exfoliation
+T115	Property 6524 6531	rounded
+T116	Property 6532 6540	boulders
+T117	Property 6567 6574	rounded
+T118	Property 6623 6630	rounded
+T119	Property 6631 6636	bumps
+T120	Property 6848 6852	rock
+T121	Property 6913 6920	cobbles
+T122	Property 7162 7169	rounded
+T123	Property 7268 7275	rounded
+T124	Property 7276 7283	cobbles
+T125	Property 7289 7301	conglomerate
+T126	Property 7303 7310	rounded
+T127	Property 7342 7346	rock
+T128	Property 7461 7468	rounded
+T129	Property 7469 7473	pits
+T130	Property 7478 7483	bumps
+T131	Property 7597 7604	cobbles
+T132	Property 7631 7635	rock
+T133	Property 7745 7752	rounded
+T134	Property 7765 7772	cobbles
+T135	Property 7785 7789	soil
+T136	Property 7821 7828	Rounded
+T137	Property 7841 7848	cobbles
+T138	Property 7871 7875	soil
+T139	Property 7940 7944	pits
+T140	Property 7949 7954	bumps
+T141	Property 8200 8204	rock
+T142	Property 8219 8232	poorly sorted
+T143	Property 8247 8256	weathered
+T144	Property 8374 8378	rock
+T145	Property 8433 8444	sedimentary
+T146	Property 8527 8535	vesicles
+T147	Property 8559 8563	rock
+T148	Property 8851 8855	rock
+T149	Property 8940 8944	dust
+T150	Property 8945 8952	coating
+T151	Property 9535 9539	Rock
+T152	Property 9585 9596	exfoliation
+T153	Property 9608 9615	banding
+T154	Property 9666 9670	rock
+T155	Property 9692 9699	rounded
+T156	Property 9770 9774	rock
+T157	Target 1707 1715	the Dice
+R1	HasProperty Arg1:T157 Arg2:T41	
+T6	Target 1694 1702	Souffle'
+R2	HasProperty Arg1:T6 Arg2:T41	
+R3	HasProperty Arg1:T6 Arg2:T42	
+R4	HasProperty Arg1:T157 Arg2:T42	
+R5	HasProperty Arg1:T6 Arg2:T46	
+R6	HasProperty Arg1:T157 Arg2:T46	
+R7	HasProperty Arg1:T7 Arg2:T59	
+R8	HasProperty Arg1:T7 Arg2:T61	
+T158	Target 2661 2667	Stimpy
+R9	HasProperty Arg1:T158 Arg2:T61	
+R10	HasProperty Arg1:T158 Arg2:T60	
+R11	HasProperty Arg1:T8 Arg2:T65	
+R12	HasProperty Arg1:T8 Arg2:T66	
+R13	HasProperty Arg1:T8 Arg2:T67	
+R14	HasProperty Arg1:T10 Arg2:T78	
+R15	HasProperty Arg1:T11 Arg2:T78	
+R16	HasProperty Arg1:T12 Arg2:T82	
+R17	HasProperty Arg1:T13 Arg2:T82	
+R18	HasProperty Arg1:T14 Arg2:T82	
+R19	HasProperty Arg1:T15 Arg2:T82	
+R20	HasProperty Arg1:T16 Arg2:T82	
+R21	HasProperty Arg1:T17 Arg2:T82	
+R22	HasProperty Arg1:T18 Arg2:T82	
+R23	HasProperty Arg1:T19 Arg2:T82	
+R24	HasProperty Arg1:T12 Arg2:T80	
+R25	HasProperty Arg1:T13 Arg2:T80	
+R26	HasProperty Arg1:T14 Arg2:T80	
+R27	HasProperty Arg1:T15 Arg2:T80	
+R28	HasProperty Arg1:T16 Arg2:T80	
+R29	HasProperty Arg1:T17 Arg2:T80	
+R30	HasProperty Arg1:T18 Arg2:T80	
+R31	HasProperty Arg1:T19 Arg2:T80	
+R32	HasProperty Arg1:T20 Arg2:T86	
+R33	HasProperty Arg1:T21 Arg2:T90	
+R34	HasProperty Arg1:T22 Arg2:T97	
+R35	HasProperty Arg1:T23 Arg2:T102	
+R36	HasProperty Arg1:T23 Arg2:T109	
+R37	HasProperty Arg1:T24 Arg2:T119	
+R38	HasProperty Arg1:T25 Arg2:T119	
+R39	HasProperty Arg1:T26 Arg2:T119	
+R40	HasProperty Arg1:T27 Arg2:T122	
+R41	HasProperty Arg1:T28 Arg2:T122	
+R42	HasProperty Arg1:T29 Arg2:T129	
+R43	HasProperty Arg1:T30 Arg2:T129	
+R44	HasProperty Arg1:T29 Arg2:T130	
+R45	HasProperty Arg1:T30 Arg2:T130	
+R46	HasProperty Arg1:T31 Arg2:T153	
+T1	Target 7067 7072	Wedge
+T2	Property 7075 7080	bumpy
+R47	HasProperty Arg1:T1 Arg2:T2	

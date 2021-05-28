@@ -1,0 +1,18 @@
+T1	STATE_OR_PROVINCE 312 320	Michigan
+T2	STATE_OR_PROVINCE 353 355	MI
+T3	COUNTRY 362 365	USA
+T4	EMAIL 367 381	velbel@msu.edu
+T5	TITLE 788 793	layer
+T6	Element 2326 2334	aluminum
+T7	Element 2347 2353	carbon
+T8	Element 2381 2387	carbon
+T9	Property 433 437	Soil
+T10	Property 731 747	patterned ground
+T11	Property 797 805	basaltic
+T12	Property 806 810	sand
+T13	Property 846 849	ice
+T14	Property 922 926	soil
+T15	Property 963 966	ice
+T16	Property 1282 1285	red
+T17	Property 2947 2951	sand
+T18	Property 3247 3254	angular

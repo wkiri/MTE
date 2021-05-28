@@ -1,0 +1,61 @@
+T1	STATE_OR_PROVINCE 201 206	Maine
+T2	STATE_OR_PROVINCE 288 298	California
+T3	STATE_OR_PROVINCE 343 345	CA
+T4	COUNTRY 354 357	USA
+T5	EMAIL 359 376	mkreslav@ucsc.edu
+T6	STATE_OR_PROVINCE 431 433	RI
+T7	COUNTRY 447 450	USA
+T8	TITLE 672 679	general
+T9	TITLE 1461 1467	crater
+T10	TITLE 1593 1599	crater
+T11	TITLE 1666 1672	crater
+T12	TITLE 2759 2765	crater
+T13	Element 3225 3226	S
+T14	TITLE 3271 3277	crater
+T15	TITLE 3744 3750	crater
+T16	TITLE 4886 4891	layer
+T17	TITLE 4972 4979	thinner
+T18	TITLE 4980 4985	layer
+T19	TITLE 5575 5581	crater
+T20	Mineral 5775 5783	opposite
+T21	TITLE 5888 5894	crater
+T22	TITLE 5988 5994	crater
+T23	TITLE 6163 6169	crater
+T24	TITLE 6587 6593	crater
+T25	TITLE 6813 6818	layer
+T26	TITLE 6943 6948	layer
+T27	TITLE 7055 7060	layer
+T28	TITLE 7628 7633	layer
+T29	TITLE 7698 7703	layer
+T30	TITLE 8410 8416	crater
+T31	STATE_OR_PROVINCE 8799 8804	Maine
+T32	Property 951 967	patterned ground
+T33	Property 1139 1142	ice
+T34	Property 1274 1290	patterned ground
+T35	Property 1586 1591	sharp
+T36	Property 1606 1612	smooth
+T37	Property 1826 1842	patterned ground
+T38	Property 2305 2315	hemisphere
+T39	Property 2347 2357	hemisphere
+T40	Property 2711 2716	sharp
+T41	Property 2733 2738	sharp
+T42	Property 2933 2938	Sharp
+T43	Property 3203 3208	sharp
+T44	Property 3415 3420	sharp
+T45	Property 3591 3601	hemisphere
+T46	Property 3954 3964	hemisphere
+T47	Property 3982 3987	sharp
+T48	Property 4096 4106	hemisphere
+T49	Property 4169 4179	hemisphere
+T50	Property 4675 4685	hemisphere
+T51	Property 4833 4838	sharp
+T52	Property 5457 5473	patterned ground
+T53	Property 5981 5986	sharp
+T54	Property 6553 6569	patterned ground
+T55	Property 6826 6830	soil
+T56	Property 6841 6845	soil
+T57	Property 7009 7012	ice
+T58	Property 7890 7893	ice
+T59	Property 8027 8032	sharp
+T60	Property 8107 8112	sharp
+T61	Property 8273 8276	ice

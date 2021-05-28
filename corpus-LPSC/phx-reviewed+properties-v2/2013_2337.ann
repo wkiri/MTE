@@ -1,0 +1,33 @@
+T1	STATE_OR_PROVINCE 209 211	AZ
+T2	COUNTRY 218 221	USA
+T3	EMAIL 222 238	<pitman@psi.edu>
+T4	STATE_OR_PROVINCE 306 308	CO
+T5	COUNTRY 315 318	USA
+T6	STATE_OR_PROVINCE 375 383	Manitoba
+T7	COUNTRY 385 391	Canada
+T8	Mineral 2053 2061	sulfates
+T9	TITLE 3079 3084	model
+T10	TITLE 3210 3215	model
+T11	TITLE 3494 3499	model
+T12	TITLE 4535 4549	representative
+T13	Mineral 4619 4627	sulfates
+T14	STATE_OR_PROVINCE 5563 5566	New
+T15	STATE_OR_PROVINCE 5567 5571	York
+T16	TITLE 5713 5717	Rev.
+T17	STATE_OR_PROVINCE 5838 5841	New
+T18	STATE_OR_PROVINCE 5842 5846	York
+T19	URL 6057 6101	http://eng.auburn.edu/users/dmckwski/scatcod
+T20	STATE_OR_PROVINCE 6454 6461	Arizona
+T21	URL 6547 6597	http://www.nasa.gov/mission_pages/phoenix/news/pho
+T22	Mineral 6842 6851	kieserite
+T23	Mineral 7528 7537	kieserite
+T24	Mineral 7853 7864	hexahydrite
+T25	Target 7340 7348	Rosy Red
+T26	Property 699 710	composition
+T27	Property 815 819	dust
+T28	Property 824 828	soil
+T29	Property 3548 3554	layers
+T30	Property 4983 4987	dust
+T31	Property 7345 7348	Red
+T32	Property 7358 7362	soil
+R1	HasProperty Arg1:T25 Arg2:T32	

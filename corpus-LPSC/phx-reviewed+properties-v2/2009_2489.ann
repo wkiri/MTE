@@ -1,0 +1,83 @@
+T1	STATE_OR_PROVINCE 289 291	MA
+T2	COUNTRY 392 394	UK
+T3	STATE_OR_PROVINCE 423 425	CO
+T4	STATE_OR_PROVINCE 472 474	CA
+T5	STATE_OR_PROVINCE 520 522	TX
+T6	STATE_OR_PROVINCE 605 607	CA
+T7	TITLE 1119 1126	general
+T8	COUNTRY 1519 1521	pH
+T9	Element 2034 2035	K
+T10	Element 2038 2040	Na
+T11	Element 2066 2067	H
+T12	COUNTRY 2070 2072	pH
+T13	Element 2273 2275	Li
+T14	Element 2358 2365	iridium
+T15	COUNTRY 2386 2388	pH
+T16	Element 2434 2436	Ag
+T17	Element 2524 2526	Au
+T18	TITLE 3295 3301	second
+T19	Mineral 3519 3526	sulfate
+T20	Element 3579 3585	barium
+T21	Element 4821 4823	Na
+T22	Element 4884 4885	K
+T23	COUNTRY 5373 5375	pH
+T24	Element 5887 5888	K
+T25	Element 5926 5928	Na
+T26	COUNTRY 5954 5956	pH
+T27	Element 6349 6351	Ca
+T28	Element 6359 6361	Mg
+T29	Element 6392 6394	Ca
+T30	Element 6399 6401	Mg
+T31	COUNTRY 6449 6451	pH
+T32	TITLE 6514 6519	model
+T33	Element 6521 6523	Ca
+T34	Element 6531 6533	Mg
+T35	COUNTRY 6737 6739	pH
+T36	COUNTRY 6836 6838	pH
+T37	Mineral 7102 7111	carbonate
+T38	Mineral 7125 7132	calcite
+T39	COUNTRY 7493 7495	pH
+T40	COUNTRY 7946 7948	pH
+T41	COUNTRY 8238 8240	pH
+T42	Mineral 8467 8477	carbonates
+T43	Mineral 8597 8606	carbonate
+T44	Target 3963 3971	Rosy Red
+T45	Target 4039 4048	Sorceress
+T46	Target 4055 4064	Sorceress
+T47	Target 4230 4238	Rosy Red
+T48	Target 5770 5778	Rosy Red
+T49	Property 44 48	SOIL
+T50	Property 809 815	cloddy
+T51	Property 816 820	soil
+T52	Property 840 844	soil
+T53	Property 1060 1064	soil
+T54	Property 1235 1246	composition
+T55	Property 1254 1258	soil
+T56	Property 1464 1468	soil
+T57	Property 1529 1533	soil
+T58	Property 1601 1605	soil
+T59	Property 1900 1904	soil
+T60	Property 3155 3159	soil
+T61	Property 3786 3790	Soil
+T62	Property 3844 3852	cohesion
+T63	Property 3968 3971	Red
+T64	Property 4001 4004	ice
+T65	Property 4235 4238	Red
+T66	Property 4343 4347	soil
+T67	Property 4537 4541	soil
+T68	Property 4775 4779	soil
+T69	Property 5775 5778	Red
+T70	Property 7190 7201	composition
+T71	Property 8373 8377	soil
+T72	Property 8542 8545	ice
+R1	HasProperty Arg1:T45 Arg2:T64	
+R2	HasProperty Arg1:T46 Arg2:T64	
+R3	HasProperty Arg1:T47 Arg2:T66	
+R4	Contains Arg1:T47 Arg2:T21	
+T73	Element 4875 4877	Cl
+R5	Contains Arg1:T47 Arg2:T73	
+R6	Contains Arg1:T47 Arg2:T22	
+T74	Element 4869 4871	Ca
+R7	Contains Arg1:T47 Arg2:T74	
+T75	Element 4811 4813	Mg
+R8	Contains Arg1:T47 Arg2:T75	

@@ -1,0 +1,84 @@
+T1	Mineral 29 41	PERCHLORATES
+T2	STATE_OR_PROVINCE 175 178	PA.
+T3	EMAIL 179 199	aclark@haverford.edu
+T4	Element 747 756	magnesium
+T5	Mineral 757 768	perchlorate
+T6	Element 1287 1296	magnesium
+T7	Mineral 1297 1308	perchlorate
+T8	STATE_OR_PROVINCE 3421 3423	La
+T9	Element 3487 3496	magnesium
+T10	Mineral 3751 3762	perchlorate
+T11	Target 2965 2980	Dodo-Goldilocks
+T12	Target 3337 3347	Snow White
+T13	Target 3349 3363	DodoGoldilocks
+T14	Target 3365 3375	Stone Soup
+T15	Target 3377 3387	Pet Donkey
+T16	Target 3389 3403	Upper Cupboard
+T17	Target 3405 3419	Lower Cupboard
+T18	Target 3421 3430	La Mancha
+T19	Target 3424 3430	Mancha
+T20	Target 3432 3440	Headless
+T21	Target 3442 3452	Burn Alive
+T22	Target 3454 3463	Neverland
+T23	Target 3469 3476	Runaway
+T24	Target 4455 4470	Dodo-Goldilocks
+T25	Target 4605 4620	Dodo-Goldilocks
+T26	Property 395 398	ice
+T27	Property 547 558	perchlorate
+T28	Property 757 768	perchlorate
+T29	Property 931 935	soil
+T30	Property 1027 1038	perchlorate
+T31	Property 1069 1073	soil
+T32	Property 1074 1082	cohesion
+T33	Property 1297 1308	perchlorate
+T34	Property 1337 1341	soil
+T35	Property 1445 1449	soil
+T36	Property 1715 1720	brine
+T37	Property 2390 2401	perchlorate
+T38	Property 2633 2644	perchlorate
+T39	Property 2788 2799	perchlorate
+T40	Property 2981 2987	trench
+T41	Property 3497 3508	perchlorate
+T42	Property 3544 3550	smooth
+T43	Property 3640 3644	soil
+T44	Property 3655 3658	ice
+T45	Property 3751 3762	perchlorate
+T46	Property 3883 3887	soil
+T47	Property 4062 4073	Perchlorate
+T48	Property 4193 4204	Perchlorate
+T49	Property 4341 4352	Perchlorate
+T50	Property 4390 4394	Soil
+T51	Property 4471 4477	trench
+T52	Property 4515 4526	perchlorate
+T53	Property 4573 4577	soil
+T54	Property 4579 4582	red
+T55	Property 4621 4627	trench
+T56	Property 4657 4668	perchlorate
+T57	Target 4455 4477	Dodo-Goldilocks trench
+T58	Target 4605 4627	Dodo-Goldilocks trench
+R1	HasProperty Arg1:T58 Arg2:T56	
+R2	HasProperty Arg1:T57 Arg2:T52	
+R3	Contains Arg1:T12 Arg2:T9	
+R4	Contains Arg1:T13 Arg2:T9	
+R5	Contains Arg1:T14 Arg2:T9	
+R6	Contains Arg1:T15 Arg2:T9	
+R7	Contains Arg1:T16 Arg2:T9	
+R8	Contains Arg1:T17 Arg2:T9	
+R9	Contains Arg1:T18 Arg2:T9	
+R10	Contains Arg1:T20 Arg2:T9	
+R11	Contains Arg1:T21 Arg2:T9	
+R12	Contains Arg1:T22 Arg2:T9	
+R13	Contains Arg1:T23 Arg2:T9	
+R14	HasProperty Arg1:T12 Arg2:T41	
+R15	HasProperty Arg1:T13 Arg2:T41	
+R16	HasProperty Arg1:T14 Arg2:T41	
+R17	HasProperty Arg1:T15 Arg2:T41	
+R18	HasProperty Arg1:T16 Arg2:T41	
+R19	HasProperty Arg1:T17 Arg2:T41	
+R20	HasProperty Arg1:T18 Arg2:T41	
+R21	HasProperty Arg1:T20 Arg2:T41	
+R22	HasProperty Arg1:T21 Arg2:T41	
+R23	HasProperty Arg1:T22 Arg2:T41	
+R24	HasProperty Arg1:T23 Arg2:T41	
+T59	Target 2965 2987	Dodo-Goldilocks trench
+R25	HasProperty Arg1:T59 Arg2:T40	

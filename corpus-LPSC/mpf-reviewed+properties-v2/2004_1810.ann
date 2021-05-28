@@ -1,0 +1,63 @@
+T1	Mineral 978 987	smectites
+T2	Mineral 989 997	zeolites
+T3	Mineral 1023 1031	sulfates
+T4	Mineral 1033 1042	chlorides
+T5	Mineral 1048 1058	carbonates
+T6	Mineral 5394 5401	zeolite
+T7	Mineral 5482 5489	zeolite
+T8	Mineral 5699 5707	zeolites
+T9	Mineral 5836 5844	zeolites
+T10	Mineral 6075 6083	zeolites
+T11	Mineral 6231 6239	zeolites
+T12	Element 6341 6343	Mg
+T13	Mineral 6344 6351	sulfate
+T14	Mineral 6359 6368	chlorides
+T15	Element 6372 6373	N
+T16	Mineral 6502 6511	kieserite
+T17	Element 6611 6613	Na
+T18	Mineral 6614 6621	sulfate
+T19	Element 7082 7083	C
+T20	Element 7195 7197	Mg
+T21	Element 7237 7239	Na
+T22	Mineral 7240 7248	sulfates
+T23	Mineral 7285 7288	ite
+T24	Mineral 7305 7315	bischofite
+T25	Mineral 7413 7422	irabilite
+T26	Mineral 7525 7535	mirabilite
+T27	Property 27 38	BOUND WATER
+T28	Property 498 509	bound water
+T29	Property 1119 1123	soil
+T30	Property 1269 1272	ice
+T31	Property 1554 1561	spectra
+T32	Property 1778 1789	bound water
+T33	Property 1920 1927	spectra
+T34	Property 1973 1984	bound water
+T35	Property 2032 2043	bound water
+T36	Property 2264 2268	dust
+T37	Property 2279 2282	ice
+T38	Property 2722 2732	hemisphere
+T39	Property 2807 2817	hemisphere
+T40	Property 2819 2830	bound water
+T41	Property 2932 2943	bound water
+T42	Property 3402 3413	bound water
+T43	Property 3543 3554	bound water
+T44	Property 3622 3632	hemisphere
+T45	Property 3668 3678	hemisphere
+T46	Property 4051 4054	ice
+T47	Property 4286 4289	ice
+T48	Property 4480 4483	ice
+T49	Property 4546 4549	ice
+T50	Property 4589 4599	hemisphere
+T51	Property 4760 4763	ice
+T52	Property 5673 5677	soil
+T53	Property 5711 5717	bright
+T54	Property 5755 5759	dust
+T55	Property 5885 5889	soil
+T56	Property 6016 6023	spectra
+T57	Property 6027 6033	bright
+T58	Property 6467 6471	rock
+T59	Property 6886 6897	bound water
+T60	Property 7217 7221	soil
+T61	Property 7260 7268	coatings
+T62	Property 9098 9109	bound water
+T63	Property 9276 9287	bound water

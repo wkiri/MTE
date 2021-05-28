@@ -1,0 +1,33 @@
+T1	Element 2591 2599	hydrogen
+T2	Mineral 2613 2621	ilmenite
+T3	Mineral 2645 2653	ilmenite
+T4	Mineral 2917 2924	olivine
+T5	Mineral 2945 2952	olivine
+T6	Mineral 2957 2965	ilmenite
+T7	Element 3115 3123	hydrogen
+T10	Mineral 4714 4721	olivine
+T11	Mineral 4723 4731	pyroxene
+T12	Mineral 4733 4744	plagioclase
+T13	Element 6172 6174	Ti
+T15	Property 1782 1793	composition
+T16	Property 1803 1811	basaltic
+T17	Property 1816 1825	andesitic
+T18	Property 2041 2045	rock
+T19	Property 2047 2051	sand
+T20	Property 2057 2061	dust
+T21	Property 2400 2411	composition
+T22	Property 2478 2489	composition
+T23	Property 2820 2828	basaltic
+T24	Property 3547 3551	soil
+T25	Property 4349 4370	mechanical properties
+T26	Property 4381 4395	friction angle
+T27	Property 4397 4405	cohesion
+T28	Property 4957 4971	friction angle
+T29	Property 4988 4996	cohesion
+T30	Property 5858 5869	composition
+T31	Property 5949 5953	rock
+T32	Property 5957 5965	basaltic
+T33	Property 5966 5977	composition
+T34	Property 6040 6045	fines
+T35	Property 6881 6889	basaltic
+T36	Property 6890 6901	composition

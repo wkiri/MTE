@@ -1,0 +1,68 @@
+T2	Property 382 386	soil
+T3	Property 428 432	dark
+T4	Property 601 605	rock
+T5	Property 612 616	flat
+T6	Property 678 682	dust
+T7	Property 685 689	Dust
+T8	Property 776 780	flat
+T9	Property 850 854	soil
+T10	Property 958 962	soil
+T11	Property 1173 1177	soil
+T12	Property 1211 1215	dust
+T13	Property 1294 1298	dust
+T14	Property 1308 1312	Dust
+T15	Property 1518 1522	dust
+T16	Property 1658 1668	silt-sized
+T17	Property 1760 1763	red
+T18	Property 1806 1810	soil
+T19	Property 1870 1874	dust
+T20	Property 1917 1921	dust
+T21	Property 1994 1998	Dust
+T22	Property 2052 2058	bright
+T23	Property 2105 2109	dark
+T24	Property 2242 2246	soil
+T25	Property 2285 2289	dust
+T26	Property 2327 2331	soil
+T27	Property 2452 2456	rock
+T28	Property 2461 2465	soil
+T29	Property 2535 2539	flat
+T30	Property 2555 2559	dome
+T31	Property 2753 2757	soil
+T32	Property 2811 2815	Flat
+T33	Property 2867 2871	dust
+T34	Property 2893 2897	rock
+T35	Property 2922 2928	bright
+T36	Property 2949 2953	rock
+T37	Property 3014 3019	sharp
+T38	Property 3032 3036	rock
+T39	Property 3464 3468	flat
+T40	Property 3484 3508	barnacle-like structures
+T41	Property 3722 3726	rock
+T42	Property 3754 3758	dome
+T43	Property 3795 3799	flat
+T44	Property 3829 3833	dome
+T45	Property 3932 3936	rock
+T46	Property 3960 3964	rind
+T47	Property 3991 3997	layers
+T48	Property 4028 4032	rock
+T49	Property 4127 4131	dust
+T50	Property 4319 4323	rock
+T51	Property 4361 4365	flat
+T52	Property 4442 4446	soil
+T53	Property 4559 4579	spectral reflectance
+T54	Property 4657 4661	dust
+T55	Property 4740 4744	rock
+T56	Property 4757 4761	fine
+T57	Property 4762 4766	dust
+T58	Property 4940 4944	dust
+T1	Target 612 620	flat top
+R1	HasProperty Arg1:T1 Arg2:T6	
+T59	Target 2535 2543	flat top
+T60	Target 2550 2559	half dome
+T61	Target 3464 3472	flat top
+R2	HasProperty Arg1:T61 Arg2:T40	
+T62	Target 3749 3758	half dome
+T64	Target 3824 3833	half dome
+T65	Property 3855 3875	plate-like structure
+R3	HasProperty Arg1:T64 Arg2:T65	
+T63	Target 3795 3803	flat top

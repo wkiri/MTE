@@ -1,0 +1,17 @@
+T1	STATE_OR_PROVINCE 207 209	MD
+T2	EMAIL 217 244	michelle.minitti@jhuapl.edu
+T3	TITLE 571 577	Crater
+T4	STATE_OR_PROVINCE 2067 2074	Arizona
+T5	STATE_OR_PROVINCE 2375 2382	Arizona
+T6	TITLE 4100 4114	representative
+T7	TITLE 4378 4385	general
+T8	Element 4524 4526	Na
+T9	Mineral 4625 4632	apatite
+T10	Mineral 4763 4774	plagioclase
+T11	Mineral 5465 5475	phosphates
+T12	Mineral 5756 5764	sulfates
+T13	IDEOLOGY 6258 6264	center
+T14	IDEOLOGY 6265 6270	right
+T15	Element 6476 6477	P
+T16	Mineral 6655 6666	whitlockite
+T17	Property 4386 4397	composition
