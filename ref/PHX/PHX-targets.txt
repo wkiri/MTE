@@ -9,10 +9,10 @@ Burned Alive
 Burning Coals
 Caterpillar
 Croquet Ground
-Dodo-Goldilocks
-Dodo-Goldilocks Trench
 Dodo1
 DodoGoldilocks
+Dodo-Goldilocks
+Dodo-Goldilocks Trench
 Eaglet
 Galloping Hessian
 Gandalf
@@ -27,18 +27,21 @@ Humpty Dumpty
 Ice Man
 King's Men
 Knave of Hearts
-La Mancha
 LaMancha
+La Mancha
 Lory
 Lower Cupboard
 Mama Bear
+Mamma Bear
 Mancha
 Mother Goose
 Neverland
+Neverland Trench
 Pet Donkey
 Pet Donkey Trench
 Porridge
 Rosy Red
+Runaway
 Runaway Trench
 Sam McGee
 Shoes of Fortune
@@ -49,7 +52,10 @@ Snow White
 Snow White Trench
 Sorceress
 Stone Soup
+Stone Soup Trench
 Upper Cupboard
 Vestri
 Wicked Witch
+Wonderland
+Wonderland Polygon
 Wonderland polygons

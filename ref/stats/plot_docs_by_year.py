@@ -27,7 +27,7 @@ phx_yrs = range(2009, 2021)
 phx_cnt = cnt=[78,54,44,37,58,36,39,29,29,31,35,20]
 pl.bar(phx_yrs, phx_cnt)
 pl.xlabel('Year')
-pl.ylabel('Pathfinder-related abstracts')
+pl.ylabel('Phoenix-related abstracts')
 phx_file = 'phx-by-year.png'
 pl.savefig(phx_file, bbox_inches='tight')
 print('Saved PHX histogram to %s' % phx_file)

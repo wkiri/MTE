@@ -1,13 +1,14 @@
 # Files
 - MPF-targets.txt: unique superset of MPF target lists from individual
-sources (papers, images)
+sources (papers, images) - create by:
+  cat MPF-targets-*.txt | sort | uniq  > MPF-targets.txt
 - MPF-horizon.txt: unique superset of MPF horizon lists from individual
 sources (papers, images)
 - MPF-location.txt: unique superset of MPF location lists from individual
 sources (papers, images)
 - MPF-ambiguous.txt: terms that don't have a conclusive category yet
 
-## Target
+## Targets
 - MPF-targets-bell-00.txt: Targets from Bell et al. (2000)
 - MPF-targets-bridges-99.txt: Targets from Bridges et al. (1999)
 - MPF-targets-golomek-99.txt: Targets from Golombek et al. (1999)
@@ -16,12 +17,15 @@ sources (papers, images)
                                      panorama image
 - MPF-targets-smith-97.txt: Targets from Smith et al. (1997)
 - MPF-targets-stooke-atlas-12.txt: Targets from Stooke (2012)
+- MPF-basilisk-targets.txt: Top 500 suggestions from Basilisk
+- MPF-targets-basilisk-keep.txt: Basilisk targets to keep
+- MPF-targets-manual.txt: Additional targets found via manual review
 
 ## Horizon
 - MPF-horizon-golomek-99.txt: Horizon features from Golombek et al. (1999)
 - MPF-horizon-monster-pan-image.txt: Targets from the "monster" panorama image
 
-## Location
+## Locations
 - MPF-location-mcsween-99.txt: Nearby location names from McSween et al. (1999)
 - MPF-location-monster-pan-image.txt: Nearby location names from the "monster" 
                                       panorama image
@@ -30,11 +34,15 @@ sources (papers, images)
 
 ## Instruments
 - MPF-instruments.txt
+- basilisk-instruments.txt: Top 500 suggestions from Basilisk
 
 ## Properties
 - MPF-property-matt.txt: Matt's annotated properties from 10 documents
 - MPF-property-raymond.txt: Raymond's annotated properties from 10 documents
 - MPF-property.txt: Unique terms from Matt and Raymond combined
+
+## Other
+- basilisk-elements+minerals.txt: Top 500 suggestions from Basilisk
 
 # Images
 - monster_pan.jpg: Monster Panorama with names (unattributed)

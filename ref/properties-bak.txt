@@ -1,0 +1,137 @@
+BOUND_WATER
+SAND_GRAINS
+WATER_FROST
+angle of internal friction
+angle of repose
+angles of internal friction
+angles of repose
+angular
+banding
+bands
+blocky soils
+bright
+bright material
+bump
+bumps
+calcium carbonate
+chemically etched
+clasts
+clod
+cloddy
+cloddy deposits
+cloddy soils
+cobble
+cohesion
+cohesive
+cohesive strength
+cohesive strengths
+crack
+crust
+dark
+dome
+dune
+duricrust
+dust
+eolian
+eolian lag deposit
+exfoliation
+facets
+fine-grained
+finegrained
+fines
+flute
+flutes
+fluvial deposits
+friction angle
+granule
+grooves
+headwall
+hemisphere
+high strength
+ice
+ice filling pore spaces
+icy soil sample
+icy soil samples
+icy soil sublimate lag
+imbricated
+imbrication
+indurated
+knob
+knobby
+knobs
+lag
+lag deposit
+large friction angle
+light-dark bands
+linear features
+lineations
+lobes
+mafic
+massive
+mechanical properties
+organics
+pebbly
+pebbly surfaces
+pedogenic
+perchlorate
+perchlorate-bearing
+percussion mark
+pit
+pits
+pitted
+planar
+platy
+platy soil clods
+poorly sorted
+pore spaces
+prismatic
+prominences
+protrusions
+pyramidal
+red
+reddish-brown
+ridged
+ridged surfaces
+rock clasts
+rough
+rounded
+rounded rocks
+sand
+sand and siltsized particles
+sand or granule
+scalloped
+scallops/flutes
+scour
+scour features
+sediments
+semiangular
+semirounded
+sharp
+side facets
+silica content
+silicarich
+silt
+silt-sized
+siltsized
+small cohesion
+smooth
+soil
+soil deposits
+soil mechanical properties
+soil-like deposits
+spectral reflectance
+tabular
+tabular rocks
+thin films of water
+trench
+trench headwall
+ventifact
+ventifact pits
+vesicles
+vesicular
+volcanic vesicles
+water-ice-bearing
+water-ice-bearing soils
+weakly cohesive
+weakly cohesive crusty soils
+windtails

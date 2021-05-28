@@ -1,0 +1,36 @@
+scallops/flutes
+scallop
+flute
+sediment
+sediments
+fine
+fines
+windtail
+windtails
+duricrust
+mafic
+scalloped
+imbrication
+silicarich
+silica-rich
+SAND_GRAINS
+sand grains
+cobble
+organic
+organics
+finegrained
+fine-grained
+WATER_FROST
+water frost
+BOUND_WATER
+bound water
+bowl-shaped
+brine
+brines
+patterned ground
+coatings/rinds
+coatings
+coating
+rinds
+rind
+varnish

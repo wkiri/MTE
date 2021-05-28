@@ -9,10 +9,10 @@ Target Burned Alive
 Target Burning Coals
 Target Caterpillar
 Target Croquet Ground
-Target Dodo-Goldilocks
-Target Dodo-Goldilocks Trench
 Target Dodo1
 Target DodoGoldilocks
+Target Dodo-Goldilocks
+Target Dodo-Goldilocks Trench
 Target Eaglet
 Target Galloping Hessian
 Target Gandalf
@@ -27,18 +27,21 @@ Target Humpty Dumpty
 Target Ice Man
 Target King's Men
 Target Knave of Hearts
-Target La Mancha
 Target LaMancha
+Target La Mancha
 Target Lory
 Target Lower Cupboard
 Target Mama Bear
+Target Mamma Bear
 Target Mancha
 Target Mother Goose
 Target Neverland
+Target Neverland Trench
 Target Pet Donkey
 Target Pet Donkey Trench
 Target Porridge
 Target Rosy Red
+Target Runaway
 Target Runaway Trench
 Target Sam McGee
 Target Shoes of Fortune
@@ -49,7 +52,10 @@ Target Snow White
 Target Snow White Trench
 Target Sorceress
 Target Stone Soup
+Target Stone Soup Trench
 Target Upper Cupboard
 Target Vestri
 Target Wicked Witch
+Target Wonderland
+Target Wonderland Polygon
 Target Wonderland polygons

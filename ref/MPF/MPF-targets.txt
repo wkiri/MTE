@@ -1,4 +1,5 @@
 Aa
+Abu
 Anthill
 Asterisk
 Auto
@@ -7,9 +8,10 @@ Baby Bee
 Baby Otter
 Baker's Bench
 Bakers Bench
-Bam-Bam
 Bama
 Bambam
+Bam-Bam
+Bambi
 Bamm Bamm
 Barnacle Bill
 Barnham
@@ -43,6 +45,7 @@ Contour
 Couch
 Cradle
 Cutter
+Dagwood
 Darth Vader
 Desert Princess
 Dilbert
@@ -65,6 +68,7 @@ Garibaldi
 Garrak
 Gator
 Geordi
+Gerbil
 Ginger
 Goldilocks
 Goose
@@ -112,7 +116,6 @@ Mafalda
 Marvin the Martian
 Meatball
 Mermaid
-Mermaid 
 Mermaid Dune
 Mesa
 Mini-Matterhorn
@@ -132,6 +135,7 @@ Otter
 Ovoid
 Pancake
 Paz
+Peesh
 Penguin
 Photometry Flats
 Picnic
@@ -141,8 +145,8 @@ Pinnochio
 Piper
 Platypus
 Pokey
-Pooh Bear
 Poohbear
+Pooh Bear
 Poptart
 Potato
 Prince Charming

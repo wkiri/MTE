@@ -157,3 +157,11 @@ stereocameras
 X-ray Fluorescence
 X-RAY SPECTROMETER
 XRD
+Electrochemistry
+Initial TEGA
+MECA OM
+Microscopy
+OM
+TECP
+TEMPERATURE SENSOR
+WCL

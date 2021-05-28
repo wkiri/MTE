@@ -1,4 +1,5 @@
 Target Aa
+Target Abu
 Target Anthill
 Target Asterisk
 Target Auto
@@ -7,9 +8,10 @@ Target Baby Bee
 Target Baby Otter
 Target Baker's Bench
 Target Bakers Bench
-Target Bam-Bam
 Target Bama
 Target Bambam
+Target Bam-Bam
+Target Bambi
 Target Bamm Bamm
 Target Barnacle Bill
 Target Barnham
@@ -43,6 +45,7 @@ Target Contour
 Target Couch
 Target Cradle
 Target Cutter
+Target Dagwood
 Target Darth Vader
 Target Desert Princess
 Target Dilbert
@@ -65,6 +68,7 @@ Target Garibaldi
 Target Garrak
 Target Gator
 Target Geordi
+Target Gerbil
 Target Ginger
 Target Goldilocks
 Target Goose
@@ -112,7 +116,6 @@ Target Mafalda
 Target Marvin the Martian
 Target Meatball
 Target Mermaid
-Target Mermaid
 Target Mermaid Dune
 Target Mesa
 Target Mini-Matterhorn
@@ -132,6 +135,7 @@ Target Otter
 Target Ovoid
 Target Pancake
 Target Paz
+Target Peesh
 Target Penguin
 Target Photometry Flats
 Target Picnic
@@ -141,8 +145,8 @@ Target Pinnochio
 Target Piper
 Target Platypus
 Target Pokey
-Target Pooh Bear
 Target Poohbear
+Target Pooh Bear
 Target Poptart
 Target Potato
 Target Prince Charming

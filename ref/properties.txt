@@ -1,3 +1,5 @@
+andesites
+andesitic
 angle of internal friction
 angle of repose
 angles of internal friction
@@ -5,9 +7,20 @@ angles of repose
 angular
 banding
 bands
+barnacle-like structures
+basaltic
 blocky soils
+bluer
+boulders
+bound water
+BOUND_WATER
+bowl-shaped
 bright
+brighter reflectance
 bright material
+brine
+brines
+bulk densities
 bump
 bumps
 calcium carbonate
@@ -17,36 +30,60 @@ clod
 cloddy
 cloddy deposits
 cloddy soils
+coating
+coatings
+coatings/rinds
+cobble
+cobbles
 cohesion
 cohesive
 cohesive strength
 cohesive strengths
+composition
+conglomerate
+conglomeritic texture
 crack
 crust
 dark
 dome
 dune
+duneforms
+duricrust
 dust
 eolian
 eolian lag deposit
+epressions
 exfoliation
 facets
+fine
+finegrained
 fine-grained
+fines
+flat
 flute
+fluted
+flute-like
 flutes
 fluvial deposits
+fracture
 friction angle
 granule
+grey/dark rock
 grooves
+hardpan material
 headwall
 hemisphere
+highly irregular
 high strength
 ice
 ice filling pore spaces
 icy soil sample
 icy soil samples
 icy soil sublimate lag
+igneous
 imbricated
+imbrication
+impact crater
 indurated
 knob
 knobby
@@ -54,12 +91,20 @@ knobs
 lag
 lag deposit
 large friction angle
+layers
+"light"-colored grains
 light-dark bands
 linear features
 lineations
 lobes
+mafic
 massive
 mechanical properties
+mm-sized grains
+organic
+organics
+ovoidal
+patterned ground
 pebbly
 pebbly surfaces
 pedogenic
@@ -79,44 +124,75 @@ prominences
 protrusions
 pyramidal
 red
+red/bright rocks
 reddish-brown
 ridged
 ridged surfaces
+rind
+rinds
+rock
 rock clasts
 rough
 rounded
 rounded rocks
 sand
 sand and siltsized particles
+sand grains
+SAND_GRAINS
 sand or granule
+scallop
+scalloped
+scallops/flutes
 scour
 scour features
+sediment
+sedimentary
+sedimentary fabric
+sedimentary rock type
+sediments
 semiangular
 semirounded
 sharp
 side facets
 silica content
+silicarich
+silica-rich
 silt
 siltsized
 silt-sized
 small cohesion
+small-scale cratering
 smooth
+socket
 soil
 soil deposits
+soil-free rock
+soilfree rock
+soil-like
 soil-like deposits
 soil mechanical properties
+spectra
 spectral reflectance
 tabular
 tabular rocks
 thin films of water
+transverse
 trench
 trench headwall
+varnish
 ventifact
 ventifact pits
+vesicle
 vesicles
 vesicular
+vesicularity
 volcanic vesicles
+water frost
+WATER_FROST
 water-ice-bearing
 water-ice-bearing soils
 weakly cohesive
 weakly cohesive crusty soils
+weathered
+windtail
+windtails
