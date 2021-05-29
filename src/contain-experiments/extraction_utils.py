@@ -234,8 +234,8 @@ if __name__ == "__main__":
 
     text_files = glob.glob("../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/*.txt") + \
                 glob.glob("../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/*.txt")
-                # glob.glob("../../corpus-LPSC/mpf-reviewed+properties-v2/*.txt") + \
-                # glob.glob("../../corpus-LPSC/phx-reviewed+properties-v2/*.txt")
+                glob.glob("../../corpus-LPSC/mpf-reviewed+properties-v2/*.txt") + \
+                glob.glob("../../corpus-LPSC/phx-reviewed+properties-v2/*.txt")
 
     entities = []
     gold_entities = []
