@@ -262,7 +262,6 @@ def extract_gold_relations_from_ann(ann_file):
 
 
 
-
 if __name__ == "__main__":
 
     print("Warning: the statistics are reported over ann files which have at least 1 Target and 1 Component. Ann files that are not satisfying this constraint would not be taken into consideration. ")
