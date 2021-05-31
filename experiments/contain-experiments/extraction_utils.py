@@ -1,6 +1,7 @@
-import copy, re, json, os, glob, warnings
-from os.path import exists, join 
+import copy, re, json, os, glob, warnings, sys
+from os.path import exists, join, abspath, dirname
 
+from my_name_utils import canonical_target_name, canonical_elemin_name
 
 def make_tree_from_ann_file(text_file, ann_file):
     with open(text_file) as text_file, open(ann_file) as ann_file:
@@ -209,9 +210,21 @@ def extract_gold_entities_from_ann(ann_file):
                     entities.append(entity)
     return entities
 
-def get_entity_id(entity):
-    # this function gets a mention-level entity id 
-    entity_id = f"{entity['venue']}, {entity['year']}, {entity['docname']}, {entity['doc_start_char']}, {entity['doc_end_char']}"
+
+def get_entity_id(entity, tuple_level = False):
+    # this function gets a mention-level entity id
+    if tuple_level:
+        if entity['label'] == "Target":
+            name = canonical_target_name(entity['text'])
+        elif entity['label'] in ['Element', 'Mineral']:
+            name = canonical_elemin_name(entity['text'])
+        else:
+            raise NameError(f"Currently do not support getting canonical texts for {entity['label']} entities. ")
+
+        entity_id = f"{entity['venue']}, {entity['year']}, {entity['docname']}, {name}" 
+    else: 
+        entity_id = f"{entity['venue']}, {entity['year']}, {entity['docname']}, {entity['doc_start_char']}, {entity['doc_end_char']}"
+        
     return entity_id
 
 def get_entity_coverage(entities, gold_entities):
@@ -355,23 +368,37 @@ def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None
     return intrasent_entitypairs
 
 
-def get_relation_coverage(entitypairs, gold_relations):
-    # this function calculates the coverage of gold relations in entitypairs
+def get_relation_coverage(entitypairs, gold_relations, tuple_level = False):
+    """
+    This function calculates the coverage of gold relations in entitypairs
+    
+    Argument:
+        entitypairs: a list of pairs of entities
+        
+        gold_relations: a list of pairs of entities and relation annotated
+        
+        tuple_level: a boolean indicating if tuple_level stats should be calculated. If True, tuple-level stats would be calculated (which means an entity is distinguished by its document offset and document id). Otherwise, instance-level (which means an entity is distinguished by its text and document id) stats would be calcualted. 
+    """
+
     gold_ids = set()
     for entity1, entity2, relation in gold_relations:
-        entity1_id = get_entity_id(entity1)
-        entity2_id = get_entity_id(entity2)
+        entity1_id = get_entity_id(entity1, tuple_level = tuple_level)
+        entity2_id = get_entity_id(entity2, tuple_level = tuple_level)
         gold_ids.add(f"{entity1_id},,{entity2_id}")
 
     ids = set()
     for entity1, entity2 in entitypairs:
-        entity1_id = get_entity_id(entity1)
-        entity2_id = get_entity_id(entity2)
+        entity1_id = get_entity_id(entity1, tuple_level = tuple_level
+            )
+        entity2_id = get_entity_id(entity2, tuple_level = tuple_level)
 
         ids.add(f"{entity1_id},,{entity2_id}")
 
     found_num = len(ids.intersection(gold_ids))
     found_percent = found_num/len(gold_ids)
+
+
+    print(f">>> {'Tuple' if tuple_level else 'Instance'} Level Coverage:\n")
 
     print(f"{found_num}/{len(gold_ids)}({found_percent*100:.2f}%) of gold relations could be matched in entity pairs from texts")
 
@@ -391,8 +418,8 @@ if __name__ == "__main__":
 
     text_files = glob.glob("../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/*.txt")  \
                 + glob.glob("../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/*.txt") \
-                # + glob.glob("../../corpus-LPSC/mpf-reviewed+properties-v2/*.txt")  \
-                # + glob.glob("../../corpus-LPSC/phx-reviewed+properties-v2/*.txt")
+                + glob.glob("../../corpus-LPSC/mpf-reviewed+properties-v2/*.txt")  \
+                + glob.glob("../../corpus-LPSC/phx-reviewed+properties-v2/*.txt")
 
     entities = []
     gold_entities = []
@@ -428,6 +455,9 @@ if __name__ == "__main__":
     task_intrasent_entitypairs = [(entity1, entity2) for entity1, entity2 in intrasent_entitypairs if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral']]
 
     # check relation extraction
-    get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations) 
+    get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = False) 
+
+    get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = True) 
+
 
 
