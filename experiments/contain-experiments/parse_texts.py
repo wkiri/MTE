@@ -49,6 +49,7 @@ def main(args):
         command = f"java -cp * edu.stanford.nlp.pipeline.StanfordCoreNLP -outputFormat json -fileList {filelist_path} -outputDirectory {outdir} -prop {join(curpath, 'parse_texts.props')}"
         
         subprocess.run(command.split(), check = True)
+        print(f"removing {filelist_path}")
         os.remove(filelist_path)
 
 

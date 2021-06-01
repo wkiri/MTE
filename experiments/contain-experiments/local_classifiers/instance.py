@@ -119,7 +119,7 @@ class Span_Instance:
                 success = False
                 return success
 
-            new_inputids = prespan_ids + start_marker_ids + spanids + end_marker_ids + new_posspan_ids 
+            new_inputids = prespan_ids + start_marker_ids + spanids + end_marker_ids + posspan_ids 
 
 
         self.bert_start_idx = len(prespan_ids)
@@ -133,7 +133,6 @@ class Span_Instance:
 
     def __str__(self):
         return f"doc_id: {self.doc_id}\ntext: {self.text}, std text: {self.std_text}, nerlabel:{self.ner_label}, involved in relation:{self.relation_label}, ({self.doc_start_char}, {self.doc_end_char}), sentid: {self.sentid}\nsentence:{'' if self.sent_toks is None else ' '.join(self.sent_toks) }\nstart end: ({self.doc_start_char, self.doc_end_char})\n"
-
 
 class Rel_Instance:
     def __init__(self,span1, span2, label_str = None):

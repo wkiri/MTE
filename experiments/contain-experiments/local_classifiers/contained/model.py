@@ -73,7 +73,7 @@ class Model(torch.nn.Module):
       # drop the whole embedding randomly 
       embd_idx = torch.ones(3).to(device)
       dropped_weights = self.dropout(embd_idx).view(3,-1).repeat(1,dimension).view(-1) # 3, dimension 
-      dropped_embds = torch.multiply(torch.cat((start_embeddings1, end_embeddings1, cls_embds), 1), dropped_weights)  
+      dropped_embds = torch.mul(torch.cat((start_embeddings1, end_embeddings1, cls_embds), 1), dropped_weights)  
       logits = self.linear(dropped_embds)
 
 

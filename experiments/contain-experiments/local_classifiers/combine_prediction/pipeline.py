@@ -10,22 +10,7 @@ upperpath = dirname(curpath)
 sys.path.append(upperpath)
 from instance import Rel_Instance, Span_Instance
 from config import label2ind, ind2label
-
-eval_path = join(upperpath, "relation_model")
-sys.path.append(eval_path)
-from evaluation import test_eval, instance_level_eval
-
-def combine_prediction(spans, rels):
-	new_rels = []
-	contained_spanids = set([span.span_id for span in spans if span.pred_relation_label == "Contains"])
-	for rel in rels:
-		new_rel = deepcopy(rel)
-		# only correct relation with span2 not recognized as contained
-		if new_rel.span2.span_id not in contained_spanids:
-			new_rel.pred_relation_label = "O"
-		new_rels.append(new_rel)
-
-	return new_rels
+from eval import test_eval, instance_level_eval
 
 def combine_prediction(spans, rels, span_is_target, boost_precision = True, boost_recall = True):
 
@@ -66,25 +51,8 @@ def combine_prediction(spans, rels, span_is_target, boost_precision = True, boos
             if not has_argument:
                 selected_rel.pred_relation_label = "Contains"
 
-
-
     return new_rels
 
-
-def sanitycheck(spans, rels, span_is_target):
-
-    spanids = set([span.span_id for span in spans])
-    rel_spanids = set([rel.span2.span_id for rel in rels ]) if not span_is_target else set([rel.span1.span_id for rel in rels ])
-    print(f"{len(rel_spanids - spanids)} spanids in rels that are not found in spans:", rel_spanids - spanids)
-    print()
-    print(f"{len(spanids - rel_spanids)} spanids in spans that are not found in rels:", spanids - rel_spanids)
-
-    if len(rel_spanids - spanids):
-        for rel in rels:
-            if not span_is_target and rel.span2.span_id not in spanids:
-                print(rel)
-            if span_is_target and rel.span1.span_id not in spanids:
-                print(rel)
 
 if __name__ == "__main__":
 
@@ -107,9 +75,6 @@ if __name__ == "__main__":
     gold_rels = pickle.load(open(args.gold_rels, "rb"))
 
     span_is_target = "T" in args.spans.split("/")[-1]
-
-
-    sanitycheck(spans, rels, span_is_target)
 
 
     new_rels = combine_prediction(spans, rels, span_is_target, boost_precision = args.boost_precision, boost_recall = args.boost_recall)

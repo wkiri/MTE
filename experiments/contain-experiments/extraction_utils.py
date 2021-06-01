@@ -104,7 +104,7 @@ def merge_and_make_entities(charoffset2label2entities, text_file):
     return entities
 
 
-def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = None):
+def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = None, use_component = False):
     """
     this function extracts entities from text file using a tree and doc
     Argument:
@@ -115,6 +115,8 @@ def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = N
         doc:  a dictionary that stores corenlp's parsing for text_file
 
         corenlp_file: is a file that stores corenlp's parsing for text_file
+
+        use_component: whether map element and mineral to component 
 
     """
     
@@ -163,6 +165,11 @@ def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = N
         e["venue"] = venue
         e["docname"] = docname
         e["year"] = year 
+
+    if use_component:
+        for e in entities:
+            if e['label'] in ['Element', 'Mineral']:
+                e['label'] = 'Component'
     
     return entities
     
@@ -179,7 +186,7 @@ def get_docid(ann_file):
     return venue, year, docname, doc_id
 
 # def get_gold_annotid(ann_file):
-def extract_gold_entities_from_ann(ann_file):
+def extract_gold_entities_from_ann(ann_file, use_component = False):
     venue, year, docname, _ = get_docid(ann_file)
 
     entities = []
@@ -208,6 +215,12 @@ def extract_gold_entities_from_ann(ann_file):
                         "docname": docname 
                     }
                     entities.append(entity)
+
+    if use_component:
+        for e in entities:
+            if e['label'] in ['Element', 'Mineral']:
+                e['label'] = 'Component'
+
     return entities
 
 
@@ -216,7 +229,7 @@ def get_entity_id(entity, tuple_level = False):
     if tuple_level:
         if entity['label'] == "Target":
             name = canonical_target_name(entity['text'])
-        elif entity['label'] in ['Element', 'Mineral']:
+        elif entity['label'] in ['Element', 'Mineral', 'Component']:
             name = canonical_elemin_name(entity['text'])
         else:
             raise NameError(f"Currently do not support getting canonical texts for {entity['label']} entities. ")
@@ -224,7 +237,7 @@ def get_entity_id(entity, tuple_level = False):
         entity_id = f"{entity['venue']}, {entity['year']}, {entity['docname']}, {name}" 
     else: 
         entity_id = f"{entity['venue']}, {entity['year']}, {entity['docname']}, {entity['doc_start_char']}, {entity['doc_end_char']}"
-        
+
     return entity_id
 
 def get_entity_coverage(entities, gold_entities):
@@ -240,7 +253,7 @@ def get_entity_coverage(entities, gold_entities):
     print(f"There are {nonexisting_num}/{len(ids)}({nonexisting_percent*100:.2f}%) nonexisting entities extracted")
 
 
-def extract_gold_relations_from_ann(ann_file):
+def extract_gold_relations_from_ann(ann_file, use_component = False):
 
     annotid_annotid_relation = []
     for annotation_line in open(ann_file).readlines():
@@ -269,7 +282,7 @@ def extract_gold_relations_from_ann(ann_file):
                 for c in cont:
                     annotid_annotid_relation.append((t, c, relation))
 
-    gold_entities = extract_gold_entities_from_ann(ann_file)
+    gold_entities = extract_gold_entities_from_ann(ann_file, use_component = use_component)
     annotid2entities = {e["annot_id"]: e for e in gold_entities}
 
     gold_relations = []
@@ -280,7 +293,7 @@ def extract_gold_relations_from_ann(ann_file):
 
     return gold_relations
 
-def extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = None, doc = None):
+def extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = None, doc = None,use_component = False):
     # this function extracts gold relations with entities in the same sentence
 
     if doc is None and corenlp_file is None:
@@ -289,7 +302,7 @@ def extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = None, doc 
         # read corenlp file
         doc = json.load(open(corenlp_file, "r"))
 
-    gold_relations = extract_gold_relations_from_ann(ann_file)
+    gold_relations = extract_gold_relations_from_ann(ann_file, use_component = use_component)
 
     offset2sentid = get_offset2sentid(doc = doc, corenlp_file = corenlp_file)
 
@@ -335,7 +348,7 @@ def get_sentid_from_offset(doc_start_char, doc_end_char, offset2sentid):
             return offset2sentid[offset]
     return sentid 
 
-def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None):
+def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None, use_component = False):
     
     # this function extract all pairs of entities from the same sentence as relation candidates. note that here we would get duplicated entity pairs with reverse order, such as (t1, t2) and (t2, t1)
     """
@@ -354,7 +367,7 @@ def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None
         # read corenlp file
         doc = json.load(open(corenlp_file, "r"))
 
-    entities = extract_entities_from_text(text_file, ann_file, doc = doc, corenlp_file = corenlp_file)
+    entities = extract_entities_from_text(text_file, ann_file, doc = doc, corenlp_file = corenlp_file, use_component = use_component)
 
     # get all possible entity pairs. 
     intrasent_entitypairs = []
@@ -410,21 +423,32 @@ def get_relation_coverage(entitypairs, gold_relations, tuple_level = False):
 
 if __name__ == "__main__":
 
+    # sample codes to extract and check stats 
+
     print("Warning: the statistics are reported over ann files which have at least 1 Target and 1 Component. Ann files that are not satisfying this constraint would not be taken into consideration. ")
     corenlp_dir = "../../parse/"
 
     gold_ids = set()
     ids = set()
 
-    text_files = glob.glob("../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/*.txt")  \
-                + glob.glob("../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/*.txt") \
-                + glob.glob("../../corpus-LPSC/mpf-reviewed+properties-v2/*.txt")  \
-                + glob.glob("../../corpus-LPSC/phx-reviewed+properties-v2/*.txt")
+
+    text_files = []
+    inputdirs = [
+    # "../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8", 
+    # "../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/", 
+    "../../corpus-LPSC/mpf-reviewed+properties-v2/", 
+    # "../../corpus-LPSC/phx-reviewed+properties-v2/"
+    ]
+
+    for inputdir in inputdirs:
+        text_files.extend(glob.glob(join(inputdir, "*.txt")))
 
     entities = []
     gold_entities = []
+    
     gold_relations = []
     intrasent_goldrelations = []
+
     intrasent_entitypairs = []
 
     for text_file in text_files:
@@ -436,9 +460,10 @@ if __name__ == "__main__":
 
         entities.extend(extract_entities_from_text(text_file, ann_file,corenlp_file = corenlp_file))
         gold_entities.extend(extract_gold_entities_from_ann(ann_file))
-        gold_relations.extend(extract_gold_relations_from_ann(ann_file))
 
+        gold_relations.extend(extract_gold_relations_from_ann(ann_file))
         intrasent_goldrelations.extend(extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = corenlp_file))
+
         intrasent_entitypairs.extend(extract_intrasent_entitypairs_from_text_file(text_file, ann_file, corenlp_file = corenlp_file))
 
     # check entity extraction 
@@ -449,14 +474,19 @@ if __name__ == "__main__":
     # get task-specific entities coverage 
     get_entity_coverage(task_entities, task_gold_entities)
 
+    task_goldrelations = [(entity1, entity2, relation) for entity1, entity2, relation in gold_relations if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral'] and relation == 'Contains']
 
     task_intrasent_goldrelations = [(entity1,entity2, relation ) for entity1, entity2, relation in intrasent_goldrelations if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral'] and relation == 'Contains']
 
     task_intrasent_entitypairs = [(entity1, entity2) for entity1, entity2 in intrasent_entitypairs if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral']]
 
     # check relation extraction
+    print()
+    print(f"Task-specific Gold Relations: {len(task_goldrelations)} 'Contains' relations between Target and Compoent")
+    print("Task-specific Intra-sentence Relation Coverage:")
     get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = False) 
-
+    
+    print("Task-specific Intra-sentence Relation Coverage:")
     get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = True) 
 
 
