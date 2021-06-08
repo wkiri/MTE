@@ -65,7 +65,7 @@ Target composition and properties:
   Fields include the "canonical" component name (e.g., Mn -> Manganese)
   and the component label (Element or Mineral).
 
-- properties: Table containing unique property names.  Each property
+- properties.csv: Table containing unique property names.  Each property
   is stored in all lower case with spaces between words.
 
 - contains.csv: Table linking targets to components.  Fields include
@@ -74,7 +74,7 @@ Target composition and properties:
   they appear in the same sentence, the sentence ids are the same.
 
 - has_property: Table linking targets to properties.  Fields include
-  the target id (as above), proeprty name (as above), and sentence ids
+  the target id (as above), property name (as above), and sentence ids
   (as above) for the location of the target and property.
 
 Methods
@@ -86,6 +86,16 @@ Automated text analysis methods were accompanied by manual review of
 the extracted information.  See reference [2] for additional details
 and a summary of content specific to the Mars Pathfinder and Mars
 Phoenix Lander missions that appear in this bundle.
+
+Citation
+--------
+
+If you use the contents of the Mars Target Encyclopedia in your own
+work, please include this citation:
+
+Kiri Wagstaff, Raymond Francis, Matthew Golombek, Steven Lu, Ellen
+Riloff, and Leslie Tamppari. (2021). Mars Target Encyclopedia (Version
+1.2) [Data set]. http://doi.org/10.17189/1520763
 
 References
 ----------
