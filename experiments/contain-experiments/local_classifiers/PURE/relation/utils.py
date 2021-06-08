@@ -45,8 +45,11 @@ def generate_relation_data(entity_data, use_gold=False, context_window=0, is_tra
                 gold_ner[ner.span] = ner.label
             
             gold_rel = {}
+            goldreltext2label = {}
             for rel in sent.relations:
-                gold_rel[rel.pair] = rel.label
+                # gold_rel[rel.pair] = rel.label
+                goldreltext2label[rel.pair] = rel.label
+                gold_rel[(rel.offset1, rel.offset2)] = rel.label
             
             sent_start = 0
             sent_end = len(sent.text)
@@ -81,8 +84,20 @@ def generate_relation_data(entity_data, use_gold=False, context_window=0, is_tra
 
                     # ADDED. filter pairs
                     if sub.label != 'Target' or obj.label not in ['Component', 'Element', 'Mineral']:
-                        continue      
-                    label = gold_rel.get((sub.span, obj.span), 'O')
+                        continue 
+
+                    # label = gold_rel.get((sub.span, obj.span), 'O')
+                    label = gold_rel.get((sub.offset, obj.offset), 'O')
+                    if is_training:
+
+                        if label == 'O':
+                            # check if the texts of sub and obj exist in gold annotation. If yes then dump this pair from training instances since we are not sure if this pair is not annotated or negative sample
+
+                            if (sub.span, obj.span) in goldreltext2label:
+                                continue
+                            else:
+                                label = 'O'
+
                     sample = {}
                     sample['docid'] = doc._doc_key
                     sample['id'] = '%s@%d::(%d,%d)-(%d,%d)'%(doc._doc_key, sent.sentence_ix, sub.span.start_doc, sub.span.end_doc, obj.span.start_doc, obj.span.end_doc)
