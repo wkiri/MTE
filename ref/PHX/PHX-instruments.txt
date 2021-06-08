@@ -1,0 +1,27 @@
+APSS
+Electrochemistry
+IDD
+Initial TEGA
+LIDAR
+Light detection and ranging
+MARDI
+Mars Descent Imager
+MECA
+MECA OM
+MET
+Meteorological Station
+Microscopy
+Microscopy, Electrochemistry, and Conductivity Analyzer
+OM
+RA
+RAC
+Robotic Arm
+Robotic Arm Camera
+SEIS
+SSI
+Surface Stereo Imager
+TECP
+TEGA
+TEMPERATURE SENSOR
+Thermal and Evolved Gas Analyzer
+WCL

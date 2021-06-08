@@ -176,7 +176,7 @@ A18	Amount E17 Contains_High
 T95	Element 6002 6003	K
 T97	Mineral 6004 6012	feldspar
 T99	Mineral 6002 6012	K-feldspar
-T138	Mineral 6018 6028	ron oxides
+T138	Mineral 6017 6028	iron oxides
 T139	Contains 6090 6094	high
 E18	Contains:T139 Cont:T9 Cont2:T10 Targ:T37
 A19	Amount E18 Contains_High

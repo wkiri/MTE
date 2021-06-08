@@ -1,0 +1,55 @@
+APX
+APXS
+ASI/MET
+ASI/MET mast
+ASI/Met
+ASI/Met WIND SENSOR
+ASIMET
+Accelerometer
+Accelerometers
+Alpha Proton X-Ray Spectrometer
+Alpha-Proton Spectrometer
+Alpha-Proton-X-Ray
+Alpha-Proton-Xray Spectrometer
+Alpha-Xray-Proton
+Alpha-Xray-Proton Spectrometer
+Alpha-proton
+Altimeter
+Atmospheric Structure Instrument/Meterological Package
+Atmospheric Structure Instrument/Meterology Package
+CCD
+CCDs
+Camera
+Cameras
+Color camera
+Color cameras
+IMP
+IMP photometric target
+Imager
+Imager for Mars Pathfinder
+Imagers
+Lander
+MPF APXS
+MPF IMAGER FOR MARS PATHFINDER
+Magnet Experiment
+Magnetic target
+Magnetic targets
+Material Adherence Experiment
+Pathfinder APXS
+Pathfinder Camera
+Payload
+Pitot tube
+Pressure sensor
+Pressure sensor tube
+RADAR
+Rover
+Sojourner
+STRUCTURE INVESTIGATION
+Stereo_Camera
+Temperature sensor
+Temperature sensors
+Thermocouple
+Wind sensor
+Wind sock
+Wind socks
+windsocks

@@ -1,0 +1,42 @@
+andesites
+andesitic
+barnacle-like structures
+basaltic
+bluer
+boulders
+brighter reflectance
+bulk densities
+cobbles
+composition
+conglomerate
+conglomeritic texture
+duneforms
+epressions
+flat
+fluted
+flute-like
+fracture
+grey/dark rock
+hardpan material
+highly irregular
+igneous
+impact crater
+layers
+"light"-colored grains
+mm-sized grains
+ovoidal
+red/bright rocks
+rock
+sedimentary
+sedimentary fabric
+sedimentary rock type
+small-scale cratering
+socket
+soil-free rock
+soilfree rock
+soil-like
+spectra
+transverse
+vesicle
+vesicularity
+weathered

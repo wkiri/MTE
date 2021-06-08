@@ -1,0 +1,167 @@
+APX
+APXS
+ASI/MET
+ASI/MET mast
+ASI/Met
+ASI/Met WIND SENSOR
+ASIMET
+Accelerometer
+Accelerometers
+Alpha Proton X-Ray Spectrometer
+Alpha-Proton Spectrometer
+Alpha-Proton-X-Ray
+Alpha-Proton-Xray Spectrometer
+Alpha-Xray-Proton
+Alpha-Xray-Proton Spectrometer
+Alpha-proton
+Altimeter
+Atmospheric Structure Instrument/Meterological Package
+Atmospheric Structure Instrument/Meterology Package
+CCD
+CCDs
+Camera
+Cameras
+Color camera
+Color cameras
+IMP
+IMP photometric target
+Imager
+Imager for Mars Pathfinder
+Imagers
+Lander
+MPF APXS
+MPF IMAGER FOR MARS PATHFINDER
+Magnet Experiment
+Magnetic target
+Magnetic targets
+Material Adherence Experiment
+Pathfinder APXS
+Pathfinder Camera
+Payload
+Pitot tube
+Pressure sensor
+Pressure sensor tube
+RADAR
+Rover
+Sojourner
+STRUCTURE INVESTIGATION
+Stereo_Camera
+Temperature sensor
+Temperature sensors
+Thermocouple
+Wind sensor
+Wind sock
+Wind socks
+windsocks
+Hazcam
+Magnet Experiment
+MI
+Microscopic Imager
+MICROSCOPIC IMAGER
+Mini-TES
+Mossbauer Spectrometer
+Navcam
+Navigation cameras
+Pancam
+PANCAM INSTRUMENTS
+Pancams
+APXS
+ChemCam
+CheMin
+DAN
+Descent Imager
+GCMS
+LIBS
+Mastcam
+Rock Abrasion Tool
+RAT
+RAT-ground
+REMS
+MAHLI
+RAD
+SAM
+XRF/XRD
+APSS
+IDD
+Light detection and ranging
+LIDAR
+Mars Descent Imager
+MARDI
+Meteorological Station
+MET
+Microscopy, Electrochemistry, and Conductivity Analyzer
+MECA
+Robotic Arm
+RA
+Robotic Arm Camera
+RAC
+SEIS
+Surface Stereo Imager
+SSI
+Thermal and Evolved Gas Analyzer
+TEGA
+PIXL
+SuperCam
+SuperCam Microphone
+IRTM
+ORBITAL CAMERA
+Viking Cameras
+Viking IRTM
+GAMMA-RAY SPECTROMETER
+GRS
+HEND/Odyssey
+MARIE
+MARS ODYSSEY GRS
+THEMIS
+MARS GLOBAL SURVEYOR MOC
+MGS/MOC
+MGS-TES
+MGS TES
+MOC
+MOLA
+TES
+CTX
+CRISM
+HiRISE
+MARCI
+MCS
+MRO-MCS
+SHARAD
+HRSC
+OMEGA
+SPICAM
+LOLA
+brush
+camera
+Chromatograph
+Chronometer
+diffractometer
+drill
+instrument
+Laser Altimeter
+microprobe
+microscope
+Mini-Corer
+Photomicrograph
+probe
+Radar
+Raman Spectrometer
+retroreflector
+scoop
+Seismometer
+SEISMOMETERS
+sensors
+spectrometer
+spectrophotometer
+stereocameras
+X-ray Fluorescence
+X-RAY SPECTROMETER
+XRD
+Electrochemistry
+Initial TEGA
+MECA OM
+Microscopy
+OM
+TECP
+TEMPERATURE SENSOR
+WCL

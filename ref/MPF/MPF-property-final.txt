@@ -1,0 +1,77 @@
+angular
+banding
+bands
+bright
+bright material
+bump
+bumps
+chemically etched
+cloddy
+cloddy deposits
+cohesion
+crack
+crust
+dark
+dome
+dune
+dust
+eolian
+eolian lag deposit
+exfoliation
+facets
+flute
+flutes
+fluvial deposits
+friction angle
+granule
+grooves
+hemisphere
+imbricated
+indurated
+knob
+knobby
+knobs
+knobs
+lag deposit
+large friction angle
+light-dark bands
+linear features
+lineations
+lobes
+massive
+pebbly
+pebbly surfaces
+percussion mark
+pit
+pits
+pits
+pitted
+planar
+poorly sorted
+prismatic
+prominences
+protrusions
+pyramidal
+red
+ridged
+ridged surfaces
+rough
+rounded
+rounded rocks
+sand
+sand or granule
+semiangular
+semirounded
+sharp
+side facets
+silica content
+small cohesion
+smooth
+soil-like deposits
+tabular
+tabular rocks
+ventifact
+ventifact pits
+vesicles
+vesicular
+volcanic vesicles

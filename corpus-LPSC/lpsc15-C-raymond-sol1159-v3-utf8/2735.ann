@@ -159,7 +159,7 @@ T104	Target 7921 7923	CH
 T110	Target 8070 8072	CH
 T113	Element 7801 7805	iron
 T115	Mineral 7806 7813	sulfate
-T137	Mineral 7802 7813	ron-sulfate
+T137	Mineral 7801 7813	iron-sulfate
 T138	Target 7839 7841	CH
 T142	Element 7886 7890	iron
 T146	Element 1606 1612	sulfur
