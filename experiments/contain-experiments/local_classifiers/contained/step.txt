@@ -1,9 +1,0 @@
-1.PRUNING negative training instances:
-	 One important thing is that we only generate training instances from sentences where the sentence contains at least one target and one element/mineral (Search "IMPORTANT" in make_train_val_test.py and check the comment). This greatly reduces the number of negative element and minerals  (those in a sentence without any target), and boost the performance. Without doing this, the training contains only 8% positive instances, which makes the model to predict negative all the time with the performance is ~20+ f1 (~70 precision but 40 recall) for contain categorty. 
-
-	 **** For elements/minerals that are only in cross sentence relaton and it cooccurs with target in a sentence, we will take it in training and testing time. during the training time, it would receive a negative relation label.
-
-	 Another reason to do it is that we want to compare to the princeton model fairly. As a result, it is important to use the same set of training instances: target-elemin relations from one sentence, and elemin without any target in a sentence wouldn't be treated as training instances. 
-2. we use std text to make training and testing instances (inserting std text into the original sentence)
-
-3. during preprocessing, if the sentence is too long, truncate iteratively the prespans and posspans
