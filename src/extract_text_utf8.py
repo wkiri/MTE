@@ -15,12 +15,18 @@ from tika import parser
 from progressbar import ProgressBar, ETA, Bar, Percentage
 
 # Local files
-pdfdir  = '../../pdfs/lpsc14-pdfs'
-textdir = '../../MTE-corpus/lpsc14-text'
+#pdfdir  = '../../pdfs/lpsc14-pdfs'
+#textdir = '../../MTE-corpus/lpsc14-text'
 #pdfdir  = '../../pdfs/lpsc15-pdfs'
 #textdir = '../../MTE-corpus/lpsc15-text'
 #pdfdir  = '../../pdfs/lpsc16-pdfs'
 #textdir = '../../MTE-corpus/lpsc16-text'
+#pdfdir  = '../pdfs/lpsc17-pdfs'
+#textdir = 'lpsc17-text'
+#pdfdir  = '../pdfs/lpsc18-pdfs'
+#textdir = 'lpsc18-text'
+pdfdir  = '../pdfs/lpsc19-pdfs'
+textdir = 'lpsc19-text'
 
 dirlist = [fn for fn in os.listdir(pdfdir) if
            fn.endswith('.pdf')]
@@ -37,9 +43,16 @@ pbar = ProgressBar(widgets=widgets, maxval=len(dirlist)).start()
     
 for (i, fn) in enumerate(dirlist):
     pbar.update(i)
-    #if int(fn.split('.')[0]) != 1001:
+    #if int(fn.split('.')[0]) not in [1523, 1662, 1853, 2403, 2573, 1856, 2038, 2124, 2504, 2595]:
     #    continue
     #print fn
+
+    outfile = os.path.join(textdir, fn[0:-4] + '.txt')
+    # If the output file already exists, skip it
+    if os.path.exists(outfile):
+        continue
+
+    # Parse content with Tika
     parsed = parser.from_file(pdfdir + '/' + fn)
 
     try:
@@ -50,7 +63,7 @@ for (i, fn) in enumerate(dirlist):
         print 'Tika could not parse %s.' % fn
         continue
 
-    with io.open(textdir + '/' + fn[0:-4] + '.txt', 'w', encoding='utf8') as outf:
+    with io.open(outfile, 'w', encoding='utf8') as outf:
         cleaned = parsed['content']
 
         # Translate some UTF-8 punctuation to ASCII
