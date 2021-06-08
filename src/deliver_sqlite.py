@@ -37,21 +37,25 @@ def main(db_file, out_dir, fix_double_quotes):
         print '[INFO] internal double quotes were replaced with single ' \
               'quotes for targets.csv'
 
-    # Export the `components` table into components.csv with "orphaned"
-    # components removed.
-    components_csv = os.path.join(out_dir, 'components.csv')
-    components_df = pd.read_sql_query('SELECT * FROM components '
-                                      'WHERE component_name IN '
-                                      '(SELECT component_name FROM contains);',
-                                      connection)
-    components_df.to_csv(components_csv, index=False, encoding='utf-8',
-                         line_terminator='\r\n')
-    print '[INFO] components table exported to %s' % components_csv
+    # Export the `components` and `properties` tables CSV files
+    # with "orphaned" components (those that do not appear in ref_table) removed.
+    for (field, table, ref_table) in \
+        [('component_name', 'components', 'contains'),
+         ('property_name', 'properties', 'has_property')]:
+        csv_file = os.path.join(out_dir, '%s.csv' % table)
+        df = pd.read_sql_query('SELECT * FROM %s '
+                               'WHERE %s IN '
+                               '(SELECT %s FROM %s);' %
+                               (table, field, field, ref_table),
+                               connection)
+        df.to_csv(csv_file, index=False, encoding='utf-8',
+                  line_terminator='\r\n')
+        print('[INFO] %s table exported to %s' % (table, csv_file))
 
-    if fix_double_quotes:
-        replace_internal_double_quote(components_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for components.csv'
+        if fix_double_quotes:
+            replace_internal_double_quote(csv_file, replace_with="''")
+            print('[INFO] internal double quotes were replaced with single '
+                  'quotes for %s' % csv_file)
 
     # Export the `sentences` table into sentences.csv.
     sentences_csv = os.path.join(out_dir, 'sentences.csv')
