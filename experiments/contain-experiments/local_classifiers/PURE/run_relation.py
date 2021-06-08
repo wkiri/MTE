@@ -280,7 +280,7 @@ def main(args):
 
     # train set
     if args.do_train:
-        train_dataset, train_examples, train_nrel = generate_relation_data(args.train_file, use_gold=True, context_window=args.context_window)
+        train_dataset, train_examples, train_nrel = generate_relation_data(args.train_file, use_gold=True, context_window=args.context_window, is_training = True)
 
     # dev set
     if (args.do_eval and args.do_train):

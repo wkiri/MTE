@@ -19,15 +19,13 @@ from extraction_utils import get_docid, extract_gold_entities_from_ann,extract_i
 
 
 
-def extract_data_for_pure(ann_file, text_file, cornelp_file,  use_component, max_len = 512):
-
-    accept_ner2 = ['Component'] if use_component else ['Element', 'Mineral']
+def extract_data_for_pure(ann_file, text_file, cornelp_file,  max_len = 512):
 
     venue, year, docname, _ = get_docid(text_file)
 
     doc = json.load(open(cornelp_file, 'r'))
 
-    intrasent_gold_relations = [ (e1, e2, relation) for e1, e2, relation in extract_intrasent_goldrelations_from_ann(ann_file, doc = doc, use_component = use_component) if relation == 'Contains' and e1['label'] == 'Target' and e2['label'] in accept_ner2]
+    intrasent_gold_relations = [ (e1, e2, relation) for e1, e2, relation in extract_intrasent_goldrelations_from_ann(ann_file, doc = doc) if relation == 'Contains' and e1['label'] == 'Target' and e2['label'] in ['Element', 'Mineral']]
     gold_relation_ids = set([f"{e1['venue']},{e1['year']},{e1['docname']},{e1['doc_start_char']},{e1['doc_end_char']},{e2['doc_start_char']},{e2['doc_end_char']}" for e1, e2, relation in intrasent_gold_relations])
 
 
@@ -39,51 +37,63 @@ def extract_data_for_pure(ann_file, text_file, cornelp_file,  use_component, max
     ret_doc["ner"] = [[] for _ in ret_doc['sentences']]
     ret_doc["relations"] = [[] for _ in ret_doc['sentences']]
 
-    # entities = [e for e in extract_entities_from_text(text_file, ann_file, doc = doc, use_component = use_component) if e['label'] in (['Target'] + accept_ner2) ] 
+    entities = [e for e in extract_entities_from_text(text_file, ann_file, doc = doc) if e['label'] in ['Target', 'Element', 'Mineral']]
 
     # group entities by sentence id.
-    for e1, e2 in extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = doc, use_component = use_component):
-        sentid = e1['sentid']
+    sentence_entities = [[] for _ in ret_doc['sentences']]
+    for e in entities:
+        sentid = e['sentid']
+        sentence_entities[sentid].append(e)
 
+
+    # entities is a list of list, each list is a sentence. here we take only entity pairs from the same sentence
+    for sentid, entities in enumerate(sentence_entities):
+        ners = []
+        relations = []
         sent_toks = ret_doc['sentences'][sentid]
-        cum_toks = sum([len(ret_doc["sentences"][i]) for i in range(sentid)])
 
+        for i in range(len(entities)):
+            e1 = entities[i]
+            ner1 = e1["label"]
 
-        ner1 = e1["label"]
+            if ner1 not in ['Target', 'Element', 'Mineral']:
+                continue
 
-        if ner1 not in ['Target'] + accept_ner2:
-            continue
-        
-        span1_doc_start_char = e1["doc_start_char"]
-        span1_doc_end_char = e1["doc_end_char"]
-
-        span1 = [e1["sent_start_idx"] + cum_toks, e1["sent_end_idx"] - 1 + cum_toks, ner1]
-
-        
-        if tuple(span1) not in set([tuple(s) for s in ret_doc['ner'][sentid]]):
-
-            ret_doc["ner"][sentid].append(span1)
-
-
-        ner2 = e2['label']
-        if ner1 != 'Target' or ner2 not in accept_ner2:
-            continue
-
-        span2_doc_start_char = e2["doc_start_char"]
-        span2_doc_end_char = e2["doc_end_char"]
-
-        span2 = [e2["sent_start_idx"] + cum_toks,e2["sent_end_idx"] - 1 + cum_toks, ner2]
-
-        if tuple(span2) not in set([tuple(s) for s in ret_doc['ner'][sentid]]):
-            ret_doc["ner"][sentid].append(span2)
-
-        if f"{e1['venue']},{e1['year']},{e1['docname']},{e1['doc_start_char']},{e1['doc_end_char']},{e2['doc_start_char']},{e2['doc_end_char']}" in gold_relation_ids:
-
-            ret_doc['relations'][sentid].append([span1[0], span1[1], span2[0], span2[1], 'Contains'])
+            if ner1 in ['Element', 'Mineral']:
+                ner1 = 'Component'
             
-    for sentid, _ in enumerate(ret_doc['ner']):
-        ret_doc['ner'][sentid] = list(sorted(ret_doc['ner'][sentid], key = lambda x: x[0]))
+            span1_doc_start_char = e1["doc_start_char"]
+            span1_doc_end_char = e1["doc_end_char"]
 
+            cum_toks = sum([len(ret_doc["sentences"][i]) for i in range(sentid)])
+            span1 = [e1["sent_start_idx"] + cum_toks, e1["sent_end_idx"] - 1 + cum_toks, ner1]
+
+   
+            ners.append(span1)
+
+
+            for j in range(len(entities)):
+                if j == i: continue
+                e2 = entities[j]
+                ner2 = e2['label']
+
+                if ner1 != 'Target' or ner2 not in ['Element', 'Mineral']:
+                    continue
+
+                # changed label to component 
+                ner2 = 'Component'
+
+                span2_doc_start_char = e2["doc_start_char"]
+                span2_doc_end_char = e2["doc_end_char"]
+
+                span2 = [e2["sent_start_idx"] + cum_toks,e2["sent_end_idx"] - 1 + cum_toks, ner2]
+
+                if f"{e1['venue']},{e1['year']},{e1['docname']},{e1['doc_start_char']},{e1['doc_end_char']},{e2['doc_start_char']},{e2['doc_end_char']}" in gold_relation_ids:
+
+                    relations.append([span1[0], span1[1], span2[0], span2[1], 'Contains'])
+
+        ret_doc["ner"][sentid] = list(sorted(ners, key = lambda x: x[0]))
+        ret_doc["relations"][sentid] = relations
 
     return ret_doc
 
@@ -101,15 +111,13 @@ def find_tok_idx(doc_char, tokens, is_end = False):
 
 
 
-def extract_gold_relations_for_pure(ann_file, text_file, cornelp_file, use_component):
-
-    accept_ner2 = ['Component'] if use_component else ['Element', 'Mineral']
+def extract_gold_relations_for_pure(ann_file, text_file, cornelp_file):
 
     venue, year, docname, _ = get_docid(text_file)
 
     doc = json.load(open(cornelp_file, 'r'))
 
-    intrasent_gold_relations = [ (e1, e2, relation) for e1, e2, relation in extract_intrasent_goldrelations_from_ann(ann_file, doc = doc, use_component = use_component) if relation == 'Contains' and e1['label'] == 'Target' and e2['label'] in accept_ner2]
+    intrasent_gold_relations = [ (e1, e2, relation) for e1, e2, relation in extract_intrasent_goldrelations_from_ann(ann_file, doc = doc) if relation == 'Contains' and e1['label'] == 'Target' and e2['label'] in ['Element', 'Mineral']]
     
     gold_relins = []
     for e1, e2, relation in intrasent_gold_relations:
@@ -121,6 +129,9 @@ def extract_gold_relations_for_pure(ann_file, text_file, cornelp_file, use_compo
 
         ner1 = e1["label"]
         ner2 = e2['label']
+
+        # change label to component 
+        ner2 = 'Component'
 
         span1 = Span_Instance(venue, year, docname, e1['doc_start_char'], e1['doc_end_char'], e1['text'], ner1)
 
@@ -134,26 +145,26 @@ def extract_gold_relations_for_pure(ann_file, text_file, cornelp_file, use_compo
 
 
 
-def extract_data(ann_files, text_files, corenlp_files, outfile, use_component):
+def extract_data(ann_files, text_files, corenlp_files, outfile):
     outdir = "/".join(outfile.split("/")[:-1])
     if not exists(outdir):
         os.makedirs(outdir)
 
-    docs = [ extract_data_for_pure(ann_file, text_file, corenlp_file, use_component) for ann_file, text_file, corenlp_file in zip(ann_files, text_files, corenlp_files)]
+    docs = [ extract_data_for_pure(ann_file, text_file, corenlp_file) for ann_file, text_file, corenlp_file in zip(ann_files, text_files, corenlp_files)]
 
     print(f"saving to {outfile}")
     with open(outfile, "w") as f:
         f.write("\n".join([json.dumps(d) for d in docs]))
 
 
-def extract_gold_data(ann_files, text_files, corenlp_files, outfile, use_component):
+def extract_gold_data(ann_files, text_files, corenlp_files, outfile):
     outdir = "/".join(outfile.split("/")[:-1])
     if not exists(outdir):
         os.makedirs(outdir)
 
     gold_relations = []
     for ann_file, text_file, corenlp_file in zip(ann_files, text_files, corenlp_files):
-        gold_relations.extend(extract_gold_relations_for_pure(ann_file, text_file, corenlp_file, use_component))
+        gold_relations.extend(extract_gold_relations_for_pure(ann_file, text_file, corenlp_file))
 
     print(f"generated {len(gold_relations)} gold instances for evaluation.")
     print(f"saving to {outfile}")
@@ -161,7 +172,6 @@ def extract_gold_data(ann_files, text_files, corenlp_files, outfile, use_compone
         pickle.dump(gold_relations, f)
 
 def main(args):
-    use_component = args.use_component
 
     proj_path = dirname(dirname(dirname(dirname(curpath))))
     datadir_prefix = join(proj_path, "corpus-LPSC")
@@ -180,8 +190,8 @@ def main(args):
 
     assert all([exists(k) for k in train_annfiles + train_textfiles + train_corenlpfiles])
     
-    outfile = "./data/train/docs.json"
-    extract_data(train_annfiles, train_textfiles, train_corenlpfiles, outfile, use_component)
+    outfile = "train/docs.json"
+    extract_data(train_annfiles, train_textfiles, train_corenlpfiles, outfile)
 
     # ---- make val samples ----
     print(" ----- making dev samples ... ")
@@ -191,10 +201,8 @@ def main(args):
     dev_corenlpfiles = [join(corenlp15_indir, file.split("/")[-1].split(".ann")[0] + ".txt.json") for file in dev_annfiles]
     assert all([exists(k) for k in dev_annfiles + dev_textfiles + dev_corenlpfiles])
 
-    outfile = "./data/dev/docs.json"
-    extract_data(dev_annfiles, dev_textfiles, dev_corenlpfiles, outfile, use_component)
-    outfile = "./data/dev/gold_relins.pkl"
-    extract_gold_data(dev_annfiles, dev_textfiles, dev_corenlpfiles, outfile, use_component)
+    outfile = "dev/docs.json"
+    extract_data(dev_annfiles, dev_textfiles, dev_corenlpfiles, outfile)
 
     # -------- make test samples ---------
     print(" ----- making test samples ... ")
@@ -217,20 +225,17 @@ def main(args):
 
     assert all([exists(k) for k in test_annfiles + test_textfiles + test_corenlpfiles])
 
-    outfile = "./data/test/docs.json"
-    extract_data(test_annfiles, test_textfiles, test_corenlpfiles, outfile, use_component)
-    outfile = "./data/test/gold_relins.pkl"
-    extract_gold_data(test_annfiles, test_textfiles, test_corenlpfiles, outfile, use_component)
+    outfile = "test/docs.json"
+    extract_data(test_annfiles, test_textfiles, test_corenlpfiles, outfile)
+    outfile = "test/gold_relins.pkl"
+    extract_gold_data(test_annfiles, test_textfiles, test_corenlpfiles, outfile)
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--test_venues", nargs = "+", required = True)
-    parser.add_argument("--use_component", type = int, choices = [0,1], required = True)
-
     args = parser.parse_args()
     main(args)
  
-
 
 

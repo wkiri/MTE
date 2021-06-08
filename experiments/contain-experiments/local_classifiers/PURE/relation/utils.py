@@ -18,7 +18,7 @@ def decode_sample_id(sample_id):
 
     return doc_sent, sub, obj
 
-def generate_relation_data(entity_data, use_gold=False, context_window=0):
+def generate_relation_data(entity_data, use_gold=False, context_window=0, is_training = False):
     """
     Prepare data for the relation model
     If training: set use_gold = True
@@ -80,8 +80,8 @@ def generate_relation_data(entity_data, use_gold=False, context_window=0):
                     obj = sent_ner[y]
 
                     # ADDED. filter pairs
-                    if sub.label != 'Target' or obj.label != 'Component':
-                        continue
+                    if sub.label != 'Target' or obj.label not in ['Component', 'Element', 'Mineral']:
+                        continue      
                     label = gold_rel.get((sub.span, obj.span), 'O')
                     sample = {}
                     sample['docid'] = doc._doc_key
