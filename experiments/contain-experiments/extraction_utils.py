@@ -1,9 +1,98 @@
 import copy, re, json, os, glob, warnings, sys
 from os.path import exists, join, abspath, dirname
+from copy import deepcopy 
 
 from my_name_utils import canonical_target_name, canonical_elemin_name
 
-def make_tree_from_ann_file(text_file, ann_file):
+
+def add_entities(queue, e):
+    # add entities and merge entities if possible. Merge entities when two words have the same ner label that is not 'O' and (adjacent or two words are separated by hyphens or underscores). Note that this method is not perfect since we always merge adjacent words with the same NER into an entity, thus will lose a lot of smaller entities. For example, we will get only "Iron - Feldspar" and miss "Iron" and "Feldspar"
+
+    if not len(queue) or e['label'] == 'O':
+        queue.append(deepcopy(e))
+        return 
+    last_e = queue[-1]
+    if last_e['label'] == e['label']:
+        # merge 
+        last_e['text'] = f"{last_e['text']} {e['text']}"
+        last_e['doc_end_char'] = e['doc_end_char']
+        last_e['sent_end_idx'] = e['sent_end_idx']
+    else:
+        if len(queue) > 1 and queue[-1]['text'] in ["_", "-"] and queue[-2]['label'] == e['label']: # words that are splitted by hyphen or underscores
+            queue[-2]['text'] = f"{queue[-2]['text']}{last_e['text']}{e['text']}"
+            queue[-2]['doc_end_char'] = e['doc_end_char']
+            queue[-2]['sent_end_idx'] = e['sent_end_idx']
+            queue.pop(-1)
+        else:
+            queue.append(deepcopy(e))
+
+def extract_system_entities(doc = None, corenlp_file = None, use_component = False, keep_smaller_entities = False):
+
+    # if use_compoennt, do two passes of extraction. the first keeps 'Element' and 'Mineral' and merge. The second pass changes 'Element' and 'Mineral' to 'Component' and then merge them. then for all entities we get, we change the entities collected in both passes to component   
+    if doc is None and corenlp_file is None:
+        raise NameError("Both doc and corenlp_file is None! ")
+    if doc is None:
+        # read corenlp file
+        doc = json.load(open(corenlp_file, "r"))
+
+    has_ner_entry = "ner" in doc["sentences"][0]["tokens"][0]
+
+    if not has_ner_entry:
+        raise NameError("doc or corenlp_file must contain NER predictions!")
+
+    entities = []
+    for sent in doc['sentences']:
+        sentid = int(sent["index"])
+        sent_entities = []
+        for tokidx, token in enumerate(sent['tokens']):
+            entity = {
+            "text": token["word"],
+            "doc_start_char": token["characterOffsetBegin"],
+            "doc_end_char": token["characterOffsetEnd"],
+            "sent_start_idx": int(tokidx),
+            "sent_end_idx": int(tokidx) + 1,
+            "sentid": int(sentid),
+            "label": token['ner']
+            }
+            add_entities(sent_entities, entity)
+        if use_component:
+            for e in sent_entities:
+                if e['label'] in ['Element', 'Mineral']:
+                    e['label'] = 'Component'
+
+            new_sent_entities = []
+            for tokidx, token in enumerate(sent['tokens']):
+                entity = {
+                "text": token["word"],
+                "doc_start_char": token["characterOffsetBegin"],
+                "doc_end_char": token["characterOffsetEnd"],
+                "sent_start_idx": int(tokidx),
+                "sent_end_idx": int(tokidx) + 1,
+                "sentid": int(sentid),
+                "label": 'Component' if token['ner'] in ['Element', 'Mineral'] else token['ner'] 
+                }
+                add_entities(new_sent_entities, entity)
+
+            new_sent_entities = new_sent_entities + sent_entities
+            sent_entities = []
+
+            # remove duplicate entities generated in two passes
+            seen_id = set()
+            for e in new_sent_entities:
+                entity_id = f"{e['doc_start_char']} {e['doc_end_char']}"
+                if entity_id not in seen_id:
+                    sent_entities.append(e)
+                    seen_id.add(entity_id)
+
+        entities.extend([e for e in sent_entities if e['label'] != 'O'])
+
+    return entities
+
+
+
+
+
+def make_tree_from_ann_file(text_file, ann_file, be_quiet = True):
     with open(text_file) as text_file, open(ann_file) as ann_file:
         texts = text_file.read()
         text_file.close()
@@ -22,7 +111,8 @@ def make_tree_from_ann_file(text_file, ann_file):
             #t = ' '.join([texts[begin:end] for begin,end in zip(markers[::2], markers[1::2])])
             t = texts[markers[0]:markers[1]]
             if not t == ann[2]:
-                print("Error: Annotation mis-match, file=%s, ann=%s" % (text_file, str(ann)))
+                if not be_quiet:
+                    print("Error: Annotation mis-match, file=%s, ann=%s" % (text_file, str(ann)))
                 return None
             return (name, markers, t)
         anns = map(__parse_ann, anns) # format
@@ -67,7 +157,7 @@ def merge_and_make_entities(charoffset2label2entities, text_file):
             entity_parts = sorted(charoffset2label2entities[charoffset][label], key = lambda x: x["sent_start_idx"])
 
             # merge while make sure entity parts are sequential and do not have overlap 
-            entity = copy.deepcopy(entity_parts[0])
+            entity = deepcopy(entity_parts[0])
             last_entity_is_hypen_or_underscore = 0
             for i in range(1, len(entity_parts)):
                 curentity = entity_parts[i]
@@ -104,7 +194,7 @@ def merge_and_make_entities(charoffset2label2entities, text_file):
     return entities
 
 
-def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = None, use_component = False):
+def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = None, use_component = False, be_quiet = True, use_sys_ners = False):
     """
     this function extracts entities from text file using a tree and doc
     Argument:
@@ -114,9 +204,13 @@ def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = N
 
         doc:  a dictionary that stores corenlp's parsing for text_file
 
-        corenlp_file: is a file that stores corenlp's parsing for text_file
+        corenlp_file: is a file that stores corenlp's parsing for text_file. If use_sys_ners is True, then corenlp_file must point to the parse results which store the system ner predictons
 
         use_component: whether map element and mineral to component 
+    
+        be_quiet: whether to print out warnings during extraction
+
+        use_sys_ners: whether extract system entities
 
     """
     
@@ -129,47 +223,52 @@ def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = N
         doc = json.load(open(corenlp_file, "r"))
 
     # note that if tree is built using system ners, then this function extracts system entities. make_tree_from_ann_file only builds tree over ann_file, which means that it builds tree over gold entities. 
-    tree = make_tree_from_ann_file(text_file, ann_file)
+    if use_sys_ners:
+        entities = extract_system_entities(doc = doc, use_component = use_component)
+    else:
+        tree = make_tree_from_ann_file(text_file, ann_file)
     
-    
+        charoffset2label2entities = {}
 
+        text = open(text_file, "r").read()
 
-    charoffset2label2entities = {}
+        for s in doc["sentences"]:
+            tokens = [t for t in s["tokens"]]
+            sentid = int(s["index"]) # starts from 0 
+            for tokidx, token in enumerate(tokens):
+                token_begin, token_end = token["characterOffsetBegin"], token["characterOffsetEnd"]
 
-    text = open(text_file, "r").read()
+                if text[token_begin: token_end] != token["word"]:
+                    if not be_quiet:
+                        warnings.warn(f"ERROR Mismatch text: ({token['word']})\n offset from corenlp: ({token['characterOffsetBegin']}, {token['characterOffsetEnd']})\ntext according to offset from corenlp: ({text[token_begin: token_end]})")
+                    continue
 
-    for s in doc["sentences"]:
-        tokens = [t for t in s["tokens"]]
-        # correct_offset(tokens, text)
+                for begin in tree:
+                    for end in tree[begin]:
+                        if  begin <= token_begin < token_end <= end:
 
-        sentid = int(s["index"]) # starts from 0 
-        for tokidx, token in enumerate(tokens):
-            token_begin, token_end = token["characterOffsetBegin"], token["characterOffsetEnd"]
+                            charoffset = (begin ,end)
 
-            if text[token_begin: token_end] != token["word"]:
-                warnings.warn(f"ERROR Mismatch text: ({token['word']})\n offset from corenlp: ({token['characterOffsetBegin']}, {token['characterOffsetEnd']})\ntext according to offset from corenlp: ({text[token_begin: token_end]})")
-                print()
-                continue
+                            for offset_entity_label in tree[begin][end]:
+                                collect_entity_at_offset(token, sentid, tokidx, charoffset, offset_entity_label, charoffset2label2entities)
+        
+        entities = merge_and_make_entities(charoffset2label2entities, text_file)
 
-            for begin in tree:
-                for end in tree[begin]:
-                    if  begin <= token_begin < token_end <= end:
-
-                        charoffset = (begin ,end)
-
-                        for offset_entity_label in tree[begin][end]:
-                            collect_entity_at_offset(token, sentid, tokidx, charoffset, offset_entity_label, charoffset2label2entities)
-
-    entities = merge_and_make_entities(charoffset2label2entities, text_file)
+        if use_component:
+            for e in entities:
+                if e['label'] in ['Element', 'Mineral']:
+                    e['label'] = 'Component'
     for e in entities:
         e["venue"] = venue
         e["docname"] = docname
         e["year"] = year 
 
-    if use_component:
-        for e in entities:
-            if e['label'] in ['Element', 'Mineral']:
-                e['label'] = 'Component'
+        if e['label'] == 'Target':
+            e['std_text'] = canonical_target_name(e['text'])
+        elif e['label'] in ['Element', 'Mineral', 'Component']:
+            e['std_text'] = canonical_elemin_name(e['text'])
+
+    
     
     return entities
     
@@ -216,6 +315,13 @@ def extract_gold_entities_from_ann(ann_file, use_component = False):
                     }
                     entities.append(entity)
 
+    for e in entities:
+        if e['label'] == 'Target':
+            e['std_text'] = canonical_target_name(e['text'])
+        elif e['label'] in ['Element', 'Mineral']:
+            e['std_text'] = canonical_elemin_name(e['text'])
+
+
     if use_component:
         for e in entities:
             if e['label'] in ['Element', 'Mineral']:
@@ -240,17 +346,7 @@ def get_entity_id(entity, tuple_level = False):
 
     return entity_id
 
-def get_entity_coverage(entities, gold_entities):
-    gold_ids = set([f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" for e in gold_entities])
-    ids = set([f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" for e in entities])
 
-    found_gold = len(ids.intersection(gold_ids))
-    found_percent = found_gold/len(gold_ids)
-    nonexisting_num = len(ids - gold_ids)
-    nonexisting_percent = nonexisting_num / len(ids)
-
-    print(f"{found_gold}/{len(gold_ids)}({found_percent*100:.2f}%) of gold entities are extracted from texts")
-    print(f"There are {nonexisting_num}/{len(ids)}({nonexisting_percent*100:.2f}%) nonexisting entities extracted")
 
 
 def extract_gold_relations_from_ann(ann_file, use_component = False):
@@ -289,7 +385,7 @@ def extract_gold_relations_from_ann(ann_file, use_component = False):
     for t, c, relation in annotid_annotid_relation:
         e1 = annotid2entities[t]
         e2 = annotid2entities[c]
-        gold_relations.append((copy.deepcopy(e1), copy.deepcopy(e2), relation))
+        gold_relations.append((deepcopy(e1), deepcopy(e2), relation))
 
     return gold_relations
 
@@ -314,8 +410,8 @@ def extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = None, doc 
         if sentid1 is None or sentid2 is None: 
             continue 
         if sentid1 == sentid2:
-            new_e1 = copy.deepcopy(e1)
-            new_e2 = copy.deepcopy(e2)
+            new_e1 = deepcopy(e1)
+            new_e2 = deepcopy(e2)
             new_e1["sentid"] = sentid1
             new_e2["sentid"] = sentid2
             intrasent_gold_relations.append((new_e1, new_e2, relation))
@@ -348,7 +444,7 @@ def get_sentid_from_offset(doc_start_char, doc_end_char, offset2sentid):
             return offset2sentid[offset]
     return sentid 
 
-def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None, use_component = False):
+def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None, use_component = False, use_sys_ners = False):
     
     # this function extract all pairs of entities from the same sentence as relation candidates. note that here we would get duplicated entity pairs with reverse order, such as (t1, t2) and (t2, t1)
     """
@@ -367,7 +463,7 @@ def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None
         # read corenlp file
         doc = json.load(open(corenlp_file, "r"))
 
-    entities = extract_entities_from_text(text_file, ann_file, doc = doc, corenlp_file = corenlp_file, use_component = use_component)
+    entities = extract_entities_from_text(text_file, ann_file, doc = doc, corenlp_file = corenlp_file, use_component = use_component, use_sys_ners = use_sys_ners)
 
     # get all possible entity pairs. 
     intrasent_entitypairs = []
@@ -377,11 +473,11 @@ def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None
             if entities[i]['sentid'] != entities[j]['sentid']:
                 continue
             # note that a entity may be annotated with different labels, and so entities[i] and entities[j] may correspond to the same annotated text (e.g., Dillinger at (2505, 2514)  of lpsc15-C-raymond-sol1159-v3-utf8/2620.ann is labeled Target and Unit at the same time)
-            intrasent_entitypairs.append((copy.deepcopy(entities[i]), copy.deepcopy(entities[j])))
+            intrasent_entitypairs.append((deepcopy(entities[i]), deepcopy(entities[j])))
     return intrasent_entitypairs
 
 
-def get_relation_coverage(entitypairs, gold_relations, tuple_level = False):
+def get_relation_coverage(entitypairs, gold_relations, tuple_level = False, all_entityid2ner = None):
     """
     This function calculates the coverage of gold relations in entitypairs
     
@@ -407,8 +503,20 @@ def get_relation_coverage(entitypairs, gold_relations, tuple_level = False):
 
         ids.add(f"{entity1_id},,{entity2_id}")
 
+    if all_entityid2ner is not None:
+        extracted_entity1 = set()
+        extracted_entity2 = set()
+
+        for entity_id, ner in all_entityid2ner.items():
+            if ner == 'Target':
+                extracted_entity1.add(entity_id)
+            if ner in ['Element', 'Mineral', 'Component']:
+                extracted_entity2.add(entity_id)
+
+
     found_num = len(ids.intersection(gold_ids))
     found_percent = found_num/len(gold_ids)
+
 
 
     print(f">>> {'Tuple' if tuple_level else 'Instance'} Level Coverage:\n")
@@ -416,17 +524,51 @@ def get_relation_coverage(entitypairs, gold_relations, tuple_level = False):
     print(f"{found_num}/{len(gold_ids)}({found_percent*100:.2f}%) of gold relations could be matched in entity pairs from texts")
 
 
+    with open('missing_rels.txt', "w") as f:
 
+        for entity1, entity2, relation in gold_relations:
+            entity1_id = get_entity_id(entity1, tuple_level = tuple_level)
+            entity2_id = get_entity_id(entity2, tuple_level = tuple_level)
 
+            if f"{entity1_id},,{entity2_id}" not in ids:
+                f.write(f"Missing relation ---\nENTITY1: {entity1}\n\nENTITY2:{entity2}\n\nEntity1 extracted: {entity1_id in extracted_entity1}, Entity2 extracted: {entity2_id in extracted_entity2}\n\n")
+
+    print(f"missing relations are written to ./missing_rels.txt")
+
+def get_entity_coverage(entities, gold_entities):
+    gold_ids = set([f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" for e in gold_entities])
+    ids = set([f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" for e in entities])
+
+    found_gold = len(ids.intersection(gold_ids))
+    found_percent = found_gold/len(gold_ids)
+    nonexisting_num = len(ids - gold_ids)
+    nonexisting_percent = nonexisting_num / len(ids)
+
+    print(f"{found_gold}/{len(gold_ids)}({found_percent*100:.2f}%) of gold entities are extracted from texts")
+    print(f"There are {nonexisting_num}/{len(ids)}({nonexisting_percent*100:.2f}%) nonexisting entities extracted")
+
+    # print out missing entities in gold entities
+    # num_examples = 10
+    # for e in gold_entities:
+    #     if f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" not in ids:
+    #         print("not found", e['text'], e['label'], e['doc_start_char'],e['doc_end_char'], e['venue'], e['docname'])
+    #         print()
+    #         num_examples -= 1
+    #     if num_examples == 0: break
 
 
 
 if __name__ == "__main__":
 
     # sample codes to extract and check stats 
-
+    use_sys_ners = 1
+    use_component = 1
     print("Warning: the statistics are reported over ann files which have at least 1 Target and 1 Component. Ann files that are not satisfying this constraint would not be taken into consideration. ")
-    corenlp_dir = "../../parse/"
+    if use_sys_ners:
+        corenlp_dir = "../../parse-with-sysners"
+    else:
+        corenlp_dir = "../../parse/"
+
 
     gold_ids = set()
     ids = set()
@@ -434,10 +576,10 @@ if __name__ == "__main__":
 
     text_files = []
     inputdirs = [
-    # "../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8", 
-    # "../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/", 
+    "../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8", 
+    "../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/", 
     "../../corpus-LPSC/mpf-reviewed+properties-v2/", 
-    # "../../corpus-LPSC/phx-reviewed+properties-v2/"
+    "../../corpus-LPSC/phx-reviewed+properties-v2/"
     ]
 
     for inputdir in inputdirs:
@@ -458,36 +600,86 @@ if __name__ == "__main__":
         if not exists(corenlp_file):
             continue
 
-        entities.extend(extract_entities_from_text(text_file, ann_file,corenlp_file = corenlp_file))
-        gold_entities.extend(extract_gold_entities_from_ann(ann_file))
+        entities.extend(extract_entities_from_text(text_file, ann_file,corenlp_file = corenlp_file,use_sys_ners = use_sys_ners, use_component = use_component))
+        gold_entities.extend(extract_gold_entities_from_ann(ann_file, use_component = use_component))
 
-        gold_relations.extend(extract_gold_relations_from_ann(ann_file))
-        intrasent_goldrelations.extend(extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = corenlp_file))
+        gold_relations.extend(extract_gold_relations_from_ann(ann_file, use_component = use_component))
+        intrasent_goldrelations.extend(extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = corenlp_file, use_component = use_component))
 
-        intrasent_entitypairs.extend(extract_intrasent_entitypairs_from_text_file(text_file, ann_file, corenlp_file = corenlp_file))
+        intrasent_entitypairs.extend(extract_intrasent_entitypairs_from_text_file(text_file, ann_file, corenlp_file = corenlp_file, use_sys_ners = use_sys_ners, use_component = use_component))
 
-    # check entity extraction 
-    # get coverage
-    get_entity_coverage(entities, gold_entities)
-    task_entities = [e for e in entities if e['label'] in ['Target', 'Element', 'Mineral']]
-    task_gold_entities = [e for e in gold_entities if e['label'] in ['Target', 'Element', 'Mineral']]
+
+    task_entities = [e for e in entities if e['label'] in ['Target', 'Element', 'Mineral', 'Component']]
+    task_gold_entities = [ e for e in gold_entities if e['label'] in ['Target', 'Element', 'Mineral', 'Component'] ]
     # get task-specific entities coverage 
     get_entity_coverage(task_entities, task_gold_entities)
 
-    task_goldrelations = [(entity1, entity2, relation) for entity1, entity2, relation in gold_relations if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral'] and relation == 'Contains']
+    task_goldrelations = [(entity1, entity2, relation) for entity1, entity2, relation in gold_relations if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral', 'Component'] and relation == 'Contains']
 
-    task_intrasent_goldrelations = [(entity1,entity2, relation ) for entity1, entity2, relation in intrasent_goldrelations if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral'] and relation == 'Contains']
+    task_intrasent_goldrelations = [(entity1,entity2, relation ) for entity1, entity2, relation in intrasent_goldrelations if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral', 'Component'] and relation == 'Contains']
 
-    task_intrasent_entitypairs = [(entity1, entity2) for entity1, entity2 in intrasent_entitypairs if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral']]
+    task_intrasent_entitypairs = [(entity1, entity2) for entity1, entity2 in intrasent_entitypairs if entity1['label'] == 'Target' and entity2['label'] in ['Element', 'Mineral', 'Component']]
 
     # check relation extraction
     print()
-    print(f"Task-specific Gold Relations: {len(task_goldrelations)} 'Contains' relations between Target and Compoent")
+    print(f"Task-specific Gold Relations: {len(task_goldrelations)} 'Contains' relations between Target and Component")
     print("Task-specific Intra-sentence Relation Coverage:")
-    get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = False) 
-    
-    print("Task-specific Intra-sentence Relation Coverage:")
-    get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = True) 
 
+    all_entityid2ner = {get_entity_id(e, tuple_level = False): e['label'] for e in entities}
+    get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = False, all_entityid2ner = all_entityid2ner) 
 
+#     for e1, e2, _ in task_intrasent_goldrelations:
+#         if e1['docname'] == '2940':
+#             print(e1)
+#             print(e2)
 
+#     {'text': 'sulfate', 'doc_start_char': 6300, 'doc_end_char': 6307, 'sent_start_idx': 15, 'sent_end_idx': 16, 'sentid': 48, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'docname': '2940', 'year': '15', 'std_text': 'Sulfate'}
+
+#     for e1, e2 in task_intrasent_entitypairs:
+#         if e1['docname'] == '2940':
+#             print(e1, e2)
+  
+# #     print("Task-specific Intra-sentence Relation Coverage:")
+# #     get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = True) 
+
+# #     for e in task_entities:
+# #         if e['docname'] == '2620':
+# #             print(f"{e['text']} {e['label']} {e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']} {e['sentid']}")
+
+#     for e in extract_entities_from_text("../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/2940.txt", "../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/2940.ann",corenlp_file = "../../parse-with-sysners/lpsc15-C-raymond-sol1159-v3-utf8/2940.txt.json",use_sys_ners = use_sys_ners, use_component = use_component):
+#         print(f"{e['text']} {e['label']} {e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']} {e['sentid']}")
+
+#     for e1, e2, _ in task_intrasent_goldrelations:
+#         if e1['docname'] == '2940':
+#             print(e1)
+#             print(e2)
+#             print(get_entity_id(e1, tuple_level = False))
+#     sulfate exists in entities
+
+#     for e1, e2 in task_intrasent_entitypairs:
+#         if e2['docname'] == "2940":
+#             print(e2)
+
+#     in gold annotation: they are in the same sentence
+#         {'text': 'bell island', 'annot_id': 'T11', 'doc_start_char': 6266, 'doc_end_char': 6277, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2940', 'std_text': 'Bell_Island', 'sentid': 48}
+#         {'text': 'sulfate', 'annot_id': 'T1', 'doc_start_char': 6300, 'doc_end_char': 6307, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2940', 'std_text': 'Sulfate', 'sentid': 48}
+
+#         sulfate 
+
+#     text_file = "../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/2940.txt"
+#     corenlp_file = "../../parse-with-sysners/lpsc15-C-raymond-sol1159-v3-utf8/2940.txt.json"
+#     ann_file = "../../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8/2940.ann"
+
+#     for e in extract_entities_from_text(text_file, ann_file,  corenlp_file = corenlp_file, use_component = use_component, use_sys_ners = use_sys_ners):
+#         print(e)
+
+#     offset2sentid = get_offset2sentid(corenlp_file = corenlp_file)
+#     get_sentid_from_offset(6266, 6277, offset2sentid)
+#     for _, entity in extract_system_entities(corenlp_file = ):
+#         print(entity)
+
+#         entityid = "lpsc15-C-raymond-sol1159-v3-utf8, 15, 2940, 6300, 6307"
+
+#         all_entityid2ner["lpsc15-C-raymond-sol1159-v3-utf8, 15, 2940, 6300, 6307"]
+# potassium Component 8246 8255 lpsc15-C-raymond-sol1159-v3-utf8 15 2620 88
+# feldspar Component 8256 8264 lpsc15-C-raymond-sol1159-v3-utf8 15 2620 88
