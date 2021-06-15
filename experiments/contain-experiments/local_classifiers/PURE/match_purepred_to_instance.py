@@ -39,7 +39,7 @@ def find_doc_offset(tokens, tok_sidx, tok_eidx):
 
 def main(args):
     use_component = args.use_component
-    outfile = "./temp/rel/predictions.pkl"
+    outfile = args.pred_file.split(".json")[0] + ".pkl"
     corenlp_dir = "../../../../parse/"
     ann_dir = "../../../../corpus-LPSC"
     accept_ner2 = ['Element', 'Mineral'] if not use_component else ['Component']
@@ -48,7 +48,7 @@ def main(args):
     
     # load predictions 
     predicted_docs = []
-    for line in open("./temp/rel/predictions.json", "r").read().strip().split("\n"):
+    for line in open(args.pred_file, "r").read().strip().split("\n"):
         predicted_docs.append(json.loads(line))
 
     for docidx, predicted_doc in enumerate(predicted_docs):
@@ -123,6 +123,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_component", type = int, choices = [0,1], required = True)
+    parser.add_argument("--pred_file", required = True)
 
     args = parser.parse_args()
     main(args)

@@ -29,7 +29,7 @@ def add_marker_tokens(tokenizer, ner_labels):
     tokenizer.add_tokens(new_tokens)
 
 
-def make_instances(content , tokenizer, ann_files, text_files, corenlp_files, outdir, max_len = 512, extra_num = 0, is_training = False):
+def make_instances(tokenizer, ann_files, text_files, corenlp_files, outdir, max_len = 512, extra_num = 0, is_training = False):
 
     # first collect all valid entity for predictions. this is instance-based, which only relies on character offset. And it only extracts spans that cooccur with target in a sentence
     gold_spanins = [] # stores entities that are in a gold relation in annotation. used for evaluation 
@@ -42,22 +42,17 @@ def make_instances(content , tokenizer, ann_files, text_files, corenlp_files, ou
         for e1, e2, relation in intrasent_gold_relations:
             span1 = Span_Instance(e1['venue'], e1['year'], e1['docname'], e1['doc_start_char'], e1['doc_end_char'], e1['text'], e1['label'])
             span1.relation_label = 'Contains'
-            span2 = Span_Instance(e2['venue'], e2['year'], e2['docname'], e2['doc_start_char'], e2['doc_end_char'], e2['text'], 'Component') # specifically assign component 
-            span2.relation_label = 'Contains'
             
-            if (content == 'Merged' or content == 'T') and span1.span_id not in seen_goldids:
+            if span1.span_id not in seen_goldids:
                 seen_goldids.add(span1.span_id)
                 gold_spanins.append(span1)
-            if (content == 'Merged' or e2['label'][0] in content) and span2.span_id not in seen_goldids:
-                seen_goldids.add(span2.span_id)
-                gold_spanins.append(span2)
-
 
     spanins = []
     seen_spanids = set()
     exceed_len_cases = 0 
     added_extra = 0 
     total_added_extra = extra_num * len(seen_goldids)
+    pseudo_positive_training = []
     for text_file, ann_file, corenlp_file in zip(text_files, ann_files, corenlp_files):
 
         doc = json.load(open(corenlp_file))
@@ -73,31 +68,33 @@ def make_instances(content , tokenizer, ann_files, text_files, corenlp_files, ou
 
             span1 = Span_Instance(e1['venue'], e1['year'], e1['docname'], e1['doc_start_char'], e1['doc_end_char'], e1['text'], e1['label'], sent_toks = deepcopy(sent_toks), sentid = sentid, sent_start_idx = e1['sent_start_idx'], sent_end_idx = e1['sent_end_idx'])
 
-            span2 = Span_Instance(e2['venue'], e2['year'], e2['docname'], e2['doc_start_char'], e2['doc_end_char'], e2['text'], 'Component', sent_toks = deepcopy(sent_toks), sentid = sentid, sent_start_idx = e2['sent_start_idx'], sent_end_idx = e2['sent_end_idx'])
-
-            if content in ['T', 'Merged'] and span1.span_id not in seen_spanids:
+            if span1.span_id not in seen_spanids:
                 exceed = span1.insert_type_markers(tokenizer, max_len = max_len)
                 span1.relation_label = 'Contains' if span1.span_id in seen_goldids else 'O'
                 spanins.append(span1)
                 seen_spanids.add(span1.span_id)
                 exceed_len_cases += exceed
-            if content == 'Merged' or (e2['label'][0] in content  and span2.span_id not in seen_spanids) :
-                exceed = span2.insert_type_markers(tokenizer, max_len = max_len)
-                span2.relation_label = 'Contains' if span2.span_id in seen_goldids else 'O'
-                spanins.append(span2)
-                seen_spanids.add(span2.span_id)
-                exceed_len_cases += exceed
+            
+        if is_training:
+            posins_ids = set([(s.venue, s.year, s.docname, s.sentid, s.std_text) for s in spanins if s.relation_label != 'O'])
+            
+            for s in spanins:
+                if (s.venue, s.year, s.docname, s.sentid, s.std_text) in posins_ids:
 
-       
-        # remove overlap between training positive and training negative if their std texts are the same and they lie in the same sentence  
-        posins_ids = set([(s.venue, s.year, s.docname, s.sentid, s.std_text) for s in spanins if s.relation_label != 'O'])
-        for s in spanins:
-            if (s.venue, s.year, s.docname, s.sentid, s.std_text) in posins_ids:
-                s.relation_label = 'Contains'
+                    if s.relation_label == 'O':
+                        pseudo_positive_training.append(s)
+                    s.relation_label = 'Contains'
+    if is_training:
+        with open("pseudo_positive_training.txt", "w") as f:
+            f.write("\n\n".join([f"{i}. {s}" for i, s in enumerate( pseudo_positive_training)]))
+
+
+           
 
 
     
     print(f"generated {len(spanins)} extracted instances with {len([s for s in spanins if s.relation_label != 'O'])} positive, and {exceed_len_cases} of these exceed max_len")
+    
     print(f"generated {len(gold_spanins)} gold instances")
 
     intersection = len(set([s.span_id for s in spanins]).intersection(seen_goldids))/len(seen_goldids)
@@ -111,12 +108,12 @@ def make_instances(content , tokenizer, ann_files, text_files, corenlp_files, ou
     if not exists(outdir):
         os.makedirs(outdir)
 
-    outfile = join(outdir, f"{content}.extracted_gold_spanins.pkl")
+    outfile = join(outdir, f"extracted_gold_spanins.pkl")
     print(f"saving to {outfile}")
     with open(outfile, "wb") as f:
         pickle.dump(spanins, f)
 
-    outfile = join(outdir, f"{content}.annotated_gold_spanins.pkl")
+    outfile = join(outdir, f"annotated_gold_spanins.pkl")
     print(f"saving the evaluation set to {outfile}")
     with open(outfile, "wb") as f:
         pickle.dump(gold_spanins, f)
@@ -124,28 +121,10 @@ def make_instances(content , tokenizer, ann_files, text_files, corenlp_files, ou
     print()
 
 def main(args):
-    content = args.content
     tokenizer = BertTokenizerFast.from_pretrained(tokenizer_type)
 
 
-    if content == 'Merged':
-        ners = ['Component', 'Target']
-    else:
-        ners = []
-        c2ner = {
-        'T': 'Target',
-        'E': 'Component',
-        'M': 'Component'
-        }
-        for c in content:
-            ners.append(c2ner[c])
-        ners = list(set(ners))
-
-
-    print(ners)
-
-    add_marker_tokens(tokenizer, ners)
-    print(tokenizer.tokenize('<ner_start=component>'))
+    add_marker_tokens(tokenizer, ['Target'])
 
     proj_path = dirname(dirname(dirname(dirname(curpath))))
     datadir_prefix = join(proj_path, "corpus-LPSC")
@@ -165,7 +144,7 @@ def main(args):
     assert all([exists(k) for k in train_annfiles + train_textfiles + train_corenlpfiles])
     
     outdir = "ins/train"
-    make_instances(args.content, tokenizer, train_annfiles, train_textfiles, train_corenlpfiles, outdir, max_len = 512, is_training = True)
+    make_instances(tokenizer, train_annfiles, train_textfiles, train_corenlpfiles, outdir, max_len = 512, is_training = True)
     # ---- make val samples ----
     print(" ----- making dev samples ... ")
   
@@ -175,7 +154,7 @@ def main(args):
     assert all([exists(k) for k in dev_annfiles + dev_textfiles + dev_corenlpfiles])
 
     outdir = "ins/dev"
-    make_instances(args.content, tokenizer, dev_annfiles, dev_textfiles, dev_corenlpfiles, outdir, max_len = 512)
+    make_instances(tokenizer, dev_annfiles, dev_textfiles, dev_corenlpfiles, outdir, max_len = 512)
 
     # -------- make test samples ---------
     print(" ----- making test samples ... ")
@@ -199,7 +178,7 @@ def main(args):
     assert all([exists(k) for k in test_annfiles + test_textfiles + test_corenlpfiles])
 
     outdir = "ins/test"
-    make_instances(args.content, tokenizer, test_annfiles, test_textfiles, test_corenlpfiles, outdir, max_len = 512)
+    make_instances(tokenizer, test_annfiles, test_textfiles, test_corenlpfiles, outdir, max_len = 512)
 
     tokenizer.save_vocabulary("ins")
 
@@ -208,9 +187,6 @@ if __name__ == "__main__":
     # make training/val/test instances, and gold spans
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--content', choices = ["Merged", "EM", "ET", "MT", "E", "M", "T"], help = "denote what is inside this container or containee", default = 'EM')
-
-
 
     parser.add_argument('--test_venues', nargs = "+", required = True)
 

@@ -196,6 +196,66 @@ def containee_score(pred_rel_instances, gold_rel_instances):
 	print(f"Instance Level Containee: P = {precision*100:.2f}, R = {recall * 100:.2f}, F1 = {f1*100:.2f}")
 
 
+def container_score(pred_rel_instances, gold_rel_instances):
+	pred_instances = pred_rel_instances
+	gold_instances = gold_rel_instances
+	# eval over contained components
+	containers = set()
+
+	for rel in pred_instances:
+		if rel.pred_relation_label == 'Contains':
+			containers.add((rel.span1.venue, rel.span1.year, rel.span1.docname,rel.span1.span_id, rel.span1.std_text))
+	gold_containers = set()
+	gold_container_texts = set()
+	for rel in gold_instances:
+		if rel.label == 'Contains':
+			gold_containers.add((rel.span1.venue, rel.span1.year, rel.span1.docname, rel.span1.span_id, rel.span1.std_text))
+			gold_container_texts.add((rel.span1.venue, rel.span1.year, rel.span1.docname, rel.span1.std_text))
+	print(f"There are {len(gold_containers)} gold instances at instance level, and {len(gold_container_texts)} at text level ")
+
+
+	# tuple level eval 
+	predictions = set([(venue, year, docname, std_text) for venue, year, docname, span_id, std_text in containers])
+	golds = set([(venue, year, docname, std_text) for venue, year, docname, span_id, std_text in gold_containers])
+	correct = len(predictions.intersection(golds))
+	precision = correct / len(predictions) if len(predictions) != 0 else 0  
+	recall = correct / len(golds) if len(golds) != 0 else 0 
+	f1 = precision * recall * 2 / (precision + recall) if precision + recall != 0 else 0 
+
+	print(f"Tuple Level Container: P = {precision*100:.2f}, R = {recall * 100:.2f}, F1 = {f1*100:.2f}")
+
+	# instance level 
+	predictions = set([span_id for venue, year, docname, span_id, std_text in containers])
+	golds = set([span_id for venue, year, docname, span_id, std_text in gold_containers])
+	correct = len(predictions.intersection(golds))
+	precision = correct / len(predictions) if len(predictions) != 0 else 0  
+	recall = correct / len(golds) if len(golds) != 0 else 0 
+	f1 = precision * recall * 2 / (precision + recall) if precision + recall != 0 else 0 
+	print(f"Instance Level Container: P = {precision*100:.2f}, R = {recall * 100:.2f}, F1 = {f1*100:.2f}")
+
+	print("all yes baseline ")
+	containers = set()
+	for rel in pred_instances:
+		containers.add((rel.span1.venue, rel.span1.year, rel.span1.docname,rel.span1.span_id, rel.span1.std_text))
+	# tuple level eval 
+	predictions = set([(venue, year, docname, std_text) for venue, year, docname, span_id, std_text in containers])
+	golds = set([(venue, year, docname, std_text) for venue, year, docname, span_id, std_text in gold_containers])
+	correct = len(predictions.intersection(golds))
+	precision = correct / len(predictions) if len(predictions) != 0 else 0  
+	recall = correct / len(golds) if len(golds) != 0 else 0 
+	f1 = precision * recall * 2 / (precision + recall) if precision + recall != 0 else 0 
+	print(f"Tuple Level Container: P = {precision*100:.2f}, R = {recall * 100:.2f}, F1 = {f1*100:.2f}")
+	
+	# instance level 
+	predictions = set([span_id for venue, year, docname, span_id, std_text in containers])
+	golds = set([span_id for venue, year, docname, span_id, std_text in gold_containers])
+	correct = len(predictions.intersection(golds))
+	precision = correct / len(predictions) if len(predictions) != 0 else 0  
+	recall = correct / len(golds) if len(golds) != 0 else 0 
+	f1 = precision * recall * 2 / (precision + recall) if precision + recall != 0 else 0 
+	print(f"Instance Level Container: P = {precision*100:.2f}, R = {recall * 100:.2f}, F1 = {f1*100:.2f}")
+
+
 
 def train_dev_test_distribution(train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, test_annfiles, test_textfiles, test_corenlpfiles):
 	for name, ann_files, text_files, corenlp_files in zip(["TRAIN", 'DEV','TEST'], [train_annfiles, dev_annfiles, test_annfiles], [train_textfiles, dev_textfiles, test_textfiles], [train_corenlpfiles, dev_corenlpfiles, test_corenlpfiles]):
@@ -230,6 +290,8 @@ def main():
 	pred_instances = pickle.load(open("./temp/rel/predictions.pkl", "rb"))
 	gold_instances = pickle.load(open("./data/dev/gold_relins.pkl", "rb"))
 	containee_score(pred_instances, gold_instances)
+	container_score(pred_instances, gold_instances)
+
 
 	# train_dev_test_distribution(train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, test_annfiles, test_textfiles, test_corenlpfiles)
 

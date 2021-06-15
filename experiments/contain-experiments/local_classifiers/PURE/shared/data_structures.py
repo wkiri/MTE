@@ -241,6 +241,7 @@ class NER:
         self.span = Span(ner[0], ner[1], text, sentence_start)
         self.label = ner[2]
         self.flavor = flavor
+        self.offset = (ner[0], ner[1])
 
     def __repr__(self):
         return self.span.__repr__() + ": " + self.label
@@ -260,6 +261,9 @@ class Relation:
         span2 = Span(start2, end2, text, sentence_start)
         self.pair = (span1, span2)
         self.label = label
+        self.offset1 = (start1, end1)
+        self.offset2 = (start2, end2)
+
 
     def __repr__(self):
         return self.pair[0].__repr__() + ", " + self.pair[1].__repr__() + ": " + self.label

@@ -77,8 +77,8 @@ def convert_examples_to_features(examples, label2id, max_seq_length, tokenizer, 
     num_shown_examples = 0
     features = []
     for (ex_index, example) in enumerate(examples):
-        if ex_index % 10000 == 0:
-            logger.info("Writing example %d of %d" % (ex_index, len(examples)))
+        # if ex_index % 10000 == 0:
+        #     logger.info("Writing example %d of %d" % (ex_index, len(examples)))
 
         tokens = [CLS]
         SUBJECT_START = get_special_token("SUBJ_START")
@@ -134,18 +134,18 @@ def convert_examples_to_features(examples, label2id, max_seq_length, tokenizer, 
         assert len(input_mask) == max_seq_length
         assert len(segment_ids) == max_seq_length
 
-        if num_shown_examples < 20:
-            if (ex_index < 5) or (label_id > 0):
-                num_shown_examples += 1
-                logger.info("*** Example ***")
-                logger.info("guid: %s" % (example['id']))
-                logger.info("tokens: %s" % " ".join(
-                        [str(x) for x in tokens]))
-                logger.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
-                logger.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
-                logger.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
-                logger.info("label: %s (id = %d)" % (example['relation'], label_id))
-                logger.info("sub_idx, obj_idx: %d, %d" % (sub_idx, obj_idx))
+        # if num_shown_examples < 20:
+        #     if (ex_index < 5) or (label_id > 0):
+        #         num_shown_examples += 1
+        #         logger.info("*** Example ***")
+        #         logger.info("guid: %s" % (example['id']))
+        #         logger.info("tokens: %s" % " ".join(
+        #                 [str(x) for x in tokens]))
+        #         logger.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
+        #         logger.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
+        #         logger.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
+        #         logger.info("label: %s (id = %d)" % (example['relation'], label_id))
+        #         logger.info("sub_idx, obj_idx: %d, %d" % (sub_idx, obj_idx))
 
         features.append(
                 InputFeatures(input_ids=input_ids,
@@ -347,6 +347,9 @@ def main(args):
         json.dump(special_tokens, f)
 
     if args.do_train:
+        if args.log_file:
+            logf = open(args.log_file, "w")
+
         train_features = convert_examples_to_features(
             train_examples, label2id, args.max_seq_length, tokenizer, special_tokens, unused_tokens=not(args.add_new_tokens))
         if args.train_mode == 'sorted' or args.train_mode == 'random_sorted':
@@ -403,6 +406,8 @@ def main(args):
         tr_loss = 0
         nb_tr_examples = 0
         nb_tr_steps = 0
+
+
         for epoch in range(int(args.num_train_epochs)):
             model.train()
             logger.info("Start epoch #{} (lr = {})...".format(epoch, lr))
@@ -443,7 +448,13 @@ def main(args):
                             best_result = result
                             logger.info("!!! Best dev %s (lr=%s, epoch=%d): %.2f" %
                                         (args.eval_metric, str(lr), epoch, result[args.eval_metric] * 100.0))
+                            if args.log_file:
+                                logf.write("!!! Best dev %s (lr=%s, epoch=%d): %.2f\n" %
+                                        (args.eval_metric, str(lr), epoch, result[args.eval_metric] * 100.0))
+                                logf.flush()
                             save_trained_model(args.output_dir, model, tokenizer)
+        if args.log_file:
+            logf.close()
 
     evaluation_results = {}
     if args.do_eval:
@@ -491,6 +502,9 @@ if __name__ == "__main__":
                              "than this will be padded.")
     parser.add_argument("--negative_label", default="no_relation", type=str)
     parser.add_argument("--do_train", action='store_true', help="Whether to run training.")
+
+    parser.add_argument("--log_file", default=None, help="file to write training log")
+
     parser.add_argument("--train_file", default=None, type=str, help="The path of the training data.")
     parser.add_argument("--val_file", default=None, type=str, help="The path of the val data.")
     parser.add_argument("--test_file", default=None, type=str, help="The path of the val data.")

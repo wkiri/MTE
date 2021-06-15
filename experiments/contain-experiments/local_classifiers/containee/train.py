@@ -93,7 +93,7 @@ def eval_and_save(model, val_dataloader, val_gold_ins,  best_f1, args, label_to_
 
 
     if save_prediction:
-            with open(join(args.model_save_dir, f"{args.content}.spans.pred"), "wb") as f:
+            with open(join(args.model_save_dir, "spans.pred"), "wb") as f:
                 pickle.dump(pred_instances, f)
 
     if args.analyze_dev:
@@ -189,8 +189,6 @@ if __name__ == "__main__":
     """ ================= parse =============== """
     parser = argparse.ArgumentParser()
     
-    parser.add_argument('-content', choices = ["Merged", "EM", "ET", "MT", "E", "M", "T"], help = "what experiments to run (e.g., elements, minerals, and their merged set)", required= True)
-
     # I/O
 
     parser.add_argument("-train_dir", required = True)
@@ -198,11 +196,9 @@ if __name__ == "__main__":
     parser.add_argument("-test_dir", default = None)
     parser.add_argument("-analyze_dev", default = False)
 
-    parser.add_argument("-predict_with_extracted_gold_entities", default = 0, type = int, choices = [0,1])
-
     parser.add_argument("-encoder_dimension", default = 768, type = int)
 
-    parser.add_argument("-dropout_prob", default = 0, type = float)
+    parser.add_argument("-dropout", default = 0, type = float)
     parser.add_argument("-fix_bert", default = 0, type = int, choices = [0,1])
 
     parser.add_argument("-max_span_width", type = int, default = 3)
@@ -241,19 +237,7 @@ if __name__ == "__main__":
    
 
 
-    content = args.content
-    if content == 'Merged':
-        ners = ['Component', 'Target']
-    else:
-        ners = []
-        c2ner = {
-        'T': 'Target',
-        'E': 'Component',
-        'M': 'Component'
-        }
-        for c in content:
-            ners.append(c2ner[c])
-        ners = list(set(ners))
+    ners = ['Component']
 
     add_marker_tokens(tokenizer, ners)
 
@@ -261,18 +245,17 @@ if __name__ == "__main__":
 
     print(">>> loading data ")
     # load data, this set is instance based training set 
-    with open(join(args.train_dir, f"{content}.extracted_gold_spanins.pkl"), "rb") as f:
+    with open(join(args.train_dir, "spanins.pkl"), "rb") as f:
         train_ins = pickle.load(f)
         pos = [r.relation_label for r in train_ins if r.relation_label != "O" ]
+
         print(f"Training set contains {len(pos)}/{len(train_ins)}({len(pos)/len(train_ins):.2f}) positive instances ")
 
         
-
-    with open(join(args.val_dir, f"{content}.extracted_gold_spanins.pkl"), "rb") as f:
+    with open(join(args.val_dir, "spanins.pkl"), "rb") as f:
         val_ins = pickle.load(f)
 
-
-    with open(join(args.val_dir, f"{content}.annotated_gold_spanins.pkl"), "rb") as f:
+    with open(join(args.val_dir, "gold_spanins.pkl"), "rb") as f:
         val_gold_ins = pickle.load(f)
 
     
@@ -293,7 +276,7 @@ if __name__ == "__main__":
 
 #     # """ ================ model ================ """
 
-    model = Model(tokenizer)
+    model = Model(tokenizer, args)
 
 #     # """ ================ train ================ """
     print("start training ")

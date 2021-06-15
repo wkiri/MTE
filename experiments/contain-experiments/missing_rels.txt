@@ -1,0 +1,784 @@
+Missing relation ---
+ENTITY1: {'text': 'becraft', 'annot_id': 'T20', 'doc_start_char': 5793, 'doc_end_char': 5800, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '1943', 'std_text': 'Becraft', 'sentid': 31}
+
+ENTITY2:{'text': 'alkali-feldspar', 'annot_id': 'T99', 'doc_start_char': 5956, 'doc_end_char': 5971, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '1943', 'std_text': 'Alkali Feldspar', 'sentid': 31}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'carnivore canyon', 'annot_id': 'T79', 'doc_start_char': 3165, 'doc_end_char': 3181, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Carnivore_Canyon', 'sentid': 17}
+
+ENTITY2:{'text': 'aluminum', 'annot_id': 'T5', 'doc_start_char': 3108, 'doc_end_char': 3116, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Aluminum', 'sentid': 17}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'carnivore canyon', 'annot_id': 'T79', 'doc_start_char': 3165, 'doc_end_char': 3181, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Carnivore_Canyon', 'sentid': 17}
+
+ENTITY2:{'text': 'titanium', 'annot_id': 'T6', 'doc_start_char': 3121, 'doc_end_char': 3129, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Titanium', 'sentid': 17}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'alexander hill', 'annot_id': 'T80', 'doc_start_char': 3182, 'doc_end_char': 3196, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Alexander_Hill', 'sentid': 17}
+
+ENTITY2:{'text': 'aluminum', 'annot_id': 'T5', 'doc_start_char': 3108, 'doc_end_char': 3116, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Aluminum', 'sentid': 17}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'alexander hill', 'annot_id': 'T80', 'doc_start_char': 3182, 'doc_end_char': 3196, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Alexander_Hill', 'sentid': 17}
+
+ENTITY2:{'text': 'titanium', 'annot_id': 'T6', 'doc_start_char': 3121, 'doc_end_char': 3129, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Titanium', 'sentid': 17}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'confidence hill', 'annot_id': 'T82', 'doc_start_char': 3228, 'doc_end_char': 3243, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Confidence_Hill', 'sentid': 17}
+
+ENTITY2:{'text': 'al', 'annot_id': 'T7', 'doc_start_char': 3274, 'doc_end_char': 3276, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Aluminum', 'sentid': 17}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'alexander hills', 'annot_id': 'T92', 'doc_start_char': 3969, 'doc_end_char': 3984, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Alexander_Hills', 'sentid': 24}
+
+ENTITY2:{'text': 'li', 'annot_id': 'T15', 'doc_start_char': 4017, 'doc_end_char': 4019, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Lithium', 'sentid': 24}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'carnivore canyon', 'annot_id': 'T91', 'doc_start_char': 3952, 'doc_end_char': 3968, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Carnivore_Canyon', 'sentid': 24}
+
+ENTITY2:{'text': 'li', 'annot_id': 'T15', 'doc_start_char': 4017, 'doc_end_char': 4019, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2099', 'std_text': 'Lithium', 'sentid': 24}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'dillinger', 'annot_id': 'T39', 'doc_start_char': 5245, 'doc_end_char': 5254, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '1438', 'std_text': 'Dillinger', 'sentid': 31}
+
+ENTITY2:{'text': 'k', 'annot_id': 'T93', 'doc_start_char': 5316, 'doc_end_char': 5317, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '1438', 'std_text': 'Potassium', 'sentid': 31}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'windjana', 'annot_id': 'T37', 'doc_start_char': 6032, 'doc_end_char': 6040, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2620', 'std_text': 'Windjana', 'sentid': 73}
+
+ENTITY2:{'text': 'iron oxides', 'annot_id': 'T138', 'doc_start_char': 6017, 'doc_end_char': 6028, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2620', 'std_text': 'Iron Oxides', 'sentid': 73}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'harrison', 'annot_id': 'T25', 'doc_start_char': 6523, 'doc_end_char': 6531, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2452', 'std_text': 'Harrison', 'sentid': 43}
+
+ENTITY2:{'text': 'k', 'annot_id': 'T70', 'doc_start_char': 6435, 'doc_end_char': 6436, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2452', 'std_text': 'Potassium', 'sentid': 43}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bell island', 'annot_id': 'T11', 'doc_start_char': 6266, 'doc_end_char': 6277, 'label': 'Target', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2940', 'std_text': 'Bell_Island', 'sentid': 48}
+
+ENTITY2:{'text': 'sulfate', 'annot_id': 'T1', 'doc_start_char': 6300, 'doc_end_char': 6307, 'label': 'Component', 'venue': 'lpsc15-C-raymond-sol1159-v3-utf8', 'year': '15', 'docname': '2940', 'std_text': 'Sulfate', 'sentid': 48}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'greenhorn', 'annot_id': 'T16', 'doc_start_char': 3867, 'doc_end_char': 3876, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1155', 'std_text': 'Greenhorn', 'sentid': 30}
+
+ENTITY2:{'text': 'magnetite', 'annot_id': 'T45', 'doc_start_char': 4003, 'doc_end_char': 4012, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1155', 'std_text': 'Magnetite', 'sentid': 30}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'greenhorn', 'annot_id': 'T16', 'doc_start_char': 3867, 'doc_end_char': 3876, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1155', 'std_text': 'Greenhorn', 'sentid': 30}
+
+ENTITY2:{'text': 'ilmenite', 'annot_id': 'T46', 'doc_start_char': 4016, 'doc_end_char': 4024, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1155', 'std_text': 'Ilmenite', 'sentid': 30}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'sheepbed', 'annot_id': 'T23', 'doc_start_char': 3258, 'doc_end_char': 3266, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1336', 'std_text': 'Sheepbed', 'sentid': 20}
+
+ENTITY2:{'text': 'mg', 'annot_id': 'T21', 'doc_start_char': 3212, 'doc_end_char': 3214, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1336', 'std_text': 'Magnesium', 'sentid': 20}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'buckskin', 'annot_id': 'T27', 'doc_start_char': 5595, 'doc_end_char': 5603, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1336', 'std_text': 'Buckskin', 'sentid': 40}
+
+ENTITY2:{'text': 'opal', 'annot_id': 'T38', 'doc_start_char': 5645, 'doc_end_char': 5649, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1336', 'std_text': 'Opal', 'sentid': 40}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'buckskin', 'annot_id': 'T5', 'doc_start_char': 3260, 'doc_end_char': 3268, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2349', 'std_text': 'Buckskin', 'sentid': 23}
+
+ENTITY2:{'text': 'tridymite', 'annot_id': 'T19', 'doc_start_char': 3325, 'doc_end_char': 3334, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2349', 'std_text': 'Tridymite', 'sentid': 23}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'buckskin', 'annot_id': 'T15', 'doc_start_char': 5640, 'doc_end_char': 5648, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2349', 'std_text': 'Buckskin', 'sentid': 36}
+
+ENTITY2:{'text': 'tridymite', 'annot_id': 'T20', 'doc_start_char': 5614, 'doc_end_char': 5623, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2349', 'std_text': 'Tridymite', 'sentid': 36}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'windjana', 'annot_id': 'T40', 'doc_start_char': 1645, 'doc_end_char': 1653, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2145', 'std_text': 'Windjana', 'sentid': 6}
+
+ENTITY2:{'text': 'fe', 'annot_id': 'T79', 'doc_start_char': 1676, 'doc_end_char': 1678, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2145', 'std_text': 'Iron', 'sentid': 6}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'windjana', 'annot_id': 'T40', 'doc_start_char': 1645, 'doc_end_char': 1653, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2145', 'std_text': 'Windjana', 'sentid': 6}
+
+ENTITY2:{'text': 'potassic', 'annot_id': 'T78', 'doc_start_char': 1666, 'doc_end_char': 1674, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2145', 'std_text': 'Potassic', 'sentid': 6}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'windjana', 'annot_id': 'T42', 'doc_start_char': 1960, 'doc_end_char': 1968, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2145', 'std_text': 'Windjana', 'sentid': 8}
+
+ENTITY2:{'text': 'igneous minerals', 'annot_id': 'T72', 'doc_start_char': 1994, 'doc_end_char': 2010, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2145', 'std_text': 'Igneous Minerals', 'sentid': 8}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'alvord mountain', 'annot_id': 'T44', 'doc_start_char': 4719, 'doc_end_char': 4734, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1990', 'std_text': 'Alvord_Mountain', 'sentid': 34}
+
+ENTITY2:{'text': 'fluorine', 'annot_id': 'T16', 'doc_start_char': 4673, 'doc_end_char': 4681, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1990', 'std_text': 'Fluorine', 'sentid': 34}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'soledad pass', 'annot_id': 'T95', 'doc_start_char': 7295, 'doc_end_char': 7307, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1348', 'std_text': 'Soledad_Pass', 'sentid': 63}
+
+ENTITY2:{'text': 'iron', 'annot_id': 'T133', 'doc_start_char': 7280, 'doc_end_char': 7284, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1348', 'std_text': 'Iron', 'sentid': 63}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'soledad pass', 'annot_id': 'T95', 'doc_start_char': 7295, 'doc_end_char': 7307, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1348', 'std_text': 'Soledad_Pass', 'sentid': 63}
+
+ENTITY2:{'text': 'sr', 'annot_id': 'T59', 'doc_start_char': 7335, 'doc_end_char': 7337, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1348', 'std_text': 'Strontium', 'sentid': 63}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'cc_bt_0604a', 'annot_id': 'T46', 'doc_start_char': 3584, 'doc_end_char': 3595, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2942', 'std_text': 'Cc_Bt_0604a', 'sentid': 25}
+
+ENTITY2:{'text': 'cu', 'annot_id': 'T83', 'doc_start_char': 3616, 'doc_end_char': 3618, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2942', 'std_text': 'Copper', 'sentid': 25}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'cc_bt_0604a', 'annot_id': 'T56', 'doc_start_char': 5577, 'doc_end_char': 5588, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2942', 'std_text': 'Cc_Bt_0604a', 'sentid': 42}
+
+ENTITY2:{'text': 'cu', 'annot_id': 'T98', 'doc_start_char': 5537, 'doc_end_char': 5539, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2942', 'std_text': 'Copper', 'sentid': 42}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'harms', 'annot_id': 'T58', 'doc_start_char': 5615, 'doc_end_char': 5620, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2942', 'std_text': 'Harms', 'sentid': 42}
+
+ENTITY2:{'text': 'cu', 'annot_id': 'T98', 'doc_start_char': 5537, 'doc_end_char': 5539, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2942', 'std_text': 'Copper', 'sentid': 42}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'barby', 'annot_id': 'T20', 'doc_start_char': 5573, 'doc_end_char': 5578, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Barby', 'sentid': 44}
+
+ENTITY2:{'text': 'si', 'annot_id': 'T6', 'doc_start_char': 5602, 'doc_end_char': 5604, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Silicon', 'sentid': 44}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'warsaw', 'annot_id': 'T21', 'doc_start_char': 5624, 'doc_end_char': 5630, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Warsaw', 'sentid': 44}
+
+ENTITY2:{'text': 'ni', 'annot_id': 'T22', 'doc_start_char': 5643, 'doc_end_char': 5645, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Nickel', 'sentid': 44}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'barby', 'annot_id': 'T26', 'doc_start_char': 5678, 'doc_end_char': 5683, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Barby', 'sentid': 45}
+
+ENTITY2:{'text': 'si', 'annot_id': 'T7', 'doc_start_char': 5656, 'doc_end_char': 5658, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Silicon', 'sentid': 45}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'barby', 'annot_id': 'T26', 'doc_start_char': 5678, 'doc_end_char': 5683, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Barby', 'sentid': 45}
+
+ENTITY2:{'text': 'al', 'annot_id': 'T8', 'doc_start_char': 5660, 'doc_end_char': 5662, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1536', 'std_text': 'Aluminum', 'sentid': 45}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'laurens', 'annot_id': 'T69', 'doc_start_char': 6188, 'doc_end_char': 6195, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1347', 'std_text': 'Laurens', 'sentid': 54}
+
+ENTITY2:{'text': 'copper', 'annot_id': 'T51', 'doc_start_char': 6224, 'doc_end_char': 6230, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1347', 'std_text': 'Copper', 'sentid': 54}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'john klein', 'annot_id': 'T6', 'doc_start_char': 5548, 'doc_end_char': 5558, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2434', 'std_text': 'John_Klein', 'sentid': 34}
+
+ENTITY2:{'text': 'saponite', 'annot_id': 'T75', 'doc_start_char': 5581, 'doc_end_char': 5589, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2434', 'std_text': 'Saponite', 'sentid': 34}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'john klein', 'annot_id': 'T6', 'doc_start_char': 5548, 'doc_end_char': 5558, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2434', 'std_text': 'John_Klein', 'sentid': 34}
+
+ENTITY2:{'text': 'anhydrite', 'annot_id': 'T76', 'doc_start_char': 5638, 'doc_end_char': 5647, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2434', 'std_text': 'Anhydrite', 'sentid': 34}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'shaler', 'annot_id': 'T36', 'doc_start_char': 1606, 'doc_end_char': 1612, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1163', 'std_text': 'Shaler', 'sentid': 4}
+
+ENTITY2:{'text': 'potassic', 'annot_id': 'T9', 'doc_start_char': 1473, 'doc_end_char': 1481, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1163', 'std_text': 'Potassic', 'sentid': 4}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bathurst', 'annot_id': 'T11', 'doc_start_char': 1628, 'doc_end_char': 1636, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1163', 'std_text': 'Bathurst', 'sentid': 4}
+
+ENTITY2:{'text': 'potassic', 'annot_id': 'T9', 'doc_start_char': 1473, 'doc_end_char': 1481, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1163', 'std_text': 'Potassic', 'sentid': 4}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'windjana', 'annot_id': 'T15', 'doc_start_char': 4951, 'doc_end_char': 4959, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1163', 'std_text': 'Windjana', 'sentid': 26}
+
+ENTITY2:{'text': 'sanidine', 'annot_id': 'T26', 'doc_start_char': 4875, 'doc_end_char': 4883, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '1163', 'std_text': 'Sanidine', 'sentid': 26}
+
+Entity1 extracted: True, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'block island', 'annot_id': 'T41', 'doc_start_char': 1318, 'doc_end_char': 1330, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2461', 'std_text': 'Block_Island', 'sentid': 10}
+
+ENTITY2:{'text': 'iron', 'annot_id': 'T1', 'doc_start_char': 1302, 'doc_end_char': 1306, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2461', 'std_text': 'Iron', 'sentid': 10}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'oileán ruaidh', 'annot_id': 'T42', 'doc_start_char': 1339, 'doc_end_char': 1352, 'label': 'Target', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2461', 'std_text': 'Oileán_Ruaidh', 'sentid': 10}
+
+ENTITY2:{'text': 'iron', 'annot_id': 'T1', 'doc_start_char': 1302, 'doc_end_char': 1306, 'label': 'Component', 'venue': 'lpsc16-C-raymond-sol1159-utf8', 'year': '16', 'docname': '2461', 'std_text': 'Iron', 'sentid': 10}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wedge', 'annot_id': 'T19', 'doc_start_char': 2575, 'doc_end_char': 2580, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1776', 'std_text': 'Wedge', 'sentid': 19}
+
+ENTITY2:{'text': 'sulfurrich', 'annot_id': 'T6', 'doc_start_char': 2590, 'doc_end_char': 2600, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1776', 'std_text': 'Sulfurrich', 'sentid': 19}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'yogi', 'annot_id': 'T18', 'doc_start_char': 2566, 'doc_end_char': 2570, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1776', 'std_text': 'Yogi', 'sentid': 19}
+
+ENTITY2:{'text': 'sulfurrich', 'annot_id': 'T6', 'doc_start_char': 2590, 'doc_end_char': 2600, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1776', 'std_text': 'Sulfurrich', 'sentid': 19}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'half dome', 'annot_id': 'T42', 'doc_start_char': 5665, 'doc_end_char': 5674, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Half_Dome', 'sentid': 38}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T20', 'doc_start_char': 5733, 'doc_end_char': 5739, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Sulfur', 'sentid': 38}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'half dome', 'annot_id': 'T43', 'doc_start_char': 5800, 'doc_end_char': 5809, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Half_Dome', 'sentid': 39}
+
+ENTITY2:{'text': 'cl', 'annot_id': 'T21', 'doc_start_char': 5768, 'doc_end_char': 5770, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Chlorine', 'sentid': 39}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'half dome', 'annot_id': 'T44', 'doc_start_char': 6244, 'doc_end_char': 6253, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Half_Dome', 'sentid': 42}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T23', 'doc_start_char': 6291, 'doc_end_char': 6297, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Sulfur', 'sentid': 42}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'half dome', 'annot_id': 'T44', 'doc_start_char': 6244, 'doc_end_char': 6253, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Half_Dome', 'sentid': 42}
+
+ENTITY2:{'text': 'cl', 'annot_id': 'T24', 'doc_start_char': 6320, 'doc_end_char': 6322, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1534', 'std_text': 'Chlorine', 'sentid': 42}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wedge', 'annot_id': 'T78', 'doc_start_char': 3787, 'doc_end_char': 3792, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1700', 'std_text': 'Wedge', 'sentid': 23}
+
+ENTITY2:{'text': 'iron-rich', 'annot_id': 'T6', 'doc_start_char': 3882, 'doc_end_char': 3891, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1700', 'std_text': 'Iron Rich', 'sentid': 23}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'barnacle bill', 'annot_id': 'T6', 'doc_start_char': 3544, 'doc_end_char': 3557, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Barnacle_Bill', 'sentid': 20}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T7', 'doc_start_char': 3564, 'doc_end_char': 3570, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 20}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'shark', 'annot_id': 'T5', 'doc_start_char': 3534, 'doc_end_char': 3539, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Shark', 'sentid': 20}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T7', 'doc_start_char': 3564, 'doc_end_char': 3570, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 20}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'barnacle bill', 'annot_id': 'T6', 'doc_start_char': 3544, 'doc_end_char': 3557, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Barnacle_Bill', 'sentid': 20}
+
+ENTITY2:{'text': 's', 'annot_id': 'T8', 'doc_start_char': 3599, 'doc_end_char': 3600, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 20}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'shark', 'annot_id': 'T5', 'doc_start_char': 3534, 'doc_end_char': 3539, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Shark', 'sentid': 20}
+
+ENTITY2:{'text': 's', 'annot_id': 'T8', 'doc_start_char': 3599, 'doc_end_char': 3600, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 20}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'half dome', 'annot_id': 'T23', 'doc_start_char': 3634, 'doc_end_char': 3643, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Half_Dome', 'sentid': 21}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T9', 'doc_start_char': 3676, 'doc_end_char': 3682, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 21}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wedge', 'annot_id': 'T24', 'doc_start_char': 3645, 'doc_end_char': 3650, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Wedge', 'sentid': 21}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T9', 'doc_start_char': 3676, 'doc_end_char': 3682, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 21}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'yogi', 'annot_id': 'T25', 'doc_start_char': 3656, 'doc_end_char': 3660, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Yogi', 'sentid': 21}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T9', 'doc_start_char': 3676, 'doc_end_char': 3682, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 21}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'shark', 'annot_id': 'T26', 'doc_start_char': 4160, 'doc_end_char': 4165, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Shark', 'sentid': 23}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T14', 'doc_start_char': 4064, 'doc_end_char': 4070, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 23}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'wedge', 'annot_id': 'T27', 'doc_start_char': 4659, 'doc_end_char': 4664, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Wedge', 'sentid': 26}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T16', 'doc_start_char': 4685, 'doc_end_char': 4691, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sulfur', 'sentid': 26}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'yogi', 'annot_id': 'T28', 'doc_start_char': 4833, 'doc_end_char': 4837, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Yogi', 'sentid': 27}
+
+ENTITY2:{'text': 'na', 'annot_id': 'T18', 'doc_start_char': 4889, 'doc_end_char': 4891, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Sodium', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'yogi', 'annot_id': 'T28', 'doc_start_char': 4833, 'doc_end_char': 4837, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Yogi', 'sentid': 27}
+
+ENTITY2:{'text': 'fe', 'annot_id': 'T19', 'doc_start_char': 4901, 'doc_end_char': 4903, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1998', 'docname': '1962', 'std_text': 'Iron', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'mermaid dune', 'annot_id': 'T21', 'doc_start_char': 464, 'doc_end_char': 476, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1083', 'std_text': 'Mermaid_Dune', 'sentid': 2}
+
+ENTITY2:{'text': 'sulfur', 'annot_id': 'T2', 'doc_start_char': 548, 'doc_end_char': 554, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1083', 'std_text': 'Sulfur', 'sentid': 2}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'abu', 'annot_id': 'T12', 'doc_start_char': 7252, 'doc_end_char': 7255, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1912', 'std_text': 'Abu', 'sentid': 58}
+
+ENTITY2:{'text': 'iron', 'annot_id': 'T1', 'doc_start_char': 7337, 'doc_end_char': 7341, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1912', 'std_text': 'Iron', 'sentid': 58}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'abu', 'annot_id': 'T13', 'doc_start_char': 7365, 'doc_end_char': 7368, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1912', 'std_text': 'Abu', 'sentid': 59}
+
+ENTITY2:{'text': 'iron', 'annot_id': 'T2', 'doc_start_char': 7535, 'doc_end_char': 7539, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1912', 'std_text': 'Iron', 'sentid': 59}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'gerbil', 'annot_id': 'T14', 'doc_start_char': 7373, 'doc_end_char': 7379, 'label': 'Target', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1912', 'std_text': 'Gerbil', 'sentid': 59}
+
+ENTITY2:{'text': 'iron', 'annot_id': 'T2', 'doc_start_char': 7535, 'doc_end_char': 7539, 'label': 'Component', 'venue': 'mpf-reviewed+properties-v2', 'year': '1999', 'docname': '1912', 'std_text': 'Iron', 'sentid': 59}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'baby bear', 'annot_id': 'T70', 'doc_start_char': 5341, 'doc_end_char': 5350, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2009', 'docname': '2196', 'std_text': 'Baby_Bear', 'sentid': 51}
+
+ENTITY2:{'text': 'oxygen', 'annot_id': 'T57', 'doc_start_char': 5257, 'doc_end_char': 5263, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2009', 'docname': '2196', 'std_text': 'Oxygen', 'sentid': 51}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rr2', 'annot_id': 'T105', 'doc_start_char': 7508, 'doc_end_char': 7511, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Rosy_Red', 'sentid': 59}
+
+ENTITY2:{'text': 'carbonates', 'annot_id': 'T27', 'doc_start_char': 7551, 'doc_end_char': 7561, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Carbonates', 'sentid': 59}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rr2', 'annot_id': 'T105', 'doc_start_char': 7508, 'doc_end_char': 7511, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Rosy_Red', 'sentid': 59}
+
+ENTITY2:{'text': 'ca', 'annot_id': 'T28', 'doc_start_char': 7573, 'doc_end_char': 7575, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Calcium', 'sentid': 59}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T51', 'doc_start_char': 7602, 'doc_end_char': 7614, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Wicked_Witch', 'sentid': 60}
+
+ENTITY2:{'text': 'calcium', 'annot_id': 'T29', 'doc_start_char': 7698, 'doc_end_char': 7705, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Calcium', 'sentid': 60}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T51', 'doc_start_char': 7602, 'doc_end_char': 7614, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Wicked_Witch', 'sentid': 60}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T30', 'doc_start_char': 7711, 'doc_end_char': 7720, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Carbonate', 'sentid': 60}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'burning coals', 'annot_id': 'T52', 'doc_start_char': 7884, 'doc_end_char': 7897, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Burning_Coals', 'sentid': 62}
+
+ENTITY2:{'text': 'ca', 'annot_id': 'T32', 'doc_start_char': 7957, 'doc_end_char': 7959, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Calcium', 'sentid': 62}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'burning coals', 'annot_id': 'T52', 'doc_start_char': 7884, 'doc_end_char': 7897, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Burning_Coals', 'sentid': 62}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T33', 'doc_start_char': 7965, 'doc_end_char': 7974, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Carbonate', 'sentid': 62}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'bc', 'annot_id': 'T31', 'doc_start_char': 7899, 'doc_end_char': 7901, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Burning_Coals', 'sentid': 62}
+
+ENTITY2:{'text': 'ca', 'annot_id': 'T32', 'doc_start_char': 7957, 'doc_end_char': 7959, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Calcium', 'sentid': 62}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'bc', 'annot_id': 'T31', 'doc_start_char': 7899, 'doc_end_char': 7901, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Burning_Coals', 'sentid': 62}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T33', 'doc_start_char': 7965, 'doc_end_char': 7974, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Carbonate', 'sentid': 62}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'bc', 'annot_id': 'T31', 'doc_start_char': 7899, 'doc_end_char': 7901, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Burning_Coals', 'sentid': 62}
+
+ENTITY2:{'text': 'mgso4', 'annot_id': 'T112', 'doc_start_char': 8035, 'doc_end_char': 8040, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Mgso4', 'sentid': 62}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'burning coals', 'annot_id': 'T52', 'doc_start_char': 7884, 'doc_end_char': 7897, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Burning_Coals', 'sentid': 62}
+
+ENTITY2:{'text': 'mgso4', 'annot_id': 'T112', 'doc_start_char': 8035, 'doc_end_char': 8040, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2017', 'docname': '2201', 'std_text': 'Mgso4', 'sentid': 62}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T96', 'doc_start_char': 2987, 'doc_end_char': 2989, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 21}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T98', 'doc_start_char': 2958, 'doc_end_char': 2961, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 21}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T97', 'doc_start_char': 3002, 'doc_end_char': 3004, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 21}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T98', 'doc_start_char': 2958, 'doc_end_char': 2961, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 21}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T99', 'doc_start_char': 3031, 'doc_end_char': 3033, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 22}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T100', 'doc_start_char': 3043, 'doc_end_char': 3046, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 22}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T101', 'doc_start_char': 3252, 'doc_end_char': 3254, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 24}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T102', 'doc_start_char': 3294, 'doc_end_char': 3297, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 24}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T103', 'doc_start_char': 3312, 'doc_end_char': 3314, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 25}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T104', 'doc_start_char': 3333, 'doc_end_char': 3336, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 25}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T106', 'doc_start_char': 3542, 'doc_end_char': 3544, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 27}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T108', 'doc_start_char': 3515, 'doc_end_char': 3518, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T109', 'doc_start_char': 3683, 'doc_end_char': 3685, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 28}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T110', 'doc_start_char': 3689, 'doc_end_char': 3692, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 28}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T111', 'doc_start_char': 4048, 'doc_end_char': 4050, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 30}
+
+ENTITY2:{'text': 'fe-carbonate', 'annot_id': 'T29', 'doc_start_char': 4110, 'doc_end_char': 4122, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Iron Carbonate', 'sentid': 30}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T111', 'doc_start_char': 4048, 'doc_end_char': 4050, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 30}
+
+ENTITY2:{'text': 'fe-ca-carbonate', 'annot_id': 'T112', 'doc_start_char': 4166, 'doc_end_char': 4181, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Iron Calcium Carbonate', 'sentid': 30}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T120', 'doc_start_char': 4562, 'doc_end_char': 4564, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 34}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T122', 'doc_start_char': 4519, 'doc_end_char': 4522, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 34}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T121', 'doc_start_char': 4577, 'doc_end_char': 4579, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 34}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T122', 'doc_start_char': 4519, 'doc_end_char': 4522, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 34}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T125', 'doc_start_char': 4926, 'doc_end_char': 4928, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 37}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T129', 'doc_start_char': 4896, 'doc_end_char': 4899, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 37}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T126', 'doc_start_char': 4933, 'doc_end_char': 4935, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 37}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T129', 'doc_start_char': 4896, 'doc_end_char': 4899, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 37}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T131', 'doc_start_char': 5488, 'doc_end_char': 5490, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 43}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T132', 'doc_start_char': 5513, 'doc_end_char': 5516, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 43}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T130', 'doc_start_char': 5481, 'doc_end_char': 5483, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 43}
+
+ENTITY2:{'text': 'co2', 'annot_id': 'T132', 'doc_start_char': 5513, 'doc_end_char': 5516, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Co2', 'sentid': 43}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T133', 'doc_start_char': 6345, 'doc_end_char': 6347, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 48}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T42', 'doc_start_char': 6404, 'doc_end_char': 6413, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Carbonate', 'sentid': 48}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T134', 'doc_start_char': 6349, 'doc_end_char': 6351, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 48}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T42', 'doc_start_char': 6404, 'doc_end_char': 6413, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Carbonate', 'sentid': 48}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'ww', 'annot_id': 'T137', 'doc_start_char': 6486, 'doc_end_char': 6488, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Wicked_Witch', 'sentid': 49}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T43', 'doc_start_char': 6503, 'doc_end_char': 6512, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Carbonate', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'bb', 'annot_id': 'T136', 'doc_start_char': 6478, 'doc_end_char': 6480, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Baby_Bear', 'sentid': 49}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T43', 'doc_start_char': 6503, 'doc_end_char': 6512, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2018', 'docname': '2897', 'std_text': 'Carbonate', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T132', 'doc_start_char': 4189, 'doc_end_char': 4201, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 27}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T62', 'doc_start_char': 4153, 'doc_end_char': 4162, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Carbonate', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T132', 'doc_start_char': 4189, 'doc_end_char': 4201, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 27}
+
+ENTITY2:{'text': 'calcite', 'annot_id': 'T59', 'doc_start_char': 4071, 'doc_end_char': 4078, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Calcite', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T132', 'doc_start_char': 4189, 'doc_end_char': 4201, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 27}
+
+ENTITY2:{'text': 'ankerite', 'annot_id': 'T60', 'doc_start_char': 4080, 'doc_end_char': 4088, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Ankerite', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T132', 'doc_start_char': 4189, 'doc_end_char': 4201, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 27}
+
+ENTITY2:{'text': 'dolomite', 'annot_id': 'T61', 'doc_start_char': 4093, 'doc_end_char': 4101, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Dolomite', 'sentid': 27}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T133', 'doc_start_char': 4222, 'doc_end_char': 4234, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 28}
+
+ENTITY2:{'text': 'fe', 'annot_id': 'T63', 'doc_start_char': 4293, 'doc_end_char': 4295, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Iron', 'sentid': 28}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T133', 'doc_start_char': 4222, 'doc_end_char': 4234, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 28}
+
+ENTITY2:{'text': 'mg', 'annot_id': 'T64', 'doc_start_char': 4303, 'doc_end_char': 4305, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Magnesium', 'sentid': 28}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T133', 'doc_start_char': 4222, 'doc_end_char': 4234, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 28}
+
+ENTITY2:{'text': 'carbonates', 'annot_id': 'T65', 'doc_start_char': 4306, 'doc_end_char': 4316, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Carbonates', 'sentid': 28}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T134', 'doc_start_char': 4496, 'doc_end_char': 4508, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 29}
+
+ENTITY2:{'text': 'siderite', 'annot_id': 'T66', 'doc_start_char': 4318, 'doc_end_char': 4326, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Siderite', 'sentid': 29}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T134', 'doc_start_char': 4496, 'doc_end_char': 4508, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 29}
+
+ENTITY2:{'text': 'magnestite', 'annot_id': 'T67', 'doc_start_char': 4331, 'doc_end_char': 4341, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Magnestite', 'sentid': 29}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T136', 'doc_start_char': 4746, 'doc_end_char': 4758, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 31}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T76', 'doc_start_char': 4882, 'doc_end_char': 4891, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Carbonate', 'sentid': 31}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T136', 'doc_start_char': 4746, 'doc_end_char': 4758, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Wicked_Witch', 'sentid': 31}
+
+ENTITY2:{'text': 'ca', 'annot_id': 'T73', 'doc_start_char': 4871, 'doc_end_char': 4873, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2011', 'docname': '2351', 'std_text': 'Calcium', 'sentid': 31}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T84', 'doc_start_char': 3555, 'doc_end_char': 3563, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 30}
+
+ENTITY2:{'text': 'cl', 'annot_id': 'T19', 'doc_start_char': 3624, 'doc_end_char': 3626, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Chlorine', 'sentid': 30}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'ca', 'annot_id': 'T49', 'doc_start_char': 6238, 'doc_end_char': 6240, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Calcium', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'mg', 'annot_id': 'T50', 'doc_start_char': 6242, 'doc_end_char': 6244, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Magnesium', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'na', 'annot_id': 'T51', 'doc_start_char': 6246, 'doc_end_char': 6248, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Sodium', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'k', 'annot_id': 'T52', 'doc_start_char': 6250, 'doc_end_char': 6251, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Potassium', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'cl', 'annot_id': 'T53', 'doc_start_char': 6253, 'doc_end_char': 6255, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Chlorine', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'so4', 'annot_id': 'T110', 'doc_start_char': 6257, 'doc_end_char': 6260, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'So4', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'rosy red', 'annot_id': 'T91', 'doc_start_char': 6219, 'doc_end_char': 6227, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Rosy_Red', 'sentid': 49}
+
+ENTITY2:{'text': 'clo4', 'annot_id': 'T111', 'doc_start_char': 6266, 'doc_end_char': 6270, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2013', 'docname': '1639', 'std_text': 'Clo4', 'sentid': 49}
+
+Entity1 extracted: False, Entity2 extracted: False
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T69', 'doc_start_char': 681, 'doc_end_char': 693, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2012', 'docname': '2008', 'std_text': 'Wicked_Witch', 'sentid': 2}
+
+ENTITY2:{'text': 'calcium', 'annot_id': 'T9', 'doc_start_char': 606, 'doc_end_char': 613, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2012', 'docname': '2008', 'std_text': 'Calcium', 'sentid': 2}
+
+Entity1 extracted: False, Entity2 extracted: True
+
+Missing relation ---
+ENTITY1: {'text': 'wicked witch', 'annot_id': 'T69', 'doc_start_char': 681, 'doc_end_char': 693, 'label': 'Target', 'venue': 'phx-reviewed+properties-v2', 'year': '2012', 'docname': '2008', 'std_text': 'Wicked_Witch', 'sentid': 2}
+
+ENTITY2:{'text': 'carbonate', 'annot_id': 'T10', 'doc_start_char': 614, 'doc_end_char': 623, 'label': 'Component', 'venue': 'phx-reviewed+properties-v2', 'year': '2012', 'docname': '2008', 'std_text': 'Carbonate', 'sentid': 2}
+
+Entity1 extracted: False, Entity2 extracted: True
+

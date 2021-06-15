@@ -2,7 +2,6 @@
 import re, sys, random, os 
 from os.path import abspath, dirname
 from copy import deepcopy
-from config import ner2markers
 curpath = dirname(abspath(__file__))
 sys.path.append(dirname(curpath))
 
@@ -71,68 +70,50 @@ class Span_Instance:
     def insert_type_markers(self, tokenizer, use_std_text = True, max_len = 512):
         assert self.sent_toks is not None
         # things to get 
+
         self.input_ids = []
-        self.span_bert_start = -1
-        self.span_bert_end = -1
+        exceed_leng = 0 
 
-        success = True # whether insering type markers is successful
+        prespans = tokenizer.tokenize(" ".join(["[CLS]"] + self.sent_toks[:self.sent_start_idx]))
+        start_markers = [f"<ner_start={self.ner_label.lower()}>"]
+        if use_std_text:
+            spans = tokenizer.tokenize(self.std_text)
+        else:
+            spans = tokenizer.tokenize(" ".join(self.sent_toks[self.sent_start_idx:self.sent_end_idx]))
 
-        # get sentence input ids
-        input_ids, tokidx2bertidx = get_input_ids(tokenizer, self.sent_toks, max_len = max_len)
+        end_markers = [f"<ner_end={self.ner_label.lower()}>"]
 
-        # check if the spans of entity1 and entit2 exceed the range of max_len after tokenization
-        if self.sent_end_idx > len(tokidx2bertidx):
-            success = False
-            return success
+        posspans = tokenizer.tokenize(' '.join(self.sent_toks[self.sent_end_idx:] + ["[SEP]"]))
 
-
-        # note that input_ids contain cls token and sep token 
-        self.bert_start_idx = tokidx2bertidx[self.sent_start_idx][0]
-        self.bert_end_idx = tokidx2bertidx[self.sent_end_idx - 1][-1]
-        prespan_ids = input_ids[:self.bert_start_idx]
-        posspan_ids = input_ids[self.bert_end_idx:]
-
-        spanids = tokenizer.encode(self.std_text, add_special_tokens = False) if use_std_text else input_ids[self.bert_start_idx:self.bert_end_idx]
-
-
-        typemarker = ner2markers[self.ner_label]
-        start_type_marker = f"<{typemarker}>"
-        end_type_marker = f"</{typemarker}>"
-        start_marker_ids = tokenizer.encode(start_type_marker, add_special_tokens = False)
-        end_marker_ids = tokenizer.encode(end_type_marker, add_special_tokens = False)
-
-        new_inputids = prespan_ids + start_marker_ids + spanids + end_marker_ids + posspan_ids 
-        
-        # max_len = 10
-        # prespan_ids = [0, 1,2,3,4,5,6,7,8,9]
-        # posspan_ids = [10,11,12,13,14,15,16, -1]
-        # diff = len(prespan_ids + posspan_ids) - max_len
-        
-        if len(new_inputids) > max_len:
-            diff = len(new_inputids) - max_len
+        if len(prespans + start_markers + spans + end_markers + posspans) > max_len:
             # truncate now 
-            # truncate right side first  
+            diff = len(prespans + start_markers + spans + end_markers + posspans) - max_len
 
-            prespan_ids, posspan_ids, diff = truncate(prespan_ids, posspan_ids, diff)
+            prepsans, posspans, diff = truncate(prespans, posspans, diff)
 
-            if diff > 0:
-                success = False
-                return success
-
-            new_inputids = prespan_ids + start_marker_ids + spanids + end_marker_ids + posspan_ids 
+        self.input_ids = tokenizer.convert_tokens_to_ids(prespans + start_markers + spans + end_markers + posspans)
+        self.bert_start_idx = len(prespans)
+        self.bert_end_idx = len(prespans + start_markers + spans)
 
 
-        self.bert_start_idx = len(prespan_ids)
+        assert tokenizer.convert_ids_to_tokens(self.input_ids)[self.bert_start_idx] == f"<ner_start={self.ner_label.lower()}>" and  tokenizer.convert_ids_to_tokens(self.input_ids)[self.bert_end_idx] == f"<ner_end={self.ner_label.lower()}>"
 
-        self.bert_end_idx = len(prespan_ids + start_marker_ids + spanids + end_marker_ids)
-        self.input_ids = new_inputids
-
-        return success
+        if len(self.input_ids) > max_len:
+            exceed_leng = 1
+            self.input_ids = self.input_ids[: max_len]
+            
+            if self.bert_start_idx >= max_len:
+                self.bert_start_idx = 0
+            
+            if self.bert_end_idx >= max_len:
+                self.bert_end_idx = 0
+        
+        return exceed_leng
 
 
 
     def __str__(self):
-        return f"doc_id: {self.doc_id}\ntext: {self.text}, std text: {self.std_text}, nerlabel:{self.ner_label}, involved in relation:{self.relation_label}, ({self.doc_start_char}, {self.doc_end_char}), sentid: {self.sentid}\nsentence:{'' if self.sent_toks is None else ' '.join(self.sent_toks) }\nstart end: ({self.doc_start_char, self.doc_end_char})\n"
+        return f"doc_id: {self.doc_id}\ntext: {self.text}, std text: {self.std_text}, ner_label:{self.ner_label}, involved in relation:{self.relation_label}, ({self.doc_start_char}, {self.doc_end_char}), sentid: {self.sentid}\nsentence:{'' if self.sent_toks is None else ' '.join(self.sent_toks) }\nstart end: ({self.doc_start_char, self.doc_end_char})\n"
 
 class Rel_Instance:
     def __init__(self,span1, span2, label_str = None):
@@ -147,127 +128,6 @@ class Rel_Instance:
 
         self.signature = f"{self.span1.doc_id}:{self.span1.std_text},{self.span2.std_text}"
 
-
-    def insert_type_markers(self, tokenizer, max_len = 512):
-        # function to insert type markers around entity1 and entity2 within a sentence 
-
-        # things to get 
-        self.input_ids = []
-        self.span1_bert_start_idx = -1
-        self.span1_bert_end_idx = -1
-        self.span2_bert_start_idx = -1
-        self.span2_bert_end_idx = -1
-
-        success = 1 # whether insering type markers is successful
-
-        # sanity check if two entities belong to the same sentence
-        if self.span1.sentid != self.span2.sentid:
-            success = 0
-            return success
-
-        if self.span1.sent_toks is None and self.span2.sent_toks is None:
-            success = 0
-            raise NameError("Inserting type markers requires either entities has the attribute 'sent_toks'!")
-            return success
-
-        # get sentence input ids
-        input_ids, tokidx2bertidx = get_input_ids(tokenizer, self.span1.sent_toks, max_len = max_len)
-
-        # check if the spans of entity1 and entit2 exceed the range of max_len after tokenization
-        if self.span1.sent_end_idx > len(tokidx2bertidx) or self.span2.sent_end_idx > len(tokidx2bertidx):
-            success = 0
-            return success
-
-        #find span_bert_start_idx and span_bert_end_idx of each entity in the tokenized sentence
-        span1_bert_start_idx = tokidx2bertidx[self.span1.sent_start_idx][0]
-        span1_bert_end_idx = tokidx2bertidx[self.span1.sent_end_idx - 1][-1]
-        span2_bert_start_idx = tokidx2bertidx[self.span2.sent_start_idx][0]
-        span2_bert_end_idx = tokidx2bertidx[self.span2.sent_end_idx - 1][-1]
-
-        # now start to insert type markers
-        subj_start_marker = f"<S:{ner2markers[self.span1.ner_label]}>"
-        subj_end_marker = f"</S:{ner2markers[self.span1.ner_label]}>"
-        obj_start_marker = f"<O:{ner2markers[self.span2.ner_label]}>"
-        obj_end_marker = f"</O:{ner2markers[self.span2.ner_label]}>"
-
-        subj_sids, subj_eids, obj_sids, obj_eids = [ tokenizer.encode(k, add_special_tokens = False) for k in [subj_start_marker, subj_end_marker, obj_start_marker, obj_end_marker]]
-
-        if len(subj_sids) + len(subj_eids) + len(obj_sids) + len(obj_eids) + len(input_ids) > max_len:
-            diff = len(subj_sids) + len(subj_eids) + len(obj_sids) + len(obj_eids) + len(input_ids) - max_len
-
-            prespan_end = min(span1_bert_start_idx, span2_bert_start_idx)
-
-            posspan_start = max(span1_bert_end_idx, span2_bert_end_idx)
-
-            prespan_ids = input_ids[:prespan_end]
-            posspan_ids = input_ids[posspan_start:]
-            midspan_ids = input_ids[prespan_end:posspan_start]
-
-            new_prespan_ids, new_posspan_ids, diff = truncate(prespan_ids, posspan_ids, diff) 
-
-            if diff > 0:
-                success = 0 
-                return success
-            
-            # modify span1_bert_start_idx, ... 
-            shrink_length = len(prespan_ids) - len(new_prespan_ids)
-            span1_bert_start_idx -= shrink_length
-            span2_bert_start_idx -= shrink_length
-            span1_bert_end_idx -= shrink_length
-            span2_bert_end_idx -= shrink_length
-            input_ids = new_prespan_ids + midspan_ids + new_posspan_ids
-
-        sorted_loc = sorted([(span1_bert_start_idx,span1_bert_end_idx, "subj_start", "subj_end"), (span2_bert_start_idx, span2_bert_end_idx, "obj_start", "obj_end")], key = lambda x: x[0])
-        
-        queue = [sorted_loc[0][0], sorted_loc[0][1], sorted_loc[1][0], sorted_loc[1][1]]
-        names = [sorted_loc[0][2], sorted_loc[0][3], sorted_loc[1][2], sorted_loc[1][3]]
-
-        new_inputids = []
-        for i, k  in enumerate(input_ids):
-            if len(queue) and i == queue[0]:
-                while len(queue) and i == queue[0]:
-                    if names[0] == "subj_start": 
-                        span1_bert_start_idx = len(new_inputids) 
-
-                        new_inputids.extend(subj_sids)
-                        new_inputids.append(k)
-                    elif names[0] == "subj_end":
-                        new_inputids.extend(subj_eids)
-                        span1_bert_end_idx = len(new_inputids)
-                        new_inputids.append(k)
-                    elif names[0] == "obj_start":
-                        span2_bert_start_idx = len(new_inputids)
-                        new_inputids.extend(obj_sids)
-                        new_inputids.append(k)
-                    else:
-                        new_inputids.extend(obj_eids)
-                        span2_bert_end_idx = len(new_inputids)
-                        new_inputids.append(k)
-                    queue.pop(0)
-                    names.pop(0)
-            else:
-                new_inputids.append(k)
-        
-        self.input_ids = new_inputids
-        self.span1_bert_start_idx = span1_bert_start_idx
-        self.span2_bert_start_idx = span2_bert_start_idx
-        self.span1_bert_end_idx = span1_bert_end_idx
-        self.span2_bert_end_idx = span2_bert_end_idx
-        
-        assert all([k >= 0 for k in [self.span1_bert_start_idx, self.span2_bert_start_idx, self.span1_bert_end_idx, self.span2_bert_end_idx]])
-
-        left_bracket_id = tokenizer.encode("<", add_special_tokens = False)[0]
-        right_bracket_id = tokenizer.encode(">", add_special_tokens = False)[0]
-
-        assert self.input_ids[self.span1_bert_start_idx] == left_bracket_id 
-
-        assert self.input_ids[self.span2_bert_start_idx] == left_bracket_id 
-        
-        assert self.input_ids[self.span1_bert_end_idx - 1] == right_bracket_id 
-        
-        assert self.input_ids[self.span2_bert_end_idx - 1] == right_bracket_id
-        
-        return success
 
     def __str__(self):
         sentence = " ".join(self.span1.sent_toks) if self.span1.sent_toks is not None else ""

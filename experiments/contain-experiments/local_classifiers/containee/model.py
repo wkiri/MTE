@@ -13,7 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class Model(torch.nn.Module):
-  def __init__(self, tokenizer): 
+  def __init__(self, tokenizer, args): 
     super(Model, self).__init__()
 
     self.model_type = tokenizer_type
@@ -27,7 +27,6 @@ class Model(torch.nn.Module):
     self.bert_encoder = AutoModel.from_pretrained(self.model_type)
     self.tokenizer = tokenizer
     self.bert_encoder.resize_token_embeddings(len(tokenizer))
-
 
     self.layernorm = torch.nn.LayerNorm(self.encoder_dimension * 3)
 

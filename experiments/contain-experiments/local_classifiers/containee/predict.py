@@ -66,8 +66,8 @@ def eval_and_save(model, val_dataloader, val_gold_ins,  best_f1, args, label_to_
         analayze(pred_instances, val_gold_ins, args.outdir)
 
     if save_prediction:
-        print(f"saving prediction to {join(args.outdir, f'{args.content}.spans.pred')}")
-        with open(join(args.outdir, f"{args.content}.spans.pred"), "wb") as f:
+        print(f"saving prediction to {join(args.outdir, f'spans.pred')}")
+        with open(join(args.outdir, f"spans.pred"), "wb") as f:
             pickle.dump(pred_instances, f)
    
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     """ ================= parse =============== """
     parser = argparse.ArgumentParser()
     
-    parser.add_argument('-content', choices = ["Merged", "EM", "ET", "MT", "E", "M", "T"], help = "what experiments to run (e.g., elements, minerals, and their merged set)", required= True)
+
     parser.add_argument('-threshold', default = 0.5, type = float)
     parser.add_argument('-use_all_yes', default = 0, type = int, choices = [0,1], help = "whether to run all yes baseline")
 
@@ -121,42 +121,28 @@ if __name__ == "__main__":
     parser.add_argument("-modelfile", required = True)
     parser.add_argument("-test_dir", default = None)
     parser.add_argument("-outdir", default = "./temp/prediction", help = "where to save the model to")
-
+    parser.add_argument("-dropout", type = float, default = 0)
     parser.add_argument("-analyze_dev", default = False)
-    parser.add_argument("-predict_with_extracted_gold_entities", default = 0, type = int, choices = [0,1])
+
 
     args = parser.parse_args()
 
-    content = args.content
-    if content == 'Merged':
-        ners = ['Component', 'Target']
-    else:
-        ners = []
-        c2ner = {
-        'T': 'Target',
-        'E': 'Component',
-        'M': 'Component'
-        }
-        for c in content:
-            ners.append(c2ner[c])
-        ners = list(set(ners))
+
+    ners = ['Component']
 
     add_marker_tokens(tokenizer, ners)
 
     print(">>> loading data ")
-    if args.predict_with_extracted_gold_entities:        
-        print("using gold entities for evaluation")
-        test_file = join(args.test_dir, f"{content}.extracted_gold_spanins.pkl")
 
-    else:
-        print("using system entities for evaluation")
-        test_file = join(args.test_dir, f"{content}.extracted_system_spanins.pkl")
+    test_file = join(args.test_dir, 
+        "spanins.pkl")
+
 
     with open(test_file, "rb") as f:
         test_ins = pickle.load(f)
 
   
-    with open(join(args.test_dir, f"{content}.annotated_gold_spanins.pkl"), "rb") as f:
+    with open(join(args.test_dir, "gold_spanins.pkl"), "rb") as f:
             test_gold_ins = pickle.load(f)
 
 #     """ ================ make dataset ================ """
@@ -168,7 +154,7 @@ if __name__ == "__main__":
     test_dataloader = DataLoader(test_dataset, batch_size = 10, collate_fn = collate)
 #     # """ ================ model ================ """
 
-    model = Model(tokenizer)
+    model = Model(tokenizer,args)
     model.load_state_dict(torch.load(args.modelfile))
 
     print("Instance Level Evaluation: ")
