@@ -1,0 +1,40 @@
+{
+    "train_path": "data/train_list_0",
+    "word_vec_path": "data/vocab_morph.wordvec.st",
+    "suffix": "cross_bin_0",
+    "model_dir": "logs",
+    "isLower": true,
+    
+    "word_format": "morph",
+    "class_num": 2,
+    "only_single_sent": false,
+
+    "batch_size": 8,
+    "max_node_num": 450,
+    "max_in_neigh_num": 45,
+    "max_out_neigh_num": 45,
+    "max_entity_size":5,
+    "entity_num":3,
+    "learning_rate": 0.0001,
+    "lambda_l2": 0.001,
+    "dropout_rate": 0.1,
+    "max_epochs": 50,
+    "optimize_type": "adam",
+
+    "with_highway": true,
+    "highway_layer_num": 1,
+
+    "with_char": false,
+    "char_dim": 50,
+    "char_lstm_dim": 50,
+    "max_char_per_word": 20,
+    
+    "edgelabel_dim": 50,
+    "neighbor_vector_dim": 100,
+    "fix_word_vec": true,
+    "compress_input": true,
+    "compress_input_dim": 100,
+
+    "config_path": "config.json",
+    "generate_config": false
+}

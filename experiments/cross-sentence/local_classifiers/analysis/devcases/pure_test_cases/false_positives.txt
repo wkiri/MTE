@@ -1,0 +1,204 @@
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Just one rock , Mara ( group 4 ) , plots on a noritic trend joining andesine and pigeonite .
+TEXT    : Mara, andesine
+STD TEXT: Mara, Andesine
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Mara,Andesine
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Mara, std text: Mara, ner_label:Target, involved in relation:None, (5140, 5144), sentid: None
+sentence:Just one rock , Mara ( group 4 ) , plots on a noritic trend joining andesine and pigeonite .
+start end: ((5140, 5144))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: andesine, std text: Andesine, ner_label:Component, involved in relation:None, (5189, 5197), sentid: None
+sentence:Just one rock , Mara ( group 4 ) , plots on a noritic trend joining andesine and pigeonite .
+start end: ((5189, 5197))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Just one rock , Mara ( group 4 ) , plots on a noritic trend joining andesine and pigeonite .
+TEXT    : Mara, pigeonite
+STD TEXT: Mara, Pigeonite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Mara,Pigeonite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Mara, std text: Mara, ner_label:Target, involved in relation:None, (5140, 5144), sentid: None
+sentence:Just one rock , Mara ( group 4 ) , plots on a noritic trend joining andesine and pigeonite .
+start end: ((5140, 5144))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: pigeonite, std text: Pigeonite, ner_label:Component, involved in relation:None, (5202, 5211), sentid: None
+sentence:Just one rock , Mara ( group 4 ) , plots on a noritic trend joining andesine and pigeonite .
+start end: ((5202, 5211))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The drill tailings and the Mn - rich targets are not taken into account in the average composition of the Dillinger member .
+TEXT    : Dillinger, Mn
+STD TEXT: Dillinger, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (4383, 4392), sentid: None
+sentence:The drill tailings and the Mn - rich targets are not taken into account in the average composition of the Dillinger member .
+start end: ((4383, 4392))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (4306, 4308), sentid: None
+sentence:The drill tailings and the Mn - rich targets are not taken into account in the average composition of the Dillinger member .
+start end: ((4306, 4308))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:( B ) Average composition of the potassic rocks normalized to Sheepbed ( YKB ) .
+TEXT    : Sheepbed, potassic
+STD TEXT: Sheepbed, Potassic
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Sheepbed,Potassic
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Sheepbed, std text: Sheepbed, ner_label:Target, involved in relation:None, (4461, 4469), sentid: None
+sentence:( B ) Average composition of the potassic rocks normalized to Sheepbed ( YKB ) .
+start end: ((4461, 4469))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: potassic, std text: Potassic, ner_label:Component, involved in relation:None, (4432, 4440), sentid: None
+sentence:( B ) Average composition of the potassic rocks normalized to Sheepbed ( YKB ) .
+start end: ((4432, 4440))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The Dillinger and Mt. Remarkable members ( Rugged unit at Kimberley ) especially display the rocks most enriched in K ( Fig. 2A ) .
+TEXT    : Dillinger, K
+STD TEXT: Dillinger, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (4900, 4909), sentid: None
+sentence:The Dillinger and Mt. Remarkable members ( Rugged unit at Kimberley ) especially display the rocks most enriched in K ( Fig. 2A ) .
+start end: ((4900, 4909))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: K, std text: Potassium, ner_label:Component, involved in relation:None, (5010, 5011), sentid: None
+sentence:The Dillinger and Mt. Remarkable members ( Rugged unit at Kimberley ) especially display the rocks most enriched in K ( Fig. 2A ) .
+start end: ((5010, 5011))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Dillinger, illite
+STD TEXT: Dillinger, Illite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Illite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (5446, 5455), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5446, 5455))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: illite, std text: Illite, ner_label:Component, involved in relation:None, (5214, 5220), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5214, 5220))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Confidence Hills, Fe
+STD TEXT: Confidence_Hills, Iron
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Iron
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (5927, 5943), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5927, 5943))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Fe, std text: Iron, ner_label:Component, involved in relation:None, (5906, 5908), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5906, 5908))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+TEXT    : Confidence Hills, Fe
+STD TEXT: Confidence_Hills, Iron
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Iron
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (7192, 7208), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7192, 7208))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Fe, std text: Iron, ner_label:Component, involved in relation:None, (7148, 7150), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7148, 7150))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+TEXT    : Confidence Hills, Mn
+STD TEXT: Confidence_Hills, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (7192, 7208), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7192, 7208))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (7155, 7157), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7155, 7157))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+TEXT    : WhaleRock, Fe
+STD TEXT: Whalerock, Iron
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whalerock,Iron
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: WhaleRock, std text: Whalerock, ner_label:Target, involved in relation:None, (7213, 7222), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7213, 7222))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Fe, std text: Iron, ner_label:Component, involved in relation:None, (7148, 7150), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7148, 7150))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+TEXT    : WhaleRock, Mn
+STD TEXT: Whalerock, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whalerock,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: WhaleRock, std text: Whalerock, ner_label:Target, involved in relation:None, (7213, 7222), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7213, 7222))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (7155, 7157), sentid: None
+sentence:In general , abundance of redox sensitive elements such as Fe and Mn exhibit minimal variation between Confidence Hills and WhaleRock .
+start end: ((7155, 7157))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:The K - rich materials were mainly found in bedrocks and float rocks between Shaler and Darwin areas ( around Sols 300 - 400 , e.g. Angmaat , Sol 337 , with up to 4.8 wt .
+TEXT    : Darwin, K
+STD TEXT: Darwin, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Darwin,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Darwin, std text: Darwin, ner_label:Target, involved in relation:None, (4568, 4574), sentid: None
+sentence:The K - rich materials were mainly found in bedrocks and float rocks between Shaler and Darwin areas ( around Sols 300 - 400 , e.g. Angmaat , Sol 337 , with up to 4.8 wt .
+start end: ((4568, 4574))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: K, std text: Potassium, ner_label:Component, involved in relation:None, (4486, 4487), sentid: None
+sentence:The K - rich materials were mainly found in bedrocks and float rocks between Shaler and Darwin areas ( around Sols 300 - 400 , e.g. Angmaat , Sol 337 , with up to 4.8 wt .
+start end: ((4486, 4487))
+
+
+

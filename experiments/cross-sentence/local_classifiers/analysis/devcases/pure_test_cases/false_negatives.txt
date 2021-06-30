@@ -1,0 +1,85 @@
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Dillinger, illite
+STD TEXT: Dillinger, Illite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Illite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (5245, 5254), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5245, 5254))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: illite, std text: Illite, ner_label:Component, involved in relation:None, (5214, 5220), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5214, 5220))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Ca
+STD TEXT: Whale_Rock, Calcium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Calcium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (6049, 6059), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:None, (6080, 6082), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6080, 6082))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Na
+STD TEXT: Whale_Rock, Sodium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Sodium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (6049, 6059), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Na, std text: Sodium, ner_label:Component, involved in relation:None, (6084, 6086), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6084, 6086))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Si
+STD TEXT: Whale_Rock, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (6049, 6059), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (6109, 6111), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6109, 6111))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Al
+STD TEXT: Whale_Rock, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (6049, 6059), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (6113, 6115), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6113, 6115))
+
+
+

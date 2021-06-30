@@ -21,6 +21,7 @@ text/lpsc15/*.cases
 *bbl
 *blg
 
+
 # C extensions
 *.so
 
@@ -74,3 +75,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# cross-sentence relation extraction
+experiments/cross-sentence/eog/embeds/
+experiments/cross-sentence/eog/embeds/nary-song-18/

@@ -1,0 +1,680 @@
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1994
+sentence:The boxwork occurs only in the upper portion of the section beginning at Whale Rock , while the light - toned calcium sulfate veins occur throughout the entire 12 m section .
+TEXT    : Whale Rock, sulfate
+STD TEXT: Whale_Rock, Sulfate
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1994:Whale_Rock,Sulfate
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1994
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (6019, 6029), sentid: None
+sentence:The boxwork occurs only in the upper portion of the section beginning at Whale Rock , while the light - toned calcium sulfate veins occur throughout the entire 12 m section .
+start end: ((6019, 6029))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1994
+text: sulfate, std text: Sulfate, ner_label:Component, involved in relation:None, (6061, 6068), sentid: None
+sentence:The boxwork occurs only in the upper portion of the section beginning at Whale Rock , while the light - toned calcium sulfate veins occur throughout the entire 12 m section .
+start end: ((6061, 6068))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+TEXT    : Pinnacle, Mn
+STD TEXT: Pinnacle, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2132:Pinnacle,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Pinnacle, std text: Pinnacle, ner_label:Target, involved in relation:None, (4480, 4488), sentid: None
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4480, 4488))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (4583, 4585), sentid: None
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4583, 4585))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+TEXT    : Stuart Islands, Mn
+STD TEXT: Stuart_Islands, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2132:Stuart_Islands,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Stuart Islands, std text: Stuart_Islands, ner_label:Target, involved in relation:None, (4493, 4507), sentid: None
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4493, 4507))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (4583, 4585), sentid: None
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4583, 4585))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+TEXT    : Sparkle, oligoclase - albite
+STD TEXT: Sparkle, Oligoclase Albite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Sparkle,Oligoclase Albite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Sparkle, std text: Sparkle, ner_label:Target, involved in relation:None, (4595, 4602), sentid: None
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+start end: ((4595, 4602))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: oligoclase - albite, std text: Oligoclase Albite, ner_label:Component, involved in relation:None, (4633, 4650), sentid: None
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+start end: ((4633, 4650))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+TEXT    : Sparkle, Al
+STD TEXT: Sparkle, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Sparkle,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Sparkle, std text: Sparkle, ner_label:Target, involved in relation:None, (4595, 4602), sentid: None
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+start end: ((4595, 4602))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (4653, 4655), sentid: None
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+start end: ((4653, 4655))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+TEXT    : Sparkle, Si
+STD TEXT: Sparkle, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Sparkle,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Sparkle, std text: Sparkle, ner_label:Target, involved in relation:None, (4595, 4602), sentid: None
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+start end: ((4595, 4602))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (4656, 4658), sentid: None
+sentence:Light - toned intrusive rocks ( group 5 , in red ) such as Sparkle plot on a mixing line between oligoclase - albite ( Al / Si : 0.48 - 0.33 ; An30 - 0 ) and a silica - rich component .
+start end: ((4656, 4658))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+TEXT    : Becraft, macusanite
+STD TEXT: Becraft, Macusanite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Becraft,Macusanite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Becraft, std text: Becraft, ner_label:Target, involved in relation:None, (4748, 4755), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4748, 4755))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: macusanite, std text: Macusanite, ner_label:Component, involved in relation:None, (4807, 4817), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4807, 4817))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+TEXT    : Becraft, Al
+STD TEXT: Becraft, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Becraft,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Becraft, std text: Becraft, ner_label:Target, involved in relation:None, (4748, 4755), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4748, 4755))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (4842, 4844), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4842, 4844))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+TEXT    : Becraft, Si
+STD TEXT: Becraft, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Becraft,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Becraft, std text: Becraft, ner_label:Target, involved in relation:None, (4748, 4755), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4748, 4755))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (4845, 4847), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4845, 4847))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+TEXT    : Becraft, alkali - feldspar
+STD TEXT: Becraft, Alkali Feldspar
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Becraft,Alkali Feldspar
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Becraft, std text: Becraft, ner_label:Target, involved in relation:None, (4748, 4755), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4748, 4755))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: alkali - feldspar, std text: Alkali Feldspar, ner_label:Component, involved in relation:None, (4908, 4923), sentid: None
+sentence:Vesiculated light - toned rocks such as Becraft ( group 3 , in brown ) have compositions close to the macusanite CCCT , a rhyolitc glass ( Al / Si < 0.33 ) , indicative of silica saturated rocks mixed with an alkali - feldspar component .
+start end: ((4908, 4923))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:This distinction can also be observed in Fig. 3 where the group 3 felsic rocks ( in brown ) plot close to Link , which was one of the first K - rich conglomerate targets observed with ChemCam [ 11 ] , whereas felsic group 5 shows a higher Na / K ratio ( in red ) .
+TEXT    : Link, Na
+STD TEXT: Link, Sodium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Link,Sodium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Link, std text: Link, ner_label:Target, involved in relation:None, (6161, 6165), sentid: None
+sentence:This distinction can also be observed in Fig. 3 where the group 3 felsic rocks ( in brown ) plot close to Link , which was one of the first K - rich conglomerate targets observed with ChemCam [ 11 ] , whereas felsic group 5 shows a higher Na / K ratio ( in red ) .
+start end: ((6161, 6165))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Na, std text: Sodium, ner_label:Component, involved in relation:None, (6288, 6290), sentid: None
+sentence:This distinction can also be observed in Fig. 3 where the group 3 felsic rocks ( in brown ) plot close to Link , which was one of the first K - rich conglomerate targets observed with ChemCam [ 11 ] , whereas felsic group 5 shows a higher Na / K ratio ( in red ) .
+start end: ((6288, 6290))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:This distinction can also be observed in Fig. 3 where the group 3 felsic rocks ( in brown ) plot close to Link , which was one of the first K - rich conglomerate targets observed with ChemCam [ 11 ] , whereas felsic group 5 shows a higher Na / K ratio ( in red ) .
+TEXT    : Link, K
+STD TEXT: Link, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Link,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Link, std text: Link, ner_label:Target, involved in relation:None, (6161, 6165), sentid: None
+sentence:This distinction can also be observed in Fig. 3 where the group 3 felsic rocks ( in brown ) plot close to Link , which was one of the first K - rich conglomerate targets observed with ChemCam [ 11 ] , whereas felsic group 5 shows a higher Na / K ratio ( in red ) .
+start end: ((6161, 6165))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: K, std text: Potassium, ner_label:Component, involved in relation:None, (6291, 6292), sentid: None
+sentence:This distinction can also be observed in Fig. 3 where the group 3 felsic rocks ( in brown ) plot close to Link , which was one of the first K - rich conglomerate targets observed with ChemCam [ 11 ] , whereas felsic group 5 shows a higher Na / K ratio ( in red ) .
+start end: ((6291, 6292))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2748
+sentence:A wide - angle Mastcam - 34 image of the Windjana drill site showing the high - Mn target Stephen is presented in Fig. 4 ( left ) .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2748:Windjana,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2748
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (7224, 7232), sentid: None
+sentence:A wide - angle Mastcam - 34 image of the Windjana drill site showing the high - Mn target Stephen is presented in Fig. 4 ( left ) .
+start end: ((7224, 7232))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2748
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (7261, 7263), sentid: None
+sentence:A wide - angle Mastcam - 34 image of the Windjana drill site showing the high - Mn target Stephen is presented in Fig. 4 ( left ) .
+start end: ((7261, 7263))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:An Independent Component Analysis ( ICA ) [ 9 ] reveals that the Na / K ratio of the Dillinger and the Mt. Remarkable members is much lower than for the other members ( Fig. 2C ) .
+TEXT    : Dillinger, Na
+STD TEXT: Dillinger, Sodium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Sodium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (5102, 5111), sentid: None
+sentence:An Independent Component Analysis ( ICA ) [ 9 ] reveals that the Na / K ratio of the Dillinger and the Mt. Remarkable members is much lower than for the other members ( Fig. 2C ) .
+start end: ((5102, 5111))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Na, std text: Sodium, ner_label:Component, involved in relation:None, (5084, 5086), sentid: None
+sentence:An Independent Component Analysis ( ICA ) [ 9 ] reveals that the Na / K ratio of the Dillinger and the Mt. Remarkable members is much lower than for the other members ( Fig. 2C ) .
+start end: ((5084, 5086))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:An Independent Component Analysis ( ICA ) [ 9 ] reveals that the Na / K ratio of the Dillinger and the Mt. Remarkable members is much lower than for the other members ( Fig. 2C ) .
+TEXT    : Dillinger, K
+STD TEXT: Dillinger, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (5102, 5111), sentid: None
+sentence:An Independent Component Analysis ( ICA ) [ 9 ] reveals that the Na / K ratio of the Dillinger and the Mt. Remarkable members is much lower than for the other members ( Fig. 2C ) .
+start end: ((5102, 5111))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: K, std text: Potassium, ner_label:Component, involved in relation:None, (5087, 5088), sentid: None
+sentence:An Independent Component Analysis ( ICA ) [ 9 ] reveals that the Na / K ratio of the Dillinger and the Mt. Remarkable members is much lower than for the other members ( Fig. 2C ) .
+start end: ((5087, 5088))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Dillinger, K
+STD TEXT: Dillinger, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (5245, 5254), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5245, 5254))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: K, std text: Potassium, ner_label:Component, involved in relation:None, (5331, 5332), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5331, 5332))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Liga, illite
+STD TEXT: Liga, Illite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Liga,Illite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Liga, std text: Liga, ner_label:Target, involved in relation:None, (5396, 5400), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5396, 5400))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: illite, std text: Illite, ner_label:Component, involved in relation:None, (5214, 5220), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5214, 5220))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Square_Top, illite
+STD TEXT: Square_Top, Illite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Square_Top,Illite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Square_Top, std text: Square_Top, ner_label:Target, involved in relation:None, (5405, 5415), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5405, 5415))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: illite, std text: Illite, ner_label:Component, involved in relation:None, (5214, 5220), sentid: None
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5214, 5220))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Confidence Hills, Al
+STD TEXT: Confidence_Hills, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (5927, 5943), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5927, 5943))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (5870, 5872), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5870, 5872))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Confidence Hills, Si
+STD TEXT: Confidence_Hills, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (5927, 5943), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5927, 5943))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (5886, 5888), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5886, 5888))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Confidence Hills, Al
+STD TEXT: Confidence_Hills, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (5927, 5943), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5927, 5943))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (6003, 6005), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((6003, 6005))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Confidence Hills, Si
+STD TEXT: Confidence_Hills, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (5927, 5943), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5927, 5943))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (6006, 6008), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((6006, 6008))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Whale Rock, Al
+STD TEXT: Whale_Rock, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (5948, 5958), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5948, 5958))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (5870, 5872), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5870, 5872))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Whale Rock, Si
+STD TEXT: Whale_Rock, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (5948, 5958), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5948, 5958))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (5886, 5888), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5886, 5888))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Whale Rock, Fe
+STD TEXT: Whale_Rock, Iron
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Iron
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (5948, 5958), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5948, 5958))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Fe, std text: Iron, ner_label:Component, involved in relation:None, (5906, 5908), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5906, 5908))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Whale Rock, Al
+STD TEXT: Whale_Rock, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (5948, 5958), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5948, 5958))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:None, (6003, 6005), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((6003, 6005))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+TEXT    : Whale Rock, Si
+STD TEXT: Whale_Rock, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (5948, 5958), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((5948, 5958))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (6006, 6008), sentid: None
+sentence:Notably , there is an apparent increase in Al , decrease in Si , and decrease in Fe in strata between Confidence Hills and Whale Rock that is observed by both instruments ( e.g. , Al / Si trend in Fig 2 ) .
+start end: ((6006, 6008))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, sulfate
+STD TEXT: Whale_Rock, Sulfate
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Sulfate
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:None, (6049, 6059), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: sulfate, std text: Sulfate, ner_label:Component, involved in relation:None, (6191, 6198), sentid: None
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6191, 6198))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, Mg
+STD TEXT: Book_Cliffs, Magnesium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Magnesium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:None, (6819, 6830), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:None, (7029, 7031), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((7029, 7031))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, Ca
+STD TEXT: Book_Cliffs, Calcium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Calcium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:None, (6819, 6830), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:None, (7035, 7037), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((7035, 7037))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, S
+STD TEXT: Book_Cliffs, Sulfur
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Sulfur
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:None, (6819, 6830), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: S, std text: Sulfur, ner_label:Component, involved in relation:None, (7042, 7043), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((7042, 7043))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, Mg
+STD TEXT: Book_Cliffs, Magnesium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Magnesium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:None, (6819, 6830), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:None, (7053, 7055), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((7053, 7055))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, Cl
+STD TEXT: Book_Cliffs, Chlorine
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Chlorine
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:None, (6819, 6830), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:None, (7060, 7062), sentid: None
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((7060, 7062))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+TEXT    : Sheepbed, Calcium
+STD TEXT: Sheepbed, Calcium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Sheepbed,Calcium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Sheepbed, std text: Sheepbed, ner_label:Target, involved in relation:None, (3406, 3414), sentid: None
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+start end: ((3406, 3414))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Calcium, std text: Calcium, ner_label:Component, involved in relation:None, (3343, 3350), sentid: None
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+start end: ((3343, 3350))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+TEXT    : Sheepbed, Calcium - sulfate
+STD TEXT: Sheepbed, Calcium Sulfate
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Sheepbed,Calcium Sulfate
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Sheepbed, std text: Sheepbed, ner_label:Target, involved in relation:None, (3406, 3414), sentid: None
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+start end: ((3406, 3414))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Calcium - sulfate, std text: Calcium Sulfate, ner_label:Component, involved in relation:None, (3343, 3358), sentid: None
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+start end: ((3343, 3358))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+TEXT    : Sheepbed, sulfate
+STD TEXT: Sheepbed, Sulfate
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Sheepbed,Sulfate
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Sheepbed, std text: Sheepbed, ner_label:Target, involved in relation:None, (3406, 3414), sentid: None
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+start end: ((3406, 3414))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: sulfate, std text: Sulfate, ner_label:Component, involved in relation:None, (3351, 3358), sentid: None
+sentence:Calcium - sulfate veins and nodules identified by ChemCam in the Sheepbed unit ( Sols 125 - 300 ) define a small but well - defined group in the mafic branch ( denoted by a mixing line between mafic and calciumsulfate end - members , which results from traces of the host rocks or variations in the vein compositions [ 11 ] ) .
+start end: ((3351, 3358))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+TEXT    : Harrison, feldspar
+STD TEXT: Harrison, Feldspar
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Harrison,Feldspar
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Harrison, std text: Harrison, ner_label:Target, involved in relation:None, (4450, 4458), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4450, 4458))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: feldspar, std text: Feldspar, ner_label:Component, involved in relation:None, (4376, 4384), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4376, 4384))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+TEXT    : Harrison, Ca
+STD TEXT: Harrison, Calcium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Harrison,Calcium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Harrison, std text: Harrison, ner_label:Target, involved in relation:None, (4450, 4458), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4450, 4458))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:None, (4399, 4401), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4399, 4401))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+TEXT    : Sparkle, feldspar
+STD TEXT: Sparkle, Feldspar
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Sparkle,Feldspar
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Sparkle, std text: Sparkle, ner_label:Target, involved in relation:None, (4463, 4470), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4463, 4470))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: feldspar, std text: Feldspar, ner_label:Component, involved in relation:None, (4376, 4384), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4376, 4384))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+TEXT    : Sparkle, Ca
+STD TEXT: Sparkle, Calcium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Sparkle,Calcium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Sparkle, std text: Sparkle, ner_label:Target, involved in relation:None, (4463, 4470), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4463, 4470))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:None, (4399, 4401), sentid: None
+sentence:% CaO ) were found mostly after Sol 300 and could correspond to white feldspar crystals with Ca - rich cores [ 12 ] for the igneous materials ( e.g. Harrison and Sparkle , Sol 514 ) .
+start end: ((4399, 4401))
+
+
+

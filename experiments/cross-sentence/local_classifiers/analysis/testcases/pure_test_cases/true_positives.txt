@@ -1,0 +1,1700 @@
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2493
+sentence:Iron concentration versus depth for the target Soda , which is one of the targets that shows this feature , is shown in Figure 3 .
+TEXT    : Soda, Iron
+STD TEXT: Soda, Iron
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2493:Soda,Iron
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2493
+text: Soda, std text: Soda, ner_label:Target, involved in relation:None, (3693, 3697), sentid: None
+sentence:Iron concentration versus depth for the target Soda , which is one of the targets that shows this feature , is shown in Figure 3 .
+start end: ((3693, 3697))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2493
+text: Iron, std text: Iron, ner_label:Component, involved in relation:None, (3646, 3650), sentid: None
+sentence:Iron concentration versus depth for the target Soda , which is one of the targets that shows this feature , is shown in Figure 3 .
+start end: ((3646, 3650))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1536
+sentence:Otherwise , and as discussed further in [ 6 ] , individual sand targets are individual , compositional outliers : Barby has the second highest Si in a Mars soil and Warsaw the highest Ni .
+TEXT    : Barby, Si
+STD TEXT: Barby, Silicon
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1536:Barby,Silicon
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1536
+text: Barby, std text: Barby, ner_label:Target, involved in relation:None, (5573, 5578), sentid: None
+sentence:Otherwise , and as discussed further in [ 6 ] , individual sand targets are individual , compositional outliers : Barby has the second highest Si in a Mars soil and Warsaw the highest Ni .
+start end: ((5573, 5578))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1536
+text: Si, std text: Silicon, ner_label:Component, involved in relation:None, (5602, 5604), sentid: None
+sentence:Otherwise , and as discussed further in [ 6 ] , individual sand targets are individual , compositional outliers : Barby has the second highest Si in a Mars soil and Warsaw the highest Ni .
+start end: ((5602, 5604))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1536
+sentence:Otherwise , and as discussed further in [ 6 ] , individual sand targets are individual , compositional outliers : Barby has the second highest Si in a Mars soil and Warsaw the highest Ni .
+TEXT    : Warsaw, Ni
+STD TEXT: Warsaw, Nickel
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1536:Warsaw,Nickel
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1536
+text: Warsaw, std text: Warsaw, ner_label:Target, involved in relation:None, (5624, 5630), sentid: None
+sentence:Otherwise , and as discussed further in [ 6 ] , individual sand targets are individual , compositional outliers : Barby has the second highest Si in a Mars soil and Warsaw the highest Ni .
+start end: ((5624, 5630))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1536
+text: Ni, std text: Nickel, ner_label:Component, involved in relation:None, (5643, 5645), sentid: None
+sentence:Otherwise , and as discussed further in [ 6 ] , individual sand targets are individual , compositional outliers : Barby has the second highest Si in a Mars soil and Warsaw the highest Ni .
+start end: ((5643, 5645))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Buckskin drill tailings exhibited a relatively flat spectrum , likely owing to the presence of spectrally neutral phases such as magnetite and silica .
+TEXT    : Buckskin, magnetite
+STD TEXT: Buckskin, Magnetite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Buckskin,Magnetite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Buckskin, std text: Buckskin, ner_label:Target, involved in relation:None, (3128, 3136), sentid: None
+sentence:The Buckskin drill tailings exhibited a relatively flat spectrum , likely owing to the presence of spectrally neutral phases such as magnetite and silica .
+start end: ((3128, 3136))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: magnetite, std text: Magnetite, ner_label:Component, involved in relation:None, (3256, 3265), sentid: None
+sentence:The Buckskin drill tailings exhibited a relatively flat spectrum , likely owing to the presence of spectrally neutral phases such as magnetite and silica .
+start end: ((3256, 3265))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+TEXT    : Big Sky, magnetite
+STD TEXT: Big_Sky, Magnetite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Big_Sky,Magnetite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Big Sky, std text: Big_Sky, ner_label:Target, involved in relation:None, (3576, 3583), sentid: None
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3576, 3583))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: magnetite, std text: Magnetite, ner_label:Component, involved in relation:None, (3670, 3679), sentid: None
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3670, 3679))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+TEXT    : Big Sky, hematite
+STD TEXT: Big_Sky, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Big_Sky,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Big Sky, std text: Big_Sky, ner_label:Target, involved in relation:None, (3576, 3583), sentid: None
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3576, 3583))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:None, (3739, 3747), sentid: None
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3739, 3747))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Greenhorn tailings were spectrally flat but exhibited a weak upturn toward shorter wavelengths ( potentially related to small amounts of magnetite or ilmenite ) and a weak negative nearinfrared slope starting near 750 nm likely from minor , predominantly amorphous , ferric phases .
+TEXT    : Greenhorn, magnetite
+STD TEXT: Greenhorn, Magnetite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Greenhorn,Magnetite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Greenhorn, std text: Greenhorn, ner_label:Target, involved in relation:None, (3867, 3876), sentid: None
+sentence:The Greenhorn tailings were spectrally flat but exhibited a weak upturn toward shorter wavelengths ( potentially related to small amounts of magnetite or ilmenite ) and a weak negative nearinfrared slope starting near 750 nm likely from minor , predominantly amorphous , ferric phases .
+start end: ((3867, 3876))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: magnetite, std text: Magnetite, ner_label:Component, involved in relation:None, (4003, 4012), sentid: None
+sentence:The Greenhorn tailings were spectrally flat but exhibited a weak upturn toward shorter wavelengths ( potentially related to small amounts of magnetite or ilmenite ) and a weak negative nearinfrared slope starting near 750 nm likely from minor , predominantly amorphous , ferric phases .
+start end: ((4003, 4012))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Greenhorn tailings were spectrally flat but exhibited a weak upturn toward shorter wavelengths ( potentially related to small amounts of magnetite or ilmenite ) and a weak negative nearinfrared slope starting near 750 nm likely from minor , predominantly amorphous , ferric phases .
+TEXT    : Greenhorn, ilmenite
+STD TEXT: Greenhorn, Ilmenite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Greenhorn,Ilmenite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Greenhorn, std text: Greenhorn, ner_label:Target, involved in relation:None, (3867, 3876), sentid: None
+sentence:The Greenhorn tailings were spectrally flat but exhibited a weak upturn toward shorter wavelengths ( potentially related to small amounts of magnetite or ilmenite ) and a weak negative nearinfrared slope starting near 750 nm likely from minor , predominantly amorphous , ferric phases .
+start end: ((3867, 3876))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: ilmenite, std text: Ilmenite, ner_label:Component, involved in relation:None, (4016, 4024), sentid: None
+sentence:The Greenhorn tailings were spectrally flat but exhibited a weak upturn toward shorter wavelengths ( potentially related to small amounts of magnetite or ilmenite ) and a weak negative nearinfrared slope starting near 750 nm likely from minor , predominantly amorphous , ferric phases .
+start end: ((4016, 4024))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+TEXT    : Augusta, hematite
+STD TEXT: Augusta, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Augusta,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Augusta, std text: Augusta, ner_label:Target, involved in relation:None, (4446, 4453), sentid: None
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+start end: ((4446, 4453))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:None, (4549, 4557), sentid: None
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+start end: ((4549, 4557))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+TEXT    : Tsumeb, hematite
+STD TEXT: Tsumeb, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Tsumeb,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Tsumeb, std text: Tsumeb, ner_label:Target, involved in relation:None, (4455, 4461), sentid: None
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+start end: ((4455, 4461))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:None, (4549, 4557), sentid: None
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+start end: ((4549, 4557))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+TEXT    : Engo, hematite
+STD TEXT: Engo, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Engo,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Engo, std text: Engo, ner_label:Target, involved in relation:None, (4468, 4472), sentid: None
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+start end: ((4468, 4472))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:None, (4549, 4557), sentid: None
+sentence:Figure 1b shows the spectra from Augusta , Tsumeb , and Engo , examples of rocks in which spectral characteristics similar to crystalline hematite are present , including absorption bands of variable strength near 550 nm , 650 nm , a reflectance peak near 750 nm , followed by a near - infrared downturn .
+start end: ((4549, 4557))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The hematite - bearing drill tailings at Confidence Hills ( Figure 1a ) provide a useful comparison .
+TEXT    : Confidence Hills, hematite
+STD TEXT: Confidence_Hills, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Confidence_Hills,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (4749, 4765), sentid: None
+sentence:The hematite - bearing drill tailings at Confidence Hills ( Figure 1a ) provide a useful comparison .
+start end: ((4749, 4765))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:None, (4714, 4722), sentid: None
+sentence:The hematite - bearing drill tailings at Confidence Hills ( Figure 1a ) provide a useful comparison .
+start end: ((4714, 4722))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1767
+sentence:The jarosite that CheMin detected at Confidence Hills was at the detection limit [ 4 ] .
+TEXT    : Confidence Hills, jarosite
+STD TEXT: Confidence_Hills, Jarosite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1767:Confidence_Hills,Jarosite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1767
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:None, (4499, 4515), sentid: None
+sentence:The jarosite that CheMin detected at Confidence Hills was at the detection limit [ 4 ] .
+start end: ((4499, 4515))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1767
+text: jarosite, std text: Jarosite, ner_label:Component, involved in relation:None, (4466, 4474), sentid: None
+sentence:The jarosite that CheMin detected at Confidence Hills was at the detection limit [ 4 ] .
+start end: ((4466, 4474))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2942
+sentence:Fig. 1 : ChemCam shot - averaged and normalized spectra of Cu - bearing targets : ( a ) Stirling_2 , ( b ) CC_BT_0604a , ( c ) Hayden_Peak , and ( d ) Harms , studied with 9 , 20 , 9 , and 5 points , respectively ( see colorbars ) .
+TEXT    : Harms, Cu
+STD TEXT: Harms, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2942:Harms,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Harms, std text: Harms, ner_label:Target, involved in relation:None, (5615, 5620), sentid: None
+sentence:Fig. 1 : ChemCam shot - averaged and normalized spectra of Cu - bearing targets : ( a ) Stirling_2 , ( b ) CC_BT_0604a , ( c ) Hayden_Peak , and ( d ) Harms , studied with 9 , 20 , 9 , and 5 points , respectively ( see colorbars ) .
+start end: ((5615, 5620))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Cu, std text: Copper, ner_label:Component, involved in relation:None, (5537, 5539), sentid: None
+sentence:Fig. 1 : ChemCam shot - averaged and normalized spectra of Cu - bearing targets : ( a ) Stirling_2 , ( b ) CC_BT_0604a , ( c ) Hayden_Peak , and ( d ) Harms , studied with 9 , 20 , 9 , and 5 points , respectively ( see colorbars ) .
+start end: ((5537, 5539))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2942
+sentence:Liga showed highest Cu signal ever as based on APXS ( ~ 600 ppm [ 13 ] ) and ChemCam data [ 6 ] .
+TEXT    : Liga, Cu
+STD TEXT: Liga, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2942:Liga,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Liga, std text: Liga, ner_label:Target, involved in relation:None, (7031, 7035), sentid: None
+sentence:Liga showed highest Cu signal ever as based on APXS ( ~ 600 ppm [ 13 ] ) and ChemCam data [ 6 ] .
+start end: ((7031, 7035))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Cu, std text: Copper, ner_label:Component, involved in relation:None, (7051, 7053), sentid: None
+sentence:Liga showed highest Cu signal ever as based on APXS ( ~ 600 ppm [ 13 ] ) and ChemCam data [ 6 ] .
+start end: ((7051, 7053))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1348
+sentence:A maximum Li content of 91 ppm was detected in Marquette ( point 3 ) , a dark - toned rock with a moderate abundances of Al2O3 , at 13wt .
+TEXT    : Marquette, Li
+STD TEXT: Marquette, Lithium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1348:Marquette,Lithium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Marquette, std text: Marquette, ner_label:Target, involved in relation:None, (5182, 5191), sentid: None
+sentence:A maximum Li content of 91 ppm was detected in Marquette ( point 3 ) , a dark - toned rock with a moderate abundances of Al2O3 , at 13wt .
+start end: ((5182, 5191))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Li, std text: Lithium, ner_label:Component, involved in relation:None, (5145, 5147), sentid: None
+sentence:A maximum Li content of 91 ppm was detected in Marquette ( point 3 ) , a dark - toned rock with a moderate abundances of Al2O3 , at 13wt .
+start end: ((5145, 5147))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1348
+sentence:Carrara displays one point with 2640 ppm of Sr located in a white crystal enriched in potassium ( K2O = 3.1 wt .
+TEXT    : Carrara, Sr
+STD TEXT: Carrara, Strontium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1348:Carrara,Strontium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Carrara, std text: Carrara, ner_label:Target, involved in relation:None, (5640, 5647), sentid: None
+sentence:Carrara displays one point with 2640 ppm of Sr located in a white crystal enriched in potassium ( K2O = 3.1 wt .
+start end: ((5640, 5647))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Sr, std text: Strontium, ner_label:Component, involved in relation:None, (5684, 5686), sentid: None
+sentence:Carrara displays one point with 2640 ppm of Sr located in a white crystal enriched in potassium ( K2O = 3.1 wt .
+start end: ((5684, 5686))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1348
+sentence:The maximum Ba is 1640 ppm in Sledgers , a whitish rock identified as a trachyte in [ 8 ] , with typically high K2O ( 3 wt .
+TEXT    : Sledgers, Ba
+STD TEXT: Sledgers, Barium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1348:Sledgers,Barium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Sledgers, std text: Sledgers, ner_label:Target, involved in relation:None, (6195, 6203), sentid: None
+sentence:The maximum Ba is 1640 ppm in Sledgers , a whitish rock identified as a trachyte in [ 8 ] , with typically high K2O ( 3 wt .
+start end: ((6195, 6203))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Ba, std text: Barium, ner_label:Component, involved in relation:None, (6177, 6179), sentid: None
+sentence:The maximum Ba is 1640 ppm in Sledgers , a whitish rock identified as a trachyte in [ 8 ] , with typically high K2O ( 3 wt .
+start end: ((6177, 6179))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1348
+sentence:The exception is an ironrich vein ( Soledad Pass point 9 ) , which has a high Sr content while CaO and K2O are low .
+TEXT    : Soledad Pass, Sr
+STD TEXT: Soledad_Pass, Strontium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1348:Soledad_Pass,Strontium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Soledad Pass, std text: Soledad_Pass, ner_label:Target, involved in relation:None, (7295, 7307), sentid: None
+sentence:The exception is an ironrich vein ( Soledad Pass point 9 ) , which has a high Sr content while CaO and K2O are low .
+start end: ((7295, 7307))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Sr, std text: Strontium, ner_label:Component, involved in relation:None, (7335, 7337), sentid: None
+sentence:The exception is an ironrich vein ( Soledad Pass point 9 ) , which has a high Sr content while CaO and K2O are low .
+start end: ((7335, 7337))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1990
+sentence:Fluorine is detected in the Big Sky drill hole as well as in the surroundings targets but the highest fluorine content was located on the dark vein Alvord Mountain with value up to 12 wt .
+TEXT    : Big Sky, Fluorine
+STD TEXT: Big_Sky, Fluorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1990:Big_Sky,Fluorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Big Sky, std text: Big_Sky, ner_label:Target, involved in relation:None, (4599, 4606), sentid: None
+sentence:Fluorine is detected in the Big Sky drill hole as well as in the surroundings targets but the highest fluorine content was located on the dark vein Alvord Mountain with value up to 12 wt .
+start end: ((4599, 4606))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Fluorine, std text: Fluorine, ner_label:Component, involved in relation:None, (4571, 4579), sentid: None
+sentence:Fluorine is detected in the Big Sky drill hole as well as in the surroundings targets but the highest fluorine content was located on the dark vein Alvord Mountain with value up to 12 wt .
+start end: ((4571, 4579))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1990
+sentence:Fluorine is detected in the Big Sky drill hole as well as in the surroundings targets but the highest fluorine content was located on the dark vein Alvord Mountain with value up to 12 wt .
+TEXT    : Alvord Mountain, fluorine
+STD TEXT: Alvord_Mountain, Fluorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1990:Alvord_Mountain,Fluorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Alvord Mountain, std text: Alvord_Mountain, ner_label:Target, involved in relation:None, (4719, 4734), sentid: None
+sentence:Fluorine is detected in the Big Sky drill hole as well as in the surroundings targets but the highest fluorine content was located on the dark vein Alvord Mountain with value up to 12 wt .
+start end: ((4719, 4734))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: fluorine, std text: Fluorine, ner_label:Component, involved in relation:None, (4673, 4681), sentid: None
+sentence:Fluorine is detected in the Big Sky drill hole as well as in the surroundings targets but the highest fluorine content was located on the dark vein Alvord Mountain with value up to 12 wt .
+start end: ((4673, 4681))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1990
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+TEXT    : Alvord Mountain, fluorite
+STD TEXT: Alvord_Mountain, Fluorite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1990:Alvord_Mountain,Fluorite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Alvord Mountain, std text: Alvord_Mountain, ner_label:Target, involved in relation:None, (5070, 5085), sentid: None
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+start end: ((5070, 5085))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: fluorite, std text: Fluorite, ner_label:Component, involved in relation:None, (5087, 5095), sentid: None
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+start end: ((5087, 5095))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1990
+sentence:Two targets have F that is not correlated with Ca : the Big Sky Drill Hole # 10 and especially Heath # 1 .
+TEXT    : Heath, F
+STD TEXT: Heath, Fluorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1990:Heath,Fluorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Heath, std text: Heath, ner_label:Target, involved in relation:None, (5495, 5500), sentid: None
+sentence:Two targets have F that is not correlated with Ca : the Big Sky Drill Hole # 10 and especially Heath # 1 .
+start end: ((5495, 5500))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: F, std text: Fluorine, ner_label:Component, involved in relation:None, (5419, 5420), sentid: None
+sentence:Two targets have F that is not correlated with Ca : the Big Sky Drill Hole # 10 and especially Heath # 1 .
+start end: ((5419, 5420))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:A Mn - rich layer on the Stephen target was detected by ChemCam [ 4,5 ] , which is located near the drill target Windjana ( Fig. 1 ) .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:None, (1305, 1312), sentid: None
+sentence:A Mn - rich layer on the Stephen target was detected by ChemCam [ 4,5 ] , which is located near the drill target Windjana ( Fig. 1 ) .
+start end: ((1305, 1312))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (1284, 1286), sentid: None
+sentence:A Mn - rich layer on the Stephen target was detected by ChemCam [ 4,5 ] , which is located near the drill target Windjana ( Fig. 1 ) .
+start end: ((1284, 1286))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Context : The Windjana target is a potassic , Ferich , cross-stratified sandstone located in the Dillinger member ( 50 cm thick ) and is of uncertain origin but is most likely aeolian [ 6 ] .
+TEXT    : Windjana, potassic
+STD TEXT: Windjana, Potassic
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Potassic
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (1645, 1653), sentid: None
+sentence:Context : The Windjana target is a potassic , Ferich , cross-stratified sandstone located in the Dillinger member ( 50 cm thick ) and is of uncertain origin but is most likely aeolian [ 6 ] .
+start end: ((1645, 1653))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: potassic, std text: Potassic, ner_label:Component, involved in relation:None, (1666, 1674), sentid: None
+sentence:Context : The Windjana target is a potassic , Ferich , cross-stratified sandstone located in the Dillinger member ( 50 cm thick ) and is of uncertain origin but is most likely aeolian [ 6 ] .
+start end: ((1666, 1674))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+TEXT    : Windjana, igneous minerals
+STD TEXT: Windjana, Igneous Minerals
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Igneous Minerals
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (1960, 1968), sentid: None
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+start end: ((1960, 1968))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: igneous minerals, std text: Igneous Minerals, ner_label:Component, involved in relation:None, (1994, 2010), sentid: None
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+start end: ((1994, 2010))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+TEXT    : Windjana, feldspars
+STD TEXT: Windjana, Feldspars
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Feldspars
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (1960, 1968), sentid: None
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+start end: ((1960, 1968))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: feldspars, std text: Feldspars, ner_label:Component, involved in relation:None, (2012, 2021), sentid: None
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+start end: ((2012, 2021))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+TEXT    : Windjana, pyroxenes
+STD TEXT: Windjana, Pyroxenes
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Pyroxenes
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (1960, 1968), sentid: None
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+start end: ((1960, 1968))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: pyroxenes, std text: Pyroxenes, ner_label:Component, involved in relation:None, (2023, 2032), sentid: None
+sentence:Windjana is primarily composed of igneous minerals ( feldspars , pyroxenes ) with low temperature alteration products [ 6 ] .
+start end: ((2023, 2032))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The Dillinger member underwent diagenetic alteration and was cemented with Fe - rich material [ 6 ] .
+TEXT    : Dillinger, Fe
+STD TEXT: Dillinger, Iron
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Dillinger,Iron
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:None, (2085, 2094), sentid: None
+sentence:The Dillinger member underwent diagenetic alteration and was cemented with Fe - rich material [ 6 ] .
+start end: ((2085, 2094))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Fe, std text: Iron, ner_label:Component, involved in relation:None, (2156, 2158), sentid: None
+sentence:The Dillinger member underwent diagenetic alteration and was cemented with Fe - rich material [ 6 ] .
+start end: ((2156, 2158))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Evidence for a salt and Mn - rich layer at this location was found on the Stephen target , which is also a part of the Dillinger member .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:None, (2314, 2321), sentid: None
+sentence:Evidence for a salt and Mn - rich layer at this location was found on the Stephen target , which is also a part of the Dillinger member .
+start end: ((2314, 2321))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (2266, 2268), sentid: None
+sentence:Evidence for a salt and Mn - rich layer at this location was found on the Stephen target , which is also a part of the Dillinger member .
+start end: ((2266, 2268))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+TEXT    : Windjana, Mg
+STD TEXT: Windjana, Magnesium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Magnesium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3113, 3121), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3113, 3121))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:None, (3092, 3094), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3092, 3094))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+TEXT    : Windjana, K
+STD TEXT: Windjana, Potassium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Potassium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3113, 3121), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3113, 3121))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: K, std text: Potassium, ner_label:Component, involved in relation:None, (3096, 3097), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3096, 3097))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+TEXT    : Windjana, Zn
+STD TEXT: Windjana, Zinc
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Zinc
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3113, 3121), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3113, 3121))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Zn, std text: Zinc, ner_label:Component, involved in relation:None, (3099, 3101), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3099, 3101))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+TEXT    : Windjana, Br
+STD TEXT: Windjana, Bromine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Bromine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3113, 3121), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3113, 3121))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Br, std text: Bromine, ner_label:Component, involved in relation:None, (3107, 3109), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3107, 3109))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+TEXT    : Windjana, Na
+STD TEXT: Windjana, Sodium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Sodium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3113, 3121), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3113, 3121))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Na, std text: Sodium, ner_label:Component, involved in relation:None, (3192, 3194), sentid: None
+sentence:The APXS concentrations of Mg , K , Zn , and Br at Windjana are among the highest measured at Gale crater up to sol 1200 , and the Na concentrations are among the lowest [ 7,8 ] .
+start end: ((3192, 3194))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The APXS also confirmed ChemCam 's high - Mn observation on Stephen , although was incapable of confirming the presence of a layer since this target was not drilled [ 9,10 ] .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:None, (3296, 3303), sentid: None
+sentence:The APXS also confirmed ChemCam 's high - Mn observation on Stephen , although was incapable of confirming the presence of a layer since this target was not drilled [ 9,10 ] .
+start end: ((3296, 3303))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (3278, 3280), sentid: None
+sentence:The APXS also confirmed ChemCam 's high - Mn observation on Stephen , although was incapable of confirming the presence of a layer since this target was not drilled [ 9,10 ] .
+start end: ((3278, 3280))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+TEXT    : Windjana, Cl
+STD TEXT: Windjana, Chlorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Chlorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3717, 3725), sentid: None
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3717, 3725))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:None, (3855, 3857), sentid: None
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3855, 3857))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+TEXT    : Windjana, Br
+STD TEXT: Windjana, Bromine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Bromine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3717, 3725), sentid: None
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3717, 3725))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Br, std text: Bromine, ner_label:Component, involved in relation:None, (3859, 3861), sentid: None
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3859, 3861))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (3717, 3725), sentid: None
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3717, 3725))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (3867, 3869), sentid: None
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3867, 3869))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Mn is not nearly as abundant at Windjana ( 0.52 0.02 wt % ) as at Stephen ( 3.12 0.07 wt % ) , yet is enriched relative to other bedrock targets .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (4030, 4038), sentid: None
+sentence:Mn is not nearly as abundant at Windjana ( 0.52 0.02 wt % ) as at Stephen ( 3.12 0.07 wt % ) , yet is enriched relative to other bedrock targets .
+start end: ((4030, 4038))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (3998, 4000), sentid: None
+sentence:Mn is not nearly as abundant at Windjana ( 0.52 0.02 wt % ) as at Stephen ( 3.12 0.07 wt % ) , yet is enriched relative to other bedrock targets .
+start end: ((3998, 4000))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Mn is not nearly as abundant at Windjana ( 0.52 0.02 wt % ) as at Stephen ( 3.12 0.07 wt % ) , yet is enriched relative to other bedrock targets .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:None, (4061, 4068), sentid: None
+sentence:Mn is not nearly as abundant at Windjana ( 0.52 0.02 wt % ) as at Stephen ( 3.12 0.07 wt % ) , yet is enriched relative to other bedrock targets .
+start end: ((4061, 4068))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (3998, 4000), sentid: None
+sentence:Mn is not nearly as abundant at Windjana ( 0.52 0.02 wt % ) as at Stephen ( 3.12 0.07 wt % ) , yet is enriched relative to other bedrock targets .
+start end: ((3998, 4000))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+TEXT    : Windjana, Cl
+STD TEXT: Windjana, Chlorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Chlorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (4491, 4499), sentid: None
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+start end: ((4491, 4499))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:None, (4455, 4457), sentid: None
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+start end: ((4455, 4457))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (4491, 4499), sentid: None
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+start end: ((4491, 4499))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:None, (4459, 4461), sentid: None
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+start end: ((4459, 4461))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+TEXT    : Windjana, Br
+STD TEXT: Windjana, Bromine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Bromine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (4491, 4499), sentid: None
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+start end: ((4491, 4499))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Br, std text: Bromine, ner_label:Component, involved in relation:None, (4467, 4469), sentid: None
+sentence:Cl , Mn , and Br trends with depth at Windjana .
+start end: ((4467, 4469))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2160
+sentence:Coarse - grained > 500 µm [ 7 ] , feldspar - rich samples are also notable e.g. Robin Hood and the Harrison clast - the latter from the Hottah faces conglomerate ( sols 365 , 514 ) .
+TEXT    : Robin Hood, feldspar
+STD TEXT: Robin_Hood, Feldspar
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2160:Robin_Hood,Feldspar
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2160
+text: Robin Hood, std text: Robin_Hood, ner_label:Target, involved in relation:None, (2565, 2575), sentid: None
+sentence:Coarse - grained > 500 µm [ 7 ] , feldspar - rich samples are also notable e.g. Robin Hood and the Harrison clast - the latter from the Hottah faces conglomerate ( sols 365 , 514 ) .
+start end: ((2565, 2575))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2160
+text: feldspar, std text: Feldspar, ner_label:Component, involved in relation:None, (2521, 2529), sentid: None
+sentence:Coarse - grained > 500 µm [ 7 ] , feldspar - rich samples are also notable e.g. Robin Hood and the Harrison clast - the latter from the Hottah faces conglomerate ( sols 365 , 514 ) .
+start end: ((2521, 2529))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2349
+sentence:At Marias Pass , CheMin analysis of the Buckskin drill hole showed silica enrichment in the form of both tridymite and amorphous silica ( opal - A and / or silica glass ) [ 9 ] .
+TEXT    : Buckskin, tridymite
+STD TEXT: Buckskin, Tridymite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2349:Buckskin,Tridymite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2349
+text: Buckskin, std text: Buckskin, ner_label:Target, involved in relation:None, (3260, 3268), sentid: None
+sentence:At Marias Pass , CheMin analysis of the Buckskin drill hole showed silica enrichment in the form of both tridymite and amorphous silica ( opal - A and / or silica glass ) [ 9 ] .
+start end: ((3260, 3268))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2349
+text: tridymite, std text: Tridymite, ner_label:Component, involved in relation:None, (3325, 3334), sentid: None
+sentence:At Marias Pass , CheMin analysis of the Buckskin drill hole showed silica enrichment in the form of both tridymite and amorphous silica ( opal - A and / or silica glass ) [ 9 ] .
+start end: ((3325, 3334))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2349
+sentence:The tridymite detected in the Buckskin drill hole in Murray is considered detrital [ 9 ] , and is interpreted by us to be part of a primary silica enrichment during deposition of this part of Murray .
+TEXT    : Buckskin, tridymite
+STD TEXT: Buckskin, Tridymite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2349:Buckskin,Tridymite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2349
+text: Buckskin, std text: Buckskin, ner_label:Target, involved in relation:None, (5640, 5648), sentid: None
+sentence:The tridymite detected in the Buckskin drill hole in Murray is considered detrital [ 9 ] , and is interpreted by us to be part of a primary silica enrichment during deposition of this part of Murray .
+start end: ((5640, 5648))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2349
+text: tridymite, std text: Tridymite, ner_label:Component, involved in relation:None, (5614, 5623), sentid: None
+sentence:The tridymite detected in the Buckskin drill hole in Murray is considered detrital [ 9 ] , and is interpreted by us to be part of a primary silica enrichment during deposition of this part of Murray .
+start end: ((5614, 5623))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2434
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+TEXT    : John Klein, saponite
+STD TEXT: John_Klein, Saponite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2434:John_Klein,Saponite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2434
+text: John Klein, std text: John_Klein, ner_label:Target, involved in relation:None, (5548, 5558), sentid: None
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+start end: ((5548, 5558))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2434
+text: saponite, std text: Saponite, ner_label:Component, involved in relation:None, (5581, 5589), sentid: None
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+start end: ((5581, 5589))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2434
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+TEXT    : John Klein, anhydrite
+STD TEXT: John_Klein, Anhydrite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2434:John_Klein,Anhydrite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2434
+text: John Klein, std text: John_Klein, ner_label:Target, involved in relation:None, (5548, 5558), sentid: None
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+start end: ((5548, 5558))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2434
+text: anhydrite, std text: Anhydrite, ner_label:Component, involved in relation:None, (5638, 5647), sentid: None
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+start end: ((5638, 5647))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2434
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+TEXT    : John Klein, bassanite
+STD TEXT: John_Klein, Bassanite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2434:John_Klein,Bassanite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2434
+text: John Klein, std text: John_Klein, ner_label:Target, involved in relation:None, (5548, 5558), sentid: None
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+start end: ((5548, 5558))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2434
+text: bassanite, std text: Bassanite, ner_label:Component, involved in relation:None, (5652, 5661), sentid: None
+sentence:In the John Klein drill sample , ferroan saponite was identified by CheMin , along with Casulfates anhydrite and bassanite [ 7 ] .
+start end: ((5652, 5661))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:For example , for Liga target , the mean value of Cu using ChemCam is 430 ppm with a standard deviation of 320 ppm ( highest Cu with 1050 ppm in point 5 ) while APXS measured ~ 500 ppm [ 6 ] .
+TEXT    : Liga, Cu
+STD TEXT: Liga, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Liga,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Liga, std text: Liga, ner_label:Target, involved in relation:None, (4163, 4167), sentid: None
+sentence:For example , for Liga target , the mean value of Cu using ChemCam is 430 ppm with a standard deviation of 320 ppm ( highest Cu with 1050 ppm in point 5 ) while APXS measured ~ 500 ppm [ 6 ] .
+start end: ((4163, 4167))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Cu, std text: Copper, ner_label:Component, involved in relation:None, (4194, 4196), sentid: None
+sentence:For example , for Liga target , the mean value of Cu using ChemCam is 430 ppm with a standard deviation of 320 ppm ( highest Cu with 1050 ppm in point 5 ) while APXS measured ~ 500 ppm [ 6 ] .
+start end: ((4194, 4196))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:For Stephen , ChemCam yields Cu ~ 170 ± 40 ppm while APXS results are between 200 and 350 ppm .
+TEXT    : Stephen, Cu
+STD TEXT: Stephen, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Stephen,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:None, (4335, 4342), sentid: None
+sentence:For Stephen , ChemCam yields Cu ~ 170 ± 40 ppm while APXS results are between 200 and 350 ppm .
+start end: ((4335, 4342))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Cu, std text: Copper, ner_label:Component, involved in relation:None, (4359, 4361), sentid: None
+sentence:For Stephen , ChemCam yields Cu ~ 170 ± 40 ppm while APXS results are between 200 and 350 ppm .
+start end: ((4359, 4361))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Regarding low Cu values , the average in Square_Top is ~ 15 ± 10 ppm with ChemCam and ~ 20 ppm for APXS .
+TEXT    : Square_Top, Cu
+STD TEXT: Square_Top, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Square_Top,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Square_Top, std text: Square_Top, ner_label:Target, involved in relation:None, (4463, 4473), sentid: None
+sentence:Regarding low Cu values , the average in Square_Top is ~ 15 ± 10 ppm with ChemCam and ~ 20 ppm for APXS .
+start end: ((4463, 4473))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Cu, std text: Copper, ner_label:Component, involved in relation:None, (4437, 4439), sentid: None
+sentence:Regarding low Cu values , the average in Square_Top is ~ 15 ± 10 ppm with ChemCam and ~ 20 ppm for APXS .
+start end: ((4437, 4439))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Moreover , Laurens point 5 contains 875 ppm of copper and is also iron - rich ( FeO ~ 27.9 wt .
+TEXT    : Laurens, copper
+STD TEXT: Laurens, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Laurens,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Laurens, std text: Laurens, ner_label:Target, involved in relation:None, (6188, 6195), sentid: None
+sentence:Moreover , Laurens point 5 contains 875 ppm of copper and is also iron - rich ( FeO ~ 27.9 wt .
+start end: ((6188, 6195))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: copper, std text: Copper, ner_label:Component, involved in relation:None, (6224, 6230), sentid: None
+sentence:Moreover , Laurens point 5 contains 875 ppm of copper and is also iron - rich ( FeO ~ 27.9 wt .
+start end: ((6224, 6230))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Moreover , Laurens point 5 contains 875 ppm of copper and is also iron - rich ( FeO ~ 27.9 wt .
+TEXT    : Laurens, iron
+STD TEXT: Laurens, Iron
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Laurens,Iron
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Laurens, std text: Laurens, ner_label:Target, involved in relation:None, (6188, 6195), sentid: None
+sentence:Moreover , Laurens point 5 contains 875 ppm of copper and is also iron - rich ( FeO ~ 27.9 wt .
+start end: ((6188, 6195))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: iron, std text: Iron, ner_label:Component, involved in relation:None, (6243, 6247), sentid: None
+sentence:Moreover , Laurens point 5 contains 875 ppm of copper and is also iron - rich ( FeO ~ 27.9 wt .
+start end: ((6243, 6247))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:ChemCam observations of the Leroy target determined that the veins are filled by calcium sulfate .
+TEXT    : Leroy, calcium
+STD TEXT: Leroy, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Leroy,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Leroy, std text: Leroy, ner_label:Target, involved in relation:None, (6086, 6091), sentid: None
+sentence:ChemCam observations of the Leroy target determined that the veins are filled by calcium sulfate .
+start end: ((6086, 6091))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:None, (6139, 6146), sentid: None
+sentence:ChemCam observations of the Leroy target determined that the veins are filled by calcium sulfate .
+start end: ((6139, 6146))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:ChemCam observations of the Leroy target determined that the veins are filled by calcium sulfate .
+TEXT    : Leroy, calcium sulfate
+STD TEXT: Leroy, Calcium Sulfate
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Leroy,Calcium Sulfate
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Leroy, std text: Leroy, ner_label:Target, involved in relation:None, (6086, 6091), sentid: None
+sentence:ChemCam observations of the Leroy target determined that the veins are filled by calcium sulfate .
+start end: ((6086, 6091))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium sulfate, std text: Calcium Sulfate, ner_label:Component, involved in relation:None, (6139, 6154), sentid: None
+sentence:ChemCam observations of the Leroy target determined that the veins are filled by calcium sulfate .
+start end: ((6139, 6154))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1163
+sentence:The first potassic sedimentary rocks were encountered in the uppermost member of the Yellowknife Bay ( YKB ) formation at three outcrops , namely Shaler , Rocknest , and Bathurst Inlet .
+TEXT    : Shaler, potassic
+STD TEXT: Shaler, Potassic
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1163:Shaler,Potassic
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: Shaler, std text: Shaler, ner_label:Target, involved in relation:None, (1606, 1612), sentid: None
+sentence:The first potassic sedimentary rocks were encountered in the uppermost member of the Yellowknife Bay ( YKB ) formation at three outcrops , namely Shaler , Rocknest , and Bathurst Inlet .
+start end: ((1606, 1612))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: potassic, std text: Potassic, ner_label:Component, involved in relation:None, (1473, 1481), sentid: None
+sentence:The first potassic sedimentary rocks were encountered in the uppermost member of the Yellowknife Bay ( YKB ) formation at three outcrops , namely Shaler , Rocknest , and Bathurst Inlet .
+start end: ((1473, 1481))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1163
+sentence:The first potassic sedimentary rocks were encountered in the uppermost member of the Yellowknife Bay ( YKB ) formation at three outcrops , namely Shaler , Rocknest , and Bathurst Inlet .
+TEXT    : Bathurst, potassic
+STD TEXT: Bathurst, Potassic
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1163:Bathurst,Potassic
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: Bathurst, std text: Bathurst, ner_label:Target, involved in relation:None, (1628, 1636), sentid: None
+sentence:The first potassic sedimentary rocks were encountered in the uppermost member of the Yellowknife Bay ( YKB ) formation at three outcrops , namely Shaler , Rocknest , and Bathurst Inlet .
+start end: ((1628, 1636))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: potassic, std text: Potassic, ner_label:Component, involved in relation:None, (1473, 1481), sentid: None
+sentence:The first potassic sedimentary rocks were encountered in the uppermost member of the Yellowknife Bay ( YKB ) formation at three outcrops , namely Shaler , Rocknest , and Bathurst Inlet .
+start end: ((1473, 1481))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1163
+sentence:The presence of sanidine in the Dillinger member is confirmed by the CheMin analyses at the Windjana drill site , reporting a content of 20 wt % of sanidine [ 13 ] .
+TEXT    : Windjana, sanidine
+STD TEXT: Windjana, Sanidine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1163:Windjana,Sanidine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (4951, 4959), sentid: None
+sentence:The presence of sanidine in the Dillinger member is confirmed by the CheMin analyses at the Windjana drill site , reporting a content of 20 wt % of sanidine [ 13 ] .
+start end: ((4951, 4959))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: sanidine, std text: Sanidine, ner_label:Component, involved in relation:None, (4875, 4883), sentid: None
+sentence:The presence of sanidine in the Dillinger member is confirmed by the CheMin analyses at the Windjana drill site , reporting a content of 20 wt % of sanidine [ 13 ] .
+start end: ((4875, 4883))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1163
+sentence:The presence of sanidine in the Dillinger member is confirmed by the CheMin analyses at the Windjana drill site , reporting a content of 20 wt % of sanidine [ 13 ] .
+TEXT    : Windjana, sanidine
+STD TEXT: Windjana, Sanidine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1163:Windjana,Sanidine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:None, (4951, 4959), sentid: None
+sentence:The presence of sanidine in the Dillinger member is confirmed by the CheMin analyses at the Windjana drill site , reporting a content of 20 wt % of sanidine [ 13 ] .
+start end: ((4951, 4959))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: sanidine, std text: Sanidine, ner_label:Component, involved in relation:None, (5005, 5013), sentid: None
+sentence:The presence of sanidine in the Dillinger member is confirmed by the CheMin analyses at the Windjana drill site , reporting a content of 20 wt % of sanidine [ 13 ] .
+start end: ((5005, 5013))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1604
+sentence:Our preliminary interpretation , before testing in the lab , suggests that the ChemCam laser is depth profiling through at least two feldspar grains of different composition for Togo and Union_Springs .
+TEXT    : Togo, feldspar
+STD TEXT: Togo, Feldspar
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1604:Togo,Feldspar
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1604
+text: Togo, std text: Togo, ner_label:Target, involved in relation:None, (6662, 6666), sentid: None
+sentence:Our preliminary interpretation , before testing in the lab , suggests that the ChemCam laser is depth profiling through at least two feldspar grains of different composition for Togo and Union_Springs .
+start end: ((6662, 6666))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1604
+text: feldspar, std text: Feldspar, ner_label:Component, involved in relation:None, (6617, 6625), sentid: None
+sentence:Our preliminary interpretation , before testing in the lab , suggests that the ChemCam laser is depth profiling through at least two feldspar grains of different composition for Togo and Union_Springs .
+start end: ((6617, 6625))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1604
+sentence:Our preliminary interpretation , before testing in the lab , suggests that the ChemCam laser is depth profiling through at least two feldspar grains of different composition for Togo and Union_Springs .
+TEXT    : Union_Springs, feldspar
+STD TEXT: Union_Springs, Feldspar
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1604:Union_Springs,Feldspar
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1604
+text: Union_Springs, std text: Union_Springs, ner_label:Target, involved in relation:None, (6671, 6684), sentid: None
+sentence:Our preliminary interpretation , before testing in the lab , suggests that the ChemCam laser is depth profiling through at least two feldspar grains of different composition for Togo and Union_Springs .
+start end: ((6671, 6684))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1604
+text: feldspar, std text: Feldspar, ner_label:Component, involved in relation:None, (6617, 6625), sentid: None
+sentence:Our preliminary interpretation , before testing in the lab , suggests that the ChemCam laser is depth profiling through at least two feldspar grains of different composition for Togo and Union_Springs .
+start end: ((6617, 6625))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1604
+sentence:Glidden is either a mixture of two or more feldspars smaller than the ChemCam laser spot size ( 500 µm ) or a glassy mixture .
+TEXT    : Glidden, feldspars
+STD TEXT: Glidden, Feldspars
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1604:Glidden,Feldspars
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1604
+text: Glidden, std text: Glidden, ner_label:Target, involved in relation:None, (6686, 6693), sentid: None
+sentence:Glidden is either a mixture of two or more feldspars smaller than the ChemCam laser spot size ( 500 µm ) or a glassy mixture .
+start end: ((6686, 6693))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1604
+text: feldspars, std text: Feldspars, ner_label:Component, involved in relation:None, (6729, 6738), sentid: None
+sentence:Glidden is either a mixture of two or more feldspars smaller than the ChemCam laser spot size ( 500 µm ) or a glassy mixture .
+start end: ((6729, 6738))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1999_1912
+sentence:Thus , although Abu and Gerbil are generally similar to Bright and Dark Rocks respectively , portions of the rocks have a composition whose current best interpretation is a hematite - like iron oxide .
+TEXT    : Abu, iron
+STD TEXT: Abu, Iron
+SIG: mpf-reviewed+properties-v2_1999_1912:Abu,Iron
+span1:doc_id: mpf-reviewed+properties-v2_1999_1912
+text: Abu, std text: Abu, ner_label:Target, involved in relation:None, (7365, 7368), sentid: None
+sentence:Thus , although Abu and Gerbil are generally similar to Bright and Dark Rocks respectively , portions of the rocks have a composition whose current best interpretation is a hematite - like iron oxide .
+start end: ((7365, 7368))
+
+span2:doc_id: mpf-reviewed+properties-v2_1999_1912
+text: iron, std text: Iron, ner_label:Component, involved in relation:None, (7535, 7539), sentid: None
+sentence:Thus , although Abu and Gerbil are generally similar to Bright and Dark Rocks respectively , portions of the rocks have a composition whose current best interpretation is a hematite - like iron oxide .
+start end: ((7535, 7539))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1999_1912
+sentence:Thus , although Abu and Gerbil are generally similar to Bright and Dark Rocks respectively , portions of the rocks have a composition whose current best interpretation is a hematite - like iron oxide .
+TEXT    : Gerbil, iron
+STD TEXT: Gerbil, Iron
+SIG: mpf-reviewed+properties-v2_1999_1912:Gerbil,Iron
+span1:doc_id: mpf-reviewed+properties-v2_1999_1912
+text: Gerbil, std text: Gerbil, ner_label:Target, involved in relation:None, (7373, 7379), sentid: None
+sentence:Thus , although Abu and Gerbil are generally similar to Bright and Dark Rocks respectively , portions of the rocks have a composition whose current best interpretation is a hematite - like iron oxide .
+start end: ((7373, 7379))
+
+span2:doc_id: mpf-reviewed+properties-v2_1999_1912
+text: iron, std text: Iron, ner_label:Component, involved in relation:None, (7535, 7539), sentid: None
+sentence:Thus , although Abu and Gerbil are generally similar to Bright and Dark Rocks respectively , portions of the rocks have a composition whose current best interpretation is a hematite - like iron oxide .
+start end: ((7535, 7539))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1999_1700
+sentence:On a plot of FeOT vs. SiO2 / SO3 most Pathfinder soils , Viking soils and Pathfinder rock A-16 ( Wedge ) fall above a mixing line between rock A-17 and soil A-4 , consistent with addition of an iron - rich component .
+TEXT    : Wedge, iron - rich
+STD TEXT: Wedge, Iron Rich
+SIG: mpf-reviewed+properties-v2_1999_1700:Wedge,Iron Rich
+span1:doc_id: mpf-reviewed+properties-v2_1999_1700
+text: Wedge, std text: Wedge, ner_label:Target, involved in relation:None, (3787, 3792), sentid: None
+sentence:On a plot of FeOT vs. SiO2 / SO3 most Pathfinder soils , Viking soils and Pathfinder rock A-16 ( Wedge ) fall above a mixing line between rock A-17 and soil A-4 , consistent with addition of an iron - rich component .
+start end: ((3787, 3792))
+
+span2:doc_id: mpf-reviewed+properties-v2_1999_1700
+text: iron - rich, std text: Iron Rich, ner_label:Component, involved in relation:None, (3882, 3891), sentid: None
+sentence:On a plot of FeOT vs. SiO2 / SO3 most Pathfinder soils , Viking soils and Pathfinder rock A-16 ( Wedge ) fall above a mixing line between rock A-17 and soil A-4 , consistent with addition of an iron - rich component .
+start end: ((3882, 3891))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1534
+sentence:The rocks on their own have an R2 of 0.685 and , except for Half Dome , show a clear trend of increasing redness with increasing sulfur .
+TEXT    : Half Dome, sulfur
+STD TEXT: Half_Dome, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1534:Half_Dome,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1534
+text: Half Dome, std text: Half_Dome, ner_label:Target, involved in relation:None, (5665, 5674), sentid: None
+sentence:The rocks on their own have an R2 of 0.685 and , except for Half Dome , show a clear trend of increasing redness with increasing sulfur .
+start end: ((5665, 5674))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1534
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (5733, 5739), sentid: None
+sentence:The rocks on their own have an R2 of 0.685 and , except for Half Dome , show a clear trend of increasing redness with increasing sulfur .
+start end: ((5733, 5739))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1534
+sentence:The only exception may be Half Dome , which has an intermediate amount of sulfur and a large amount of Cl for rocks , but is relatively blue .
+TEXT    : Half Dome, sulfur
+STD TEXT: Half_Dome, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1534:Half_Dome,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1534
+text: Half Dome, std text: Half_Dome, ner_label:Target, involved in relation:None, (6244, 6253), sentid: None
+sentence:The only exception may be Half Dome , which has an intermediate amount of sulfur and a large amount of Cl for rocks , but is relatively blue .
+start end: ((6244, 6253))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1534
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (6291, 6297), sentid: None
+sentence:The only exception may be Half Dome , which has an intermediate amount of sulfur and a large amount of Cl for rocks , but is relatively blue .
+start end: ((6291, 6297))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1534
+sentence:The only exception may be Half Dome , which has an intermediate amount of sulfur and a large amount of Cl for rocks , but is relatively blue .
+TEXT    : Half Dome, Cl
+STD TEXT: Half_Dome, Chlorine
+SIG: mpf-reviewed+properties-v2_1998_1534:Half_Dome,Chlorine
+span1:doc_id: mpf-reviewed+properties-v2_1998_1534
+text: Half Dome, std text: Half_Dome, ner_label:Target, involved in relation:None, (6244, 6253), sentid: None
+sentence:The only exception may be Half Dome , which has an intermediate amount of sulfur and a large amount of Cl for rocks , but is relatively blue .
+start end: ((6244, 6253))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1534
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:None, (6320, 6322), sentid: None
+sentence:The only exception may be Half Dome , which has an intermediate amount of sulfur and a large amount of Cl for rocks , but is relatively blue .
+start end: ((6320, 6322))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1999_1083
+sentence:The dark surface of Mermaid dune ( sample A-15 ) may have an armor of winnowed rock granules [ 4 ] , and its sulfur content is next lowest .
+TEXT    : Mermaid dune, sulfur
+STD TEXT: Mermaid_Dune, Sulfur
+SIG: mpf-reviewed+properties-v2_1999_1083:Mermaid_Dune,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1999_1083
+text: Mermaid dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:None, (464, 476), sentid: None
+sentence:The dark surface of Mermaid dune ( sample A-15 ) may have an armor of winnowed rock granules [ 4 ] , and its sulfur content is next lowest .
+start end: ((464, 476))
+
+span2:doc_id: mpf-reviewed+properties-v2_1999_1083
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (548, 554), sentid: None
+sentence:The dark surface of Mermaid dune ( sample A-15 ) may have an armor of winnowed rock granules [ 4 ] , and its sulfur content is next lowest .
+start end: ((548, 554))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1776
+sentence:The dark rocks such as Barnacle Bill are more silica - rich , while the Bright Rocks such as Yogi and Wedge are more sulfurrich and probably more weathered .
+TEXT    : Wedge, sulfurrich
+STD TEXT: Wedge, Sulfurrich
+SIG: mpf-reviewed+properties-v2_1998_1776:Wedge,Sulfurrich
+span1:doc_id: mpf-reviewed+properties-v2_1998_1776
+text: Wedge, std text: Wedge, ner_label:Target, involved in relation:None, (2575, 2580), sentid: None
+sentence:The dark rocks such as Barnacle Bill are more silica - rich , while the Bright Rocks such as Yogi and Wedge are more sulfurrich and probably more weathered .
+start end: ((2575, 2580))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1776
+text: sulfurrich, std text: Sulfurrich, ner_label:Component, involved in relation:None, (2590, 2600), sentid: None
+sentence:The dark rocks such as Barnacle Bill are more silica - rich , while the Bright Rocks such as Yogi and Wedge are more sulfurrich and probably more weathered .
+start end: ((2590, 2600))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1962
+sentence:Two of the five Pathfinder rock analyses reported in [ 2 ] are andesitic in composition with 59 - 61 % SiO2 ( Shark and Barnacle Bill ) , and sulfur contents of 0.3 and 0.9 wt % S , respectively .
+TEXT    : Barnacle Bill, sulfur
+STD TEXT: Barnacle_Bill, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1962:Barnacle_Bill,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: Barnacle Bill, std text: Barnacle_Bill, ner_label:Target, involved in relation:None, (3544, 3557), sentid: None
+sentence:Two of the five Pathfinder rock analyses reported in [ 2 ] are andesitic in composition with 59 - 61 % SiO2 ( Shark and Barnacle Bill ) , and sulfur contents of 0.3 and 0.9 wt % S , respectively .
+start end: ((3544, 3557))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (3564, 3570), sentid: None
+sentence:Two of the five Pathfinder rock analyses reported in [ 2 ] are andesitic in composition with 59 - 61 % SiO2 ( Shark and Barnacle Bill ) , and sulfur contents of 0.3 and 0.9 wt % S , respectively .
+start end: ((3564, 3570))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1962
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+TEXT    : Half Dome, sulfur
+STD TEXT: Half_Dome, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1962:Half_Dome,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: Half Dome, std text: Half_Dome, ner_label:Target, involved in relation:None, (3634, 3643), sentid: None
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3634, 3643))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (3676, 3682), sentid: None
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3676, 3682))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1962
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+TEXT    : Wedge, sulfur
+STD TEXT: Wedge, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1962:Wedge,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: Wedge, std text: Wedge, ner_label:Target, involved in relation:None, (3645, 3650), sentid: None
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3645, 3650))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (3676, 3682), sentid: None
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3676, 3682))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1962
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+TEXT    : Yogi, sulfur
+STD TEXT: Yogi, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1962:Yogi,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: Yogi, std text: Yogi, ner_label:Target, involved in relation:None, (3656, 3660), sentid: None
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3656, 3660))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (3676, 3682), sentid: None
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3676, 3682))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1962
+sentence:For instance , assuming a dust coating similar to the A-5 soil in which the contribution of dust to the bulk composition varies from 48 % ( Na ) to 10 % ( Fe ) , the underlying rock for Wedge could have a normal sulfur content ( 0.1 % S ) and a silica content of 56 % .
+TEXT    : Wedge, sulfur
+STD TEXT: Wedge, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1962:Wedge,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: Wedge, std text: Wedge, ner_label:Target, involved in relation:None, (4659, 4664), sentid: None
+sentence:For instance , assuming a dust coating similar to the A-5 soil in which the contribution of dust to the bulk composition varies from 48 % ( Na ) to 10 % ( Fe ) , the underlying rock for Wedge could have a normal sulfur content ( 0.1 % S ) and a silica content of 56 % .
+start end: ((4659, 4664))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:None, (4685, 4691), sentid: None
+sentence:For instance , assuming a dust coating similar to the A-5 soil in which the contribution of dust to the bulk composition varies from 48 % ( Na ) to 10 % ( Fe ) , the underlying rock for Wedge could have a normal sulfur content ( 0.1 % S ) and a silica content of 56 % .
+start end: ((4685, 4691))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:Results / Discussion : Evolved CO2 was detected in both the BB - surface and WW - subsurface materials .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (3002, 3004), sentid: None
+sentence:Results / Discussion : Evolved CO2 was detected in both the BB - surface and WW - subsurface materials .
+start end: ((3002, 3004))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (2958, 2961), sentid: None
+sentence:Results / Discussion : Evolved CO2 was detected in both the BB - surface and WW - subsurface materials .
+start end: ((2958, 2961))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:The BB released CO2 between 300 and 700 °C with a peak at 520 °C ( Fig. 1 ) .
+TEXT    : BB, CO2
+STD TEXT: Baby_Bear, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Baby_Bear,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: BB, std text: Baby_Bear, ner_label:Target, involved in relation:None, (3031, 3033), sentid: None
+sentence:The BB released CO2 between 300 and 700 °C with a peak at 520 °C ( Fig. 1 ) .
+start end: ((3031, 3033))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (3043, 3046), sentid: None
+sentence:The BB released CO2 between 300 and 700 °C with a peak at 520 °C ( Fig. 1 ) .
+start end: ((3043, 3046))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:The WW sample was charactized by at least two CO2 releases .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (3252, 3254), sentid: None
+sentence:The WW sample was charactized by at least two CO2 releases .
+start end: ((3252, 3254))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (3294, 3297), sentid: None
+sentence:The WW sample was charactized by at least two CO2 releases .
+start end: ((3294, 3297))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:The WW - LT sample evolved CO2 beginning at 250 °C and peaked at 340 °C as this was the maxium temperature of this analysis .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (3312, 3314), sentid: None
+sentence:The WW - LT sample evolved CO2 beginning at 250 °C and peaked at 340 °C as this was the maxium temperature of this analysis .
+start end: ((3312, 3314))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (3333, 3336), sentid: None
+sentence:The WW - LT sample evolved CO2 beginning at 250 °C and peaked at 340 °C as this was the maxium temperature of this analysis .
+start end: ((3333, 3336))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:The WW - HT CO2 - 1 peak was consistent with detection of organics or Fe - carbonate , while the CO2 - 2 relesae was attributed to Fe - Ca - carbonate [ 1 ] .
+TEXT    : WW, Fe - carbonate
+STD TEXT: Wicked_Witch, Iron Carbonate
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Iron Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (4048, 4050), sentid: None
+sentence:The WW - HT CO2 - 1 peak was consistent with detection of organics or Fe - carbonate , while the CO2 - 2 relesae was attributed to Fe - Ca - carbonate [ 1 ] .
+start end: ((4048, 4050))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: Fe - carbonate, std text: Iron Carbonate, ner_label:Component, involved in relation:None, (4110, 4122), sentid: None
+sentence:The WW - HT CO2 - 1 peak was consistent with detection of organics or Fe - carbonate , while the CO2 - 2 relesae was attributed to Fe - Ca - carbonate [ 1 ] .
+start end: ((4110, 4122))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:This suggests that similar CO2 evolving species may be present in the BB surface and WW subsurface icy - soil .
+TEXT    : BB, CO2
+STD TEXT: Baby_Bear, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Baby_Bear,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: BB, std text: Baby_Bear, ner_label:Target, involved in relation:None, (4562, 4564), sentid: None
+sentence:This suggests that similar CO2 evolving species may be present in the BB surface and WW subsurface icy - soil .
+start end: ((4562, 4564))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (4519, 4522), sentid: None
+sentence:This suggests that similar CO2 evolving species may be present in the BB surface and WW subsurface icy - soil .
+start end: ((4519, 4522))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:This suggests that similar CO2 evolving species may be present in the BB surface and WW subsurface icy - soil .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (4577, 4579), sentid: None
+sentence:This suggests that similar CO2 evolving species may be present in the BB surface and WW subsurface icy - soil .
+start end: ((4577, 4579))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (4519, 4522), sentid: None
+sentence:This suggests that similar CO2 evolving species may be present in the BB surface and WW subsurface icy - soil .
+start end: ((4519, 4522))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:Similarly BB and WW evolved most of their CO2 at temperatures higher than the Gale Crater sedimentary rock .
+TEXT    : BB, CO2
+STD TEXT: Baby_Bear, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Baby_Bear,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: BB, std text: Baby_Bear, ner_label:Target, involved in relation:None, (5481, 5483), sentid: None
+sentence:Similarly BB and WW evolved most of their CO2 at temperatures higher than the Gale Crater sedimentary rock .
+start end: ((5481, 5483))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (5513, 5516), sentid: None
+sentence:Similarly BB and WW evolved most of their CO2 at temperatures higher than the Gale Crater sedimentary rock .
+start end: ((5513, 5516))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:Similarly BB and WW evolved most of their CO2 at temperatures higher than the Gale Crater sedimentary rock .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (5488, 5490), sentid: None
+sentence:Similarly BB and WW evolved most of their CO2 at temperatures higher than the Gale Crater sedimentary rock .
+start end: ((5488, 5490))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:None, (5513, 5516), sentid: None
+sentence:Similarly BB and WW evolved most of their CO2 at temperatures higher than the Gale Crater sedimentary rock .
+start end: ((5513, 5516))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:However , higher CO2 evolution temperatures in RN , GB1 , BB , and WW indicate that carbonate could also have contributed to evolved CO2 .
+TEXT    : BB, carbonate
+STD TEXT: Baby_Bear, Carbonate
+SIG: phx-reviewed+properties-v2_2018_2897:Baby_Bear,Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: BB, std text: Baby_Bear, ner_label:Target, involved in relation:None, (6478, 6480), sentid: None
+sentence:However , higher CO2 evolution temperatures in RN , GB1 , BB , and WW indicate that carbonate could also have contributed to evolved CO2 .
+start end: ((6478, 6480))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: carbonate, std text: Carbonate, ner_label:Component, involved in relation:None, (6503, 6512), sentid: None
+sentence:However , higher CO2 evolution temperatures in RN , GB1 , BB , and WW indicate that carbonate could also have contributed to evolved CO2 .
+start end: ((6503, 6512))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:However , higher CO2 evolution temperatures in RN , GB1 , BB , and WW indicate that carbonate could also have contributed to evolved CO2 .
+TEXT    : WW, carbonate
+STD TEXT: Wicked_Witch, Carbonate
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (6486, 6488), sentid: None
+sentence:However , higher CO2 evolution temperatures in RN , GB1 , BB , and WW indicate that carbonate could also have contributed to evolved CO2 .
+start end: ((6486, 6488))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: carbonate, std text: Carbonate, ner_label:Component, involved in relation:None, (6503, 6512), sentid: None
+sentence:However , higher CO2 evolution temperatures in RN , GB1 , BB , and WW indicate that carbonate could also have contributed to evolved CO2 .
+start end: ((6503, 6512))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Wicked Witch sample had one endotherm g1 associated with CO2 release which is consistent with a calcium rich carbonate [ 2,6,7 ] .
+TEXT    : Wicked Witch, calcium
+STD TEXT: Wicked_Witch, Calcium
+SIG: phx-reviewed+properties-v2_2017_2201:Wicked_Witch,Calcium
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Wicked Witch, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (7602, 7614), sentid: None
+sentence:The subsurface Wicked Witch sample had one endotherm g1 associated with CO2 release which is consistent with a calcium rich carbonate [ 2,6,7 ] .
+start end: ((7602, 7614))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:None, (7698, 7705), sentid: None
+sentence:The subsurface Wicked Witch sample had one endotherm g1 associated with CO2 release which is consistent with a calcium rich carbonate [ 2,6,7 ] .
+start end: ((7698, 7705))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Wicked Witch sample had one endotherm g1 associated with CO2 release which is consistent with a calcium rich carbonate [ 2,6,7 ] .
+TEXT    : Wicked Witch, carbonate
+STD TEXT: Wicked_Witch, Carbonate
+SIG: phx-reviewed+properties-v2_2017_2201:Wicked_Witch,Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Wicked Witch, std text: Wicked_Witch, ner_label:Target, involved in relation:None, (7602, 7614), sentid: None
+sentence:The subsurface Wicked Witch sample had one endotherm g1 associated with CO2 release which is consistent with a calcium rich carbonate [ 2,6,7 ] .
+start end: ((7602, 7614))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: carbonate, std text: Carbonate, ner_label:Component, involved in relation:None, (7711, 7720), sentid: None
+sentence:The subsurface Wicked Witch sample had one endotherm g1 associated with CO2 release which is consistent with a calcium rich carbonate [ 2,6,7 ] .
+start end: ((7711, 7720))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : Burning Coals, Ca
+STD TEXT: Burning_Coals, Calcium
+SIG: phx-reviewed+properties-v2_2017_2201:Burning_Coals,Calcium
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Burning Coals, std text: Burning_Coals, ner_label:Target, involved in relation:None, (7884, 7897), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7884, 7897))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:None, (7957, 7959), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7957, 7959))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : Burning Coals, carbonate
+STD TEXT: Burning_Coals, Carbonate
+SIG: phx-reviewed+properties-v2_2017_2201:Burning_Coals,Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Burning Coals, std text: Burning_Coals, ner_label:Target, involved in relation:None, (7884, 7897), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7884, 7897))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: carbonate, std text: Carbonate, ner_label:Component, involved in relation:None, (7965, 7974), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7965, 7974))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : Burning Coals, MgSO4
+STD TEXT: Burning_Coals, Mgso4
+SIG: phx-reviewed+properties-v2_2017_2201:Burning_Coals,Mgso4
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Burning Coals, std text: Burning_Coals, ner_label:Target, involved in relation:None, (7884, 7897), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7884, 7897))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: MgSO4, std text: Mgso4, ner_label:Component, involved in relation:None, (8035, 8040), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((8035, 8040))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : BC, Ca
+STD TEXT: Burning_Coals, Calcium
+SIG: phx-reviewed+properties-v2_2017_2201:Burning_Coals,Calcium
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: BC, std text: Burning_Coals, ner_label:Target, involved in relation:None, (7899, 7901), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7899, 7901))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:None, (7957, 7959), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7957, 7959))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : BC, carbonate
+STD TEXT: Burning_Coals, Carbonate
+SIG: phx-reviewed+properties-v2_2017_2201:Burning_Coals,Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: BC, std text: Burning_Coals, ner_label:Target, involved in relation:None, (7899, 7901), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7899, 7901))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: carbonate, std text: Carbonate, ner_label:Component, involved in relation:None, (7965, 7974), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7965, 7974))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : BC, MgSO4
+STD TEXT: Burning_Coals, Mgso4
+SIG: phx-reviewed+properties-v2_2017_2201:Burning_Coals,Mgso4
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: BC, std text: Burning_Coals, ner_label:Target, involved in relation:None, (7899, 7901), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((7899, 7901))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: MgSO4, std text: Mgso4, ner_label:Component, involved in relation:None, (8035, 8040), sentid: None
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((8035, 8040))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+TEXT    : Rosy Red, Cl
+STD TEXT: Rosy_Red, Chlorine
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Chlorine
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:None, (6219, 6227), sentid: None
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+start end: ((6219, 6227))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:None, (6253, 6255), sentid: None
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+start end: ((6253, 6255))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+TEXT    : Rosy Red, SO4
+STD TEXT: Rosy_Red, So4
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,So4
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:None, (6219, 6227), sentid: None
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+start end: ((6219, 6227))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: SO4, std text: So4, ner_label:Component, involved in relation:None, (6257, 6260), sentid: None
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+start end: ((6257, 6260))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+TEXT    : Rosy Red, ClO4
+STD TEXT: Rosy_Red, Clo4
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Clo4
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:None, (6219, 6227), sentid: None
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+start end: ((6219, 6227))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: ClO4, std text: Clo4, ner_label:Component, involved in relation:None, (6266, 6270), sentid: None
+sentence:Seven ions were measured during the Rosy Red analysis ( Ca , Mg , Na , K , Cl , SO4 , and ClO4 ) .
+start end: ((6266, 6270))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2009_2196
+sentence:Oxygen ( mass 32 ) was detected by TEGA ( 325 - 625 °C ) for a surface soil sample dubbed " Baby Bear " at the Phoenix landing site .
+TEXT    : Baby Bear, Oxygen
+STD TEXT: Baby_Bear, Oxygen
+SIG: phx-reviewed+properties-v2_2009_2196:Baby_Bear,Oxygen
+span1:doc_id: phx-reviewed+properties-v2_2009_2196
+text: Baby Bear, std text: Baby_Bear, ner_label:Target, involved in relation:None, (5341, 5350), sentid: None
+sentence:Oxygen ( mass 32 ) was detected by TEGA ( 325 - 625 °C ) for a surface soil sample dubbed " Baby Bear " at the Phoenix landing site .
+start end: ((5341, 5350))
+
+span2:doc_id: phx-reviewed+properties-v2_2009_2196
+text: Oxygen, std text: Oxygen, ner_label:Component, involved in relation:None, (5257, 5263), sentid: None
+sentence:Oxygen ( mass 32 ) was detected by TEGA ( 325 - 625 °C ) for a surface soil sample dubbed " Baby Bear " at the Phoenix landing site .
+start end: ((5257, 5263))
+
+
+
