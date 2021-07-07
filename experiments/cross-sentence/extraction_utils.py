@@ -444,6 +444,37 @@ def get_sentid_from_offset(doc_start_char, doc_end_char, offset2sentid):
             return offset2sentid[offset]
     return sentid 
 
+def get_offset2docidx(doc = None, corenlp_file = None):
+    # map offset to the idx in document
+
+    # get a dictonary of character offset to sentid
+
+    if doc is None and corenlp_file is None:
+        raise NameError("Either doc_dict or corenlp_file must be provided ! ")
+    if doc is None:
+        # read corenlp file
+        doc = json.load(open(corenlp_file, "r"))
+
+    offset2idx = {}
+    for sent in doc["sentences"]:
+        for tok in sent['tokens']:
+            offset = (tok["characterOffsetBegin"],  tok["characterOffsetEnd"])
+            offset2idx[offset] = len(offset2idx)
+
+    return offset2idx
+
+def get_docidx_from_offset(doc_start_char, doc_end_char, offset2docidx):
+    begin_idx = None
+    end_idx = None # exclusive
+    for offset in offset2docidx:
+        if offset[0] <= doc_start_char < offset[1]:
+            begin_idx = offset2docidx[offset]
+        if  offset[0] < doc_end_char <= offset[1]:
+            end_idx = offset2docidx[offset]
+    return (begin_idx, end_idx)
+
+
+
 def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None, use_component = False, use_sys_ners = False):
     
     # this function extract all pairs of entities from the same sentence as relation candidates. note that here we would get duplicated entity pairs with reverse order, such as (t1, t2) and (t2, t1)

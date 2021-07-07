@@ -11,4 +11,6 @@ python3 statistics.py --data ../data/mars/processed/test.data
 
 # train 
 cd src
-python3 eog.py --config ../configs/parameters_mars.yaml --train --gpu 1 --epoch 25
+python3 eog.py --config ../configs/parameters_mars.yaml --train --gpu 1  > train.log
+
+python3 eog.py --config ../configs/parameters_mars_test.yaml --test --gpu 1

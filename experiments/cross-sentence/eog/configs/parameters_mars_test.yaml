@@ -1,28 +1,28 @@
 # network
 batch: 1
-epoch: 30
+epoch: 50
 bilstm_layers: 1
-word_dim: 80
-lstm_dim: 50
-out_dim: 50
+word_dim: 100
+lstm_dim: 30
+out_dim: 30
 type_dim: 10
 beta: 0.8
 dist_dim: 10
 drop_i: 0
 drop_m: 0.0
 drop_o: 0
-lr: 0.001
+lr: 0.01 # 0.001
 gc: 10
 reg: 0.0001
 opt: adam
 patience: 5
 unk_w_prob: 0.5
 min_w_freq: 1
-walks_iter: 1
+walks_iter: 2
 
 # data based
 train_data: ../data/mars/processed/train.data
-test_data: ../data/mars/processed/dev.data
+test_data: ../data/mars/processed/test.data
 embeds: 
 folder: ../results/mars
 save_pred: test
@@ -45,7 +45,7 @@ shuffle_data: true
 label2ignore: 1:NR:2
 primary_metric: micro_f
 direction: l2r+r2l
-include_pairs: ['Target-Component','Component-Target']
+include_pairs: ['Target-Component']
 classify_pairs: ['Target-Component']
 edges: ['MM', 'ME', 'MS', 'ES', 'SS-ind']
 window:
