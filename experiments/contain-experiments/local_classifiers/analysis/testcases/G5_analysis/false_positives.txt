@@ -1,0 +1,1462 @@
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:Evolved CO2 detected by TEGA from the BB and WW ( WW - LT , and WW - HT ) samples compared to SAM analyses of the eolain ( E ) RN , GB1 , and sedimentary rock ( R ) CB , TP , BS samples .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:O, (4948, 4950), sentid: 37
+sentence:Evolved CO2 detected by TEGA from the BB and WW ( WW - LT , and WW - HT ) samples compared to SAM analyses of the eolain ( E ) RN , GB1 , and sedimentary rock ( R ) CB , TP , BS samples .
+start end: ((4948, 4950))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:Contains, (4896, 4899), sentid: 37
+sentence:Evolved CO2 detected by TEGA from the BB and WW ( WW - LT , and WW - HT ) samples compared to SAM analyses of the eolain ( E ) RN , GB1 , and sedimentary rock ( R ) CB , TP , BS samples .
+start end: ((4896, 4899))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2461
+sentence:The Opportunity iron Shelter Island exhibits mineral inclusions or kamacite plates exposed by differential weathering on its uppermost surface ( Fig. 1d ; mI ) .
+TEXT    : Shelter Island, kamacite
+STD TEXT: Shelter_Island, Kamacite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2461:Shelter_Island,Kamacite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2461
+text: Shelter Island, std text: Shelter_Island, ner_label:Target, involved in relation:O, (5134, 5148), sentid: 42
+sentence:The Opportunity iron Shelter Island exhibits mineral inclusions or kamacite plates exposed by differential weathering on its uppermost surface ( Fig. 1d ; mI ) .
+start end: ((5134, 5148))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2461
+text: kamacite, std text: Kamacite, ner_label:Component, involved in relation:O, (5180, 5188), sentid: 42
+sentence:The Opportunity iron Shelter Island exhibits mineral inclusions or kamacite plates exposed by differential weathering on its uppermost surface ( Fig. 1d ; mI ) .
+start end: ((5180, 5188))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2160
+sentence:Coarse - grained > 500 µm [ 7 ] , feldspar - rich samples are also notable e.g. Robin Hood and the Harrison clast - the latter from the Hottah faces conglomerate ( sols 365 , 514 ) .
+TEXT    : Hottah, feldspar
+STD TEXT: Hottah, Feldspar
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2160:Hottah,Feldspar
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2160
+text: Hottah, std text: Hottah, ner_label:Target, involved in relation:O, (2621, 2627), sentid: 19
+sentence:Coarse - grained > 500 µm [ 7 ] , feldspar - rich samples are also notable e.g. Robin Hood and the Harrison clast - the latter from the Hottah faces conglomerate ( sols 365 , 514 ) .
+start end: ((2621, 2627))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2160
+text: feldspar, std text: Feldspar, ner_label:Component, involved in relation:Contains, (2521, 2529), sentid: 19
+sentence:Coarse - grained > 500 µm [ 7 ] , feldspar - rich samples are also notable e.g. Robin Hood and the Harrison clast - the latter from the Hottah faces conglomerate ( sols 365 , 514 ) .
+start end: ((2521, 2529))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Using PHREEQC , we find that the pH of Rosy Red before sample addition is consistent with a headspace pCO2 of ~ 8.4 mbar , and that drawer open / close events have a minor effect on 0 510 15 20 25 0.001 0.01 0.1 110 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 Tem per at ure ( °C ) C on ce ntr at io n ( mM ) Local Mean Solar Time Na ⁺ K ⁺ NH ₄ ⁺ Ca ² ⁺ Mg ² ⁺ Cl ⁻ ClO ₄ ⁻ Temp Table 1 .
+TEXT    : Rosy Red, Mg
+STD TEXT: Rosy_Red, Magnesium
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Magnesium
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4217, 4225), sentid: 36
+sentence:Using PHREEQC , we find that the pH of Rosy Red before sample addition is consistent with a headspace pCO2 of ~ 8.4 mbar , and that drawer open / close events have a minor effect on 0 510 15 20 25 0.001 0.01 0.1 110 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 Tem per at ure ( °C ) C on ce ntr at io n ( mM ) Local Mean Solar Time Na ⁺ K ⁺ NH ₄ ⁺ Ca ² ⁺ Mg ² ⁺ Cl ⁻ ClO ₄ ⁻ Temp Table 1 .
+start end: ((4217, 4225))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:O, (4526, 4528), sentid: 36
+sentence:Using PHREEQC , we find that the pH of Rosy Red before sample addition is consistent with a headspace pCO2 of ~ 8.4 mbar , and that drawer open / close events have a minor effect on 0 510 15 20 25 0.001 0.01 0.1 110 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 Tem per at ure ( °C ) C on ce ntr at io n ( mM ) Local Mean Solar Time Na ⁺ K ⁺ NH ₄ ⁺ Ca ² ⁺ Mg ² ⁺ Cl ⁻ ClO ₄ ⁻ Temp Table 1 .
+start end: ((4526, 4528))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Using PHREEQC , we find that the pH of Rosy Red before sample addition is consistent with a headspace pCO2 of ~ 8.4 mbar , and that drawer open / close events have a minor effect on 0 510 15 20 25 0.001 0.01 0.1 110 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 Tem per at ure ( °C ) C on ce ntr at io n ( mM ) Local Mean Solar Time Na ⁺ K ⁺ NH ₄ ⁺ Ca ² ⁺ Mg ² ⁺ Cl ⁻ ClO ₄ ⁻ Temp Table 1 .
+TEXT    : Rosy Red, Cl
+STD TEXT: Rosy_Red, Chlorine
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Chlorine
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4217, 4225), sentid: 36
+sentence:Using PHREEQC , we find that the pH of Rosy Red before sample addition is consistent with a headspace pCO2 of ~ 8.4 mbar , and that drawer open / close events have a minor effect on 0 510 15 20 25 0.001 0.01 0.1 110 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 Tem per at ure ( °C ) C on ce ntr at io n ( mM ) Local Mean Solar Time Na ⁺ K ⁺ NH ₄ ⁺ Ca ² ⁺ Mg ² ⁺ Cl ⁻ ClO ₄ ⁻ Temp Table 1 .
+start end: ((4217, 4225))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:O, (4531, 4533), sentid: 36
+sentence:Using PHREEQC , we find that the pH of Rosy Red before sample addition is consistent with a headspace pCO2 of ~ 8.4 mbar , and that drawer open / close events have a minor effect on 0 510 15 20 25 0.001 0.01 0.1 110 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 Tem per at ure ( °C ) C on ce ntr at io n ( mM ) Local Mean Solar Time Na ⁺ K ⁺ NH ₄ ⁺ Ca ² ⁺ Mg ² ⁺ Cl ⁻ ClO ₄ ⁻ Temp Table 1 .
+start end: ((4531, 4533))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (4252, 4259), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4252, 4259))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:O, (4212, 4214), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4212, 4214))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+TEXT    : Stephen, Cl
+STD TEXT: Stephen, Chlorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Chlorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (4252, 4259), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4252, 4259))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:O, (4137, 4139), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4137, 4139))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+TEXT    : Stephen, Br
+STD TEXT: Stephen, Bromine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Bromine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (4252, 4259), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4252, 4259))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Br, std text: Bromine, ner_label:Component, involved in relation:O, (4144, 4146), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4144, 4146))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+TEXT    : Stephen, Ni
+STD TEXT: Stephen, Nickel
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Nickel
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (4252, 4259), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4252, 4259))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Ni, std text: Nickel, ner_label:Component, involved in relation:O, (4224, 4226), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4224, 4226))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+TEXT    : Stephen, Zn
+STD TEXT: Stephen, Zinc
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Zinc
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (4252, 4259), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4252, 4259))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Zn, std text: Zinc, ner_label:Component, involved in relation:O, (4208, 4210), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4208, 4210))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+TEXT    : Stephen, Cu
+STD TEXT: Stephen, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (4252, 4259), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4252, 4259))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cu, std text: Copper, ner_label:Component, involved in relation:O, (4216, 4218), sentid: 25
+sentence:Cl and Br are correlated ( Fig. 3 ) ; however , there is no correlation to Zn , Mn , Cu , and Ni , which was observed with Stephen [ 9 ] .
+start end: ((4216, 4218))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:The Cu - rich targets are often mafic materials ( ex : Liga point 5 with 1050 ppm ) .
+TEXT    : Liga, Cu
+STD TEXT: Liga, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Liga,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Liga, std text: Liga, ner_label:Target, involved in relation:O, (5972, 5976), sentid: 50
+sentence:The Cu - rich targets are often mafic materials ( ex : Liga point 5 with 1050 ppm ) .
+start end: ((5972, 5976))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Cu, std text: Copper, ner_label:Component, involved in relation:O, (5925, 5927), sentid: 50
+sentence:The Cu - rich targets are often mafic materials ( ex : Liga point 5 with 1050 ppm ) .
+start end: ((5925, 5927))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:Evolved CO2 detected by TEGA from the BB and WW ( WW - LT , and WW - HT ) samples compared to SAM analyses of the eolain ( E ) RN , GB1 , and sedimentary rock ( R ) CB , TP , BS samples .
+TEXT    : WW, CO2
+STD TEXT: Wicked_Witch, Co2
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Co2
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:O, (4937, 4939), sentid: 37
+sentence:Evolved CO2 detected by TEGA from the BB and WW ( WW - LT , and WW - HT ) samples compared to SAM analyses of the eolain ( E ) RN , GB1 , and sedimentary rock ( R ) CB , TP , BS samples .
+start end: ((4937, 4939))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: CO2, std text: Co2, ner_label:Component, involved in relation:Contains, (4896, 4899), sentid: 37
+sentence:Evolved CO2 detected by TEGA from the BB and WW ( WW - LT , and WW - HT ) samples compared to SAM analyses of the eolain ( E ) RN , GB1 , and sedimentary rock ( R ) CB , TP , BS samples .
+start end: ((4896, 4899))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:Mastcam multispectral imaging and CRISM orbital spectra are consistent with these findings , indicating a change in oxidation state of the outcrop materials or crystallinity of hematite as the rover drives south toward the Hematite Ridge area [ 4 ] .
+TEXT    : Hematite Ridge, hematite
+STD TEXT: Hematite_Ridge, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Hematite_Ridge,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Hematite Ridge, std text: Hematite_Ridge, ner_label:Target, involved in relation:O, (5106, 5120), sentid: 36
+sentence:Mastcam multispectral imaging and CRISM orbital spectra are consistent with these findings , indicating a change in oxidation state of the outcrop materials or crystallinity of hematite as the rover drives south toward the Hematite Ridge area [ 4 ] .
+start end: ((5106, 5120))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:O, (5060, 5068), sentid: 36
+sentence:Mastcam multispectral imaging and CRISM orbital spectra are consistent with these findings , indicating a change in oxidation state of the outcrop materials or crystallinity of hematite as the rover drives south toward the Hematite Ridge area [ 4 ] .
+start end: ((5060, 5068))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1962
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+TEXT    : Yogi, S
+STD TEXT: Yogi, Sulfur
+SIG: mpf-reviewed+properties-v2_1998_1962:Yogi,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: Yogi, std text: Yogi, ner_label:Target, involved in relation:Contains, (3656, 3660), sentid: 21
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3656, 3660))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1962
+text: S, std text: Sulfur, ner_label:Component, involved in relation:O, (3694, 3695), sentid: 21
+sentence:The other three ( Half Dome , Wedge , and Yogi ) are higher in sulfur ( 1 - 1.6 wt % S ) and have bulk compositions that are comparable to a basaltic andesite ( 5255 % SiO2 ) .
+start end: ((3694, 3695))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2493
+sentence:Plot of Fe concentration versus estimated depth for the Soda target .
+TEXT    : Soda, Fe
+STD TEXT: Soda, Iron
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2493:Soda,Iron
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2493
+text: Soda, std text: Soda, ner_label:Target, involved in relation:O, (4299, 4303), sentid: 27
+sentence:Plot of Fe concentration versus estimated depth for the Soda target .
+start end: ((4299, 4303))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2493
+text: Fe, std text: Iron, ner_label:Component, involved in relation:O, (4251, 4253), sentid: 27
+sentence:Plot of Fe concentration versus estimated depth for the Soda target .
+start end: ((4251, 4253))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Examination of as - is , brushed , and drilled alpha particle X-ray spectrometer ( APXS ) integrations of the Windjana target indicate that there is also a layer present here composed of volatile elements ( Br , Cl , Mn ) .
+TEXT    : Windjana, Cl
+STD TEXT: Windjana, Chlorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Chlorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (1514, 1522), sentid: 5
+sentence:Examination of as - is , brushed , and drilled alpha particle X-ray spectrometer ( APXS ) integrations of the Windjana target indicate that there is also a layer present here composed of volatile elements ( Br , Cl , Mn ) .
+start end: ((1514, 1522))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:O, (1614, 1616), sentid: 5
+sentence:Examination of as - is , brushed , and drilled alpha particle X-ray spectrometer ( APXS ) integrations of the Windjana target indicate that there is also a layer present here composed of volatile elements ( Br , Cl , Mn ) .
+start end: ((1614, 1616))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Examination of as - is , brushed , and drilled alpha particle X-ray spectrometer ( APXS ) integrations of the Windjana target indicate that there is also a layer present here composed of volatile elements ( Br , Cl , Mn ) .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (1514, 1522), sentid: 5
+sentence:Examination of as - is , brushed , and drilled alpha particle X-ray spectrometer ( APXS ) integrations of the Windjana target indicate that there is also a layer present here composed of volatile elements ( Br , Cl , Mn ) .
+start end: ((1514, 1522))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:O, (1618, 1620), sentid: 5
+sentence:Examination of as - is , brushed , and drilled alpha particle X-ray spectrometer ( APXS ) integrations of the Windjana target indicate that there is also a layer present here composed of volatile elements ( Br , Cl , Mn ) .
+start end: ((1618, 1620))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+TEXT    : Windjana, Cl
+STD TEXT: Windjana, Chlorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Chlorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (3673, 3681), sentid: 22
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3673, 3681))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:Contains, (3855, 3857), sentid: 22
+sentence:Details of the Windjana Layer and Geologic Interpretation : Windjana has the strongest a b ~ 10 cm indication of a layer for all MSL APXS targets studied up to sol 1200 and is primarily composed of Cl , Br , and Mn .
+start end: ((3855, 3857))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1703
+sentence:Fluorapatite was later also detected by Xray diffraction ( with CheMin ) at a level of ~ 1wt % in the Windjana drill sample ( Kimberley area ) [ 6 ] , and several points analyzed by ChemCam in this area also revealed a correlation between Ca and F [ 5 ] .
+TEXT    : Windjana, F
+STD TEXT: Windjana, Fluorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1703:Windjana,Fluorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1703
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:Contains, (1897, 1905), sentid: 9
+sentence:Fluorapatite was later also detected by Xray diffraction ( with CheMin ) at a level of ~ 1wt % in the Windjana drill sample ( Kimberley area ) [ 6 ] , and several points analyzed by ChemCam in this area also revealed a correlation between Ca and F [ 5 ] .
+start end: ((1897, 1905))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1703
+text: F, std text: Fluorine, ner_label:Component, involved in relation:O, (2036, 2037), sentid: 9
+sentence:Fluorapatite was later also detected by Xray diffraction ( with CheMin ) at a level of ~ 1wt % in the Windjana drill sample ( Kimberley area ) [ 6 ] , and several points analyzed by ChemCam in this area also revealed a correlation between Ca and F [ 5 ] .
+start end: ((2036, 2037))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1614
+sentence:The Kimberley type conglomerates are distinct from the Darwin type conglomerates because they show a much higher potassium and iron content and a much lower Na2O / K2O ratio ( < 2 ) .
+TEXT    : Darwin, iron
+STD TEXT: Darwin, Iron
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1614:Darwin,Iron
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: Darwin, std text: Darwin, ner_label:Target, involved in relation:O, (4971, 4977), sentid: 27
+sentence:The Kimberley type conglomerates are distinct from the Darwin type conglomerates because they show a much higher potassium and iron content and a much lower Na2O / K2O ratio ( < 2 ) .
+start end: ((4971, 4977))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: iron, std text: Iron, ner_label:Component, involved in relation:O, (5043, 5047), sentid: 27
+sentence:The Kimberley type conglomerates are distinct from the Darwin type conglomerates because they show a much higher potassium and iron content and a much lower Na2O / K2O ratio ( < 2 ) .
+start end: ((5043, 5047))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1614
+sentence:The Kimberley type conglomerates are distinct from the Darwin type conglomerates because they show a much higher potassium and iron content and a much lower Na2O / K2O ratio ( < 2 ) .
+TEXT    : Darwin, potassium
+STD TEXT: Darwin, Potassium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1614:Darwin,Potassium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: Darwin, std text: Darwin, ner_label:Target, involved in relation:O, (4971, 4977), sentid: 27
+sentence:The Kimberley type conglomerates are distinct from the Darwin type conglomerates because they show a much higher potassium and iron content and a much lower Na2O / K2O ratio ( < 2 ) .
+start end: ((4971, 4977))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: potassium, std text: Potassium, ner_label:Component, involved in relation:O, (5029, 5038), sentid: 27
+sentence:The Kimberley type conglomerates are distinct from the Darwin type conglomerates because they show a much higher potassium and iron content and a much lower Na2O / K2O ratio ( < 2 ) .
+start end: ((5029, 5038))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1803
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+TEXT    : Yogi, hematite
+STD TEXT: Yogi, Hematite
+SIG: mpf-reviewed+properties-v2_1998_1803:Yogi,Hematite
+span1:doc_id: mpf-reviewed+properties-v2_1998_1803
+text: Yogi, std text: Yogi, ner_label:Target, involved in relation:O, (6460, 6464), sentid: 42
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+start end: ((6460, 6464))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1803
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:O, (6406, 6414), sentid: 42
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+start end: ((6406, 6414))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1803
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+TEXT    : Yogi, maghemite
+STD TEXT: Yogi, Maghemite
+SIG: mpf-reviewed+properties-v2_1998_1803:Yogi,Maghemite
+span1:doc_id: mpf-reviewed+properties-v2_1998_1803
+text: Yogi, std text: Yogi, ner_label:Target, involved in relation:O, (6460, 6464), sentid: 42
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+start end: ((6460, 6464))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1803
+text: maghemite, std text: Maghemite, ner_label:Component, involved in relation:O, (6419, 6428), sentid: 42
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+start end: ((6419, 6428))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (6262, 6270), sentid: 42
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+start end: ((6262, 6270))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:O, (6144, 6146), sentid: 42
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+start end: ((6144, 6146))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+TEXT    : Windjana, Cl
+STD TEXT: Windjana, Chlorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Chlorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (6262, 6270), sentid: 42
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+start end: ((6262, 6270))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:O, (6136, 6138), sentid: 42
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+start end: ((6136, 6138))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+TEXT    : Windjana, Br
+STD TEXT: Windjana, Bromine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Bromine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (6262, 6270), sentid: 42
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+start end: ((6262, 6270))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Br, std text: Bromine, ner_label:Component, involved in relation:O, (6132, 6134), sentid: 42
+sentence:This layer is Br , Cl , and Mn - rich and is likely a result of fracture filling of salts by low - temperature secondary fluids as they permeated the Windjana outcrop .
+start end: ((6132, 6134))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1990
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+TEXT    : Alvord Mountain, apatites
+STD TEXT: Alvord_Mountain, Apatites
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1990:Alvord_Mountain,Apatites
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Alvord Mountain, std text: Alvord_Mountain, ner_label:Target, involved in relation:Contains, (5070, 5085), sentid: 38
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+start end: ((5070, 5085))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: apatites, std text: Apatites, ner_label:Component, involved in relation:O, (5115, 5123), sentid: 38
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+start end: ((5115, 5123))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1990
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+TEXT    : Alvord Mountain, fluorine
+STD TEXT: Alvord_Mountain, Fluorine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1990:Alvord_Mountain,Fluorine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: Alvord Mountain, std text: Alvord_Mountain, ner_label:Target, involved in relation:Contains, (5070, 5085), sentid: 38
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+start end: ((5070, 5085))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1990
+text: fluorine, std text: Fluorine, ner_label:Component, involved in relation:O, (5163, 5171), sentid: 38
+sentence:In the case of Alvord Mountain , fluorite is preferred since apatites is incompatible for such high level of fluorine .
+start end: ((5163, 5171))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1614
+sentence:Local measurements on the Darwin type conglomerates show the predominance of plagioclase mineralogy , with presence of alkali feldspars , in agreement with the high Na2O / K2O ratio of 5 to 10 .
+TEXT    : Darwin, plagioclase
+STD TEXT: Darwin, Plagioclase
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1614:Darwin,Plagioclase
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: Darwin, std text: Darwin, ner_label:Target, involved in relation:O, (4663, 4669), sentid: 25
+sentence:Local measurements on the Darwin type conglomerates show the predominance of plagioclase mineralogy , with presence of alkali feldspars , in agreement with the high Na2O / K2O ratio of 5 to 10 .
+start end: ((4663, 4669))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: plagioclase, std text: Plagioclase, ner_label:Component, involved in relation:O, (4714, 4725), sentid: 25
+sentence:Local measurements on the Darwin type conglomerates show the predominance of plagioclase mineralogy , with presence of alkali feldspars , in agreement with the high Na2O / K2O ratio of 5 to 10 .
+start end: ((4714, 4725))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1614
+sentence:Local measurements on the Darwin type conglomerates show the predominance of plagioclase mineralogy , with presence of alkali feldspars , in agreement with the high Na2O / K2O ratio of 5 to 10 .
+TEXT    : Darwin, feldspars
+STD TEXT: Darwin, Feldspars
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1614:Darwin,Feldspars
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: Darwin, std text: Darwin, ner_label:Target, involved in relation:O, (4663, 4669), sentid: 25
+sentence:Local measurements on the Darwin type conglomerates show the predominance of plagioclase mineralogy , with presence of alkali feldspars , in agreement with the high Na2O / K2O ratio of 5 to 10 .
+start end: ((4663, 4669))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1614
+text: feldspars, std text: Feldspars, ner_label:Component, involved in relation:O, (4762, 4771), sentid: 25
+sentence:Local measurements on the Darwin type conglomerates show the predominance of plagioclase mineralogy , with presence of alkali feldspars , in agreement with the high Na2O / K2O ratio of 5 to 10 .
+start end: ((4762, 4771))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:For example , for Liga target , the mean value of Cu using ChemCam is 430 ppm with a standard deviation of 320 ppm ( highest Cu with 1050 ppm in point 5 ) while APXS measured ~ 500 ppm [ 6 ] .
+TEXT    : Liga, Cu
+STD TEXT: Liga, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Liga,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Liga, std text: Liga, ner_label:Target, involved in relation:Contains, (4163, 4167), sentid: 32
+sentence:For example , for Liga target , the mean value of Cu using ChemCam is 430 ppm with a standard deviation of 320 ppm ( highest Cu with 1050 ppm in point 5 ) while APXS measured ~ 500 ppm [ 6 ] .
+start end: ((4163, 4167))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Cu, std text: Copper, ner_label:Component, involved in relation:O, (4268, 4270), sentid: 32
+sentence:For example , for Liga target , the mean value of Cu using ChemCam is 430 ppm with a standard deviation of 320 ppm ( highest Cu with 1050 ppm in point 5 ) while APXS measured ~ 500 ppm [ 6 ] .
+start end: ((4268, 4270))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+TEXT    : Engo, hematite
+STD TEXT: Engo, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Engo,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Engo, std text: Engo, ner_label:Target, involved in relation:O, (6603, 6607), sentid: 47
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+start end: ((6603, 6607))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:O, (6645, 6653), sentid: 47
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+start end: ((6645, 6653))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+TEXT    : Telegraph Peak, hematite
+STD TEXT: Telegraph_Peak, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Telegraph_Peak,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Telegraph Peak, std text: Telegraph_Peak, ner_label:Target, involved in relation:O, (3626, 3640), sentid: 28
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3626, 3640))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:Contains, (3739, 3747), sentid: 28
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3739, 3747))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+TEXT    : Telegraph Peak, magnetite
+STD TEXT: Telegraph_Peak, Magnetite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Telegraph_Peak,Magnetite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Telegraph Peak, std text: Telegraph_Peak, ner_label:Target, involved in relation:O, (3626, 3640), sentid: 28
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3626, 3640))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: magnetite, std text: Magnetite, ner_label:Component, involved in relation:Contains, (3670, 3679), sentid: 28
+sentence:The Big Sky tailings were spectrally flat ( similar to Telegraph Peak ) likely from the presence of magnetite , and include a weak downturn > 750 nm , possibly from minor hematite .
+start end: ((3670, 3679))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:If the calcium sulfate is a diagenetic halo product , we would expect calcium sulfate in the Meeteetse target , but we do not .
+TEXT    : Meeteetse, calcium sulfate
+STD TEXT: Meeteetse, Calcium Sulfate
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Meeteetse,Calcium Sulfate
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Meeteetse, std text: Meeteetse, ner_label:Target, involved in relation:O, (6248, 6257), sentid: 44
+sentence:If the calcium sulfate is a diagenetic halo product , we would expect calcium sulfate in the Meeteetse target , but we do not .
+start end: ((6248, 6257))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium sulfate, std text: Calcium Sulfate, ner_label:Component, involved in relation:O, (6163, 6178), sentid: 44
+sentence:If the calcium sulfate is a diagenetic halo product , we would expect calcium sulfate in the Meeteetse target , but we do not .
+start end: ((6163, 6178))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:If the calcium sulfate is a diagenetic halo product , we would expect calcium sulfate in the Meeteetse target , but we do not .
+TEXT    : Meeteetse, calcium
+STD TEXT: Meeteetse, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Meeteetse,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Meeteetse, std text: Meeteetse, ner_label:Target, involved in relation:O, (6248, 6257), sentid: 44
+sentence:If the calcium sulfate is a diagenetic halo product , we would expect calcium sulfate in the Meeteetse target , but we do not .
+start end: ((6248, 6257))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (6225, 6232), sentid: 44
+sentence:If the calcium sulfate is a diagenetic halo product , we would expect calcium sulfate in the Meeteetse target , but we do not .
+start end: ((6225, 6232))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : RR1, MgSO4
+STD TEXT: Rosy_Red, Mgso4
+SIG: phx-reviewed+properties-v2_2017_2201:Rosy_Red,Mgso4
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: RR1, std text: Rosy_Red, ner_label:Target, involved in relation:O, (8007, 8010), sentid: 62
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((8007, 8010))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: MgSO4, std text: Mgso4, ner_label:Component, involved in relation:Contains, (8035, 8040), sentid: 62
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((8035, 8040))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2009_2489
+sentence:Table 1 - WCL Results for Rosy Red Ionic Species Concentration in Cell , mM % wt * Ca2 + 0.40 ( ± 0.2 - Cl - 0.45 ( ± 0.5 ) 0.04 ClO4 - 3.0 ( ± 1 ) 0.75 K + 0.30 ( ± 0.1 ) 0.03 Mg2 + 2.5 ( ± 1 ) - Na + 1.5 ( ± 0.5 ) 0.10 pH 8.3 ( ± 0.5 ) Cond 1100 ( ± 200 ) µS / cm * Assumes 1g sample and 1g / cm 3 density .
+TEXT    : Rosy Red, K
+STD TEXT: Rosy_Red, Potassium
+SIG: phx-reviewed+properties-v2_2009_2489:Rosy_Red,Potassium
+span1:doc_id: phx-reviewed+properties-v2_2009_2489
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (5770, 5778), sentid: 36
+sentence:Table 1 - WCL Results for Rosy Red Ionic Species Concentration in Cell , mM % wt * Ca2 + 0.40 ( ± 0.2 - Cl - 0.45 ( ± 0.5 ) 0.04 ClO4 - 3.0 ( ± 1 ) 0.75 K + 0.30 ( ± 0.1 ) 0.03 Mg2 + 2.5 ( ± 1 ) - Na + 1.5 ( ± 0.5 ) 0.10 pH 8.3 ( ± 0.5 ) Cond 1100 ( ± 200 ) µS / cm * Assumes 1g sample and 1g / cm 3 density .
+start end: ((5770, 5778))
+
+span2:doc_id: phx-reviewed+properties-v2_2009_2489
+text: K, std text: Potassium, ner_label:Component, involved in relation:O, (5887, 5888), sentid: 36
+sentence:Table 1 - WCL Results for Rosy Red Ionic Species Concentration in Cell , mM % wt * Ca2 + 0.40 ( ± 0.2 - Cl - 0.45 ( ± 0.5 ) 0.04 ClO4 - 3.0 ( ± 1 ) 0.75 K + 0.30 ( ± 0.1 ) 0.03 Mg2 + 2.5 ( ± 1 ) - Na + 1.5 ( ± 0.5 ) 0.10 pH 8.3 ( ± 0.5 ) Cond 1100 ( ± 200 ) µS / cm * Assumes 1g sample and 1g / cm 3 density .
+start end: ((5887, 5888))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+TEXT    : Rosy Red, Mg
+STD TEXT: Rosy_Red, Magnesium
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Magnesium
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4587, 4595), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4587, 4595))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:O, (4614, 4616), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4614, 4616))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+TEXT    : Rosy Red, Na
+STD TEXT: Rosy_Red, Sodium
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Sodium
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4587, 4595), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4587, 4595))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Na, std text: Sodium, ner_label:Component, involved in relation:O, (4627, 4629), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4627, 4629))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+TEXT    : Rosy Red, Cl
+STD TEXT: Rosy_Red, Chlorine
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Chlorine
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4587, 4595), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4587, 4595))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:O, (4666, 4668), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4666, 4668))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+TEXT    : Rosy Red, Ca
+STD TEXT: Rosy_Red, Calcium
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Calcium
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4587, 4595), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4587, 4595))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:O, (4601, 4603), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4601, 4603))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2013_1639
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+TEXT    : Rosy Red, K
+STD TEXT: Rosy_Red, Potassium
+SIG: phx-reviewed+properties-v2_2013_1639:Rosy_Red,Potassium
+span1:doc_id: phx-reviewed+properties-v2_2013_1639
+text: Rosy Red, std text: Rosy_Red, ner_label:Target, involved in relation:O, (4587, 4595), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4587, 4595))
+
+span2:doc_id: phx-reviewed+properties-v2_2013_1639
+text: K, std text: Potassium, ner_label:Component, involved in relation:O, (4640, 4641), sentid: 37
+sentence:Total Solute Concentrations in Rosy Red ( mM ) Ca 0.16 ± 0.06 Mg 3.42 ± 1.20 Na 1.40 ± 0.41 K 0.33 ± 0.08 NH4 0.07 ± 0.03 Cl 0.39 ± 0.13 SO4 3.87 ± 1.16 ClO4 1.90 ± 0.62 the balance of CO2 in the WCL cell .
+start end: ((4640, 4641))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1163
+sentence:Drill tailings , soils and Mn - rich targets are not taken into account in the average composition of the Dillinger member .
+TEXT    : Dillinger, Mn
+STD TEXT: Dillinger, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1163:Dillinger,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:O, (7407, 7416), sentid: 53
+sentence:Drill tailings , soils and Mn - rich targets are not taken into account in the average composition of the Dillinger member .
+start end: ((7407, 7416))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1163
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:O, (7330, 7332), sentid: 53
+sentence:Drill tailings , soils and Mn - rich targets are not taken into account in the average composition of the Dillinger member .
+start end: ((7330, 7332))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2942
+sentence:On sol 620 the " Stephen_DP " experiment showed decreasing Cu signal during the first 40 or 50 shots , followed by continuous slow decrease over the remaining shots ( Fig. 4 ) .
+TEXT    : Stephen_DP, Cu
+STD TEXT: Stephen_Dp, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2942:Stephen_Dp,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Stephen_DP, std text: Stephen_Dp, ner_label:Target, involved in relation:O, (4646, 4656), sentid: 35
+sentence:On sol 620 the " Stephen_DP " experiment showed decreasing Cu signal during the first 40 or 50 shots , followed by continuous slow decrease over the remaining shots ( Fig. 4 ) .
+start end: ((4646, 4656))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Cu, std text: Copper, ner_label:Component, involved in relation:O, (4687, 4689), sentid: 35
+sentence:On sol 620 the " Stephen_DP " experiment showed decreasing Cu signal during the first 40 or 50 shots , followed by continuous slow decrease over the remaining shots ( Fig. 4 ) .
+start end: ((4687, 4689))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+TEXT    : Tsumeb, hematite
+STD TEXT: Tsumeb, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Tsumeb,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Tsumeb, std text: Tsumeb, ner_label:Target, involved in relation:O, (6595, 6601), sentid: 47
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+start end: ((6595, 6601))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:O, (6645, 6653), sentid: 47
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+start end: ((6645, 6653))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1495
+sentence:The latter are finely laminated mudstones ( type examples are Elk and Lamoose targets ) and may instead represent primary Si precipitation due to changes in lake chemistry during emplacement of the Murray fm .
+TEXT    : Elk, Si
+STD TEXT: Elk, Silicon
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1495:Elk,Silicon
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1495
+text: Elk, std text: Elk, ner_label:Target, involved in relation:O, (7948, 7951), sentid: 57
+sentence:The latter are finely laminated mudstones ( type examples are Elk and Lamoose targets ) and may instead represent primary Si precipitation due to changes in lake chemistry during emplacement of the Murray fm .
+start end: ((7948, 7951))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1495
+text: Si, std text: Silicon, ner_label:Component, involved in relation:O, (8007, 8009), sentid: 57
+sentence:The latter are finely laminated mudstones ( type examples are Elk and Lamoose targets ) and may instead represent primary Si precipitation due to changes in lake chemistry during emplacement of the Murray fm .
+start end: ((8007, 8009))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2011_2351
+sentence:Siderite and magnestite TCO2 at 12 mb occurred in the 325 to 363 °C range ( Fig. 1 ) which are the closest of all the carbonate species examined by the laboratory instrument to the Wicked Witch low - temperature ( 400 °C ) CO2 release .
+TEXT    : Wicked Witch, carbonate
+STD TEXT: Wicked_Witch, Carbonate
+SIG: phx-reviewed+properties-v2_2011_2351:Wicked_Witch,Carbonate
+span1:doc_id: phx-reviewed+properties-v2_2011_2351
+text: Wicked Witch, std text: Wicked_Witch, ner_label:Target, involved in relation:Contains, (4496, 4508), sentid: 29
+sentence:Siderite and magnestite TCO2 at 12 mb occurred in the 325 to 363 °C range ( Fig. 1 ) which are the closest of all the carbonate species examined by the laboratory instrument to the Wicked Witch low - temperature ( 400 °C ) CO2 release .
+start end: ((4496, 4508))
+
+span2:doc_id: phx-reviewed+properties-v2_2011_2351
+text: carbonate, std text: Carbonate, ner_label:Component, involved in relation:O, (4433, 4442), sentid: 29
+sentence:Siderite and magnestite TCO2 at 12 mb occurred in the 325 to 363 °C range ( Fig. 1 ) which are the closest of all the carbonate species examined by the laboratory instrument to the Wicked Witch low - temperature ( 400 °C ) CO2 release .
+start end: ((4433, 4442))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2018_2897
+sentence:The WW - HT CO2 - 1 peak was consistent with detection of organics or Fe - carbonate , while the CO2 - 2 relesae was attributed to Fe - Ca - carbonate [ 1 ] .
+TEXT    : WW, Fe
+STD TEXT: Wicked_Witch, Iron
+SIG: phx-reviewed+properties-v2_2018_2897:Wicked_Witch,Iron
+span1:doc_id: phx-reviewed+properties-v2_2018_2897
+text: WW, std text: Wicked_Witch, ner_label:Target, involved in relation:Contains, (4048, 4050), sentid: 30
+sentence:The WW - HT CO2 - 1 peak was consistent with detection of organics or Fe - carbonate , while the CO2 - 2 relesae was attributed to Fe - Ca - carbonate [ 1 ] .
+start end: ((4048, 4050))
+
+span2:doc_id: phx-reviewed+properties-v2_2018_2897
+text: Fe, std text: Iron, ner_label:Component, involved in relation:O, (4110, 4112), sentid: 30
+sentence:The WW - HT CO2 - 1 peak was consistent with detection of organics or Fe - carbonate , while the CO2 - 2 relesae was attributed to Fe - Ca - carbonate [ 1 ] .
+start end: ((4110, 4112))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2397
+sentence:The Missoula Mbr , above the veins along the contact , appears to be locally cemented with calcium sulfate .
+TEXT    : Missoula, calcium
+STD TEXT: Missoula, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2397:Missoula,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: Missoula, std text: Missoula, ner_label:Target, involved in relation:O, (4721, 4729), sentid: 37
+sentence:The Missoula Mbr , above the veins along the contact , appears to be locally cemented with calcium sulfate .
+start end: ((4721, 4729))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (4806, 4813), sentid: 37
+sentence:The Missoula Mbr , above the veins along the contact , appears to be locally cemented with calcium sulfate .
+start end: ((4806, 4813))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2397
+sentence:The Missoula Mbr , above the veins along the contact , appears to be locally cemented with calcium sulfate .
+TEXT    : Missoula, calcium sulfate
+STD TEXT: Missoula, Calcium Sulfate
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2397:Missoula,Calcium Sulfate
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: Missoula, std text: Missoula, ner_label:Target, involved in relation:O, (4721, 4729), sentid: 37
+sentence:The Missoula Mbr , above the veins along the contact , appears to be locally cemented with calcium sulfate .
+start end: ((4721, 4729))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: calcium sulfate, std text: Calcium Sulfate, ner_label:Component, involved in relation:O, (4806, 4821), sentid: 37
+sentence:The Missoula Mbr , above the veins along the contact , appears to be locally cemented with calcium sulfate .
+start end: ((4806, 4821))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2329
+sentence:Four vertical 1x10 mosaics aiming at the Hematite Ridge identified from CRISM data [ 10 ] at about 5 km from the rover .
+TEXT    : Hematite Ridge, Hematite
+STD TEXT: Hematite_Ridge, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2329:Hematite_Ridge,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2329
+text: Hematite Ridge, std text: Hematite_Ridge, ner_label:Target, involved in relation:O, (3431, 3445), sentid: 22
+sentence:Four vertical 1x10 mosaics aiming at the Hematite Ridge identified from CRISM data [ 10 ] at about 5 km from the rover .
+start end: ((3431, 3445))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2329
+text: Hematite, std text: Hematite, ner_label:Component, involved in relation:O, (3431, 3439), sentid: 22
+sentence:Four vertical 1x10 mosaics aiming at the Hematite Ridge identified from CRISM data [ 10 ] at about 5 km from the rover .
+start end: ((3431, 3439))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Evidence for a salt and Mn - rich layer at this location was found on the Stephen target , which is also a part of the Dillinger member .
+TEXT    : Dillinger, Mn
+STD TEXT: Dillinger, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Dillinger,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:O, (2358, 2367), sentid: 11
+sentence:Evidence for a salt and Mn - rich layer at this location was found on the Stephen target , which is also a part of the Dillinger member .
+start end: ((2358, 2367))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:Contains, (2266, 2268), sentid: 11
+sentence:Evidence for a salt and Mn - rich layer at this location was found on the Stephen target , which is also a part of the Dillinger member .
+start end: ((2266, 2268))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1803
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+TEXT    : Mermaid, maghemite
+STD TEXT: Mermaid, Maghemite
+SIG: mpf-reviewed+properties-v2_1998_1803:Mermaid,Maghemite
+span1:doc_id: mpf-reviewed+properties-v2_1998_1803
+text: Mermaid, std text: Mermaid, ner_label:Target, involved in relation:O, (6498, 6505), sentid: 42
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+start end: ((6498, 6505))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1803
+text: maghemite, std text: Maghemite, ner_label:Component, involved in relation:O, (6419, 6428), sentid: 42
+sentence:Similar ratios for other ferric oxides such as hematite and maghemite occur in the direction of the " Yogi " soils and the bright soil near " Mermaid " , but are far off the scale of Fig. 3 .
+start end: ((6419, 6428))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:Context : The Windjana target is a potassic , Ferich , cross-stratified sandstone located in the Dillinger member ( 50 cm thick ) and is of uncertain origin but is most likely aeolian [ 6 ] .
+TEXT    : Dillinger, potassic
+STD TEXT: Dillinger, Potassic
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Dillinger,Potassic
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:O, (1726, 1735), sentid: 6
+sentence:Context : The Windjana target is a potassic , Ferich , cross-stratified sandstone located in the Dillinger member ( 50 cm thick ) and is of uncertain origin but is most likely aeolian [ 6 ] .
+start end: ((1726, 1735))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: potassic, std text: Potassic, ner_label:Component, involved in relation:Contains, (1666, 1674), sentid: 6
+sentence:Context : The Windjana target is a potassic , Ferich , cross-stratified sandstone located in the Dillinger member ( 50 cm thick ) and is of uncertain origin but is most likely aeolian [ 6 ] .
+start end: ((1666, 1674))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:APXS concentrations showing elevated Cl and Br in the Windjana surface ( Windjana targets indicated by box ) .
+TEXT    : Windjana, Br
+STD TEXT: Windjana, Bromine
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Bromine
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (5676, 5684), sentid: 38
+sentence:APXS concentrations showing elevated Cl and Br in the Windjana surface ( Windjana targets indicated by box ) .
+start end: ((5676, 5684))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Br, std text: Bromine, ner_label:Component, involved in relation:Contains, (5648, 5650), sentid: 38
+sentence:APXS concentrations showing elevated Cl and Br in the Windjana surface ( Windjana targets indicated by box ) .
+start end: ((5648, 5650))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1155
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+TEXT    : Augusta, hematite
+STD TEXT: Augusta, Hematite
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1155:Augusta,Hematite
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: Augusta, std text: Augusta, ner_label:Target, involved in relation:O, (6586, 6593), sentid: 47
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+start end: ((6586, 6593))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1155
+text: hematite, std text: Hematite, ner_label:Component, involved in relation:O, (6645, 6653), sentid: 47
+sentence:The recent encounters with rocks exhibiting hematite - like spectra ( e.g. , Augusta , Tsumeb , Engo ) suggest that the transition to more hematite - bearing materials has occurred slightly northward of the mapped CRISM detections .
+start end: ((6645, 6653))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1495
+sentence:The latter are finely laminated mudstones ( type examples are Elk and Lamoose targets ) and may instead represent primary Si precipitation due to changes in lake chemistry during emplacement of the Murray fm .
+TEXT    : Lamoose, Si
+STD TEXT: Lamoose, Silicon
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1495:Lamoose,Silicon
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1495
+text: Lamoose, std text: Lamoose, ner_label:Target, involved in relation:O, (7956, 7963), sentid: 57
+sentence:The latter are finely laminated mudstones ( type examples are Elk and Lamoose targets ) and may instead represent primary Si precipitation due to changes in lake chemistry during emplacement of the Murray fm .
+start end: ((7956, 7963))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1495
+text: Si, std text: Silicon, ner_label:Component, involved in relation:O, (8007, 8009), sentid: 57
+sentence:The latter are finely laminated mudstones ( type examples are Elk and Lamoose targets ) and may instead represent primary Si precipitation due to changes in lake chemistry during emplacement of the Murray fm .
+start end: ((8007, 8009))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2397
+sentence:Also , acid sulfate alteration should increase TiO2 , and decrease P , but the Lumpry APXS analysis , closest to the contact is actually higher in both SiO2 and P than the other Stimson APXS analyses at this outcrop .
+TEXT    : Lumpry, P
+STD TEXT: Lumpry, Phosphorus
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2397:Lumpry,Phosphorus
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: Lumpry, std text: Lumpry, ner_label:Target, involved in relation:Contains, (6674, 6680), sentid: 48
+sentence:Also , acid sulfate alteration should increase TiO2 , and decrease P , but the Lumpry APXS analysis , closest to the contact is actually higher in both SiO2 and P than the other Stimson APXS analyses at this outcrop .
+start end: ((6674, 6680))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: P, std text: Phosphorus, ner_label:Component, involved in relation:O, (6663, 6664), sentid: 48
+sentence:Also , acid sulfate alteration should increase TiO2 , and decrease P , but the Lumpry APXS analysis , closest to the contact is actually higher in both SiO2 and P than the other Stimson APXS analyses at this outcrop .
+start end: ((6663, 6664))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:The first hypothesis is preferred here and was also the method of formation proposed by Lanza et al. [ 5 ] for the Mn - rich layer formed on Stephen .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Stephen,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:O, (5402, 5409), sentid: 35
+sentence:The first hypothesis is preferred here and was also the method of formation proposed by Lanza et al. [ 5 ] for the Mn - rich layer formed on Stephen .
+start end: ((5402, 5409))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:O, (5378, 5380), sentid: 35
+sentence:The first hypothesis is preferred here and was also the method of formation proposed by Lanza et al. [ 5 ] for the Mn - rich layer formed on Stephen .
+start end: ((5378, 5380))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2942
+sentence:# ) Liga 430 + / - 320 1050 ( # 5 ) ~ 600 Harms 146 + / 117 295 ( # 3 ) - CC_BT_604a 115 + / - 187 868 ( # 6 ) - Stephen_DP 111 + / - 24 131 ( # 1 ) 200 - 350 Stirling_2 142 + / - 161 563 ( # 9 ) < 50 Hayden_Peak 271 + / - 166 699 ( # 1 ) - Table 1 : Cu abundances [ ppm ] of Cu enriched targets in the Kimberley area .
+TEXT    : Liga, Cu
+STD TEXT: Liga, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2942:Liga,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Liga, std text: Liga, ner_label:Target, involved in relation:O, (3739, 3743), sentid: 28
+sentence:# ) Liga 430 + / - 320 1050 ( # 5 ) ~ 600 Harms 146 + / 117 295 ( # 3 ) - CC_BT_604a 115 + / - 187 868 ( # 6 ) - Stephen_DP 111 + / - 24 131 ( # 1 ) 200 - 350 Stirling_2 142 + / - 161 563 ( # 9 ) < 50 Hayden_Peak 271 + / - 166 699 ( # 1 ) - Table 1 : Cu abundances [ ppm ] of Cu enriched targets in the Kimberley area .
+start end: ((3739, 3743))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2942
+text: Cu, std text: Copper, ner_label:Component, involved in relation:O, (3953, 3955), sentid: 28
+sentence:# ) Liga 430 + / - 320 1050 ( # 5 ) ~ 600 Harms 146 + / 117 295 ( # 3 ) - CC_BT_604a 115 + / - 187 868 ( # 6 ) - Stephen_DP 111 + / - 24 131 ( # 1 ) 200 - 350 Stirling_2 142 + / - 161 563 ( # 9 ) < 50 Hayden_Peak 271 + / - 166 699 ( # 1 ) - Table 1 : Cu abundances [ ppm ] of Cu enriched targets in the Kimberley area .
+start end: ((3953, 3955))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_1998_1776
+sentence:The dark rocks such as Barnacle Bill are more silica - rich , while the Bright Rocks such as Yogi and Wedge are more sulfurrich and probably more weathered .
+TEXT    : Barnacle Bill, sulfurrich
+STD TEXT: Barnacle_Bill, Sulfurrich
+SIG: mpf-reviewed+properties-v2_1998_1776:Barnacle_Bill,Sulfurrich
+span1:doc_id: mpf-reviewed+properties-v2_1998_1776
+text: Barnacle Bill, std text: Barnacle_Bill, ner_label:Target, involved in relation:O, (2499, 2512), sentid: 19
+sentence:The dark rocks such as Barnacle Bill are more silica - rich , while the Bright Rocks such as Yogi and Wedge are more sulfurrich and probably more weathered .
+start end: ((2499, 2512))
+
+span2:doc_id: mpf-reviewed+properties-v2_1998_1776
+text: sulfurrich, std text: Sulfurrich, ner_label:Component, involved in relation:Contains, (2590, 2600), sentid: 19
+sentence:The dark rocks such as Barnacle Bill are more silica - rich , while the Bright Rocks such as Yogi and Wedge are more sulfurrich and probably more weathered .
+start end: ((2590, 2600))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1348
+sentence:The maximum Rb of 1386ppm was analyzed in Frome_Rock ( point 5 ) , a pebble in a soil containing 5.7 wt .
+TEXT    : Frome_Rock, Rb
+STD TEXT: Frome_Rock, Rubidium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1348:Frome_Rock,Rubidium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Frome_Rock, std text: Frome_Rock, ner_label:Target, involved in relation:O, (5959, 5969), sentid: 46
+sentence:The maximum Rb of 1386ppm was analyzed in Frome_Rock ( point 5 ) , a pebble in a soil containing 5.7 wt .
+start end: ((5959, 5969))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1348
+text: Rb, std text: Rubidium, ner_label:Component, involved in relation:O, (5929, 5931), sentid: 46
+sentence:The maximum Rb of 1386ppm was analyzed in Frome_Rock ( point 5 ) , a pebble in a soil containing 5.7 wt .
+start end: ((5929, 5931))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+TEXT    : Rapitan, sulfur
+STD TEXT: Rapitan, Sulfur
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Rapitan,Sulfur
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Rapitan, std text: Rapitan, ner_label:Target, involved in relation:O, (6509, 6516), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6509, 6516))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: sulfur, std text: Sulfur, ner_label:Component, involved in relation:O, (6564, 6570), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6564, 6570))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+TEXT    : Rapitan, copper
+STD TEXT: Rapitan, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Rapitan,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Rapitan, std text: Rapitan, ner_label:Target, involved in relation:O, (6509, 6516), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6509, 6516))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: copper, std text: Copper, ner_label:Component, involved in relation:O, (6537, 6543), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6537, 6543))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+TEXT    : Rapitan, calcium
+STD TEXT: Rapitan, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Rapitan,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Rapitan, std text: Rapitan, ner_label:Target, involved in relation:O, (6509, 6516), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6509, 6516))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (6478, 6485), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6478, 6485))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2017_2201
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+TEXT    : RR2, MgSO4
+STD TEXT: Rosy_Red, Mgso4
+SIG: phx-reviewed+properties-v2_2017_2201:Rosy_Red,Mgso4
+span1:doc_id: phx-reviewed+properties-v2_2017_2201
+text: RR2, std text: Rosy_Red, ner_label:Target, involved in relation:O, (8015, 8018), sentid: 62
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((8015, 8018))
+
+span2:doc_id: phx-reviewed+properties-v2_2017_2201
+text: MgSO4, std text: Mgso4, ner_label:Component, involved in relation:Contains, (8035, 8040), sentid: 62
+sentence:The subsurface Burning Coals ( BC ) sample has endotherm g2 similar to WW consistent with Ca rich carbonate and endotherm c4 similar to BB , RR1 and RR2 consistent with MgSO4 .
+start end: ((8035, 8040))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:This could also explain that high Cu targets are mostly Fe - rich ( e.g. , Greenwater point 4 with FeO ~ 28 wt .
+TEXT    : Greenwater, Cu
+STD TEXT: Greenwater, Copper
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Greenwater,Copper
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Greenwater, std text: Greenwater, ner_label:Target, involved in relation:Contains, (5426, 5436), sentid: 41
+sentence:This could also explain that high Cu targets are mostly Fe - rich ( e.g. , Greenwater point 4 with FeO ~ 28 wt .
+start end: ((5426, 5436))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Cu, std text: Copper, ner_label:Component, involved in relation:O, (5389, 5391), sentid: 41
+sentence:This could also explain that high Cu targets are mostly Fe - rich ( e.g. , Greenwater point 4 with FeO ~ 28 wt .
+start end: ((5389, 5391))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1269
+sentence:The Pathfinder rock trend , from the ' soil - free ' andesite end - member to the soil covered sample A8 ( Scooby Doo ) , intersects the soil trend at a composition of approximately 50 % basaltic shergottite and 40 % andesite .
+TEXT    : Scooby Doo, andesite
+STD TEXT: Scooby_Doo, Andesite
+SIG: mpf-reviewed+properties-v2_2000_1269:Scooby_Doo,Andesite
+span1:doc_id: mpf-reviewed+properties-v2_2000_1269
+text: Scooby Doo, std text: Scooby_Doo, ner_label:Target, involved in relation:O, (5092, 5102), sentid: 33
+sentence:The Pathfinder rock trend , from the ' soil - free ' andesite end - member to the soil covered sample A8 ( Scooby Doo ) , intersects the soil trend at a composition of approximately 50 % basaltic shergottite and 40 % andesite .
+start end: ((5092, 5102))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1269
+text: andesite, std text: Andesite, ner_label:Component, involved in relation:O, (5198, 5206), sentid: 33
+sentence:The Pathfinder rock trend , from the ' soil - free ' andesite end - member to the soil covered sample A8 ( Scooby Doo ) , intersects the soil trend at a composition of approximately 50 % basaltic shergottite and 40 % andesite .
+start end: ((5198, 5206))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+TEXT    : Fisch_Scale, calcium
+STD TEXT: Fisch_Scale, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Fisch_Scale,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Fisch_Scale, std text: Fisch_Scale, ner_label:Target, involved in relation:O, (6389, 6400), sentid: 45
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+start end: ((6389, 6400))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (6370, 6377), sentid: 45
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+start end: ((6370, 6377))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1127
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+TEXT    : Mermaid Dune, Na
+STD TEXT: Mermaid_Dune, Sodium
+SIG: mpf-reviewed+properties-v2_2000_1127:Mermaid_Dune,Sodium
+span1:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mermaid Dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:O, (2845, 2857), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2845, 2857))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Na, std text: Sodium, ner_label:Component, involved in relation:O, (2911, 2913), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2911, 2913))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1127
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+TEXT    : Mermaid Dune, Cl
+STD TEXT: Mermaid_Dune, Chlorine
+SIG: mpf-reviewed+properties-v2_2000_1127:Mermaid_Dune,Chlorine
+span1:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mermaid Dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:O, (2845, 2857), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2845, 2857))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:O, (2937, 2939), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2937, 2939))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1127
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+TEXT    : Mermaid Dune, Mg
+STD TEXT: Mermaid_Dune, Magnesium
+SIG: mpf-reviewed+properties-v2_2000_1127:Mermaid_Dune,Magnesium
+span1:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mermaid Dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:O, (2845, 2857), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2845, 2857))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:O, (2915, 2917), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2915, 2917))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1127
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+TEXT    : Mermaid Dune, S
+STD TEXT: Mermaid_Dune, Sulfur
+SIG: mpf-reviewed+properties-v2_2000_1127:Mermaid_Dune,Sulfur
+span1:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mermaid Dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:O, (2845, 2857), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2845, 2857))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: S, std text: Sulfur, ner_label:Component, involved in relation:O, (2930, 2931), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2930, 2931))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1127
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+TEXT    : Mermaid Dune, P
+STD TEXT: Mermaid_Dune, Phosphorus
+SIG: mpf-reviewed+properties-v2_2000_1127:Mermaid_Dune,Phosphorus
+span1:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mermaid Dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:O, (2845, 2857), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2845, 2857))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: P, std text: Phosphorus, ner_label:Component, involved in relation:O, (2927, 2928), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2927, 2928))
+
+
+
+DOCID   :mpf-reviewed+properties-v2_2000_1127
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+TEXT    : Mermaid Dune, Si
+STD TEXT: Mermaid_Dune, Silicon
+SIG: mpf-reviewed+properties-v2_2000_1127:Mermaid_Dune,Silicon
+span1:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Mermaid Dune, std text: Mermaid_Dune, ner_label:Target, involved in relation:O, (2845, 2857), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2845, 2857))
+
+span2:doc_id: mpf-reviewed+properties-v2_2000_1127
+text: Si, std text: Silicon, ner_label:Component, involved in relation:O, (2923, 2925), sentid: 17
+sentence:1 Fit of APXS x-ray spectrum ' Soil Mermaid Dune ' by using shape and position of element standards of Na , Mg , Al , Si , P , S , and Cl .
+start end: ((2923, 2925))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2397
+sentence:Following Stimson deposition , diagenesis of the lowermost Missoula Mbr involved emplacement of calcium sulfate and enrichment of SiO2 up to 75 wt % near the contact .
+TEXT    : Missoula, calcium sulfate
+STD TEXT: Missoula, Calcium Sulfate
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2397:Missoula,Calcium Sulfate
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: Missoula, std text: Missoula, ner_label:Target, involved in relation:O, (7694, 7702), sentid: 54
+sentence:Following Stimson deposition , diagenesis of the lowermost Missoula Mbr involved emplacement of calcium sulfate and enrichment of SiO2 up to 75 wt % near the contact .
+start end: ((7694, 7702))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: calcium sulfate, std text: Calcium Sulfate, ner_label:Component, involved in relation:O, (7731, 7746), sentid: 54
+sentence:Following Stimson deposition , diagenesis of the lowermost Missoula Mbr involved emplacement of calcium sulfate and enrichment of SiO2 up to 75 wt % near the contact .
+start end: ((7731, 7746))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2397
+sentence:Following Stimson deposition , diagenesis of the lowermost Missoula Mbr involved emplacement of calcium sulfate and enrichment of SiO2 up to 75 wt % near the contact .
+TEXT    : Missoula, calcium
+STD TEXT: Missoula, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2397:Missoula,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: Missoula, std text: Missoula, ner_label:Target, involved in relation:O, (7694, 7702), sentid: 54
+sentence:Following Stimson deposition , diagenesis of the lowermost Missoula Mbr involved emplacement of calcium sulfate and enrichment of SiO2 up to 75 wt % near the contact .
+start end: ((7694, 7702))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2397
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (7731, 7738), sentid: 54
+sentence:Following Stimson deposition , diagenesis of the lowermost Missoula Mbr involved emplacement of calcium sulfate and enrichment of SiO2 up to 75 wt % near the contact .
+start end: ((7731, 7738))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2011_2351
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+TEXT    : Wicked Witch, ankerite
+STD TEXT: Wicked_Witch, Ankerite
+SIG: phx-reviewed+properties-v2_2011_2351:Wicked_Witch,Ankerite
+span1:doc_id: phx-reviewed+properties-v2_2011_2351
+text: Wicked Witch, std text: Wicked_Witch, ner_label:Target, involved in relation:O, (5308, 5320), sentid: 33
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+start end: ((5308, 5320))
+
+span2:doc_id: phx-reviewed+properties-v2_2011_2351
+text: ankerite, std text: Ankerite, ner_label:Component, involved in relation:O, (5222, 5230), sentid: 33
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+start end: ((5222, 5230))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2011_2351
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+TEXT    : Wicked Witch, carbonates
+STD TEXT: Wicked_Witch, Carbonates
+SIG: phx-reviewed+properties-v2_2011_2351:Wicked_Witch,Carbonates
+span1:doc_id: phx-reviewed+properties-v2_2011_2351
+text: Wicked Witch, std text: Wicked_Witch, ner_label:Target, involved in relation:O, (5308, 5320), sentid: 33
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+start end: ((5308, 5320))
+
+span2:doc_id: phx-reviewed+properties-v2_2011_2351
+text: carbonates, std text: Carbonates, ner_label:Component, involved in relation:O, (5150, 5160), sentid: 33
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+start end: ((5150, 5160))
+
+
+
+DOCID   :phx-reviewed+properties-v2_2011_2351
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+TEXT    : Wicked Witch, siderite
+STD TEXT: Wicked_Witch, Siderite
+SIG: phx-reviewed+properties-v2_2011_2351:Wicked_Witch,Siderite
+span1:doc_id: phx-reviewed+properties-v2_2011_2351
+text: Wicked Witch, std text: Wicked_Witch, ner_label:Target, involved in relation:O, (5308, 5320), sentid: 33
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+start end: ((5308, 5320))
+
+span2:doc_id: phx-reviewed+properties-v2_2011_2351
+text: siderite, std text: Siderite, ner_label:Component, involved in relation:O, (5162, 5170), sentid: 33
+sentence:Results from these laboratory studies suggest Febearing carbonates , siderite , may explain the low temperature CO2 release while ankerite may explain the high temperature endotherm and associated CO2 release in the Wicked Witch soil .
+start end: ((5162, 5170))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_2145
+sentence:A Mn - rich layer on the Stephen target was detected by ChemCam [ 4,5 ] , which is located near the drill target Windjana ( Fig. 1 ) .
+TEXT    : Windjana, Mn
+STD TEXT: Windjana, Manganese
+SIG: lpsc16-C-raymond-sol1159-utf8_16_2145:Windjana,Manganese
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Windjana, std text: Windjana, ner_label:Target, involved in relation:O, (1390, 1398), sentid: 4
+sentence:A Mn - rich layer on the Stephen target was detected by ChemCam [ 4,5 ] , which is located near the drill target Windjana ( Fig. 1 ) .
+start end: ((1390, 1398))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_2145
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:Contains, (1284, 1286), sentid: 4
+sentence:A Mn - rich layer on the Stephen target was detected by ChemCam [ 4,5 ] , which is located near the drill target Windjana ( Fig. 1 ) .
+start end: ((1284, 1286))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1347
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+TEXT    : Laurens, calcium
+STD TEXT: Laurens, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1347:Laurens,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: Laurens, std text: Laurens, ner_label:Target, involved in relation:O, (6446, 6453), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6446, 6453))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1347
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (6478, 6485), sentid: 56
+sentence:Figure 4 : Spectra of Laurens point 5 in purple and a calcium sulfate for reference ( Rapitan point 5 ) in ( a ) the copper zone and ( b ) in the sulfur zone .
+start end: ((6478, 6485))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+TEXT    : Meeteetse, calcium
+STD TEXT: Meeteetse, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Meeteetse,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Meeteetse, std text: Meeteetse, ner_label:Target, involved in relation:O, (6293, 6302), sentid: 45
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+start end: ((6293, 6302))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (6346, 6353), sentid: 45
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+start end: ((6346, 6353))
+
+
+
+DOCID   :lpsc16-C-raymond-sol1159-utf8_16_1675
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+TEXT    : Cody, calcium
+STD TEXT: Cody, Calcium
+SIG: lpsc16-C-raymond-sol1159-utf8_16_1675:Cody,Calcium
+span1:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: Cody, std text: Cody, ner_label:Target, involved in relation:O, (6307, 6311), sentid: 45
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+start end: ((6307, 6311))
+
+span2:doc_id: lpsc16-C-raymond-sol1159-utf8_16_1675
+text: calcium, std text: Calcium, ner_label:Component, involved in relation:O, (6346, 6353), sentid: 45
+sentence:Rather , the Meeteetse and Cody have silica enrichments , very low calcium oxide , and less calcium oxide than Fisch_Scale , the target outside the diagenesis halo ( Fig 3 ) .
+start end: ((6346, 6353))
+
+
+

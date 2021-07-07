@@ -254,6 +254,29 @@ def percentage_of_wider_entities_have_smaller_entities(train_annfiles, train_tex
 
 
 
+
+def preceding_and_following(train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, relation_type, test_annfiles = [], test_textfiles = [], test_corenlpfiles = []):
+	# number of nested components in relation / number of nested components
+	
+	for ann_files, text_files, corenlp_files, name in zip([train_annfiles, dev_annfiles, test_annfiles], [train_textfiles, dev_textfiles, test_textfiles], [train_corenlpfiles, dev_corenlpfiles, test_corenlpfiles], ['TRAIN', 'DEV', 'TEST']):
+		
+		if len(ann_files) == 0: continue
+		count_preceding = 0
+		count_following = 0
+		for ann_file, text_file, corenlp_file in zip(ann_files, text_files, corenlp_files):
+
+
+			intrasent_gold_relations = [(e1, e2, relation) for e1, e2, relation in extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = corenlp_file) if e1['label'] == 'Target' and e2['label'] in ['Element', 'Mineral'] and relation == relation_type]
+
+			for e1, e2, relation in intrasent_gold_relations:
+				if e1['doc_start_char'] < e2['doc_end_char']:
+					count_preceding += 1
+				else:
+					count_following += 1
+		print(f"{count_preceding} relations have targets preceding component, and {count_following} relations have component preceding targets")
+
+
+
 def main():
 	train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, test_annfiles, test_textfiles, test_corenlpfiles = load_files()
 
@@ -275,6 +298,8 @@ def main():
 	# percentage_of_smaller_entities_being_in_relation(train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, relation_type)
 
 	# percentage_of_wider_entities_have_smaller_entities(train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, relation_type, test_annfiles = test_annfiles, test_textfiles = test_textfiles, test_corenlpfiles = test_corenlpfiles)
+
+	preceding_and_following(train_annfiles, train_textfiles, train_corenlpfiles, dev_annfiles, dev_textfiles, dev_corenlpfiles, relation_type)
 
 
 

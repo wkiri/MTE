@@ -1,24 +1,27 @@
 export CUDA_VISIBLE_DEVICES=1;
-declare -a venues=( "lpsc16-C-raymond-sol1159-utf8" "mpf-reviewed+properties-v2" "phx-reviewed+properties-v2"
+# declare -a venues=( "lpsc16-C-raymond-sol1159-utf8" "mpf-reviewed+properties-v2" "phx-reviewed+properties-v2"
+  )
+
+declare -a venues=( "mpf-reviewed+properties-v2" "phx-reviewed+properties-v2"
   )
 useComponent=1
 useSysNers=0
 # ========PURE=========
-make_data_for_pure=0
+make_data_for_pure=1
 doTrainPURE=0
-eval_pure_dev=1
-eval_pure_test=0
+eval_pure_dev=0
+eval_pure_test=1
 # =======CONTAINEE=====
-make_data_for_containee=0
+make_data_for_containee=1
 doTrainContainee=0
-eval_containee_dev=1
-eval_containee_test=0
+eval_containee_dev=0
+eval_containee_test=1
 pred_threshold=0.5
 # =======CONTAINER=====
-make_data_for_container=0
-doTrainContainer=1
+make_data_for_container=1
+doTrainContainer=0
 eval_container_dev=0
-eval_container_test=0
+eval_container_test=1
 pred_threshold=0.5
 # =======Combine=======
 combine_dev=1
@@ -52,7 +55,7 @@ then
     --num_train_epochs 30 \
     --context_window 0  \
     --max_seq_length 512  \
-    --output_dir ./temp2/rel/ \
+    --output_dir ./temp/rel/ \
     --eval_per_epoch 1 \
     --add_new_tokens
 fi 
@@ -225,5 +228,32 @@ python two_filters_and_pure.py -targets ../container/temp/dev/targets.pred -comp
 
 python two_filters_and_pure.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred -rels ../PURE/temp/rel/test/predictions.pkl  -gold_rels ../PURE/data/test/gold_relins.pkl
 
+# ==================== one side prediction =========================
+cd ../one-sided-experiments
 
+python one_side_prediction.py -targets ../container/temp/dev/targets.pred -components ../containee/temp/dev/spans.pred  -gold_rels ../PURE/data/dev/gold_relins.pkl -mode close_target_bt
+
+python one_side_prediction.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred  -gold_rels ../PURE/data/test/gold_relins.pkl -mode close_target_bt
+
+python one_side_prediction.py -targets ../container/temp/dev/targets.pred -components ../containee/temp/dev/spans.pred  -gold_rels ../PURE/data/dev/gold_relins.pkl -mode close_component_bt
+
+
+python one_side_prediction.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred  -gold_rels ../PURE/data/test/gold_relins.pkl -mode close_component_bt
+
+
+python one_side_prediction.py -targets ../container/temp/dev/targets.pred -components ../containee/temp/dev/spans.pred  -gold_rels ../PURE/data/dev/gold_relins.pkl -mode pair
+
+python one_side_prediction.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred  -gold_rels ../PURE/data/test/gold_relins.pkl -mode pair
+
+
+python one_side_prediction.py -targets ../container/temp/dev/targets.pred -components ../containee/temp/dev/spans.pred  -gold_rels ../PURE/data/dev/gold_relins.pkl -mode pair_close_target
+
+python one_side_prediction.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred  -gold_rels ../PURE/data/test/gold_relins.pkl -mode pair_close_target
+
+python one_side_prediction.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred  -gold_rels ../PURE/data/test/gold_relins.pkl -mode pair_close_component 
+
+python one_side_prediction.py -targets ../container/temp/dev/targets.pred -components ../containee/temp/dev/spans.pred  -gold_rels ../PURE/data/dev/gold_relins.pkl -mode pair_close_target_and_component -analyze 1 
+
+
+python one_side_prediction.py -targets ../container/temp/test/targets.pred -components ../containee/temp/test/spans.pred  -gold_rels ../PURE/data/test/gold_relins.pkl -mode pair_close_target_and_component -analyze 1 
 

@@ -1,0 +1,391 @@
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:The K - rich materials were mainly found in bedrocks and float rocks between Shaler and Darwin areas ( around Sols 300 - 400 , e.g. Angmaat , Sol 337 , with up to 4.8 wt .
+TEXT    : Angmaat, K
+STD TEXT: Angmaat, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Angmaat,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Angmaat, std text: Angmaat, ner_label:Target, involved in relation:Contains, (4608, 4615), sentid: 31
+sentence:The K - rich materials were mainly found in bedrocks and float rocks between Shaler and Darwin areas ( around Sols 300 - 400 , e.g. Angmaat , Sol 337 , with up to 4.8 wt .
+start end: ((4608, 4615))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: K, std text: Potassium, ner_label:Component, involved in relation:Contains, (4486, 4487), sentid: 31
+sentence:The K - rich materials were mainly found in bedrocks and float rocks between Shaler and Darwin areas ( around Sols 300 - 400 , e.g. Angmaat , Sol 337 , with up to 4.8 wt .
+start end: ((4486, 4487))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+sentence:Another example is given by 4 of the 5 points measured on Chakonipau ( a flat - lying , light - toned rock , just exposed at the surface in a pebbly soil , Sol 338 ) that are rich in Si ( 75 wt .
+TEXT    : Chakonipau, Si
+STD TEXT: Chakonipau, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2789:Chakonipau,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Chakonipau, std text: Chakonipau, ner_label:Target, involved in relation:Contains, (5067, 5077), sentid: 36
+sentence:Another example is given by 4 of the 5 points measured on Chakonipau ( a flat - lying , light - toned rock , just exposed at the surface in a pebbly soil , Sol 338 ) that are rich in Si ( 75 wt .
+start end: ((5067, 5077))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2789
+text: Si, std text: Silicon, ner_label:Component, involved in relation:Contains, (5183, 5185), sentid: 36
+sentence:Another example is given by 4 of the 5 points measured on Chakonipau ( a flat - lying , light - toned rock , just exposed at the surface in a pebbly soil , Sol 338 ) that are rich in Si ( 75 wt .
+start end: ((5183, 5185))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Dillinger, illite
+STD TEXT: Dillinger, Illite
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Illite
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:Contains, (5245, 5254), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5245, 5254))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: illite, std text: Illite, ner_label:Component, involved in relation:Contains, (5214, 5220), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5214, 5220))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Dillinger, K
+STD TEXT: Dillinger, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Dillinger,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Dillinger, std text: Dillinger, ner_label:Target, involved in relation:Contains, (5446, 5455), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5446, 5455))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: K, std text: Potassium, ner_label:Component, involved in relation:Contains, (5331, 5332), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5331, 5332))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2748
+sentence:A wide - angle Mastcam - 34 image of the Windjana drill site showing the high - Mn target Stephen is presented in Fig. 4 ( left ) .
+TEXT    : Stephen, Mn
+STD TEXT: Stephen, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2748:Stephen,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2748
+text: Stephen, std text: Stephen, ner_label:Target, involved in relation:Contains, (7271, 7278), sentid: 43
+sentence:A wide - angle Mastcam - 34 image of the Windjana drill site showing the high - Mn target Stephen is presented in Fig. 4 ( left ) .
+start end: ((7271, 7278))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2748
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:Contains, (7261, 7263), sentid: 43
+sentence:A wide - angle Mastcam - 34 image of the Windjana drill site showing the high - Mn target Stephen is presented in Fig. 4 ( left ) .
+start end: ((7261, 7263))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2940
+sentence:Additionally , the first sampling location of Bell Island appears to be a thin , sulfate - rich vein [ 6 ] .
+TEXT    : Bell Island, sulfate
+STD TEXT: Bell_Island, Sulfate
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2940:Bell_Island,Sulfate
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2940
+text: Bell Island, std text: Bell_Island, ner_label:Target, involved in relation:Contains, (6266, 6277), sentid: 48
+sentence:Additionally , the first sampling location of Bell Island appears to be a thin , sulfate - rich vein [ 6 ] .
+start end: ((6266, 6277))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2940
+text: sulfate, std text: Sulfate, ner_label:Component, involved in relation:Contains, (6300, 6307), sentid: 48
+sentence:Additionally , the first sampling location of Bell Island appears to be a thin , sulfate - rich vein [ 6 ] .
+start end: ((6300, 6307))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Those points correspond to some k - rich zoning of plagioclase phenocrysts observed on these porphyritic targets , such as Harrison [ 12 ] .
+TEXT    : Harrison, k
+STD TEXT: Harrison, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Harrison,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Harrison, std text: Harrison, ner_label:Target, involved in relation:Contains, (6523, 6531), sentid: 43
+sentence:Those points correspond to some k - rich zoning of plagioclase phenocrysts observed on these porphyritic targets , such as Harrison [ 12 ] .
+start end: ((6523, 6531))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: k, std text: Potassium, ner_label:Component, involved in relation:Contains, (6435, 6436), sentid: 43
+sentence:Those points correspond to some k - rich zoning of plagioclase phenocrysts observed on these porphyritic targets , such as Harrison [ 12 ] .
+start end: ((6435, 6436))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+sentence:Those points correspond to some k - rich zoning of plagioclase phenocrysts observed on these porphyritic targets , such as Harrison [ 12 ] .
+TEXT    : Harrison, plagioclase
+STD TEXT: Harrison, Plagioclase
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2452:Harrison,Plagioclase
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: Harrison, std text: Harrison, ner_label:Target, involved in relation:Contains, (6523, 6531), sentid: 43
+sentence:Those points correspond to some k - rich zoning of plagioclase phenocrysts observed on these porphyritic targets , such as Harrison [ 12 ] .
+start end: ((6523, 6531))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2452
+text: plagioclase, std text: Plagioclase, ner_label:Component, involved in relation:Contains, (6452, 6463), sentid: 43
+sentence:Those points correspond to some k - rich zoning of plagioclase phenocrysts observed on these porphyritic targets , such as Harrison [ 12 ] .
+start end: ((6452, 6463))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+TEXT    : Pinnacle, Mn
+STD TEXT: Pinnacle, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2132:Pinnacle,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Pinnacle, std text: Pinnacle, ner_label:Target, involved in relation:Contains, (4480, 4488), sentid: 26
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4480, 4488))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:Contains, (4457, 4459), sentid: 26
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4457, 4459))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Mg
+STD TEXT: Whale_Rock, Magnesium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Magnesium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Mg, std text: Magnesium, ner_label:Component, involved in relation:Contains, (6088, 6090), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6088, 6090))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Si
+STD TEXT: Whale_Rock, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:Contains, (6109, 6111), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6109, 6111))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, K
+STD TEXT: Whale_Rock, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: K, std text: Potassium, ner_label:Component, involved in relation:Contains, (6121, 6122), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6121, 6122))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Al
+STD TEXT: Whale_Rock, Aluminum
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Aluminum
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Al, std text: Aluminum, ner_label:Component, involved in relation:Contains, (6113, 6115), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6113, 6115))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Ca
+STD TEXT: Whale_Rock, Calcium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Calcium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Ca, std text: Calcium, ner_label:Component, involved in relation:Contains, (6080, 6082), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6080, 6082))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Fe
+STD TEXT: Whale_Rock, Iron
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Iron
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Fe, std text: Iron, ner_label:Component, involved in relation:Contains, (6092, 6094), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6092, 6094))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+TEXT    : Whale Rock, Na
+STD TEXT: Whale_Rock, Sodium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Whale_Rock,Sodium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Whale Rock, std text: Whale_Rock, ner_label:Target, involved in relation:Contains, (6049, 6059), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6049, 6059))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Na, std text: Sodium, ner_label:Component, involved in relation:Contains, (6084, 6086), sentid: 39
+sentence:The uppermost outcrop ( Whale Rock ) exhibits increased Ca , Na , Mg , Fe and decreased Si , Al , and K compared to underlying outcrops , consistent with an increased salt ( sulfate or chloride ? )
+start end: ((6084, 6086))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Square_Top, K
+STD TEXT: Square_Top, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Square_Top,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Square_Top, std text: Square_Top, ner_label:Target, involved in relation:Contains, (5405, 5415), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5405, 5415))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: K, std text: Potassium, ner_label:Component, involved in relation:Contains, (5331, 5332), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5331, 5332))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+TEXT    : Stuart Islands, Mn
+STD TEXT: Stuart_Islands, Manganese
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2132:Stuart_Islands,Manganese
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Stuart Islands, std text: Stuart_Islands, ner_label:Target, involved in relation:Contains, (4493, 4507), sentid: 26
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4493, 4507))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2132
+text: Mn, std text: Manganese, ner_label:Component, involved in relation:Contains, (4457, 4459), sentid: 26
+sentence:Comparisons of the spectra of the synthetic samples to Pancam multispectral data ( 13 bands from ~ 0.4 to 1.0 micrometers ) collected by Opportunity of Mn oxide bearing rocks Pinnacle and Stuart Islands demonstrate that the dark coatings on these rocks are a mixed high valence Mn oxides .
+start end: ((4457, 4459))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+TEXT    : Liga, K
+STD TEXT: Liga, Potassium
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_1438:Liga,Potassium
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: Liga, std text: Liga, ner_label:Target, involved in relation:Contains, (5396, 5400), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5396, 5400))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_1438
+text: K, std text: Potassium, ner_label:Component, involved in relation:Contains, (5331, 5332), sentid: 31
+sentence:The K - feldspar and illite clays identified in the Dillinger member by CheMin [ 10 ] are consistent with this enrichment in K. Overall the K abundance gradually increases between the lower Striated unit ( Liga and Square_Top members ) and the Rugged unit ( Dillinger and Mt. Remarkable members ) in the Kimberley formation .
+start end: ((5331, 5332))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, Br
+STD TEXT: Book_Cliffs, Bromine
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Bromine
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:Contains, (6819, 6830), sentid: 45
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Br, std text: Bromine, ner_label:Component, involved in relation:Contains, (6887, 6889), sentid: 45
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6887, 6889))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+TEXT    : Book Cliffs, Cl
+STD TEXT: Book_Cliffs, Chlorine
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Book_Cliffs,Chlorine
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Book Cliffs, std text: Book_Cliffs, ner_label:Target, involved in relation:Contains, (6819, 6830), sentid: 45
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6819, 6830))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Cl, std text: Chlorine, ner_label:Component, involved in relation:Contains, (6880, 6882), sentid: 45
+sentence:Book Cliffs bedrock targets exhibit a pronounced increase in Cl and Br ( Fig. 2 ) and yield high CIA values , but there is no corresponding increase in S. Indeed , bedrock targets exhibit poor correlations between Mg or Ca and S , whereas Mg and Cl are positively correlated .
+start end: ((6880, 6882))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:As a whole , these data indicate that the Confidence Hills drill sample is enriched in Fe and depleted in Si compared to most of the strata in this location .
+TEXT    : Confidence Hills, Si
+STD TEXT: Confidence_Hills, Silicon
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Silicon
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:Contains, (6374, 6390), sentid: 41
+sentence:As a whole , these data indicate that the Confidence Hills drill sample is enriched in Fe and depleted in Si compared to most of the strata in this location .
+start end: ((6374, 6390))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Si, std text: Silicon, ner_label:Component, involved in relation:Contains, (6438, 6440), sentid: 41
+sentence:As a whole , these data indicate that the Confidence Hills drill sample is enriched in Fe and depleted in Si compared to most of the strata in this location .
+start end: ((6438, 6440))
+
+
+
+DOCID   :lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+sentence:As a whole , these data indicate that the Confidence Hills drill sample is enriched in Fe and depleted in Si compared to most of the strata in this location .
+TEXT    : Confidence Hills, Fe
+STD TEXT: Confidence_Hills, Iron
+SIG: lpsc15-C-raymond-sol1159-v3-utf8_15_2339:Confidence_Hills,Iron
+span1:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Confidence Hills, std text: Confidence_Hills, ner_label:Target, involved in relation:Contains, (6374, 6390), sentid: 41
+sentence:As a whole , these data indicate that the Confidence Hills drill sample is enriched in Fe and depleted in Si compared to most of the strata in this location .
+start end: ((6374, 6390))
+
+span2:doc_id: lpsc15-C-raymond-sol1159-v3-utf8_15_2339
+text: Fe, std text: Iron, ner_label:Component, involved in relation:Contains, (6419, 6421), sentid: 41
+sentence:As a whole , these data indicate that the Confidence Hills drill sample is enriched in Fe and depleted in Si compared to most of the strata in this location .
+start end: ((6419, 6421))
+
+
+

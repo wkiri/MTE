@@ -1,7 +1,7 @@
 # run on mila 
 # # # ========== preprocessing, need to run only once ========
 mode="Merged" # choices: Element, Mineral, and Merged
-addmpfphx=0
+addmpfphx=1
 usempfphxonly=1
 python2 generate_jsre_binary_relation_examples.py --mode $mode --add_mpfphx $addmpfphx --use_mpfphx_only $usempfphxonly # generate jsre examples to trian and predict. modify config.py to make desired experiments. This doesn't include dataset from mpf and phx 
 

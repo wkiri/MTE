@@ -39,9 +39,8 @@ if [ "$t" = "merged" ]
 then
 	find lpsc15-utf8/*-element.examples -maxdepth 1 -type f | sort -z | head -42|xargs cp -t $traindir
 	find lpsc15-utf8/*-mineral.examples -maxdepth 1 -type f | sort -z | head -42|xargs cp -t $traindir
-
-	find lpsc15-utf8/*-element.examples -maxdepth 1 -type f | sort -z | tail -21|xargs  cp -t $valdir
-	find lpsc15-utf8/*-mineral.examples -maxdepth 1 -type f | sort -z | tail -21|xargs  cp -t $valdir
+	find lpsc15-utf8/*-element.examples -maxdepth 1 -type f | sort -z | tail -20|xargs cp -t $valdir
+	find lpsc15-utf8/*-mineral.examples -maxdepth 1 -type f | sort -z | tail -20|xargs  cp -t $valdir
 
 	cp lpsc16-utf8/*-element.examples $testdir
 	cp lpsc16-utf8/*-mineral.examples $testdir

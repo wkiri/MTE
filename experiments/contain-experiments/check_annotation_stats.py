@@ -2,10 +2,10 @@
 # This code checks the statistics through ann files
 
 # command line:
-# 	python2 check_annotation_stats.py <dir-that-contains-lpsc15-ann-files> <dir-that-contains-lpsc16-ann-files>
+#   python2 check_annotation_stats.py <dir-that-contains-lpsc15-ann-files> <dir-that-contains-lpsc16-ann-files>
 
 # Sample command line: 
-# 	python2 check_annotation_stats.py /home/yzhuang/mte/data/corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8 /home/yzhuang/mte/data/corpus-LPSC/lpsc16-C-raymond-sol1159-utf8
+#   python2 check_annotation_stats.py /home/yzhuang/mte/data/corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8 /home/yzhuang/mte/data/corpus-LPSC/lpsc16-C-raymond-sol1159-utf8
 
 
 import sys, os, re, string, glob
@@ -54,54 +54,63 @@ class BratAnnotation:
 
     # added function to check the stats by counting the number of targets, elements, minerals and contains relations.
     def count(self):
-    	self.num_target = 0
-    	self.num_element = 0
-    	self.num_mineral = 0
-    	self.num_contains = 0
-    	if self.type == 'anchor':
-    		if self.label == 'Target':
-    			self.num_target = 1
-    		elif self.label == 'Element':
-    			self.num_element = 1
-    		elif self.label == 'Mineral':
-    			self.num_mineral = 1
-    	elif self.type == 'event' and self.label == 'Contains':
-    		for t in self.targets:
-    			for v in self.cont:
-    				self.num_contains += 1
+        self.num_target = 0
+        self.num_element = 0
+        self.num_mineral = 0
+        self.num_contains = 0
+        if self.type == 'anchor':
+            if self.label == 'Target':
+                self.num_target = 1
+            elif self.label == 'Element':
+                self.num_element = 1
+            elif self.label == 'Mineral':
+                self.num_mineral = 1
+        if self.type == 'relation':
+            if self.label == 'Target':
+                self.num_target = 1
+            elif self.label == 'Element':
+                self.num_element = 1
+            elif self.label == 'Mineral':
+                self.num_mineral = 1
+        elif self.type == 'event' and self.label == 'Contains':
+            for t in self.targets:
+                for v in self.cont:
+                    self.num_contains += 1
 
 
 def count(dir, dataset_name):
-	num_target = 0
-	num_element = 0 
-	num_mineral = 0
-	num_contains = 0
-	num_files = 0
-	for ann_file in glob.glob(join(dir, "*.ann")):
-		num_files += 1
-		with open(ann_file,"r") as f:
-			lines = f.read().strip().split("\n")
-		for line in lines:
-			line = line.strip()
-			if line == "": continue
-			brat = BratAnnotation(line, "", "")
-			brat.count()
-			num_target += brat.num_target
-			num_element += brat.num_element
-			num_mineral += brat.num_mineral
-			num_contains += brat.num_contains
-	print("In %s, there are %d files, %d targets, %d elements, %d minerals, %d contains relations" % (dataset_name, num_files, num_target, num_element, num_mineral, num_contains))
+    num_target = 0
+    num_element = 0 
+    num_mineral = 0
+    num_contains = 0
+    num_files = 0
+    for ann_file in glob.glob(join(dir, "*.ann")):
+        num_files += 1
+        with open(ann_file,"r") as f:
+            lines = f.read().strip().split("\n")
+        for line in lines:
+            line = line.strip()
+            if line == "": continue
+            brat = BratAnnotation(line, "", "")
+            brat.count()
+            num_target += brat.num_target
+            num_element += brat.num_element
+            num_mineral += brat.num_mineral
+            num_contains += brat.num_contains
+    print("In %s, there are %d files, %d targets, %d elements, %d minerals, %d contains relations" % (dataset_name, num_files, num_target, num_element, num_mineral, num_contains))
 
 
 def main(args):
-	lpsc15_dir, lpsc16_dir = args
+    lpsc15_dir, lpsc16_dir, phx_dir, mpf_dir = args
 
-	count(lpsc15_dir, "LPSC15")
-	count(lpsc16_dir, "LPSC16")
+    count(lpsc15_dir, "LPSC15")
+    count(lpsc16_dir, "LPSC16")
+    count(phx_dir, "PHX")
+    count(mpf_dir, "MPF")
 
 
 if __name__ == "__main__":
-	args = (sys.argv[1], sys.argv[2])
-	
+    args = (sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    main(args)
 
 

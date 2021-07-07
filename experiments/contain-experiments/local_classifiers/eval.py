@@ -18,45 +18,95 @@ def analyze_predictions(pred_instances, gold_instances, label_to_eval, outputdir
     if not os.path.exists(outputdir):
         os.makedirs(outputdir)
 
-    # === false cases 
-    gold_signatures = set([ins.signature for ins in gold_instances if ins.label == label_to_eval])
-    gold_ids = set([ins.re_id for ins in gold_instances if ins.label == label_to_eval])
-    print(f"Saving analysis to {outputdir}, false_positive.txt and false_negatives.txt")
+
     false_positives = open(os.path.join(outputdir, "false_positives.txt"), "w")
-    # false_negatives = open(os.path.join(outputdir, "false_negatives.txt"), "w")
-    # true_positives = open(os.path.join(outputdir, "true_positives.txt"), "w")
+    false_negatives = open(os.path.join(outputdir, "false_negatives.txt"), "w")
+    true_positives = open(os.path.join(outputdir, "true_positives.txt"), "w")
     true_negatives = open(os.path.join(outputdir, "true_negatives.txt"), "w")
 
-    count_fp = 0 
-    # count_fn = 0 
-    # count_tp = 0 
-    count_tn = 0 
+
+    gold_ids = [ins.re_id for ins in gold_instances if ins.label == label_to_eval]
+
+    print(f"{len(pred_instances)} prediction instances")
+
+
+
+
+    # contains_multiple_target = 0
+    # sentid2target = {}
+    # for ins in pred_instances:
+    #     k = f"{ins.span1.docname} {ins.span1.venue} {ins.span1.year} {ins.span1.sentid}" 
+    #     if k not in sentid2target:
+    #         sentid2target[k] = set()
+    #     sentid2target[k].add(ins.span1.std_text)
+
     for ins in pred_instances:
-        pred_score = ins.pred_score
-        pred_label = ins.pred_relation_label
-        gold_label = 'Contains' if ins.signature in gold_signatures else 'O'
+        if ins.pred_relation_label == 'Contains' and ins.re_id not in gold_ids:
 
-        if ins.pred_relation_label == label_to_eval and ins.signature not in gold_signatures:
-            false_positives.write(f"{count_fp}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
-            count_fp += 1
-
-        # # if ins.pred_relation_label == 'O' and ins.re_id in gold_signatures:
-        # #     false_negatives.write(f"{count_fn}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
-        #     count_fn += 1
-        
-        # if ins.pred_relation_label == 'Contains' and ins.signature in gold_signatures:
-        #     true_positives.write(f"{count_tp}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
-        #     count_tp += 1
-        
-        if ins.pred_relation_label == 'O' and ins.signature not in gold_signatures:
-            true_negatives.write(f"{count_tn}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
-            count_tn += 1
+            # k = f"{ins.span1.docname} {ins.span1.venue} {ins.span1.year} {ins.span1.sentid}" 
+            # if len(sentid2target[k]) > 1:
+            #     false_positives.write(str(ins) + "\n\n")
 
 
+            false_positives.write(str(ins) + "\n\n")
+        if ins.pred_relation_label != 'Contains' and ins.re_id in gold_ids:
+            false_negatives.write(str(ins) + "\n\n")
+        if ins.pred_relation_label == 'Contains' and ins.re_id in gold_ids:
+            true_positives.write(str(ins) + "\n\n")
+        if ins.pred_relation_label != 'Contains' and ins.re_id not in gold_ids:
+            true_negatives.write(str(ins) + "\n\n")
+    
+    false_negatives.close()
     false_positives.close()
-    # false_negatives.close()
-    # true_positives.close()
+    true_positives.close()
     true_negatives.close()
+
+
+
+
+    # if not os.path.exists(outputdir):
+    #     os.makedirs(outputdir)
+
+
+    # # === false cases 
+    # gold_signatures = set([ins.signature for ins in gold_instances if ins.label == label_to_eval])
+    # gold_ids = set([ins.re_id for ins in gold_instances if ins.label == label_to_eval])
+    # print(f"Saving analysis to {outputdir}, false_positive.txt and false_negatives.txt")
+    # false_positives = open(os.path.join(outputdir, "false_positives.txt"), "w")
+    # # false_negatives = open(os.path.join(outputdir, "false_negatives.txt"), "w")
+    # # true_positives = open(os.path.join(outputdir, "true_positives.txt"), "w")
+    # true_negatives = open(os.path.join(outputdir, "true_negatives.txt"), "w")
+
+    # count_fp = 0 
+    # # count_fn = 0 
+    # # count_tp = 0 
+    # count_tn = 0 
+    # for ins in pred_instances:
+    #     pred_score = ins.pred_score
+    #     pred_label = ins.pred_relation_label
+    #     gold_label = 'Contains' if ins.signature in gold_signatures else 'O'
+
+    #     if ins.pred_relation_label == label_to_eval and ins.signature not in gold_signatures:
+    #         false_positives.write(f"{count_fp}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
+    #         count_fp += 1
+
+    #     # # if ins.pred_relation_label == 'O' and ins.re_id in gold_signatures:
+    #     # #     false_negatives.write(f"{count_fn}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
+    #     #     count_fn += 1
+        
+    #     # if ins.pred_relation_label == 'Contains' and ins.signature in gold_signatures:
+    #     #     true_positives.write(f"{count_tp}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
+    #     #     count_tp += 1
+        
+    #     if ins.pred_relation_label == 'O' and ins.signature not in gold_signatures:
+    #         true_negatives.write(f"{count_tn}:\n{ins}\nSCORE = {pred_score}\nPRED label: {pred_label}, GOLD label: {gold_label}\n\n")
+    #         count_tn += 1
+
+
+    # false_positives.close()
+    # # false_negatives.close()
+    # # true_positives.close()
+    # true_negatives.close()
 
 
 
@@ -109,6 +159,7 @@ def instance_level_eval(pred_instances, gold_instances, label_to_eval, analyze =
 
     if analyze:
         assert analyze_dir is not None 
+        print(f"saving analysis to {analyze_dir}")
         analyze_predictions(pred_instances, gold_instances, label_to_eval, analyze_dir)
 
     return precision, recall, f1

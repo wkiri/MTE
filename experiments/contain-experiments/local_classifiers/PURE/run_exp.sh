@@ -1,5 +1,5 @@
 useComponent=1
-useSysNers=1
+useSysNers=0
 make_data_for_pure=0
 doTrainPURE=0
 eval_pure_dev=0
