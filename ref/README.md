@@ -5,8 +5,12 @@
 - PHX/: Mars Phoenix lander
 
 # Final gazettes for NER models (Target + Element + Mineral)
-- MPF_targets_minerals-2017-05_elements.gaz.txt
-- PHX_targets_minerals-2017-05_elements.gaz.txt
+- MPF_targets_minerals-2017-05_elements.gaz.txt - created by:
+  cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt MPF/MPF-targets.gaz.txt > MPF_targets_minerals-2017-05_elements.gaz.txt
+- PHX_targets_minerals-2017-05_elements.gaz.txt - created by:
+  cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt PHX/PHX-targets.gaz.txt > PHX_targets_minerals-2017-05_elements.gaz.txt
+- MERA_targets_minerals-2017-05_elements.gaz.txt - created by:
+  cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt MER/MERA-targets-final.gaz.txt > MERA_targets_minerals-2017-05_elements.gaz.txt
 
 # Elements
 Best list to use is marked with **.
