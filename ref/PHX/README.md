@@ -1,6 +1,8 @@
 # Files
 - PHX-targets.txt: unique superset of PHX target lists from individual sources
   cat PHX-targets-*.txt | sort | uniq  > PHX-targets.txt
+- PHX-targets.gaz.txt: CoreNLP gazette format - created with
+  (cat PHX-targets.txt | while read line ; do echo "Target $line" ; done ) > PHX-targets.gaz.txt
 - PHX-property.txt: unique superset of PHX property lists from individual sources
 
 ## Targets
