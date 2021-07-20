@@ -13,6 +13,7 @@
 
 import sys, os, io
 import json
+import urllib
 from pycorenlp import StanfordCoreNLP
 
 def pretty_print(json_obj):
@@ -51,6 +52,8 @@ for fn in dirlist:
     text = inf.read()
     inf.close()
 
+    # Quote (with percent-encoding) reserved characters in URL for CoreNLP
+    text = urllib.quote(text)
     doc = corenlp.annotate(text, properties=props)
     
     with io.open(os.path.join(outdirname, outfname), 'w', encoding='utf8') as outf:

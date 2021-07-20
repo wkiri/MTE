@@ -14,6 +14,7 @@ import sys, os
 reload(sys)
 sys.setdefaultencoding('UTF8')
 import json
+import urllib
 from pycorenlp import StanfordCoreNLP
 from brat_annotation import BratAnnotation
 import itertools
@@ -112,6 +113,8 @@ for fn in dirlist:
         print
 
     # Process text with CoreNLP to split by sentences
+    # Quote (with percent-encoding) reserved characters in URL for CoreNLP
+    text = urllib.quote(text)
     doc = corenlp.annotate(text, properties=props)
     #pretty_print(doc)
 
