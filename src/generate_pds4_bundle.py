@@ -282,9 +282,10 @@ def create_xml_labels(collection_dir, bundle_template_dir, mission_name):
 
 # Generate inventory csv and xml files.
 # This function must be executed after create_xml_labels function.
-def create_inventory_files(collection_dir, bundle_template_dir, mission_name):
+def create_inventory_files(collection_dir, bundle_template_dir,
+                           collection_name):
     # Create inventory csv file
-    inventory_csv_name = 'collection_%s_inventory.csv' % mission_name
+    inventory_csv_name = 'collection_%s_inventory.csv' % collection_name
     inventory_csv_path = os.path.join(collection_dir, inventory_csv_name)
     inventory_csv_file = open(inventory_csv_path, 'w+')
 
@@ -299,22 +300,22 @@ def create_inventory_files(collection_dir, bundle_template_dir, mission_name):
 
     inventory_csv_file.close()
     print '[INFO] Create inventory csv file for %s mission: %s' % \
-          (mission_name, os.path.abspath(inventory_csv_path))
+          (collection_name, os.path.abspath(inventory_csv_path))
 
     # Create inventory xml file
     template_file = os.path.join(bundle_template_dir,
-                                 'collection_%s_inventory.txml' % mission_name)
+                                 'collection_%s_inventory.txml' % collection_name)
     template = Template(file=template_file, searchList=[{
         'inventory_records': xml_file_counter,
         'today': get_current_date()
     }])
 
-    inventory_xml_name = 'collection_%s_inventory.xml' % mission_name
+    inventory_xml_name = 'collection_%s_inventory.xml' % collection_name
     inventory_xml_path = os.path.join(collection_dir, inventory_xml_name)
     with open(inventory_xml_path, 'w+') as f:
         f.write(str(template))
     print '[INFO] Create inventory xml file for %s mission: %s' % \
-          (mission_name, os.path.abspath(inventory_xml_path))
+          (collection_name, os.path.abspath(inventory_xml_path))
 
 
 def create_collection(collection_dir, db_file, mission_name,
@@ -348,28 +349,8 @@ def create_document_collection(doc_template_dir, doc_collection_dir):
     print '[INFO] Created XML label file %s for readme.txt' % \
           os.path.abspath(readme_xml_file)
 
-    # Copy inventory file to the document collection
-    src_inventory = os.path.join(doc_template_dir,
-                                 'collection_document_inventory.csv')
-    trt_inventory = os.path.join(doc_collection_dir,
-                                 'collection_document_inventory.csv')
-    shutil.copyfile(src_inventory, trt_inventory)
-    print '[INFO] Copied inventory file %s to document collection.' % \
-          os.path.abspath(trt_inventory)
-
-    # Create inventory XML label
-    inventory_template_file = os.path.join(doc_template_dir,
-                                           'collection_document_inventory.txml')
-    inventory_template = Template(file=inventory_template_file, searchList=[{
-        'today': get_current_date()
-    }])
-
-    inventory_xml_file = os.path.join(doc_collection_dir,
-                                      'collection_document_inventory.xml')
-    with open(inventory_xml_file, 'w+') as f:
-        f.write(str(inventory_template))
-    print '[INFO] Created XML label file %s for the document inventory file' % \
-          os.path.abspath(inventory_xml_file)
+    # Create inventory file to the document collection
+    create_inventory_files(doc_collection_dir, doc_template_dir, 'document')
 
 
 def create_md5_checksum_file(bundle_dir):
