@@ -1,23 +1,25 @@
 #!/bin/csh
 
-#This csh sciprt takes train.list and test.list in the format described in 
-#the step 4 of the URL below as inputs, and then create standford CoreNLP  
-#NER model, and the statistcs of testing will be captured in log file.
+#This csh script takes train.list and test.list in the format described in 
+#  step 4 of the URL below as inputs, and then trains/evaluates
+#  a Stanford CoreNLP NER model.  
+#The evaluation results are captured in a log file.
 #  
 #https://github.com/USCDataScience/parser-indexer-py/tree/master/src/corenlp
 #
 #USAGE:
-#./run.csh train.list test.list
+#./train_corenlp_ner.csh train.list test.list
+# (files must end in .list)
 #
 #OUTPUT:
-#1. train.log -- it captures the messages for converting train.list 
+#1. train.log -- captures the messages for converting train.list 
 #                to train.tsv. Elapsed time is included at the end.
-#2. test.log -- it captures the messages for converting test.list to
+#2. test.log -- captures the messages for converting test.list to
 #               test.tsv. Elapsed time is included at the end.
-#3. lpsc_train.prop -- Standford CoreNLP training properties file.
-#4. lpsc_train.train_log -- it captures the messages for training.
+#3. lpsc_train.prop -- Stanford CoreNLP training properties file.
+#4. lpsc_train.train_log -- captures the messages for training.
 #                            Elapsed time is included at the end.              
-#5. lpsc_train.test_log -- it captures the messages for testing. 
+#5. lpsc_train.test_log -- captures the messages for testing. 
 #                          Testing statistics such as precision 
 #                          and recall are logged as well. 
 #NOTE:
@@ -44,7 +46,6 @@ else
     set start = `date`
     python brat2ner_bulkdoc_multiword.py --in ${test_name}.list --out ${test_name}.tsv > ${test_name}.log
     #python /proj/mte/modules/parser-indexer-py/src/corenlp/brat2ner_bulkdoc_multiword.py --in ${test_name}.list --out ${test_name}.tsv > ${test_name}.log
-    #python /proj/mte/modules/parser-indexer-py/src/corenlp/brat2ner_bulkdoc_multiword.py --in ${test_name}.list --out ${test_name}.tsv 
     set end_fmt = `date +%s`
     set end = `date`
     @ run = $end_fmt - $start_fmt
@@ -62,7 +63,6 @@ set start_fmt = `date +%s`
 set start = `date`
 python brat2ner_bulkdoc_multiword.py --in ${train_name}.list --out ${train_name}.tsv > ${train_name}.log
 #python /proj/mte/modules/parser-indexer-py/src/corenlp/brat2ner_bulkdoc_multiword.py --in ${train_name}.list --out ${train_name}.tsv > ${train_name}.log
-#python /proj/mte/modules/parser-indexer-py/src/corenlp/brat2ner_bulkdoc_multiword.py --in ${train_name}.list --out ${train_name}.tsv
 set end_fmt = `date +%s`
 set end = `date`
 @ run = $end_fmt - $start_fmt
@@ -100,6 +100,7 @@ echo "useTypeSeqs2=true" >> lpsc_${train_name}.prop
 echo "useTypeySequences=true" >> lpsc_${train_name}.prop
 echo "wordShape=chris2useLC" >> lpsc_${train_name}.prop
 echo "cleanGazette=true" >> lpsc_${train_name}.prop
+# Specify your custom gazette here
 echo "gazette=targets_minerals-2017-05_elements.gaz.txt" >> lpsc_${train_name}.prop
 
 #training
@@ -109,9 +110,7 @@ endif
 
 set start_fmt = `date +%s`
 set start = `date`
-#java -Xmx60000m -cp ".:/proj/mte/modules/stanford-corenlp-custom/*" edu.stanford.nlp.ie.crf.CRFClassifier  -prop lpsc_${train_name}.prop >& lpsc_${train_name}.train_log
-java -mx60000m -cp ".:/proj/mte/modules/stanford-corenlp-custom/*" edu.stanford.nlp.ie.crf.CRFClassifier  -prop lpsc_${train_name}.prop >& lpsc_${train_name}.train_log
-#java -mx60000m -cp ".:/proj/mte/modules/stanford-corenlp-custom/*" edu.stanford.nlp.ie.crf.CRFClassifier  -prop lpsc_${train_name}.prop 
+java -mx60000m -cp ".:/proj/mte/stanford-corenlp-mte-4.2.0/*" edu.stanford.nlp.ie.crf.CRFClassifier  -prop lpsc_${train_name}.prop >& lpsc_${train_name}.train_log
 set end_fmt = `date +%s`
 set end = `date`
 @ run = $end_fmt - $start_fmt
@@ -125,8 +124,7 @@ if (-f lpsc_${train_name}.test_log) then
 endif
 set start_fmt = `date +%s`
 set start = `date`
-java -cp ".:/proj/mte/modules/stanford-corenlp-custom/*" edu.stanford.nlp.ie.crf.CRFClassifier  -loadClassifier ner_model_${train_name}.ser.gz -testFile ${test_name}.tsv >& lpsc_${train_name}.test_log
-#java -cp ".:/proj/mte/modules/stanford-corenlp-custom/*" edu.stanford.nlp.ie.crf.CRFClassifier  -loadClassifier ner_model_${train_name}.ser.gz -testFile ${test_name}.tsv 
+java -cp ".:/proj/mte/stanford-corenlp-mte-4.2.0/*" edu.stanford.nlp.ie.crf.CRFClassifier  -loadClassifier ner_model_${train_name}.ser.gz -testFile ${test_name}.tsv >& lpsc_${train_name}.test_log
 set end_fmt = `date +%s`
 set end = `date`
 @ run = $end_fmt - $start_fmt
@@ -147,4 +145,4 @@ echo "NER model: $PWD/lpsc_${train_name}.prop" >> email.txt
 echo "Training log: $PWD/lpsc_${train_name}.train_log" >> email.txt
 echo "Testing log: $PWD/lpsc_${train_name}.test_log" >> email.txt
 
-echo `cat email.txt` | mail -s "trainging and testing for ${train_name}.list complete" you.lu@jpl.nasa.gov
+echo `cat email.txt` | mail -s "training and testing for ${train_name}.list complete" you.lu@jpl.nasa.gov
