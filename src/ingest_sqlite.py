@@ -25,45 +25,69 @@ def read_json(jsonfile, ndocs, year=None, mission=''):
         recs = map(lambda x: json.loads(x), jf)
         # Use yield to make this a generator and reduce memory consumption
         for rec in itertools.islice(recs, ndocs):
-            yield {
-                'doc_id': (str(year) + '_' + 
+            rec_dict = {
+                'doc_id': (str(year) + '_' +
                            ''.join(rec['file'].split('/')[-1].split('.')[:-1]) if year is not None
                            else ''.join(rec['file'].split('/')[-1].split('.')[:-1])),
                 'abstract': (int(rec['file'].split('/')[-1].split('.')[0]) if year is not None
                              else int(rec['file'].split('/')[-1].split('_')[1].split('.')[0])),
-                # Capitalize first letter of each word in the title
-                #'title': string.capwords(rec['metadata'].\
-                #                         get('grobid:header_Title', '')),
-                # Don't do this if we assume it has already been edited
-                'title': rec['metadata'].get('grobid:header_Title', ''),
-                'authors': rec['metadata'].get('grobid:header_Authors', ''),
-                'primary_author': '',
-                'affiliations': rec['metadata'].get('grobid:header_FullAffiliations', ''),
-                'venue': '',
-                'year': (year if year is not None 
+                'year': (year if year is not None
                          else int(rec['file'].split('/')[-1].split('_')[0])),
                 'doc_url': '',
-                #'content': rec['content'].strip(), # from GROBID
                 'content': rec['content_ann_s'].strip(), # for annotations
-                'targets': ([] if 'ner' not in rec['metadata'].keys() 
+                'targets': ([] if 'ner' not in rec['metadata'].keys()
                             else [(canonical_target_name(r['text']),
-                                   mission, r['begin'], r['end']) 
-                                  for r in rec['metadata']['ner'] 
+                                   mission, r['begin'], r['end'])
+                                  for r in rec['metadata']['ner']
                                   if r['label'] == 'Target']),
                 # Components are everything other than targets (Element, Mineral)
-                'components': ([] if 'ner' not in rec['metadata'].keys() 
+                'components': ([] if 'ner' not in rec['metadata'].keys()
                                else [(canonical_name(r['text']), r['label'])
-                                     for r in rec['metadata']['ner'] 
+                                     for r in rec['metadata']['ner']
                                      if r['label'] != 'Target']),
                 'contains': ([] if 'rel' not in rec['metadata'].keys()
                              else [([canonical_target_name(t)
-                                     for t in r['target_names']], 
-                                    r['target_ids'], 
-                                    [canonical_name(c) for c in r['cont_names']], 
+                                     for t in r['target_names']],
+                                    r['target_ids'],
+                                    [canonical_name(c) for c in r['cont_names']],
                                     r['sentence'],
                                     mission)
                                    for r in rec['metadata']['rel']])
             }
+
+            # Populate title field
+            if 'ads:title' in rec['metadata'].keys():
+                title = rec['metadata']['ads:title']
+            else:
+                title = rec['metadata'].get('grobid:header_Title', '')
+            rec_dict['title'] = title
+
+            # Populate authors field
+            if 'ads:author' in rec['metadata'].keys():
+                authors = ' and '.join(rec['metadata']['ads:author'])
+            else:
+                authors = rec['metadata'].get('grobid:header_Authors', '')
+            rec_dict['authors'] = authors
+
+            # Populate primary author
+            rec_dict['primary_author'] = rec['metadata'].get('ads:primary_author', '')
+
+            # Populate affiliations field
+            # Note that the ADS database returns a list of '-' as the
+            # placeholder for empty affiliation field. If the ads:affiliation
+            # field contains '-', we will use the affiliation field extracted
+            # from grobid.
+            if "ads:affiliation" in rec['metadata'].keys() and \
+                not '-' in rec['metadata']['ads:affiliation']:
+                affiliations = ' and '.join(rec['metadata']['ads:affiliation'])
+            else:
+                affiliations = rec['metadata'].get('grobid:header_FullAffiliations', '')
+            rec_dict['affiliations'] = affiliations
+
+            # Populate venue field
+            rec_dict['venue'] = rec['metadata'].get('ads:pub_venue', '')
+
+            yield rec_dict
 
 
 # Document feature update functions by Thamme Gowda (from insert_docs.py)
@@ -108,6 +132,10 @@ def update_doc_content(rec, txtdir):
 # Heuristic: first phrase in 'authors' consisting of words longer than 1 char
 # and does not start with a number (affiliation)
 def update_primary_author(rec):
+    # Only apply the following logic if the primary_author field is empty
+    if len(rec['primary_author']) > 0:
+        return rec
+
     au = rec['authors']
     auwords = au.split()
     pa = ''
