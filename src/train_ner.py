@@ -1,18 +1,41 @@
 #!/usr/bin/env python
-# Train a NER model using specified documents and gazette file,
+# Train a NER model using specified documents and CoreNLP properties file,
 # then save it to the specified model file.
 #
 # Kiri Wagstaff
 # July 27, 2021
 import os
 import sys
+import subprocess
 from brat2ner_bulkdoc_multiword import BratToNerConverter
 
 
-def main(doc_file, gazette_file, model_file):
+# Using CoreNLP TSV file, 
+# train a CoreNLP NER model with the generic properties
+# in corenlp_file and custom gazette_file,
+# then save result to model_file
+def train_ner(tsv_file, corenlp_file, gazette_file, model_file):
+
+    corenlp = '/proj/mte/stanford-corenlp-mte-4.2.0'
+    custom_args = '-trainFile %s ' % tsv_file
+    custom_args += '-gazette %s ' % gazette_file
+    custom_args += '-serializeTo %s ' % model_file
+
+    cmd = ('java -mx5g -cp ".:%s/*" edu.stanford.nlp.ie.crf.CRFClassifier -prop %s %s' % 
+           (corenlp, corenlp_file, custom_args))
+    corenlp_log = 'corenlp-train.log'
+    corenlp_logf = open(corenlp_log, 'w')
+    print('Training CoreNLP NER model... ')
+    # Note: this will change to run() in Python 3.5
+    subprocess.call(cmd, shell=True,
+                    stdout=corenlp_logf, stderr=subprocess.STDOUT)
+    print(' Saved to %s, logged to %s' % (model_file, corenlp_log))
+
+
+def main(doc_file, corenlp_file, gazette_file, model_file):
 
     # Check arguments
-    for f in [doc_file, gazette_file]:
+    for f in [doc_file, corenlp_file]:
         if not os.path.exists(f):
             print('Could not find %s' % f)
             sys.exit(1)
@@ -32,6 +55,7 @@ def main(doc_file, gazette_file, model_file):
         print(' Saved to %s, logged to %s' % (tsv_file, tsv_log))
 
     # Train the CoreNLP model
+    train_ner(tsv_file, corenlp_file, gazette_file, model_file)
 
 
 if __name__ == '__main__':
@@ -39,9 +63,15 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS, 
                                      description='Train and save NER model.')
 
-    parser.add_argument('doc_file', help='Text file (.list) with one line per document with location of .txt and .ann files')
-    parser.add_argument('gazette_file', help='Gazette (.gaz.txt) with entity types and names')
-    parser.add_argument('model_file', help='Model file (.ser.gz) to save trained NER model')
+    parser.add_argument('doc_file', 
+                        help='Text file (.list) with one line per document '
+                        'with location of .txt and .ann files')
+    parser.add_argument('corenlp_file', 
+                        help='Generic CoreNLP properties file (.prop)')
+    parser.add_argument('gazette_file',
+                        help='Gazette (.gaz.txt) with entity types and names')
+    parser.add_argument('model_file', 
+                        help='Model file (.ser.gz) to save trained NER model')
 
     args = parser.parse_args()
     main(**vars(args))
