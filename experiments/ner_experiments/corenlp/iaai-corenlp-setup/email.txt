@@ -1,7 +1,0 @@
-Train list: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/train_62r15v3.list
-Train log: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/train_62r15v3.log
-Test list: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/35r16v2_new-test.list
-Test log: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/35r16v2_new-test.log
-NER model: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/lpsc_train_62r15v3.prop
-Training log: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/lpsc_train_62r15v3.train_log
-Testing log: /proj/mte/data/steven_working_dir/case2/raymond15v3-1682-update_emt_gazette_basilisk-total/lpsc_train_62r15v3.test_log
