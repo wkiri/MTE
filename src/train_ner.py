@@ -8,6 +8,7 @@ import os
 import sys
 import subprocess
 from brat2ner_bulkdoc_multiword import BratToNerConverter
+corenlp = '/proj/mte/stanford-corenlp-mte-4.2.0'
 
 
 # Using CoreNLP TSV file, 
@@ -16,7 +17,6 @@ from brat2ner_bulkdoc_multiword import BratToNerConverter
 # then save result to model_file
 def train_ner(tsv_file, corenlp_file, gazette_file, model_file):
 
-    corenlp = '/proj/mte/stanford-corenlp-mte-4.2.0'
     custom_args = '-trainFile %s ' % tsv_file
     custom_args += '-gazette %s ' % gazette_file
     custom_args += '-serializeTo %s ' % model_file
@@ -32,7 +32,8 @@ def train_ner(tsv_file, corenlp_file, gazette_file, model_file):
     print(' Saved to %s, logged to %s' % (model_file, corenlp_log))
 
 
-def main(doc_file, corenlp_file, gazette_file, model_file):
+def main(doc_file, corenlp_file, gazette_file, model_file,
+         test=False):
 
     # Check arguments
     for f in [doc_file, corenlp_file]:
@@ -64,6 +65,21 @@ def main(doc_file, corenlp_file, gazette_file, model_file):
     if train:
         train_ner(tsv_file, corenlp_file, gazette_file, model_file)
 
+    # If desired, test the CoreNLP model on the input documents
+    if test:
+        custom_args = '-loadClassifier %s ' % model_file
+        custom_args += '-testFile %s ' % tsv_file
+
+        cmd = ('java -cp ".:%s/*" edu.stanford.nlp.ie.crf.CRFClassifier %s' %
+               (corenlp, custom_args))
+        corenlp_log = 'corenlp-test.log'
+        corenlp_logf = open(corenlp_log, 'w')
+        print('Testing CoreNLP NER model... ')
+        # Note: this will change to run() in Python 3.5
+        subprocess.call(cmd, shell=True,
+                        stdout=corenlp_logf, stderr=subprocess.STDOUT)
+        print(' Logged to %s' % (corenlp_log))
+
 
 if __name__ == '__main__':
     import argparse
@@ -79,6 +95,9 @@ if __name__ == '__main__':
                         help='Gazette (.gaz.txt) with entity types and names')
     parser.add_argument('model_file', 
                         help='Model file (.ser.gz) to save trained NER model')
+    parser.add_argument('-t', '--test', 
+                        default=False, action='store_true',
+                        help='Test model on input documents')
 
     args = parser.parse_args()
     main(**vars(args))
