@@ -55,7 +55,14 @@ def main(doc_file, corenlp_file, gazette_file, model_file):
         print(' Saved to %s, logged to %s' % (tsv_file, tsv_log))
 
     # Train the CoreNLP model
-    train_ner(tsv_file, corenlp_file, gazette_file, model_file)
+    train = True
+    if os.path.exists(model_file):
+        print('Model file %s exists.' % model_file)
+        ans = raw_input(' Do you want to re-train it? [y/n]')
+        if ans not in ['y', 'Y']:
+            train = False
+    if train:
+        train_ner(tsv_file, corenlp_file, gazette_file, model_file)
 
 
 if __name__ == '__main__':
