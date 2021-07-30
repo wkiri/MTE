@@ -1,3 +1,13 @@
+# python3
+# instance.py
+# Mars Target Encyclopedia
+# This script contains the customized entity instance (Span_Instance) and relation instance (Rel_Instance).
+#
+# Yuan Zhuang
+# July 30, 2021
+# Copyright notice at bottom of file.
+
+
 # relation instance over text level
 import re, sys, random, os 
 from os.path import abspath, dirname
@@ -42,7 +52,34 @@ def truncate(temp_prespan_ids, temp_posspan_ids, num_cut):
 
 class Span_Instance:
     def __init__(self, venue, year, docname, doc_start_char, doc_end_char, text, ner_label, sent_toks = None, sentid = None, sent_start_idx = None, sent_end_idx = None):
+        """ 
+        This class is designed to store information for an entity such as Target, Element and Component
 
+        Args:
+            venue: 
+                venue of the document 
+            year: 
+                year of the document 
+            docname: 
+                document name of the document 
+            doc_start_char: 
+                starting character offset of the entity in the document 
+            doc_end_char:
+                ending character offset of the entity in the document 
+            text:
+                text of the entity 
+            ner_label: 
+                ner label of the entity 
+            sent_toks:
+                list of words of the sentence that contains the entity 
+            sentid:
+                sent index of the sentence that contains the entity 
+            sent_start_idx:
+                the starting word index of the entity in the sentence
+            sent_end_idx:
+                the ending word index of the entity in the sentence
+        """
+    
         self.venue = venue 
         self.year = year 
         self.docname = docname
@@ -66,8 +103,14 @@ class Span_Instance:
 
 
     def insert_type_markers(self, tokenizer, use_std_text = True, max_len = 512):
+        """
+            This function inserts type markers such as <Target> around the entity in the sentence 
+
+            use_std_text: whether to substitute the entity's text with its canonical name in the sentence. for example, 
+            if use_std_text is true, then the sentence 'A contains K' would be turned into 'A contains <T>Potassium<\\T>'
+        """
         assert self.sent_toks is not None
-        # things to get 
+
 
         self.input_ids = []
         exceed_leng = 0 
@@ -96,6 +139,7 @@ class Span_Instance:
 
         assert tokenizer.convert_ids_to_tokens(self.input_ids)[self.bert_start_idx] == f"<ner_start={self.ner_label.lower()}>" and  tokenizer.convert_ids_to_tokens(self.input_ids)[self.bert_end_idx] == f"<ner_end={self.ner_label.lower()}>"
 
+        # if input_ids is longger than the maximum length, simply use the 0th vector to represent the entity 
         if len(self.input_ids) > max_len:
             exceed_leng = 1
             self.input_ids = self.input_ids[: max_len]
@@ -116,11 +160,22 @@ class Span_Instance:
 class Rel_Instance:
     def __init__(self,span1, span2, label_str = None):
 
+        """
+            This is a class to store information of a relation. A relation instance contains two entities, denotd as span1 and span2 
+
+            Args:
+                span1: 
+                    target span instance
+                span2: 
+                    component span instance 
+                label_str: 
+                    relation label such as 'Contains' and 'O'
+        """
         self.span1 = span1
         self.span2 = span2
         self.re_id = f"{self.span1.span_id}|{self.span2.span_id}"
         self.label = label_str        
-        self.make_signature() # self.signature is used for evaluation 
+        self.make_signature() # self.signature is used for tuple-level evaluation 
 
     def make_signature(self):
 
@@ -133,3 +188,16 @@ class Rel_Instance:
         string = f"DOCID   :{self.span1.doc_id}\nsentence:{sentence}\nTEXT    : {self.span1.text}, {self.span2.text}\nSTD TEXT: {self.span1.std_text}, {self.span2.std_text}\nSIG: {self.signature}\nspan1:{self.span1}\nspan2:{self.span2}\n"
         
         return string
+
+
+# Copyright 2021, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.

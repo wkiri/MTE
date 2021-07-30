@@ -1,3 +1,12 @@
+# python3
+# dataset.py
+# Mars Target Encyclopedia
+# This script contains the customized torch dataset. 
+#
+# Yuan Zhuang
+# July 30, 2021
+# Copyright notice at bottom of file.
+
 from torch.utils.data import Dataset, DataLoader
 import pickle, torch, json, os, sys, re
 from sys import stdout
@@ -7,7 +16,6 @@ import random
 from collections import Counter
 from config import label2ind, ind2label 
 
-# VERY IMPORTANT ! WITHOUT COLLATE DATALODER WOULD OUTPUT A TRANSPOSED OUTPUT 
 def pad_seqs(seqs, tensor_type):
       # each seq should be a list of numbers
       # pad each seq to same length 
@@ -63,5 +71,16 @@ class MyDataset(Dataset):
     def __getitem__(self, i):
         return self.instances[i]
 
+# Copyright 2021, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.
 
 

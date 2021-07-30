@@ -1,3 +1,13 @@
+# python3
+# extraction_utils.py
+# Mars Target Encyclopedia
+# Extraction utils to extract entities and relations from ann and text files.
+#
+# Yuan Zhuang
+# July 30, 2021
+# Copyright notice at bottom of file.
+
+
 import copy, re, json, os, glob, warnings, sys
 from os.path import exists, join, abspath, dirname
 from copy import deepcopy 
@@ -27,8 +37,8 @@ def add_entities(queue, e):
             queue.append(deepcopy(e))
 
 def extract_system_entities(doc = None, corenlp_file = None, use_component = False, keep_smaller_entities = False):
-
-    # if use_compoennt, do two passes of extraction. the first keeps 'Element' and 'Mineral' and merge. The second pass changes 'Element' and 'Mineral' to 'Component' and then merge them. then for all entities we get, we change the entities collected in both passes to component   
+    """ extract system ners """
+    # if use_component is True, do two passes of extraction. the first keeps 'Element' and 'Mineral' and merge. The second pass changes 'Element' and 'Mineral' to 'Component' and then merge them. then for all entities we get, we change the entities collected in both passes to component   
     if doc is None and corenlp_file is None:
         raise NameError("Both doc and corenlp_file is None! ")
     if doc is None:
@@ -133,8 +143,9 @@ def make_tree_from_ann_file(text_file, ann_file, be_quiet = True):
 
 
 def collect_entity_at_offset(token, sentid, tokidx, charoffset, offset_entity_label, charoffset2label2entities):
-        # if charoffset2entities is emtpy, create an entity 
+        """ map character offset to label to entities """
 
+        # if charoffset2entities is emtpy, create an entity 
         if charoffset not in charoffset2label2entities:
             charoffset2label2entities[charoffset] = {}
         if offset_entity_label not in  charoffset2label2entities[charoffset]:
@@ -196,17 +207,17 @@ def merge_and_make_entities(charoffset2label2entities, text_file):
 
 def extract_entities_from_text(text_file, ann_file, doc = None, corenlp_file = None, use_component = False, be_quiet = True, use_sys_ners = False):
     """
-    this function extracts entities from text file using a tree and doc
+    this function extracts entities from text file 
     Argument:
         text_file: text_file that contains the journal/abstract 
         
         ann_file: file that contains annotations from brat. 
 
-        doc:  a dictionary that stores corenlp's parsing for text_file
+        doc:  a dictionary that stores corenlp's parsing for text_file. either doc or corenlp_file must not be none. 
 
-        corenlp_file: is a file that stores corenlp's parsing for text_file. If use_sys_ners is True, then corenlp_file must point to the parse results which store the system ner predictons
+        corenlp_file: a file that stores corenlp's parsing for text_file. If use_sys_ners is True, then corenlp_file must point to the parse results (in json file) which store the system ner predictons
 
-        use_component: whether map element and mineral to component 
+        use_component: whether to map element and mineral to component 
     
         be_quiet: whether to print out warnings during extraction
 
@@ -284,7 +295,7 @@ def get_docid(ann_file):
     doc_id = f"{venue}_{year}_{docname}"
     return venue, year, docname, doc_id
 
-# def get_gold_annotid(ann_file):
+
 def extract_gold_entities_from_ann(ann_file, use_component = False):
     venue, year, docname, _ = get_docid(ann_file)
 
@@ -350,6 +361,12 @@ def get_entity_id(entity, tuple_level = False):
 
 
 def extract_gold_relations_from_ann(ann_file, use_component = False):
+    """ This function extract relations from ann files
+
+    Args:
+        ann_file: .ann file 
+        use_component: whether to map element and mineral to component 
+    """
 
     annotid_annotid_relation = []
     for annotation_line in open(ann_file).readlines():
@@ -390,7 +407,17 @@ def extract_gold_relations_from_ann(ann_file, use_component = False):
     return gold_relations
 
 def extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = None, doc = None,use_component = False):
-    # this function extracts gold relations with entities in the same sentence
+    """ This function extracts gold relations with entities in the same sentence
+
+    Args:
+        ann_file: .ann file 
+    
+        corenlp_file: file that stores corenlp's parsing in json file 
+    
+        doc: dictionary that stores corenlp's parsing
+        
+        use_component: whether to map element and mineral to component 
+    """
 
     if doc is None and corenlp_file is None:
         raise NameError("Either doc_dict or corenlp_file must be provided ! ")
@@ -420,7 +447,7 @@ def extract_intrasent_goldrelations_from_ann(ann_file, corenlp_file = None, doc 
 
 def get_offset2sentid(doc = None, corenlp_file = None):
 
-    # get a dictonary of character offset to sentid
+    """ get a dictonary that maps character offset to sentid """
 
     if doc is None and corenlp_file is None:
         raise NameError("Either doc_dict or corenlp_file must be provided ! ")
@@ -438,6 +465,15 @@ def get_offset2sentid(doc = None, corenlp_file = None):
     return offset2sentid
 
 def get_sentid_from_offset(doc_start_char, doc_end_char, offset2sentid):
+    """ This function gets the sent index given the character offset of an entity in the document 
+    
+    Args:
+        doc_start_char: starting character offset of the entity in the document 
+       
+        doc_end_char: ending character offset of the entity in the document 
+       
+        offset2sentid: a mapping from character offset to sent index in the document 
+    """
     sentid = None
     for offset in offset2sentid:
         if offset[0] <= doc_start_char < doc_end_char <= offset[1]:
@@ -445,10 +481,11 @@ def get_sentid_from_offset(doc_start_char, doc_end_char, offset2sentid):
     return sentid 
 
 def get_offset2docidx(doc = None, corenlp_file = None):
-    # map offset to the idx in document
+    """ 
+    This function gets the mapping from the document-level offset of a word to its document-level word index 
+    """
 
     # get a dictonary of character offset to sentid
-
     if doc is None and corenlp_file is None:
         raise NameError("Either doc_dict or corenlp_file must be provided ! ")
     if doc is None:
@@ -464,6 +501,9 @@ def get_offset2docidx(doc = None, corenlp_file = None):
     return offset2idx
 
 def get_docidx_from_offset(doc_start_char, doc_end_char, offset2docidx):
+    """
+        This function gets the starting and ending document-level word indices for an entity given the entity's document-level offset. 
+    """
     begin_idx = None
     end_idx = None # exclusive
     for offset in offset2docidx:
@@ -477,9 +517,11 @@ def get_docidx_from_offset(doc_start_char, doc_end_char, offset2docidx):
 
 def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None, use_component = False, use_sys_ners = False):
     
-    # this function extract all pairs of entities from the same sentence as relation candidates. note that here we would get duplicated entity pairs with reverse order, such as (t1, t2) and (t2, t1)
-    """
-    text_file: text_file that contains the journal/abstract 
+    """ 
+    This function extract all pairs of entities from the same sentence as relation candidates. note that here we would get duplicated entity pairs with reverse order, such as (t1, t2) and (t2, t1)
+    
+    Args: 
+        text_file: text_file that contains the journal/abstract 
         
         ann_file: file that contains annotations from brat. used to extract ners 
 
@@ -508,16 +550,57 @@ def extract_intrasent_entitypairs_from_text_file(text_file, ann_file, doc = None
     return intrasent_entitypairs
 
 
+def extract_entitypairs_from_text_file(text_file, ann_file, doc = None, corenlp_file = None, use_component = False, use_sys_ners = False, sent_window = 5):
+    
+    """ 
+
+    This function extract all pairs of entities in a document as relation candidates. note that here we would get duplicated entity pairs with reverse order, such as (t1, t2) and (t2, t1)
+
+    Args: 
+        text_file: text_file that contains the journal/abstract 
+        
+        ann_file: file that contains annotations from brat. used to extract ners 
+
+        doc:  a dictionary that stores corenlp's parsing for text_file
+
+        corenlp_file: is a file that stores corenlp's parsing for text_file
+
+        use_component: convert element and mineral to component if True
+
+        use_sys_ners: extract system entities in corenlp_file constructed from the predictions NER model if True. Otherwise use gold entities
+
+        sent_window: maximum number of sentences a pair of entities could be separated by. For example, if 0, then a pair of entities must lie in the same sentence. If 1, then a pair of entities could lie in both the same sentence and adjacent sentences. sent_window >= abs(sent index of entity1 - sent index of entity2). If sent_window is negative, all possible pairs of entities are extracted from a document. 
+    """
+
+    if doc is None and corenlp_file is None:
+        raise NameError("Either doc_dict or corenlp_file must be provided ! ")
+    if doc is None:
+        # read corenlp file
+        doc = json.load(open(corenlp_file, "r"))
+
+    entities = extract_entities_from_text(text_file, ann_file, doc = doc, corenlp_file = corenlp_file, use_component = use_component, use_sys_ners = use_sys_ners)
+
+    # get all possible entity pairs. 
+    entitypairs = []
+    for i in range(len(entities)):
+        for j in range(len(entities)):
+            if i == j: continue
+            if sent_window < 0 or abs(entities[i]['sentid'] - entities[j]['sentid']) <= sent_window:
+                # note that a entity may be annotated with different labels, and so entities[i] and entities[j] may correspond to the same annotated text (e.g., Dillinger at (2505, 2514)  of lpsc15-C-raymond-sol1159-v3-utf8/2620.ann is labeled Target and Unit at the same time)
+                entitypairs.append((deepcopy(entities[i]), deepcopy(entities[j])))
+    return entitypairs
+
+
 def get_relation_coverage(entitypairs, gold_relations, tuple_level = False, all_entityid2ner = None):
     """
-    This function calculates the coverage of gold relations in entitypairs
+    This function calculates the coverage of gold relations in the extracted entity pairs
     
-    Argument:
-        entitypairs: a list of pairs of entities
+    Args:
+        entitypairs: a list of pairs of entities extracted from text file 
         
         gold_relations: a list of pairs of entities and relation annotated
         
-        tuple_level: a boolean indicating if tuple_level stats should be calculated. If True, tuple-level stats would be calculated (which means an entity is distinguished by its document offset and document id). Otherwise, instance-level (which means an entity is distinguished by its text and document id) stats would be calcualted. 
+        tuple_level: a boolean indicating if the tuple_level statistics should be calculated. If True, tuple-level stats would be calculated (which means an entity is distinguished by its document offset and document id). Otherwise, instance-level (which means an entity is distinguished by its text and document id) stats would be calcualted. 
     """
 
     gold_ids = set()
@@ -567,6 +650,15 @@ def get_relation_coverage(entitypairs, gold_relations, tuple_level = False, all_
     print(f"missing relations are written to ./missing_rels.txt")
 
 def get_entity_coverage(entities, gold_entities):
+    """
+
+    This function calculates the coverage of the gold entities in the extracted entities 
+    
+    Args:
+        entities: a list of entities extracted from the text file 
+        gold_entities: a list of gold entities 
+
+    """
     gold_ids = set([f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" for e in gold_entities])
     ids = set([f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" for e in entities])
 
@@ -577,15 +669,6 @@ def get_entity_coverage(entities, gold_entities):
 
     print(f"{found_gold}/{len(gold_ids)}({found_percent*100:.2f}%) of gold entities are extracted from texts")
     print(f"There are {nonexisting_num}/{len(ids)}({nonexisting_percent*100:.2f}%) nonexisting entities extracted")
-
-    # print out missing entities in gold entities
-    # num_examples = 10
-    # for e in gold_entities:
-    #     if f"{e['doc_start_char']} {e['doc_end_char']} {e['venue']} {e['year']} {e['docname']}" not in ids:
-    #         print("not found", e['text'], e['label'], e['doc_start_char'],e['doc_end_char'], e['venue'], e['docname'])
-    #         print()
-    #         num_examples -= 1
-    #     if num_examples == 0: break
 
 
 

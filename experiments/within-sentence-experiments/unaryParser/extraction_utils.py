@@ -1,3 +1,12 @@
+# python3
+# extraction_utils.py
+# Mars Target Encyclopedia
+# This script contains codes to extract entities from text files and annotations from ann files. 
+#
+# Yuan Zhuang
+# July 30, 2021
+# Copyright notice at bottom of file.
+
 import copy, re, json, os, glob, warnings, sys
 from os.path import exists, join, abspath, dirname
 from copy import deepcopy 
@@ -759,3 +768,15 @@ if __name__ == "__main__":
 
     all_entityid2ner = {get_entity_id(e, tuple_level = False): e['label'] for e in entities}
     get_relation_coverage(task_intrasent_entitypairs, task_intrasent_goldrelations, tuple_level = False, all_entityid2ner = all_entityid2ner) 
+
+# Copyright 2021, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.
