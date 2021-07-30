@@ -1,4 +1,0 @@
-annotators=tokenize,ssplit,pos,lemma,ner
-
-ner.model=/uusoc/exports/scratch/yyzhuang/MTE/trained_models/ner_model_train_62r15v3_emt_gazette.ser.gz
-tokenize.whitespace = true
