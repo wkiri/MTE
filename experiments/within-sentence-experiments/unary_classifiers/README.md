@@ -74,7 +74,12 @@ We'll first generate training, dev and testing data for Containee, where each Co
 #### 2.2. Train Containee 
 As data has been generated, we now train a Containee model. 
 
-    python3 train.py  --train_dir ins/train --val_dir ins/dev/gold_ner  --lr 0.00001 --epoch 10 --model_save_dir ./temp
+    python3 train.py  \
+    --train_dir ins/train \
+    --val_dir ins/dev/gold_ner  \
+    --lr 0.00001 \
+    --epoch 10 \
+    --model_save_dir ./temp
 
 #### 2.3. Test Containee 
 After training, we use Containee to make predictions for Dev and Test data. Predictions would be stored in `temp/dev/components.pred` and `temp/test/components.pred` (in pickle format).
@@ -82,12 +87,18 @@ After training, we use Containee to make predictions for Dev and Test data. Pred
 + Predict for Dev data: 
 
     ```
-    python3 predict.py --modelfile temp/trained_model.ckpt --test_dir ins/dev/gold_ner --outdir temp/dev 
+    python3 predict.py \
+    --modelfile temp/trained_model.ckpt \
+    --test_dir ins/dev/gold_ner \
+    --outdir temp/dev 
     ```
 
 + Predict for Test data: 
     ```
-    python3 predict.py --modelfile temp/trained_model.ckpt --test_dir ins/test/gold_ner --outdir temp/test
+    python3 predict.py \
+    --modelfile temp/trained_model.ckpt \
+    --test_dir ins/test/gold_ner \
+    --outdir temp/test
     ```
 
 So far, each Component has been asigned a label whether it is contained by some Target. 
@@ -118,7 +129,12 @@ Next we'll need to train a Container, which identifies if a Target contains some
 #### 3.2. Train Container 
 As data has been generated, we now train a Container model. 
 
-    python3 train.py  --train_dir ins/train --val_dir ins/dev/gold_ner  --lr 0.000005 --epoch 10  --analyze_dev 1 --model_save_dir ./temp
+    python3 train.py  \
+    --train_dir ins/train \
+    --val_dir ins/dev/gold_ner \
+    --lr 0.000005 \
+    --epoch 10 \
+    --model_save_dir ./temp
 
 #### 3.3. Test Container 
 After training, we use Container to make predictions for Dev and Test data. Predictions would be stored in `temp/dev/targets.pred` and `temp/test/targets.pred` (in pickle format).
@@ -163,13 +179,21 @@ The following script shows the command to predict relations using `targets.pred`
 + Extract relations from DEV data:
     
     ```
-    python prediction.py --targets ../container/temp/dev/targets.pred --components ../containee/temp/dev/components.pred --entity_linking_method closest_container_closest_containee --outdir ./temp/dev
+    python prediction.py \
+    --targets ../container/temp/dev/targets.pred \
+    --components ../containee/temp/dev/components.pred \
+    --entity_linking_method closest_container_closest_containee \
+    --outdir ./temp/dev
     ```
 
 + Extract relations from TEST data:  
     
     ```
-    python prediction.py --targets ../container/temp/test/targets.pred --components ../containee/temp/test/components.pred --entity_linking_method closest_container_closest_containee --outdir ./temp/test 
+    python prediction.py \
+    --targets ../container/temp/test/targets.pred \
+    --components ../containee/temp/test/components.pred \
+    --entity_linking_method closest_container_closest_containee \
+    --outdir ./temp/test 
     ``` 
 
 #### 4.2. Evaluate Extracted Relations
@@ -181,13 +205,17 @@ Once relations are extracted, we proceed to evaluate them against the gold relat
     - For DEV data:
         
         ```
-        python make_eval_set.py --test_inlist ../data/dev.list --outdir ./temp/relation_eval/dev
+        python make_eval_set.py \
+        --test_inlist ../data/dev.list \
+        --outdir ./temp/relation_eval/dev
         ```
 
     - For TEST data:
 
         ```
-        python make_eval_set.py --test_inlist ../data/test.list --outdir ./temp/relation_eval/test
+        python make_eval_set.py \
+        --test_inlist ../data/test.list \
+        --outdir ./temp/relation_eval/test
         ```
 
 
@@ -196,13 +224,18 @@ Once relations are extracted, we proceed to evaluate them against the gold relat
     - Evaluate over DEV:
 
         ```
-        python ../eval.py --pred_relins ./temp/dev/relations.pred --gold_relins ./temp/relation_eval/dev/gold_relins.pkl
-        ``` 
+        python ../eval.py \
+        --pred_relins ./temp/dev/relations.pred \
+        --gold_relins ./temp/relation_eval/dev/gold_relins.pkl
+        ```
+
 
     - Evaluate over TEST: 
 
         ```
-        python ../eval.py --pred_relins ./temp/test/relations.pred --gold_relins ./temp/relation_eval/test/gold_relins.pkl 
+        python ../eval.py \
+        --pred_relins ./temp/test/relations.pred \
+        --gold_relins ./temp/relation_eval/test/gold_relins.pkl 
         ```
 
 
