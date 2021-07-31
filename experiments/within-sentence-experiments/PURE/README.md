@@ -56,7 +56,11 @@ Given a collection of annotated documents (LPSC15 + LPSC16 + MPF + PHX), we firs
 
 Given that documents have been split into TRAIN, DEV, and TEST  collections, we extract relation instances from these documents. The following script generates TRAIN, DEV and TEST relation instances and saves them to `data/train`, `data/dev`, and `data/test`. 
 
-    python3 make_train_dev_test.py --train_inlist data/train.list --dev_inlist data/dev.list --test_inlist data/test.list --max_len 512
+    python3 make_train_dev_test.py \
+    --train_inlist data/train.list \
+    --dev_inlist data/dev.list \
+    --test_inlist data/test.list \
+    --max_len 512
 
 ### 3. Train PURE
 
