@@ -1,6 +1,4 @@
----
 # Introduction
-
 This directory contains codes to train, test and evaluate the unary relation extraction approach which uses the Containee and Container model.
 
 It contains three subdirectories:
