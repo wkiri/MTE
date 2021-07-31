@@ -1,3 +1,4 @@
+autocmd Filetype markdown set tw=5
 ---
 # Introduction
 
@@ -104,7 +105,9 @@ Once we finish training PURE, we could proceed to predict relations over DEV dat
         Next we extract relation instances from PURE's predictions, which will be saved to temp/rel/dev/predictions.pkl. 
 
     ```
-    python match_purepred_to_instance.py --pred_file temp/rel/predictions.json --outfile temp/rel/dev/predictions.pkl
+    python match_purepred_to_instance.py \
+    --pred_file temp/rel/predictions.json \
+    --outfile temp/rel/dev/predictions.pkl
     ```
     
 
@@ -130,7 +133,9 @@ Once we finish training PURE, we could proceed to predict relations over DEV dat
         Next we extract relation instances from PURE's predictions, which will be saved to temp/rel/test/predictions.pkl. 
 
     ```
-    python match_purepred_to_instance.py --pred_file temp/rel/predictions.json --outfile temp/rel/test/predictions.pkl
+    python match_purepred_to_instance.py \
+    --pred_file temp/rel/predictions.json \
+    --outfile temp/rel/test/predictions.pkl
     ```
 
 ### 5. Evaluate PURE
@@ -139,13 +144,19 @@ We finally evaluate PURE by comparing the extracted relations to gold relations.
 
 + DEV:
 
-  python ../unary_classifiers/eval.py --pred_relins temp/rel/dev/predictions.pkl --gold_relins data/dev/gold_relins.pkl 
-
+```
+  python ../unary_classifiers/eval.py \
+  --pred_relins temp/rel/dev/predictions.pkl \
+  --gold_relins data/dev/gold_relins.pkl 
+```
 
 + TEST:
 
-  python ../unary_classifiers/eval.py --pred_relins temp/rel/test/predictions.pkl --gold_relins data/test/gold_relins.pkl 
-
+```
+  python ../unary_classifiers/eval.py \
+  --pred_relins temp/rel/test/predictions.pkl \
+  --gold_relins data/test/gold_relins.pkl 
+```
 
 
 
