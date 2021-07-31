@@ -65,7 +65,11 @@ We'll first generate training, dev and testing data for Containee, where each Co
 
     cd containee 
     
-    python3 make_train_dev_test.py --train_inlist ../data/train.list --dev_inlist ../data/dev.list --test_inlist ../data/test.list --max_len 512
+    python3 make_train_dev_test.py \
+    --train_inlist ../data/train.list \
+    --dev_inlist ../data/dev.list \
+    --test_inlist ../data/test.list \
+    --max_len 512
 
 #### 2.2. Train Containee 
 As data has been generated, we now train a Containee model. 
@@ -105,7 +109,11 @@ Next we'll need to train a Container, which identifies if a Target contains some
 
     cd container 
     
-    python3 make_train_dev_test.py --train_inlist ../data/train.list --dev_inlist ../data/dev.list --test_inlist ../data/test.list --max_len 512
+    python3 make_train_dev_test.py \
+    --train_inlist ../data/train.list \
+    --dev_inlist ../data/dev.list \
+    --test_inlist ../data/test.list \
+    --max_len 512
 
 #### 3.2. Train Container 
 As data has been generated, we now train a Container model. 
@@ -118,12 +126,18 @@ After training, we use Container to make predictions for Dev and Test data. Pred
 + Predict for Dev data: 
 
     ```
-    python3 predict.py --modelfile temp/trained_model.ckpt --test_dir ins/dev/gold_ner --outdir temp/dev 
+    python3 predict.py \
+    --modelfile temp/trained_model.ckpt \
+    --test_dir ins/dev/gold_ner \
+    --outdir temp/dev 
     ```
 
 + Predict for Test data: 
     ```
-    python3 predict.py --modelfile temp/trained_model.ckpt --test_dir ins/test/gold_ner --outdir temp/test
+    python3 predict.py \
+    --modelfile temp/trained_model.ckpt \
+    --test_dir ins/test/gold_ner \
+    --outdir temp/test
     ```
 
 So far, each Target has been asigned a label whether it contains any Component.
