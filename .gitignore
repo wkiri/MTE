@@ -77,5 +77,5 @@ docs/_build/
 target/
 
 # cross-sentence relation extraction
-experiments/cross-sentence/eog/embeds/
-experiments/cross-sentence/nary-song-18/
+experiments/cross-sentence/
+experiments/within-sentence-experiments/jsre
