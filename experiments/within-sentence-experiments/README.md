@@ -31,7 +31,7 @@ Experiments in both PURE/ and unary_classifiers/ need CoreNLP to parse the text 
         ../../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8/ \
         ../../corpus-LPSC/mpf-reviewed+properties-v2/ \
         ../../corpus-LPSC/phx-reviewed+properties-v2 \
-    --outdir ../../parse1 \
+    --outdir ../../parse \
     --corenlp_dir <PATH/TO/stanford-corenlp-4.2.0>
     ```
 ---
