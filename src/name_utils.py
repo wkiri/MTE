@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import re
 import string
+import sys
+
+is_python3 = sys.version[0]
 
 # Map target aliases to canonical names
 targettab = {
@@ -193,7 +196,10 @@ def canonical_target_name(name):
     name = string.capwords(strip_ws).replace(' ', '_')
     
     if name in targettab:
-        return targettab[name].decode('utf8')
+        if is_python3:
+            return targettab[name]
+        else:
+            return targettab[name].decode('utf8')
     else:
         return name
 
