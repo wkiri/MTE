@@ -1,5 +1,5 @@
 # python3
-# predict.py
+# eval.py
 # Mars Target Encyclopedia
 # This script evaluate extracted relations against gold data. 
 #
