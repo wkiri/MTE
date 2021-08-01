@@ -16,7 +16,7 @@ To run experiments over the MTE dataset, we need to perform the following steps:
 
 Below describe the details of each step. 
 
-### 1. Split documents into TRAIN, DEV, TEST 
+## 1. Split documents into TRAIN, DEV, TEST 
 
 Given a collection of annotated documents (LPSC15 + LPSC16 + MPF + PHX), we first split them into Train, Dev and Test documents . The following script does so and generates train.list, dev.list and test.list in `./data/`
 
@@ -52,7 +52,7 @@ Given a collection of annotated documents (LPSC15 + LPSC16 + MPF + PHX), we firs
 
 
 --- 
-### 2. Extract TRAIN, DEV, and TEST relation instances from documents
+## 2. Extract TRAIN, DEV, and TEST relation instances from documents
 
 Given that documents have been split into TRAIN, DEV, and TEST  collections, we extract relation instances from these documents. The following script generates TRAIN, DEV and TEST relation instances and saves them to `data/train`, `data/dev`, and `data/test`. 
 
@@ -62,7 +62,7 @@ Given that documents have been split into TRAIN, DEV, and TEST  collections, we 
     --test_inlist data/test.list \
     --max_len 512
 
-### 3. Train PURE
+## 3. Train PURE
 
 The following script trains a PURE model. 
 
@@ -84,7 +84,7 @@ The following script trains a PURE model.
     --eval_per_epoch 1 \
     --add_new_tokens
 
-### 4. Test pure
+## 4. Test pure
 Once we finish training PURE, we could proceed to predict relations over DEV data and TEST data. Predictions would be saved to `temp/rel_pred/dev` and `temp/rel_pred/test`
 
 + Predict for DEV: 
@@ -142,7 +142,7 @@ Once we finish training PURE, we could proceed to predict relations over DEV dat
     --outfile temp/rel/test/predictions.pkl
     ```
 
-### 5. Evaluate PURE
+## 5. Evaluate PURE
 
 We finally evaluate PURE by comparing the extracted relations to gold relations. 
 
