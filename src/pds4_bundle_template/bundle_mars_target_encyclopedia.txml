@@ -23,8 +23,8 @@
             <Modification_Detail>
                 <modification_date>$today</modification_date>
                 <version_id>1.2</version_id>
-                <description>Includes contains and has_property
-                relations (as tables).</description>
+                <description>Add contains and has_property
+                relations and components and properties tables.</description>
             </Modification_Detail>
             <Modification_Detail>
                 <modification_date>2021-03-29</modification_date>

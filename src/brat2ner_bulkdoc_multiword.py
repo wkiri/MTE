@@ -7,6 +7,7 @@
 from __future__ import print_function
 from pycorenlp import StanfordCoreNLP
 import os
+import urllib
 from argparse import ArgumentParser
 import sys
 reload(sys)  # Reload does the trick!
@@ -34,6 +35,8 @@ class BratToNerConverter(object):
             text = '.' + text[1:]
             # Reason: some tools trim/strip off the white spaces
             # which will mismatch the character offsets
+        # Quote (with percent-encoding) reserved characters in URL for CoreNLP
+        text = urllib.quote(text)
         output = self.corenlp.annotate(text, properties=props)
         records = []
         for sentence in output['sentences']:

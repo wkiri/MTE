@@ -14,14 +14,6 @@ tika.TikaClientOnly = True
 from tika import parser
 from progressbar import ProgressBar, ETA, Bar, Percentage
 
-# Local files
-#pdfdir  = '../../pdfs/lpsc14-pdfs'
-#textdir = '../../MTE-corpus/lpsc14-text'
-#pdfdir  = '../../pdfs/lpsc15-pdfs'
-#textdir = '../../MTE-corpus/lpsc15-text'
-#pdfdir  = '../../pdfs/lpsc16-pdfs'
-#textdir = '../../MTE-corpus/lpsc16-text'
-
 def main(pdfdir, textdir):
 
     dirlist = [fn for fn in os.listdir(pdfdir) if

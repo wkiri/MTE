@@ -10,7 +10,11 @@
 # Copyright notice at bottom of file.
 
 import sys, os
+# The following two lines make CoreNLP happy
+reload(sys)
+sys.setdefaultencoding('UTF8')
 import json
+import urllib
 from pycorenlp import StanfordCoreNLP
 from brat_annotation import BratAnnotation
 import itertools
@@ -21,7 +25,10 @@ def pretty_print(json_obj):
 
 #indirname  = '../corpus-LPSC/lpsc15-C-raymond-sol1159'
 #indirname  = '../corpus-LPSC/lpsc15-C-raymond-sol1159-v2'
-indirname  = '../corpus-LPSC/lpsc16-C-raymond'
+indirname  = '../corpus-LPSC/lpsc15-C-raymond-sol1159-v3-utf8'
+#indirname  = '../corpus-LPSC/lpsc16-C-raymond'
+#indirname  = '../corpus-LPSC/lpsc16-C-raymond-sol1159-utf8'
+
 dirlist = [fn for fn in os.listdir(indirname) if
            fn.endswith('.txt') and len(fn) == 8]  # assume ????.txt
 dirlist.sort()
@@ -29,7 +36,8 @@ dirlist.sort()
 corenlp = StanfordCoreNLP('http://localhost:9000')
 # Specify CoreNLP properties
 props = { 'annotators': 'ssplit',
-          'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
+          #'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
+          'ner.model': 'ner_62r15v3_emt_gazette.ser.gz',
           'outputFormat': 'json'}
 
 print 'Processing %d documents. ' % len(dirlist)
@@ -105,8 +113,10 @@ for fn in dirlist:
         print
 
     # Process text with CoreNLP to split by sentences
+    # Quote (with percent-encoding) reserved characters in URL for CoreNLP
+    text = urllib.quote(text)
     doc = corenlp.annotate(text, properties=props)
-    pretty_print(doc)
+    #pretty_print(doc)
 
     # For each 'contains' relation (actually an event), 
     # does it cross sentences?
@@ -123,13 +133,15 @@ for fn in dirlist:
             tg_s_id = get_sentence(tg_ann, doc)
             if tg_s_id == -1:
                 print 'Error: could not find %s.' % tg_ann.name
-                sys.exit(1)
+                continue
+                #sys.exit(1)
 
             ct_ann = [c for c in anchors if c.annotation_id == ct][0]
             ct_s_id = get_sentence(ct_ann, doc)
             if ct_s_id == -1:
                 print 'Error: could not find %s.' % ct_ann.name
-                sys.exit(1)
+                continue
+                #sys.exit(1)
 
             if tg_s_id != ct_s_id:
                 crossing += 1

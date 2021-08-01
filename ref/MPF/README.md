@@ -2,6 +2,8 @@
 - MPF-targets.txt: unique superset of MPF target lists from individual
 sources (papers, images) - create by:
   cat MPF-targets-*.txt | sort | uniq  > MPF-targets.txt
+- MPF-targets.gaz.txt: CoreNLP gazette format - created with
+  (cat MPF-targets.txt | while read line ; do echo "Target $line" ; done ) > MPF-targets.gaz.txt
 - MPF-horizon.txt: unique superset of MPF horizon lists from individual
 sources (papers, images)
 - MPF-location.txt: unique superset of MPF location lists from individual

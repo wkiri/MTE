@@ -4,6 +4,9 @@ MSL target files:
 - chemcam-targets-sol1159.txt: Through sol 1159 (November 2015)
 - chemcam-targets-sol0707.txt: Through sol 707 (August 2014)
 
+Convert to CoreNLP gazette:
+- (cat target-file.txt | while read line ; do echo "Target $line"; done ) > target-file.gaz.txt
+
 Source:
 http://pds-geosciences.wustl.edu/msl/msl-m-chemcam-libs-4_5-rdr-v1/mslccm_1xxx/document/msl_ccam_obs.csv
 

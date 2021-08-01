@@ -8,6 +8,7 @@
 # Copyright notice at bottom of file.
 
 import sys, os, io
+import urllib
 # The following two lines make CoreNLP happy
 reload(sys)
 sys.setdefaultencoding('UTF8')
@@ -178,6 +179,8 @@ def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
             #  which will mismatch the character offsets
 
         # Running CoreNLP on Document
+        # Quote (with percent-encoding) reserved characters in URL for CoreNLP
+        text = urllib.quote(text)
         doc = corenlp_server.annotate(text, properties=props)
 
         with io.open(os.path.join(out_path, out_fn), 'w', 
