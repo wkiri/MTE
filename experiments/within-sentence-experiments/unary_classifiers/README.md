@@ -58,7 +58,7 @@ Next we'll need to train a Containee model, which identifies if a Component is c
 
 which would be described one by one in the following sections.
 
-#### 2.1. Generate Training, Dev and Testing Data For Containee
+### 2.1. Generate Training, Dev and Testing Data For Containee
 We'll first generate training, dev and testing data for Containee, where each Component is assigned a label indicating whether the Component is contained by some Target in the same sentence.  Generated data would be put in `ins/train`, `ins/dev` and `ins/test`.
 
     cd containee 
@@ -69,7 +69,7 @@ We'll first generate training, dev and testing data for Containee, where each Co
     --test_inlist ../data/test.list \
     --max_len 512
 
-#### 2.2. Train Containee 
+### 2.2. Train Containee 
 As data has been generated, we now train a Containee model. 
 
     python3 train.py  \
@@ -79,7 +79,7 @@ As data has been generated, we now train a Containee model.
     --epoch 10 \
     --model_save_dir ./temp
 
-#### 2.3. Test Containee 
+### 2.3. Test Containee 
 After training, we use Containee to make predictions for Dev and Test data. Predictions would be stored in `temp/dev/components.pred` and `temp/test/components.pred` (in pickle format).
 
 + Predict for Dev data: 
@@ -114,7 +114,7 @@ Next we'll need to train a Container, which identifies if a Target contains some
 + 3.2. Train a Container
 + 3.3. use trained Container to make inference over Test data. 
 
-#### 3.1. Generate Training, Dev and Testing Data For Container
+### 3.1. Generate Training, Dev and Testing Data For Container
 
     cd container 
     
@@ -124,7 +124,7 @@ Next we'll need to train a Container, which identifies if a Target contains some
     --test_inlist ../data/test.list \
     --max_len 512
 
-#### 3.2. Train Container 
+### 3.2. Train Container 
 As data has been generated, we now train a Container model. 
 
     python3 train.py  \
@@ -134,7 +134,7 @@ As data has been generated, we now train a Container model.
     --epoch 10 \
     --model_save_dir ./temp
 
-#### 3.3. Test Container 
+### 3.3. Test Container 
 After training, we use Container to make predictions for Dev and Test data. Predictions would be stored in `temp/dev/targets.pred` and `temp/test/targets.pred` (in pickle format).
 
 + Predict for Dev data: 
@@ -165,7 +165,7 @@ Finally, let's go back to the parent directory:
 
 So far we have used Containee to find Components that are contained (**Containee instances**) and Container to find Targets that contain (**Container instances**). Our final goal is to extract relations (Target, Contains, Component). As a result, we need another step to form relations from these Containee and Container instances, codes of which are in `unary_relation_extraction`. 
 
-#### 4.1. Extract Relations
+### 4.1. Extract Relations
 
 Let's first move into the folder by: 
 ```
@@ -194,7 +194,7 @@ The following script shows the command to predict relations using `targets.pred`
     --outdir ./temp/test 
     ``` 
 
-#### 4.2. Evaluate Extracted Relations
+### 4.2. Evaluate Extracted Relations
 
 Once relations are extracted, we proceed to evaluate them against the gold relations in 2 steps: 
 
