@@ -14,7 +14,8 @@ reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 
 #accept_labels = set(['Element', 'Mineral', 'Target', 'Material', 'Locality', 'Site'])
-accept_labels = set(['Element', 'Mineral', 'Target'])
+#accept_labels = set(['Element', 'Mineral', 'Target'])
+accept_labels = set(['Element', 'Mineral', 'Target', 'Property'])
 #accept_labels = set(['Target'])
 
 class BratToNerConverter(object):
