@@ -21,8 +21,9 @@ def train_ner(tsv_file, corenlp_file, gazette_file, model_file):
     custom_args += '-gazette %s ' % gazette_file
     custom_args += '-serializeTo %s ' % model_file
 
-    cmd = ('java -mx5g -cp ".:%s/*" edu.stanford.nlp.ie.crf.CRFClassifier -prop %s %s' % 
+    cmd = ('java -mx60g -cp ".:%s/*" edu.stanford.nlp.ie.crf.CRFClassifier -prop %s %s' % 
            (corenlp, corenlp_file, custom_args))
+    print(cmd)
     corenlp_log = 'corenlp-train.log'
     corenlp_logf = open(corenlp_log, 'w')
     print('Training CoreNLP NER model... ')
@@ -59,7 +60,7 @@ def main(doc_file, corenlp_file, gazette_file, model_file,
     train = True
     if os.path.exists(model_file):
         print('Model file %s exists.' % model_file)
-        ans = raw_input(' Do you want to re-train it? [y/n]')
+        ans = raw_input(' Do you want to re-train it? [y/n] ')
         if ans not in ['y', 'Y']:
             train = False
     if train:
@@ -72,6 +73,7 @@ def main(doc_file, corenlp_file, gazette_file, model_file,
 
         cmd = ('java -cp ".:%s/*" edu.stanford.nlp.ie.crf.CRFClassifier %s' %
                (corenlp, custom_args))
+        print(cmd)
         corenlp_log = 'corenlp-test.log'
         corenlp_logf = open(corenlp_log, 'w')
         print('Testing CoreNLP NER model... ')
