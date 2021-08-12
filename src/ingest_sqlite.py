@@ -187,7 +187,7 @@ def update_targets_with_JSRE(rec, mission):
     return rec
 
 
-def main(jsonfile, dbfile, ndocs, year, mission):
+def main(jsonfile, dbfile, ndocs, year, mission, venue):
 
     # Check arguments
     if not os.path.exists(jsonfile):
@@ -203,8 +203,9 @@ def main(jsonfile, dbfile, ndocs, year, mission):
     # Read in the basic info
     recs = read_json(jsonfile, ndocs, year, mission)
     # Update individual fields
-    recs = map(construct_doc_url, recs)
-    recs = map(update_doc_venue, recs)
+    if venue.lower() == 'lpsc':
+        recs = map(construct_doc_url, recs)
+        recs = map(update_doc_venue, recs)
     recs = map(update_primary_author, recs)
     recs = map(update_authors, recs)
     recs = map(functools.partial(update_targets_with_JSRE, mission=mission), recs)
@@ -232,6 +233,12 @@ if __name__ == '__main__':
                         help='Year for all documents (if needed to specify, e.g. for MSL)')
     parser.add_argument('-m', '--mission', default='',
                         help='Mission { mpf, phx, spi, opp, msl }')
+    parser.add_argument('-v', '--venue', choices=['lpsc', 'others'],
+                        default='others',
+                        help='The venue of the documents. The list of accepted '
+                             'values is [lpsc, others]. The default is others. '
+                             'If lpsc is provided, then the script will '
+                             'populate the doc_url and venue fields. ')
 
     args = parser.parse_args()
     main(**vars(args))
