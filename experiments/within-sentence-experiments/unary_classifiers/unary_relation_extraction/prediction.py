@@ -156,6 +156,9 @@ def get_closest_container(targets, components, break_tie = False, break_tie_by_p
             min_dist = None
             if component.pred_relation_label == 'Contains':
                 for target in targets:
+
+                    if target.pred_relation_label != 'Contains':
+                        continue
                     tidx = (target.sent_start_idx, target.sent_end_idx)
                     dist = get_word_dist(tidx, cidx)
                     is_closest = False
@@ -190,6 +193,9 @@ def get_closest_containee(targets, components):
             min_dist = None
             if target.pred_relation_label == 'Contains':
                 for component in components:
+
+                    if component.pred_relation_label != 'Contains':
+                        continue
                     cidx = (component.sent_start_idx, component.sent_end_idx)
                     dist = get_word_dist(tidx, cidx)
                     is_closest = False

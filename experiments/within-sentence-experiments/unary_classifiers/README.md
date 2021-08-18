@@ -76,7 +76,7 @@ As data has been generated, we now train a Containee model.
     --train_dir ins/train \
     --val_dir ins/dev/gold_ner  \
     --lr 0.00001 \
-    --epoch 10 \
+    --epoch 20  \
     --model_save_dir ./temp
 
 ### 2.3. Test Containee 
