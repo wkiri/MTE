@@ -11,6 +11,11 @@
   cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt PHX/PHX-targets.gaz.txt > PHX_targets_minerals-2017-05_elements.gaz.txt
 - MERA_targets_minerals-2017-05_elements.gaz.txt - created by:
   cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt MER/MERA-targets-final.gaz.txt > MERA_targets_minerals-2017-05_elements.gaz.txt
+- (MSL) targets_minerals-2017-05_elements.gaz.txt - starting target
+  list from MSL/chemcam-targets-sol1647.txt, but also contains
+  variants with spaces instead of underscores between words
+- all_targets_minerals-2017-05_elements.gaz.txt - created by:
+  cat MPF/MPF-targets.gaz.txt PHX/PHX-targets.gaz.txt MER/MERA-targets-final.gaz.txt MSL/chemcam-targets-sol1647.gaz.txt element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt > all_targets_minerals-2017-05_elements.gaz.txt
 
 # Elements
 Best list to use is marked with **.
@@ -50,3 +55,4 @@ due to parse errors)
   combining */*-property-final.txt and the following files:)
 - property-basilisk-PHX.txt (properties approved from Basilisk's list)
 - property-manual-MPF.txt (manually added properties in MPF docs)
+
