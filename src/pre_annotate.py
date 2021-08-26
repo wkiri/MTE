@@ -324,8 +324,8 @@ def main(textdir, anndir, elementfile, mineralfile, IMAmineralfile,
 
         with io.open(annfile, 'a', encoding='utf8') as outf:
             #start_t = pre_annotate(chars, elements, 'Element', outf, start_t)
-            #start_t = pre_annotate(chars, targets,  'Target',  outf, start_t)
-            start_t = pre_annotate(chars, properties,  'Property',  outf, start_t)
+            start_t = pre_annotate(chars, targets,  'Target',  outf, start_t)
+            #start_t = pre_annotate(chars, properties,  'Property',  outf, start_t)
             #        start_t = pre_annotate(chars, mer_targets,     'Target',  outf, start_t)
             #        start_t = pre_annotate_suffix(chars, 'ite', 6, nonminerals, 'Mineral', outf, start_t)
             #start_t = pre_annotate(chars, minerals, 'Mineral', outf, start_t)
