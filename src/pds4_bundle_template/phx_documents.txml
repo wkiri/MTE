@@ -134,7 +134,7 @@
                     <field_number>5</field_number>
                     <data_type>UTF8_String</data_type>
                     <maximum_field_length unit="byte">$table['max_field_len_5']</maximum_field_length>
-                    <description>last name of first author</description>
+                    <description>primary author name</description>
                 </Field_Delimited>
                 <Field_Delimited>
                     <name>year</name>
