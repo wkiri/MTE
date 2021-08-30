@@ -235,8 +235,6 @@ class CoreNLPParser(Parser):
                                                          self.gazette_targets)
 
             # Remove duplicates
-            for m in matching_targets:
-                print(m)
             for target_dict in matching_targets:
                 for name_dict in new_names:
                     if target_dict['label'] == name_dict['label'] and \
