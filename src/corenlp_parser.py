@@ -246,6 +246,22 @@ class CoreNLPParser(Parser):
                         matching_targets.remove(target_dict)
                         break
 
+            if len(matching_targets) > 0:
+                # Update the token 'ner' fields too
+                tokenlists = [s['tokens'] for s in output['sentences']]
+                for target_dict in matching_targets:
+                    tokens = itertools.chain.from_iterable(tokenlists)
+                    # Targets can be multi-word, but we need to annotate tokens.
+                    # We will make an assumption that any token in the valid range
+                    # with a matching term should be updated.
+                    match_tokens = [t for t in tokens 
+                                    if (t['characterOffsetBegin'] >= target_dict['begin'] and \
+                                        t['characterOffsetEnd'] <= target_dict['end'] and \
+                                        t['originalText'] in target_dict['text'])]
+                    for t in match_tokens:
+                        t['ner'] = target_dict['label']
+                        #print('Updated %s to %s' % (t['originalText'], target_dict['label']))
+
             # Combine NER items and gazette targets
             new_names += matching_targets
 
