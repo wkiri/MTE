@@ -192,8 +192,8 @@ class JsreParser(CoreNLPParser):
             })
 
         jsre_out_file.close()
-        # os.remove(in_file)
-        # os.remove(out_file)
+        os.remove(in_file)
+        os.remove(out_file)
 
         return {
             'ner': corenlp_dict['ner'],
