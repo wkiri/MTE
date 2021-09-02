@@ -135,8 +135,9 @@ class JsreParser(CoreNLPParser):
             records.extend(recs)
 
         contains_relation = list()
-        in_file = '%s/jsre_input.txt' % self.jsre_tmp_dir
-        out_file = '%s/jsre_output.txt' % self.jsre_tmp_dir
+        pid = os.getpid()
+        in_file = '%s/jsre_input_pid_%d.txt' % (self.jsre_tmp_dir, pid)
+        out_file = '%s/jsre_output_pid_%d.txt' % (self.jsre_tmp_dir, pid)
 
         if len(records) == 0:
             return {
@@ -191,8 +192,8 @@ class JsreParser(CoreNLPParser):
             })
 
         jsre_out_file.close()
-        os.remove(in_file)
-        os.remove(out_file)
+        # os.remove(in_file)
+        # os.remove(out_file)
 
         return {
             'ner': corenlp_dict['ner'],
