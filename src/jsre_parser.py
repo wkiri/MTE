@@ -138,11 +138,21 @@ class JsreParser(CoreNLPParser):
         in_file = '%s/jsre_input.txt' % self.jsre_tmp_dir
         out_file = '%s/jsre_output.txt' % self.jsre_tmp_dir
 
+        if len(records) == 0:
+            return {
+                'ner': corenlp_dict['ner'],
+                'sentences': corenlp_dict['sentences'],
+                'relation': contains_relation,
+                'X-Parsed-By': JsreParser.JSRE_PARSER
+            }
+
         with io.open(in_file, 'w', encoding='utf8') as f:
             for r in records:
                 f.write(r)
 
+        # Call jSRE to make predictions for NER items
         self.predict(in_file, out_file)
+
         if not os.path.exists(out_file):
             warnings.warn('jSRE output file not found, which indicates jSRE '
                           'run may be failed.')
