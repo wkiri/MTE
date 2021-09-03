@@ -207,3 +207,13 @@ def canonical_property_name(name):
     return name.lower()
 
 
+def canonical_component_name(name):
+    """
+    This function gets canonical name for a component (either element/mineral):
+    """
+    # remove hypen, unserscore, and extra space
+    name = " ".join(re.sub(r"[-_]", " ",name).split())
+    name = " ".join([canonical_name(k) for k in name.split()])
+    return name
+
+
