@@ -26,11 +26,10 @@ class JsreParser(CoreNLPParser):
     """
     JSRE_PARSER = "org.itc.irst.tcc.sre.Predict"
 
-    def __init__(self, corenlp_server_url, ner_model, jsre_root, jsre_model,
-                 jsre_tmp_dir='/tmp'):
+    def __init__(self, corenlp_server_url, ner_model, gazette_file, jsre_root,
+                 jsre_model, jsre_tmp_dir='/tmp'):
         super(JsreParser, self).__init__(corenlp_server_url, ner_model,
-                                         'jsre_parser')
-
+                                         gazette_file, 'jsre_parser')
         self.jsre_root = jsre_root
         self.jsre_model = jsre_model
         self.jsre_tmp_dir = jsre_tmp_dir
@@ -136,14 +135,25 @@ class JsreParser(CoreNLPParser):
             records.extend(recs)
 
         contains_relation = list()
-        in_file = '%s/jsre_input.txt' % self.jsre_tmp_dir
-        out_file = '%s/jsre_output.txt' % self.jsre_tmp_dir
+        pid = os.getpid()
+        in_file = '%s/jsre_input_pid_%d.txt' % (self.jsre_tmp_dir, pid)
+        out_file = '%s/jsre_output_pid_%d.txt' % (self.jsre_tmp_dir, pid)
+
+        if len(records) == 0:
+            return {
+                'ner': corenlp_dict['ner'],
+                'sentences': corenlp_dict['sentences'],
+                'relation': contains_relation,
+                'X-Parsed-By': JsreParser.JSRE_PARSER
+            }
 
         with io.open(in_file, 'w', encoding='utf8') as f:
             for r in records:
                 f.write(r)
 
+        # Call jSRE to make predictions for NER items
         self.predict(in_file, out_file)
+
         if not os.path.exists(out_file):
             warnings.warn('jSRE output file not found, which indicates jSRE '
                           'run may be failed.')
@@ -194,8 +204,8 @@ class JsreParser(CoreNLPParser):
 
 
 def process(in_file, in_list, out_file, log_file, tika_server_url,
-            corenlp_server_url, ner_model, jsre_root, jsre_model, jsre_tmp_dir,
-            ads_url, ads_token):
+            corenlp_server_url, ner_model, gazette_file, jsre_root, jsre_model,
+            jsre_tmp_dir, ads_url, ads_token):
     # Log input parameters
     logger = LogUtil(log_file)
     logger.info('Input parameters')
@@ -205,6 +215,7 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
     logger.info('tika_server_url: %s' % tika_server_url)
     logger.info('corenlp_server_url: %s' % corenlp_server_url)
     logger.info('ner_model: %s' % os.path.abspath(ner_model))
+    logger.info('gazette_file: %s' % gazette_file)
     logger.info('jsre_root: %s' % os.path.abspath(jsre_root))
     logger.info('jsre_model: %s' % os.path.abspath(jsre_model))
     logger.info('jsre_tmp_dir: %s' % os.path.abspath(jsre_tmp_dir))
@@ -216,8 +227,8 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
         sys.exit(1)
 
     ads_parser = AdsParser(ads_token, ads_url, tika_server_url)
-    jsre_parser = JsreParser(corenlp_server_url, ner_model, jsre_root,
-                             jsre_model, jsre_tmp_dir)
+    jsre_parser = JsreParser(corenlp_server_url, ner_model, gazette_file,
+                             jsre_root, jsre_model, jsre_tmp_dir)
 
     if in_file:
         files = [in_file]
@@ -265,6 +276,9 @@ if __name__ == '__main__':
                         help='CoreNLP Server URL')
     parser.add_argument('-n', '--ner_model', required=False,
                         help='Path to a Named Entity Recognition (NER) model')
+    parser.add_argument('-g', '--gazette_file', required=False,
+                        help='Path to a gazette file that consists of '
+                             '"Entity_type Entity_name" pairs')
     parser.add_argument('-jr', '--jsre_root', default='/proj/mte/jSRE/jsre-1.1',
                         help='Path to jSRE installation directory. Default is '
                              '/proj/mte/jSRE/jsre-1.1')
