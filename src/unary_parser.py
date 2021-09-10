@@ -653,13 +653,13 @@ class UnaryParser(CoreNLPParser):
                         for each Container instance, link it to its closest Component instance with a Contains relation,
                     closest_target:
                         for each Containee instance, link it to its closest Target instance with a Contains relation
-                    union_closest_containee_closest_container:
+                    closest_container_closest_containee:
                         union the relation instances found by closest_containee and closest_container
         """
 
         entity_linking_methods = [
             'closest_container_closest_containee',
-            'closest_target_closest_component'
+            'closest_target_closest_component',
             'closest_containee',
             'closest_container',
             'closest_component',
