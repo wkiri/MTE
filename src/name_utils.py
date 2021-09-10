@@ -181,7 +181,7 @@ def canonical_name(name):
 def canonical_target_name(name):
     """
     Gets canonical target name: title case, replace spaces and dashes
-    with underscore.  Aliases are expanded using tagettab.
+    with underscore.  Aliases are expanded using targettab.
     :param name - name whose canonical name is to be looked up
     :return canonical name
     """
