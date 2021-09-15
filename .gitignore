@@ -1,3 +1,4 @@
+sftp-config.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -19,6 +20,7 @@ text/lpsc15/*.cases
 *aux
 *bbl
 *blg
+
 
 # C extensions
 *.so
@@ -73,3 +75,14 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# cross-sentence relation extraction
+experiments/cross-sentence
+experiments/within-sentence-experiments/jsre
+experiments/within-sentence-experiments/parse_with_ner.props
+experiments/within-sentence-experiments/train_ner.props
+experiments/within-sentence-experiments/train_ner.sh
+experiments/within-sentence-experiments/experiment.bash
+experiments/within-sentence-experiments/get_env.sh
+
+

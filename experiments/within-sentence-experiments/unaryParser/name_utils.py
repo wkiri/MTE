@@ -1,4 +1,12 @@
-# -*- coding: utf-8 -*-
+# python3
+# name_utils.py
+# Mars Target Encyclopedia
+# This script is modified based on MTE/src/name_utils.py.  
+#
+# Yuan Zhuang
+# July 30, 2021
+# Copyright notice at bottom of file.
+
 import re
 import string
 import sys
@@ -184,7 +192,7 @@ def canonical_name(name):
 def canonical_target_name(name):
     """
     Gets canonical target name: title case, replace spaces and dashes
-    with underscore.  Aliases are expanded using targettab.
+    with underscore.  Aliases are expanded using tagettab.
     :param name - name whose canonical name is to be looked up
     :return canonical name
     """
@@ -212,14 +220,15 @@ def canonical_property_name(name):
     name = name.strip()
     return name.lower()
 
-
-def canonical_component_name(name):
-    """
-    This function gets canonical name for a component (either element/mineral):
-    """
-    # remove hypen, unserscore, and extra space
-    name = " ".join(re.sub(r"[-_]", " ",name).split())
-    name = " ".join([canonical_name(k) for k in name.split()])
-    return name
-
+# Copyright 2021, by the California Institute of Technology. ALL
+# RIGHTS RESERVED. United States Government Sponsorship
+# acknowledged. Any commercial use must be negotiated with the Office
+# of Technology Transfer at the California Institute of Technology.
+#
+# This software may be subject to U.S. export control laws and
+# regulations.  By accepting this document, the user agrees to comply
+# with all applicable U.S. export laws and regulations.  User has the
+# responsibility to obtain export licenses, or other export authority
+# as may be required before exporting such information to foreign
+# countries or providing access to foreign persons.
 
