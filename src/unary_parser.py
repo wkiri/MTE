@@ -175,7 +175,7 @@ def truncate(temp_prespan_ids, temp_posspan_ids, num_cut):
 
 
 class Span_Instance:
-    def __init__(self, venue, year, docname, doc_start_char, doc_end_char, text, ner_label, sent_toks=None, sentid=None,
+    def __init__(self, venue, year, docname, doc_start_char, doc_end_char, text, ner_label,ori_ner_label, sent_toks=None, sentid=None,
                  sent_start_idx=None, sent_end_idx=None):
         """
         This class is designed to store information for an entity such as Target, Element and Component
@@ -194,6 +194,9 @@ class Span_Instance:
                 text of the entity
             ner_label:
                 ner label of the entity
+            ori_ner_label:
+                original ner label of the entity before "Element" and "Mineral"
+                are changed to "Component"
             sent_toks:
                 list of words of the sentence that contains the entity
             sentid:
@@ -214,6 +217,7 @@ class Span_Instance:
         self.doc_end_char = doc_end_char
         self.text = text
         self.ner_label = ner_label
+        self.ori_ner_label = ori_ner_label
         self.std_text = old_canonical_target_name(
             self.text) if self.ner_label == "Target" else canonical_component_name(self.text)
         self.sent_toks = sent_toks
@@ -590,7 +594,8 @@ class UnaryParser(CoreNLPParser):
                     "sent_start_idx": int(tokidx),
                     "sent_end_idx": int(tokidx) + 1,
                     "sentid": int(sentid),
-                    "label": token['ner']
+                    "label": token['ner'],
+                    "ori_label": token['ner']
                 }
                 self.add_entities(sent_entities, entity)
             if use_component:
@@ -608,7 +613,8 @@ class UnaryParser(CoreNLPParser):
                         "sent_start_idx": int(tokidx),
                         "sent_end_idx": int(tokidx) + 1,
                         "sentid": int(sentid),
-                        "label": 'Component' if token['ner'] in ['Element', 'Mineral'] else token['ner']
+                        "label": 'Component' if token['ner'] in ['Element', 'Mineral'] else token['ner'],
+                        "ori_label": token['ner']
                     }
                     self.add_entities(new_sent_entities, entity)
 
@@ -710,7 +716,7 @@ class UnaryParser(CoreNLPParser):
             for e in sent_entities:
                 # e doesn't have any venue, year and docname, since they are not provided in the arguments. So just assign a 'None' to these.
                 span = Span_Instance('None', 'None', 'None', e['doc_start_char'], e['doc_end_char'], e['text'],
-                                     e['label'], sent_toks=deepcopy(sent_toks), sentid=sentid,
+                                     e['label'], e['ori_label'], sent_toks=deepcopy(sent_toks), sentid=sentid,
                                      sent_start_idx=e['sent_start_idx'], sent_end_idx=e['sent_end_idx'])
 
                 # insert type markers
@@ -779,7 +785,7 @@ class UnaryParser(CoreNLPParser):
                 'target_ids': ['%s_%d_%d' % (target.ner_label.lower(),
                                              target.doc_start_char,
                                              target.doc_end_char)],
-                'cont_ids': ['%s_%d_%d' % (component.ner_label.lower(),
+                'cont_ids': ['%s_%d_%d' % (component.ori_ner_label.lower(),
                                            component.doc_start_char,
                                            component.doc_end_char)],
                 'sentence': ' '.join([t['originalText']
