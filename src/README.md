@@ -1,8 +1,8 @@
 ## MTE Source Code
 
+The MTE parses PDF documents and stores information in a JSONL file.  This file can be used to generate an interactive annotated corpus (e.g., for manual review and editing of the extracted information) and/or an SQLite database to support search queries.
 
-
-### MTE parser pipeline
+### 1. MTE parser pipeline
 
 The MTE parser pipeline consists of 7 parsers. In this section, only the LPSC and paper parsers are introduced because they most likely will be used more frequently than other parsers. To see the details of all parsers, please check the [MTE parser wiki document](https://github.com/wkiri/MTE/wiki/MTE-Parsers). Each parser script contians (1) the actual parsing methods and (2) a "main" function that processes the input documents to the output jsonl file.   
 
@@ -57,3 +57,39 @@ python paper_parser.py -li /PATH/TO/LIST/OF/PDF/FILES -o /PATH/TO/OUTPUT/JSONL/F
 
 1. If the documents that we want to process are all from LPSC, then use `lpsc_parser.py`.
 2. If the documents that we want to process are from different journals, then use `paper.py`.
+
+### 2. Visualize and review extracted information
+
+The `json2brat.py` script reads the JSON file and writes the content out in the format used by the [brat](https://brat.nlplab.org/) annotation tool.  
+
+```Console
+$ python json2brat.py $JSON_FILE $BRAT_DIR
+```
+
+The result is a collection in `$BRAT_DIR` that consists of two files for each source document:
+* `file.txt`: the parsed text contents for the document
+* `file.ann`: brat-format annotations containing entities and relations
+
+After installing brat and putting `$BRAT_DIR` within its `data/` directory, you should be able to browse and interactively edit the annotations.
+
+### 3. Store reviewed information in a database
+
+Once the content has been reviewed, you can generate a final SQLite database by combining the JSON file and reviewed brat `.ann` files.  Assuming you have a `$JSON_FILE` and want to write to `$DB_FILE` for mission `$MISSION$`, create the initial database with:
+
+```Console
+$ python ingest_sqlite.py $JSON_FILE -d $DB_FILE -m $MISSION > ingest-DB.log
+```
+
+If your documents are from LPSC, please include the `-v lpsc` option for better population of document metadata:
+
+```Console
+$ python ingest_sqlite.py $JSON_FILE -d $DB_FILE -v lpsc -m $MISSION > ingest-DB.log
+```
+
+Then update the database with the brat annotations in `$ANN_DIR`, ascribing credit to `$REVIEWER`:
+
+```Console
+$ python update_sqlite.py -r $REVIEWER $ANN_DIR $DB_FILE $MISSION -ro > update-DB.log
+```
+
+The `-ro` option removes orphaned documents, etc. (i.e., documents that have no relevant targets or relations).
