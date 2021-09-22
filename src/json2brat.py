@@ -8,7 +8,7 @@
 
 import sys, os, shutil, io
 import json
-from ioutils import read_jsonlines
+from io_utils import read_jsonlines
 
 def usage():
     print './json2brat.py <JSON file> <output dir>'
@@ -152,6 +152,7 @@ def convert_json_to_brat(jsonfile, outdir):
 
                 for c in r['cont_ids']:
                     if '_'.join(c.split('_')[:2]) not in ner_dict:
+                        print('%s: Unknown entity: %s' % (res_name, c))
                         break
                     # Use only the start of the span
                     t = '_'.join(t.split('_')[:2])
