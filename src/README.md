@@ -80,7 +80,7 @@ Once the content has been reviewed, you can generate a final SQLite database by 
 $ python ingest_sqlite.py $JSON_FILE -d $DB_FILE -m $MISSION > ingest-DB.log
 ```
 
-If your documents are from LPSC, please include the `-v lpsc` option for better population of document metadata:
+If your documents are from LPSC, please include the `-v lpsc` option to populate the `venue` (including abstract id) and `doc_url` fields for each document:
 
 ```Console
 $ python ingest_sqlite.py $JSON_FILE -d $DB_FILE -v lpsc -m $MISSION > ingest-DB.log
