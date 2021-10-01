@@ -19,7 +19,7 @@ SUPPORTED_LABELS = ['Target', 'Element', 'Mineral', 'Property', 'Contains',
 
 
 class BratDocument(object):
-    def __init__(self, ann_path, txt_path, doc_id, mission, reviewer=''):
+    def __init__(self, ann_path, txt_path, doc_id='', mission='', reviewer=''):
         self.ann_path = ann_path
         self.txt_path = txt_path
         self.doc_id = doc_id
@@ -64,6 +64,11 @@ class BratDocument(object):
                                os.path.abspath(self.txt_path))
 
         return file_content[0].decode('utf8')
+
+    def get_ann_by_id(self, ann_id):
+        for ann in self.ann_content:
+            if ann.ann_id == ann_id:
+                return ann
 
 
 class BratAnnotation:
