@@ -9,12 +9,16 @@
 
 import os
 import io
+import re
 import sys
-import json
+import copy
 import urllib
+import itertools
 from tqdm import tqdm
 from pycorenlp import StanfordCoreNLP
 from brat_annotation_sqlite import BratDocument
+from brat_annotation_sqlite import TYPE_ENTITY
+from brat_annotation_sqlite import TYPE_RELATION
 
 
 def init_corenlp(corenlp_url):
@@ -32,87 +36,235 @@ def init_corenlp(corenlp_url):
     return corenlp, props
 
 
-def has_item_of_interest(sentence, brat_ann, accept_entity_types):
-    # Keep only entity annotations in the accepted entity types
-    entity_ann = [ann for ann in brat_ann if ann.label in accept_entity_types]
+def generate_examples(sentence, relevant_ann, fn_base, out_file):
+    example_counter = 0
 
-    for token in sentence['tokens']:
-        offset_begin = token['characterOffsetBegin']
-        offset_end = token['characterOffsetEnd']
-        word = token['originalText']
+    # Step 1: Generate all positive relation examples within the sentence. Note
+    # that there could be more than one positive relations in one sentence.
+    example_counter = generate_positive_examples(sentence, relevant_ann,
+                                                 example_counter, fn_base,
+                                                 out_file)
 
-        for ann in entity_ann:
-            if ann.start == offset_begin and ann.end == offset_end and \
-                    ann.name == word:
-                return True
-
-    return False
+    # Step 2: Generate all negative relation examples within the sentence. Note
+    # that there could be more than one negative relations in one sentence.
+    generate_negative_examples(sentence, relevant_ann, example_counter, fn_base,
+                               out_file)
 
 
-def has_relation(sentence, brat_doc, relation_type):
-    # The sentence doesn't have relation if the entire document doesn't have
-    # relation
-    relation_ann = [ann for ann in brat_doc.ann_content
-                    if ann.label.lower() == relation_type]
+def get_ann_by_id(entity_ann_list, ann_id):
+    ret_entity_ann = None
+    for entity_ann in entity_ann_list:
+        if entity_ann.ann_id == ann_id:
+            ret_entity_ann = entity_ann
 
-    if len(relation_ann) == 0:
-        return False
+    return ret_entity_ann
+
+
+def remove_ann_by_id(ann_list, ann_id):
+    for entity_ann in ann_list:
+        if entity_ann.ann_id == ann_id:
+            ann_list.remove(entity_ann)
+            break
+
+
+def remove_nested_ann(entity_ann_list, relation_ann_list):
+    target_entity_list = [ann for ann in entity_ann_list if ann.label == 'Target']
+    active_entity_list = [ann for ann in entity_ann_list if ann.label != 'Target']
+    entity_pairs = itertools.product(target_entity_list, active_entity_list)
+
+    for target_entity, active_entity in entity_pairs:
+        if active_entity.name in target_entity.name and \
+                active_entity.start >= target_entity.start and \
+                active_entity.end <= target_entity.end:
+            entity_ann_list.remove(active_entity)
+
+            for relation_ann in list(relation_ann_list):
+                if active_entity.ann_id == relation_ann.arg2:
+                    relation_ann_list.remove(relation_ann)
+
+
+def get_entity_type_and_label(token, target_entity, active_entity,
+                              entity_ann_list):
+    entity_ann_list_copy = copy.deepcopy(entity_ann_list)
+    jsre_entity_type = 'O'
+    jsre_entity_label = 'O'
+
+    offset_begin = token['characterOffsetBegin']
+    offset_end = token['characterOffsetEnd']
+    word = token['originalText']
+
+    if offset_begin >= target_entity.start and \
+            offset_end <= target_entity.end and \
+            word.lower() in target_entity.name.lower():
+        jsre_entity_type = target_entity.label
+        jsre_entity_label = 'A'  # 'A' means jSRE agent
+    elif offset_begin >= active_entity.start and \
+            offset_end <= active_entity.end and \
+            word.lower() in active_entity.name.lower():
+        jsre_entity_type = active_entity.label
+        jsre_entity_label = 'T'  # 'T' means jSRE target
+    else:
+        remove_ann_by_id(entity_ann_list_copy, target_entity.ann_id)
+        remove_ann_by_id(entity_ann_list_copy, active_entity.ann_id)
+
+        for entity in entity_ann_list_copy:
+            if offset_begin >= entity.start \
+                    and offset_end <= entity.end and \
+                    word.lower() in entity.name.lower():
+                jsre_entity_type = entity.label
+
+    return jsre_entity_type, jsre_entity_label
+
+
+def get_sub_entity(target_entity):
+    # Split the target entity by space, hyphen, and underscore.
+    entity_tokens = re.split(' |-|_', target_entity.name)
+    if len(entity_tokens) == 0:
+        return target_entity
+
+    target_start = target_entity.start
+
+    sub_target_entity_list = list()
+    for idx, entity_token in enumerate(entity_tokens):
+        # Create an empty object-like function
+        sub_entity = lambda: None
+        sub_entity.ann_id = '%s_%d' % (target_entity.ann_id, idx)
+        sub_entity.name = entity_token
+        sub_entity.type = target_entity.type
+        sub_entity.label = target_entity.label
+        sub_entity.start = target_start + target_entity.name.index(entity_token)
+        sub_entity.end = sub_entity.start + len(entity_token)
+
+        sub_target_entity_list.append(sub_entity)
+
+    return sub_target_entity_list
+
+
+def generate_positive_examples(sentence, relevant_ann_list, example_counter,
+                               fn_base, out_file):
+    relation_ann_list = [ann for ann in relevant_ann_list
+                         if ann.type == TYPE_RELATION]
+    entity_ann_list = [ann for ann in relevant_ann_list
+                       if ann.type == TYPE_ENTITY]
+
+    if len(relation_ann_list) == 0:
+        return example_counter
 
     sentence_start = sentence['tokens'][0]['characterOffsetBegin']
     sentence_end = sentence['tokens'][-1]['characterOffsetEnd']
 
-    for rel_ann in relation_ann:
-        entity1 = brat_doc.get_ann_by_id(rel_ann.arg1)
-        entity2 = brat_doc.get_ann_by_id(rel_ann.arg2)
+    for relation_ann in relation_ann_list:
+        target_entity = get_ann_by_id(entity_ann_list, relation_ann.arg1)
+        active_entity = get_ann_by_id(entity_ann_list, relation_ann.arg2)
 
-        if entity1.start >= sentence_start and entity2.end <= sentence_end:
-            return True
+        if target_entity is None:
+            print '[WARNING] Cannot find entity %s used in relation %s' % \
+                  (relation_ann.arg1, relation_ann.ann_id)
+            continue
 
-    return False
+        if active_entity is None:
+            print '[WARNING] Cannot find entity %s used in relation %s' % \
+                  (relation_ann.arg2, relation_ann.ann_id)
+            continue
+
+        # If target and active entities are in the same sentence, generate a
+        # positive jsre example for the entity pair
+        if target_entity.start >= sentence_start and \
+                target_entity.end <= sentence_end and \
+                active_entity.start >= sentence_start and \
+                active_entity.end <= sentence_end:
+            # An entity could have multiple words (e.g., Scooby Doo).
+            # We need to split multi-words entity into multiple
+            # single-word entities. For example, the multi-words target
+            # entity Scooby Doo will be split into two single-word entities
+            # Scooby and Doo.
+            sub_target_entity_list = get_sub_entity(target_entity)
+            sub_active_entity_list = get_sub_entity(active_entity)
+            sub_entity_pairs = itertools.product(sub_target_entity_list,
+                                                 sub_active_entity_list)
+            for sub_target_entity, sub_active_entity in sub_entity_pairs:
+                example_body = ''
+
+                for token in sentence['tokens']:
+                    entity_type, entity_label = get_entity_type_and_label(token,
+                        sub_target_entity, sub_active_entity, entity_ann_list)
+
+                    example_body += '%d&&%s&&%s&&%s&&%s&&%s ' % (
+                        token['index'] - 1, token['word'], token['lemma'],
+                        token['pos'], entity_type, entity_label)
+
+                example_id = '%s_%d_%d' % (fn_base, sentence['index'],
+                                           example_counter)
+                example_counter += 1
+                # '1' means jSRE positive example
+                example = '%s\t%s\t%s\n' % ('1', example_id, example_body)
+                out_file.write(example)
+
+    return example_counter
 
 
-def generate_examples(example_id, sentence, brat_doc, relation_type,
-                      accept_entity_types):
-    # Keep only entity annotations in the accepted entity types
-    entity_ann = [ann for ann in brat_doc.ann_content
-                  if ann.label in accept_entity_types]
+def generate_negative_examples(sentence, relevant_ann_list, example_counter,
+                               fn_base, out_file):
+    sentence_start = sentence['tokens'][0]['characterOffsetBegin']
+    sentence_end = sentence['tokens'][-1]['characterOffsetEnd']
 
-    # 1 means positive example, and 0 means negative example
-    example_label = 0
-    example_body = ''
+    relation_ann_list = [ann for ann in relevant_ann_list
+                         if ann.type == TYPE_RELATION]
+    entity_ann_list = [ann for ann in relevant_ann_list
+                       if ann.type == TYPE_ENTITY and
+                       ann.start >= sentence_start and
+                       ann.end <= sentence_end]
+    target_ann_list = [ann for ann in entity_ann_list if ann.label == 'Target']
+    active_ann_list = [ann for ann in entity_ann_list if ann.label != 'Target']
 
-    if has_relation(sentence, brat_doc, relation_type):
-        example_label = 1
+    if len(target_ann_list) == 0 or len(active_ann_list) == 0:
+        return
 
-    for token in sentence['tokens']:
-        offset_begin = token['characterOffsetBegin']
-        offset_end = token['characterOffsetEnd']
-        word = token['originalText']
-
-        jsre_entity_type = 'O'
-        jsre_entity_label = 'O'
-        for ann in entity_ann:
-            if ann.start == offset_begin and ann.end == offset_end and \
-                    ann.name == word and ann.label == 'Target':
-                jsre_entity_label = 'A'
+    entity_pairs = itertools.product(target_ann_list, active_ann_list)
+    for target_entity, active_entity in entity_pairs:
+        skip_flag = False
+        for relation_ann in relation_ann_list:
+            if target_entity.ann_id == relation_ann.arg1 and \
+                    active_entity.ann_id == relation_ann.arg2:
+                # This is the pair to generate positive example or being skipped
+                # by the function that generates positive examples if the
+                # entities are not in the same sentence. Here, we skip it
+                # because we are generating negative examples.
+                skip_flag = True
                 break
-            elif ann.start == offset_begin and ann.end == offset_end and \
-                ann.name == word and (ann.label == 'Element' or
-                                      ann.label == 'Mineral' or
-                                      ann.label == 'Property'):
-                jsre_entity_label = 'T'
-                break
 
-        example_body += '%d&&%s&&%s&&%s&&%s&&%s ' % (token['index'] - 1,
-                                                     token['word'],
-                                                     token['lemma'],
-                                                     token['pos'],
-                                                     jsre_entity_type,
-                                                     jsre_entity_label)
+        if skip_flag:
+            continue
 
-    example = '%s\t%s\t%s\n' % (example_label, example_id, example_body)
+        # An entity could have multiple words (e.g., Scooby Doo).
+        # We need to split multi-words entity into multiple
+        # single-word entities. For example, the multi-words target
+        # entity Scooby Doo will be split into two single-word entities
+        # Scooby and Doo.
+        sub_target_entity_list = get_sub_entity(target_entity)
+        sub_active_entity_list = get_sub_entity(active_entity)
+        sub_entity_pairs = itertools.product(sub_target_entity_list,
+                                             sub_active_entity_list)
+        for sub_target_entity, sub_active_entity in sub_entity_pairs:
+            example_body = ''
 
-    return example
+            for token in sentence['tokens']:
+                entity_type, entity_label = get_entity_type_and_label(token,
+                    sub_target_entity, sub_active_entity, entity_ann_list)
+
+                example_body += '%d&&%s&&%s&&%s&&%s&&%s ' % (token['index'] - 1,
+                                                             token['word'],
+                                                             token['lemma'],
+                                                             token['pos'],
+                                                             entity_type,
+                                                             entity_label)
+
+            example_id = '%s_%d_%d' % (fn_base, sentence['index'],
+                                       example_counter)
+            example_counter += 1
+            # '0' means jSRE negative example
+            example = '%s\t%s\t%s\n' % ('0', example_id, example_body)
+            out_file.write(example)
 
 
 def main(relation_type, in_dir, out_dir, corenlp_url):
@@ -129,52 +281,51 @@ def main(relation_type, in_dir, out_dir, corenlp_url):
     corenlp, props = init_corenlp(corenlp_url)
 
     # Figure out entity types
-    accept_entity_types = ['Target']
+    accept_entity_types = list()
     if relation_type.lower() == 'contains':
         accept_entity_types.append('Element')
         accept_entity_types.append('Mineral')
     else:
         accept_entity_types.append('Property')
-    print 'Accepted entity types: %s' % json.dumps(accept_entity_types)
 
     # Get a list of all text documents
     in_files = [fn for fn in os.listdir(in_dir) if fn.endswith('.txt')]
     in_files.sort()
     print 'Number of documents to process: %d' % len(in_files)
 
-    for fn in tqdm(in_files, desc='Create jSRE examples', leave=True):
+    for fn in tqdm(in_files, desc='Create jSRE examples', leave=False):
         fn_base = fn[: fn.find('.txt')]
+        print 'Processing %s' % fn_base
+
         txt_fn = os.path.join(in_dir, '%s.txt' % fn_base)
         ann_fn = os.path.join(in_dir, '%s.ann' % fn_base)
         out_fn = os.path.join(out_dir, '%s-%s.examples' %
                               (fn_base, relation_type.lower()))
         out_file = io.open(out_fn, 'w', encoding='utf-8')
 
-        brat_doc = BratDocument(ann_fn, txt_fn)
+        brat_doc = BratDocument(ann_fn, txt_fn, canonical_mapping=False)
         if brat_doc.txt_content[0].isspace():
             brat_doc.txt_content = '.' + brat_doc.txt_content[1:]
 
         text = urllib.quote(brat_doc.txt_content)
         corenlp_doc = corenlp.annotate(text, properties=props)
 
-        example_counter = 0
+        # Get active entities and relations
+        all_entity_types = accept_entity_types + ['Target']
+        entity_ann_list = [ann for ann in brat_doc.ann_content
+                           if ann.label in all_entity_types]
+        relation_ann_list = [ann for ann in brat_doc.ann_content
+                             if ann.label.lower() == relation_type]
+        remove_nested_ann(entity_ann_list, relation_ann_list)
+        relevant_ann_list = entity_ann_list + relation_ann_list
+
+        if len(relevant_ann_list) == 0:
+            # If a .ann file doesn't contain any relevant annotations, skip it.
+            continue
+
         for sentence in tqdm(corenlp_doc['sentences'], desc='Parse sentences',
                              leave=False):
-            if not has_item_of_interest(sentence, brat_doc.ann_content,
-                                        accept_entity_types):
-                continue
-
-            # Generate a unique example identifier
-            example_id = '%s_%d_%d' % (fn_base, sentence['index'],
-                                       example_counter)
-
-            # Generate jSRE example
-            example = generate_examples(example_id, sentence, brat_doc,
-                                        relation_type, accept_entity_types)
-            example_counter += 1
-
-            # Save example
-            out_file.write(example)
+            generate_examples(sentence, relevant_ann_list, fn_base, out_file)
 
         out_file.close()
 

@@ -19,12 +19,14 @@ SUPPORTED_LABELS = ['Target', 'Element', 'Mineral', 'Property', 'Contains',
 
 
 class BratDocument(object):
-    def __init__(self, ann_path, txt_path, doc_id='', mission='', reviewer=''):
+    def __init__(self, ann_path, txt_path, doc_id='', mission='', reviewer='',
+                 canonical_mapping=True):
         self.ann_path = ann_path
         self.txt_path = txt_path
         self.doc_id = doc_id
         self.mission = mission
         self.reviewer = reviewer
+        self.canonical_mapping = canonical_mapping
         self.ann_content = self.read_ann_content()
         self.txt_content = self.read_txt_content()
 
@@ -43,7 +45,7 @@ class BratDocument(object):
             if len(ann_line.strip()) == 0:
                 continue
 
-            brat_ann = BratAnnotation(ann_line)
+            brat_ann = BratAnnotation(ann_line, self.canonical_mapping)
             if brat_ann.label not in SUPPORTED_LABELS:
                 continue
 
@@ -63,17 +65,13 @@ class BratDocument(object):
             raise RuntimeError('Invalid txt file format: %s' %
                                os.path.abspath(self.txt_path))
 
-        return file_content[0].decode('utf8')
-
-    def get_ann_by_id(self, ann_id):
-        for ann in self.ann_content:
-            if ann.ann_id == ann_id:
-                return ann
+        # return file_content[0].decode('utf8')
+        return file_content[0]
 
 
 class BratAnnotation:
-    def __init__(self, brat_line):
-        record = self.parse_brat_line(brat_line)
+    def __init__(self, brat_line, canonical_mapping=True):
+        record = self.parse_brat_line(brat_line, canonical_mapping)
         self.ann_id = record['ann_id']
         self.type = record['type']
         self.label = record['label']
@@ -96,7 +94,7 @@ class BratAnnotation:
         return ret
 
     @staticmethod
-    def parse_brat_line(brat_line):
+    def parse_brat_line(brat_line, canonical_mapping):
         line_tokens = brat_line.strip().split('\t')
         middle_tokens = line_tokens[1].split()
 
@@ -121,12 +119,15 @@ class BratAnnotation:
             record['end'] = int(middle_tokens[2])
             nm = line_tokens[2].decode('utf-8')
             # Use lower-case for properties
-            if record['label'] == 'Property':
-                record['name'] = canonical_property_name(nm)
-            elif record['label'] == 'Target':
-                record['name'] = canonical_target_name(nm)
+            if canonical_mapping:
+                if record['label'] == 'Property':
+                    record['name'] = canonical_property_name(nm)
+                elif record['label'] == 'Target':
+                    record['name'] = canonical_target_name(nm)
+                else:
+                    record['name'] = canonical_name(nm)
             else:
-                record['name'] = canonical_name(nm)
+                record['name'] = nm
         elif ann_type == TYPE_RELATION:
             # These arguments are of the form ArgN:TXX
             record['arg1'] = middle_tokens[1].split(':')[1]
