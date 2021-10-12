@@ -74,9 +74,10 @@ class LpscParser(PaperParser):
 
 
 def process(in_file, in_list, out_file, log_file, tika_server_url,
-            corenlp_server_url, ner_model, gazette_file, jsre_root, jsre_model,
-            jsre_tmp_dir, containee_model_file, container_model_file,
-            entity_linking_method, gpu_id, batch_size, ads_url, ads_token):
+            corenlp_server_url, ner_model, gazette_file, relation_type,
+            jsre_root, jsre_model, jsre_tmp_dir, containee_model_file,
+            container_model_file, entity_linking_method, gpu_id, batch_size,
+            ads_url, ads_token):
     # Log input parameters
     logger = LogUtil(log_file)
     logger.info('Input parameters')
@@ -106,12 +107,14 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
     jsre_parser = None
     unary_parser = None
     if jsre_model:
+        logger.info('relation_type: %s' % relation_type)
         logger.info('jsre_root: %s' % os.path.abspath(jsre_root))
         logger.info('jsre_model: %s' % os.path.abspath(jsre_model))
         logger.info('jsre_tmp_dir: %s' % os.path.abspath(jsre_tmp_dir))
 
         jsre_parser = JsreParser(corenlp_server_url, ner_model, gazette_file,
-                                 jsre_root, jsre_model, jsre_tmp_dir)
+                                 relation_type, jsre_root, jsre_model,
+                                 jsre_tmp_dir)
     elif container_model_file and containee_model_file and entity_linking_method:
         logger.info('container_model_file: %s' %
                     os.path.abspath(container_model_file))
@@ -192,6 +195,10 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--gazette_file', required=False,
                         help='Path to a gazette file that consists of '
                              '"Entity_type Entity_name" pairs')
+    parser.add_argument('-rt', '--relation_type',
+                        choices=['contains', 'hasproperty'],
+                        help='Relation type. Options are contains and '
+                             'hasproperty.')
     parser.add_argument('-jr', '--jsre_root', default='/proj/mte/jSRE/jsre-1.1',
                         help='Path to jSRE installation directory. Default is '
                              '/proj/mte/jSRE/jsre-1.1')
