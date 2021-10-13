@@ -339,11 +339,12 @@ def main(relation_type, in_dir, out_dir, corenlp_url):
     # Get a list of all text documents
     in_files = [fn for fn in os.listdir(in_dir) if fn.endswith('.txt')]
     in_files.sort()
-    print 'Number of documents to process: %d' % len(in_files)
+    n_files = len(in_files)
+    print 'Number of documents to process: %d' % n_files
 
-    for fn in in_files:
+    for ind, fn in enumerate(in_files):
         fn_base = fn[: fn.find('.txt')]
-        print 'Processing %s' % fn_base
+        print '(%d/%d) Processing %s' % (ind + 1, n_files, fn_base)
 
         txt_fn = os.path.join(in_dir, '%s.txt' % fn_base)
         ann_fn = os.path.join(in_dir, '%s.ann' % fn_base)
