@@ -14,11 +14,29 @@ import sys
 import copy
 import urllib
 import itertools
-from tqdm import tqdm
 from pycorenlp import StanfordCoreNLP
 from brat_annotation_sqlite import BratDocument
 from brat_annotation_sqlite import TYPE_ENTITY
 from brat_annotation_sqlite import TYPE_RELATION
+
+
+# Stanford CoreNLP will split most of the hyphenated words by default with
+# exceptions in Supplementary Guidelines for ETTB 2.0.
+# https://www.ldc.upenn.edu/sites/www.ldc.upenn.edu/files/etb-supplementary-guidelines-2009-addendum.pdf
+# The exceptions are defined in section 1.2 Hyphenated Words.
+# In order to match the tokens between CoreNLP and the Brat annotations, we
+# need to tokenize the Brat annotations the same way as CoreNLP. If the
+# affixes in the following list are inside a Brat annotation, we will not
+# split this Brat annotation.
+ETTB_AFFIXES = ['e-', 'a-', 'u-', 'x-', 'agro-', 'ante-', 'anti-', 'arch-',
+                'be-', 'bio-', 'co-', 'counter-', 'cross-', 'cyber-', 'de-',
+                'eco-', '-esque', '-ette', 'ex-', 'extra-', '-fest', '-fold',
+                '-gate', 'inter-', 'intra-', '-itis', '-less', 'macro-',
+                'mega-', 'micro-', 'mid-', 'mini-', 'mm-hm', 'mm-mm', '-most',
+                'multi-', 'neo-', 'non-', 'o-kay', '-o-torium', 'over-', 'pan-',
+                'para-', 'peri-', 'post-', 'pre-', 'pro-', 'pseudo-', 'quasi-',
+                '-rama', 're-', 'semi-', 'sub-', 'super-', 'tri-', 'uh-huh',
+                'uh-oh', 'ultra-', 'un-', 'uni-', 'vice-', '-wise']
 
 
 def init_corenlp(corenlp_url):
@@ -117,8 +135,18 @@ def get_entity_type_and_label(token, target_entity, active_entity,
 
 
 def get_sub_entity(target_entity):
+    split_flag = True
+    for affix in ETTB_AFFIXES:
+        if affix in target_entity.name.lower():
+            split_flag = False
+            break
+
     # Split the target entity by space, hyphen, and underscore.
-    entity_tokens = re.split(' |-|_', target_entity.name)
+    if split_flag:
+        entity_tokens = re.split(' |-|_', target_entity.name)
+    else:
+        entity_tokens = [target_entity.name]
+
     if len(entity_tokens) == 0:
         return target_entity
 
@@ -193,6 +221,16 @@ def generate_positive_examples(sentence, relevant_ann_list, example_counter,
                         token['index'] - 1, token['word'], token['lemma'],
                         token['pos'], entity_type, entity_label)
 
+                # This is to handle the case where an example body doesn't
+                # contain jSRE Agent or jSRE Target.
+                if '&&A ' not in example_body or '&&T ' not in example_body:
+                    print 'Example created for entity %s %s and entity %s %s ' \
+                          'are skipped because we cannot match the CoreNLP ' \
+                          'tokens to Brat annotations' % \
+                          (sub_target_entity.ann_id, sub_target_entity.name,
+                           sub_active_entity.ann_id, sub_active_entity.name)
+                    continue
+
                 example_id = '%s_%d_%d' % (fn_base, sentence['index'],
                                            example_counter)
                 example_counter += 1
@@ -259,6 +297,16 @@ def generate_negative_examples(sentence, relevant_ann_list, example_counter,
                                                              entity_type,
                                                              entity_label)
 
+            # This is to handle the case where an example body doesn't
+            # contain jSRE Agent or jSRE Target.
+            if '&&A ' not in example_body or '&&T ' not in example_body:
+                print 'Warn: example created for entity [%s %s] and entity [%s ' \
+                      '%s] are skipped because we cannot match the CoreNLP ' \
+                      'tokens to Brat annotations' % \
+                      (sub_target_entity.ann_id, sub_target_entity.name,
+                       sub_active_entity.ann_id, sub_active_entity.name)
+                continue
+
             example_id = '%s_%d_%d' % (fn_base, sentence['index'],
                                        example_counter)
             example_counter += 1
@@ -293,7 +341,7 @@ def main(relation_type, in_dir, out_dir, corenlp_url):
     in_files.sort()
     print 'Number of documents to process: %d' % len(in_files)
 
-    for fn in tqdm(in_files, desc='Create jSRE examples', leave=False):
+    for fn in in_files:
         fn_base = fn[: fn.find('.txt')]
         print 'Processing %s' % fn_base
 
@@ -323,8 +371,7 @@ def main(relation_type, in_dir, out_dir, corenlp_url):
             # If a .ann file doesn't contain any relevant annotations, skip it.
             continue
 
-        for sentence in tqdm(corenlp_doc['sentences'], desc='Parse sentences',
-                             leave=False):
+        for sentence in corenlp_doc['sentences']:
             generate_examples(sentence, relevant_ann_list, fn_base, out_file)
 
         out_file.close()
