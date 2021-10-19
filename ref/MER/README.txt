@@ -3,21 +3,28 @@ Files:
 - MERA-targets-final.txt: MERA-targets.txt with hand-edits (n=1127)
 - MERA-targets-final.gaz.txt: CoreNLP gazette format - created with
   (cat MERA-targets-final.txt | while read line ; do echo "Target $line" ; done ) > MERA-targets-final.gaz.txt
-- MERB-targets-final.txt (TBD): MERA-targets.txt with hand-edits
+- MERA-targets-final-salient.gaz.txt: Gazette with generic names
+  removed (e.g., Contact, Edge, Fine) that were causing spurious hits
+
+- MERB-targets-final.txt: MERB-targets.txt, no hand-edits (n=1742)
+- MERB-targets-final.gaz.txt: Same process as for MER-A, with MER-B input
+
+Note that these lists contain naming variants so there are fewer
+unique Targets present than the number suggests.
 
 -------------------------------------------------------------------
 Supporting files:
 
 0. Composed of files that follow:
-- MERA-targets.txt: union of MERA-*.txt files (n=1128)
-- MERB-targets.txt (TBD): union of MERB-*.txt files
+- MERA-targets.txt: union of MERA-{closeout*,CS-targets}.txt files (n=1128)
+- MERB-targets.txt: union of MERB-{closeout*,CS-targets}.txt files (n=1742)
 
 1. Results from manual review of MER targets (using Mission Manager
 reports) in 2019:
 - MERA-closeout-targets.txt (n=894)
 - MERA-closeout-features.txt (n=7)
-- MERB-closeout-targets.txt (TBD)
-- MERB-closeout-features.txt (TBD)
+- MERB-closeout-targets.txt (n=1315)
+  (features are not separated for MER-B)
 
 2. Contact science targets from PDS (informed by #1):
 (source: https://pds-geosciences.wustl.edu/mer/urn-nasa-pds-mer_cs_target_list/document/overview.txt)
