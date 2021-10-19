@@ -3,7 +3,10 @@ Files:
 - MERA-targets-final.txt: MERA-targets.txt with hand-edits (n=1127)
 - MERA-targets-final.gaz.txt: CoreNLP gazette format - created with
   (cat MERA-targets-final.txt | while read line ; do echo "Target $line" ; done ) > MERA-targets-final.gaz.txt
+- MERA-targets-added.txt: Targets added after manual review of MPF/PHX docs
+
 - MERB-targets-final.txt (TBD): MERA-targets.txt with hand-edits
+- MERB-targets-added.txt: Targets added after manual review of MPF/PHX docs
 
 -------------------------------------------------------------------
 Supporting files:
