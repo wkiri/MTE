@@ -74,8 +74,8 @@ class LpscParser(PaperParser):
 
 
 def process(in_file, in_list, out_file, log_file, tika_server_url,
-            corenlp_server_url, ner_model, gazette_file, relation_type,
-            jsre_root, jsre_model, jsre_tmp_dir, containee_model_file,
+            corenlp_server_url, ner_model, gazette_file, relation_types,
+            jsre_root, jsre_models, jsre_tmp_dir, containee_model_file,
             container_model_file, entity_linking_method, gpu_id, batch_size,
             ads_url, ads_token):
     # Log input parameters
@@ -106,14 +106,14 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
     # Steven Lu, September 2, 2021
     jsre_parser = None
     unary_parser = None
-    if jsre_model:
-        logger.info('relation_type: %s' % relation_type)
+    if jsre_models:
+        logger.info('relation_types: %s' % json.dumps(relation_types))
         logger.info('jsre_root: %s' % os.path.abspath(jsre_root))
-        logger.info('jsre_model: %s' % os.path.abspath(jsre_model))
+        logger.info('jsre_models: %s' % json.dumps(jsre_models))
         logger.info('jsre_tmp_dir: %s' % os.path.abspath(jsre_tmp_dir))
 
         jsre_parser = JsreParser(corenlp_server_url, ner_model, gazette_file,
-                                 relation_type, jsre_root, jsre_model,
+                                 relation_types, jsre_root, jsre_models,
                                  jsre_tmp_dir)
     elif container_model_file and containee_model_file and entity_linking_method:
         logger.info('container_model_file: %s' %
@@ -195,14 +195,14 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--gazette_file', required=False,
                         help='Path to a gazette file that consists of '
                              '"Entity_type Entity_name" pairs')
-    parser.add_argument('-rt', '--relation_type',
-                        choices=['contains', 'hasproperty'],
-                        help='Relation type. Options are contains and '
-                             'hasproperty.')
+    parser.add_argument('-rt', '--relation_types', nargs='+', required=True,
+                        choices=['Contains', 'HasProperty'],
+                        help='Relation types. Options are Contains and '
+                             'HasProperty.')
     parser.add_argument('-jr', '--jsre_root', default='/proj/mte/jSRE/jsre-1.1',
                         help='Path to jSRE installation directory. Default is '
                              '/proj/mte/jSRE/jsre-1.1')
-    parser.add_argument('-jm', '--jsre_model', required=False,
+    parser.add_argument('-jm', '--jsre_models', nargs='+', required=True,
                         help='Path to jSRE model')
     parser.add_argument('-jt', '--jsre_tmp_dir', default='/tmp',
                         help='Path to a directory for jSRE to temporarily '
