@@ -11,10 +11,9 @@ from io_utils import read_jsonlines
 
 
 def usage():
-    print './json2brat.py <JSON file> <output dir> <relation type>'
+    print './json2brat.py <JSON file> <output dir>'
     print ' Note: all documents in the JSON file will be'
     print ' saved out to individual files in the output directory.'
-    print ' Options for relation type: contains or hasproperty'
     sys.exit(1)
 
 
@@ -92,7 +91,7 @@ def merge_adjacent(rels):
     return rels
 
 
-def convert_json_to_brat(jsonfile, outdir, relation_type):
+def convert_json_to_brat(jsonfile, outdir):
     # Read in the JSON file
     docs = read_jsonlines(jsonfile)
 
@@ -148,6 +147,8 @@ def convert_json_to_brat(jsonfile, outdir, relation_type):
         for r in rels:
             # Currently these are specific to the "contains" relation
             for t in r['target_ids']:
+                relation_type = r['label']
+
                 # If t's id isn't in ner_dict, then it's a word that got merged
                 if '_'.join(t.split('_')[:2]) not in ner_dict:
                     break
@@ -163,14 +164,16 @@ def convert_json_to_brat(jsonfile, outdir, relation_type):
                                                   r[2] == ner_dict[c])]
                     if len(m) > 0:
                         continue
-                    rels_keep += [(r_id, ner_dict[t], ner_dict[c])]
+
+                    rels_keep += [(r_id, ner_dict[t], ner_dict[c],
+                                   relation_type)]
                     r_id += 1
 
         for r in rels_keep:
-            if relation_type.lower() == 'contains':
+            if r[3] == 'Contains':
                 outf.write(u'R%d\tContains Arg1:T%d Arg2:T%d\n' %
                            (r[0], r[1], r[2]))
-            elif relation_type.lower() == 'hasproperty':
+            elif r[3] == 'HasProperty':
                 outf.write(u'R%d\tHasProperty Arg1:T%d Arg2:T%d\n' %
                            (r[0], r[1], r[2]))
 
@@ -178,7 +181,7 @@ def convert_json_to_brat(jsonfile, outdir, relation_type):
 
 
 def main():
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 3:
         usage()
 
     if not os.path.exists(sys.argv[1]):
@@ -193,12 +196,7 @@ def main():
         shutil.rmtree(sys.argv[2])
         os.mkdir(sys.argv[2])
 
-    if sys.argv[3].lower() != 'contains' and \
-            sys.argv[3].lower() != 'hasproperty':
-        print 'Error: relation type argument must be contains or hasproperty.'
-        usage()
-
-    convert_json_to_brat(sys.argv[1], sys.argv[2], sys.argv[3])
+    convert_json_to_brat(sys.argv[1], sys.argv[2])
 
 
 if __name__ == '__main__':
