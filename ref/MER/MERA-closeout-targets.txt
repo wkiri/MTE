@@ -619,7 +619,6 @@ Pikes Peak
 Pilgrim
 Pima
 Pioneer
-Pioneer 
 Pioneer Mound
 Pioneer10
 Pioneer11
@@ -703,7 +702,6 @@ Sandbox
 Sandia
 SantaFe Trail
 Scamander
-Scamander 
 Scamander Plains
 Scamander Plains 10
 Scamander Plains 11
