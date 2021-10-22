@@ -6637,7 +6637,6 @@ Target Pikes Peak
 Target Pilgrim
 Target Pima
 Target Pioneer
-Target Pioneer
 Target Pioneer10
 Target Pioneer11
 Target Pioneer12
@@ -6739,7 +6738,6 @@ Target Sandbox
 Target Sandia
 Target San Juan
 Target SantaFe Trail
-Target Scamander
 Target Scamander
 Target Scamander Plains
 Target Scamander Plains1

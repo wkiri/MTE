@@ -786,7 +786,6 @@ Target Pickled
 Target Pikes Peak
 Target Pilgrim
 Target Pima
-Target Pioneer
 Target Pioneer10
 Target Pioneer11
 Target Pioneer12

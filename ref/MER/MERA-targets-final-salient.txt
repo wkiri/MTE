@@ -786,7 +786,6 @@ Pickled
 Pikes Peak
 Pilgrim
 Pima
-Pioneer 
 Pioneer10
 Pioneer11
 Pioneer12
@@ -882,7 +881,7 @@ Samuel_Hughes
 Sandbox
 San Juan
 SantaFe Trail
-Scamander 
+Scamander
 Scamander Plains
 Scamander Plains1
 Scamander Plains 10
