@@ -6,7 +6,7 @@ Files:
 - MERA-targets-final-salient.gaz.txt: Gazette with generic names
   removed (e.g., Contact, Edge, Fine) that were causing spurious hits
 
-- MERB-targets-final.txt: MERB-targets.txt, no hand-edits (n=1742)
+- MERB-targets-final.txt: MERB-targets.txt, no hand-edits (n=1743)
 - MERB-targets-final.gaz.txt: Same process as for MER-A, with MER-B input
 
 Note that these lists contain naming variants so there are fewer
@@ -17,7 +17,7 @@ Supporting files:
 
 0. Composed of files that follow:
 - MERA-targets.txt: union of MERA-{closeout*,CS-targets}.txt files (n=1128)
-- MERB-targets.txt: union of MERB-{closeout*,CS-targets}.txt files (n=1742)
+- MERB-targets.txt: union of MERB-{closeout*,CS-targets,targets-added}.txt files (n=1743)
 
 1. Results from manual review of MER targets (using Mission Manager
 reports) in 2019:
@@ -37,7 +37,7 @@ $ cut -f4 -d',' merb_cs_target_list.csv | grep -v "Target Name" | sort | uniq > 
 
 3. Targets added after manual review of MPF/PHX docs
 - MERA-targets-added.txt (n=4)
-- MERB-targets-added.txt (n=2)
+- MERB-targets-added.txt (n=1)
 
 -------------------------------------------------------------------
 Superseded (older) files:

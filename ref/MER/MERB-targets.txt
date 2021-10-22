@@ -1,12 +1,13 @@
 1A
 2A
 Absecon
+ace of spades
 Achsel
 Acropolis
 Adelphoi
 Adventure
-Aegean_Crest
 Aegean_crest
+Aegean_Crest
 Afar
 Afar2
 Agassiz
@@ -16,8 +17,8 @@ Agnew Lake
 Agrafa
 Agua Fria
 Aguas Calientes
-Aguas Calientes2
 Aguas_Calientes
+Aguas Calientes2
 Aguas_Calientes2
 Aguas_Calientes3
 Aguas_Calientes4
@@ -53,11 +54,12 @@ Amboy8
 Amboy9
 Amboy_Mosaic
 Amitsoq
+anaconda snakeden
 Anafi
 Anchor 
 Anchor Point
-Anchor Point2
 Anchor_Point
+Anchor Point2
 Anchor_Point2
 Andrew Drips
 Andros
@@ -95,6 +97,7 @@ Bahia sin Fondo
 Balicasag Island
 Baltra
 Baobab
+baracutey
 Barbeau3
 Barberton
 Barberton2
@@ -109,8 +112,8 @@ Barstow
 Bartolome
 Base
 Bashful II
-Bashful II 2
 Bashful_II
+Bashful II 2
 BatungkayCave
 Baxter
 Baxter Springs
@@ -122,44 +125,48 @@ Beaman
 Bellemont
 Benjamin Bonneville
 Bernalillo
-Berrio Crater
 Berrio bench
+Berrio Crater
 Berry Bowl
 Berry Flats
 Berry_Fondue
 Besboro Island
 Bessemer Irondale
 Big Bend
-Big Nickel
 BigJoe II
+Big Nickel
 Bingag Caves
 Birch Island
 Birmingham
 Biscotasing
 Black Beaver
-Black Shoulder
-Black Shoulder 2
-Black Shoulder3
-Black Warrior River
-Black_Flats
-Black_Shoulder
-Black_Shoulder2
-Black_Shoulder3
 Black_flats
+Black_Flats
+Black Shoulder
+Black_Shoulder
+Black Shoulder 2
+Black_Shoulder2
+Black Shoulder3
+Black_Shoulder3
+Black Warrior River
 Blake River
 Blixen
 Block Island
-Blue Crop
 Blueberry Hill
 Bluecrop
+Blue Crop
 Bluegrass
 Boabab
 Boesmanskop
 Boodie
 Boonville
 Boonville2
+bosiba
 BostonCreek
 Bottlebrush
+bouldertrack1
+bouldertrack2
+Bounce
 Bounce Rock
 Boundary Peak
 Bourbon
@@ -173,15 +180,16 @@ Brian's_Choice
 Bridge_of_Nose
 Brigantine
 Bright Material
-Bright Spot
 Bright_Material
+bright ripple
+Bright Spot
 Bristol Bay
 Bristol Well
+Bristol_Well
 Bristol Well1
 Bristol Well2
-Bristol Well3
-Bristol_Well
 Bristol_Well2
+Bristol Well3
 Bristol_Well3
 Broken Hammer
 Broken Hills
@@ -189,8 +197,8 @@ Brongniart
 Brookville
 Buckland
 Buffalo_Springs
-Bull_Moose
 Bulldust
+Bull_Moose
 Burgos
 Bushy Rockrose
 Cabilao
@@ -207,42 +215,42 @@ Callitris
 Cambridge Bay
 Camino
 Camino Real
-Camp Verde
 Campbell
 Campbell2
+Camp Verde
 Canarias
 Candia
 Canegrass
 Cape Agulhas
 Cape Barnabas
 Cape Darby
-Cape Darby 2
+Cape_Darby
 Cape Darby2
+Cape Darby 2
+Cape_Darby2
 Cape Denbigh
 Cape Douglas
 Cape Elizabeth
+Cape_Elizabeth
 Cape Fairweather
 Cape Fairweather1
+Cape_Fairweather1
 Cape Fairweather2
+Cape_Fairweather2
 Cape Faraday
+Cape_Faraday
 Cape Lisburne
+Cape of Good Hope
 Cape Prince Of Wales
 Cape Rodney
-Cape St Mary
-Cape St Vincent
-Cape St. Mary
 Cape Stevens
+Cape St Mary
+Cape St. Mary
+Cape St Vincent
 Cape Suckling
 Cape Upright
 Cape Verde
 Cape York
-Cape of Good Hope
-Cape_Darby
-Cape_Darby2
-Cape_Elizabeth
-Cape_Fairweather1
-Cape_Fairweather2
-Cape_Faraday
 Cardosillas
 Carlindi
 Carlsbad
@@ -281,11 +289,13 @@ ChesterLake2
 Cheyenne
 Chihuahua
 Chino Valley
-Chocolate Hills
 ChocolateChip
 Chocolate_Chip
+Chocolate Hills
 Chrissi
 Churchill
+ciba
+cibao
 Clara Belle
 Clarin Beach
 Clarin_Beach
@@ -314,9 +324,9 @@ Controller Bay
 Conybeare
 Cook Haven
 Cook Haven south
-Cook Islands
-Cook_Island
 Cookies_'n_Cream
+Cook_Island
+Cook Islands
 Coolabah
 Coonterunah
 Copper Cliff
@@ -328,6 +338,8 @@ Cottondale
 Cottondale2
 Council Bluffs
 Cpl Richard
+crack1
+crack2
 Creighton
 Crete
 Crimson Tide
@@ -369,24 +381,24 @@ Discovery
 Dollar 
 Dolls Point
 Dolomieu
-Don_Giovanni
-Don_Giovoni
 Donald A Hall
 Donald_A_Hall
+Don_Giovanni
+Don_Giovoni
 Donousa
 Donut
 Doormat
 Dorsal
 Dorsal New
-Dorsal Tail
 Dorsal_New
+Dorsal Tail
 Dorsal_Tail
 Dowling
-Dr._Bob
 Drake
 Drammensfjord
 Drammensfjorden
 Drave
+Dr._Bob
 Dresser
 Drummond
 Dryma
@@ -399,21 +411,22 @@ Duffer
 Duljo
 Dunes
 Durango
-E Cann1
-E Cann2
-E Cann3
-EL Capitan
-E_Cann1
-E_Cann2
-E_Cann3
+du Toit
 Easley
 Ebony
+E Cann1
+E_Cann1
+E Cann2
+E_Cann2
+E Cann3
+E_Cann3
 Echo
 Edge
 Edith Durham
 Eifel
 El Cap
 El Capitan
+EL Capitan
 Elfin Cove
 Elko
 Ellesmere
@@ -425,10 +438,11 @@ Emma Dean
 Empty
 Enamel
 Endeavour
-Endeavour Rim
 Endeavour1
+Endeavour Rim
 Endurance
 Erebus
+escalonte stairs 1
 Escher
 Escondido
 Espanola
@@ -459,16 +473,16 @@ Flack_Lake
 Flank
 Flank1
 Flashy2
-Flat Rock
 Flatland
+Flat Rock
 Floreana
 Flowers Bay
 Fogo
 Fort Gibson
 Fort Graham
-Fort Thompson
 Fort_Graham
 Fort_Sumner
+Fort Thompson
 Fort_Thomson
 Francisco de Huelva
 Frank Robertson
@@ -476,12 +490,12 @@ FranzMarc
 Fraser
 Freckles
 Fred_Ripple
-Freedom 7
 Freedom7
+Freedom 7
 Fresh Pond
 Fresh_Pond
-Friendship 7
 Friendship7
+Friendship 7
 Fritz
 Frood
 Fuenfria
@@ -495,23 +509,24 @@ Galveston
 Gannet
 Garrels
 Garson
+garter snake
 Gasconade
 Gasconade2
 Gasconade3
 Gasconade4
 Gavdos
 Geluk
-Gemini 4
-Gemini 5
 Gemini4
+Gemini 4
 Gemini5
+Gemini 5
 Genesis Crater
 George Drouillard
+George_Drouillard
 George Drouillard1
 George Drouillard2
-George Drouillard3
-George_Drouillard
 George_Drouillard2
+George Drouillard3
 George_Drouillard3
 Geospiza
 Gerona
@@ -520,11 +535,11 @@ Gertrude Bell
 Gibber
 Gibber Earless
 Gibraltar
-Gibraltar II
 Gibraltar1
 Gibraltar2
 Gibraltar3
 Gibraltar4
+Gibraltar II
 Gilbert
 Gilbert A
 Gilbert_A
@@ -534,19 +549,24 @@ Gjoa
 Glanz
 Glanz2
 Gnarlaroo
+golden hind
 Goldstrike
 Golf
+golf hole
+golfito
 Gomes
 Goose Island
 Gorge Creek
 Government Bay
 Grace
 Granada
+grand bank
 Grasberg
-Grasberg 2
 Grasberg1
 Grasberg2
+Grasberg 2
 Grasberg3
+gravel bank
 Gravel Bank
 Gravelly Island
 Great Bend
@@ -578,26 +598,26 @@ Harold_M_Bixby
 Harry H Knight
 Havelock
 Hawkins
-Heat Shield Rock
 Heat_Shield
+Heat Shield Rock
 Heat_Shield_Rock
 Heber
 Hecla
 Helena
 Hema2
+Hematite Slope
 Hema_Track1
 Hema_Trench1
 Hema_Trench_Wall
 Hema_Trench_Wall2
 Hema_Trench_Wall2_Below
 Hema_Trench_Wall5
-Hematite Slope
 Hephzibah
 Hercules
 Hermann
-HiHo
 Hierro
 Highlands
+HiHo
 Hiller
 Hinchinbrook
 Hinners Point
@@ -644,7 +664,6 @@ Islington Bay
 Islington_Bay
 Isukasia
 Ivory
-JBC
 Jack Russell
 Jack_Russell
 Jacky
@@ -657,20 +676,21 @@ Jarra
 Jason
 Jato
 Jawlensky
+JBC
 Jean Baptiste Charbonneau
-Jean Baptiste La Jeunesse
-JeanBaptiste Deschamps
-JeanBaptiste Deschamps1
-JeanBaptiste La Jeunesse
 Jean_Baptiste_Charbonneau
 Jean_Baptiste_Deschamps
-Jeff's Choice
-Jeff's_Choice
+JeanBaptiste Deschamps
+JeanBaptiste Deschamps1
+Jean Baptiste La Jeunesse
+JeanBaptiste La Jeunesse
 Jefferson City
-Jefferson City2
 Jefferson_City
+Jefferson City2
 Jefferson_City2
 Jeffs_choice
+Jeff's Choice
+Jeff's_Choice
 Jenny
 Jerome
 Jesse Chisholm
@@ -678,24 +698,25 @@ Jet Ranger 2
 Jet_Ranger2
 Jibuti
 Jibuti2
-Jiffy_Pop
+jicotea
 Jiffypop
+Jiffy_Pop
 Jim Baker
 Jim's_Berry
 Jin
 John Albert
 Joliba
 Jones Valley
-Jornada Del Muerto
 Jornada del Muerto
-Jornada del Muerto2
-Jornada del Muerto3
+Jornada Del Muerto
 Jornada_Del_Muerto
+Jornada del Muerto2
 Jornada_Del_Muerto2
+Jornada del Muerto3
 Jornada_Del_Muerto3
 Joseph Collin
-Joseph McCoy
 Joseph_Collin
+Joseph McCoy
 Joseph_McCoy
 Juan de La Cosa
 Julesburg
@@ -706,9 +727,12 @@ Kaiko
 Kalavrita
 Kalipayan1
 Kalipayan2
+kalishnikov
+kalymnos
 Kandinsky
 Kangaroo Paw
 Kapuskasing
+karpathos
 Kasos
 Kate Rice
 Kea
@@ -725,8 +749,8 @@ King3
 Kinojevis
 Kirchner
 Kirchner_RAT
-Kirkland Lake
 KirklandLake
+Kirkland Lake
 Kirkwood
 Kitty
 Kitty Clydes Sister
@@ -744,36 +768,33 @@ Kuenen
 Kurajong
 Kyeemagh
 Kythira
-LB2
-LB2 Left
-LB2 left
-LB2 right
 La Angostura
 La Bajada
-La Joya
-La Joya2
-La Parida
-La Salinera
-La Salle Island
 LaGallega
-LaJolla
-LaJoya1
-La_Joya
-La_Joya2
 Laika
 Lajes
+LaJolla
+La Joya
+La_Joya
+LaJoya1
+La Joya2
+La_Joya2
 Lake Eyre
 Lake Huron
 Lake Laurentian
-Lake Wanapitei
 Lake_Laurentian
+Lake Wanapitei
 Lambert Field
 Lambert_Field
 Lamination
+landing
 Landshut
 Lanikai
+La Parida
 Lapworth
 LarderLake
+La Salinera
+La Salle Island
 Lasithi
 Last Chance
 Last_Chance_a2
@@ -786,6 +807,10 @@ Laya Beach
 Laya Beach2
 Layla_Beach
 Layla_Beach2
+LB2
+LB2 left
+LB2 Left
+LB2 right
 Leah's_Choice
 Leeds
 Left_Edge_to_Right_Edge
@@ -809,24 +834,26 @@ Lion King
 Lion Stone
 Lipscomb
 Little Beach
-Little Bluestem
-Little Red Kaluta
 Little_Beach
 Little_Beach4
+Little Bluestem
+Little Red Kaluta
 Liver Eating Johnson
 Liver_Eating_Johnson
 Llangollen
-Locust Fork
 LocustFork
+Locust Fork
 Locust_Fork
 Logan
 London
 Lone Eagle
+longbaseline
 Long Nosed Potoroo
 Loon Lake
 Loon_Lake
 Loreley
 Lorely
+lost
 Lost
 Louise Boyd
 Lower
@@ -839,19 +866,19 @@ Lunokhod2 Crater
 Lupus
 Lupus2
 Lyell
-Lyell 1
-Lyell Oxford
-Lyell exeter
-Lyell-exeter
 Lyell1
+Lyell 1
+Lyell_1
 Lyell2
+Lyell_2
 Lyell3
+Lyell_3
 Lyell4
 Lyell5
 Lyell6
-Lyell_1
-Lyell_2
-Lyell_3
+Lyell exeter
+Lyell-exeter
+Lyell Oxford
 Lyneal2
 Mabuya
 Macadamia
@@ -881,10 +908,10 @@ Maley
 Maliciosa
 Mallee Heath
 Mango
-Mar Del Plata
 Marathon Monument
 Marble Bar
 Marchena
+Mar Del Plata
 Margaret
 Mariah
 Mariner
@@ -912,8 +939,8 @@ McKee
 McKim
 McKinney
 McKittrick
-McKittrick Middle Rat
 McKittrickMiddleRat
+McKittrick Middle Rat
 Melilla
 Mesa
 Mesilla
@@ -930,15 +957,15 @@ Mismer Bay
 Missouri City
 Missouri_City
 Mobarak
-Mojo 2
 Mojo2
+Mojo 2
 Molly Brown
 Mondrian
 Mondrian2
 Monjon
 Monjon Gray
-Monjon Purple
 Monjon_Gray
+Monjon Purple
 Monjon_Purple
 Mons Cupri
 Mons_Cupri
@@ -953,22 +980,22 @@ Morris Hill
 Moses Harris
 Moundville
 Mount Ada
+Mountain Brook
 Mount Edgar
+Mount_Edgecumbe
 Mount Grant
 Mount Jefferson
 Mount Tempest
-Mount_Edgecumbe
 Mount_Tempest
-Mountain Brook
 Mpangeni
 Mt Beautemps
 Mt Edgar
 Mt Edgecumbe
-Mt Goldsworthy
 Mt. Edgecumbe
+Mt Goldsworthy
 Muffler II
-Muffler II 2
 Muffler_II
+Muffler II 2
 Muffler_II2
 Mulga
 Mulgrave Hills
@@ -988,8 +1015,8 @@ Murray
 Muruntau
 Muscallonge Bay
 Muscoda
-Musky Rat Kangaroo
 Musky Rat kangaroo
+Musky Rat Kangaroo
 My_Dehlia
 Mykonos
 Mysterious Rider
@@ -1014,30 +1041,30 @@ Nereus
 Nevada
 Nevero
 New Consort
-New Shoreham
-New Tracks
 New_Crest
 New_Face
+Newfoundland
+New Shoreham
 New_Shoreham
 New_Track
-Newfoundland
+New Tracks
 Nickeldale
 Nipissing
-No_Coating
-Nobbys Head
 NobbysHead
+Nobbys Head
+No_Coating
 Normandy
 Norooz
 North Dune
 North Haven
 North Pole
 North Pole1
-North Pole2
-North Pole3
-North Wall
 North_Pole1
+North Pole2
 North_Pole2
+North Pole3
 North_Pole3
+North Wall
 Norton Bay
 Norton Sound
 Nougat
@@ -1052,8 +1079,8 @@ Ocean Watch
 Ocean_Watch
 Ogallala
 Oilean Ruaidh
-Old Tracks
 Old_Track
+Old Tracks
 Olympia
 Omaha
 Onaping
@@ -1094,19 +1121,23 @@ Paper Bark
 Paper_Bark
 Park Diamond
 Parral
+patio rug
 Patmos
 Patrick
 Paulden
 Paxoi
 Pay_Dirt
 Payson
+pebbleA
+pebbleB
+pebbleC
 Peck Bay
-Peck Bay 2
+Peck_Bay
 Peck Bay2
+Peck Bay 2
+Peck_Bay2
 Peck Bay2 offset1
 Peck Bay2 offset2
-Peck_Bay
-Peck_Bay2
 Peck_Bay3
 Peck_Bay4
 Pecos River
@@ -1127,20 +1158,20 @@ Phuket
 Piedmont
 Pierre Pinaut
 Pierre Pinaut1
-Pierre Pinaut3
 Pierre_Pinaut1
+Pierre Pinaut3
 Pierre_Pinaut3
 Pilbara
 Pinecrest
 Pinnacle Island
-Pinnacle Island2
-Pinnacle Island3
-Pinnacle Island4
-Pinnacle Island5
 Pinnacle_Island
+Pinnacle Island2
 Pinnacle_Island2
+Pinnacle Island3
 Pinnacle_Island3
+Pinnacle Island4
 Pinnacle_Island4
+Pinnacle Island5
 Pinnacle_Island5
 Pinta
 Pinzon
@@ -1157,12 +1188,12 @@ Point_Bede
 Pontevedra
 Porcupine
 Poros
+Portland
 Port Otway
 Port Townsend
-Portland
 Poverty Bush
-Poverty Tree
 Poverty_Bush
+Poverty Tree
 Powell
 Powell's_Brother
 Preston
@@ -1199,9 +1230,9 @@ Promontory
 Pueblo
 Puente de Diablo
 Puerto Jimenez
+Puerto_Jimenez
 Puerto Montt
 Puerto Williams
-Puerto_Jimenez
 Purgatory Dune
 Pvt Ebenezer Tuttle
 Pvt Francois Labiche
@@ -1209,6 +1240,7 @@ Pvt George Gibson
 Pvt Hugh McNeal
 Pvt Isaac White
 Pvt John Potts
+Pvt. John Potts
 Pvt John Potts1
 Pvt John Potts2
 Pvt John Potts4
@@ -1230,13 +1262,12 @@ Pvt Robert Frazer4
 Pvt Robert Frazer5
 Pvt Robert Frazer6
 Pvt Silas Goodrich
+Pvt. Silas Goodrich
 Pvt Silas Goodrich1
 Pvt Silas Goodrich2
 Pvt Silas Goodrich3
 Pvt William Bratton
 Pvt William Bratton2
-Pvt. John Potts
-Pvt. Silas Goodrich
 Pyrrho
 Quandong
 Queen Adelaide
@@ -1251,15 +1282,15 @@ Ramsay
 Ramsey Lake
 Ranger Crater
 Rayleigh
-Razor_Cluster
 Razorback
+Razor_Cluster
 Red Mountain
+Redoubt
 Red Poker
+Red_Poker
 Red Rock
 Red Sea
-Red_Poker
 Red_Sea2
-Redoubt
 Reeds Bay
 Reiner_Gamma
 Reno
@@ -1273,12 +1304,12 @@ Rio
 Rio de Janeiro
 Rio_de_Janeiro
 Rioja
-RipX
-RipX_Below
 Ripple_Crest
 Ripple_Crest2b
 Ripple_Four
 Ripple_One
+RipX
+RipX_Below
 Roadcut
 Robert E
 Robert_E
@@ -1289,9 +1320,9 @@ Rock Creek
 Rock_Creek
 Rockhopper
 Rocky Flats II
-Rodrigo Sanchez
 Rodrigo de 
 Rodrigo de Escobar
+Rodrigo Sanchez
 Rodrigues
 Ronov
 Roosevelt
@@ -1318,8 +1349,8 @@ Rushall2
 Rushdall
 Russet
 Rusty Crevice
-Ryan NYP2
 Ryan_NYP
+Ryan NYP2
 Ryan_NYP2
 Saddleback
 Safari Car
@@ -1335,26 +1366,26 @@ Sami_Kai
 Samos
 San Antonio east
 San Antonio west
+Sancho Ruiz
+Sand Bay
+Sandcherry
+Sand_Cherry
 San Diego
+Sand Mountain
+Sand Sheet
 San Francisco
 San Juan Pueblo
 San Miguel
-Sancho Ruiz
-Sand Bay
-Sand Mountain
-Sand Sheet
-Sand_Cherry
-Sandcherry
 Santa Barbara
 Santa Catarina
+Santa_Catarina
+SantaFe
 Santa Maria
 Santa Maria LB2 left
 Santa Maria LB2 right
 Santa Maria Long Baseline 2 left
 Santa Maria Long Baseline 2 right
 Santa Maria Palos
-SantaFe
-Santa_Catarina
 Santandres
 Santorini
 Santorini2
@@ -1363,10 +1394,10 @@ Sao Gabriel
 Sao Pantleao
 Sao Rafael
 Sarcobatus Clast
-Sarcobatus Clast2
-Sarcobatus Flat
 Sarcobatus_Clast
+Sarcobatus Clast2
 Sarcobatus_Clast2
+Sarcobatus Flat
 Sarcobatus_Flat
 Sardines
 Saria
@@ -1394,8 +1425,8 @@ Shades Valley
 Shag
 Shaktoolik Bay
 Shalt
-Shark Tooth
 Sharkfin
+Shark Tooth
 Shaw1
 Shaw2
 Shaw3
@@ -1409,8 +1440,8 @@ Shoemaker Wall
 Show low
 Siah's Swamp
 Siah's_Swamp
-Siah's_Swamp2
 Siahs Swamp
+Siah's_Swamp2
 Siahs Swamp2
 Sibley
 Sidewalk
@@ -1423,26 +1454,28 @@ Sky Flats
 Skylab
 Sledge Island
 Sledge Island1
-Sledge Island2
 Sledge_Island1
+Sledge Island2
 Sledge_Island2
 Sleepy II
-Slick Rock
 Slickrock
+Slick Rock
 Smith
+Smith_1
+smith2
 Smith2
 Smith3
-Smith_1
+snake grass
 Snout
 Snow Flakes
 Snug Corner Cove
-SoSL
 Socorro
 Sodaville
 Sodaville2
 Soil Color
 SolanderPoint
 Somosierra
+SoSL
 South Georgia
 South Range
 South_Range
@@ -1451,18 +1484,17 @@ Sparks Gap
 Sparta
 Speckled Hill
 Spinifex
-Sponge II
 Spongebob
-Spring_House_Ice_Pond
+Sponge II
 Springhouse Icepond
+Spring_House_Ice_Pond
 Springs
 Sputnik Crater
 Squidward
 Sri Lanka
-St Mary
-St Vincent
 Steno
 Stewart Island
+St Mary
 Stobie
 Stone Mountain
 Stone Tablet
@@ -1472,26 +1504,29 @@ Strathcona
 Strawberry
 Strawman
 Strelley Pond
+stripes
 Stuart Island
 Stuart Island1
-Stuart Island2
-Stuart Island3
-Stuart Island4
 Stuart_Island1
+Stuart Island2
 Stuart_Island2
+Stuart Island3
 Stuart_Island3
+Stuart Island4
 Stuart_Island4
 Sturgeon River
-Sturgeon River 1a
-Sturgeon River 3
-Sturgeon River 3a
+Sturgeon_River
 Sturgeon River1
 Sturgeon River1a
-Sturgeon River2
-Sturgeon_River
+Sturgeon River 1a
 Sturgeon_River1a
+Sturgeon River2
 Sturgeon_River2
+Sturgeon River 3
 Sturgeon_River3
+Sturgeon River 3a
+St Vincent
+sudbury
 Sugarloaf
 Sumner
 Surtsey
@@ -1524,6 +1559,7 @@ Tenerife
 Tenerife BG
 Tennessee
 Terreros
+the Bowl
 Thermopylae
 Thermopylae1
 Thermopylae2
@@ -1537,8 +1573,8 @@ Thompson
 Thorny Devil
 Through_Plain
 Tick Bush
-Tick Bush2
 Tick_Bush
+Tick Bush2
 Tick_Bush2
 Tier1
 Tier2
@@ -1563,12 +1599,12 @@ Timmins_I2
 Timmins_Oded
 Tinos
 Tisdale
+Tisdale1
 Tisdale 1
 Tisdale 2
-Tisdale1
+Tisdale_2
 Tisdale3
 Tisdale5
-Tisdale_2
 Tjakastad
 Tlicho2
 Toledo
@@ -1580,6 +1616,7 @@ Totten
 Towra Point
 Trabajo
 Track2
+tracks
 Trailbreaker
 Transvaal
 Traube
@@ -1595,8 +1632,8 @@ Tuck1
 Tuktoyuktuk
 Tuktoyuktuk2
 Tukyoyuktuk
-Turn_Again_Arm
 Turnagain Arm
+Turn_Again_Arm
 Tuscaloosa
 Tweed
 Twin Otter
@@ -1622,14 +1659,14 @@ Velvet
 Venera
 Verdun
 Vermilion
+Vermilion all
 Vermilion Cliffs
+Vermilion_Cliffs
 Vermilion Cliffs1
 Vermilion Cliffs2
+Vermilion_Lake
 Vermilion Lake1
 Vermilion Lake2
-Vermilion all
-Vermilion_Cliffs
-Vermilion_Lake
 Vermilion_Lake2
 Vernon
 Vestavia Hills
@@ -1652,9 +1689,9 @@ Voight Bay
 Vols
 Voyager
 Wachusett
+Wallaroo
 Wall_One
 Wall_Two
-Wallaroo
 Wally Wombat
 Wally_Wombat
 Wanahani
@@ -1668,6 +1705,8 @@ Wdowiak Ridge
 Wenonah
 Weston
 Westport
+west rim
+west zen garden
 Whaleback
 Wharenhui
 Whatanga
@@ -1689,11 +1728,12 @@ Wopmay
 Wrigley
 Wrigley2
 Xaxim
+yankee clipper
 Yankee Clipper
 Yarabi
 Yellow Bellied Glider
-Yellow-Bellied Glider
 Yellow_Bellied_Glider
+Yellow-Bellied Glider
 York
 York2
 Yuri
@@ -1701,42 +1741,3 @@ Zacatecas
 Zamora
 Zancudo
 Ziakas
-ace of spades
-anaconda snakeden
-baracutey
-bosiba
-bouldertrack1
-bouldertrack2
-bright ripple
-ciba
-cibao
-crack1
-crack2
-du Toit
-escalonte stairs 1
-garter snake
-golden hind
-golf hole
-golfito
-grand bank
-gravel bank
-jicotea
-kalishnikov
-kalymnos
-karpathos
-landing
-longbaseline
-lost
-patio rug
-pebbleA
-pebbleB
-pebbleC
-smith2
-snake grass
-stripes
-sudbury
-the Bowl
-tracks
-west rim
-west zen garden
-yankee clipper
