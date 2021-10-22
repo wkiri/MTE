@@ -1,4 +1,3 @@
-Target A N Tolstoy
 Target Abiaka
 Target Abigail
 Target Accelerator
@@ -20,20 +19,23 @@ Target Agamemnon2
 Target Ahab
 Target Algonquin
 Target Alice Blaski
-Target Alice Haylett
 Target Alice_Blaski
+Target Alice Haylett
 Target Alligator
 Target Alma Ziegler
 Target Almonds
+Target alvar Cabeza deVaca
 Target Ambrosia
 Target Ambrosia2
 Target Amhor
 Target Amundsen
 Target Anasazi
+Target Anatolia
 Target Anna Mae Hutchison
 Target Anticlea2
 Target Anticlea3
 Target Anticlea4
+Target A N Tolstoy
 Target Anvil
 Target Aphrodite
 Target Aphrodite Overhang
@@ -41,6 +43,7 @@ Target Appendix
 Target Arad
 Target Arad1
 Target Arad2
+Target Arad Samra
 Target Arbok
 Target Arctowski
 Target Ares
@@ -51,8 +54,8 @@ Target Arizona
 Target Arnould Galopin
 Target Arthur C Harmon
 Target Arthur C. Harmon
-Target Arthur_C._Harmon
 Target Arthur_C_Harmon
+Target Arthur_C._Harmon
 Target Ashley
 Target Asphalion
 Target Asphalion2
@@ -75,29 +78,31 @@ Target Bear_Island
 Target Bell
 Target Belles
 Target Bellingshausen
-Target Belly Rock
 Target BellyRock
+Target Belly Rock
 Target Below_Wall
-Target Ben's_Clod
 Target Bens_clod
+Target Ben's_Clod
 Target Berkner Island
 Target Berkner_Island
 Target Bethany Goldsmith
 Target Bette Trezza
 Target Betty Foss
+Target Betty_Foss
 Target Betty McKenna
 Target Betty Wagoner
+Target Betty_Wagoner
 Target Betty Wagoner's Daughter
+Target Betty_Wagoner's_Daughter
 Target Betty Warfel
 Target Betty Whiting
 Target Betty Whiting2
-Target Betty_Foss
-Target Betty_Wagoner
-Target Betty_Wagoner's_Daughter
-Target Big Hole
+Target big_clod
 Target Big_Clod
+Target Big Hole
 Target Bilge
 Target Bisque
+Target bitty_clod
 Target Bitty_Clod
 Target Black Tooth
 Target Blanket
@@ -124,8 +129,6 @@ Target Bullpen
 Target Bullpen2
 Target Bullpen3
 Target Butter
-Target C L Moore
-Target C S Lewis
 Target Cahokia
 Target Calibration_Soil
 Target Calypso
@@ -169,6 +172,7 @@ Target Clast2
 Target Clast3a
 Target Clast3b
 Target Cliffhanger
+Target C L Moore
 Target Clovis
 Target Clump
 Target Clytemnestra
@@ -197,23 +201,26 @@ Target Cratchit_2
 Target Crawfords
 Target Crest
 Target Cruther_Vines
+Target C S Lewis
 Target Cumberland Ridge
 Target Cyclops
-Target Cyclops Eye
-Target Cyclops Eye2
-Target Cyclops Eye3
-Target Cyclops Eye4
-Target Cyclops Eye5
-Target Cyclops eye6
 Target Cyclops2
 Target Cyclops3
+Target Cyclops Eye
 Target Cyclops_Eye1
+Target Cyclops Eye2
 Target Cyclops_Eye2
+Target cyclops eye3
+Target cyclops eye 3
+Target Cyclops Eye3
 Target Cyclops_Eye3
+Target Cyclops Eye4
 Target Cyclops_Eye4
+Target Cyclops Eye5
 Target Cyclops_Eye5
+Target Cyclops eye6
 Target Cyclops_Eye6
-Target DS1
+Target Dagwood
 Target Daniel Boone
 Target Daniel Boone2
 Target Daniel Boone4
@@ -242,12 +249,14 @@ Target Dorothy Chapman
 Target Dorothy Green
 Target Dorothy Hunter
 Target Dorothy Key
+Target Dorothy_Key
 Target Dorothy Mueller
 Target Dorothy Wind
-Target Dorothy_Key
 Target Doubloon
 Target Dreaming
 Target Druzhnaya
+Target DS1
+Target d'Unville
 Target Dusor
 Target Dwarf
 Target Dwarf_Edge2
@@ -260,18 +269,18 @@ Target Edge
 Target Edmond Hamilton
 Target Edythe Keating
 Target Eileen Burmeister
-Target Eileen Dean
 Target EileenDean
+Target Eileen Dean
 Target Eileen_Dean
 Target Eileen_Dean2
-Target El Dorado
 Target ElDorado
+Target El Dorado
 Target El_Dorado
 Target Eleanor Callow
 Target Elise Harney
 Target Elizabeth Emery
-Target Elizabeth Mahon
 Target Elizabeth_Emery
+Target Elizabeth Mahon
 Target Elizabeth_Mahon
 Target Elk
 Target End-of-Rainbow
@@ -306,8 +315,8 @@ Target Fins2
 Target Fins3
 Target First_Soil1
 Target Fish_Eyes
-Target Flat Head
 Target Flatfish
+Target Flat Head
 Target Flats1
 Target Floor3
 Target Forandus
@@ -315,9 +324,10 @@ Target Fordham
 Target Francisco Coronado
 Target Francisco Coronado2
 Target Francisco Coronado3
-Target Frank Russell
 Target Franklin
+Target Frank Russell
 Target Fredda Acker
+Target FredericBrown
 Target Frederic Remington
 Target Frederic Remington2
 Target Frederic Remington3
@@ -325,15 +335,14 @@ Target Frederic Remington3A
 Target Frederic Remington3B
 Target Frederic Remington3C
 Target Frederic Remington3D
-Target FredericBrown
 Target Freeman
 Target Fritz
 Target Fuzzy Smith
+Target Fuzzy_Smith
+Target Fuzzy_Smith_2
 Target Fuzzy Smith4
 Target Fuzzy Smith5
 Target Fuzzy Smith7
-Target Fuzzy_Smith
-Target Fuzzy_Smith_2
 Target Gallant
 Target Gallant Knight
 Target Gallant_Knight
@@ -343,9 +352,9 @@ Target Gentil
 Target Gentil_Matrice
 Target Gernsback
 Target Gertrude Weise
+Target Gertrude_Weise
 Target Gertrude Weise2
 Target Gertrude Weiss
-Target Gertrude_Weise
 Target Gertrude_Weiss
 Target Ghasta
 Target Glorestra
@@ -353,19 +362,19 @@ Target Gobi1
 Target Gobil
 Target Goddard
 Target GoldBar1
+Target Goldfin1
 Target Gold_Klumpen1
 Target Gold_Klumpen2
 Target Gold_Klumpen3
 Target Gold_Klumpen4
 Target Gold_Klumpen5
 Target Gold_Klumpen7
-Target Goldfin1
 Target Goldregen1
 Target Goldregen2
 Target Goldstaub
 Target Gong_Zhou
-Target Good Question
 Target GoodQuestion
+Target Good Question
 Target Good_Question
 Target Gooli
 Target Grays Peak
@@ -375,7 +384,6 @@ Target Gueslaga
 Target Guillaume
 Target Gumbo
 Target Gurruchaga
-Target H G Wells
 Target Hades
 Target Hades2
 Target Halitherses
@@ -397,9 +405,9 @@ Target Haunch
 Target Hausmann
 Target Hawaii
 Target Headscarp
+Target Helen Staubin
 Target Helen St. Aubin
 Target Helen St. Aubin2
-Target Helen Staubin
 Target Helios
 Target Helios2
 Target Helios3
@@ -418,14 +426,16 @@ Target Hernando De Soto3
 Target Hernando De Soto4
 Target Herring
 Target Heyworth
+Target H G Wells
 Target Hillary
 Target Hitting
 Target Ho Ji
-Target Home Plate
+Target homeplate
 Target Homeplate
+Target Home Plate
 Target Hoof
-Target Horse_Flats
 Target Horseback
+Target Horse_Flats
 Target Horz
 Target Hugh Bell 1x1x100
 Target Hula
@@ -446,8 +456,8 @@ Target Irvine
 Target Isaac Asimov
 Target Iss
 Target Ithaca Townies
-Target Jack Williamson
 Target JackWilliamson
+Target Jack Williamson
 Target Jambalaya
 Target Jane Stoll
 Target Jane_Stoll
@@ -458,23 +468,23 @@ Target Jean Gilchrist
 Target Jean Nicolet
 Target Jean Nicolet2
 Target Jean Nicolet3
-Target Jededia Smith3
 Target Jedediah Smith2
 Target Jedediah Smith4
+Target Jededia Smith3
 Target Jefferson
 Target Jemez
 Target Jerry
 Target Jibsheet
+Target Jim_Bridger
 Target Jim Clyman2
 Target Jim Clyman3
 Target Jim Clyman4
-Target Jim_Bridger
 Target Jiminy Cricket
 Target Joan Chiancola
-Target Joan Sindelar
+Target Joanne_Weaver
 Target Joanne Winter
 Target Joanne Winter2
-Target Joanne_Weaver
+Target Joan Sindelar
 Target Joe Walker
 Target Joe Walker2
 Target Joe Walker3
@@ -486,6 +496,7 @@ Target John Bozeman4
 Target John Butterfield2
 Target John Butterfield3
 Target John Carter
+Target John_Carter
 Target John Colter
 Target John Fremont
 Target John Fremont3
@@ -500,9 +511,8 @@ Target John Ordway5
 Target John Sutter2
 Target John Sutter4
 Target John Wesley Powell
-Target John Wyndham
-Target John_Carter
 Target John_Wesley_Powell
+Target John Wyndham
 Target Joker
 Target Jonathan Swift
 Target Josephine Kabick
@@ -519,8 +529,8 @@ Target Kadabra
 Target Kansas
 Target Kaol
 Target Kathryn Beare
-Target Kay Rohrer
 Target Kay_Blumetta
+Target Kay Rohrer
 Target Keel
 Target Kenosha Comets
 Target Kenosha_Comets
@@ -530,11 +540,11 @@ Target Keystone
 Target Khumjung
 Target Kilarney_Flats
 Target King George Island
+Target King_George_Island
+Target King_George_Island_Offset
 Target King Laertes
 Target King Laertes2
 Target King Laertes3
-Target King_George_Island
-Target King_George_Island_Offset
 Target Kit Carson
 Target Kit_Carson
 Target Kobal
@@ -561,6 +571,7 @@ Target Leiodes3
 Target Lennox
 Target Lenora Mandella
 Target Lighthouse
+Target livingston
 Target Livingston
 Target Londonderry
 Target Lothar
@@ -572,7 +583,6 @@ Target Louis Jolliett5
 Target Lucille Colacito
 Target Lucius Theus
 Target Lutefisk
-Target MI1
 Target Machu Picchu
 Target Macquarie
 Target Madeline English
@@ -586,8 +596,8 @@ Target Mantalia
 Target Marambio
 Target Marengo
 Target Margaret Brown
-Target Margaret Stephani
 Target Margaret_Jones
+Target Margaret Stephani
 Target Marguerite_Davis
 Target Marie_Wegman
 Target Marilyn Olinger
@@ -600,6 +610,7 @@ Target MasonDixon
 Target Mason_Dixon
 Target Mastodon
 Target Matrice
+Target maud_land
 Target Mawson
 Target MayFly
 Target Mazatzal
@@ -620,12 +631,14 @@ Target Melchior
 Target Menelaus
 Target Mentor2
 Target Methuselah
+Target MI1
 Target Miami
 Target Milas Kelly
 Target Mildred Deegan
 Target Mildred_Deegan
 Target Mills3
 Target Mills_Basin
+Target mimi
 Target Mirny
 Target Missouri
 Target Mitcheltree Ridge
@@ -635,26 +648,27 @@ Target Molodezhnaya
 Target Monarchs
 Target Moncheri
 Target Montalva
-Target Montalva Offset
 Target Montalva_Daisy
+Target Montalva Offset
 Target Montalva_Offset
 Target Morbus
 Target Morris C Rice
 Target Mount Darwin
 Target Mount_Darwin
+Target Mt. Elbert
 Target Mt Eolus
 Target Mt Sneffels
-Target Mt. Elbert
-Target Muriel Coben
 Target Muriel_Bevis
+Target Muriel Coben
+Target mustang
 Target Myammia
 Target Nail4
 Target Nalda Phillips
 Target Nalda Phillips1
 Target Nalda Phillips2
 Target Namche_Bazaar
-Target Nancy Warren
 Target NancyWarren
+Target Nancy Warren
 Target Nancy_Warren
 Target Nantucket
 Target Naomi Meier
@@ -684,28 +698,29 @@ Target Ogygia
 Target Ogygia2
 Target Okar
 Target Olive
-Target Olive Branch
-Target Olive Branch5
-Target Olive Branch6
-Target Olive Branch7
-Target Olive Leaf
 Target Olive branch
+Target Olive Branch
 Target Olive branch1
-Target Olive branch2
-Target Olive tree
 Target Olive_Branch1
+Target Olive branch2
 Target Olive_Branch2
 Target Olive_Branch3
 Target Olive_Branch4
+Target Olive Branch5
 Target Olive_Branch5
+Target Olive Branch6
 Target Olive_Branch6
+Target Olive Branch7
+Target Olive Leaf
 Target Olive_Leaf
 Target Olive_Pit
+Target Olive tree
 Target Olive_Tree1
 Target Olive_Tree2
 Target Ombra
 Target Ompt
 Target Orange Beach
+Target orca
 Target Orcadas
 Target Oregon
 Target Orel
@@ -728,15 +743,15 @@ Target Panda
 Target Panda_New
 Target Pankor
 Target Paros
-Target Paso Dark
-Target Paso Robles
-Target Paso Robles 2
-Target Paso Robles2
-Target Paso_Dark1
-Target Paso_Light1
-Target Paso_Robles
 Target Paso_dark
+Target Paso Dark
+Target Paso_Dark1
 Target Paso_light
+Target Paso_Light1
+Target Paso Robles
+Target Paso_Robles
+Target Paso Robles2
+Target Paso Robles 2
 Target Patricia Courtney
 Target Patroclus
 Target Patroclus2
@@ -754,11 +769,11 @@ Target Penelope4
 Target Penelope5
 Target Penelope6
 Target Penina
-Target Penina 4
 Target Penina1
 Target Penina2
 Target Penina3
 Target Penina4
+Target Penina 4
 Target Penn2
 Target Persephone2
 Target Pesapallo
@@ -783,7 +798,6 @@ Target Pilgrim
 Target Pima
 Target Pioneer
 Target Pioneer
-Target Pioneer Mound
 Target Pioneer10
 Target Pioneer11
 Target Pioneer12
@@ -794,6 +808,7 @@ Target Pioneer7
 Target Pioneer8
 Target Pioneer9
 Target PioneerMound
+Target Pioneer Mound
 Target Piraeus
 Target Piraeus2
 Target Pisa
@@ -812,14 +827,14 @@ Target Polar
 Target Polodona
 Target Polydamna
 Target Polyphemus
-Target Polyphemus Eye
-Target Polyphemus Eye2
-Target Polyphemus Eye3
 Target Polyphemus2
 Target Polyphemus3
 Target Polyphemus4
+Target Polyphemus Eye
 Target Polyphemus_Eye
+Target Polyphemus Eye2
 Target Polyphemus_Eye2
+Target Polyphemus Eye3
 Target Polyphemus_Eye3
 Target Pop Lloyd
 Target Pop Lloyd2
@@ -829,8 +844,8 @@ Target Poseidon3
 Target Poseidon4
 Target Posey
 Target Pot of Gold
-Target Pot-of-Gold
 Target Pot_of_Gold
+Target Pot-of-Gold
 Target Poul Anderson
 Target Prat
 Target Primero
@@ -847,14 +862,14 @@ Target Pumpkin Pie
 Target Pumpkin_Pie
 Target Pylos
 Target Pylos2
-Target RAT_Justice
-Target RAT_Tailings
-Target RS2
 Target Ramp Flats
 Target Rams
 Target Rat_Fish
+Target RAT_Justice
 Target Rat_Roe
+Target RAT_Tailings
 Target Reachable_Lip
+Target rear tracks
 Target Reef
 Target Ridge1
 Target Right_Ear
@@ -865,6 +880,7 @@ Target Roger Zelazny
 Target Roger_Zelazny
 Target Rothera
 Target Route 66
+Target RS2
 Target Rue_Laplace
 Target Rue_Legendre
 Target Russkaya
@@ -879,13 +895,14 @@ Target Sacagawea4
 Target Sackrider
 Target Samra
 Target Samuel_Hughes
-Target San Juan
 Target Sandbox
 Target Sandia
+Target San Juan
 Target SantaFe Trail
 Target Scamander
 Target Scamander
 Target Scamander Plains
+Target Scamander Plains1
 Target Scamander Plains 10
 Target Scamander Plains 11
 Target Scamander Plains 12
@@ -896,15 +913,8 @@ Target Scamander Plains 16
 Target Scamander Plains 17
 Target Scamander Plains 18
 Target Scamander Plains 19
-Target Scamander Plains 20
-Target Scamander Plains 4
-Target Scamander Plains 5
-Target Scamander Plains 6
-Target Scamander Plains 7
-Target Scamander Plains 8
-Target Scamander Plains 9
-Target Scamander Plains1
 Target Scamander Plains2
+Target Scamander Plains 20
 Target Scamander Plains25
 Target Scamander Plains27
 Target Scamander Plains28
@@ -915,6 +925,12 @@ Target Scamander Plains31
 Target Scamander Plains32
 Target Scamander Plains33
 Target Scamander Plains34
+Target Scamander Plains 4
+Target Scamander Plains 5
+Target Scamander Plains 6
+Target Scamander Plains 7
+Target Scamander Plains 8
+Target Scamander Plains 9
 Target Scott Base
 Target Scott_Base
 Target Scrooge
@@ -935,6 +951,7 @@ Target Shadow
 Target Shan
 Target Shirely Crites
 Target Shirley Jameson
+Target shoe
 Target Shortbread
 Target Shredder
 Target Shrewsbury
@@ -970,8 +987,8 @@ Target Stapledon2
 Target Starbuck
 Target Stars
 Target Stealing Second
-Target Stealing Third
 Target Stealing_Second
+Target Stealing Third
 Target Stealing_Third
 Target Stonefly
 Target Stratius
@@ -1019,8 +1036,11 @@ Target Toonal
 Target Torquas
 Target Torquas1
 Target Torquas2
+Target tracks
 Target Tracks
 Target Trico
+Target triple play
+Target triple-play
 Target Troll
 Target Trough
 Target Trout
@@ -1035,25 +1055,27 @@ Target Tyrone
 Target Tyrone Vista
 Target Uchben
 Target Ulysses
-Target Ulysses Spear
 Target Ulysses spear
+Target Ulysses Spear
+Target Ulysses_Spear
 Target Ulysses spear1
 Target Ulysses spear2
 Target Ulysses spear3
-Target Ulysses_Spear
 Target Underbelly_Recon_Point1
 Target Underbelly_Recon_Point2
-Target V Ger
 Target Velma Abbott
+Target Vermillion Cliffs
 Target Vernadsky
+Target V Ger
 Target Virginia Bell
 Target Virginia_Bell
+Target VonBraun
 Target Von Braun
 Target Von Braun1
 Target Von Braun2
 Target Von Braun3
 Target Von Braun4
-Target VonBraun
+Target vonNeumayer
 Target Vostok
 Target Waffle Flats
 Target Wall3
@@ -1063,8 +1085,8 @@ Target Wall_Street
 Target Wasa
 Target Watchtower
 Target Wendell Pruitt
-Target Wendell Pruitt2
 Target Wendell_Pruitt
+Target Wendell Pruitt2
 Target West Knob
 Target West Valley
 Target Wheat1
@@ -1083,10 +1105,10 @@ Target Wilmington
 Target Wiltgen
 Target Window
 Target Winston Gaskins
-Target Winston_Gaskins3
 Target Winston_Gaskins_2
-Target Winter Haven
+Target Winston_Gaskins3
 Target Winter-haven
+Target Winter Haven
 Target Wishstone
 Target Yaqui
 Target Yolande Schick
@@ -1096,9 +1118,9 @@ Target Zebulon Pike2
 Target Zebulon Pike3
 Target Zebulon Pike4
 Target Zeus
+Target Zeus overhang2
 Target Zeus Overhang2
 Target Zeus Point
-Target Zeus overhang2
 Target Zhong Shan
 Target Zoar
 Target Zodanga
@@ -1107,21 +1129,3 @@ Target Zucchelli
 Target Zucchelli3
 Target Zucchelli4
 Target Zucchelli5
-Target alvar Cabeza deVaca
-Target big_clod
-Target bitty_clod
-Target cyclops eye 3
-Target cyclops eye3
-Target d'Unville
-Target homeplate
-Target livingston
-Target maud_land
-Target mimi
-Target mustang
-Target orca
-Target rear tracks
-Target shoe
-Target tracks
-Target triple play
-Target triple-play
-Target vonNeumayer

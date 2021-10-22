@@ -1,6 +1,6 @@
 Files:
 
-- MERA-targets-final.txt: MERA-targets.txt with hand-edits (n=1127)
+- MERA-targets-final.txt: MERA-targets.txt with hand-edits (n=1131)
 - MERA-targets-final.gaz.txt: CoreNLP gazette format - created with
   (cat MERA-targets-final.txt | while read line ; do echo "Target $line" ; done ) > MERA-targets-final.gaz.txt
 - MERA-targets-final-salient.gaz.txt: Gazette with generic names
@@ -16,12 +16,12 @@ unique Targets present than the number suggests.
 Supporting files:
 
 0. Composed of files that follow:
-- MERA-targets.txt: union of MERA-{closeout*,CS-targets}.txt files (n=1128)
+- MERA-targets.txt: union of MERA-{closeout*,CS-targets,targets-added}.txt files (n=1132)
 - MERB-targets.txt: union of MERB-{closeout*,CS-targets,targets-added}.txt files (n=1743)
 
 1. Results from manual review of MER targets (using Mission Manager
 reports) in 2019:
-- MERA-closeout-targets.txt (n=894)
+- MERA-closeout-targets.txt (n=893)
 - MERA-closeout-features.txt (n=7)
 - MERB-closeout-targets.txt (n=1315)
   (features are not separated for MER-B)
