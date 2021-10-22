@@ -11,6 +11,8 @@
   cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt PHX/PHX-targets.gaz.txt > PHX_targets_minerals-2017-05_elements.gaz.txt
 - MERA_targets_minerals-2017-05_elements.gaz.txt - created by:
   cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt MER/MERA-targets-final.gaz.txt > MERA_targets_minerals-2017-05_elements.gaz.txt
+- MERA_salient_targets_minerals-2017-05_elements.gaz.txt - created by:
+  cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt MER/MERA-targets-final-salient.gaz.txt > MERA_salient_targets_minerals-2017-05_elements.gaz.txt
 - MERB_targets_minerals-2017-05_elements.gaz.txt - created by:
   cat element-correct-MPF+periodic-table.gaz.txt mineral-correct-MPF+IMA.gaz.txt MER/MERB-targets-final.gaz.txt > MERB_targets_minerals-2017-05_elements.gaz.txt
 - (MSL) targets_minerals-2017-05_elements.gaz.txt - starting target
