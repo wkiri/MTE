@@ -96,6 +96,11 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
                     'simultaneously')
         sys.exit(1)
 
+    if len(relation_types) != len(jsre_models):
+        print('[ERROR] There should be a one-to-one mapping for relation types '
+              'and jSRE models.')
+        sys.exit(1)
+
     ads_parser = AdsParser(ads_token, ads_url, tika_server_url)
     lpsc_parser = LpscParser()
 
