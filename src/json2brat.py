@@ -170,12 +170,8 @@ def convert_json_to_brat(jsonfile, outdir):
                     r_id += 1
 
         for r in rels_keep:
-            if r[3] == 'Contains':
-                outf.write(u'R%d\tContains Arg1:T%d Arg2:T%d\n' %
-                           (r[0], r[1], r[2]))
-            elif r[3] == 'HasProperty':
-                outf.write(u'R%d\tHasProperty Arg1:T%d Arg2:T%d\n' %
-                           (r[0], r[1], r[2]))
+            outf.write(u'R%d\t%s Arg1:T%d Arg2:T%d\n' % (r[0], r[3], r[1],
+                                                         r[2]))
 
         outf.close()
 
