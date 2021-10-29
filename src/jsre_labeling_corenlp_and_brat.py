@@ -18,6 +18,7 @@ from pycorenlp import StanfordCoreNLP
 from brat_annotation_sqlite import BratDocument
 from brat_annotation_sqlite import TYPE_ENTITY
 from brat_annotation_sqlite import TYPE_RELATION
+from brat_annotation_sqlite import TYPE_EVENT
 
 
 # Stanford CoreNLP will split most of the hyphenated words by default with
@@ -97,7 +98,10 @@ def remove_nested_ann(entity_ann_list, relation_ann_list):
             entity_ann_list.remove(active_entity)
 
             for relation_ann in list(relation_ann_list):
-                if active_entity.ann_id == relation_ann.arg2:
+                if (relation_ann.type == TYPE_RELATION and
+                        relation_ann.arg2 == active_entity.ann_id) or \
+                        (relation_ann.type == TYPE_EVENT and
+                        active_entity.ann_id in relation_ann.conts):
                     relation_ann_list.remove(relation_ann)
 
 
@@ -168,12 +172,34 @@ def get_sub_entity(target_entity):
     return sub_target_entity_list
 
 
+def convert_event_to_relation(event_ann_list):
+    convert_relation_ann_list = list()
+    for event_ann in event_ann_list:
+        relation_pairs = itertools.product(event_ann.targs, event_ann.conts)
+        for ind, (target_id, component_id) in enumerate(relation_pairs):
+            # Create an empty object-like function
+            relation_ann = lambda: None
+            relation_ann.ann_id = '%s_%d' % (event_ann.ann_id, ind)
+            relation_ann.type = TYPE_RELATION
+            relation_ann.label = event_ann.label
+            relation_ann.arg1 = target_id
+            relation_ann.arg2 = component_id
+
+            convert_relation_ann_list.append(relation_ann)
+
+    return convert_relation_ann_list
+
+
 def generate_positive_examples(sentence, relevant_ann_list, example_counter,
                                fn_base, out_file):
     relation_ann_list = [ann for ann in relevant_ann_list
                          if ann.type == TYPE_RELATION]
     entity_ann_list = [ann for ann in relevant_ann_list
                        if ann.type == TYPE_ENTITY]
+    event_ann_list = [ann for ann in relevant_ann_list
+                      if ann.type == TYPE_EVENT]
+    converted_relation_ann_list = convert_event_to_relation(event_ann_list)
+    relation_ann_list.extend(converted_relation_ann_list)
 
     if len(relation_ann_list) == 0:
         return example_counter
@@ -185,14 +211,7 @@ def generate_positive_examples(sentence, relevant_ann_list, example_counter,
         target_entity = get_ann_by_id(entity_ann_list, relation_ann.arg1)
         active_entity = get_ann_by_id(entity_ann_list, relation_ann.arg2)
 
-        if target_entity is None:
-            print '[WARNING] Cannot find entity %s used in relation %s' % \
-                  (relation_ann.arg1, relation_ann.ann_id)
-            continue
-
-        if active_entity is None:
-            print '[WARNING] Cannot find entity %s used in relation %s' % \
-                  (relation_ann.arg2, relation_ann.ann_id)
+        if target_entity is None or active_entity is None:
             continue
 
         # If target and active entities are in the same sentence, generate a
@@ -248,6 +267,10 @@ def generate_negative_examples(sentence, relevant_ann_list, example_counter,
 
     relation_ann_list = [ann for ann in relevant_ann_list
                          if ann.type == TYPE_RELATION]
+    event_ann_list = [ann for ann in relevant_ann_list
+                      if ann.type == TYPE_EVENT]
+    converted_relation_ann_list = convert_event_to_relation(event_ann_list)
+    relation_ann_list.extend(converted_relation_ann_list)
     entity_ann_list = [ann for ann in relevant_ann_list
                        if ann.type == TYPE_ENTITY and
                        ann.start >= sentence_start and
@@ -364,7 +387,9 @@ def main(relation_type, in_dir, out_dir, corenlp_url):
         entity_ann_list = [ann for ann in brat_doc.ann_content
                            if ann.label in all_entity_types]
         relation_ann_list = [ann for ann in brat_doc.ann_content
-                             if ann.label.lower() == relation_type]
+                             if ann.label.lower() == relation_type and
+                             (ann.type == TYPE_RELATION or
+                              ann.type == TYPE_EVENT)]
         remove_nested_ann(entity_ann_list, relation_ann_list)
         relevant_ann_list = entity_ann_list + relation_ann_list
 
