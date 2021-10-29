@@ -3,260 +3,400 @@
 # Read in a text file, run CoreNLP to get features (pos, lemma, NER),
 # and convert it to JSRE's data ("examples") format.
 #
-# Authors: Kiri Wagstaff and Karanjeet Singh
-# Created on: March 13, 2017
-# Copyright notice at bottom of file.
+# Authors: Kiri Wagstaff, Karanjeet Singh, Steven Lu
+# Created on: September 30, 2021
+# Copyright notice at bottom of file
 
-import sys, os, io
+import os
+import io
+import re
+import sys
+import copy
 import urllib
-# The following two lines make CoreNLP happy
-reload(sys)
-sys.setdefaultencoding('UTF8')
-import argparse
+import itertools
 from pycorenlp import StanfordCoreNLP
-from pysolr import Solr
+from brat_annotation_sqlite import BratDocument
+from brat_annotation_sqlite import TYPE_ENTITY
+from brat_annotation_sqlite import TYPE_RELATION
 
 
-def parse(txt_file, ann_file, accept_entities):
-    with open(txt_file) as text_file, open(ann_file) as ann_file:
-        texts = text_file.read().decode('utf8')
-        text_file.close()
-        anns = map(lambda x: x.strip().split('\t'), ann_file)
-        anns = filter(lambda x: len(x) > 2, anns)
-        # FIXME: ignoring the annotations which are complex
-
-        anns = filter(lambda x: ';' not in x[1], anns)
-
-        # FIXME: some annotations' spread have been split into many, separated by ; ignoring them
-
-        def __parse_ann(ann):
-            spec = ann[1].split()
-            entity_type = spec[0]
-            ann_id = ann[0]
-            markers = list(map(lambda x: int(x), spec[1:]))
-            # t = ' '.join([texts[begin:end] for begin,end in zip(markers[::2], markers[1::2])])
-            t = texts[markers[0]:markers[1]]
-            if not t == ann[2]:
-                print("Error: Annotation mis-match, file=%s, ann=%s, text=%s" % (txt_file, str(ann), t))
-                return None
-            return (entity_type, markers, t, ann_id)
-
-        anns = map(__parse_ann, anns)  # format
-        anns = filter(lambda x: x, anns)  # skip None
-
-        # building a tree index for easy accessing
-        tree = {}
-        for entity_type, pos, name, ann_id in anns:
-            if entity_type in accept_entities:
-                begin, end = pos[0], pos[1]
-                if begin not in tree:
-                    tree[begin] = {}
-                node = tree[begin]
-                if end not in node:
-                    node[end] = []
-                node[end].append(ann_id)
-
-        # Re-read file in without decoding it
-        text_file = open(txt_file)
-        texts = text_file.read()
-        text_file.close()
-        return texts, tree
+# Stanford CoreNLP will split most of the hyphenated words by default with
+# exceptions in Supplementary Guidelines for ETTB 2.0.
+# https://www.ldc.upenn.edu/sites/www.ldc.upenn.edu/files/etb-supplementary-guidelines-2009-addendum.pdf
+# The exceptions are defined in section 1.2 Hyphenated Words.
+# In order to match the tokens between CoreNLP and the Brat annotations, we
+# need to tokenize the Brat annotations the same way as CoreNLP. If the
+# affixes in the following list are inside a Brat annotation, we will not
+# split this Brat annotation.
+ETTB_AFFIXES = ['e-', 'a-', 'u-', 'x-', 'agro-', 'ante-', 'anti-', 'arch-',
+                'be-', 'bio-', 'co-', 'counter-', 'cross-', 'cyber-', 'de-',
+                'eco-', '-esque', '-ette', 'ex-', 'extra-', '-fest', '-fold',
+                '-gate', 'inter-', 'intra-', '-itis', '-less', 'macro-',
+                'mega-', 'micro-', 'mid-', 'mini-', 'mm-hm', 'mm-mm', '-most',
+                'multi-', 'neo-', 'non-', 'o-kay', '-o-torium', 'over-', 'pan-',
+                'para-', 'peri-', 'post-', 'pre-', 'pro-', 'pseudo-', 'quasi-',
+                '-rama', 're-', 'semi-', 'sub-', 'super-', 'tri-', 'uh-huh',
+                'uh-oh', 'ultra-', 'un-', 'uni-', 'vice-', '-wise']
 
 
-def include_brat_ann(entities, brat_tree):
-    continue_ann, continue_ann_end, continue_ann_begin = None, None, None
-    for e in entities:
-        e_begin, e_end = e['characterOffsetBegin'], e['characterOffsetEnd']
-        label = 'O'
-        if e_begin in brat_tree:
-            node = brat_tree[e_begin]
-            if len(node) > 1:
-                #print("WARN: multiple starts at ", e_begin, node)
-                if e_end in node:
-                    #e['ann_id'] = node[e_end][0]  # picking one
-                    node = {e_end: node[e_end]}  # picking one
-                    #print("Chose:", node)
-            ann_end, labels = node.items()[0]
-            if not len(labels) == 1:
-                print("WARN: Duplicate ids for token: %s, id:%s. Using the first one!" % (e['word'], str(labels)))
-            label = labels[0]
-            if e_end == ann_end:  # annotation ends where token ends
-                continue_ann = None
-            elif e_end < ann_end and label != 'O':
-                #print("Continue for the next %d chars" % (ann_end - e_end))
-                continue_ann = label
-                continue_ann_end = ann_end
-                continue_ann_begin = e_begin
-        elif continue_ann is not None and e_end <= continue_ann_end and e_begin > continue_ann_begin:
-            #print("Continuing the annotation %s, %d:%d %d]" % (continue_ann, e_begin, e_end, continue_ann_end))
-            label = continue_ann  # previous label is this label
-            if continue_ann_end == e_end:  # continuation ends here
-                print("End")
-                continue_ann = None
-        else:
-            continue_ann, continue_ann_end, continue_ann_begin = None, None, None
-        if label != 'O':
-            e['ann_id'] = label
+def init_corenlp(corenlp_url):
+    props = {
+        'annotators': 'tokenize,ssplit,lemma,pos,ner',
+        'outputFormat': 'json',
+        'ner.useSUTime': False,
+        'ner.applyNumericClassifiers': False,
+        'timeout': '60000',
+        'ner.applyFineGrained': False
+    }
+
+    corenlp = StanfordCoreNLP(corenlp_url)
+
+    return corenlp, props
 
 
-def generate_example_id(fnbase, index, ex_id):
-    # Create a unique identifier
-    return '%s_%s_%s' % (fnbase, str(index), str(ex_id))
+def generate_examples(sentence, relevant_ann, fn_base, out_file):
+    example_counter = 0
+
+    # Step 1: Generate all positive relation examples within the sentence. Note
+    # that there could be more than one positive relations in one sentence.
+    example_counter = generate_positive_examples(sentence, relevant_ann,
+                                                 example_counter, fn_base,
+                                                 out_file)
+
+    # Step 2: Generate all negative relation examples within the sentence. Note
+    # that there could be more than one negative relations in one sentence.
+    generate_negative_examples(sentence, relevant_ann, example_counter, fn_base,
+                               out_file)
 
 
-def generate_example(id, label, sentence, target_index, active_index):
-    body = ''
-    for t in sentence['tokens']:
-        # Target entity is the agent;
-        # Element entity is the target (of the relation)
-        if t['index'] == target_index:
-            entity_label = 'A'
-        elif t['index'] == active_index:
-            entity_label = 'T'
-        else:
-            entity_label = 'O'
+def get_ann_by_id(entity_ann_list, ann_id):
+    ret_entity_ann = None
+    for entity_ann in entity_ann_list:
+        if entity_ann.ann_id == ann_id:
+            ret_entity_ann = entity_ann
 
-        # CoreNLP indexes starting at 1
-        body += '%d&&%s&&%s&&%s&&%s&&%s ' % (t['index'] - 1,
-                                             t['word'],
-                                             t['lemma'],
-                                             t['pos'],
-                                             t['ner'],
-                                             entity_label)
-    # Output the example
-    example = '%s\t%s\t%s\n' % (label, id, body)
-    print example
-    return example
+    return ret_entity_ann
 
 
-def build_jsre_examples(rel, venue, in_path, out_path, solr_url, corenlp_url):
-    """
-    Build jSRE examples from CoreNLP NER and Brat Annotations
-    :param rel: relation to extract
-    :param venue: example: lpsc15
-    :param in_path: path to the input directory
-    :param out_path: path to the output directory
-    :param solr_url: URL of Solr Server
-    :param corenlp_url: URL of Stanford CoreNLP Server
-    :return:
-    """
-    # Configuration
-    corenlp_server = StanfordCoreNLP(corenlp_url)
-    solr_server = Solr(solr_url)
-    props = {'annotators': 'tokenize,ssplit,lemma,pos,ner',
-             #'ner.model': 'ner_model_train_63r15v2_685k14-no-ref_384k15-no-ref.ser.gz',
-             #'ner.model': 'ner_model_train_62r15_685k14_384k15.ser.gz',
-             # won't work because model inside isn't 'old'
-             #'ner.model': 'ner_model_train_62r15v3_emt_gazette_old.ser.gz',
-             'ner.model': 'ner_model_train_62r15v3_emt_gazette.ser.gz',
-             #'ner.model': 'ner_62r15v3_emt_gazette.ser.gz',
-             'outputFormat': 'json'}
+def remove_ann_by_id(ann_list, ann_id):
+    for entity_ann in ann_list:
+        if entity_ann.ann_id == ann_id:
+            ann_list.remove(entity_ann)
+            break
 
-    if not os.path.exists(out_path):
-        print 'Creating output directory %s' % out_path
-        os.mkdir(out_path)
 
-    # Select *.txt files
-    in_files = [fn for fn in os.listdir(in_path) if fn.endswith('.txt')]
+def remove_nested_ann(entity_ann_list, relation_ann_list):
+    target_entity_list = [ann for ann in entity_ann_list if ann.label == 'Target']
+    active_entity_list = [ann for ann in entity_ann_list if ann.label != 'Target']
+    entity_pairs = itertools.product(target_entity_list, active_entity_list)
+
+    for target_entity, active_entity in entity_pairs:
+        if active_entity.name in target_entity.name and \
+                active_entity.start >= target_entity.start and \
+                active_entity.end <= target_entity.end:
+            entity_ann_list.remove(active_entity)
+
+            for relation_ann in list(relation_ann_list):
+                if active_entity.ann_id == relation_ann.arg2:
+                    relation_ann_list.remove(relation_ann)
+
+
+def get_entity_type_and_label(token, target_entity, active_entity,
+                              entity_ann_list):
+    entity_ann_list_copy = copy.deepcopy(entity_ann_list)
+    jsre_entity_type = 'O'
+    jsre_entity_label = 'O'
+
+    offset_begin = token['characterOffsetBegin']
+    offset_end = token['characterOffsetEnd']
+    word = token['originalText']
+
+    if offset_begin >= target_entity.start and \
+            offset_end <= target_entity.end and \
+            word.lower() in target_entity.name.lower():
+        jsre_entity_type = target_entity.label
+        jsre_entity_label = 'A'  # 'A' means jSRE agent
+    elif offset_begin >= active_entity.start and \
+            offset_end <= active_entity.end and \
+            word.lower() in active_entity.name.lower():
+        jsre_entity_type = active_entity.label
+        jsre_entity_label = 'T'  # 'T' means jSRE target
+    else:
+        remove_ann_by_id(entity_ann_list_copy, target_entity.ann_id)
+        remove_ann_by_id(entity_ann_list_copy, active_entity.ann_id)
+
+        for entity in entity_ann_list_copy:
+            if offset_begin >= entity.start \
+                    and offset_end <= entity.end and \
+                    word.lower() in entity.name.lower():
+                jsre_entity_type = entity.label
+
+    return jsre_entity_type, jsre_entity_label
+
+
+def get_sub_entity(target_entity):
+    split_flag = True
+    for affix in ETTB_AFFIXES:
+        if affix in target_entity.name.lower():
+            split_flag = False
+            break
+
+    # Split the target entity by space, hyphen, and underscore.
+    if split_flag:
+        entity_tokens = re.split(' |-|_', target_entity.name)
+    else:
+        entity_tokens = [target_entity.name]
+
+    if len(entity_tokens) == 0:
+        return target_entity
+
+    target_start = target_entity.start
+
+    sub_target_entity_list = list()
+    for idx, entity_token in enumerate(entity_tokens):
+        # Create an empty object-like function
+        sub_entity = lambda: None
+        sub_entity.ann_id = '%s_%d' % (target_entity.ann_id, idx)
+        sub_entity.name = entity_token
+        sub_entity.type = target_entity.type
+        sub_entity.label = target_entity.label
+        sub_entity.start = target_start + target_entity.name.index(entity_token)
+        sub_entity.end = sub_entity.start + len(entity_token)
+
+        sub_target_entity_list.append(sub_entity)
+
+    return sub_target_entity_list
+
+
+def generate_positive_examples(sentence, relevant_ann_list, example_counter,
+                               fn_base, out_file):
+    relation_ann_list = [ann for ann in relevant_ann_list
+                         if ann.type == TYPE_RELATION]
+    entity_ann_list = [ann for ann in relevant_ann_list
+                       if ann.type == TYPE_ENTITY]
+
+    if len(relation_ann_list) == 0:
+        return example_counter
+
+    sentence_start = sentence['tokens'][0]['characterOffsetBegin']
+    sentence_end = sentence['tokens'][-1]['characterOffsetEnd']
+
+    for relation_ann in relation_ann_list:
+        target_entity = get_ann_by_id(entity_ann_list, relation_ann.arg1)
+        active_entity = get_ann_by_id(entity_ann_list, relation_ann.arg2)
+
+        if target_entity is None:
+            print '[WARNING] Cannot find entity %s used in relation %s' % \
+                  (relation_ann.arg1, relation_ann.ann_id)
+            continue
+
+        if active_entity is None:
+            print '[WARNING] Cannot find entity %s used in relation %s' % \
+                  (relation_ann.arg2, relation_ann.ann_id)
+            continue
+
+        # If target and active entities are in the same sentence, generate a
+        # positive jsre example for the entity pair
+        if target_entity.start >= sentence_start and \
+                target_entity.end <= sentence_end and \
+                active_entity.start >= sentence_start and \
+                active_entity.end <= sentence_end:
+            # An entity could have multiple words (e.g., Scooby Doo).
+            # We need to split multi-words entity into multiple
+            # single-word entities. For example, the multi-words target
+            # entity Scooby Doo will be split into two single-word entities
+            # Scooby and Doo.
+            sub_target_entity_list = get_sub_entity(target_entity)
+            sub_active_entity_list = get_sub_entity(active_entity)
+            sub_entity_pairs = itertools.product(sub_target_entity_list,
+                                                 sub_active_entity_list)
+            for sub_target_entity, sub_active_entity in sub_entity_pairs:
+                example_body = ''
+
+                for token in sentence['tokens']:
+                    entity_type, entity_label = get_entity_type_and_label(token,
+                        sub_target_entity, sub_active_entity, entity_ann_list)
+
+                    example_body += '%d&&%s&&%s&&%s&&%s&&%s ' % (
+                        token['index'] - 1, token['word'], token['lemma'],
+                        token['pos'], entity_type, entity_label)
+
+                # This is to handle the case where an example body doesn't
+                # contain jSRE Agent or jSRE Target.
+                if '&&A ' not in example_body or '&&T ' not in example_body:
+                    print 'Example created for entity %s %s and entity %s %s ' \
+                          'are skipped because we cannot match the CoreNLP ' \
+                          'tokens to Brat annotations' % \
+                          (sub_target_entity.ann_id, sub_target_entity.name,
+                           sub_active_entity.ann_id, sub_active_entity.name)
+                    continue
+
+                example_id = '%s_%d_%d' % (fn_base, sentence['index'],
+                                           example_counter)
+                example_counter += 1
+                # '1' means jSRE positive example
+                example = '%s\t%s\t%s\n' % ('1', example_id, example_body)
+                out_file.write(example)
+
+    return example_counter
+
+
+def generate_negative_examples(sentence, relevant_ann_list, example_counter,
+                               fn_base, out_file):
+    sentence_start = sentence['tokens'][0]['characterOffsetBegin']
+    sentence_end = sentence['tokens'][-1]['characterOffsetEnd']
+
+    relation_ann_list = [ann for ann in relevant_ann_list
+                         if ann.type == TYPE_RELATION]
+    entity_ann_list = [ann for ann in relevant_ann_list
+                       if ann.type == TYPE_ENTITY and
+                       ann.start >= sentence_start and
+                       ann.end <= sentence_end]
+    target_ann_list = [ann for ann in entity_ann_list if ann.label == 'Target']
+    active_ann_list = [ann for ann in entity_ann_list if ann.label != 'Target']
+
+    if len(target_ann_list) == 0 or len(active_ann_list) == 0:
+        return
+
+    entity_pairs = itertools.product(target_ann_list, active_ann_list)
+    for target_entity, active_entity in entity_pairs:
+        skip_flag = False
+        for relation_ann in relation_ann_list:
+            if target_entity.ann_id == relation_ann.arg1 and \
+                    active_entity.ann_id == relation_ann.arg2:
+                # This is the pair to generate positive example or being skipped
+                # by the function that generates positive examples if the
+                # entities are not in the same sentence. Here, we skip it
+                # because we are generating negative examples.
+                skip_flag = True
+                break
+
+        if skip_flag:
+            continue
+
+        # An entity could have multiple words (e.g., Scooby Doo).
+        # We need to split multi-words entity into multiple
+        # single-word entities. For example, the multi-words target
+        # entity Scooby Doo will be split into two single-word entities
+        # Scooby and Doo.
+        sub_target_entity_list = get_sub_entity(target_entity)
+        sub_active_entity_list = get_sub_entity(active_entity)
+        sub_entity_pairs = itertools.product(sub_target_entity_list,
+                                             sub_active_entity_list)
+        for sub_target_entity, sub_active_entity in sub_entity_pairs:
+            example_body = ''
+
+            for token in sentence['tokens']:
+                entity_type, entity_label = get_entity_type_and_label(token,
+                    sub_target_entity, sub_active_entity, entity_ann_list)
+
+                example_body += '%d&&%s&&%s&&%s&&%s&&%s ' % (token['index'] - 1,
+                                                             token['word'],
+                                                             token['lemma'],
+                                                             token['pos'],
+                                                             entity_type,
+                                                             entity_label)
+
+            # This is to handle the case where an example body doesn't
+            # contain jSRE Agent or jSRE Target.
+            if '&&A ' not in example_body or '&&T ' not in example_body:
+                print 'Warn: example created for entity [%s %s] and entity [%s ' \
+                      '%s] are skipped because we cannot match the CoreNLP ' \
+                      'tokens to Brat annotations' % \
+                      (sub_target_entity.ann_id, sub_target_entity.name,
+                       sub_active_entity.ann_id, sub_active_entity.name)
+                continue
+
+            example_id = '%s_%d_%d' % (fn_base, sentence['index'],
+                                       example_counter)
+            example_counter += 1
+            # '0' means jSRE negative example
+            example = '%s\t%s\t%s\n' % ('0', example_id, example_body)
+            out_file.write(example)
+
+
+def main(relation_type, in_dir, out_dir, corenlp_url):
+    if not os.path.exists(in_dir) or not os.path.isdir(in_dir):
+        print '[ERROR] in_dir does not exist or is not a directory'
+        sys.exit(1)
+
+    # Create output directory
+    if not os.path.exists(out_dir):
+        print 'Creating output directory: %s' % os.path.abspath(out_dir)
+        os.mkdir(out_dir)
+
+    # Initialize corenlp
+    corenlp, props = init_corenlp(corenlp_url)
+
+    # Figure out entity types
+    accept_entity_types = list()
+    if relation_type.lower() == 'contains':
+        accept_entity_types.append('Element')
+        accept_entity_types.append('Mineral')
+    else:
+        accept_entity_types.append('Property')
+
+    # Get a list of all text documents
+    in_files = [fn for fn in os.listdir(in_dir) if fn.endswith('.txt')]
     in_files.sort()
-    print 'Processing %d documents. ' % len(in_files)
+    n_files = len(in_files)
+    print 'Number of documents to process: %d' % n_files
 
-    for fn in in_files:
-        fnbase = fn[:fn.find('.txt')]
-        in_fn = '%s.txt' % fnbase
-        ann_fn = '%s.ann' % fnbase
-        out_fn = '%s-%s.examples' % (fnbase, rel.lower())
+    for ind, fn in enumerate(in_files):
+        fn_base = fn[: fn.find('.txt')]
+        print '(%d/%d) Processing %s' % (ind + 1, n_files, fn_base)
 
-        print 'Reading in %s and %s' % (in_fn, ann_fn)
-        #for line in convert(corenlp_server, os.path.join(in_path, in_fn), os.path.join(in_path, ann_fn)):
-        #    print line
-        accept_entities = {'Target', rel}
-        text, tree = parse(os.path.join(in_path, in_fn), os.path.join(in_path, ann_fn), accept_entities)
+        txt_fn = os.path.join(in_dir, '%s.txt' % fn_base)
+        ann_fn = os.path.join(in_dir, '%s.ann' % fn_base)
+        out_fn = os.path.join(out_dir, '%s-%s.examples' %
+                              (fn_base, relation_type.lower()))
+        out_file = io.open(out_fn, 'w', encoding='utf-8')
 
-        if text[0].isspace():
-            text = '.' + text[1:]
-            # Reason: some tools trim/strip off the white spaces
-            #  which will mismatch the character offsets
+        brat_doc = BratDocument(ann_fn, txt_fn, canonical_mapping=False)
+        if brat_doc.txt_content[0].isspace():
+            brat_doc.txt_content = '.' + brat_doc.txt_content[1:]
 
-        # Running CoreNLP on Document
-        # Quote (with percent-encoding) reserved characters in URL for CoreNLP
-        text = urllib.quote(text)
-        doc = corenlp_server.annotate(text, properties=props)
+        text = urllib.quote(brat_doc.txt_content)
+        corenlp_doc = corenlp.annotate(text, properties=props)
 
-        with io.open(os.path.join(out_path, out_fn), 'w', 
-                     encoding='utf8') as outf:
-            # Map Raymond's .ann (brat) annotations into the CoreNLP-parsed
-            # sentence/token structure.
-            ex_id = 0
-            for s in doc['sentences']:
-                # For each pair of target+(element|mineral) entities,
-                # are they in a contains relationship?
-                # label:
-                # 0 - negative
-                # 1 - entity_1 contains entity_2
-                # 2 - entity_2 contains entity_1
-                # Get the relevant entities (Target, Element, Mineral)
-                targets = [t for t in s['tokens'] if t['ner'] == 'Target']
-                active = [t for t in s['tokens'] if t['ner'] == rel]
+        # Get active entities and relations
+        all_entity_types = accept_entity_types + ['Target']
+        entity_ann_list = [ann for ann in brat_doc.ann_content
+                           if ann.label in all_entity_types]
+        relation_ann_list = [ann for ann in brat_doc.ann_content
+                             if ann.label.lower() == relation_type]
+        remove_nested_ann(entity_ann_list, relation_ann_list)
+        relevant_ann_list = entity_ann_list + relation_ann_list
 
-                include_brat_ann(targets, tree)
-                include_brat_ann(active, tree)
+        if len(relevant_ann_list) == 0:
+            # If a .ann file doesn't contain any relevant annotations, skip it.
+            continue
 
-                for i in range(0, len(targets)):
-                    for j in range(0, len(active)):
-                        if 'ann_id' not in targets[i]:
-                            print "No annotation exists for Target:", targets[i]['word']
-                            id = generate_example_id(fnbase, s['index'], ex_id)
-                            example = generate_example(id, 0, s, 
-                                                       targets[i]['index'], 
-                                                       active[j]['index'])
-                            outf.write(example)
-                            ex_id += 1
-                            continue
-                        if 'ann_id' not in active[j]:
-                            print 'No annotation exists for %s: %s' % (rel, active[j]['word'])
-                            id = generate_example_id(fnbase, s['index'], ex_id)
-                            example = generate_example(id, 0, s,
-                                                       targets[i]['index'], 
-                                                       active[j]['index'])
-                            outf.write(example)
-                            ex_id += 1
-                            continue
-                        label = 0
-                        # This gives a positive label for an exact match
-                        # on the Target and active string spans.
-                        print 'Querying %s contains %s.' % \
-                            (targets[i]['word'], active[j]['word'])
-                        qry_str = 'type:contains AND p_id:' + venue + '-' + fnbase + \
-                                  ' AND targets_ss:' + targets[i]['ann_id'] + \
-                                  ' AND cont_ss:' + active[j]['ann_id']
-                        print qry_str, "\n"
-                        resp = solr_server.search(qry_str, None, fl='id')
-                        if resp and resp.hits > 0:
-                            label = 1
+        for sentence in corenlp_doc['sentences']:
+            generate_examples(sentence, relevant_ann_list, fn_base, out_file)
 
-                        # Create a unique identifier
-                        id = generate_example_id(fnbase, s['index'], ex_id)
-                        ex_id += 1
-                        example = generate_example(id, label, s, 
-                                                   targets[i]['index'], 
-                                                   active[j]['index'])
-                        outf.write(example)
-                        print
+        out_file.close()
 
 
 if __name__ == '__main__':
+    import argparse
+
     parser = argparse.ArgumentParser()
-    parser.add_argument('-r', '--relation', help='Mineral or Element', required=True)
-    parser.add_argument('-v', '--venue', help='Example: lpsc15', required=True)
-    parser.add_argument('-i', '--input', help='Directory path to documents containing text and annotations', required=True)
-    parser.add_argument('-o', '--output', help='Directory path where jSRE examples to be placed', required=True)
-    parser.add_argument('-s', '--solr_url', help='URL of Solr Server; Default: http://localhost:8983/solr/docs',
-                        default='http://localhost:8983/solr/docs')
-    parser.add_argument('-n', '--corenlp_url', help='URL of Stanford CoreNlp server; Default: http://localhost:9000',
-                        default='http://localhost:9000')
+    parser.add_argument('-r', '--relation_type', required=True,
+                        choices=['contains', 'hasproperty'],
+                        help='The valid options are contains or has_property')
+    parser.add_argument('-i', '--in_dir', required=True,
+                        help='Directory path to documents containing text '
+                             '(.txt) and annotations (.ann)')
+    parser.add_argument('-o', '--out_dir', required=True,
+                        help='Directory path to the output jSRE examples')
+    parser.add_argument('-c', '--corenlp_url', default='http://localhost:9000',
+                        help='URL of Stanford CoreNLP server. The default is '
+                             'http://localhost:9000')
+
     args = parser.parse_args()
-    build_jsre_examples(args.relation, args.venue, args.input, args.output, args.solr_url, args.corenlp_url)
+
+    main(**vars(args))
 
 
 # Copyright 2017, by the California Institute of Technology. ALL
@@ -270,4 +410,3 @@ if __name__ == '__main__':
 # responsibility to obtain export licenses, or other export authority
 # as may be required before exporting such information to foreign
 # countries or providing access to foreign persons.
-

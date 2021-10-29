@@ -7,14 +7,15 @@
 # July 31, 2017
 
 import sys, os, shutil, io
-import json
-from ioutils import read_jsonlines
+from io_utils import read_jsonlines
+
 
 def usage():
     print './json2brat.py <JSON file> <output dir>'
     print ' Note: all documents in the JSON file will be'
     print ' saved out to individual files in the output directory.'
     sys.exit(1)
+
 
 # Merge adjacent words into entities:
 # - adjacent Target words found to be in a relation
@@ -146,6 +147,8 @@ def convert_json_to_brat(jsonfile, outdir):
         for r in rels:
             # Currently these are specific to the "contains" relation
             for t in r['target_ids']:
+                relation_type = r['label']
+
                 # If t's id isn't in ner_dict, then it's a word that got merged
                 if '_'.join(t.split('_')[:2]) not in ner_dict:
                     break
@@ -161,13 +164,15 @@ def convert_json_to_brat(jsonfile, outdir):
                                                   r[2] == ner_dict[c])]
                     if len(m) > 0:
                         continue
-                    rels_keep += [(r_id, ner_dict[t], ner_dict[c])]
+
+                    rels_keep += [(r_id, ner_dict[t], ner_dict[c],
+                                   relation_type)]
                     r_id += 1
 
         for r in rels_keep:
-            outf.write(u'R%d\tContains Arg1:T%d Arg2:T%d\n' % 
-                       (r[0], r[1], r[2]))
-                               
+            outf.write(u'R%d\t%s Arg1:T%d Arg2:T%d\n' % (r[0], r[3], r[1],
+                                                         r[2]))
+
         outf.close()
 
 

@@ -33,8 +33,8 @@ class JgrParser(PaperParser):
 
 
 def process(in_file, in_list, out_file, log_file, tika_server_url,
-            corenlp_server_url, ner_model, gazette_file, jsre_root, jsre_model,
-            jsre_tmp_dir, ads_url, ads_token):
+            corenlp_server_url, ner_model, gazette_file, relation_type,
+            jsre_root, jsre_model, jsre_tmp_dir, ads_url, ads_token):
     # Log input parameters
     logger = LogUtil('jgr-parser', log_file)
     logger.info('Input parameters')
@@ -45,6 +45,7 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
     logger.info('corenlp_server_url: %s' % corenlp_server_url)
     logger.info('ner_model: %s' % os.path.abspath(ner_model))
     logger.info('gazette_file: %s' % gazette_file)
+    logger.info('relation_type: %s' % relation_type)
     logger.info('jsre_root: %s' % os.path.abspath(jsre_root))
     logger.info('jsre_model: %s' % os.path.abspath(jsre_model))
     logger.info('jsre_tmp_dir: %s' % os.path.abspath(jsre_tmp_dir))
@@ -58,7 +59,7 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
     ads_parser = AdsParser(ads_token, ads_url, tika_server_url)
     jgr_parser = JgrParser()
     jsre_parser = JsreParser(corenlp_server_url, ner_model, gazette_file,
-                             jsre_root, jsre_model, jsre_tmp_dir)
+                             relation_type, jsre_root, jsre_model, jsre_tmp_dir)
 
     if in_file:
         files = [in_file]
@@ -113,6 +114,10 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--gazette_file', required=False,
                         help='Path to a gazette file that consists of '
                              '"Entity_type Entity_name" pairs')
+    parser.add_argument('-rt', '--relation_type',
+                        choices=['contains', 'hasproperty'],
+                        help='Relation type. Options are contains and '
+                             'hasproperty.')
     parser.add_argument('-jr', '--jsre_root', default='/proj/mte/jSRE/jsre-1.1',
                         help='Path to jSRE installation directory. Default is '
                              '/proj/mte/jSRE/jsre-1.1')

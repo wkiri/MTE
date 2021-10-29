@@ -26,12 +26,13 @@ class JsreParser(CoreNLPParser):
     """
     JSRE_PARSER = "org.itc.irst.tcc.sre.Predict"
 
-    def __init__(self, corenlp_server_url, ner_model, gazette_file, jsre_root,
-                 jsre_model, jsre_tmp_dir='/tmp'):
+    def __init__(self, corenlp_server_url, ner_model, gazette_file,
+                 relation_types, jsre_root, jsre_models, jsre_tmp_dir='/tmp'):
         super(JsreParser, self).__init__(corenlp_server_url, ner_model,
                                          gazette_file, 'jsre_parser')
+        self.relation_types = relation_types
         self.jsre_root = jsre_root
-        self.jsre_model = jsre_model
+        self.jsre_models = jsre_models
         self.jsre_tmp_dir = jsre_tmp_dir
         self.set_classpath()
         self.copy_config_files()
@@ -103,67 +104,71 @@ class JsreParser(CoreNLPParser):
 
         return relations, records
 
-    def predict(self, in_file, out_file):
+    def predict(self, jsre_model, in_file, out_file):
         cmd = ['java', '-mx256M', self.JSRE_PARSER, in_file,
-               self.jsre_model, out_file]
+               jsre_model, out_file]
 
         fnull = open(os.devnull, 'w')
         subprocess.call(cmd, stdout=fnull)
         fnull.close()
 
-    def parse(self, text):
-        corenlp_dict = super(JsreParser, self).parse(text)
-
+    def predict_relation(self, corenlp_dict, relation_type, jsre_model):
         relations = list()
         records = list()
         for sentence in corenlp_dict['sentences']:
             targets = [t for t in sentence['tokens'] if t['ner'] == 'Target']
-            elements = [t for t in sentence['tokens'] if t['ner'] == 'Element']
-            minerals = [t for t in sentence['tokens'] if t['ner'] == 'Mineral']
 
-            if len(targets) == 0 or (len(elements) == 0 and len(minerals) == 0):
-                continue
+            if relation_type.lower() == 'contains':
+                elements = [t for t in sentence['tokens']
+                            if t['ner'] == 'Element']
+                minerals = [t for t in sentence['tokens']
+                            if t['ner'] == 'Mineral']
 
-            rels, recs = JsreParser.prepare_jsre_input(targets, elements,
-                                                       sentence, rel_id='te')
-            relations.extend(rels)
-            records.extend(recs)
+                if len(targets) == 0 or (len(elements) == 0 and
+                                         len(minerals) == 0):
+                    continue
 
-            rels, recs = JsreParser.prepare_jsre_input(targets, minerals,
-                                                       sentence, rel_id='tm')
-            relations.extend(rels)
-            records.extend(recs)
+                rels, recs = JsreParser.prepare_jsre_input(targets, elements,
+                                                           sentence, rel_id='te')
+                relations.extend(rels)
+                records.extend(recs)
 
-        contains_relation = list()
+                rels, recs = JsreParser.prepare_jsre_input(targets, minerals,
+                                                           sentence, rel_id='tm')
+                relations.extend(rels)
+                records.extend(recs)
+            else:
+                properties = [t for t in sentence['tokens']
+                              if t['ner'] == 'Property']
+
+                if len(targets) == 0 or len(properties) == 0:
+                    continue
+
+                rels, recs = JsreParser.prepare_jsre_input(targets, properties,
+                                                           sentence, rel_id='tp')
+                relations.extend(rels)
+                records.extend(recs)
+
+        relation_list = list()
         pid = os.getpid()
         in_file = '%s/jsre_input_pid_%d.txt' % (self.jsre_tmp_dir, pid)
         out_file = '%s/jsre_output_pid_%d.txt' % (self.jsre_tmp_dir, pid)
 
         if len(records) == 0:
-            return {
-                'ner': corenlp_dict['ner'],
-                'sentences': corenlp_dict['sentences'],
-                'relation': contains_relation,
-                'X-Parsed-By': JsreParser.JSRE_PARSER
-            }
+            return None
 
         with io.open(in_file, 'w', encoding='utf8') as f:
             for r in records:
                 f.write(r)
 
         # Call jSRE to make predictions for NER items
-        self.predict(in_file, out_file)
+        self.predict(jsre_model, in_file, out_file)
 
         if not os.path.exists(out_file):
             warnings.warn('jSRE output file not found, which indicates jSRE '
                           'run may be failed.')
 
-            return {
-                'ner': corenlp_dict['ner'],
-                'sentences': corenlp_dict['sentences'],
-                'relation': contains_relation,
-                'X-Parsed-By': JsreParser.JSRE_PARSER
-            } 
+            return None
 
         jsre_out_file = open(out_file, 'r')
         labels = jsre_out_file.readlines()
@@ -175,10 +180,9 @@ class JsreParser(CoreNLPParser):
             if label == '0.0':
                 continue
 
-            contains_relation.append({
-                'label': 'contains',
+            relation_list.append({
+                'label': relation_type,
                 'target_names': [canonical_target_name(rel[0]['word'])],
-                # 'target_names': [rel[0]['word']],
                 'cont_names': [canonical_name(rel[1]['word'])],
                 'target_ids': ['%s_%d_%d' % (rel[0]['ner'].lower(),
                                              rel[0]['characterOffsetBegin'],
@@ -186,8 +190,8 @@ class JsreParser(CoreNLPParser):
                 'cont_ids': ['%s_%d_%d' % (rel[1]['ner'].lower(),
                                            rel[1]['characterOffsetBegin'],
                                            rel[1]['characterOffsetEnd'])],
-                'sentence':  ' '.join([t['originalText']
-                                       for t in rel[2]['tokens']]),
+                'sentence': ' '.join([t['originalText']
+                                      for t in rel[2]['tokens']]),
                 'source': 'jsre'
             })
 
@@ -195,17 +199,31 @@ class JsreParser(CoreNLPParser):
         os.remove(in_file)
         os.remove(out_file)
 
+        return relation_list
+
+    def parse(self, text):
+        corenlp_dict = super(JsreParser, self).parse(text)
+
+        all_relations = list()
+        for jsre_model, relation_type in zip(self.jsre_models,
+                                             self.relation_types):
+            relation_list = self.predict_relation(corenlp_dict, relation_type,
+                                                  jsre_model)
+
+            if relation_list is not None:
+                all_relations.extend(relation_list)
+
         return {
             'ner': corenlp_dict['ner'],
             'sentences': corenlp_dict['sentences'],
-            'relation': contains_relation,
+            'relation': all_relations,
             'X-Parsed-By': JsreParser.JSRE_PARSER
         }
 
 
 def process(in_file, in_list, out_file, log_file, tika_server_url,
-            corenlp_server_url, ner_model, gazette_file, jsre_root, jsre_model,
-            jsre_tmp_dir, ads_url, ads_token):
+            corenlp_server_url, ner_model, gazette_file, relation_types,
+            jsre_root, jsre_models, jsre_tmp_dir, ads_url, ads_token):
     # Log input parameters
     logger = LogUtil(log_file)
     logger.info('Input parameters')
@@ -216,8 +234,9 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
     logger.info('corenlp_server_url: %s' % corenlp_server_url)
     logger.info('ner_model: %s' % os.path.abspath(ner_model))
     logger.info('gazette_file: %s' % gazette_file)
+    logger.info('relation_types: %s' % json.dumps(relation_types))
     logger.info('jsre_root: %s' % os.path.abspath(jsre_root))
-    logger.info('jsre_model: %s' % os.path.abspath(jsre_model))
+    logger.info('jsre_models: %s' % json.dumps(jsre_models))
     logger.info('jsre_tmp_dir: %s' % os.path.abspath(jsre_tmp_dir))
     logger.info('ads_url: %s' % ads_url)
     logger.info('ads_token: %s' % ads_token)
@@ -226,9 +245,15 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
         print('[ERROR] in_file and in_list cannot be provided simultaneously')
         sys.exit(1)
 
+    if len(relation_types) != len(jsre_models):
+        print('[ERROR] There should be a one-to-one mapping for relation types '
+              'and jSRE models.')
+        sys.exit(1)
+
     ads_parser = AdsParser(ads_token, ads_url, tika_server_url)
     jsre_parser = JsreParser(corenlp_server_url, ner_model, gazette_file,
-                             jsre_root, jsre_model, jsre_tmp_dir)
+                             relation_types, jsre_root, jsre_models,
+                             jsre_tmp_dir)
 
     if in_file:
         files = [in_file]
@@ -279,10 +304,14 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--gazette_file', required=False,
                         help='Path to a gazette file that consists of '
                              '"Entity_type Entity_name" pairs')
+    parser.add_argument('-rt', '--relation_types', nargs='+', required=True,
+                        choices=['Contains', 'HasProperty'],
+                        help='Relation types. Options are Contains and '
+                             'HasProperty.')
     parser.add_argument('-jr', '--jsre_root', default='/proj/mte/jSRE/jsre-1.1',
                         help='Path to jSRE installation directory. Default is '
                              '/proj/mte/jSRE/jsre-1.1')
-    parser.add_argument('-jm', '--jsre_model', required=True,
+    parser.add_argument('-jm', '--jsre_models', nargs='+', required=True,
                         help='Path to jSRE model')
     parser.add_argument('-jt', '--jsre_tmp_dir', default='/tmp',
                         help='Path to a directory for jSRE to temporarily '
