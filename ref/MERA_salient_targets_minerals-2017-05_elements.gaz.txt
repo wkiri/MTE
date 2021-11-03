@@ -5870,7 +5870,6 @@ Target Ambrosia2
 Target Amhor
 Target Amundsen
 Target Anasazi
-Target Anatolia
 Target Anna Mae Hutchison
 Target Anticlea2
 Target Anticlea3

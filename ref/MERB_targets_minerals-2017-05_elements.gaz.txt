@@ -5896,6 +5896,7 @@ Target Amboy_Mosaic
 Target Amitsoq
 Target anaconda snakeden
 Target Anafi
+Target Anatolia
 Target Anchor
 Target Anchor Point
 Target Anchor_Point
