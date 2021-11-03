@@ -8,12 +8,15 @@
 # November 4, 2020
 
 import os
+import json
 from name_utils import canonical_name, canonical_target_name, \
     canonical_property_name
 
 
 TYPE_ENTITY = 'entity'
 TYPE_RELATION = 'relation'
+TYPE_EVENT = 'event'
+TYPE_NOT_SUPPORTED = 'not_yet_supported'
 SUPPORTED_LABELS = ['Target', 'Element', 'Mineral', 'Property', 'Contains',
                     'HasProperty']
 
@@ -84,6 +87,10 @@ class BratAnnotation:
             # Only used by relations
             self.arg1 = record['arg1']
             self.arg2 = record['arg2']
+        elif self.type == TYPE_EVENT:
+            # Only used by events
+            self.targs = record['targs']
+            self.conts = record['conts']
 
     def __str__(self):
         ret = self.label + ' (%s)' % self.ann_id
@@ -91,6 +98,9 @@ class BratAnnotation:
             ret += ': %s (%s - %s)' % (self.name, self.start, self.end)
         elif self.type == TYPE_RELATION:
             ret += ': %s -> %s' % (self.arg1, self.arg2)
+        elif self.type == TYPE_EVENT:
+            ret += ': %s -> %s' % (json.dumps(self.targs),
+                                   json.dumps(self.conts))
         return ret
 
     @staticmethod
@@ -100,17 +110,22 @@ class BratAnnotation:
 
         if line_tokens[0][0] == 'T':
             ann_type = TYPE_ENTITY
+            ann_label = middle_tokens[0]
         elif line_tokens[0][0] == 'R':
             ann_type = TYPE_RELATION
+            ann_label = middle_tokens[0]
+        elif line_tokens[0][0] == 'E':
+            ann_type = TYPE_EVENT
+            ann_label = middle_tokens[0].split(':')[0]
         else:
-            raise RuntimeError('Unrecognized brat ann type: %s' %
-                               line_tokens[0][0])
+            ann_type = TYPE_NOT_SUPPORTED
+            ann_label = middle_tokens[0]
 
         # Add generic attribution attributes
         record = {
             'ann_id': line_tokens[0],
             'type': ann_type,
-            'label': middle_tokens[0],
+            'label': ann_label
         }
 
         # Add type-specific attributes
@@ -132,6 +147,18 @@ class BratAnnotation:
             # These arguments are of the form ArgN:TXX
             record['arg1'] = middle_tokens[1].split(':')[1]
             record['arg2'] = middle_tokens[2].split(':')[1]
+        elif ann_type == TYPE_EVENT:
+            conts = []
+            targs = []
+            for inner_token in middle_tokens[1:]:
+                t1, t2 = inner_token.split(':')
+                if 'Cont' in t1:
+                    conts.append(t2)
+                elif 'Targ' in t1:
+                    targs.append(t2)
+
+            record['conts'] = conts
+            record['targs'] = targs
 
         return record
 
