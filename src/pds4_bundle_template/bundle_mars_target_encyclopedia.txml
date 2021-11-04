@@ -311,9 +311,16 @@
     <Bundle>
         <bundle_type>Archive</bundle_type>
     </Bundle>
-#if $bundle['include_mer']:
+#if $bundle['include_mera']:
     <Bundle_Member_Entry>
-        <lid_reference>urn:nasa:pds:mars_target_encyclopedia:data_mer</lid_reference>
+        <lid_reference>urn:nasa:pds:mars_target_encyclopedia:data_mera</lid_reference>
+        <member_status>Primary</member_status>
+        <reference_type>bundle_has_data_collection</reference_type>
+    </Bundle_Member_Entry>
+#end if
+#if $bundle['include_merb']:
+    <Bundle_Member_Entry>
+        <lid_reference>urn:nasa:pds:mars_target_encyclopedia:data_merb</lid_reference>
         <member_status>Primary</member_status>
         <reference_type>bundle_has_data_collection</reference_type>
     </Bundle_Member_Entry>

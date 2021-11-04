@@ -41,7 +41,7 @@
             <type>Mission</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:mission.mars_exploration_rover</lid_reference>
-                <reference_type>data_to_investigation</reference_type>
+                <reference_type>collection_to_investigation</reference_type>
             </Internal_Reference>
         </Investigation_Area>
         <Observing_System>
