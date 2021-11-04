@@ -112,7 +112,8 @@ def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
         'mera_collection_dir': mera_subdir,
         'merb_collection_dir': merb_subdir,
         'phx_collection_dir': phx_collection_dir,
-        'msl_collection_dir': msl_collection_dir
+        'msl_collection_dir': msl_collection_dir,
+        'out_dir': out_dir
     }
 
     return bundle_dict
@@ -353,16 +354,16 @@ def create_document_collection(doc_template_dir, doc_collection_dir):
     create_inventory_files(doc_collection_dir, doc_template_dir, 'document')
 
 
-def create_md5_checksum_file(bundle_dir):
-    md5_checksum_file = open(os.path.join(bundle_dir, MD5_CHECKSUM_NAME), 'w+')
+def create_md5_checksum_file(out_dir):
+    md5_checksum_file = open(os.path.join(out_dir, MD5_CHECKSUM_NAME), 'w+')
 
-    for root, _, file_names in os.walk(bundle_dir):
+    for root, _, file_names in os.walk(out_dir):
         for file_name in file_names:
             if file_name == MD5_CHECKSUM_NAME:
                 continue
 
             file_path = os.path.join(root, file_name)
-            relative_path = os.path.relpath(file_path, start=bundle_dir)
+            relative_path = os.path.relpath(file_path, start=out_dir)
             md5_checksum = hashlib.md5(open(file_path, 'rb').read()).hexdigest()
             md5_checksum_file.write('%s  %s\r\n' % (md5_checksum,
                                                     relative_path))
@@ -386,13 +387,13 @@ def get_lidvid(xml_path):
     return lid_vid
 
 
-def create_manifest_file(bundle_dir):
-    manifest_file = open(os.path.join(bundle_dir, MANIFEST_NAME), 'w+')
+def create_manifest_file(out_dir):
+    manifest_file = open(os.path.join(out_dir, MANIFEST_NAME), 'w+')
 
-    for root, _, file_names in os.walk(bundle_dir):
+    for root, _, file_names in os.walk(out_dir):
         for file_name in fnmatch.filter(file_names, '*.xml'):
             file_path = os.path.join(root, file_name)
-            relative_path = os.path.relpath(file_path, start=bundle_dir)
+            relative_path = os.path.relpath(file_path, start=out_dir)
 
             lid_vid = get_lidvid(file_path)
             manifest_file.write('%s  %s\r\n' % (lid_vid, relative_path))
@@ -439,10 +440,10 @@ def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
                           bundle_template_dir)
 
     # Create md5 checksum file
-    create_md5_checksum_file(bundle_dict['mte_bundle_dir'])
+    create_md5_checksum_file(bundle_dict['out_dir'])
 
     # Create delivery manifest file
-    create_manifest_file(bundle_dict['mte_bundle_dir'])
+    create_manifest_file(bundle_dict['out_dir'])
 
     print '[INFO] Done.'
 
