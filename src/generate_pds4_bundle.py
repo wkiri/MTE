@@ -40,8 +40,7 @@ MANIFEST_NAME = 'urn-nasa-pds-mars_target_encyclopedia.manifest'
 # 5. Create bundle xml file based on mission DB files
 # 6. Copy README.txt to the bundle directory
 def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
-                           phx_db_file, msl_db_file, mer_opportunity_db_file,
-                           mer_spirit_db_file):
+                           phx_db_file, msl_db_file, mera_db_file, merb_db_file):
     # Create MTE bundle directory
     mte_bundle_dir = os.path.join(out_dir, MTE_BUNDLE_NAME)
     if os.path.exists(mte_bundle_dir):
@@ -57,25 +56,25 @@ def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
     print '[INFO] Create %s collection at %s.' % \
           (DOC_COLLECTION_NAME, os.path.abspath(doc_collection_dir))
 
-    include_mer = mer_opportunity_db_file is not None or \
-                  mer_spirit_db_file is not None
+    include_mera = mera_db_file is not None
+    include_merb = merb_db_file is not None
     mer_collection_dir = os.path.join(mte_bundle_dir, MER_COLLECTION_NAME)
-    opportunity_subdir = os.path.join(mer_collection_dir, 'opportunity')
-    spirit_subdir = os.path.join(mer_collection_dir, 'spirit')
-    if include_mer:
+    mera_subdir = os.path.join(mer_collection_dir, 'spirit')
+    merb_subdir = os.path.join(mer_collection_dir, 'opportunity')
+    if include_mera or include_merb:
         os.mkdir(mer_collection_dir)
         print '[INFO] Create %s collection at %s.' % \
               (MER_COLLECTION_NAME, os.path.abspath(mer_collection_dir))
 
-        if mer_opportunity_db_file is not None:
-            os.mkdir(opportunity_subdir)
-            print '[INFO] Create MER Opportunity directory: %s' % \
-                  os.path.abspath(opportunity_subdir)
+        if include_mera:
+            os.mkdir(mera_subdir)
+            print '[INFO] Create MER-A Spirit directory: %s' % \
+                  os.path.abspath(mera_subdir)
 
-        if mer_spirit_db_file is not None:
-            os.mkdir(spirit_subdir)
-            print '[INFO] Create MER Spirit directory: %s' % \
-                  os.path.abspath(spirit_subdir)
+        if include_merb:
+            os.mkdir(merb_subdir)
+            print '[INFO] Create MER-B Opportunity directory: %s' % \
+                  os.path.abspath(merb_subdir)
 
     include_mpf = mpf_db_file is not None
     mpf_collection_dir = os.path.join(mte_bundle_dir, MPF_COLLECTION_NAME)
@@ -104,14 +103,14 @@ def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
 
     # Create bundle xml
     create_bundle_xml(bundle_template_dir, mte_bundle_dir, include_mpf,
-                      include_phx, include_msl, include_mer)
+                      include_phx, include_msl, include_mera, include_merb)
 
     bundle_dict = {
         'mte_bundle_dir': mte_bundle_dir,
         'doc_collection_dir': doc_collection_dir,
         'mpf_collection_dir': mpf_collection_dir,
-        'mer_collection_opportunity_dir': opportunity_subdir,
-        'mer_collection_spirit_dir': spirit_subdir,
+        'mera_collection_dir': mera_subdir,
+        'merb_collection_dir': merb_subdir,
         'phx_collection_dir': phx_collection_dir,
         'msl_collection_dir': msl_collection_dir
     }
@@ -120,9 +119,10 @@ def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
 
 
 def create_bundle_xml(bundle_template_dir, mte_bundle_dir, include_mpf,
-                      include_phx, include_msl, include_mer):
+                      include_phx, include_msl, include_mera, include_merb):
     bundle_dict = dict()
-    bundle_dict.setdefault('include_mer', include_mer)
+    bundle_dict.setdefault('include_mera', include_mera)
+    bundle_dict.setdefault('include_merb', include_merb)
     bundle_dict.setdefault('include_mpf', include_mpf)
     bundle_dict.setdefault('include_phx', include_phx)
     bundle_dict.setdefault('include_msl', include_msl)
@@ -401,16 +401,16 @@ def create_manifest_file(bundle_dir):
 
 
 def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
-         mer_opportunity_db_file, mer_spirit_db_file, bundle_template_dir):
+         mera_db_file, merb_db_file, bundle_template_dir):
     if mpf_db_file is None and phx_db_file is None and msl_db_file is None and \
-            mer_opportunity_db_file is None and mer_spirit_db_file is None:
+            mera_db_file is None and merb_db_file is None:
         print '[ERROR] At least one DB file should be provided. Exit.'
         sys.exit(1)
 
     # Setup the bundle directories, and copy static files to the bundle
     bundle_dict = setup_bundle_structure(
         out_dir, bundle_template_dir, mpf_db_file, phx_db_file, msl_db_file,
-        mer_opportunity_db_file, mer_spirit_db_file
+        mera_db_file, merb_db_file
     )
 
     # Create MPF collection
@@ -423,16 +423,15 @@ def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
         create_collection(bundle_dict['phx_collection_dir'], phx_db_file, 'phx',
                           bundle_template_dir)
 
-    # Create MER Opportunity sub-collection.
-    if mer_opportunity_db_file is not None:
-        create_collection(bundle_dict['mer_collection_opportunity_dir'],
-                          mer_opportunity_db_file, 'mer_opportunity',
-                          bundle_template_dir)
+    # Create MER-A Spirit sub-collection.
+    if mera_db_file is not None:
+        create_collection(bundle_dict['mera_collection_dir'], mera_db_file,
+                          'mera', bundle_template_dir)
 
-    # Create MER Spirit sub-collection.
-    if mer_spirit_db_file is not None:
-        create_collection(bundle_dict['mer_collection_spirit_dir'],
-                          mer_spirit_db_file, 'mer_spirit', bundle_template_dir)
+    # Create MER-B Opportunity sub-collection.
+    if merb_db_file is not None:
+        create_collection(bundle_dict['merb_collection_dir'], mera_db_file,
+                          'merb', bundle_template_dir)
 
     # Create MSL collection.
     if msl_db_file is not None:
@@ -461,10 +460,12 @@ if __name__ == '__main__':
                         help='Path to the PHX sqlite DB file')
     parser.add_argument('--msl_db_file', type=str,
                         help='Path to the MSL sqlite DB file')
-    parser.add_argument('--mer_opportunity_db_file', type=str,
-                        help='Path to the MER Opportunity rover sqlite DB file')
-    parser.add_argument('--mer_spirit_db_file', type=str,
-                        help='Path to the MER Spirit rover sqlite DB file')
+    parser.add_argument('--mera_db_file', type=str,
+                        help='Path to the MER Spirit rover (MER-A or MER-2) '
+                             'sqlite DB file')
+    parser.add_argument('--merb_db_file', type=str,
+                        help='Path to the MER Opportunity rover (MER-B or '
+                             'MER-1) sqlite DB file')
     parser.add_argument('--bundle_template_dir', type=str,
                         default='pds4_bundle_template',
                         help='Path to the MTE PDS4 bundle template directory.')

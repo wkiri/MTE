@@ -87,7 +87,67 @@
             </Internal_Reference>
         </Investigation_Area>
     #end if
-    #if $bundle['include_mer']:
+    #if $bundle['include_mera']:
+        <Observing_System>
+            <Observing_System_Component>
+                <name>Mars Exploration Rover 2</name>
+                <type>Host</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mer2</lid_reference>
+                    <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Panoramic Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:pancam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Navigation Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:navcam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Microscopic Imager</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mi.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Hazard Avoidance Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:hazcam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Alpha Particle X-ray Spectrometer</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:apxs.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Descent Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:descam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+        </Observing_System>
+    #end if
+    #if $bundle['include_merb']:
         <Observing_System>
             <Observing_System_Component>
                 <name>Mars Exploration Rover 1</name>
@@ -102,22 +162,6 @@
                 <type>Instrument</type>
                 <Internal_Reference>
                     <lid_reference>urn:nasa:pds:context:instrument:apxs.mer1</lid_reference>
-                    <reference_type>is_instrument</reference_type>
-                </Internal_Reference>
-            </Observing_System_Component>
-            <Observing_System_Component>
-                <name>Mars Exploration Rover 2</name>
-                <type>Host</type>
-                <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mer2</lid_reference>
-                    <reference_type>is_instrument_host</reference_type>
-                </Internal_Reference>
-            </Observing_System_Component>
-            <Observing_System_Component>
-                <name>Alpha Particle X-ray Spectormeter</name>
-                <type>Instrument</type>
-                <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument:apxs.mer2</lid_reference>
                     <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
