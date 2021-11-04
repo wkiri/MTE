@@ -440,10 +440,10 @@ def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
                           bundle_template_dir)
 
     # Create md5 checksum file
-    create_md5_checksum_file(bundle_dict['out_dir'])
+    create_md5_checksum_file(bundle_dict['mte_bundle_dir'])
 
     # Create delivery manifest file
-    create_manifest_file(bundle_dict['out_dir'])
+    create_manifest_file(bundle_dict['mte_bundle_dir'])
 
     print '[INFO] Done.'
 
