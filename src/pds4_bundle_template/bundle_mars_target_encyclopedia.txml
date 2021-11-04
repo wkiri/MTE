@@ -47,7 +47,7 @@
             scientific publications.  
             </description>
         </Primary_Result_Summary>
-    #if $bundle['include_mer']:
+    #if $bundle['include_mera'] or $bundle['include_merb']:
         <Investigation_Area>
             <name>Mars Exploration Rovers</name>
             <type>Mission</type>
@@ -158,10 +158,50 @@
                 </Internal_Reference>
             </Observing_System_Component>
             <Observing_System_Component>
+                <name>Panoramic Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:pancam.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Navigation Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:navcam.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Microscopic Imager</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mi.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Hazard Avoidance Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:hazcam.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
                 <name>Alpha Particle X-ray Spectrometer</name>
                 <type>Instrument</type>
                 <Internal_Reference>
                     <lid_reference>urn:nasa:pds:context:instrument:apxs.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Descent Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:descam.mer1</lid_reference>
                     <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
