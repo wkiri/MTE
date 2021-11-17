@@ -47,7 +47,7 @@
             scientific publications.  
             </description>
         </Primary_Result_Summary>
-    #if $bundle['include_mera'] or $bundle['include_merb']:
+    #if $bundle['include_mer2'] or $bundle['include_mer1']:
         <Investigation_Area>
             <name>Mars Exploration Rovers</name>
             <type>Mission</type>
@@ -87,7 +87,7 @@
             </Internal_Reference>
         </Investigation_Area>
     #end if
-    #if $bundle['include_mera']:
+    #if $bundle['include_mer2']:
         <Observing_System>
             <Observing_System_Component>
                 <name>Mars Exploration Rover 2</name>
@@ -147,7 +147,7 @@
             </Observing_System_Component>
         </Observing_System>
     #end if
-    #if $bundle['include_merb']:
+    #if $bundle['include_mer1']:
         <Observing_System>
             <Observing_System_Component>
                 <name>Mars Exploration Rover 1</name>
