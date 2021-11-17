@@ -93,14 +93,6 @@
                     <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
-            <Observing_System_Component>
-                <name>Descent Camera</name>
-                <type>Instrument</type>
-                <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument:descam.mer2</lid_reference>
-                    <reference_type>is_instrument</reference_type>
-                </Internal_Reference>
-            </Observing_System_Component>
         </Observing_System>
         <Target_Identification>
             <name>Mars</name>
