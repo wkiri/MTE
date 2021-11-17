@@ -426,12 +426,12 @@ def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
 
     # Create MER-2 Spirit sub-collection.
     if mer2_db_file is not None:
-        create_collection(bundle_dict['mera_collection_dir'], mer2_db_file,
+        create_collection(bundle_dict['mer2_collection_dir'], mer2_db_file,
                           'mer2', bundle_template_dir)
 
     # Create MER-1 Opportunity sub-collection.
     if mer1_db_file is not None:
-        create_collection(bundle_dict['mer1_collection_dir'], mer2_db_file,
+        create_collection(bundle_dict['mer1_collection_dir'], mer1_db_file,
                           'mer1', bundle_template_dir)
 
     # Create MSL collection.
