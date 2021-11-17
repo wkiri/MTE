@@ -111,8 +111,9 @@ if __name__ == '__main__':
                         help='Path to the directory that contains .ann files')
     parser.add_argument('db_file', type=str,
                         help='Path to the MTE sqlite DB file')
-    parser.add_argument('mission', type=str, choices=['mpf', 'phx', 'msl'],
-                        help='Mission that the documents belong to.')
+    parser.add_argument('mission', type=str,
+                        help='Mission that the documents belong to. Options '
+                             'include mpf, phx, msl, mer1, and mer2.')
     parser.add_argument('-r', '--reviewer', type=str, default='',
                         help='(Optional) The name of the person who reviewed '
                         'the annotations in the ann_dir directory. Default is '
