@@ -68,8 +68,8 @@ class BratDocument(object):
             raise RuntimeError('Invalid txt file format: %s' %
                                os.path.abspath(self.txt_path))
 
-        # return file_content[0].decode('utf8')
-        return file_content[0]
+        return file_content[0].decode('utf8')
+        # return file_content[0]
 
 
 class BratAnnotation:
