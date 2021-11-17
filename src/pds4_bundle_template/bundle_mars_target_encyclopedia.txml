@@ -47,7 +47,7 @@
             scientific publications.  
             </description>
         </Primary_Result_Summary>
-    #if $bundle['include_mer']:
+    #if $bundle['include_mer2'] or $bundle['include_mer1']:
         <Investigation_Area>
             <name>Mars Exploration Rovers</name>
             <type>Mission</type>
@@ -87,7 +87,83 @@
             </Internal_Reference>
         </Investigation_Area>
     #end if
-    #if $bundle['include_mer']:
+    #if $bundle['include_mer2']:
+        <Observing_System>
+            <Observing_System_Component>
+                <name>Mars Exploration Rover 2</name>
+                <type>Host</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mer2</lid_reference>
+                    <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Panoramic Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:pancam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Navigation Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:navcam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Microscopic Imager</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mi.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Hazard Avoidance Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:hazcam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Alpha Particle X-ray Spectrometer</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:apxs.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>MOESSBAUER SPECTROMETER</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mb.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Miniature Thermal Emission Spectrometer</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mini-tes.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Rock Abrasion Tool</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:rat.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+        </Observing_System>
+    #end if
+    #if $bundle['include_mer1']:
         <Observing_System>
             <Observing_System_Component>
                 <name>Mars Exploration Rover 1</name>
@@ -95,6 +171,38 @@
                 <Internal_Reference>
                     <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mer1</lid_reference>
                     <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Panoramic Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:pancam.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Navigation Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:navcam.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Microscopic Imager</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mi.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Hazard Avoidance Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:hazcam.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
             <Observing_System_Component>
@@ -106,18 +214,26 @@
                 </Internal_Reference>
             </Observing_System_Component>
             <Observing_System_Component>
-                <name>Mars Exploration Rover 2</name>
-                <type>Host</type>
+                <name>MOESSBAUER Spectrometer</name>
+                <type>Instrument</type>
                 <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mer2</lid_reference>
-                    <reference_type>is_instrument_host</reference_type>
+                    <lid_reference>urn:nasa:pds:context:instrument:mb.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
             <Observing_System_Component>
-                <name>Alpha Particle X-ray Spectormeter</name>
+                <name>Miniature Thermal Emission Spectrometer</name>
                 <type>Instrument</type>
                 <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument:apxs.mer2</lid_reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mini-tes.mer1</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Rock Abrasion Tool</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:rat.mer1</lid_reference>
                     <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
@@ -227,9 +343,16 @@
     <Bundle>
         <bundle_type>Archive</bundle_type>
     </Bundle>
-#if $bundle['include_mer']:
+#if $bundle['include_mer2']:
     <Bundle_Member_Entry>
-        <lid_reference>urn:nasa:pds:mars_target_encyclopedia:data_mer</lid_reference>
+        <lid_reference>urn:nasa:pds:mars_target_encyclopedia:data_mer2</lid_reference>
+        <member_status>Primary</member_status>
+        <reference_type>bundle_has_data_collection</reference_type>
+    </Bundle_Member_Entry>
+#end if
+#if $bundle['include_mer1']:
+    <Bundle_Member_Entry>
+        <lid_reference>urn:nasa:pds:mars_target_encyclopedia:data_mer1</lid_reference>
         <member_status>Primary</member_status>
         <reference_type>bundle_has_data_collection</reference_type>
     </Bundle_Member_Entry>

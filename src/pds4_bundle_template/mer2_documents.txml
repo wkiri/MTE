@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:data_mer2:documents</logical_identifier>
+        <version_id>1.2</version_id>
+        <title>MTE Mars Exploration Rover Spirit Documents Table</title>
+        <information_model_version>1.14.0.0</information_model_version>
+        <product_class>Product_Observational</product_class>
+        <Citation_Information>
+            <author_list>Wagstaff, K.; Francis, R.; Golombek, M.; Lu,
+            S.; Riloff, E.; Tamppari, L.</author_list>
+            <editor_list>VanBommel, S.</editor_list>
+            <publication_year>2021</publication_year>
+            <description>
+                This is the MTE MER-2 documents table
+            </description>
+        </Citation_Information>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>$today</modification_date>
+                <version_id>1.0</version_id>
+                <description>Initial version.</description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <Observation_Area>
+        <Time_Coordinates>
+            <start_date_time>1997-07-04Z</start_date_time>
+            <stop_date_time>2020-03-16Z</stop_date_time>
+        </Time_Coordinates>
+        <Primary_Result_Summary>
+            <purpose>Science</purpose>
+            <processing_level>Derived</processing_level>
+        </Primary_Result_Summary>
+        <Investigation_Area>
+            <name>Mars Exploration Rover</name>
+            <type>Mission</type>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:investigation:mission.mars_exploration_rover</lid_reference>
+                <reference_type>data_to_investigation</reference_type>
+            </Internal_Reference>
+        </Investigation_Area>
+        <Observing_System>
+            <Observing_System_Component>
+                <name>Mars Exploration Rover 2</name>
+                <type>Host</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mer2</lid_reference>
+                    <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Panoramic Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:pancam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Navigation Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:navcam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Microscopic Imager</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mi.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Hazard Avoidance Camera</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:hazcam.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Alpha Particle X-ray Spectrometer</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:apxs.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>MOESSBAUER SPECTROMETER</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mb.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Miniature Thermal Emission Spectrometer</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mini-tes.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Rock Abrasion Tool</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:rat.mer2</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+        </Observing_System>
+        <Target_Identification>
+            <name>Mars</name>
+            <type>Planet</type>
+            <Internal_Reference>
+                <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+                <reference_type>data_to_target</reference_type>
+            </Internal_Reference>
+        </Target_Identification>
+    </Observation_Area>
+    <File_Area_Observational>
+        <File>
+            <file_name>documents.csv</file_name>
+            <file_size unit="byte">$table['file_size']</file_size>
+            #set file_records = $table['records'] + 1
+            <records>$file_records</records>
+        </File>
+        <Header>
+            <name>Header</name>
+            <offset unit="byte">0</offset>
+            <object_length unit="byte">$table['object_len']</object_length>
+            <parsing_standard_id>UTF-8 Text</parsing_standard_id>
+        </Header>
+        <Table_Delimited>
+            <name>documents</name>
+            <offset unit="byte">$table['offset']</offset>
+            <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+            <records>$table['records']</records>
+            <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+            <field_delimiter>Comma</field_delimiter>
+            <Record_Delimited>
+                <fields>8</fields>
+                <groups>0</groups>
+                <maximum_record_length unit="byte">$table['max_record_len']</maximum_record_length>
+                <Field_Delimited>
+                    <name>doc_id</name>
+                    <field_number>1</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_1']</maximum_field_length>
+                    <description>id of source document: consists of year + '_' + abstract id</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>abstract</name>
+                    <field_number>2</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_2']</maximum_field_length>
+                    <description>abstract id (integer)</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>title</name>
+                    <field_number>3</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_3']</maximum_field_length>
+                    <description>title</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>authors</name>
+                    <field_number>4</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_4']</maximum_field_length>
+                    <description>authors (currently all one string)</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>primary_author</name>
+                    <field_number>5</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_5']</maximum_field_length>
+                    <description>primary author name</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>year</name>
+                    <field_number>6</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_6']</maximum_field_length>
+                    <description>year of publication</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>venue</name>
+                    <field_number>7</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_7']</maximum_field_length>
+                    <description>publication venue, for citation (e.g., "Lunar and Planetary Science Conference, Abstract #2591")</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>doc_url</name>
+                    <field_number>8</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_8']</maximum_field_length>
+                    <description>source URL</description>
+                </Field_Delimited>
+            </Record_Delimited>
+        </Table_Delimited>
+    </File_Area_Observational>
+</Product_Observational>
