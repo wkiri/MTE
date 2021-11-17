@@ -5,9 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
     <Identification_Area>
-        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:data_mpf:targets</logical_identifier>
+        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:data_mer1:mentions</logical_identifier>
         <version_id>1.2</version_id>
-        <title>MTE Mars Exploration Rover Opportunity Targets Table</title>
+        <title>MTE Mars Exploration Rover Opportunity Mentions Table</title>
         <information_model_version>1.14.0.0</information_model_version>
         <product_class>Product_Observational</product_class>
         <Citation_Information>
@@ -16,7 +16,7 @@
             <editor_list>VanBommel, S.</editor_list>
             <publication_year>2021</publication_year>
             <description>
-                This is the MTE MERB targets table
+                This is the MTE MER-1 mentions table
             </description>
         </Citation_Information>
         <Modification_History>
@@ -113,7 +113,7 @@
     </Observation_Area>
     <File_Area_Observational>
         <File>
-            <file_name>targets.csv</file_name>
+            <file_name>mentions.csv</file_name>
             <file_size unit="byte">$table['file_size']</file_size>
             #set file_records = $table['records'] + 1
             <records>$file_records</records>
@@ -125,14 +125,14 @@
             <parsing_standard_id>UTF-8 Text</parsing_standard_id>
         </Header>
         <Table_Delimited>
-            <name>targets</name>
+            <name>mentions</name>
             <offset unit="byte">$table['offset']</offset>
             <parsing_standard_id>PDS DSV 1</parsing_standard_id>
             <records>$table['records']</records>
             <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
             <field_delimiter>Comma</field_delimiter>
             <Record_Delimited>
-                <fields>3</fields>
+                <fields>2</fields>
                 <groups>0</groups>
                 <maximum_record_length unit="byte">$table['max_record_len']</maximum_record_length>
                 <Field_Delimited>
@@ -140,21 +140,14 @@
                     <field_number>1</field_number>
                     <data_type>UTF8_String</data_type>
                     <maximum_field_length unit="byte">$table['max_field_len_1']</maximum_field_length>
-                    <description>unique target id: target_name + '-' + mission</description>
+                    <description>Unique identifier of a target</description>
                 </Field_Delimited>
                 <Field_Delimited>
-                    <name>target_name</name>
+                    <name>sentence_id</name>
                     <field_number>2</field_number>
                     <data_type>UTF8_String</data_type>
                     <maximum_field_length unit="byte">$table['max_field_len_2']</maximum_field_length>
-                    <description>canonical target name (each word capitalized, underscores between words)</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>mission</name>
-                    <field_number>3</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_3']</maximum_field_length>
-                    <description>mission to which this target belongs ("mpf", "phx", "spirit", "opportunity", or "msl")</description>
+                    <description>sentence identifier: consists of doc_id + '-' + sentence_number</description>
                 </Field_Delimited>
             </Record_Delimited>
         </Table_Delimited>
