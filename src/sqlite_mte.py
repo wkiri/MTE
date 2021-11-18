@@ -208,9 +208,9 @@ class MteDb():
         # Check if sentence is already in the DB. If so, return its
         # corresponding sentence_id.
         sentence_query = """
-            SELECT sentence_id FROM sentences WHERE sentence=?
+            SELECT sentence_id FROM sentences WHERE sentence=? AND doc_id=?
         """
-        cursor.execute(sentence_query, (sentence,))
+        cursor.execute(sentence_query, (sentence, doc_id))
         sentence_id = cursor.fetchall()
         if len(sentence_id) == 1:
             sentence_id = sentence_id[0][0]
