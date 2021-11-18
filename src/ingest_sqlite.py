@@ -232,7 +232,8 @@ if __name__ == '__main__':
                         type=int, default=-1,
                         help='Year for all documents (if needed to specify, e.g. for MSL)')
     parser.add_argument('-m', '--mission', default='',
-                        help='Mission { mpf, phx, spi, opp, msl }')
+                        help='Mission that the documents belong to. Options '
+                             'include mpf, phx, msl, mer1, and mer2.')
     parser.add_argument('-v', '--venue', choices=['lpsc', 'others'],
                         default='others',
                         help='The venue of the documents. The list of accepted '
