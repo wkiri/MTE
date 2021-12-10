@@ -145,7 +145,6 @@ def convert_json_to_brat(jsonfile, outdir):
         rels_keep = []
         r_id = 0
         for r in rels:
-            # Currently these are specific to the "contains" relation
             for t in r['target_ids']:
                 relation_type = r['label']
 
