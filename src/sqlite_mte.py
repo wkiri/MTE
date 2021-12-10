@@ -200,6 +200,15 @@ class MteDb():
                 )
 
     @staticmethod
+    def alias_insertion(cursor, verbatim_target, canonical_target):
+        sql = """
+            INSERT OR REPLACE INTO aliases (target_name, canonical_name) 
+            VALUES (?, ?)
+        """
+
+        cursor.execute(sql, (verbatim_target, canonical_target))
+
+    @staticmethod
     def targets_insertion(cursor, target_name, mission):
         target_id = '%s-%s' % (target_name, mission)
 
@@ -579,6 +588,11 @@ class MteDb():
         self.connection.commit()
 
         return target_id
+
+    def add_alias(self, verbatim_target, canonical_target):
+        cursor = self.connection.cursor()
+        self.alias_insertion(cursor, verbatim_target, canonical_target)
+        self.connection.commit()
 
     def close(self):
         self.connection.close()
