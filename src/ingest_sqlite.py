@@ -9,7 +9,6 @@
 import sys
 import os
 import json
-import string
 import functools
 import itertools
 from sqlite_mte import MteDb
