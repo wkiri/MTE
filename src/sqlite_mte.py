@@ -37,8 +37,16 @@ class MteDb():
             cur.execute(
                 'CREATE TABLE targets ('
                 ' target_id       VARCHAR(90) PRIMARY KEY,' # target_name-mission
-                ' target_name     VARCHAR(80),'  # canonical name
+                ' target_name     VARCHAR(80),'  # verbatim
                 ' mission         VARCHAR(10)'
+                ')'
+            )
+
+            # -------- aliases -----------
+            cur.execute(
+                'CREATE TABLE aliases ('
+                ' target_name     VARCHAR(80) PRIMARY KEY,'  # verbatim
+                ' canonical_name  VARCHAR(80)'
                 ')'
             )
 
