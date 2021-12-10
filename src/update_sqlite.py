@@ -11,7 +11,6 @@ import os
 import sys
 from sqlite_mte import MteDb
 from brat_annotation_sqlite import BratDocument
-from name_utils import canonical_target_name
 
 
 def doc_exists(mte_db, doc_id):
@@ -24,7 +23,8 @@ def doc_exists(mte_db, doc_id):
         raise RuntimeError('There can be only one document per doc_id')
 
 
-def main(ann_dir, db_file, mission, reviewer, remove_orphans, target_list):
+def main(ann_dir, db_file, mission, aliases_file, reviewer, remove_orphans,
+         target_list):
     if not os.path.exists(ann_dir) or not os.path.isdir(ann_dir):
         print '[ERROR] Annotation directory does not exist: %s' % \
               os.path.abspath(ann_dir)
@@ -92,10 +92,28 @@ def main(ann_dir, db_file, mission, reviewer, remove_orphans, target_list):
             known_targets = [kt.strip() for kt in known_targets]
 
         for kt in known_targets:
-            mte_db.add_known_target(canonical_target_name(kt), mission)
+            mte_db.add_known_target(kt, mission)
 
         print '[INFO] Known mission targets from the target list %s have ' \
               'been added to the DB file.' % os.path.abspath(target_list)
+
+    if aliases_file is not None:
+        if not os.path.exists(aliases_file):
+            print '[ERROR] Aliases csv file does not exist: %s' % \
+                  os.path.abspath(aliases_file)
+            sys.exit(1)
+
+        with open(aliases_file, 'r') as f:
+            aliases = f.readlines()
+            aliases = [a.strip().split(',') for a in aliases]
+            print aliases
+
+        for verbatim_target, canonical_target in aliases:
+            print '%s %s' % (verbatim_target, canonical_target)
+            mte_db.add_alias(verbatim_target, canonical_target)
+
+        print '[INFO] The DB aliases table has been populated with the ' \
+              'aliases CSV file %s' % os.path.abspath(aliases_file)
 
     mte_db.close()
     print '[INFO] DONE.'
@@ -114,6 +132,9 @@ if __name__ == '__main__':
     parser.add_argument('mission', type=str,
                         help='Mission that the documents belong to. Options '
                              'include mpf, phx, msl, mer1, and mer2.')
+    parser.add_argument('-a', '--aliases_file', type=str,
+                        help='(Optional) Aliases csv file to populate the '
+                             'aliases DB table')
     parser.add_argument('-r', '--reviewer', type=str, default='',
                         help='(Optional) The name of the person who reviewed '
                         'the annotations in the ann_dir directory. Default is '
