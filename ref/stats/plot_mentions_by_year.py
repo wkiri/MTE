@@ -5,34 +5,30 @@ import pylab as pl
 import matplotlib.ticker as ticker
 import numpy as np
 
+def plot_hist(yrs, cnt, mission, short_mission):
+    pl.clf()
+    pl.bar(yrs, cnt)
+    pl.xlabel('Year')
+    pl.ylabel('Mentions of %s targets' % mission)
+    out_fn = '%s-targets-by-year.pdf' % short_mission
+    pl.savefig(out_fn, bbox_inches='tight')
+    print('Saved %s histogram to %s' % (short_mission, out_fn))
 
-pl.figure()
 mpf_yrs = range(1998, 2021)
 # Obtained from
 # cd /proj/mte/results/mpf-reviewed/
 # Mentions:
 # grep "Target " *ann | cut -f1 -d'_' | uniq -c
 mpf_cnt = [201,132,73,29,21,1,2,3,3,0,0,0,0,0,0,2,0,0,0,0,0,0,0]
-pl.bar(mpf_yrs, mpf_cnt)
-pl.xlabel('Year')
-pl.ylabel('Mentions of Pathfinder targets')
-mpf_file = 'mpf-targets-by-year.pdf'
-pl.savefig(mpf_file, bbox_inches='tight')
-print('Saved MPF histogram to %s' % mpf_file)
+plot_hist(mpf_yrs, mpf_cnt, 'Pathfinder', 'mpf')
 
-pl.clf()
 phx_yrs = range(2009, 2021)
 # Obtained from
 # cd /proj/mte/results/phx-reviewed/
 # Mentions:
 # grep "Target " *ann | cut -f1 -d'_' | uniq -c
 phx_cnt = [177,11,64,27,19,2,13,0,47,43,1,0]
-pl.bar(phx_yrs, phx_cnt)
-pl.xlabel('Year')
-pl.ylabel('Mentions of Phoenix targets')
-phx_file = 'phx-targets-by-year.pdf'
-pl.savefig(phx_file, bbox_inches='tight')
-print('Saved PHX histogram to %s' % phx_file)
+plot_hist(phx_yrs, phx_cnt, 'Phoenix', 'phx')
 
 # Joint plot
 pl.clf()
@@ -44,10 +40,10 @@ shift = 0.23
 x = np.arange(len(mpf_yrs))
 #pl.bar(x - shift, mpf_cnt, width=bar_width, label='Pathfinder')
 #pl.bar(x[phx_yrs[0] - mpf_yrs[0]:] + shift, phx_cnt, width=bar_width, label='Phoenix')
-pl.bar(x[phx_yrs[0] - mpf_yrs[0]:], phx_cnt, width=bar_width, label='Phoenix', color='tab:orange')
-pl.bar(x, mpf_cnt, width=bar_width, label='Pathfinder', color='tab:blue')
-#pl.axhline(res_aegis_alg, linestyle='--', color='m', label='AEGIS')
-#pl.axhline(res_random, linestyle=':', color='gray', label='Random')
+pl.bar(x[phx_yrs[0] - mpf_yrs[0]:], phx_cnt, 
+       width=bar_width, label='Phoenix', color='tab:orange')
+pl.bar(x, mpf_cnt, 
+       width=bar_width, label='Pathfinder', color='tab:blue')
 pl.ylabel('Number of target mentions', fontsize=14)
 #pl.gca().set_xticks(x)
 #pl.gca().set_xticklabels(mpf_yrs, rotation='vertical')
