@@ -30,6 +30,14 @@ phx_yrs = range(2009, 2021)
 phx_cnt = [177,11,64,27,19,2,13,0,47,43,1,0]
 plot_hist(phx_yrs, phx_cnt, 'Phoenix', 'phx')
 
+mera_yrs = range(2004, 2021)
+# Obtained from
+# cd /proj/mte/results/mer-a-reviewed+properties-v2/
+# Mentions:
+# grep "Target " *ann | cut -f1 -d'_' | uniq -c
+mera_cnt = [26,265,449,514,654,178,282,252,155,148,159,64,63,57,30,27,34]
+plot_hist(mera_yrs, mera_cnt, 'MER-A', 'mera')
+
 # Joint plot
 pl.clf()
 #width = 0.5
@@ -40,10 +48,12 @@ shift = 0.23
 x = np.arange(len(mpf_yrs))
 #pl.bar(x - shift, mpf_cnt, width=bar_width, label='Pathfinder')
 #pl.bar(x[phx_yrs[0] - mpf_yrs[0]:] + shift, phx_cnt, width=bar_width, label='Phoenix')
+pl.bar(x[mera_yrs[0] - mpf_yrs[0]:], mera_cnt, 
+       width=bar_width, label='MER-A', color='tab:green', alpha=0.8)
 pl.bar(x[phx_yrs[0] - mpf_yrs[0]:], phx_cnt, 
-       width=bar_width, label='Phoenix', color='tab:orange')
+       width=bar_width, label='Phoenix', color='tab:orange', alpha=0.8)
 pl.bar(x, mpf_cnt, 
-       width=bar_width, label='Pathfinder', color='tab:blue')
+       width=bar_width, label='Pathfinder', color='tab:blue', alpha=0.8)
 pl.ylabel('Number of target mentions', fontsize=14)
 #pl.gca().set_xticks(x)
 #pl.gca().set_xticklabels(mpf_yrs, rotation='vertical')
