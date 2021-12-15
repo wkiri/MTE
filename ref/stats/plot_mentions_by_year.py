@@ -1,4 +1,4 @@
-# Plot the number of relevant documents per year
+# Plot the number of relevant documents (or mentions) per year
 # Kiri Wagstaff
 # 9/13/20
 import pylab as pl
@@ -16,7 +16,7 @@ mpf_cnt = [201,132,73,29,21,1,2,3,3,0,0,0,0,0,0,2,0,0,0,0,0,0,0]
 pl.bar(mpf_yrs, mpf_cnt)
 pl.xlabel('Year')
 pl.ylabel('Mentions of Pathfinder targets')
-mpf_file = 'mpf-targets-by-year.png'
+mpf_file = 'mpf-targets-by-year.pdf'
 pl.savefig(mpf_file, bbox_inches='tight')
 print('Saved MPF histogram to %s' % mpf_file)
 
@@ -26,11 +26,11 @@ phx_yrs = range(2009, 2021)
 # cd /proj/mte/results/phx-reviewed/
 # Mentions:
 # grep "Target " *ann | cut -f1 -d'_' | uniq -c
-phx_cnt = cnt=[177,11,64,27,19,2,13,0,47,43,1,0]
+phx_cnt = [177,11,64,27,19,2,13,0,47,43,1,0]
 pl.bar(phx_yrs, phx_cnt)
 pl.xlabel('Year')
 pl.ylabel('Mentions of Phoenix targets')
-phx_file = 'phx-targets-by-year.png'
+phx_file = 'phx-targets-by-year.pdf'
 pl.savefig(phx_file, bbox_inches='tight')
 print('Saved PHX histogram to %s' % phx_file)
 
