@@ -129,7 +129,7 @@
                     <field_number>2</field_number>
                     <data_type>UTF8_String</data_type>
                     <maximum_field_length unit="byte">$table['max_field_len_2']</maximum_field_length>
-                    <description>canonical target name (each word capitalized, underscores between words)</description>
+                    <description>verbatim target name</description>
                 </Field_Delimited>
                 <Field_Delimited>
                     <name>mission</name>
