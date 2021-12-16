@@ -259,7 +259,8 @@ def create_single_xml_label(template_file, label_file, table_stats):
 def create_xml_labels(collection_dir, bundle_template_dir, mission_name):
     # Create label XML files for the corresponding table CSV files
     for table_name in ['targets', 'components', 'contains', 'documents',
-                       'sentences', 'mentions', 'properties', 'has_property']:
+                       'sentences', 'mentions', 'properties', 'has_property',
+                       'aliases']:
         csv_file = os.path.join(collection_dir, '%s.csv' % table_name)
 
         with open(csv_file, 'r') as f:
