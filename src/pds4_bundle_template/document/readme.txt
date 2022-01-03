@@ -36,11 +36,12 @@ searches and joins across the tables.
   and abstract number); and document URL.
 
 - mentions.csv: Table linking target ids to each source sentence in
-  which that target is mentioned.  The target id consists of the
-  target name, a hyphen, and a mission code (e.g., "mpf" or "phx") to
-  disambiguate if target names are re-used between missions.  The
-  sentence id consists of the document id followed by a hyphen and the
-  index of the sentence in the document.
+  which that target is mentioned.  If a target occurs more than once
+  in a sentence, the sentence appears only once in this table.  The
+  target id consists of the target name, a hyphen, and a mission code
+  (e.g., "mpf" or "phx") to disambiguate if target names are re-used
+  between missions.  The sentence id consists of the document id
+  followed by a hyphen and the index of the sentence in the document.
 
 - sentences.csv: Table enumerating sentences with relevant content
   (e.g., targets, components, properties).  Fields include the
@@ -69,13 +70,15 @@ Target composition and properties:
   is stored in all lower case with spaces between words.
 
 - contains.csv: Table linking targets to components.  Fields include
-  the target id (as above), component name (as above), and sentence
-  ids (as above) for the location of the target and the component.  If
-  they appear in the same sentence, the sentence ids are the same.
+  the target id (as above), component name (as above), and two sentence
+  ids (as above) for the location of the target and the component.
+  For a relation that crosses sentences, the two sentence ids will
+  differ.  If the target and component appear in the same sentence,
+  the two sentence ids are the same. 
 
 - has_property: Table linking targets to properties.  Fields include
-  the target id (as above), property name (as above), and sentence ids
-  (as above) for the location of the target and property.
+  the target id (as above), property name (as above), and two sentence
+  ids (as above) for the location of the target and property.
 
 Methods
 -------
