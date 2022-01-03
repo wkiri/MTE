@@ -36,7 +36,8 @@ mera_yrs = range(2004, 2021)
 # Mentions:
 # grep "Target " *ann | cut -f1 -d'_' | uniq -c
 mera_cnt = [26,265,449,514,654,178,282,252,155,148,159,64,63,57,30,27,34]
-plot_hist(mera_yrs, mera_cnt, 'MER-A', 'mera')
+#plot_hist(mera_yrs, mera_cnt, 'MER-A', 'mera')
+plot_hist(mera_yrs, mera_cnt, 'Spirit', 'mera')
 
 # Joint plot
 pl.clf()
@@ -49,7 +50,7 @@ x = np.arange(len(mpf_yrs))
 #pl.bar(x - shift, mpf_cnt, width=bar_width, label='Pathfinder')
 #pl.bar(x[phx_yrs[0] - mpf_yrs[0]:] + shift, phx_cnt, width=bar_width, label='Phoenix')
 pl.bar(x[mera_yrs[0] - mpf_yrs[0]:], mera_cnt, 
-       width=bar_width, label='MER-A', color='tab:green', alpha=0.8)
+       width=bar_width, label='Spirit', color='tab:green', alpha=0.8)
 pl.bar(x[phx_yrs[0] - mpf_yrs[0]:], phx_cnt, 
        width=bar_width, label='Phoenix', color='tab:orange', alpha=0.8)
 pl.bar(x, mpf_cnt, 
