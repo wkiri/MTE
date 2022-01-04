@@ -194,7 +194,9 @@ def canonical_target_name(name):
     # Use capwords so e.g. Bear's Lodge does not become Bear'S Lodge
     # and replace spaces with underscores in final version
     name = string.capwords(strip_ws).replace(' ', '_')
-    
+   
+    # Do not remap targets using this dictionary any more.
+    '''
     if name in targettab:
         if is_python3:
             return targettab[name]
@@ -202,6 +204,8 @@ def canonical_target_name(name):
             return targettab[name].decode('utf8')
     else:
         return name
+    '''
+    return name
 
 def canonical_property_name(name):
     """
