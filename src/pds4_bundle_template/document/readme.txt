@@ -2,7 +2,7 @@ The Mars Target Encyclopedia (MTE) is a collection of Mars mission
 targets (i.e., named rocks and soils) associated with scientific
 publications.  The goal is to enable literature searches for a given
 target as well as to identify targets with similar reported
-properties.  Each mention (target name occurrence) is recorded in
+properties.  Each mention (occurrence of a target name) is recorded in
 the "mentions" table for a given mission and associated with the
 source sentence (for context) as well as the source document (with
 URL).  Additional information about target properties such as
@@ -27,6 +27,14 @@ mission is expressed as several .csv files, one per table in the
 database.  These tables can be used independently or read in to enable
 searches and joins across the tables.
 
+- aliases.csv: Table linking target name variants (as they appear in a
+  document, transformed slightly so spaces between words are replaced
+  with underscores and only the first letter of each word is
+  capitalized) to a canonical target name.  This allows the 
+  identification of all content relevant to a target, which might span
+  multiple target names, such as typos like "Commanche" for "Comanche"
+  and abbreviations like "Hmp" for "Humphrey."
+
 - documents.csv: Table containing information about each source
   publication.  Fields include the document id, which consists of the
   year of publication, an underscore, and the abstract number; the abstract
@@ -37,7 +45,7 @@ searches and joins across the tables.
 
 - mentions.csv: Table linking target ids to each source sentence in
   which that target is mentioned.  The target id consists of the
-  target name, a hyphen, and a mission code (e.g., "mpf" or "phx") to
+  target name, a hyphen, and a mission code (e.g., "mpf", "phx", or "mer2") to
   disambiguate if target names are re-used between missions.  The
   sentence id consists of the document id followed by a hyphen and the
   index of the sentence in the document.
@@ -85,7 +93,8 @@ target information in text documents, see reference [1] below.
 Automated text analysis methods were accompanied by manual review of
 the extracted information.  See reference [2] for additional details
 and a summary of content specific to the Mars Pathfinder and Mars
-Phoenix Lander missions that appear in this bundle.
+Phoenix Lander missions and reference [3] for content specific to the
+Spirit Mars Exploration rover.
 
 Citation
 --------
@@ -116,6 +125,14 @@ Riloff, Leslie Tamppari, and Thomas C. Stein.
 2021.
   https://wkiri.com/research/papers/wagstaff-mte-lpsc-21.pdf
 
+3. Targets from the Spirit Mars Exploration Rover in the Mars Target
+Encyclopedia. 
+Kiri L. Wagstaff, Raymond Francis, Matthew Golombek, Steven Lu, Ellen
+Riloff, Leslie Tamppari, Yuan Zhuang, and Thomas C. Stein.
+53rd Lunar and Planetary Science Conference, Abstract #1231, March
+2022.
+  https://wkiri.com/research/papers/wagstaff-mte-lpsc-22.pdf
+
 --------------------------------------------------
 Contact: Kiri Wagstaff, Jet Propulsion Laboratory,
 kiri.wagstaff@jpl.nasa.gov
@@ -125,4 +142,3 @@ Ellen Riloff, and Leslie Tamppari
 
 Funding: Planetary Data Archiving, Restoration, and Tools (PDART)
 program
-
