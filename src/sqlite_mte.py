@@ -409,8 +409,12 @@ class MteDb():
                 target_ann = [ba for ba in brat_doc.ann_content
                               if ba.ann_id == brat_ann.arg1]
                 if len(target_ann) == 0:
-                    raise RuntimeError('%s: No annotation found for %s' %
-                                       (brat_doc.doc_id, brat_ann.arg1))
+                    print('Warning: %s: No annotation found for %s;'
+                          ' skipping this relation' %
+                          (brat_doc.doc_id, brat_ann.arg1))
+                    continue
+                    #raise RuntimeError('%s: No annotation found for %s' %
+                    #                   (brat_doc.doc_id, brat_ann.arg1))
                 target_ann = target_ann[0]
                 target_id = target_ann.name + '-' + brat_doc.mission
 
