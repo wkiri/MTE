@@ -9,6 +9,7 @@ sources (papers, images)
 - MPF-location.txt: unique superset of MPF location lists from individual
 sources (papers, images)
 - MPF-ambiguous.txt: terms that don't have a conclusive category yet
+- MPF-aliases.csv: Map of verbatim target names (aliases) to canonical names
 
 ## Targets
 - MPF-targets-bell-00.txt: Targets from Bell et al. (2000)
