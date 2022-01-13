@@ -11,7 +11,7 @@ import os
 import sys
 from sqlite_mte import MteDb
 from brat_annotation_sqlite import BratDocument
-from name_utils import canonical_target_name
+from name_utils import standardize_target_name
 
 
 def doc_exists(mte_db, doc_id):
@@ -93,7 +93,7 @@ def main(ann_dir, db_file, mission, aliases_file, reviewer, remove_orphans,
             known_targets = [kt.strip() for kt in known_targets]
 
         for kt in known_targets:
-            mte_db.add_known_target(canonical_target_name(kt), mission)
+            mte_db.add_known_target(standardize_target_name(kt), mission)
 
         print '[INFO] Known mission targets from the target list %s have ' \
               'been added to the DB file.' % os.path.abspath(target_list)

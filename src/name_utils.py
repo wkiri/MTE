@@ -181,9 +181,9 @@ def canonical_name(name):
     else:
         return string.capwords(name)
 
-def canonical_target_name(name):
+def standardize_target_name(name):
     """
-    Gets canonical target name: title case, replace spaces and dashes
+    Gets standardized target name: title case, replace spaces and dashes
     with underscore.  Aliases are expanded using targettab.
     :param name - name whose canonical name is to be looked up
     :return canonical name
@@ -194,17 +194,7 @@ def canonical_target_name(name):
     # Use capwords so e.g. Bear's Lodge does not become Bear'S Lodge
     # and replace spaces with underscores in final version
     name = string.capwords(strip_ws).replace(' ', '_')
-   
-    # Do not remap targets using this dictionary any more.
-    '''
-    if name in targettab:
-        if is_python3:
-            return targettab[name]
-        else:
-            return targettab[name].decode('utf8')
-    else:
-        return name
-    '''
+
     return name
 
 def canonical_property_name(name):

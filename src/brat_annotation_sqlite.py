@@ -9,7 +9,7 @@
 
 import os
 import json
-from name_utils import canonical_name, canonical_target_name, \
+from name_utils import canonical_name, standardize_target_name, \
     canonical_property_name
 
 
@@ -138,7 +138,7 @@ class BratAnnotation:
                 if record['label'] == 'Property':
                     record['name'] = canonical_property_name(nm)
                 elif record['label'] == 'Target':
-                    record['name'] = canonical_target_name(nm)
+                    record['name'] = standardize_target_name(nm)
                 else:
                     record['name'] = canonical_name(nm)
             else:
