@@ -12,7 +12,7 @@ from log_utils import LogUtil
 from shutil import copyfile
 from io_utils import read_lines
 from name_utils import canonical_name
-from name_utils import canonical_target_name
+from name_utils import standardize_target_name
 from ads_parser import AdsParser
 from corenlp_parser import CoreNLPParser
 
@@ -182,7 +182,7 @@ class JsreParser(CoreNLPParser):
 
             relation_list.append({
                 'label': relation_type,
-                'target_names': [canonical_target_name(rel[0]['word'])],
+                'target_names': [standardize_target_name(rel[0]['word'])],
                 'cont_names': [canonical_name(rel[1]['word'])],
                 'target_ids': ['%s_%d_%d' % (rel[0]['ner'].lower(),
                                              rel[0]['characterOffsetBegin'],

@@ -5,6 +5,7 @@ Files:
   (cat MERA-targets-final.txt | while read line ; do echo "Target $line" ; done ) > MERA-targets-final.gaz.txt
 - MERA-targets-final-salient.gaz.txt: Gazette with generic names
   removed (e.g., Contact, Edge, Fine) that were causing spurious hits (n=1106)
+- MERA-aliases.csv: Map of verbatim target names (aliases) to canonical names
 
 - MERB-targets-final.txt: MERB-targets.txt, no hand-edits (n=1744)
 - MERB-targets-final.gaz.txt: Same process as for MER-A, with MER-B input

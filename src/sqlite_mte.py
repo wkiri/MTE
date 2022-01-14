@@ -37,8 +37,16 @@ class MteDb():
             cur.execute(
                 'CREATE TABLE targets ('
                 ' target_id       VARCHAR(90) PRIMARY KEY,' # target_name-mission
-                ' target_name     VARCHAR(80),'  # canonical name
+                ' target_name     VARCHAR(80),'  # verbatim
                 ' mission         VARCHAR(10)'
+                ')'
+            )
+
+            # -------- aliases -----------
+            cur.execute(
+                'CREATE TABLE aliases ('
+                ' target_name     VARCHAR(80) PRIMARY KEY,'  # verbatim
+                ' canonical_name  VARCHAR(80)'
                 ')'
             )
 
@@ -190,6 +198,15 @@ class MteDb():
                     ') VALUES (?, ?, ?)',
                     [(rec['doc_id'], sent_ids[s], s) for s in sentences]
                 )
+
+    @staticmethod
+    def alias_insertion(cursor, verbatim_target, canonical_target):
+        sql = """
+            INSERT OR REPLACE INTO aliases (target_name, canonical_name) 
+            VALUES (?, ?)
+        """
+
+        cursor.execute(sql, (verbatim_target, canonical_target))
 
     @staticmethod
     def targets_insertion(cursor, target_name, mission):
@@ -392,8 +409,12 @@ class MteDb():
                 target_ann = [ba for ba in brat_doc.ann_content
                               if ba.ann_id == brat_ann.arg1]
                 if len(target_ann) == 0:
-                    raise RuntimeError('%s: No annotation found for %s' %
-                                       (brat_doc.doc_id, brat_ann.arg1))
+                    print('Warning: %s: No annotation found for %s;'
+                          ' skipping this relation' %
+                          (brat_doc.doc_id, brat_ann.arg1))
+                    continue
+                    #raise RuntimeError('%s: No annotation found for %s' %
+                    #                   (brat_doc.doc_id, brat_ann.arg1))
                 target_ann = target_ann[0]
                 target_id = target_ann.name + '-' + brat_doc.mission
 
@@ -571,6 +592,11 @@ class MteDb():
         self.connection.commit()
 
         return target_id
+
+    def add_alias(self, verbatim_target, canonical_target):
+        cursor = self.connection.cursor()
+        self.alias_insertion(cursor, verbatim_target, canonical_target)
+        self.connection.commit()
 
     def close(self):
         self.connection.close()

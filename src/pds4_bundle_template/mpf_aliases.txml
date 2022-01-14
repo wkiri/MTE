@@ -5,9 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
     <Identification_Area>
-        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:data_phx:properties</logical_identifier>
+        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:data_mpf:aliases</logical_identifier>
         <version_id>1.3</version_id>
-        <title>MTE Mars Phoenix Properties Table</title>
+        <title>MTE Mars Pathfinder Aliases Table</title>
         <information_model_version>1.14.0.0</information_model_version>
         <product_class>Product_Observational</product_class>
         <Citation_Information>
@@ -16,7 +16,7 @@
             <editor_list>VanBommel, S.</editor_list>
             <publication_year>2021</publication_year>
             <description>
-                This is the MTE PHX properties table
+                This is the MTE MPF aliases table
             </description>
         </Citation_Information>
         <Modification_History>
@@ -48,27 +48,43 @@
             <processing_level>Derived</processing_level>
         </Primary_Result_Summary>
         <Investigation_Area>
-            <name>Mars Phoenix</name>
+            <name>Mars Pathfinder</name>
             <type>Mission</type>
             <Internal_Reference>
-                <lid_reference>urn:nasa:pds:context:investigation:mission.phoenix</lid_reference>
+                <lid_reference>urn:nasa:pds:context:investigation:mission.mars_pathfinder</lid_reference>
                 <reference_type>data_to_investigation</reference_type>
             </Internal_Reference>
         </Investigation_Area>
         <Observing_System>
             <Observing_System_Component>
-                <name>Mars Phoenix</name>
+                <name>Mars Pathfinder Lander</name>
                 <type>Host</type>
                 <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.phx</lid_reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mpfl</lid_reference>
                     <reference_type>is_instrument_host</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
             <Observing_System_Component>
-                <name>Thermal Evolved Gas Analyzer</name>
+                <name>Imager for Mars Pathfinder</name>
                 <type>Instrument</type>
                 <Internal_Reference>
-                    <lid_reference>urn:nasa:pds:context:instrument:tega.phx</lid_reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:imp.mpfl</lid_reference>
+                    <reference_type>is_instrument</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>Mars Pathfinder Rover</name>
+                <type>Host</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.mpfr</lid_reference>
+                    <reference_type>is_instrument_host</reference_type>
+                </Internal_Reference>
+            </Observing_System_Component>
+            <Observing_System_Component>
+                <name>APXS</name>
+                <type>Instrument</type>
+                <Internal_Reference>
+                    <lid_reference>urn:nasa:pds:context:instrument:mpfr.apxs</lid_reference>
                     <reference_type>is_instrument</reference_type>
                 </Internal_Reference>
             </Observing_System_Component>
@@ -84,7 +100,7 @@
     </Observation_Area>
     <File_Area_Observational>
         <File>
-            <file_name>properties.csv</file_name>
+            <file_name>aliases.csv</file_name>
             <file_size unit="byte">$table['file_size']</file_size>
             #set file_records = $table['records'] + 1
             <records>$file_records</records>
@@ -96,22 +112,29 @@
             <parsing_standard_id>UTF-8 Text</parsing_standard_id>
         </Header>
         <Table_Delimited>
-            <name>properties</name>
+            <name>aliases</name>
             <offset unit="byte">$table['offset']</offset>
             <parsing_standard_id>PDS DSV 1</parsing_standard_id>
             <records>$table['records']</records>
             <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
             <field_delimiter>Comma</field_delimiter>
             <Record_Delimited>
-                <fields>1</fields>
+                <fields>2</fields>
                 <groups>0</groups>
                 <maximum_record_length unit="byte">$table['max_record_len']</maximum_record_length>
                 <Field_Delimited>
-                    <name>property_name</name>
+                    <name>target_name</name>
                     <field_number>1</field_number>
                     <data_type>UTF8_String</data_type>
                     <maximum_field_length unit="byte">$table['max_field_len_1']</maximum_field_length>
-                    <description>canonical property name (all lower case, spaces between words</description>
+                    <description>verbatim target name</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>canonical_name</name>
+                    <field_number>2</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_2']</maximum_field_length>
+                    <description>canonical target name (each word capitalized, underscores between words)</description>
                 </Field_Delimited>
             </Record_Delimited>
         </Table_Delimited>

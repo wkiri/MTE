@@ -124,6 +124,18 @@ def main(db_file, out_dir, fix_double_quotes):
         print '[INFO] internal double quotes were replaced with single ' \
               'quotes for has_property.csv'
 
+    # Export the `aliases` table into aliases.csv.
+    aliases_csv = os.path.join(out_dir, 'aliases.csv')
+    aliases_df = pd.read_sql_query('SELECT * FROM aliases', connection)
+    aliases_df.to_csv(aliases_csv, index=False, encoding='utf-8',
+                      line_terminator='\r\n')
+    print '[INFO] aliases table exported to %s' % aliases_csv
+
+    if fix_double_quotes:
+        replace_internal_double_quote(aliases_csv, replace_with="''")
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for aliases.csv'
+
     connection.close()
     print '[INFO] All done.'
 

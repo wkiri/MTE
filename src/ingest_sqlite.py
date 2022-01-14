@@ -9,11 +9,10 @@
 import sys
 import os
 import json
-import string
 import functools
 import itertools
 from sqlite_mte import MteDb
-from name_utils import canonical_name, canonical_target_name
+from name_utils import canonical_name
 
 
 # Read JSON content and return it as a generator of dictionaries (one per file)
@@ -36,8 +35,7 @@ def read_json(jsonfile, ndocs, year=None, mission=''):
                 'doc_url': '',
                 'content': rec['content_ann_s'].strip(), # for annotations
                 'targets': ([] if 'ner' not in rec['metadata'].keys()
-                            else [(canonical_target_name(r['text']),
-                                   mission, r['begin'], r['end'])
+                            else [(r['text'], mission, r['begin'], r['end'])
                                   for r in rec['metadata']['ner']
                                   if r['label'] == 'Target']),
                 # Components are everything other than targets (Element, Mineral)
@@ -46,8 +44,7 @@ def read_json(jsonfile, ndocs, year=None, mission=''):
                                      for r in rec['metadata']['ner']
                                      if r['label'] != 'Target']),
                 'contains': ([] if 'rel' not in rec['metadata'].keys()
-                             else [([canonical_target_name(t)
-                                     for t in r['target_names']],
+                             else [([t for t in r['target_names']],
                                     r['target_ids'],
                                     [canonical_name(c) for c in r['cont_names']],
                                     r['sentence'],
@@ -181,8 +178,7 @@ def update_targets_with_JSRE(rec, mission):
     for r in rec['contains']:
         for (t, t_id) in zip(r[0], r[1]):
             (t_begin, t_end) = map(int, t_id.split('_')[1:3])
-            rec['targets'] += [(canonical_target_name(t), mission,
-                                t_begin, t_end)]
+            rec['targets'] += [(t, mission, t_begin, t_end)]
 
     return rec
 
