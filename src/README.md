@@ -93,3 +93,21 @@ $ python update_sqlite.py -r $REVIEWER $ANN_DIR $DB_FILE $MISSION -ro > update-D
 ```
 
 The `-ro` option removes orphaned documents, etc. (i.e., documents that have no relevant targets or relations).
+
+If you have a list of known targets that may include targets that do not occur in at least one document in the collection, but you want them to appear in the `targets` table in the SQLite database, these can be provided in a `$TARGET_LIST` file that contains one target name per row.  Specify this file with the `-tl` option:
+
+```Console
+$ python update_sqlite.py -r $REVIEWER $ANN_DIR $DB_FILE $MISSION -ro -tl $TARGET_FILE > update-DB.log
+```
+
+Likewise, if you have a list of known target name variants (or aliases), these can be used to populate an `aliases` table in the SQLite database by using the `-a` option, e.g.:
+
+```Console
+$ python update_sqlite.py -r $REVIEWER $ANN_DIR $DB_FILE $MISSION -ro -a $ALIAS_FILE > update-DB.log
+```
+
+The `$ALIAS_FILE` file should contain one line per alias in the format `alias,canonical_name`.  Users of the database can join `targets` with `aliases` to obtain all search results for a target name and its aliases.
+
+If `-tl` and `-a` are both provided, the mapping in `$ALIAS_FILE` will be used to update the targets in `$TARGET_LIST` by mapping them to their canonical names.  As a result, the total number of target names added to `targets` via `-tl` may be reduced (aliases omitted).  However, the target names that occur in the document collection will be stored verbatim (not remapped to canonical names).  
+
+
