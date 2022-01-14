@@ -110,7 +110,8 @@ def main(ann_dir, db_file, mission, aliases_file, reviewer, remove_orphans,
 
         for standardized_verbatim_target, canonical_target in aliases:
             print '%s %s' % (standardized_verbatim_target, canonical_target)
-            mte_db.add_alias(standardized_verbatim_target, canonical_target)
+            mte_db.add_alias(standardized_verbatim_target, 
+                             canonical_target.decode('utf8'))
 
         print '[INFO] The DB aliases table has been populated with the ' \
               'aliases CSV file %s' % os.path.abspath(aliases_file)
