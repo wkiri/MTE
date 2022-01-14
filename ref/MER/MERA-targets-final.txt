@@ -80,6 +80,7 @@ Bellingshausen
 BellyRock
 Belly Rock
 Below_Wall
+Bennett_Hardy
 Bens_clod
 Ben's_Clod
 Berkner Island
@@ -326,6 +327,7 @@ Francisco Coronado3
 Franklin
 Frank Russell
 Fredda Acker
+Frederic Brown
 FredericBrown
 Frederic Remington
 Frederic Remington2
