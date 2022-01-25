@@ -7,8 +7,12 @@ Files:
   removed (e.g., Contact, Edge, Fine) that were causing spurious hits (n=1106)
 - MERA-aliases.csv: Map of verbatim target names (aliases) to canonical names
 
-- MERB-targets-final.txt: MERB-targets.txt, no hand-edits (n=1744)
+- MERB-targets-final.txt: MERB-targets.txt with hand-edits (n=1729)
+  Removed: Alpha, Base, Case, Cone, Contact, Dunes, Edge, Empty,
+  Lower, Top, Upper, landing, lost, stripes, tracks
 - MERB-targets-final.gaz.txt: Same process as for MER-A, with MER-B input
+- MERB-targets-final-salient.gaz.txt: Gazette with generic names
+  removed (e.g., Contact, Edge, Fine) that were causing spurious hits (n=1707)
 
 Note that these lists contain naming variants so there are fewer
 unique Targets present than the number suggests.

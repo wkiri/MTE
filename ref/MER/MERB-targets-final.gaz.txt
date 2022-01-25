@@ -37,7 +37,6 @@ Target Alicante2
 Target Allende
 Target Allende2
 Target Aloya
-Target Alpha
 Target Alpha Layer
 Target Amboy
 Target Amboy1
@@ -111,7 +110,6 @@ Target Barrell
 Target Barren Islands
 Target Barstow
 Target Bartolome
-Target Base
 Target Bashful II
 Target Bashful_II
 Target Bashful II 2
@@ -259,7 +257,6 @@ Target Carousel
 Target Carpentanos
 Target Carrizal
 Target Carrizal_OjoCaliente
-Target Case
 Target Casper Crater
 Target Castellon
 Target Catalonia
@@ -318,9 +315,7 @@ Target Cobble_Hill2
 Target Coconut2
 Target Coleman
 Target Concepcion Crater
-Target Cone
 Target Coniston
-Target Contact
 Target Controller Bay
 Target Conybeare
 Target Cook Haven
@@ -410,7 +405,6 @@ Target Duero Beach
 Target Duero_Beach
 Target Duffer
 Target Duljo
-Target Dunes
 Target Durango
 Target du Toit
 Target Easley
@@ -422,7 +416,6 @@ Target E_Cann2
 Target E Cann3
 Target E_Cann3
 Target Echo
-Target Edge
 Target Edith Durham
 Target Eifel
 Target El Cap
@@ -436,7 +429,6 @@ Target EmilNolde
 Target Emil_Nolde
 Target Emil_Nolde2
 Target Emma Dean
-Target Empty
 Target Enamel
 Target Endeavour
 Target Endeavour1
@@ -788,7 +780,6 @@ Target Lake Wanapitei
 Target Lambert Field
 Target Lambert_Field
 Target Lamination
-Target landing
 Target Landshut
 Target Lanikai
 Target La Parida
@@ -854,10 +845,8 @@ Target Loon Lake
 Target Loon_Lake
 Target Loreley
 Target Lorely
-Target lost
 Target Lost
 Target Louise Boyd
-Target Lower
 Target Lower_Mulroy
 Target Luis de Torres
 Target Luis_de_Torres
@@ -1505,7 +1494,6 @@ Target Strathcona
 Target Strawberry
 Target Strawman
 Target Strelley Pond
-Target stripes
 Target Stuart Island
 Target Stuart Island1
 Target Stuart_Island1
@@ -1611,13 +1599,11 @@ Target Tlicho2
 Target Toledo
 Target Tome
 Target Tome2
-Target Top
 Target Torment_Track
 Target Totten
 Target Towra Point
 Target Trabajo
 Target Track2
-Target tracks
 Target Trailbreaker
 Target Transvaal
 Target Traube
@@ -1642,7 +1628,6 @@ Target Two-Headed Island
 Target TwoHeaded Island
 Target Uberraster
 Target Ulysses
-Target Upper
 Target Upper_Left_Edge
 Target Upper_Mulroy
 Target Upper_Right_Edge

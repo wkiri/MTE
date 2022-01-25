@@ -1,5 +1,3 @@
-Target 1A
-Target 2A
 Target Absecon
 Target Achsel
 Target Acropolis
@@ -36,7 +34,6 @@ Target Alicante2
 Target Allende
 Target Allende2
 Target Aloya
-Target Alpha
 Target Alpha Layer
 Target Amboy
 Target Amboy1
@@ -68,7 +65,6 @@ Target Antistasi
 Target Aquarius
 Target Arduino
 Target Argos
-Target Arkansas
 Target Arki
 Target Arnold Ziffel
 Target Arnold_Ziffel
@@ -108,7 +104,6 @@ Target Barrell
 Target Barren Islands
 Target Barstow
 Target Bartolome
-Target Base
 Target Bashful II
 Target Bashful II 2
 Target Bashful_II
@@ -116,7 +111,6 @@ Target BatungkayCave
 Target Baxter
 Target Baxter Springs
 Target Beacon Rock
-Target Beagle
 Target Beagle Burrow
 Target Beagle_Burrow
 Target Beaman
@@ -251,7 +245,6 @@ Target Carousel
 Target Carpentanos
 Target Carrizal
 Target Carrizal_OjoCaliente
-Target Case
 Target Casper Crater
 Target Castellon
 Target Catalonia
@@ -308,9 +301,7 @@ Target Cobble_Hill2
 Target Coconut2
 Target Coleman
 Target Concepcion Crater
-Target Cone
 Target Coniston
-Target Contact
 Target Controller Bay
 Target Conybeare
 Target Cook Haven
@@ -338,7 +329,6 @@ Target Crystal Creek
 Target Cube Point
 Target Cube_Point
 Target Cullman
-Target Cure
 Target Cushion
 Target Dahlia
 Target Dallas
@@ -353,7 +343,6 @@ Target Deception
 Target Dehlia
 Target Dellinbaugh
 Target Dells
-Target Delta
 Target Delta_Dusty
 Target Dendrites
 Target Dering Harbor
@@ -398,7 +387,6 @@ Target Duero Beach
 Target Duero_Beach
 Target Duffer
 Target Duljo
-Target Dunes
 Target Durango
 Target E Cann1
 Target E Cann2
@@ -410,7 +398,6 @@ Target E_Cann3
 Target Easley
 Target Ebony
 Target Echo
-Target Edge
 Target Edith Durham
 Target Eifel
 Target El Cap
@@ -423,7 +410,6 @@ Target EmilNolde
 Target Emil_Nolde
 Target Emil_Nolde2
 Target Emma Dean
-Target Empty
 Target Enamel
 Target Endeavour
 Target Endeavour Rim
@@ -445,7 +431,6 @@ Target Eugster
 Target Evanston
 Target Exeter
 Target ExtremaDura
-Target Eye
 Target Fairview
 Target Fala
 Target Falcon
@@ -554,7 +539,6 @@ Target Great Bend
 Target Great Detached Reef
 Target Great Keppel Island
 Target Great_Sandy
-Target Greeley
 Target Green Island
 Target Green_Island
 Target Greensprings
@@ -569,7 +553,6 @@ Target Guanajuato
 Target Gumdrop
 Target Haiwassee
 Target Half-dome
-Target Hall
 Target Halliday
 Target Hallvard
 Target Haomate
@@ -622,7 +605,6 @@ Target Huntingburg
 Target Huntsville
 Target Hydra
 Target Iazu
-Target Iceland
 Target Icy Strait
 Target Icy_Strait
 Target Ida Pfeiffer
@@ -636,7 +618,6 @@ Target Inde2
 Target Infield
 Target Intrepid
 Target Ios
-Target Ireland
 Target Isabela
 Target Isabella
 Target Ishkooda
@@ -830,7 +811,6 @@ Target Loreley
 Target Lorely
 Target Lost
 Target Louise Boyd
-Target Lower
 Target Lower_Mulroy
 Target Luis de Torres
 Target Luis_de_Torres
@@ -1056,7 +1036,6 @@ Target Oilean Ruaidh
 Target Old Tracks
 Target Old_Track
 Target Olympia
-Target Omaha
 Target Onaping
 Target Onaping2
 Target Onawa
@@ -1160,7 +1139,6 @@ Target Porcupine
 Target Poros
 Target Port Otway
 Target Port Townsend
-Target Portland
 Target Poverty Bush
 Target Poverty Tree
 Target Poverty_Bush
@@ -1263,14 +1241,12 @@ Target Red_Sea2
 Target Redoubt
 Target Reeds Bay
 Target Reiner_Gamma
-Target Reno
 Target Rhino Horn
 Target Rho
 Target Rhodes
 Target Ridout
 Target Right
 Target Ring Tail
-Target Rio
 Target Rio de Janeiro
 Target Rio_de_Janeiro
 Target Rioja
@@ -1329,7 +1305,6 @@ Target Salamis
 Target Salisbury
 Target Salisbury1
 Target Salisbury2
-Target Salt
 Target Salyut
 Target Salzburg
 Target Sami_Kai
@@ -1438,7 +1413,6 @@ Target Snout
 Target Snow Flakes
 Target Snug Corner Cove
 Target SoSL
-Target Socorro
 Target Sodaville
 Target Sodaville2
 Target Soil Color
@@ -1502,7 +1476,6 @@ Target Sutherland Point 1
 Target SutherlandPt
 Target Sutters Mill
 Target Swann Hill
-Target Sweet
 Target Switch grass
 Target Sylacauga
 Target T2 Haven
@@ -1520,7 +1493,6 @@ Target Tawny
 Target Teardrop
 Target Tears
 Target Tebenkov
-Target Ted
 Target Tenerife
 Target Tenerife BG
 Target Tennessee
@@ -1575,7 +1547,6 @@ Target Tlicho2
 Target Toledo
 Target Tome
 Target Tome2
-Target Top
 Target Torment_Track
 Target Totten
 Target Towra Point
@@ -1605,7 +1576,6 @@ Target Two-Headed Island
 Target TwoHeaded Island
 Target Uberraster
 Target Ulysses
-Target Upper
 Target Upper_Left_Edge
 Target Upper_Mulroy
 Target Upper_Right_Edge
@@ -1706,8 +1676,6 @@ Target ace of spades
 Target anaconda snakeden
 Target baracutey
 Target bosiba
-Target bouldertrack1
-Target bouldertrack2
 Target bright ripple
 Target ciba
 Target cibao
@@ -1725,19 +1693,15 @@ Target jicotea
 Target kalishnikov
 Target kalymnos
 Target karpathos
-Target landing
 Target longbaseline
-Target lost
 Target patio rug
 Target pebbleA
 Target pebbleB
 Target pebbleC
 Target smith2
 Target snake grass
-Target stripes
 Target sudbury
 Target the Bowl
-Target tracks
 Target west rim
 Target west zen garden
 Target yankee clipper

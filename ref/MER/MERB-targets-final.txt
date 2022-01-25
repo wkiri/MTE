@@ -37,7 +37,6 @@ Alicante2
 Allende
 Allende2
 Aloya
-Alpha
 Alpha Layer
 Amboy
 Amboy1
@@ -111,7 +110,6 @@ Barrell
 Barren Islands
 Barstow
 Bartolome
-Base
 Bashful II
 Bashful_II
 Bashful II 2
@@ -259,7 +257,6 @@ Carousel
 Carpentanos
 Carrizal
 Carrizal_OjoCaliente
-Case
 Casper Crater
 Castellon
 Catalonia
@@ -318,9 +315,7 @@ Cobble_Hill2
 Coconut2
 Coleman
 Concepcion Crater
-Cone
 Coniston
-Contact
 Controller Bay
 Conybeare
 Cook Haven
@@ -410,7 +405,6 @@ Duero Beach
 Duero_Beach
 Duffer
 Duljo
-Dunes
 Durango
 du Toit
 Easley
@@ -422,7 +416,6 @@ E_Cann2
 E Cann3
 E_Cann3
 Echo
-Edge
 Edith Durham
 Eifel
 El Cap
@@ -436,7 +429,6 @@ EmilNolde
 Emil_Nolde
 Emil_Nolde2
 Emma Dean
-Empty
 Enamel
 Endeavour
 Endeavour1
@@ -788,7 +780,6 @@ Lake Wanapitei
 Lambert Field
 Lambert_Field
 Lamination
-landing
 Landshut
 Lanikai
 La Parida
@@ -854,10 +845,8 @@ Loon Lake
 Loon_Lake
 Loreley
 Lorely
-lost
 Lost
 Louise Boyd
-Lower
 Lower_Mulroy
 Luis de Torres
 Luis_de_Torres
@@ -1505,7 +1494,6 @@ Strathcona
 Strawberry
 Strawman
 Strelley Pond
-stripes
 Stuart Island
 Stuart Island1
 Stuart_Island1
@@ -1611,13 +1599,11 @@ Tlicho2
 Toledo
 Tome
 Tome2
-Top
 Torment_Track
 Totten
 Towra Point
 Trabajo
 Track2
-tracks
 Trailbreaker
 Transvaal
 Traube
@@ -1642,7 +1628,6 @@ Two-Headed Island
 TwoHeaded Island
 Uberraster
 Ulysses
-Upper
 Upper_Left_Edge
 Upper_Mulroy
 Upper_Right_Edge
