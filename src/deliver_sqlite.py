@@ -28,14 +28,13 @@ def main(db_file, out_dir, fix_double_quotes):
     targets_csv = os.path.join(out_dir, 'targets.csv')
     targets_df = pd.read_sql_query('SELECT * FROM targets '
                                    'ORDER BY target_id ASC', connection)
+    if fix_double_quotes:
+        targets_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for targets.csv'
     targets_df.to_csv(targets_csv, index=False, encoding='utf-8',
                       line_terminator='\r\n')
     print '[INFO] targets table exported to %s' % targets_csv
-
-    if fix_double_quotes:
-        replace_internal_double_quote(targets_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for targets.csv'
 
     # Export the `components` and `properties` tables CSV files
     # with "orphaned" components (those that do not appear in ref_table) removed.
@@ -48,26 +47,24 @@ def main(db_file, out_dir, fix_double_quotes):
                                '(SELECT %s FROM %s);' %
                                (table, field, field, ref_table),
                                connection)
+        if fix_double_quotes:
+            df.replace(regex='"', value="''", inplace=True)
+            print('[INFO] internal double quotes were replaced with single '
+                  'quotes for %s' % csv_file)
         df.to_csv(csv_file, index=False, encoding='utf-8',
                   line_terminator='\r\n')
         print('[INFO] %s table exported to %s' % (table, csv_file))
 
-        if fix_double_quotes:
-            replace_internal_double_quote(csv_file, replace_with="''")
-            print('[INFO] internal double quotes were replaced with single '
-                  'quotes for %s' % csv_file)
-
     # Export the `sentences` table into sentences.csv.
     sentences_csv = os.path.join(out_dir, 'sentences.csv')
     sentences_df = pd.read_sql_query('SELECT * FROM sentences', connection)
+    if fix_double_quotes:
+        sentences_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for sentences.csv'
     sentences_df.to_csv(sentences_csv, index=False, encoding='utf-8',
                         line_terminator='\r\n')
     print '[INFO] sentences table exported to %s' % sentences_csv
-
-    if fix_double_quotes:
-        replace_internal_double_quote(sentences_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for sentences.csv'
 
     # Export the `documents` table into documents.csv with content and reviewer
     # fields excluded.
@@ -77,64 +74,59 @@ def main(db_file, out_dir, fix_double_quotes):
                                      'FROM documents WHERE doc_id in '
                                      '(SELECT doc_id from sentences)',
                                      connection)
+    if fix_double_quotes:
+        documents_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for documents.csv'
     documents_df.to_csv(documents_csv, index=False, encoding='utf-8',
                         line_terminator='\r\n')
     print '[INFO] documents table exported to %s' % documents_csv
-
-    if fix_double_quotes:
-        replace_internal_double_quote(documents_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for documents.csv'
 
     # Export the `mentions` table into mentions.csv.
     mentions_csv = os.path.join(out_dir, 'mentions.csv')
     mentions_df = pd.read_sql_query('SELECT * FROM mentions '
                                     'ORDER BY target_id ASC', connection)
+    if fix_double_quotes:
+        mentions_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for mentions.csv'
     mentions_df.to_csv(mentions_csv, index=False, encoding='utf-8',
                        line_terminator='\r\n')
     print '[INFO] mentions table exported to %s' % mentions_csv
 
-    if fix_double_quotes:
-        replace_internal_double_quote(mentions_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for mentions.csv'
-
     # Export the `contains` table into contains.csv.
     contains_csv = os.path.join(out_dir, 'contains.csv')
     contains_df = pd.read_sql_query('SELECT * FROM contains', connection)
+    if fix_double_quotes:
+        contains_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for contains.csv'
     contains_df.to_csv(contains_csv, index=False, encoding='utf-8',
                        line_terminator='\r\n')
     print '[INFO] contains table exported to %s' % contains_csv
-
-    if fix_double_quotes:
-        replace_internal_double_quote(contains_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for contains.csv'
 
     # Export the `has_property` table into has_property.csv.
     has_property_csv = os.path.join(out_dir, 'has_property.csv')
     has_property_df = pd.read_sql_query('SELECT * FROM has_property',
                                         connection)
+    if fix_double_quotes:
+        has_property_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for has_property.csv'
     has_property_df.to_csv(has_property_csv, index=False, encoding='utf-8',
                            line_terminator='\r\n')
     print '[INFO] has_property table exported to %s' % has_property_csv
 
-    if fix_double_quotes:
-        replace_internal_double_quote(has_property_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for has_property.csv'
-
     # Export the `aliases` table into aliases.csv.
     aliases_csv = os.path.join(out_dir, 'aliases.csv')
     aliases_df = pd.read_sql_query('SELECT * FROM aliases', connection)
+    if fix_double_quotes:
+        aliases_df.replace(regex='"', value="''", inplace=True)
+        print '[INFO] internal double quotes were replaced with single ' \
+              'quotes for aliases.csv'
     aliases_df.to_csv(aliases_csv, index=False, encoding='utf-8',
                       line_terminator='\r\n')
     print '[INFO] aliases table exported to %s' % aliases_csv
-
-    if fix_double_quotes:
-        replace_internal_double_quote(aliases_csv, replace_with="''")
-        print '[INFO] internal double quotes were replaced with single ' \
-              'quotes for aliases.csv'
 
     connection.close()
     print '[INFO] All done.'
