@@ -15,6 +15,7 @@ import hashlib
 import datetime
 import numpy as np
 import deliver_sqlite
+import pandas as pd
 from xml.etree import ElementTree
 from Cheetah.Template import Template
 
@@ -109,8 +110,7 @@ def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
         'mte_bundle_dir': mte_bundle_dir,
         'doc_collection_dir': doc_collection_dir,
         'mpf_collection_dir': mpf_collection_dir,
-        'mer2_collection_dir': mer2_subdir,
-        'mer1_collection_dir': mer1_subdir,
+        'mer_collection_dir': mer_collection_dir,
         'phx_collection_dir': phx_collection_dir,
         'msl_collection_dir': msl_collection_dir,
         'out_dir': out_dir
@@ -182,13 +182,13 @@ def get_max_record_length(csv_lines):
 # Compute maximum_field_length for all columns in the csv lines.
 def get_max_field_len(csv_lines, field_index):
     # content_2d_array = np.array([line.split(',') for line in csv_lines])
-    content_2d_array = np.array(csv_lines)
-    if len(content_2d_array) == 1:
-        longest_str = ''
+    content_df = pd.DataFrame(csv_lines)
+    if len(content_df) == 1:
+        max_len = 0
     else:
-        longest_str = max(content_2d_array[1:, field_index], key=len)
+        max_len = content_df[field_index][1:].astype(bytes).str.len().max()
 
-    return get_string_size_in_bytes(longest_str)
+    return max_len
 
 
 # This function returns the current date in YYYY-MM-DD format
@@ -325,9 +325,20 @@ def create_collection(collection_dir, db_file, mission_name,
     # Export DB file to CSV files. If the mission DB file isn't available yet,
     # we will deliver empty CSV files.
     if db_file is not None:
-        deliver_sqlite.main(db_file, collection_dir, fix_double_quotes=True)
+        # For MER, data files go in subdirectories
+        if mission_name in ['mer1', 'mer2']:
+            deliver_sqlite.main(db_file, os.path.join(collection_dir, mission_name), 
+                                fix_double_quotes=True)
+        else:
+            deliver_sqlite.main(db_file, collection_dir, fix_double_quotes=True)
 
-    create_xml_labels(collection_dir, bundle_template_dir, mission_name)
+    # For MER, data labels go in subdirectories
+    if mission_name in ['mer1', 'mer2']:
+        create_xml_labels(os.path.join(collection_dir, mission_name), 
+                          bundle_template_dir, mission_name)
+    else:
+        create_xml_labels(collection_dir, bundle_template_dir, mission_name)
+    # Inventory files go at the collection level
     create_inventory_files(collection_dir, bundle_template_dir, mission_name)
 
 
@@ -427,12 +438,12 @@ def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
 
     # Create MER-2 Spirit sub-collection.
     if mer2_db_file is not None:
-        create_collection(bundle_dict['mer2_collection_dir'], mer2_db_file,
+        create_collection(bundle_dict['mer_collection_dir'], mer2_db_file,
                           'mer2', bundle_template_dir)
 
     # Create MER-1 Opportunity sub-collection.
     if mer1_db_file is not None:
-        create_collection(bundle_dict['mer1_collection_dir'], mer1_db_file,
+        create_collection(bundle_dict['mer_collection_dir'], mer1_db_file,
                           'mer1', bundle_template_dir)
 
     # Create MSL collection.
