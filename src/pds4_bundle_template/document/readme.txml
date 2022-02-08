@@ -119,9 +119,9 @@
     </Context_Area>
     <Document>
         <document_name>README of Mars Target Encyclopedia</document_name>
-        <publication_date>2021-02-09</publication_date>
+        <publication_date>$today</publication_date>
         <Document_Edition>
-            <edition_name>Version 1.</edition_name>
+            <edition_name>Version 1.3</edition_name>
             <language>English</language>
             <files>1</files>
             <Document_File>
