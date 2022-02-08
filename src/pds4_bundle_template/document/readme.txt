@@ -25,7 +25,20 @@ The MTE consists of a relational database that links targets to
 publications.  In this PDS bundle, the relational database for each
 mission is expressed as several .csv files, one per table in the
 database.  These tables can be used independently or read in to enable
-searches and joins across the tables.
+searches and joins across the tables.  Please see MTE-schema.pdf for a
+visual depiction of the relationships between tables.
+
+- targets.csv: Table listing all targets that appear in the document
+  collection.  Fields include the target id, target name, and mission
+  code. 
+  * The target name encodes spaces as underscores and capitalizes the
+  first letter of each word.  Target names that end in numbers do not
+  separate the number from the name with an underscore, following the
+  most common practice in the literature.
+  * The mission code is "mpf", "phx", or "mer2".
+  * The target id consists of the target name, a hyphen, and the mission
+  code.  It allows disambiguation when target names are re-used
+  between missions. 
 
 - aliases.csv: Table linking target name variants (as they appear in a
   document, transformed slightly so spaces between words are replaced
@@ -35,38 +48,31 @@ searches and joins across the tables.
   multiple target names, such as typos like "Commanche" for "Comanche"
   and abbreviations like "Hmp" for "Humphrey."
 
-- documents.csv: Table containing information about each source
-  publication.  Fields include the document id, which consists of the
-  year of publication, an underscore, and the abstract number; the abstract
-  number; title; the authors (a comma separated list, so it is enclosed
-  in double-quotes for parsing); the primary author's last name; the
-  year of publication; venue (a quoted string with the conference name
-  and abstract number); and document URL.
+Target mentions in sentences and documents:
 
-- mentions.csv: Table linking target ids to each source sentence in
-  which that target is mentioned.  If a target occurs more than once
-  in a sentence, the sentence appears only once in this table.  The
-  target id consists of the target name, a hyphen, and a mission code
-  (e.g., "mpf", "phx", or "mer2") to disambiguate if target names are re-used
-  between missions.  The sentence id consists of the document id
-  followed by a hyphen and the index of the sentence in the document.
+- documents.csv: Table containing information about each source
+  publication (currently LPSC abstracts).  Fields include the document
+  id, which consists of the year of publication, an underscore, and
+  the LPSC abstract number; the abstract number; title; the authors (a
+  comma separated list, so it is enclosed in double-quotes for
+  parsing); the primary author's last name; the year of publication;
+  venue (a quoted string with the conference name and abstract
+  number); and document URL.
 
 - sentences.csv: Table enumerating sentences with relevant content
   (e.g., targets, components, properties).  Fields include the
-  document id (as above), the sentence id (as above), and the verbatim
-  sentence.  If the sentence contains a comma, it is enclosed in
-  double-quotes.  Any internal double-quotes (") were converted to two
-  single-quotes ('') to meet PDS requirements.
+  document id (as above), the sentence id, and the verbatim sentence.
+  The sentence id consists of the document id followed by a hyphen and
+  the index of the sentence in the document.  If the sentence contains
+  a comma, it is enclosed in double-quotes.  Any internal
+  double-quotes (") were converted to two single-quotes ('') to meet
+  PDS requirements.
 
-- targets.csv: Table listing all targets.  Fields include the target
-  id (as above), the target name (with spaces represented as
-  underscores), and the mission code (as above).
-
-  Note: not all targets have mentions.  Only targets that are referred
-  to by name in one of the contributing documents will appear in the
-  'mentions' table.  For completeness, the targets table includes all
-  targets named by each mission, which can also highlight targets
-  that lack representation in the literature.
+- mentions.csv: Table linking targets to each source sentence in
+  which that target is mentioned.  If a target occurs more than once
+  in a sentence, that sentence appears only once in this table.
+  Fields include target id (as above) and sentence id (as above).
+  between missions.
 
 Target composition and properties:
 
@@ -97,7 +103,7 @@ Automated text analysis methods were accompanied by manual review of
 the extracted information.  See reference [2] for additional details
 and a summary of content specific to the Mars Pathfinder and Mars
 Phoenix Lander missions and reference [3] for content specific to the
-Spirit Mars Exploration rover.
+Spirit Mars Exploration Rover.
 
 Citation
 --------
@@ -107,7 +113,7 @@ work, please include this citation:
 
 Kiri Wagstaff, Raymond Francis, Matthew Golombek, Steven Lu, Ellen
 Riloff, and Leslie Tamppari. (2021). Mars Target Encyclopedia (Version
-1.2) [Data set]. http://doi.org/10.17189/1520763
+1.3) [Data set]. http://doi.org/10.17189/1520763
 
 References
 ----------
