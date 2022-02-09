@@ -194,6 +194,20 @@ def standardize_target_name(name):
     # Use capwords so e.g. Bear's Lodge does not become Bear'S Lodge
     # and replace spaces with underscores in final version
     name = string.capwords(strip_ws).replace(' ', '_')
+    # Convert names that end in numbers so there's always
+    # an underscore before the number.
+    if name[-1].isnumeric():
+        ins_underscore = len(name) - 1
+        while (ins_underscore > 0 and 
+               name[ins_underscore].isnumeric()):
+            ins_underscore -= 1
+        if ins_underscore == 0:
+            # Name is entirely numbers; do nothing
+            pass
+        # If there isn't an underscore already, insert it
+        if name[ins_underscore] != '_':
+            name = (name[:ins_underscore + 1] + '_' + 
+                    name[ins_underscore + 1:])
 
     return name
 
