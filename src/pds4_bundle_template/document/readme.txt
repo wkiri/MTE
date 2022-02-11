@@ -31,22 +31,28 @@ visual depiction of the relationships between tables.
 - targets.csv: Table listing all targets that appear in the document
   collection.  Fields include the target id, target name, and mission
   code. 
-  * The target name encodes spaces as underscores and capitalizes the
-  first letter of each word.  Target names that end in numbers do not
-  separate the number from the name with an underscore, following the
-  most common practice in the literature.
+  * The target name, for consistency, encodes spaces as underscores,
+  capitalizes the first letter of each word, and ensures terminal
+  numbers are separated from the name by an underscore.
   * The mission code is "mpf", "phx", or "mer2".
   * The target id consists of the target name, a hyphen, and the mission
   code.  It allows disambiguation when target names are re-used
   between missions. 
 
 - aliases.csv: Table linking target name variants (as they appear in a
-  document, transformed slightly so spaces between words are replaced
-  with underscores and only the first letter of each word is
-  capitalized) to a canonical target name.  This allows the 
-  identification of all content relevant to a target, which might span
-  multiple target names, such as typos like "Commanche" for "Comanche"
-  and abbreviations like "Hmp" for "Humphrey."
+  document, standardized as above) to a canonical target name.  This
+  allows the identification of all content relevant to a target, which
+  might span multiple target names, such as typos like "Commanche" for
+  "Comanche" and abbreviations like "Hmp" for "Humphrey."  Alias
+  identification was done by inspecting the source documents for
+  context.
+
+  Note: For completeness, all aliased canonical target names appear in
+  the targets table, even when they did not appear verbatim in the
+  documents (e.g., Green_Eyes is included as a target name, even
+  though it only appeared as Greeneyes in the documents).  Therefore,
+  a small number of target names do not appear in the mentions table,
+  which includes all occurrences of target names in the documents.
 
 Target mentions in sentences and documents:
 
