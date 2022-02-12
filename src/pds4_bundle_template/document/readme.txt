@@ -25,7 +25,7 @@ The MTE consists of a relational database that links targets to
 publications.  In this PDS bundle, the relational database for each
 mission is expressed as several .csv files, one per table in the
 database.  These tables can be used independently or read in to enable
-searches and joins across the tables.  Please see MTE-schema.pdf for a
+searches and joins across the tables.  Please see MTE-schema.jpg for a
 visual depiction of the relationships between tables.
 
 - targets.csv: Table listing all targets that appear in the document
