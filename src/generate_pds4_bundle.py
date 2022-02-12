@@ -304,20 +304,20 @@ def create_inventory_files(collection_dir, bundle_template_dir,
     print '[INFO] Create inventory csv file for %s mission: %s' % \
           (collection_name, os.path.abspath(inventory_csv_path))
 
-    # Create inventory xml file
+    # Create collection xml file
     template_file = os.path.join(bundle_template_dir,
-                                 'collection_%s_inventory.txml' % collection_name)
+                                 'collection_%s.txml' % collection_name)
     template = Template(file=template_file, searchList=[{
         'inventory_records': xml_file_counter,
         'today': get_current_date()
     }])
 
-    inventory_xml_name = 'collection_%s_inventory.xml' % collection_name
-    inventory_xml_path = os.path.join(collection_dir, inventory_xml_name)
-    with open(inventory_xml_path, 'w+') as f:
+    collection_xml_name = 'collection_%s.xml' % collection_name
+    collection_xml_path = os.path.join(collection_dir, collection_xml_name)
+    with open(collection_xml_path, 'w+') as f:
         f.write(str(template))
-    print '[INFO] Create inventory xml file for %s mission: %s' % \
-          (collection_name, os.path.abspath(inventory_xml_path))
+    print '[INFO] Create collection xml file for %s mission: %s' % \
+          (collection_name, os.path.abspath(collection_xml_path))
 
 
 def create_collection(collection_dir, db_file, mission_name,
