@@ -114,8 +114,8 @@
             <language>English</language>
             <files>1</files>
             <Document_File>
-                <file_name>MTE-schema.pdf</file_name>
-                <document_standard_id>PDF/A</document_standard_id>
+                <file_name>MTE-schema.jpg</file_name>
+                <document_standard_id>JPEG</document_standard_id>
             </Document_File>
         </Document_Edition>
     </Document>
