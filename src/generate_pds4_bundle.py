@@ -306,7 +306,7 @@ def create_inventory_files(collection_dir, bundle_template_dir,
 
     # Create collection xml file
     template_file = os.path.join(bundle_template_dir,
-                                 'collection_%s.txml' % collection_name)
+                                 'collection_%s_inventory.txml' % collection_name)
     template = Template(file=template_file, searchList=[{
         'inventory_records': xml_file_counter,
         'today': get_current_date()
