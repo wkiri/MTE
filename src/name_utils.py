@@ -184,7 +184,7 @@ def canonical_name(name):
 def standardize_target_name(name):
     """
     Gets standardized target name: title case, replace spaces and dashes
-    with underscore.  Aliases are expanded using targettab.
+    with underscore.  
     :param name - name whose canonical name is to be looked up
     :return canonical name
     """
