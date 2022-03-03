@@ -39,7 +39,7 @@ MANIFEST_NAME = 'urn-nasa-pds-mars_target_encyclopedia.manifest'
 #    on mission DB files
 # 4. Copy documents and the corresponding XML files to document collection
 # 5. Create bundle xml file based on mission DB files
-# 6. Copy README.txt and MTE-schema.jpg to the bundle directory
+# 6. Copy README.txt and mte_schema.jpg to the bundle directory
 def setup_bundle_structure(out_dir, bundle_template_dir, mpf_db_file,
                            phx_db_file, msl_db_file, mer2_db_file, mer1_db_file):
     # Create MTE bundle directory
@@ -363,22 +363,22 @@ def create_document_collection(doc_template_dir, doc_collection_dir):
           os.path.abspath(readme_xml_file)
 
     # Copy MTE schema diagram to the document collection
-    src_schema = os.path.join(doc_template_dir, 'MTE-schema.jpg')
-    trt_schema = os.path.join(doc_collection_dir, 'MTE-schema.jpg')
+    src_schema = os.path.join(doc_template_dir, 'mte_schema.jpg')
+    trt_schema = os.path.join(doc_collection_dir, 'mte_schema.jpg')
     shutil.copyfile(src_schema, trt_schema)
     print '[INFO] Copied MTE schema file %s to document collection.' % \
           os.path.abspath(trt_schema)
 
     # Create MTE schema XML label
-    schema_template_file = os.path.join(doc_template_dir, 'MTE-schema.txml')
+    schema_template_file = os.path.join(doc_template_dir, 'mte_schema.txml')
     schema_template = Template(file=schema_template_file, searchList=[{
         'today': get_current_date()
     }])
 
-    schema_xml_file = os.path.join(doc_collection_dir, 'MTE-schema.xml')
+    schema_xml_file = os.path.join(doc_collection_dir, 'mte_schema.xml')
     with open(schema_xml_file, 'w+') as f:
         f.write(str(schema_template))
-    print '[INFO] Created XML label file %s for MTE-schema.jpg' % \
+    print '[INFO] Created XML label file %s for mte_schema.jpg' % \
           os.path.abspath(schema_xml_file)
     
     # Create inventory file to the document collection
