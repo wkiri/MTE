@@ -16,7 +16,11 @@
             <editor_list>VanBommel, S.</editor_list>
             <publication_year>2021</publication_year>
             <description>
-                This is the MTE MER-1 aliases table
+                This is the MTE MER-1 aliases table.  Target name
+                variations are mapped to a canonical name.  Canonical
+                names were chosen based on frequency of appearance in
+                the literature, naming conventions used by each
+                mission, and consultation with mission scientists. 
             </description>
         </Citation_Information>
         <Modification_History>
