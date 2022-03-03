@@ -16,7 +16,14 @@
             <editor_list>VanBommel, S.</editor_list>
             <publication_year>2021</publication_year>
             <description>
-                This is the MTE MPF targets table
+                This is the MTE MPF targets table.  This is not an
+                official mission target list.  Only targets that
+                appear in the MTE document collection are included.
+                Target names in this table may include abbreviations
+                and misspellings, according to how the targets appear
+                in the source documents.  See the aliases table to
+                obtain the mapping between target name variations and
+                the canonical target name.
             </description>
         </Citation_Information>
         <Modification_History>
