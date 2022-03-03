@@ -25,19 +25,25 @@ The MTE consists of a relational database that links targets to
 publications.  In this PDS bundle, the relational database for each
 mission is expressed as several .csv files, one per table in the
 database.  These tables can be used independently or read in to enable
-searches and joins across the tables.  Please see MTE-schema.jpg for a
+searches and joins across the tables.  Please see mte_schema.jpg for a
 visual depiction of the relationships between tables.
 
 - targets.csv: Table listing all targets that appear in the document
-  collection.  Fields include the target id, target name, and mission
-  code. 
+  collection.  This is not an official mission target list.  Only
+  targets that appear in the MTE document collection are included.
+  Target names in this table may include abbreviations  and
+  misspellings, according to how the targets appear in the source
+  documents.  See the aliases table to obtain the mapping between
+  target name variations and the canonical target name.
+
+  Fields include the target id, target name, and mission code.  
   * The target name, for consistency, encodes spaces as underscores,
   capitalizes the first letter of each word, and ensures terminal
   numbers are separated from the name by an underscore.
-  * The mission code is "mpf", "phx", or "mer2".
+  * The mission code is "mpf", "phx", or "mer2" (Spirit).
   * The target id consists of the target name, a hyphen, and the mission
-  code.  It allows disambiguation when target names are re-used
-  between missions. 
+  code.  It allows disambiguation when a target name is used
+  independently by more than one mission.
 
 - aliases.csv: Table linking target name variants (as they appear in a
   document, standardized as above) to a canonical target name.  This
@@ -45,7 +51,9 @@ visual depiction of the relationships between tables.
   might span multiple target names, such as typos like "Commanche" for
   "Comanche" and abbreviations like "Hmp" for "Humphrey."  Alias
   identification was done by inspecting the source documents for
-  context.
+  context.  Canonical names were chosen based on frequency of
+  appearance in the literature, naming conventions used by each
+  mission, and consultation with mission scientists.
 
   Note: For completeness, all aliased canonical target names appear in
   the targets table, even when they did not appear verbatim in the
@@ -54,7 +62,7 @@ visual depiction of the relationships between tables.
   a small number of target names do not appear in the mentions table,
   which includes all occurrences of target names in the documents.
 
-Target mentions in sentences and documents:
+Target occurrences (mentions) in sentences and documents:
 
 - documents.csv: Table containing information about each source
   publication (currently LPSC abstracts).  Fields include the document
@@ -87,7 +95,7 @@ Target composition and properties:
   and the component label (Element or Mineral).
 
 - properties.csv: Table containing unique property names.  Each property
-  is stored in all lower case with spaces between words.
+  name is stored in all lower case with spaces between words.
 
 - contains.csv: Table linking targets to components.  Fields include
   the target id (as above), component name (as above), and two sentence
@@ -119,7 +127,7 @@ work, please include this citation:
 
 Kiri Wagstaff, Raymond Francis, Matthew Golombek, Steven Lu, Ellen
 Riloff, and Leslie Tamppari. (2021). Mars Target Encyclopedia (Version
-1.3) [Data set]. http://doi.org/10.17189/1520763
+2.0) [Data set]. http://doi.org/10.17189/1520763
 
 References
 ----------
