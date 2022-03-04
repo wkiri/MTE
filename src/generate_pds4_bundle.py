@@ -312,7 +312,7 @@ def create_inventory_files(collection_dir, bundle_template_dir,
         'today': get_current_date()
     }])
 
-    collection_xml_name = 'collection_%s.xml' % collection_name
+    collection_xml_name = 'collection_%s_inventory.xml' % collection_name
     collection_xml_path = os.path.join(collection_dir, collection_xml_name)
     with open(collection_xml_path, 'w+') as f:
         f.write(str(template))
