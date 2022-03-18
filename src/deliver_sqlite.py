@@ -13,7 +13,7 @@ import sqlite3
 import pandas as pd
 
 
-def main(db_file, out_dir, fix_double_quotes):
+def main(db_file, out_dir, venue, fix_double_quotes):
     if not os.path.exists(db_file):
         print '[ERROR] Database file not found: %s' % os.path.abspath(db_file)
         sys.exit(1)
@@ -69,11 +69,21 @@ def main(db_file, out_dir, fix_double_quotes):
     # Export the `documents` table into documents.csv with content and reviewer
     # fields excluded.
     documents_csv = os.path.join(out_dir, 'documents.csv')
-    documents_df = pd.read_sql_query('SELECT doc_id, abstract, title, authors, '
-                                     'primary_author, year, venue, doc_url '
-                                     'FROM documents WHERE doc_id in '
-                                     '(SELECT doc_id from sentences)',
-                                     connection)
+    if venue.lower() == 'lpsc':
+        documents_df = pd.read_sql_query(
+            'SELECT doc_id, abstract, title, authors, primary_author, '
+            'year, venue, doc_url '
+            'FROM documents WHERE doc_id in (SELECT doc_id from sentences)',
+            connection
+        )
+    else:
+        # Skip abstract, year, and doc_url fields because they will be empty for
+        # non-LPSC papers
+        documents_df = pd.read_sql_query(
+            'SELECT doc_id, title, authors, primary_author, venue '
+            'FROM documents WHERE doc_id in (SELECT doc_id from sentences)',
+            connection
+        )
     if fix_double_quotes:
         documents_df.replace(regex='"', value="''", inplace=True)
         print '[INFO] internal double quotes were replaced with single ' \
@@ -171,6 +181,7 @@ if __name__ == '__main__':
     parser.add_argument('out_dir', type=str, default='./',
                         help='Path to the output directory that contains the '
                              'exported CSV files. Default is current dir.')
+    parser.add_argument('--venue', type=str, choices=['lpsc', 'other'])
     parser.add_argument('--fix_double_quotes', action='store_true',
                         help='Optional post-processing step to replace an '
                              'embedded double-quote with two single-quotes. '
