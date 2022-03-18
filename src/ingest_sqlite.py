@@ -15,11 +15,71 @@ from sqlite_mte import MteDb
 from name_utils import canonical_name
 
 
-# Read JSON content and return it as a generator of dictionaries (one per file)
-# If 'year' is specified, it applies to all documents (e.g., for per-year .jsonl files)
-# and otherwise it will be inferred for each document from the filename.
-def read_json(jsonfile, ndocs, year=None, mission=''):
+def read_json_other(jsonfile, ndocs, mission=''):
+    with open(jsonfile) as jf:
+        recs = map(lambda x: json.loads(x), jf)
+        # Use yield to make this a generator and reduce memory consumption
+        for rec in itertools.islice(recs, ndocs):
+            rec_dict = {
+                'doc_id': os.path.splitext(os.path.basename(rec['file']))[0],
+                'abstract': '',
+                'year': '',
+                'doc_url': '',
+                'content': rec['content_ann_s'].strip(),  # for annotations
+                'targets': ([] if 'ner' not in rec['metadata'].keys()
+                            else [(r['text'], mission, r['begin'], r['end'])
+                                  for r in rec['metadata']['ner']
+                                  if r['label'] == 'Target']),
+                # Components are everything other than targets (Element, Mineral)
+                'components': ([] if 'ner' not in rec['metadata'].keys()
+                               else [(canonical_name(r['text']), r['label'])
+                                     for r in rec['metadata']['ner']
+                                     if r['label'] != 'Target']),
+                'contains': ([] if 'rel' not in rec['metadata'].keys()
+                             else [([t for t in r['target_names']],
+                                    r['target_ids'],
+                                    [canonical_name(c) for c in r['cont_names']],
+                                    r['sentence'],
+                                    mission)
+                                   for r in rec['metadata']['rel']])
+            }
 
+            # Populate title field
+            if 'ads:title' in rec['metadata'].keys():
+                title = rec['metadata']['ads:title']
+            else:
+                title = rec['metadata'].get('grobid:header_Title', '')
+            rec_dict['title'] = title
+
+            # Populate authors field
+            if 'ads:author' in rec['metadata'].keys():
+                authors = ' and '.join(rec['metadata']['ads:author'])
+            else:
+                authors = rec['metadata'].get('grobid:header_Authors', '')
+            rec_dict['authors'] = authors
+
+            # Populate primary author
+            rec_dict['primary_author'] = rec['metadata'].get('ads:primary_author', '')
+
+            # Populate affiliations field
+            # Note that the ADS database returns a list of '-' as the
+            # placeholder for empty affiliation field. If the ads:affiliation
+            # field contains '-', we will use the affiliation field extracted
+            # from grobid.
+            if "ads:affiliation" in rec['metadata'].keys() and \
+                    not '-' in rec['metadata']['ads:affiliation']:
+                affiliations = ' and '.join(rec['metadata']['ads:affiliation'])
+            else:
+                affiliations = rec['metadata'].get('grobid:header_FullAffiliations', '')
+            rec_dict['affiliations'] = affiliations
+
+            # Populate venue field
+            rec_dict['venue'] = rec['metadata'].get('ads:pub_venue', '')
+
+            yield rec_dict
+
+
+def read_json_lpsc(jsonfile, ndocs, year=None, mission=''):
     with open(jsonfile) as jf:
         recs = map(lambda x: json.loads(x), jf)
         # Use yield to make this a generator and reduce memory consumption
@@ -197,11 +257,12 @@ def main(jsonfile, dbfile, ndocs, year, mission, venue):
         year = None # infer from filenames for each file
 
     # Read in the basic info
-    recs = read_json(jsonfile, ndocs, year, mission)
-    # Update individual fields
     if venue.lower() == 'lpsc':
+        recs = read_json_lpsc(jsonfile, ndocs, year, mission)
         recs = map(construct_doc_url, recs)
         recs = map(update_doc_venue, recs)
+    else:
+        recs = read_json_other(jsonfile, ndocs, mission)
     recs = map(update_primary_author, recs)
     recs = map(update_authors, recs)
     recs = map(functools.partial(update_targets_with_JSRE, mission=mission), recs)
