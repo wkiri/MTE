@@ -80,7 +80,7 @@ def main(db_file, out_dir, venue, fix_double_quotes):
         # Skip abstract, year, and doc_url fields because they will be empty for
         # non-LPSC papers
         documents_df = pd.read_sql_query(
-            'SELECT doc_id, title, authors, primary_author, venue '
+            'SELECT doc_id, title, authors, primary_author, year, venue, doc_url '
             'FROM documents WHERE doc_id in (SELECT doc_id from sentences)',
             connection
         )

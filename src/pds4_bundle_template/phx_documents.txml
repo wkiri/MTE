@@ -164,7 +164,7 @@
                     <description>source URL</description>
                 </Field_Delimited>
             #else:
-                <fields>5</fields>
+                <fields>7</fields>
                 <groups>0</groups>
                 <maximum_record_length unit="byte">$table['max_record_len']</maximum_record_length>
                 <Field_Delimited>
@@ -196,11 +196,25 @@
                     <description>primary author name</description>
                 </Field_Delimited>
                 <Field_Delimited>
-                    <name>venue</name>
+                    <name>year</name>
                     <field_number>5</field_number>
                     <data_type>UTF8_String</data_type>
                     <maximum_field_length unit="byte">$table['max_field_len_5']</maximum_field_length>
+                    <description>year of publication</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>venue</name>
+                    <field_number>6</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_6']</maximum_field_length>
                     <description>publication venue</description>
+                </Field_Delimited>
+                <Field_Delimited>
+                    <name>doc_url</name>
+                    <field_number>7</field_number>
+                    <data_type>UTF8_String</data_type>
+                    <maximum_field_length unit="byte">$table['max_field_len_7']</maximum_field_length>
+                    <description>source URL</description>
                 </Field_Delimited>
             #end if
             </Record_Delimited>

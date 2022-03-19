@@ -23,8 +23,8 @@ def read_json_other(jsonfile, ndocs, mission=''):
             rec_dict = {
                 'doc_id': os.path.splitext(os.path.basename(rec['file']))[0],
                 'abstract': '',
-                'year': '',
-                'doc_url': '',
+                'year': rec['metadata']['ads:pub_year'],
+                'doc_url': 'https://doi.org/' + rec['metadata']['ads:pub_doi'],
                 'content': rec['content_ann_s'].strip(),  # for annotations
                 'targets': ([] if 'ner' not in rec['metadata'].keys()
                             else [(r['text'], mission, r['begin'], r['end'])

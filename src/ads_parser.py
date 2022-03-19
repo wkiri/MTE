@@ -130,7 +130,7 @@ class AdsParser(TikaParser):
 
         params = (
             ('q', query_str),
-            ('fl', 'first_author,author,aff,pubdate,year,pub,title')
+            ('fl', 'first_author,author,aff,pubdate,year,pub,title,doi')
         )
 
         response = requests.get(self.ads_base_url, headers=headers,
@@ -164,6 +164,7 @@ class AdsParser(TikaParser):
         ads_dict['pub_venue'] = data_docs['pub']
         ads_dict['pub_year'] = data_docs['year']
         ads_dict['pub_date'] = data_docs['pubdate']
+        ads_dict['pub_doi'] = data_docs['doi'][0]
 
         return ads_dict
 
@@ -187,6 +188,7 @@ class AdsParser(TikaParser):
         tika_dict['metadata']['ads:pub_venue'] = ads_dict['pub_venue']
         tika_dict['metadata']['ads:pub_year'] = ads_dict['pub_year']
         tika_dict['metadata']['ads:pub_date'] = ads_dict['pub_date']
+        tika_dict['metadata']['ads:pub_doi'] = ads_dict['pub_doi']
 
         return tika_dict
 
@@ -194,7 +196,7 @@ class AdsParser(TikaParser):
 def process(in_file, in_list, out_file, log_file, tika_server_url, ads_url,
             ads_token):
     # Log input parameters
-    logger = LogUtil('ads-parser', log_file)
+    logger = LogUtil(log_file)
     logger.info('Input parameters')
     logger.info('in_file: %s' % in_file)
     logger.info('in_list: %s' % in_list)
