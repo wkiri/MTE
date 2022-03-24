@@ -31,7 +31,7 @@ visual depiction of the relationships between tables.
 - targets.csv: Table listing all targets that appear in the document
   collection.  This is not an official mission target list.  Only
   targets that appear in the MTE document collection are included.
-  Target names in this table may include abbreviations  and
+  Target names in this table may include abbreviations and
   misspellings, according to how the targets appear in the source
   documents.  See the aliases table to obtain the mapping between
   target name variations and the canonical target name.
