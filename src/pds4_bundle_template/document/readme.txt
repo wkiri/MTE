@@ -90,9 +90,17 @@ Target occurrences (mentions) in sentences and documents:
 
 Target composition and properties:
 
+Note: As much as possible, we avoid making interpretations of author
+intent and instead preserve components and properties as they appear
+in the source document.  Therefore, singular and plural forms as well
+as abbreviations and alternate spellings may appear in the component
+and property lists.
+
 - components.csv: Table containing names of elements and minerals.
   Fields include the "canonical" component name (e.g., Mn -> Manganese)
-  and the component label (Element or Mineral).
+  and the component label (Element or Mineral).  We reserve Element for
+  items in the periodic table, and use Mineral for more complex
+  entities or measurements, including terms such as NpOx and FeOT.
 
 - properties.csv: Table containing unique property names.  Each property
   name is stored in all lower case with spaces between words.
