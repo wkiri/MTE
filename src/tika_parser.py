@@ -42,6 +42,7 @@ class TikaParser(Parser):
                                'file: %s' % os.path.abspath(file_path))
 
         tika_dict['file'] = os.path.abspath(file_path)
+        tika_dict['metadata']['mte_parser'] = ['TikaParser']
 
         return tika_dict
 

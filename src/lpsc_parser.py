@@ -155,10 +155,12 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
 
             if jsre_parser is not None:
                 rel_dict = jsre_parser.parse(lpsc_dict['cleaned_content'])
+                relation_parser_class = jsre_parser.__class__.__name__
             else:
                 rel_dict = unary_parser.parse(
                     lpsc_dict['cleaned_content'], batch_size=batch_size,
                     entity_linking_method=entity_linking_method)
+                relation_parser_class = unary_parser.__class__.__name__
 
             ads_dict['content_ann_s'] = lpsc_dict['cleaned_content']
             ads_dict['references'] = lpsc_dict['references']
@@ -166,6 +168,11 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
             ads_dict['metadata']['rel'] = rel_dict['relation']
             ads_dict['metadata']['sentences'] = rel_dict['sentences']
             ads_dict['metadata']['X-Parsed-By'] = rel_dict['X-Parsed-By']
+            if 'mte_parser' not in ads_dict['metadata'].keys():
+                ads_dict['metadata']['mte_parser'] = list()
+            ads_dict['metadata']['mte_parser'].append(
+                lpsc_parser.__class__.__name__)
+            ads_dict['metadata']['mte_parser'].append(relation_parser_class)
 
             out_f.write(json.dumps(ads_dict))
             out_f.write('\n')

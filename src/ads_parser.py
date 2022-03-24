@@ -164,7 +164,9 @@ class AdsParser(TikaParser):
         ads_dict['pub_venue'] = data_docs['pub']
         ads_dict['pub_year'] = data_docs['year']
         ads_dict['pub_date'] = data_docs['pubdate']
-        ads_dict['pub_doi'] = data_docs['doi'][0]
+
+        if 'doi' in data_docs.keys():
+            ads_dict['pub_doi'] = data_docs['doi'][0]
 
         return ads_dict
 
@@ -188,7 +190,13 @@ class AdsParser(TikaParser):
         tika_dict['metadata']['ads:pub_venue'] = ads_dict['pub_venue']
         tika_dict['metadata']['ads:pub_year'] = ads_dict['pub_year']
         tika_dict['metadata']['ads:pub_date'] = ads_dict['pub_date']
-        tika_dict['metadata']['ads:pub_doi'] = ads_dict['pub_doi']
+
+        if 'pub_doi' in ads_dict.keys():
+            tika_dict['metadata']['ads:pub_doi'] = ads_dict['pub_doi']
+
+        if 'mte_parser' not in tika_dict['metadata'].keys():
+            tika_dict['metadata']['mte_parser'] = list()
+        tika_dict['metadata']['mte_parser'].append(self.__class__.__name__)
 
         return tika_dict
 

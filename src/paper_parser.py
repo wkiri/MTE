@@ -120,6 +120,12 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
             ads_dict['metadata']['rel'] = jsre_dict['relation']
             ads_dict['metadata']['sentences'] = jsre_dict['sentences']
             ads_dict['metadata']['X-Parsed-By'] = jsre_dict['X-Parsed-By']
+            if 'mte_parser' not in ads_dict['metadata'].keys():
+                ads_dict['metadata']['mte_parser'] = list()
+            ads_dict['metadata']['mte_parser'].append(
+                paper_parser.__class__.__name__)
+            ads_dict['metadata']['mte_parser'].append(
+                jsre_parser.__class__.__name__)
 
             out_f.write(json.dumps(ads_dict))
             out_f.write('\n')

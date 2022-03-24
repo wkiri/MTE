@@ -306,6 +306,10 @@ def process(in_file, in_list, out_file, log_file, tika_server_url,
             ads_dict['metadata']['ner'] = corenlp_dict['ner']
             ads_dict['metadata']['X-Parsed-By'].append(corenlp_dict['X-Parsed-By'])
             ads_dict['metadata']['sentences'] = corenlp_dict['sentences']
+            if 'mte_parser' not in ads_dict['metadata'].keys():
+                ads_dict['metadata']['mte_parser'] = list()
+            ads_dict['metadata']['mte_parser'].append(
+                corenlp_parser.__class__.__name__)
 
             out_f.write(json.dumps(ads_dict))
             out_f.write('\n')
