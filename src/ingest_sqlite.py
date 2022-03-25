@@ -13,36 +13,69 @@ import functools
 import itertools
 from sqlite_mte import MteDb
 from name_utils import canonical_name
+from lpsc_parser import LpscParser
 
 
-def read_json_other(jsonfile, ndocs, mission=''):
+def read_json(jsonfile, ndocs, year=None, mission=''):
     with open(jsonfile) as jf:
         recs = map(lambda x: json.loads(x), jf)
         # Use yield to make this a generator and reduce memory consumption
         for rec in itertools.islice(recs, ndocs):
-            rec_dict = {
-                'doc_id': os.path.splitext(os.path.basename(rec['file']))[0],
-                'abstract': '',
-                'year': rec['metadata']['ads:pub_year'],
-                'doc_url': 'https://doi.org/' + rec['metadata']['ads:pub_doi'],
-                'content': rec['content_ann_s'].strip(),  # for annotations
-                'targets': ([] if 'ner' not in rec['metadata'].keys()
-                            else [(r['text'], mission, r['begin'], r['end'])
-                                  for r in rec['metadata']['ner']
-                                  if r['label'] == 'Target']),
-                # Components are everything other than targets (Element, Mineral)
-                'components': ([] if 'ner' not in rec['metadata'].keys()
-                               else [(canonical_name(r['text']), r['label'])
-                                     for r in rec['metadata']['ner']
-                                     if r['label'] != 'Target']),
-                'contains': ([] if 'rel' not in rec['metadata'].keys()
-                             else [([t for t in r['target_names']],
-                                    r['target_ids'],
-                                    [canonical_name(c) for c in r['cont_names']],
-                                    r['sentence'],
-                                    mission)
-                                   for r in rec['metadata']['rel']])
-            }
+            mte_parsers = rec['metadata']['mte_parser']
+            if LpscParser.__name__ in mte_parsers:
+                rec_dict = {
+                    'doc_id': (str(year) + '_' +
+                               ''.join(rec['file'].split('/')[-1].split('.')[:-1]) if year is not None
+                               else ''.join(rec['file'].split('/')[-1].split('.')[:-1])),
+                    'abstract': (int(rec['file'].split('/')[-1].split('.')[0]) if year is not None
+                                 else int(rec['file'].split('/')[-1].split('_')[1].split('.')[0])),
+                    'year': (year if year is not None
+                             else int(rec['file'].split('/')[-1].split('_')[0])),
+                    'doc_url': '',
+                    'content': rec['content_ann_s'].strip(),  # for annotations
+                    'targets': ([] if 'ner' not in rec['metadata'].keys()
+                                else [(r['text'], mission, r['begin'], r['end'])
+                                      for r in rec['metadata']['ner']
+                                      if r['label'] == 'Target']),
+                    # Components are everything other than targets (Element, Mineral)
+                    'components': ([] if 'ner' not in rec['metadata'].keys()
+                                   else [(canonical_name(r['text']), r['label'])
+                                         for r in rec['metadata']['ner']
+                                         if r['label'] != 'Target']),
+                    'contains': ([] if 'rel' not in rec['metadata'].keys()
+                                 else [([t for t in r['target_names']],
+                                        r['target_ids'],
+                                        [canonical_name(c) for c in r['cont_names']],
+                                        r['sentence'],
+                                        mission)
+                                       for r in rec['metadata']['rel']]),
+                    'mte_parser': mte_parsers
+                }
+            else:
+                rec_dict = {
+                    'doc_id': os.path.splitext(os.path.basename(rec['file']))[0],
+                    'abstract': '',
+                    'year': rec['metadata']['ads:pub_year'],
+                    'doc_url': 'https://doi.org/' + rec['metadata']['ads:pub_doi'],
+                    'content': rec['content_ann_s'].strip(),  # for annotations
+                    'targets': ([] if 'ner' not in rec['metadata'].keys()
+                                else [(r['text'], mission, r['begin'], r['end'])
+                                      for r in rec['metadata']['ner']
+                                      if r['label'] == 'Target']),
+                    # Components are everything other than targets (Element, Mineral)
+                    'components': ([] if 'ner' not in rec['metadata'].keys()
+                                   else [(canonical_name(r['text']), r['label'])
+                                         for r in rec['metadata']['ner']
+                                         if r['label'] != 'Target']),
+                    'contains': ([] if 'rel' not in rec['metadata'].keys()
+                                 else [([t for t in r['target_names']],
+                                        r['target_ids'],
+                                        [canonical_name(c) for c in r['cont_names']],
+                                        r['sentence'],
+                                        mission)
+                                       for r in rec['metadata']['rel']]),
+                    'mte_parser': mte_parsers
+                }
 
             # Populate title field
             if 'ads:title' in rec['metadata'].keys():
@@ -79,76 +112,11 @@ def read_json_other(jsonfile, ndocs, mission=''):
             yield rec_dict
 
 
-def read_json_lpsc(jsonfile, ndocs, year=None, mission=''):
-    with open(jsonfile) as jf:
-        recs = map(lambda x: json.loads(x), jf)
-        # Use yield to make this a generator and reduce memory consumption
-        for rec in itertools.islice(recs, ndocs):
-            rec_dict = {
-                'doc_id': (str(year) + '_' +
-                           ''.join(rec['file'].split('/')[-1].split('.')[:-1]) if year is not None
-                           else ''.join(rec['file'].split('/')[-1].split('.')[:-1])),
-                'abstract': (int(rec['file'].split('/')[-1].split('.')[0]) if year is not None
-                             else int(rec['file'].split('/')[-1].split('_')[1].split('.')[0])),
-                'year': (year if year is not None
-                         else int(rec['file'].split('/')[-1].split('_')[0])),
-                'doc_url': '',
-                'content': rec['content_ann_s'].strip(), # for annotations
-                'targets': ([] if 'ner' not in rec['metadata'].keys()
-                            else [(r['text'], mission, r['begin'], r['end'])
-                                  for r in rec['metadata']['ner']
-                                  if r['label'] == 'Target']),
-                # Components are everything other than targets (Element, Mineral)
-                'components': ([] if 'ner' not in rec['metadata'].keys()
-                               else [(canonical_name(r['text']), r['label'])
-                                     for r in rec['metadata']['ner']
-                                     if r['label'] != 'Target']),
-                'contains': ([] if 'rel' not in rec['metadata'].keys()
-                             else [([t for t in r['target_names']],
-                                    r['target_ids'],
-                                    [canonical_name(c) for c in r['cont_names']],
-                                    r['sentence'],
-                                    mission)
-                                   for r in rec['metadata']['rel']])
-            }
-
-            # Populate title field
-            if 'ads:title' in rec['metadata'].keys():
-                title = rec['metadata']['ads:title']
-            else:
-                title = rec['metadata'].get('grobid:header_Title', '')
-            rec_dict['title'] = title
-
-            # Populate authors field
-            if 'ads:author' in rec['metadata'].keys():
-                authors = ' and '.join(rec['metadata']['ads:author'])
-            else:
-                authors = rec['metadata'].get('grobid:header_Authors', '')
-            rec_dict['authors'] = authors
-
-            # Populate primary author
-            rec_dict['primary_author'] = rec['metadata'].get('ads:primary_author', '')
-
-            # Populate affiliations field
-            # Note that the ADS database returns a list of '-' as the
-            # placeholder for empty affiliation field. If the ads:affiliation
-            # field contains '-', we will use the affiliation field extracted
-            # from grobid.
-            if "ads:affiliation" in rec['metadata'].keys() and \
-                not '-' in rec['metadata']['ads:affiliation']:
-                affiliations = ' and '.join(rec['metadata']['ads:affiliation'])
-            else:
-                affiliations = rec['metadata'].get('grobid:header_FullAffiliations', '')
-            rec_dict['affiliations'] = affiliations
-
-            # Populate venue field
-            rec_dict['venue'] = rec['metadata'].get('ads:pub_venue', '')
-
-            yield rec_dict
-
-
 # Document feature update functions by Thamme Gowda (from insert_docs.py)
 def construct_doc_url(rec):
+    if LpscParser.__name__ not in rec['mte_parser']:
+        return rec
+
     if rec['year'] < 2000:
         rec['doc_url'] = 'http://www.lpi.usra.edu/meetings/' + \
                          ('LPSC%s/pdf/' % (rec['year'] - 1900)) + \
@@ -165,6 +133,9 @@ def construct_doc_url(rec):
 
 
 def update_doc_venue(rec):
+    if LpscParser.__name__ not in rec['mte_parser']:
+        return rec
+
     rec['venue'] = 'Lunar and Planetary Science Conference, ' + \
                    ('Abstract #%d' % rec['abstract'])
     return rec
@@ -243,7 +214,7 @@ def update_targets_with_JSRE(rec, mission):
     return rec
 
 
-def main(jsonfile, dbfile, ndocs, year, mission, venue):
+def main(jsonfile, dbfile, ndocs, year, mission):
 
     # Check arguments
     if not os.path.exists(jsonfile):
@@ -257,12 +228,9 @@ def main(jsonfile, dbfile, ndocs, year, mission, venue):
         year = None # infer from filenames for each file
 
     # Read in the basic info
-    if venue.lower() == 'lpsc':
-        recs = read_json_lpsc(jsonfile, ndocs, year, mission)
-        recs = map(construct_doc_url, recs)
-        recs = map(update_doc_venue, recs)
-    else:
-        recs = read_json_other(jsonfile, ndocs, mission)
+    recs = read_json(jsonfile, ndocs, year, mission)
+    recs = map(construct_doc_url, recs)
+    recs = map(update_doc_venue, recs)
     recs = map(update_primary_author, recs)
     recs = map(update_authors, recs)
     recs = map(functools.partial(update_targets_with_JSRE, mission=mission), recs)
@@ -291,12 +259,6 @@ if __name__ == '__main__':
     parser.add_argument('-m', '--mission', default='',
                         help='Mission that the documents belong to. Options '
                              'include mpf, phx, msl, mer1, and mer2.')
-    parser.add_argument('-v', '--venue', choices=['lpsc', 'others'],
-                        default='others',
-                        help='The venue of the documents. The list of accepted '
-                             'values is [lpsc, others]. The default is others. '
-                             'If lpsc is provided, then the script will '
-                             'populate the doc_url and venue fields. ')
 
     args = parser.parse_args()
     main(**vars(args))
