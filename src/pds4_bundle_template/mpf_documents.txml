@@ -119,67 +119,6 @@
             <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
             <field_delimiter>Comma</field_delimiter>
             <Record_Delimited>
-            #if $venue == 'lpsc':
-                <fields>8</fields>
-                <groups>0</groups>
-                <maximum_record_length unit="byte">$table['max_record_len']</maximum_record_length>
-                <Field_Delimited>
-                    <name>doc_id</name>
-                    <field_number>1</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_1']</maximum_field_length>
-                    <description>id of source document: consists of year + '_' + abstract id</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>abstract</name>
-                    <field_number>2</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_2']</maximum_field_length>
-                    <description>abstract id (integer)</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>title</name>
-                    <field_number>3</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_3']</maximum_field_length>
-                    <description>title</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>authors</name>
-                    <field_number>4</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_4']</maximum_field_length>
-                    <description>authors (currently all one string)</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>primary_author</name>
-                    <field_number>5</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_5']</maximum_field_length>
-                    <description>primary author name</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>year</name>
-                    <field_number>6</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_6']</maximum_field_length>
-                    <description>year of publication</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>venue</name>
-                    <field_number>7</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_7']</maximum_field_length>
-                    <description>publication venue, for citation (e.g., "Lunar and Planetary Science Conference, Abstract #2591")</description>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>doc_url</name>
-                    <field_number>8</field_number>
-                    <data_type>UTF8_String</data_type>
-                    <maximum_field_length unit="byte">$table['max_field_len_8']</maximum_field_length>
-                    <description>source URL</description>
-                </Field_Delimited>
-            #else:
                 <fields>7</fields>
                 <groups>0</groups>
                 <maximum_record_length unit="byte">$table['max_record_len']</maximum_record_length>
@@ -232,7 +171,6 @@
                     <maximum_field_length unit="byte">$table['max_field_len_7']</maximum_field_length>
                     <description>source URL</description>
                 </Field_Delimited>
-            #end if
             </Record_Delimited>
         </Table_Delimited>
     </File_Area_Observational>
