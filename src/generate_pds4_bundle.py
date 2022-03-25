@@ -243,11 +243,10 @@ def compute_single_table_stats(csv_file):
     return table_stats
 
 
-def create_single_xml_label(template_file, label_file, table_stats, venue):
+def create_single_xml_label(template_file, label_file, table_stats):
     template = Template(file=template_file, searchList=[{
         'table': table_stats,
         'today': get_current_date(),
-        'venue': venue
     }])
 
     with open(label_file, 'w+') as f:
@@ -257,7 +256,7 @@ def create_single_xml_label(template_file, label_file, table_stats, venue):
 # Generate xml labels for the csv files. If a csv file is empty (meaning
 # contains only the header but no actual content), the csv file will be removed
 # from the collection and no xml label file will be generated.
-def create_xml_labels(collection_dir, bundle_template_dir, mission_name, venue):
+def create_xml_labels(collection_dir, bundle_template_dir, mission_name):
     # Create label XML files for the corresponding table CSV files
     for table_name in ['targets', 'components', 'contains', 'documents',
                        'sentences', 'mentions', 'properties', 'has_property',
@@ -278,7 +277,7 @@ def create_xml_labels(collection_dir, bundle_template_dir, mission_name, venue):
         label_file = os.path.join(collection_dir, '%s.xml' % table_name)
 
         table_stats = compute_single_table_stats(csv_file)
-        create_single_xml_label(template_file, label_file, table_stats, venue)
+        create_single_xml_label(template_file, label_file, table_stats)
         print '[INFO] Create %s mission %s.xml label file: %s' % \
               (mission_name, table_name, label_file)
 
@@ -322,7 +321,7 @@ def create_inventory_files(collection_dir, bundle_template_dir,
 
 
 def create_collection(collection_dir, db_file, mission_name,
-                      venue, bundle_template_dir):
+                      bundle_template_dir):
     # Export DB file to CSV files. If the mission DB file isn't available yet,
     # we will deliver empty CSV files.
     if db_file is not None:
@@ -330,18 +329,17 @@ def create_collection(collection_dir, db_file, mission_name,
         if mission_name in ['mer1', 'mer2']:
             deliver_sqlite.main(db_file,
                                 os.path.join(collection_dir, mission_name),
-                                venue, fix_double_quotes=True)
+                                fix_double_quotes=True)
         else:
-            deliver_sqlite.main(db_file, collection_dir, venue,
+            deliver_sqlite.main(db_file, collection_dir,
                                 fix_double_quotes=True)
 
     # For MER, data labels go in subdirectories
     if mission_name in ['mer1', 'mer2']:
         create_xml_labels(os.path.join(collection_dir, mission_name), 
-                          bundle_template_dir, mission_name, venue)
+                          bundle_template_dir, mission_name)
     else:
-        create_xml_labels(collection_dir, bundle_template_dir, mission_name,
-                          venue)
+        create_xml_labels(collection_dir, bundle_template_dir, mission_name)
     # Inventory files go at the collection level
     create_inventory_files(collection_dir, bundle_template_dir, mission_name)
 
@@ -418,7 +416,7 @@ def create_manifest_file(out_dir):
 
 
 def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
-         mer2_db_file, mer1_db_file, venue, bundle_template_dir):
+         mer2_db_file, mer1_db_file, bundle_template_dir):
     if mpf_db_file is None and phx_db_file is None and msl_db_file is None and \
             mer2_db_file is None and mer1_db_file is None:
         print '[ERROR] At least one DB file should be provided. Exit.'
@@ -433,27 +431,27 @@ def main(out_dir, mpf_db_file, phx_db_file, msl_db_file,
     # Create MPF collection
     if mpf_db_file is not None:
         create_collection(bundle_dict['mpf_collection_dir'], mpf_db_file,
-                          'mpf', venue, bundle_template_dir)
+                          'mpf', bundle_template_dir)
 
     # Create PHX collection
     if phx_db_file is not None:
         create_collection(bundle_dict['phx_collection_dir'], phx_db_file, 'phx',
-                          venue, bundle_template_dir)
+                          bundle_template_dir)
 
     # Create MER-2 Spirit sub-collection.
     if mer2_db_file is not None:
         create_collection(bundle_dict['mer_collection_dir'], mer2_db_file,
-                          'mer2', venue, bundle_template_dir)
+                          'mer2', bundle_template_dir)
 
     # Create MER-1 Opportunity sub-collection.
     if mer1_db_file is not None:
         create_collection(bundle_dict['mer_collection_dir'], mer1_db_file,
-                          'mer1', venue, bundle_template_dir)
+                          'mer1', bundle_template_dir)
 
     # Create MSL collection.
     if msl_db_file is not None:
         create_collection(bundle_dict['msl_collection_dir'], msl_db_file, 'msl',
-                          venue, bundle_template_dir)
+                          bundle_template_dir)
 
     # Create md5 checksum file
     create_md5_checksum_file(bundle_dict['mte_bundle_dir'])
@@ -483,7 +481,6 @@ if __name__ == '__main__':
     parser.add_argument('--mer1_db_file', type=str,
                         help='Path to the MER Opportunity rover (MER-B or '
                              'MER-1) sqlite DB file')
-    parser.add_argument('--venue', type=str, choices=['lpsc', 'other'])
     parser.add_argument('--bundle_template_dir', type=str,
                         default='pds4_bundle_template',
                         help='Path to the MTE PDS4 bundle template directory.')
