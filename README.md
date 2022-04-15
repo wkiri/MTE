@@ -9,8 +9,8 @@ that relate to the target.
 You can access the Mars Target Encyclopedia:
 * The latest MTE database (.csv files): 
   https://pds-geosciences.wustl.edu/missions/mte/mte.htm 
-  (currently contains information for the Mars Pathfinder and 
-  Mars Phoenix Lander missions)
+  (currently contains information for the Mars Pathfinder, 
+  Mars Phoenix Lander, and Mars Exploration Rover missions)
 * PDS Analyst's Notebook (go to Search->Targets):
   https://an.rsl.wustl.edu/msl/mslbrowser/an3.aspx 
   (Mars Science Laboratory)
