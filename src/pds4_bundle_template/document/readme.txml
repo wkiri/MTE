@@ -18,10 +18,14 @@
             <Modification_Detail>
                 <modification_date>$today</modification_date>
                 <version_id>1.3</version_id>
-                <description>Add aliases table.</description>
+                <description>Add description of aliases table,
+                pointer to schema diagram, and inclusion of MER-2
+                mission.  Provide more details about which target
+                names are included and how canonical names were
+                determined.</description> 
             </Modification_Detail>
             <Modification_Detail>
-                <modification_date>2021-06-01</modification_date>
+                <modification_date>2021-06-07</modification_date>
                 <version_id>1.2</version_id>
                 <description>Add contains and has_property
                 relations and components and properties tables.</description>
@@ -119,9 +123,9 @@
     </Context_Area>
     <Document>
         <document_name>README of Mars Target Encyclopedia</document_name>
-        <publication_date>2021-02-09</publication_date>
+        <publication_date>$today</publication_date>
         <Document_Edition>
-            <edition_name>Version 1.</edition_name>
+            <edition_name>Version 1.3</edition_name>
             <language>English</language>
             <files>1</files>
             <Document_File>

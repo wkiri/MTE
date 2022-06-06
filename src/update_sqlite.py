@@ -109,12 +109,17 @@ def main(ann_dir, db_file, mission, aliases_file, reviewer, remove_orphans,
             aliases = [a.strip().split(',') for a in aliases]
 
         for standardized_verbatim_target, canonical_target in aliases:
-            print '%s %s' % (standardized_verbatim_target, canonical_target)
+            #print '%s %s' % (standardized_verbatim_target, canonical_target)
             mte_db.add_alias(standardized_verbatim_target, 
                              canonical_target.decode('utf8'))
+            
+            # Ensure all canonical target names appear in the targets table
+            mte_db.add_known_target(canonical_target.decode('utf8'), mission)
 
-        print '[INFO] The DB aliases table has been populated with the ' \
-              'aliases CSV file %s' % os.path.abspath(aliases_file)
+        print '[INFO] The DB aliases table has been populated with ' \
+              '%d aliases from CSV file %s, and all canonical target names ' \
+              'have been added to the target table' % \
+              (len(aliases), os.path.abspath(aliases_file))
 
     mte_db.close()
     print '[INFO] DONE.'

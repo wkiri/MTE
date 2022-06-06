@@ -174,17 +174,42 @@ def canonical_name(name):
     Gets canonical name: title case
     :param name - name whose canonical name is to be looked up
     :return canonical name
+
+    >>> canonical_name('Fe')
+    'Iron'
+
+    >>> canonical_name('I')
+    'Iodine'
+
+    >>> canonical_name('FeOT')
+    'FeOT'
+
+    >>> canonical_name('m')
+    'M'
+
+    >>> canonical_name('CARBONATE')
+    'Carbonate'
     """
     name = name.strip()
+    # Expand element abbreviations to full name
     if len(name) <= 3 and name.title() in symtab:
         return symtab[name.title()]
     else:
-        return string.capwords(name)
+        # Fix capitalization.
+        # If the word is all-caps, capitalize only the first letter,
+        # unless it contains a number (e.g., SO4).
+        # Otherwise, capitalize the first letter and preserve case as-is
+        # for the rest of the string (e.g., SO4, CaO). 
+        if name.isupper() and all(not c.isdigit() for c in name):
+            return name.capitalize()
+        else:
+            rest_of_name = name[1:] if len(name) > 1 else ''
+            return name[0].upper() + rest_of_name
 
 def standardize_target_name(name):
     """
     Gets standardized target name: title case, replace spaces and dashes
-    with underscore.  Aliases are expanded using targettab.
+    with underscore.  
     :param name - name whose canonical name is to be looked up
     :return canonical name
     """
@@ -194,6 +219,20 @@ def standardize_target_name(name):
     # Use capwords so e.g. Bear's Lodge does not become Bear'S Lodge
     # and replace spaces with underscores in final version
     name = string.capwords(strip_ws).replace(' ', '_')
+    # Convert names that end in numbers so there's always
+    # an underscore before the number.
+    if name[-1].isnumeric():
+        ins_underscore = len(name) - 1
+        while (ins_underscore > 0 and 
+               name[ins_underscore].isnumeric()):
+            ins_underscore -= 1
+        if ins_underscore == 0:
+            # Name is entirely numbers; do nothing
+            pass
+        # If there isn't an underscore already, insert it
+        if name[ins_underscore] != '_':
+            name = (name[:ins_underscore + 1] + '_' + 
+                    name[ins_underscore + 1:])
 
     return name
 
@@ -211,7 +250,7 @@ def canonical_component_name(name):
     """
     This function gets canonical name for a component (either element/mineral):
     """
-    # remove hypen, unserscore, and extra space
+    # remove hypen, underscore, and extra space
     name = " ".join(re.sub(r"[-_]", " ",name).split())
     name = " ".join([canonical_name(k) for k in name.split()])
     return name

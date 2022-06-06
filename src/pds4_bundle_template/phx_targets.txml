@@ -16,17 +16,26 @@
             <editor_list>VanBommel, S.</editor_list>
             <publication_year>2021</publication_year>
             <description>
-                This is the MTE PHX targets table
+                This is the MTE PHX targets table.  This is not an
+                official mission target list.  Only targets that
+                appear in the MTE document collection are included.
+                Target names in this table may include abbreviations
+                and misspellings, according to how the targets appear
+                in the source documents.  See the aliases table to
+                obtain the mapping between target name variations and
+                the canonical target name.
             </description>
         </Citation_Information>
         <Modification_History>
             <Modification_Detail>
                 <modification_date>$today</modification_date>
                 <version_id>1.3</version_id>
-                <description>Add aliases table.</description>
+                <description>Addition of aliases table enabled use of
+                target names as they appear in the documents.  Targets
+                that do not appear in the documents are removed.</description>
             </Modification_Detail>
             <Modification_Detail>
-                <modification_date>2021-06-01</modification_date>
+                <modification_date>2021-06-07</modification_date>
                 <version_id>1.2</version_id>
                 <description>Add contains and has_property
                 relations and components and properties tables.</description>

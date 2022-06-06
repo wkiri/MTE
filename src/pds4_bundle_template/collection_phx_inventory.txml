@@ -23,10 +23,11 @@
             <Modification_Detail>
                 <modification_date>$today</modification_date>
                 <version_id>1.3</version_id>
-                <description>Add aliases table.</description>
+                <description>Add aliases table and use ADS for
+                document metadata.</description>
             </Modification_Detail>
             <Modification_Detail>
-                <modification_date>2021-06-01</modification_date>
+                <modification_date>2021-06-07</modification_date>
                 <version_id>1.2</version_id>
                 <description>Add contains and has_property
                 relations and components and properties tables.</description>

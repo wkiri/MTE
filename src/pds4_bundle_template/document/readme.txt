@@ -25,57 +25,85 @@ The MTE consists of a relational database that links targets to
 publications.  In this PDS bundle, the relational database for each
 mission is expressed as several .csv files, one per table in the
 database.  These tables can be used independently or read in to enable
-searches and joins across the tables.
+searches and joins across the tables.  Please see mte_schema.jpg for a
+visual depiction of the relationships between tables.
+
+- targets.csv: Table listing all targets that appear in the document
+  collection.  This is not an official mission target list.  Only
+  targets that appear in the MTE document collection are included.
+  Target names in this table may include abbreviations and
+  misspellings, according to how the targets appear in the source
+  documents.  See the aliases table to obtain the mapping between
+  target name variations and the canonical target name.
+
+  Fields include the target id, target name, and mission code.  
+  * The target name, for consistency, encodes spaces as underscores,
+  capitalizes the first letter of each word, and ensures terminal
+  numbers are separated from the name by an underscore.
+  * The mission code is "mpf", "phx", or "mer2" (Spirit).
+  * The target id consists of the target name, a hyphen, and the mission
+  code.  It allows disambiguation when a target name is used
+  independently by more than one mission.
 
 - aliases.csv: Table linking target name variants (as they appear in a
-  document, transformed slightly so spaces between words are replaced
-  with underscores and only the first letter of each word is
-  capitalized) to a canonical target name.  This allows the 
-  identification of all content relevant to a target, which might span
-  multiple target names, such as typos like "Commanche" for "Comanche"
-  and abbreviations like "Hmp" for "Humphrey."
+  document, standardized as above) to a canonical target name.  This
+  allows the identification of all content relevant to a target, which
+  might span multiple target names, such as typos like "Commanche" for
+  "Comanche" and abbreviations like "Hmp" for "Humphrey."  Alias
+  identification was done by inspecting the source documents for
+  context.  Canonical names were chosen based on frequency of
+  appearance in the literature, naming conventions used by each
+  mission, and consultation with mission scientists.
+
+  Note: For completeness, all aliased canonical target names appear in
+  the targets table, even when they did not appear verbatim in the
+  documents (e.g., Green_Eyes is included as a target name, even
+  though it only appeared as Greeneyes in the documents).  Therefore,
+  a small number of target names do not appear in the mentions table,
+  which includes all occurrences of target names in the documents.
+
+Target occurrences (mentions) in sentences and documents:
 
 - documents.csv: Table containing information about each source
-  publication.  Fields include the document id, which consists of the
-  year of publication, an underscore, and the abstract number; the abstract
-  number; title; the authors (a comma separated list, so it is enclosed
-  in double-quotes for parsing); the primary author's last name; the
-  year of publication; venue (a quoted string with the conference name
-  and abstract number); and document URL.
-
-- mentions.csv: Table linking target ids to each source sentence in
-  which that target is mentioned.  If a target occurs more than once
-  in a sentence, the sentence appears only once in this table.  The
-  target id consists of the target name, a hyphen, and a mission code
-  (e.g., "mpf", "phx", or "mer2") to disambiguate if target names are re-used
-  between missions.  The sentence id consists of the document id
-  followed by a hyphen and the index of the sentence in the document.
+  publication (currently LPSC abstracts).  Fields include the document
+  id, which consists of the year of publication, an underscore, and
+  the LPSC abstract number; the abstract number; title; the authors (a
+  comma separated list, so it is enclosed in double-quotes for
+  parsing); the primary author's last name; the year of publication;
+  venue (a quoted string with the conference name and abstract
+  number); and document URL.
 
 - sentences.csv: Table enumerating sentences with relevant content
   (e.g., targets, components, properties).  Fields include the
-  document id (as above), the sentence id (as above), and the verbatim
-  sentence.  If the sentence contains a comma, it is enclosed in
-  double-quotes.  Any internal double-quotes (") were converted to two
-  single-quotes ('') to meet PDS requirements.
+  document id (as above), the sentence id, and the verbatim sentence.
+  The sentence id consists of the document id followed by a hyphen and
+  the index of the sentence in the document.  If the sentence contains
+  a comma, it is enclosed in double-quotes.  Any internal
+  double-quotes (") were converted to two single-quotes ('') to meet
+  PDS requirements.
 
-- targets.csv: Table listing all targets.  Fields include the target
-  id (as above), the target name (with spaces represented as
-  underscores), and the mission code (as above).
-
-  Note: not all targets have mentions.  Only targets that are referred
-  to by name in one of the contributing documents will appear in the
-  'mentions' table.  For completeness, the targets table includes all
-  targets named by each mission, which can also highlight targets
-  that lack representation in the literature.
+- mentions.csv: Table linking targets to each source sentence in
+  which that target is mentioned.  If a target occurs more than once
+  in a sentence, that sentence appears only once in this table.
+  Fields include target id (as above) and sentence id (as above).
+  between missions.
 
 Target composition and properties:
 
+Note: As much as possible, we avoid making interpretations of author
+intent and instead preserve components and properties as they appear
+in the source document.  Therefore, singular and plural forms as well
+as abbreviations and alternate spellings may appear in the component
+and property lists.
+
 - components.csv: Table containing names of elements and minerals.
   Fields include the "canonical" component name (e.g., Mn -> Manganese)
-  and the component label (Element or Mineral).
+  and the component label (Element or Mineral).  We reserve Element for
+  items in the periodic table, and use Mineral for more complex
+  entities or measurements, including terms such as NpOx and FeOT.
 
 - properties.csv: Table containing unique property names.  Each property
-  is stored in all lower case with spaces between words.
+  name is stored in all lower case with spaces between words.
 
 - contains.csv: Table linking targets to components.  Fields include
   the target id (as above), component name (as above), and two sentence
@@ -97,7 +125,7 @@ Automated text analysis methods were accompanied by manual review of
 the extracted information.  See reference [2] for additional details
 and a summary of content specific to the Mars Pathfinder and Mars
 Phoenix Lander missions and reference [3] for content specific to the
-Spirit Mars Exploration rover.
+Spirit Mars Exploration Rover.
 
 Citation
 --------
@@ -107,7 +135,7 @@ work, please include this citation:
 
 Kiri Wagstaff, Raymond Francis, Matthew Golombek, Steven Lu, Ellen
 Riloff, and Leslie Tamppari. (2021). Mars Target Encyclopedia (Version
-1.2) [Data set]. http://doi.org/10.17189/1520763
+2.0) [Data set]. http://doi.org/10.17189/1520763
 
 References
 ----------

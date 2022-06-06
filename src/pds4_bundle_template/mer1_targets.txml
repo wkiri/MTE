@@ -16,7 +16,14 @@
             <editor_list>VanBommel, S.</editor_list>
             <publication_year>2021</publication_year>
             <description>
-                This is the MTE MER-1 targets table
+                This is the MTE MER-1 targets table.  This is not an
+                official mission target list.  Only targets that
+                appear in the MTE document collection are included.
+                Target names in this table may include abbreviations
+                and misspellings, according to how the targets appear
+                in the source documents.  See the aliases table to
+                obtain the mapping between target name variations and
+                the canonical target name.
             </description>
         </Citation_Information>
         <Modification_History>
@@ -29,7 +36,7 @@
     </Identification_Area>
     <Observation_Area>
         <Time_Coordinates>
-            <start_date_time>1997-07-04Z</start_date_time>
+            <start_date_time>2005-03-14Z</start_date_time>
             <stop_date_time>2020-03-16Z</stop_date_time>
         </Time_Coordinates>
         <Primary_Result_Summary>

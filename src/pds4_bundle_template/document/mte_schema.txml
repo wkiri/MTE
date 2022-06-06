@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<Product_Collection xmlns="http://pds.nasa.gov/pds4/pds/v1"
+<Product_Document xmlns="http://pds.nasa.gov/pds4/pds/v1"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
     <Identification_Area>
-        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:document</logical_identifier>
-        <version_id>1.3</version_id>
-        <title>Mars Target Encyclopedia Document Collection</title>
+        <logical_identifier>urn:nasa:pds:mars_target_encyclopedia:document:mte_schema</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>Mars Target Encyclopedia Schema Diagram</title>
         <information_model_version>1.14.0.0</information_model_version>
-        <product_class>Product_Collection</product_class>
+        <product_class>Product_Document</product_class>
         <Citation_Information>
-            <publication_year>2021</publication_year>
-            <description>Document collection for the Mars Target Encyclopedia bundle</description>
+            <publication_year>2022</publication_year>
+            <description>Mars Target Encyclopedia Schema Diagram</description>
         </Citation_Information>
         <Modification_History>
             <Modification_Detail>
                 <modification_date>$today</modification_date>
-                <version_id>1.3</version_id>
-                <description>Add mte_schema.jpg diagram and update
-                readme.txt as needed.</description>
-            </Modification_Detail>
-            <Modification_Detail>
-                <modification_date>2021-06-07</modification_date>
-                <version_id>1.2</version_id>
-                <description>Add contains and has_property
-                relations and components and properties tables.</description>
-            </Modification_Detail>
-            <Modification_Detail>
-                <modification_date>2021-03-29</modification_date>
                 <version_id>1.0</version_id>
                 <description>Initial version.</description>
             </Modification_Detail>
@@ -40,7 +28,7 @@
             <type>Mission</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:mission.mars_science_laboratory</lid_reference>
-                <reference_type>collection_to_investigation</reference_type>
+                <reference_type>document_to_investigation</reference_type>
             </Internal_Reference>
         </Investigation_Area>
         <Investigation_Area>
@@ -48,7 +36,7 @@
             <type>Mission</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:mission.mars_pathfinder</lid_reference>
-                <reference_type>collection_to_investigation</reference_type>
+                <reference_type>document_to_investigation</reference_type>
             </Internal_Reference>
         </Investigation_Area>
         <Investigation_Area>
@@ -56,7 +44,7 @@
             <type>Mission</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:mission.phoenix</lid_reference>
-                <reference_type>collection_to_investigation</reference_type>
+                <reference_type>document_to_investigation</reference_type>
             </Internal_Reference>
         </Investigation_Area>
         <Observing_System>
@@ -114,40 +102,21 @@
             <type>Planet</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
-                <reference_type>data_to_target</reference_type>
+                <reference_type>document_to_target</reference_type>
             </Internal_Reference>
         </Target_Identification>
     </Context_Area>
-    <Collection>
-        <collection_type>Document</collection_type>
-    </Collection>
-    <File_Area_Inventory>
-        <File>
-            <file_name>collection_document_inventory.csv</file_name>
-        </File>
-        <Inventory>
-            <offset unit="byte">0</offset>
-            <parsing_standard_id>PDS DSV 1</parsing_standard_id>
-            <records>$inventory_records</records>
-            <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
-            <field_delimiter>Comma</field_delimiter>
-            <Record_Delimited>
-                <fields>2</fields>
-                <groups>0</groups>
-                <Field_Delimited>
-                    <name>Member Status</name>
-                    <field_number>1</field_number>
-                    <data_type>ASCII_String</data_type>
-                    <maximum_field_length unit="byte">1</maximum_field_length>
-                </Field_Delimited>
-                <Field_Delimited>
-                    <name>LIDVID_LID</name>
-                    <field_number>2</field_number>
-                    <data_type>ASCII_LIDVID_LID</data_type>
-                    <maximum_field_length unit="byte">255</maximum_field_length>
-                </Field_Delimited>
-            </Record_Delimited>
-            <reference_type>inventory_has_member_product</reference_type>
-        </Inventory>
-    </File_Area_Inventory>
-</Product_Collection>
+    <Document>
+        <document_name>Mars Target Encyclopedia Schema Diagram</document_name>
+        <publication_date>$today</publication_date>
+        <Document_Edition>
+            <edition_name>Version 1.0</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <Document_File>
+                <file_name>mte_schema.jpg</file_name>
+                <document_standard_id>JPEG</document_standard_id>
+            </Document_File>
+        </Document_Edition>
+    </Document>
+</Product_Document>
