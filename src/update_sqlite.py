@@ -110,7 +110,7 @@ def main(ann_dir, db_file, mission, aliases_file, reviewer, remove_orphans,
 
         for standardized_verbatim_target, canonical_target in aliases:
             #print '%s %s' % (standardized_verbatim_target, canonical_target)
-            mte_db.add_alias(standardized_verbatim_target, 
+            mte_db.add_alias(standardized_verbatim_target.decode('utf8'), 
                              canonical_target.decode('utf8'))
             
             # Ensure all canonical target names appear in the targets table
