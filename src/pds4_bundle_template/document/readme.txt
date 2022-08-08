@@ -40,7 +40,7 @@ visual depiction of the relationships between tables.
   * The target name, for consistency, encodes spaces as underscores,
   capitalizes the first letter of each word, and ensures terminal
   numbers are separated from the name by an underscore.
-  * The mission code is "mpf", "phx", or "mer2" (Spirit).
+  * The mission code is "mpf", "phx", "mer1" (Opportunity), or "mer2" (Spirit).
   * The target id consists of the target name, a hyphen, and the mission
   code.  It allows disambiguation when a target name is used
   independently by more than one mission.
