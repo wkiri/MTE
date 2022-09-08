@@ -9,6 +9,7 @@
 
 import os
 import sys
+import csv
 from sqlite_mte import MteDb
 from brat_annotation_sqlite import BratDocument
 from name_utils import standardize_target_name
@@ -105,21 +106,22 @@ def main(ann_dir, db_file, mission, aliases_file, reviewer, remove_orphans,
             sys.exit(1)
 
         with open(aliases_file, 'r') as f:
-            aliases = f.readlines()
-            aliases = [a.strip().split(',') for a in aliases]
+            aliases = csv.reader(f)
 
-        for standardized_verbatim_target, canonical_target in aliases:
-            #print '%s %s' % (standardized_verbatim_target, canonical_target)
-            mte_db.add_alias(standardized_verbatim_target.decode('utf8'), 
-                             canonical_target.decode('utf8'))
+            n_aliases = 0
+            for standardized_verbatim_target, canonical_target in aliases:
+                #print '%s %s' % (standardized_verbatim_target, canonical_target)
+                mte_db.add_alias(standardized_verbatim_target.decode('utf8'), 
+                                 canonical_target.decode('utf8'))
             
-            # Ensure all canonical target names appear in the targets table
-            mte_db.add_known_target(canonical_target.decode('utf8'), mission)
+                # Ensure all canonical target names appear in the targets table
+                mte_db.add_known_target(canonical_target.decode('utf8'), mission)
+                n_aliases += 1
 
         print '[INFO] The DB aliases table has been populated with ' \
               '%d aliases from CSV file %s, and all canonical target names ' \
               'have been added to the target table' % \
-              (len(aliases), os.path.abspath(aliases_file))
+              (n_aliases, os.path.abspath(aliases_file))
 
     mte_db.close()
     print '[INFO] DONE.'
