@@ -6,7 +6,7 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:mars_target_encyclopedia</logical_identifier>
-        <version_id>3.0</version_id>
+        <version_id>3.1</version_id>
         <title>Mars Target Encyclopedia Database Bundle</title>
         <information_model_version>1.14.0.0</information_model_version>
         <product_class>Product_Bundle</product_class>
@@ -22,6 +22,12 @@
         <Modification_History>
             <Modification_Detail>
                 <modification_date>$today</modification_date>
+                <version_id>3.1</version_id>
+                <description>Update aliases and targets tables in data_mer1 collection.
+                </description>
+            </Modification_Detail>
+            <Modification_Detail>
+                <modification_date>2022-08-08</modification_date>
                 <version_id>3.0</version_id>
                 <description>Add data_mer1 collection; minor
                 updates to the data_mer2 collection.</description>
