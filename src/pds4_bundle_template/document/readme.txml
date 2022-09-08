@@ -16,7 +16,7 @@
         </Citation_Information>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>$today</modification_date>
+                <modification_date>2022-08-08</modification_date>
                 <version_id>1.4</version_id>
                 <description>Mention new MER-1 (Opportunity) content.</description> 
             </Modification_Detail>
@@ -128,7 +128,7 @@
     </Context_Area>
     <Document>
         <document_name>README of Mars Target Encyclopedia</document_name>
-        <publication_date>$today</publication_date>
+        <publication_date>2022-08-08</publication_date>
         <Document_Edition>
             <edition_name>Version 1.4</edition_name>
             <language>English</language>
