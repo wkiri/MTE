@@ -28,7 +28,7 @@
         </Citation_Information>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>$today</modification_date>
+                <modification_date>2022-03-24</modification_date>
                 <version_id>1.3</version_id>
                 <description>Addition of aliases table enabled use of
                 target names as they appear in the documents.  Targets

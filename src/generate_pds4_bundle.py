@@ -294,11 +294,14 @@ def create_inventory_files(collection_dir, bundle_template_dir,
     xml_file_counter = 0
     for root, _, file_names in os.walk(collection_dir):
         for file_name in fnmatch.filter(file_names, '*.xml'):
-            xml_file_counter += 1
             file_path = os.path.join(root, file_name)
 
             lid_vid = get_lidvid(file_path)
-            inventory_csv_file.write('P,%s\r\n' % lid_vid)
+            # Require that collection name is in lid_vid
+            # This prevents mer2 files showing up in mer1 inventory
+            if collection_name in lid_vid:
+                inventory_csv_file.write('P,%s\r\n' % lid_vid)
+                xml_file_counter += 1
 
     inventory_csv_file.close()
     print '[INFO] Create inventory csv file for %s mission: %s' % \

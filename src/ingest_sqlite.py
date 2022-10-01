@@ -38,11 +38,11 @@ def read_json(jsonfile, ndocs, year=None, mission=''):
                             else [(r['text'], mission, r['begin'], r['end'])
                                   for r in rec['metadata']['ner']
                                   if r['label'] == 'Target']),
-                # Components are everything other than targets (Element, Mineral)
+                # Components are one of (Element, Mineral)
                 'components': ([] if 'ner' not in rec['metadata'].keys()
                                else [(canonical_name(r['text']), r['label'])
                                      for r in rec['metadata']['ner']
-                                     if r['label'] != 'Target']),
+                                     if r['label'] in ['Element', 'Mineral']]),
                 'contains': ([] if 'rel' not in rec['metadata'].keys()
                              else [([t for t in r['target_names']],
                                     r['target_ids'],
